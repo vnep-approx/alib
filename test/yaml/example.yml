@@ -1,0 +1,62 @@
+request_generation:
+    - short_chains:  # some arbitrary identifier for the request generation scheme
+        ServiceChainGenerator:
+             number_of_requests: [20]
+             min_number_of_nodes: [1]
+             max_number_of_nodes: [3]
+             probability: [0.5]
+             latency_factor: [1.0, 1.5]
+             node_resource_factor: [1.25, 1.5]
+             edge_resource_factor: [1.0]
+             normalize: [True]
+    - long_chains:
+        ServiceChainGenerator:
+             number_of_requests: [50]
+             min_number_of_nodes: [8]
+             max_number_of_nodes: [10]
+             probability: [0.2]
+             latency_factor: [1.0, 1.5]
+             node_resource_factor: [1.25]
+             edge_resource_factor: [1.0]
+             normalize: [True]
+    - cactus:
+        CactusRequestGenerator:
+            number_of_requests: [50]
+            branching_distribution: [[0.0, 0.8, 0.1, 0.1]]
+            layers: [3]
+            min_number_of_nodes: [3]
+            max_number_of_nodes: [10]
+            probability: [0.5]
+            node_resource_factor: [1.25]
+            edge_resource_factor: [1.0]
+            max_cycles: [10]
+            iterations: [20]
+            fix_root_mapping: [True]
+            fix_leaf_mapping: [True]
+            normalize: [True]
+
+profit_calculation:
+    - random:
+        RandomEmbeddingProfitCalculator:
+            profit_factor: [1.0]
+            iterations: [200]
+    - optimal:
+        OptimalEmbeddingProfitCalculator:
+            profit_factor: [1.0]
+            timelimit: [30]
+
+node_placement_restriction_mapping:
+    - neighbors:
+        NeighborhoodSearchRestrictionGenerator:
+            potential_nodes_factor: [0.3]
+
+substrate_generation:
+    - substrates:
+        TopologyZooReader:
+            topology: [Bellcanada, Chinanet, Geant2012, Uunet]
+            node_types: [[t1, t2, t3]]   # TODO: Convert values to a tuple internally
+            node_capacity: [100.0]
+            node_cost_factor: [1.0]
+            edge_capacity: [100.0]
+            node_type_distribution: [0.3]
+

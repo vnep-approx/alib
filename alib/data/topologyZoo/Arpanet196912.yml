@@ -1,0 +1,10 @@
+nodes:
+  '0': {Latitude: 37.45383, Longitude: -122.18219}
+  '1': {Latitude: 34.42083, Longitude: -119.69819}
+  '2': {Latitude: 34.05223, Longitude: -118.24368}
+  '3': {Latitude: 40.76078, Longitude: -111.89105}
+edges:
+- ['0', '1']
+- ['0', '2']
+- ['0', '3']
+- ['1', '2']

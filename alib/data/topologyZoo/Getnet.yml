@@ -1,0 +1,17 @@
+nodes:
+  '0': {Latitude: 47.60621, Longitude: -122.33207}
+  '1': {Latitude: 37.35411, Longitude: -121.95524}
+  '2': {Latitude: 33.44838, Longitude: -112.07404}
+  '3': {Latitude: 32.22174, Longitude: -110.92648}
+  '4': {Latitude: 38.89511, Longitude: -77.03637}
+  '5': {Latitude: 39.29038, Longitude: -76.61219}
+  '6': {Latitude: 40.44062, Longitude: -79.99589}
+edges:
+- ['0', '1']
+- ['1', '2']
+- ['1', '4']
+- ['1', '6']
+- ['2', '3']
+- ['2', '4']
+- ['4', '5']
+- ['5', '6']

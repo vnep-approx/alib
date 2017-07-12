@@ -1,0 +1,32 @@
+request_generation:
+    - exponential:
+         ExponentialRequestGenerator:
+             number_of_requests: [5]
+             min_number_of_nodes: [8]
+             max_number_of_nodes: [10]
+             probability: [0.2]
+             node_resource_factor: [0.1]
+             edge_resource_factor: [100]
+             normalize: [True]
+
+profit_calculation:
+    - random:
+        RandomEmbeddingProfitCalculator:
+            profit_factor: [1.0]
+            iterations: [200]
+
+node_placement_restriction_mapping:
+    - neighbors:
+        NeighborhoodSearchRestrictionGenerator:
+            potential_nodes_factor: [0.3]
+
+substrate_generation:
+    - substrates:
+        TopologyZooReader:
+            topology: [Bellcanada]
+            node_types: [[t1, t2, t3]]
+            node_capacity: [100.0]
+            node_cost_factor: [1.0]
+            edge_capacity: [100.0]
+            node_type_distribution: [0.3]
+

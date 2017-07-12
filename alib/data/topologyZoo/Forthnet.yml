@@ -1,0 +1,126 @@
+nodes:
+  '0': {Latitude: 41.12278, Longitude: 25.39639}
+  '1': {Latitude: 40.8475, Longitude: 25.87444}
+  '2': {Latitude: 41.14139, Longitude: 24.88361}
+  '3': {Latitude: 40.93972, Longitude: 24.40194}
+  '4': {Latitude: 37.97945, Longitude: 23.71622}
+  '5': {Latitude: 38.36778, Longitude: 26.13583}
+  '6': {Latitude: 39.31079, Longitude: 26.22025}
+  '7': {Latitude: 37.97945, Longitude: 23.71622}
+  '8': {Latitude: 37.79139, Longitude: 20.89528}
+  '9': {Latitude: 40.15889, Longitude: 20.78472}
+  '10': {Latitude: 37.75722, Longitude: 26.97694}
+  '11': {Latitude: 36.44083, Longitude: 28.2225}
+  '12': {Latitude: 38.62139, Longitude: 21.40778}
+  '13': {Latitude: 38.37019, Longitude: 21.42952}
+  '14': {Latitude: 38.95, Longitude: 20.75}
+  '15': {Latitude: 39.16056, Longitude: 20.98528}
+  '16': {Latitude: 38.9, Longitude: 22.43333}
+  '17': {Latitude: 38.31667, Longitude: 23.63333}
+  '18': {Latitude: 35.36472, Longitude: 24.47139}
+  '19': {Latitude: 35.05, Longitude: 24.86667}
+  '20': {Latitude: 35.19139, Longitude: 25.71333}
+  '21': {Latitude: 35.01, Longitude: 25.73528}
+  '22': {Latitude: 35.2, Longitude: 26.09861}
+  '23': {Latitude: 37.94068, Longitude: 22.95734}
+  '24': {Latitude: 39.46667, Longitude: 22.16667}
+  '25': {Latitude: 41.00167, Longitude: 22.28611}
+  '26': {Latitude: 40.51667, Longitude: 21.26667}
+  '27': {Latitude: 39.63722, Longitude: 22.42028}
+  '28': {Latitude: 38.8275, Longitude: 20.70194}
+  '29': {Latitude: 39.9225, Longitude: 21.80278}
+  '30': {Latitude: 39.50389, Longitude: 20.26556}
+  '31': {Latitude: 38.18109, Longitude: 20.48903}
+  '32': {Latitude: 39.309865, Longitude: 23.330055}
+  '33': {Latitude: 38.24444, Longitude: 21.73444}
+  '34': {Latitude: 39.16227, Longitude: 23.49089}
+  '35': {Latitude: 38.46361, Longitude: 23.59944}
+  '36': {Latitude: 39.36556, Longitude: 21.92167}
+  '37': {Latitude: 39.36667, Longitude: 22.94583}
+  '38': {Latitude: 38.91667, Longitude: 21.78333}
+  '39': {Latitude: 39.55528, Longitude: 21.7675}
+  '40': {Latitude: 39.62, Longitude: 19.91972}
+  '41': {Latitude: 39.6675, Longitude: 20.85083}
+  '42': {Latitude: 35.30903, Longitude: 25.37112}
+  '43': {Latitude: 35.32787, Longitude: 25.14341}
+  '44': {Latitude: 37.63333, Longitude: 22.73333}
+  '45': {Latitude: 37.45, Longitude: 24.93333}
+  '46': {Latitude: 37.44529, Longitude: 25.32872}
+  '47': {Latitude: 36.38613, Longitude: 25.42959}
+  '48': {Latitude: 35.51222, Longitude: 24.01556}
+  '49': {Latitude: 37.07333, Longitude: 22.42972}
+  '50': {Latitude: 37.03889, Longitude: 22.11417}
+  '51': {Latitude: 37.50889, Longitude: 22.37944}
+  '52': {Latitude: 40.37444, Longitude: 23.43833}
+  '53': {Latitude: 41.15444, Longitude: 24.13944}
+  '54': {Latitude: 41.08556, Longitude: 23.54972}
+  '55': {Latitude: 40.64028, Longitude: 22.94389}
+  '56': {Latitude: 40.99194, Longitude: 22.87083}
+  '57': {Latitude: 40.80056, Longitude: 22.04722}
+  '58': {Latitude: 40.78197, Longitude: 21.40981}
+  '59': {Latitude: 40.52333, Longitude: 22.20361}
+  '60': {Latitude: 40.30111, Longitude: 21.78639}
+  '61': {Latitude: 40.27194, Longitude: 22.5025}
+edges:
+- ['0', '55']
+- ['1', '55']
+- ['2', '3']
+- ['3', '53']
+- ['3', '55']
+- ['4', '7']
+- ['5', '7']
+- ['6', '7']
+- ['7', '32']
+- ['7', '33']
+- ['7', '35']
+- ['7', '41']
+- ['7', '10']
+- ['7', '11']
+- ['7', '45']
+- ['7', '46']
+- ['7', '47']
+- ['7', '16']
+- ['7', '17']
+- ['7', '51']
+- ['7', '43']
+- ['7', '55']
+- ['7', '24']
+- ['7', '25']
+- ['7', '27']
+- ['7', '23']
+- ['8', '33']
+- ['9', '33']
+- ['12', '33']
+- ['13', '33']
+- ['14', '41']
+- ['15', '41']
+- ['18', '43']
+- ['19', '43']
+- ['20', '42']
+- ['20', '21']
+- ['20', '22']
+- ['26', '41']
+- ['27', '36']
+- ['27', '37']
+- ['27', '38']
+- ['27', '39']
+- ['28', '33']
+- ['29', '41']
+- ['30', '41']
+- ['31', '33']
+- ['32', '55']
+- ['34', '35']
+- ['40', '41']
+- ['42', '43']
+- ['43', '48']
+- ['44', '51']
+- ['49', '51']
+- ['50', '51']
+- ['52', '55']
+- ['54', '55']
+- ['55', '56']
+- ['55', '57']
+- ['55', '58']
+- ['55', '59']
+- ['55', '60']
+- ['55', '61']

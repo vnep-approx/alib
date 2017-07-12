@@ -1,0 +1,74 @@
+nodes:
+  '0': {Latitude: 49.08333, Longitude: 19.31667}
+  '1': {Latitude: 48.73333, Longitude: 19.15}
+  '2': {Latitude: 49.06014, Longitude: 20.20695}
+  '3': {Latitude: 49.08061, Longitude: 19.62218}
+  '4': {Latitude: 48.56667, Longitude: 19.41667}
+  '5': {Latitude: 48.58333, Longitude: 19.13333}
+  '6': {Latitude: 49.22315, Longitude: 18.73941}
+  '7': {Latitude: 49.4, Longitude: 19.5}
+  '8': {Latitude: 48.38333, Longitude: 20.03333}
+  '9': {Latitude: 48.33333, Longitude: 19.66667}
+  '10': {Latitude: 47.76356, Longitude: 18.12263}
+  '11': {Latitude: 48.14816, Longitude: 17.10674}
+  '12': {Latitude: 48.14816, Longitude: 17.10674}
+  '13': {Latitude: 48.14816, Longitude: 17.10674}
+  '14': {Latitude: 48.14816, Longitude: 17.10674}
+  '15': {Latitude: 47.98544, Longitude: 18.16195}
+  '16': {Latitude: 48.30763, Longitude: 18.08453}
+  '17': {Latitude: 48.89452, Longitude: 18.04436}
+  '18': {Latitude: 48.56667, Longitude: 18.18333}
+  '19': {Latitude: 48.71667, Longitude: 18.55}
+  '20': {Latitude: 48.76667, Longitude: 18.63333}
+  '21': {Latitude: 48.14816, Longitude: 17.10674}
+  '22': {Latitude: 48.14816, Longitude: 17.10674}
+  '23': {Latitude: 48.6, Longitude: 17.83333}
+  '24': {Latitude: 48.75763, Longitude: 17.8309}
+  '25': {Latitude: 48.95, Longitude: 20.56667}
+  '26': {Latitude: 49.05, Longitude: 20.3}
+  '27': {Latitude: 48.73333, Longitude: 19.15}
+  '28': {Latitude: 48.14816, Longitude: 17.10674}
+  '29': {Latitude: 48.71667, Longitude: 21.25}
+  '30': {Latitude: 49.0, Longitude: 21.25}
+  '31': {Latitude: 49.28333, Longitude: 21.28333}
+  '32': {Latitude: 49.3, Longitude: 21.56667}
+  '33': {Latitude: 48.93333, Longitude: 21.91667}
+  '34': {Latitude: 48.75, Longitude: 21.93333}
+edges:
+- ['0', '27']
+- ['1', '27']
+- ['2', '29']
+- ['3', '27']
+- ['4', '8']
+- ['4', '27']
+- ['5', '27']
+- ['6', '17']
+- ['6', '26']
+- ['6', '27']
+- ['7', '27']
+- ['9', '27']
+- ['10', '28']
+- ['11', '28']
+- ['12', '28']
+- ['13', '28']
+- ['14', '28']
+- ['15', '28']
+- ['16', '28']
+- ['17', '28']
+- ['18', '28']
+- ['19', '27']
+- ['20', '27']
+- ['21', '28']
+- ['22', '28']
+- ['23', '28']
+- ['24', '28']
+- ['25', '26']
+- ['25', '29']
+- ['26', '30']
+- ['27', '28']
+- ['28', '29']
+- ['29', '32']
+- ['29', '33']
+- ['29', '34']
+- ['29', '30']
+- ['30', '31']

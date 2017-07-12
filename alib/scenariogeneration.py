@@ -1,0 +1,1440 @@
+import pkg_resources
+
+__author__ = 'Matthias Rost (mrost@inet.tu-berlin.de)'
+
+import cPickle as pickle
+import copy
+import itertools
+import math
+import multiprocessing as mp
+import os
+import yaml
+from collections import deque
+from random import Random
+
+import numpy.random
+
+from . import datamodel, mip, modelcreator, util
+
+global_logger = util.get_logger(__name__, make_file=False, propagate=True)
+
+random = Random("scenariogeneration")
+
+numpy.random.seed(1234)
+
+UNIVERSAL_NODE_TYPE = "universal"
+
+DATA_PATH = pkg_resources.resource_filename("alib", "data/")
+
+
+class RequestGenerationError(Exception): pass
+
+
+class SubstrateReaderError(Exception): pass
+
+
+class ScenarioGeneratorError(Exception): pass
+
+
+class ScenarioParameterError(Exception): pass
+
+
+class ExperimentSpecificationError(Exception): pass
+
+
+#  These are the required tasks that must be adressed when generating scenarios
+SUBSTRATE_GENERATION_TASK = "substrate_generation"
+REQUEST_GENERATION_TASK = "request_generation"
+PROFIT_CALCULATION_TASK = "profit_calculation"
+NODE_PLACEMENT_TASK = "node_placement_restriction_mapping"
+SCENARIO_GENERATION_TASKS = [
+    SUBSTRATE_GENERATION_TASK,
+    REQUEST_GENERATION_TASK,
+    PROFIT_CALCULATION_TASK,
+    NODE_PLACEMENT_TASK
+]
+REQUIRED_TASKS = {
+    SUBSTRATE_GENERATION_TASK,
+    REQUEST_GENERATION_TASK
+}
+
+
+def verify_completeness_of_scenario_parameters(scenario_parameter_space):
+    errors = []
+    warnings = []
+    for task in SCENARIO_GENERATION_TASKS:
+        if task not in scenario_parameter_space:
+            if task in REQUIRED_TASKS:
+                errors.append("Scenario parameters do not address the required scenario generation task {}".format(task))
+            else:
+                warnings.append("Scenario parameters do not address the optional scenario generation task {}".format(task))
+    for task in scenario_parameter_space:
+        if len(scenario_parameter_space[task]) == 0:
+            errors.append("Scenario parameters require task {}, but do not provide a strategy for it!".format(task))
+            continue
+        for strategy_dict in scenario_parameter_space[task]:
+            strategy = strategy_dict.keys()[0]
+            class_param_dict = strategy_dict[strategy]
+            strategy_class_name = class_param_dict.keys()[0]
+            if strategy_class_name not in globals():
+                errors.append("Could not resolve class {}, employed in strategy {} for task {}.".format(
+                    strategy_class_name, strategy, task
+                ))
+                continue
+            strategy_class = globals()[strategy_class_name]
+            if not hasattr(strategy_class, "EXPECTED_PARAMETERS"):
+                warnings.append("Class {strategy_class}, employed in strategy {strategy} for task {task}, does not specify which parameters it requires.".format(
+                    strategy_class=strategy_class.__name__,
+                    strategy=strategy,
+                    task=task
+                ))
+                continue
+            expected = set(strategy_class.EXPECTED_PARAMETERS)
+            parameters = set(class_param_dict.values()[0].keys())
+            if expected - parameters:
+                msg = "The following parameters for {task}, {strategy} were not defined but are required by {strategy_class}:\n        {missing}".format(
+                    task=task,
+                    strategy=strategy,
+                    strategy_class=strategy_class,
+                    missing=", ".join(expected - parameters)
+                )
+                errors.append(msg)
+            if parameters - expected:
+                msg = "The following parameters for {task}, {strategy} were defined but are not required by {strategy_class}:\n        {missing}".format(
+                    task=task,
+                    strategy=strategy,
+                    strategy_class=strategy_class,
+                    missing=", ".join(parameters - expected)
+                )
+                warnings.append(msg)
+    if warnings:
+        global_logger.warning("Warning(s): \n  - " + "\n  - ".join(warnings))
+    if errors:
+        raise ExperimentSpecificationError("Error(s):\n  - " + "\n  - ".join(errors))
+
+
+def generate_pickle_from_yml(parameter_file, scenario_out_pickle, threads=1):
+    param_space = yaml.load(parameter_file)
+    sg = ScenarioGenerator(threads)
+    repetition = 1
+    if 'scenario_repetition' in param_space:
+        repetition = param_space['scenario_repetition']
+        del param_space['scenario_repetition']
+    sg.generate_scenarios(param_space, repetition)
+    container = sg.scenario_parameter_container
+    out = os.path.abspath(os.path.join(util.ExperimentPathHandler.OUTPUT_DIR,
+                                       scenario_out_pickle))
+    with open(out, "wb") as f:
+        pickle.dump(container, f)
+
+
+class ScenarioParameterContainer(object):
+    def __init__(self, scenario_parameter_room):
+        self.scenarioparameter_room = scenario_parameter_room
+        self.scenario_list = []
+        self.scenario_parameter_combination_list = []
+        self.scenario_parameter_dict = {}
+        self.scenario_triple = {}
+
+    def generate_all_scenario_parameter_combinations(self, repetition=1):
+        """
+        Given a dictionary representing the parameter space of an experiment,
+        this function generates a list of parameter dictionaries, each of which
+        can be used by the ScenarioGenerator to generate a single scenario.
+
+        :param repetition: how many times each scenario will be builded (Default value = 1)
+        :return: A list of dictionaries, where each dictionary specifies a single scenario
+            {generation_task -> {strategy_name -> {class -> {parameter -> [values]}}}}
+        """
+        product_dict = {}
+        # Expand the inner-most parameters  (dict of lists -> list of dicts)
+        for scenario_generation_task, scenario_task_strategy_list in self.scenarioparameter_room.iteritems():
+            product_dict[scenario_generation_task] = {}
+            for scenario_task_strategy in scenario_task_strategy_list:
+                # TODO: make this more clear, and add some sanity checks ensuring that scenario_task_strategy contains exactly 1 strategy
+                strategy_name = scenario_task_strategy.keys()[0]
+                strategy_class = scenario_task_strategy.values()[0].keys()[0]
+                strategy_parameter_space = scenario_task_strategy.values()[0].values()[0]
+                self.make_values_immutable(strategy_parameter_space)
+                inner_parameter_combinations = ScenarioParameterContainer._expand_innermost_parameter_space(strategy_parameter_space)
+                expanded_solution_parameters = {strategy_class: inner_parameter_combinations}
+                product_dict[scenario_generation_task][strategy_name] = expanded_solution_parameters
+        # A list of all tasks that need to be completed during scenario generation, e.g.:
+        # [t1, t2, t3]
+        tasks = sorted(product_dict.keys())
+        result = []
+        # tuple of lists of the user-defined strategy names for each task, e.g.:
+        # ([t1_s1, t1_s2], [t2_s1], [t3_s1, t3_s2, t3_s3])
+        tuple_of_solutions_for_each_task = tuple(product_dict[t].keys() for t in tasks)
+
+        # list of tuples of strategy names, containing exactly one strategy for each task, e.g.:
+        # [(t1_s1, t2_s1, t3_s1), (t1_s2, t2_s1, t3_s1),
+        #  (t1_s1, t2_s1, t3_s2), (t1_s2, t2_s1, t3_s2),
+        #  (t1_s1, t2_s1, t3_s3), (t1_s2, t2_s1, t3_s3)]
+        valid_strategy_combination_list = itertools.product(*tuple_of_solutions_for_each_task)
+
+        for strategy_combination in valid_strategy_combination_list:
+            # class_list: for each strategy in the strategy_combination, the class_list contains the
+            # name of the class where the strategy is implemented, e.g.:
+            # strategy_combination = ("service_chains", "optimal_profit_calc", ...)
+            # => class_list = ["ServiceChainGenerator", "OptimalEmbeddingProfitCalculator", ...]
+            class_list = [product_dict[tasks[i]][sol].keys()[0] for (i, sol) in enumerate(strategy_combination)]
+
+            # tuple_task_parameter_list contains the parameter space for each
+            tuple_task_parameter_list = tuple(product_dict[tasks[i]][sol].values()[0] for (i, sol) in enumerate(strategy_combination))
+
+            # expand the parameter spaces of all strategies to parameter dictionaries:
+            for combination in itertools.product(*tuple_task_parameter_list):
+                single_parameter_dict = dict()
+                for (i, task) in enumerate(tasks):
+                    single_parameter_dict[task] = {}
+                    single_parameter_dict[task][strategy_combination[i]] = {class_list[i]: combination[i]}
+                for rep in range(0, repetition):
+                    copydict = dict(single_parameter_dict)
+                    copydict['repetition'] = rep
+                    copydict['maxrepetition'] = repetition
+                    result.append(copydict)
+        self.scenario_parameter_combination_list = result
+        return result
+
+    @staticmethod
+    def _expand_innermost_parameter_space(parameter_space):
+        """
+
+        :param self:
+        :param parameter_space: dictionar
+        :return:
+        """
+        all_parameters = sorted(parameter_space.keys())
+        parameter_combinations = [
+            product for product in
+            itertools.product(*(parameter_space[parameter]
+                                for parameter in all_parameters))
+        ]
+        return [dict(combination) for combination in
+                [zip(all_parameters, product) for product in parameter_combinations]]
+
+    def make_values_immutable(self, raw_parameter):
+        """
+        This converts list parameters to tuples, e.g.
+        branching_distribution: [[0.0, 0.5, 0.5]] becomes
+        branching_distribution: [(0.0, 0.5, 0.5)]
+        
+        :param raw_parameter:
+        :return:
+        """
+        for key, value_list in raw_parameter.iteritems():
+            if isinstance(value_list[0], list):
+                raw_parameter[key] = [tuple(x) for x in value_list]
+
+
+class ScenarioGenerator(object):
+    def __init__(self, threads=1):
+        self.scenario_parameter_container = None
+        self.threads = threads
+        self.repetition = 1
+
+    def generate_scenarios(self, scenario_parameter_space, repetition=1):
+        self.repetition = repetition
+        global_logger.info("Generating scenarios...")
+        self.scenario_parameter_container = ScenarioParameterContainer(scenario_parameter_space)
+        self.scenario_parameter_container.generate_all_scenario_parameter_combinations(repetition)
+        scenario_parameter_combination_list = self.scenario_parameter_container.scenario_parameter_combination_list
+        self.init_reverselookup_dict()
+        if self.threads > 1:
+            self._multiprocessed(scenario_parameter_combination_list)
+        else:
+            self._singleprocessed(scenario_parameter_combination_list)
+
+        return self.scenario_parameter_container.scenario_triple
+
+    def _singleprocessed(self, scenario_parameter_combination_list):
+        for i, sp in enumerate(scenario_parameter_combination_list):
+            index_un, scenario, sp_un = build_scenario((i, sp))
+            self.fill_reverselookup_dict(sp, i)
+            self.scenario_parameter_container.scenario_list.append(scenario)
+            self.scenario_parameter_container.scenario_triple[i] = (sp, scenario)
+
+    def _multiprocessed(self, scenario_parameter_combination_list):
+        proc_pool = mp.Pool(processes=self.threads, maxtasksperchild=100)
+        out = proc_pool.map(build_scenario, list(enumerate(scenario_parameter_combination_list)))
+        proc_pool.close()
+        proc_pool.join()
+        for i, scenario, sp in out:
+            self.fill_reverselookup_dict(sp, i)
+            self.scenario_parameter_container.scenario_list.append(scenario)
+            self.scenario_parameter_container.scenario_triple[i] = (sp, scenario)
+
+    def init_reverselookup_dict(self):
+        spd = self.scenario_parameter_container.scenario_parameter_dict
+        for task in SCENARIO_GENERATION_TASKS:
+            spd.setdefault(task, dict())
+
+    def fill_reverselookup_dict(self, sp, currentindex):
+        spd = self.scenario_parameter_container.scenario_parameter_dict
+        for task in SCENARIO_GENERATION_TASKS:
+            if task not in sp:
+                continue
+            strat_id = sp[task].keys()[0]
+            spd[task].setdefault(strat_id, dict())
+            spd[task][strat_id].setdefault('all', set())
+            spd[task][strat_id]['all'].add(currentindex)
+            # spd[task][sp[task].keys()[0]] = sp[task][sp[task].keys()[0]]
+            for strat in sp[task]:
+                spd[task][strat].setdefault(sp[task][strat].keys()[0], dict())
+                for class_name in sp[task][strat]:
+                    spd[task][strat].setdefault(class_name, dict())
+                    for key, val in sp[task][strat][class_name].iteritems():
+                        spd[task][strat][class_name].setdefault(key, dict())
+                        spd[task][strat][class_name][key].setdefault(val, set())
+                        spd[task][strat][class_name][key][val].add(currentindex)
+
+
+def build_scenario(i_sp_tup, maxrep=1):
+    """
+    Build a single scenario based on the scenario parameters.
+
+    This function performs the scenario generation steps in the correct order:
+    
+    1. generation of the substrate topologies (including capacities) from the topology zoo
+    2. generation of the request topologies (including resource demands)
+    3. (optional) restrict the allowed node mappings
+    4. (optional) calculate each request's profit. The scenario's objective will
+       be set to profit maximization if a profit calculator is given, otherwise it
+       defaults to cost minimization.
+
+    The function also creates a separate logger to maintain readability when the scenario
+    generation is done by multiple threads.
+
+    :param i_sp_tup: Tuple containing the index of the scenario as first, and the scenario parameters
+                     as returned by ScenarioParameterContainer.generate_all_scenario_parameter_combinations
+                     as second element.
+    :return:
+    """
+
+    i, sp = i_sp_tup
+    logger = util.get_logger("sg_worker_{}".format(os.getpid()), make_file=False, propagate=False)
+    logger.info("Generating scenario {}  with {}".format(i, sp))
+    scenario = datamodel.Scenario(name="scenario_{}_rep_{}".format(i / sp['maxrepetition'], sp['repetition']), substrate=None, requests=None)
+    top_zoo_reader = TopologyZooReader()
+    top_zoo_reader.apply(sp, scenario)
+    class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
+    global_name_space = globals()
+    rg = global_name_space[class_name_request_generator]()
+    rg.apply(sp, scenario)
+    if NODE_PLACEMENT_TASK in sp:
+        class_name_npr = sp[NODE_PLACEMENT_TASK].values()[0].keys()[0]
+        npr = global_name_space[class_name_npr]()
+        npr.apply(sp, scenario)
+    if PROFIT_CALCULATION_TASK in sp:
+        class_name_profit_calc = sp[PROFIT_CALCULATION_TASK].values()[0].keys()[0]
+        pc = global_name_space[class_name_profit_calc]()
+        pc.apply(sp, scenario)
+        scenario.objective = datamodel.Objective.MAX_PROFIT
+    return i, scenario, sp
+
+
+class ScenariogenerationTask(object):
+    """
+    Base class for all steps in the scenario generation process.
+    Currently it just handles the instantiation of the logger.
+    """
+
+    def __init__(self, logger):
+        if logger is None:
+            logger = global_logger
+        self.logger = logger
+
+    def apply(self, scenario_parameters, scenario):
+        """
+        Apply this task to the scenario object, given the scenario_parameters.
+
+        :param scenario_parameters:
+        :param scenario:
+        :return:
+        """
+        raise NotImplementedError("This is an abstract method! Use one of the implementations defined below.")
+
+
+class AbstractRequestGenerator(ScenariogenerationTask):
+    """
+    Base class for the request generation task. Subclasses should implement the
+    generate_request method defined below, which should return an object of the
+    type datamodel.Request.
+    """
+
+    def __init__(self, logger=None):
+        super(AbstractRequestGenerator, self).__init__(logger)
+        self._substrate = None
+        self._raw_parameters = None
+        self._scenario_parameters_have_changed = True  # to avoid redundant calculations on the same scenario
+        self._node_types = None
+
+    def apply(self, scenario_parameters, scenario):
+        class_raw_parameters_dict = scenario_parameters[REQUEST_GENERATION_TASK].values()[0]
+        class_name = self.__class__.__name__
+        if class_name not in class_raw_parameters_dict:
+            raise RequestGenerationError("")
+        raw_parameters = class_raw_parameters_dict[class_name]
+        scenario.requests = self.generate_request_list(raw_parameters,
+                                                       scenario.substrate,
+                                                       normalize=raw_parameters["normalize"])
+
+    def generate_request_dictionary(self, raw_parameters, substrate, base_name="vnet_{id}", normalize=False):
+        raise NotImplementedError("Not necessary at the moment")
+
+    def generate_request_list(self, raw_parameters, substrate, base_name="vnet_{id}", normalize=False):
+        requests = []
+        self._scenario_parameters_have_changed = True
+        self.logger.info(
+            "{}: Generating request list with {} requests.".format(
+                self.__class__.__name__,
+                raw_parameters["number_of_requests"]
+            )
+        )
+        for i in xrange(raw_parameters["number_of_requests"]):
+            name = base_name.format(id=i + 1)
+            req = self.generate_request(name, raw_parameters, substrate)
+            # log.debug("Generated {} with {} nodes and {} edges".format(req.name, len(req.nodes), len(req.edges)))
+            requests.append(req)
+            self._scenario_parameters_have_changed = False  # we will generate more requests with the same parameters
+        self._scenario_parameters_have_changed = True
+        if normalize:
+            self.normalize_resource_footprint(raw_parameters, requests, substrate)
+
+        return requests
+
+    def generate_request(self, name, raw_parameters, substrate):
+        raise NotImplementedError("This is an abstract method! Use one of the implementations defined below.")
+
+    def _next_node_type(self):
+        return random.choice(self._node_types)
+
+    def verify_substrate_has_sufficient_capacity(self, request, substrate):
+        for i in request.nodes:
+            allowed_nodes = request.node[i]["allowed_nodes"]
+            demand = request.node[i]["demand"]
+            ntype = request.node[i]["type"]
+            max_substrate_capacity = max(substrate.get_node_type_capacity(u, ntype) for u in allowed_nodes)
+            if demand > max_substrate_capacity:
+                self.logger.info("Capacity limit violated by request node {} of type {} with demand {} (max. capacity = {})".format(i, ntype, demand, max_substrate_capacity))
+                return False
+
+        # TODO when we implement edge mapping restrictions, these 2 lines should move into the loop... request.get_allowed_edges(ij)
+        allowed_sedges = substrate.edges
+        max_substrate_capacity = max(substrate.get_edge_capacity(uv) for uv in allowed_sedges)
+        for ij in request.edges:
+            demand = request.edge[ij]["demand"]
+            if demand > max_substrate_capacity:
+                self.logger.info("Capacity limit violated by request edge {} with demand {} (max. capacity = {})".format(ij, demand, max_substrate_capacity))
+                return False
+        return True
+
+    def normalize_resource_footprint(self, raw_parameters, requests, substrate):
+        edge_footprint = sum(
+            sum(req.get_edge_demand(ij) for ij in req.edges)
+            for req in requests
+        )
+        node_footprint = {
+            nt: sum(
+                sum(req.get_node_demand(i) for i in req.get_nodes_by_type(nt))
+                for req in requests)
+            for nt in substrate.types
+        }
+        desired_edge_footprint = (1.0 / raw_parameters["edge_resource_factor"]) * substrate.get_total_edge_resources()
+        desired_node_footprint = {nt: raw_parameters["node_resource_factor"] * substrate.get_total_node_resources(nt)
+                                  for nt in substrate.types}
+        for req in requests:
+            for edge in req.edges:
+                req.edge[edge]["demand"] *= (desired_edge_footprint / edge_footprint)
+            for node in req.nodes:
+                nt = req.node[node]["type"]
+                req.node[node]["demand"] *= (desired_node_footprint[nt] / node_footprint[nt])
+
+
+class ServiceChainGenerator(AbstractRequestGenerator):
+    """
+    Generate a Request that represents a Service Chain. The Request consists of
+    a chain connecting a source "s" and target "t", with additional edges added
+    at random between the intermediate nodes, according to the "probability" scenario
+    parameter. If "probability" is set to 0.0, a datamodel.LinearRequest object will be
+    generated instead.
+
+    The source and target nodes are each mapped to a single substrate node.
+
+    Additionally, a latency constraint is generated for the chain connecting the source and target nodes.
+    The maximum latency is obtained by multiplying the latency_factor parameter with the length of the shortest-path
+    embedding.
+    """
+
+    SOURCE_NODE = "s"
+    TARGET_NODE = "t"
+
+    EXPECTED_PARAMETERS = [
+        "number_of_requests",  # used for estimating average resource demand
+        "min_number_of_nodes", "max_number_of_nodes",
+        "probability",
+        "latency_factor",
+        "node_resource_factor",
+        "edge_resource_factor"
+    ]
+
+    def __init__(self, logger=None):
+        super(ServiceChainGenerator, self).__init__(logger)
+        self.average_request_node_resources_per_type = None  # dictionary mapping node types to the average resource demand of a node of the given type
+        self.average_request_edge_resources = None
+        self._raw_parameters = None
+
+    def generate_request(self,
+                         name,
+                         raw_parameters,
+                         substrate):
+        self._node_types = list(substrate.types)
+        self._substrate = substrate
+        self._raw_parameters = raw_parameters
+        self._calculate_average_resource_demands()
+
+        req = self._generate_request_graph(name)
+        while not self.verify_substrate_has_sufficient_capacity(req, substrate):
+            req = self._generate_request_graph(name)
+
+        self._scenario_parameters_have_changed = True
+        self._substrate = None
+        self._raw_parameters = None
+        return req
+
+    def _generate_request_graph(self, name):
+        if self._raw_parameters["probability"] > 0.0:
+            req = datamodel.Request(name)
+        else:
+            req = datamodel.LinearRequest(name)
+        selected_edge_resources = numpy.random.exponential(self.average_request_edge_resources)
+
+        # initialize source & sink:
+        source_type = self._next_node_type()
+        target_type = self._next_node_type()
+        source_location, target_location = self._choose_source_target_locations(source_type, target_type)
+        source_resources = selected_edge_resources / self.average_request_edge_resources * self.average_request_node_resources_per_type[source_type]
+        req.add_node(ServiceChainGenerator.SOURCE_NODE,
+                     source_resources,
+                     source_type,
+                     allowed_nodes={source_location})
+
+        # generate the main chain:
+        number_of_nodes_in_core = random.randint(self._raw_parameters["min_number_of_nodes"],
+                                                 self._raw_parameters["max_number_of_nodes"])
+        # pick a node_type for every node of the requests
+        selected_functions = [self._next_node_type() for _ in range(number_of_nodes_in_core)]
+        core_nodes_and_functions = []
+        previous_node = ServiceChainGenerator.SOURCE_NODE
+        latency_edges = []
+        for node_type in selected_functions:
+            new_node = str(len(req.get_nodes()) - 1)
+            core_nodes_and_functions.append((new_node, node_type))
+            node_demand = selected_edge_resources / self.average_request_edge_resources * self.average_request_node_resources_per_type[node_type]
+            req.add_node(new_node,
+                         node_demand,
+                         node_type,
+                         allowed_nodes=self._substrate.get_nodes_by_type(node_type))
+            req.add_edge(previous_node, new_node, selected_edge_resources)
+            edge = (previous_node, new_node)
+            latency_edges.append(edge)
+            previous_node = new_node
+
+        target_demand = selected_edge_resources / self.average_request_edge_resources * self.average_request_node_resources_per_type[target_type]
+        req.add_node(ServiceChainGenerator.TARGET_NODE,
+                     target_demand,
+                     target_type,
+                     allowed_nodes={target_location})
+        req.add_edge(previous_node, ServiceChainGenerator.TARGET_NODE, selected_edge_resources)
+        latency_edges.append((previous_node, ServiceChainGenerator.TARGET_NODE))
+        max_latency = self._raw_parameters["latency_factor"] * self._calculate_min_latency(core_nodes_and_functions, source_location, target_location)
+        req.add_latency_requirement(latency_edges, max_latency)
+
+        req.node[ServiceChainGenerator.SOURCE_NODE]["fixed_node"] = True
+        req.node[ServiceChainGenerator.TARGET_NODE]["fixed_node"] = True
+        # Add random connections:
+        for n1, node_type_1 in core_nodes_and_functions:
+            for n2, node_type_2 in core_nodes_and_functions:
+                if n1 == n2 or (n1, n2) in req.get_edges():
+                    continue
+                if random.random() < self._raw_parameters["probability"]:
+                    req.add_edge(n1, n2, selected_edge_resources)
+        return req
+
+    def _choose_source_target_locations(self, source_type, target_type):
+        potential_source_nodes = list(self._substrate.get_nodes_by_type(source_type))
+        potential_target_nodes = list(self._substrate.get_nodes_by_type(target_type))
+        source_location = random.choice(potential_source_nodes)
+        target_location = random.choice(potential_target_nodes)
+        return source_location, target_location
+
+    def _calculate_min_latency(self, core_nodes_and_functions, source_location, target_location):
+        """
+        Calculate the latency (length of the shortest path from source to sink while
+        respecting the restrictions of network functions)
+        :param core_nodes_and_functions:
+        :param source_location:
+        :param target_location:
+        :return:
+        """
+        last_layer = [(source_location, 0.0)]
+
+        for node, node_type in core_nodes_and_functions:
+            # print last_layer
+            next_layer = []
+            for end_node in self._substrate.get_nodes_by_type(node_type):
+                latency = min(lat + self._substrate.shortest_paths_costs[start_node][end_node]
+                              for start_node, lat in last_layer)
+                next_layer.append((end_node, latency))
+            last_layer = next_layer
+
+        result = min(latency + self._substrate.shortest_paths_costs[node][target_location] for node, latency in last_layer)
+        return result
+
+    def _calculate_average_resource_demands(self):
+        connection_probability = self._raw_parameters["probability"]
+        min_number_nodes = self._raw_parameters["min_number_of_nodes"]
+        max_number_nodes = self._raw_parameters["max_number_of_nodes"]
+        number_of_requests = self._raw_parameters["number_of_requests"]
+        node_res = self._raw_parameters["node_resource_factor"]
+        edge_res_factor = self._raw_parameters["edge_resource_factor"]
+
+        average_number_of_nodes_in_core = ((min_number_nodes + max_number_nodes) / 2.0)
+
+        expected_number_of_request_nodes = (float(number_of_requests) * (2 + average_number_of_nodes_in_core))  # add 2 for source & sink
+        expected_number_of_request_edges = (float(number_of_requests) * (
+            # edges of the main service chain:
+            (average_number_of_nodes_in_core - 1 + 2) +
+            # edges from random connections:
+            connection_probability * (average_number_of_nodes_in_core * (average_number_of_nodes_in_core - 2) + 1)
+        ))
+
+        # TODO: this code assumes that all node types are evenly distributed in the request!
+        expected_number_of_request_nodes_per_node_type = expected_number_of_request_nodes / float(len(self._node_types))
+        self.average_request_node_resources_per_type = {}
+        for node_type in self._node_types:
+            self.average_request_node_resources_per_type[node_type] = node_res * (self._substrate.get_total_node_resources(node_type) / expected_number_of_request_nodes_per_node_type)
+
+        self.average_request_edge_resources = (1.0 / edge_res_factor) * self._substrate.get_total_edge_resources() / expected_number_of_request_edges
+
+
+class ExponentialRequestGenerator(AbstractRequestGenerator):
+    """
+    Generate requests, where the number of nodes is sampled from an exponential distribution.
+    Edges are connected at random according to the "probability" parameter.
+
+    Warning: Request graphs may have multiple components.
+    """
+
+    EXPECTED_PARAMETERS = [
+        "number_of_requests",  # used for estimating average resource demand
+        "min_number_of_nodes", "max_number_of_nodes",
+        "probability",
+        "node_resource_factor",
+        "edge_resource_factor",
+        "normalize"
+    ]
+
+    def __init__(self, logger=None):
+        super(ExponentialRequestGenerator, self).__init__(logger)
+        self._raw_parameters = None
+
+    def generate_request(self,
+                         name,
+                         raw_parameters,
+                         substrate):
+        self._node_types = list(substrate.types)
+        self._substrate = substrate
+        self._raw_parameters = raw_parameters
+
+        self.logger.debug("Generating request {}".format(name))
+        req = self._generate_request_graph(name)
+        while not self.verify_substrate_has_sufficient_capacity(req, substrate):
+            req = self._generate_request_graph(name)
+
+        self._substrate = None
+        self._raw_parameters = None
+        self._scenario_parameters_have_changed = True
+        return req
+
+    def _generate_request_graph(self, name):
+        req = datamodel.Request(name)
+
+        connection_probability = self._raw_parameters["probability"]
+        node_res = self._raw_parameters["node_resource_factor"]
+        edge_res_factor = self._raw_parameters["edge_resource_factor"]
+        min_number_nodes = self._raw_parameters["min_number_of_nodes"]
+        max_number_nodes = self._raw_parameters["max_number_of_nodes"]
+        number_of_requests = self._raw_parameters["number_of_requests"]
+
+        average_number_of_nodes = ((max_number_nodes + min_number_nodes) / 2.0)
+
+        expected_number_of_request_nodes_per_node_type = (float(number_of_requests) * average_number_of_nodes) / float(len(self._node_types))
+        expected_number_of_request_edges = float(number_of_requests) * (average_number_of_nodes * (average_number_of_nodes - 1) * connection_probability)
+
+        average_request_node_resources = {}
+        for node_type in self._node_types:
+            average_request_node_resources[node_type] = node_res * (self._substrate.get_total_node_resources(node_type) / float(expected_number_of_request_nodes_per_node_type))
+
+        average_request_edge_resources = (1.0 / edge_res_factor) * self._substrate.get_total_edge_resources() / float(expected_number_of_request_edges)
+
+        selected_edge_resources = numpy.random.exponential(average_request_edge_resources)
+
+        # create nodes
+        number_of_nodes = random.randint(min_number_nodes, max_number_nodes)
+        for i in xrange(1, number_of_nodes + 1):
+            node_type = self._next_node_type()
+            node_demand = selected_edge_resources / average_request_edge_resources * average_request_node_resources[node_type]
+            req.add_node(str(i), node_demand, node_type, allowed_nodes=self._substrate.get_nodes_by_type(node_type))
+
+        # create edges
+        for i in req.nodes:
+            for j in req.nodes:
+                if i == j:
+                    continue
+                if random.random() <= connection_probability:
+                    req.add_edge(i, j, selected_edge_resources)
+        return req
+
+
+class UniformRequestGenerator(AbstractRequestGenerator):
+    """
+    Generate requests, where the number of nodes is sampled from a uniform distribution.
+    Edges are connected at random according to the "probability" parameter.
+
+    Warning: Request graphs may have multiple components.
+    """
+    EXPECTED_PARAMETERS = [
+        "number_of_requests",  # used for estimating average resource demand
+        "min_number_of_nodes", "max_number_of_nodes",
+        "probability",
+        "variability",
+        "node_resource_factor",
+        "edge_resource_factor",
+        "normalize"
+    ]
+
+    def __init__(self, logger=None):
+        super(UniformRequestGenerator, self).__init__(logger)
+
+    def generate_request(self, name, raw_parameters, substrate):
+        self._node_types = list(substrate.types)
+        self._substrate = substrate
+        self._raw_parameters = raw_parameters
+
+        req = self._generate_request_graph(name)
+        while not self.verify_substrate_has_sufficient_capacity(req, substrate):
+            req = self._generate_request_graph(name)
+
+        self._scenario_parameters_have_changed = True
+        self._raw_parameters = None
+        self._substrate = None
+        return req
+
+    def _generate_request_graph(self, name):
+        req = datamodel.Request(name)
+        number_of_substrate_nodes = self._substrate.get_number_of_nodes()
+        number_of_substrate_edges = self._substrate.get_number_of_edges()
+
+        variability = self._raw_parameters["variability"]
+        connection_probability = self._raw_parameters["probability"]
+        # potential_nodes_factor = self._scenario_parameters["potential_nodes_factor"]
+        node_res_factor = self._raw_parameters["node_resource_factor"]
+        edge_res_factor = self._raw_parameters["edge_resource_factor"]
+        min_number_nodes = self._raw_parameters["min_number_of_nodes"]
+        max_number_nodes = self._raw_parameters["max_number_of_nodes"]
+        number_of_requests = self._raw_parameters["number_of_requests"]
+
+        average_number_of_nodes_per_request = (max_number_nodes + min_number_nodes) / 2.0
+        expected_number_of_request_nodes_per_node_type = float(number_of_requests) * average_number_of_nodes_per_request / float(len(self._node_types))
+
+        min_request_node_demand_per_type = {}
+        max_request_node_demand_per_type = {}
+        for node_type in self._node_types:
+            average_request_node_resources = node_res_factor * (self._substrate.get_total_node_resources(node_type) / expected_number_of_request_nodes_per_node_type)
+            # apply variability:
+            min_request_node_demand_per_type[node_type] = (1.0 - variability) * average_request_node_resources
+            max_available_cap = max(self._substrate.get_node_type_capacity(u, node_type) for u in self._substrate.get_nodes_by_type(node_type))
+            if min_request_node_demand_per_type[node_type] > max_available_cap:
+                msg = "Parameters will always result in infeasible request due to demand for node type {}:\n    Min capacity: {} Max available: {}\n    {}".format(
+                    node_type,
+                    min_request_node_demand_per_type[node_type],
+                    max_available_cap,
+                    self._raw_parameters
+                )
+                raise ScenarioParameterError(msg)
+            max_request_node_demand_per_type[node_type] = (1.0 + variability) * average_request_node_resources
+
+        expected_number_of_request_edges = float(number_of_requests) * (average_number_of_nodes_per_request * (average_number_of_nodes_per_request - 1) * connection_probability)
+        average_edge_resources = (1.0 / edge_res_factor) * self._substrate.get_total_edge_resources() / expected_number_of_request_edges
+
+        min_request_edge_demand = (1.0 - variability) * average_edge_resources
+        max_available_cap = max(self._substrate.get_edge_capacity(uv) for uv in self._substrate.edges)
+        if min_request_edge_demand > max_available_cap:
+            msg = "Parameters will always result in infeasible request due to edge demand: Min capacity: {} Max available: {}\n    {}".format(
+                min_request_edge_demand,
+                max_available_cap,
+                self._raw_parameters
+            )
+            raise ScenarioParameterError(msg)
+        max_request_edge_demand = (1.0 + variability) * average_edge_resources
+
+        selected_number_of_nodes = random.randint(min_number_nodes, max_number_nodes)
+
+        for node in xrange(1, selected_number_of_nodes + 1):
+            node_type = self._next_node_type()
+            node_demand = random.uniform(min_request_node_demand_per_type[node_type], max_request_node_demand_per_type[node_type])
+            req.add_node(str(node), node_demand, node_type, allowed_nodes=self._substrate.get_nodes_by_type(node_type))
+
+        for node in req.nodes:
+            for otherNode in req.nodes:
+                if node == otherNode:
+                    continue
+                if random.random() <= connection_probability:
+                    edge_capacity = random.uniform(min_request_edge_demand, max_request_edge_demand)
+                    req.add_edge(node, otherNode, edge_capacity)
+        return req
+
+
+class CactusRequestGenerator(AbstractRequestGenerator):
+    """
+    Generate request topologies with the cactus graph property.
+
+    First, a random tree is generated according to the "layers" and
+    "branching_distribution" scenario parameters.
+    
+    * ``layers``: an integer giving the depth of the tree
+    * ``branching_distribution``: a list of floating point numbers,
+      which specifies a probability distribution for the number of children:
+      If branching_distribution[i] = p_i, then each node in the tree has
+      probability p_i of having i many children.
+      The elements of the branching_distribution list must add up to 1.0.
+
+      Warning: if a non-zero value is assigned to the first list element of the branching
+      distribution, the tree depth may be reduced and the request graph may degenerate to a single node
+
+    After generating the tree, edges are randomly added to the request graph in a way that
+    maintains the cactus property according to the "max_cycles" and "probability" parameters:
+    
+    * ``max_cycles``: An integer giving a hard upper limit on the number of cycles that may be included
+    * ``probability``: The algorithm repeatedly picks two random nodes from a subtree of the graph
+      and draws an edge between them according to this parameter.
+
+    To estimate the number of nodes/edges (i.e. the resource footprint), a number of
+    graphs is generated according to the "iterations" parameter.
+    """
+    ROOT = "root"
+    EXPECTED_PARAMETERS = [
+        "probability",
+        "number_of_requests",
+        "node_resource_factor",
+        "edge_resource_factor",
+        "min_number_of_nodes", "max_number_of_nodes",
+        "branching_distribution",
+        "layers",
+        "max_cycles",
+        "iterations",
+        "fix_root_mapping",
+        "fix_leaf_mapping",
+        "normalize"
+    ]
+
+    def __init__(self, logger=None):
+        super(CactusRequestGenerator, self).__init__(logger)
+        self._function_placement_restrictions = None
+        self._raw_parameters = None
+        self._substrate = None
+        self._node_demand_by_type = None
+        self._edge_demand = None
+        self._generation_attemps = None
+
+    def generate_request(self,
+                         name,
+                         raw_parameters,
+                         substrate):
+        self._node_types = list(substrate.types)
+        self._raw_parameters = raw_parameters
+        self._substrate = substrate
+        if self._scenario_parameters_have_changed:  # this operation may be quite expensive => only do it when the values are outdated
+            self._calculate_average_resource_demands()
+        req = None
+        is_feasible = False
+        self._generation_attemps = 0
+        while not is_feasible:
+            req = self._generate_request_graph(name)
+            is_feasible = self.verify_substrate_has_sufficient_capacity(req, substrate)
+            self._generation_attemps += 1
+            if self._generation_attemps > 10 ** 7:
+                self._abort()
+        self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
+        return req
+
+    def _generate_request_graph(self, name):
+        print "Generating", name
+        self._select_node_edge_resources()
+        req = self._generate_tree(name)
+        self._add_cactus_edges(req)
+        return req
+
+    def _generate_tree(self, name):
+        has_correct_size = False
+        if self._generation_attemps is None:
+            self._generation_attemps = 0
+        req = None
+        while not has_correct_size:
+            req = datamodel.Request(name)
+            layer = 0
+            fixed_nodes = []
+            root_type = self._next_node_type()
+            root_id = "{}_{}".format(CactusRequestGenerator.ROOT, req.name)
+            req.graph["root"] = root_id
+            allowed_nodes = self._substrate.get_nodes_by_type(root_type)
+            demand = self._node_demand_by_type[root_type]
+            self._add_node_to_request(req, root_id, demand, root_type, allowed_nodes, None, layer)
+            previous_layer = [root_id]
+            if self._raw_parameters["fix_root_mapping"]:
+                fixed_nodes.append(root_id)
+            for layer in xrange(1, self._raw_parameters["layers"] + 1):
+                current_layer = []
+                while previous_layer:
+                    parent_node = previous_layer.pop()
+                    number_of_children = self._pick_number_of_children()
+                    if number_of_children == 0 and self._raw_parameters["fix_leaf_mapping"]:
+                        fixed_nodes.append(parent_node)
+                    for i in xrange(1, number_of_children + 1):
+                        ntype = self._next_node_type()
+                        child_node = self._get_node_name(len(req.nodes) + 1, parent_node, layer, ntype, req)
+                        current_layer.append(child_node)
+                        allowed_nodes = self._substrate.get_nodes_by_type(ntype)
+                        demand = self._node_demand_by_type[ntype]
+                        self._add_node_to_request(req, child_node, demand, ntype, allowed_nodes, parent_node, layer)
+                        if layer == self._raw_parameters["layers"] and self._raw_parameters["fix_leaf_mapping"]:
+                            fixed_nodes.append(child_node)
+                        req.add_edge(parent_node, child_node, self._edge_demand)
+
+                previous_layer = current_layer
+            self._fix_nodes(req, fixed_nodes)
+            has_correct_size = self._raw_parameters["min_number_of_nodes"] <= len(req.nodes) <= self._raw_parameters["max_number_of_nodes"]
+            self._generation_attemps += 1
+            if self._generation_attemps > 10 ** 7:
+                self._abort()
+        return req
+
+    def _fix_nodes(self, req, nodes):
+        for i in nodes:
+            req.node[i]["fixed_node"] = True  # in case the node placement restrictions are overwritten later
+            node_type = self._substrate.get_nodes_by_type(req.node[i]["type"])
+            allowed_nodes = random.sample(node_type, 1)
+            # log.debug("{}: Fixing node {} -> {}".format(req.name, i, allowed_nodes))
+            req.node[i]["allowed_nodes"] = allowed_nodes
+
+    def _add_node_to_request(self, req, node, demand, ntype, allowed, parent, layer):
+        req.add_node(node, demand, ntype, allowed_nodes=allowed)
+        req.node[node]["parent"] = parent
+        req.node[node]["layer"] = layer
+
+    def _add_cactus_edges(self, req):
+        sub_trees = [(req.graph["root"], list(req.nodes))]
+        cycles = 0
+        edges_on_cycle = set()
+        while sub_trees and (cycles < self._raw_parameters["max_cycles"]):
+            cycles += 1
+            root_node, sub_tree = sub_trees.pop()
+            i = random.choice(sub_tree)
+            j = random.choice(sub_tree)
+            while i == j or (i in req.get_out_neighbors(j)) or (j in req.get_out_neighbors(i)):
+                i = random.choice(sub_tree)
+                j = random.choice(sub_tree)
+            if req.node[i]["layer"] > req.node[j]["layer"]:
+                i, j = j, i  # make edges always point down the tree
+            if random.random() < self._raw_parameters["probability"]:
+                req.add_edge(i, j, self._edge_demand)
+                edges_on_cycle.add((i, j))
+
+                path_i = CactusRequestGenerator._path_to_root(req, i, root_node)
+                path_j = CactusRequestGenerator._path_to_root(req, j, root_node)
+                new_cycle = path_i.symmetric_difference(path_j)  # only edges on the path to the first common ancestor lie on cycle
+                edges_on_cycle = edges_on_cycle.union(new_cycle)
+
+                sub_trees = CactusRequestGenerator._list_nontrivial_allowed_subtrees(req, edges_on_cycle)
+                random.shuffle(sub_trees)
+
+    @staticmethod
+    def _path_to_root(req, u, root_node):
+        result = set()
+        while u != root_node:
+            parent = req.node[u]["parent"]
+            result.add((parent, u))
+            u = parent
+        return result
+
+    @staticmethod
+    def _list_nontrivial_allowed_subtrees(req, edges_on_cycle):
+        visited_subtrees = set()
+        result = []
+        for root_node in req.nodes:
+            if root_node in visited_subtrees:
+                continue
+            visited_subtrees.add(root_node)
+            subtree = CactusRequestGenerator._get_subtree_under_node(req, root_node, edges_on_cycle)
+            if len(subtree) > 2:
+                result.append((root_node, subtree))
+        return result
+
+    @staticmethod
+    def _get_subtree_under_node(req, root, removed_edges):
+        stack = [root]
+        subtree = []
+        while stack:
+            u = stack.pop()
+            subtree.append(u)
+            for w in req.get_out_neighbors(u):
+                if all([w not in e for e in removed_edges]):
+                    stack.append(w)
+        return subtree
+
+    def _pick_number_of_children(self):
+        draw = random.random()
+        number_of_children = None
+        cumulative = 0.0
+        for branch_number, probability in enumerate(self._raw_parameters["branching_distribution"]):
+            cumulative += probability
+            if draw < cumulative:
+                number_of_children = branch_number
+                break
+        if number_of_children is None:
+            raise RequestGenerationError("No branching number could be determined!")
+        return number_of_children
+
+    def _get_node_name(self, node_id, parent_node, layer, ntype, req):
+        if parent_node == req.graph["root"]:
+            parent_id = "0"
+        else:
+            parent_id = parent_node.split("_")[0][1:]
+        return "n{id}_{type}_p{parent}_l{layer}_{req}".format(
+            id=node_id, type=ntype, parent=parent_id, layer=layer, req=req.name
+        )
+
+    def _calculate_average_resource_demands(self):
+        number_of_requests = self._raw_parameters["number_of_requests"]
+
+        self._expected_number_of_request_nodes_per_type, self._expected_number_of_request_edges = self._empirical_number_of_nodes_edges()
+        self._expected_number_of_request_nodes_per_type *= number_of_requests / len(self._node_types)
+        self._expected_number_of_request_edges *= number_of_requests
+        node_res = self._raw_parameters["node_resource_factor"]
+        edge_res_factor = self._raw_parameters["edge_resource_factor"]
+        self.average_request_edge_resources = (1.0 / edge_res_factor) * self._substrate.get_total_edge_resources() / self._expected_number_of_request_edges
+        self.average_request_node_resources_per_type = {}
+        for ntype in self._node_types:
+            self.average_request_node_resources_per_type[ntype] = node_res * (self._substrate.get_total_node_resources(ntype) / self._expected_number_of_request_nodes_per_type)
+
+    def _select_node_edge_resources(self):
+        self._edge_demand = numpy.random.exponential(self.average_request_edge_resources)
+        self._node_demand_by_type = {}
+        for ntype in self._node_types:
+            self._node_demand_by_type[ntype] = self._edge_demand / self.average_request_edge_resources * self.average_request_node_resources_per_type[ntype]
+            # print ("Selected resources: Edges: {:8.2f}    Nodes by type: {}   ".format(self._edge_demand, self._node_demand_by_type))
+
+    def expected_number_of_nodes_in_tree(self):
+        nodes_at_layer = {}
+        expected_number_of_children = sum(i * p for i, p in enumerate(self._raw_parameters["branching_distribution"]))
+
+        def expected_nodes_in_sublayers(layer):
+            if layer in nodes_at_layer:
+                return nodes_at_layer[layer]
+            result = 1
+            if layer != self._raw_parameters["layers"]:
+                result += expected_number_of_children * expected_nodes_in_sublayers(layer + 1)
+            nodes_at_layer[layer] = result
+            return result
+
+        node_count = expected_nodes_in_sublayers(0)
+        return node_count
+
+    def _empirical_number_of_nodes_edges(self):
+        total_nodes = 0
+        total_edges = 0
+        self._node_demand_by_type = {nt: 0.0 for nt in self._node_types}
+        self._edge_demand = 0.0
+        r_state = random.getstate()
+        iterations = self._raw_parameters["iterations"]
+        for i in xrange(iterations):
+            req = self._generate_tree("test")
+            self._add_cactus_edges(req)
+            # print len(req.nodes)
+            total_nodes += len(req.nodes)
+            total_edges += len(req.edges)
+        random.setstate(r_state)
+        total_nodes /= float(iterations)
+        total_edges /= float(iterations)
+        self.logger.info("Expecting {} nodes, {} edges".format(total_nodes, total_edges))
+        return total_nodes, total_edges
+
+    def _abort(self):
+        raise RequestGenerationError(
+            "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attemps, self._raw_parameters)
+        )
+
+
+class AbstractProfitCalculator(ScenariogenerationTask):
+    """Base class for the profit generation task."""
+
+    def __init__(self, logger):
+        super(AbstractProfitCalculator, self).__init__(logger)
+
+    def apply(self, scenario_parameters, scenario):
+        class_raw_parameters_dict = scenario_parameters[PROFIT_CALCULATION_TASK].values()[0]
+        class_name = self.__class__.__name__
+        if class_name not in class_raw_parameters_dict:
+            raise ScenarioGeneratorError("")
+        raw_parameters = class_raw_parameters_dict[class_name]
+        self.generate_and_apply_profits(scenario, raw_parameters)
+
+    def generate_and_apply_profits(self, scenario, raw_parameters):
+        raise NotImplementedError("This is an abstract class! Use one of the implementations defined below.")
+
+
+class RandomEmbeddingProfitCalculator(AbstractProfitCalculator):
+    """
+    Calculate profits for all new requests in a scenario.
+
+    The profit for each request is the average cost of random embeddings
+    in the empty substrate, multiplied by the "profit_factor" parameter.
+
+    The "iterations" parameter defines the number of random embeddings.
+    """
+
+    EXPECTED_PARAMETERS = [
+        "profit_factor",
+        "iterations"
+    ]
+
+    def __init__(self, logger=None):
+        super(RandomEmbeddingProfitCalculator, self).__init__(logger)
+        self._scenario = None
+        self._iterations = None
+
+    def generate_and_apply_profits(self, scenario, raw_parameters):
+        self._scenario = scenario
+        self._iterations = raw_parameters["iterations"]
+        self.logger.info("Calculating vnet profits based on random embedding ({} iterations)".format(self._iterations))
+
+        if not self._scenario.substrate.shortest_paths_costs:
+            self._scenario.substrate.initialize_shortest_paths_costs()
+
+        for req in self._scenario.requests:
+            cost = self._get_average_cost_from_embedding_graph_randomly(
+                req, self._scenario.substrate.shortest_paths_costs
+            )
+            req.profit = -cost * raw_parameters["profit_factor"]
+            self.logger.debug("\t{}\t{}".format(req.name, req.profit))
+
+        self._iterations = None
+        self._scenario = None
+
+    def _get_average_cost_from_embedding_graph_randomly(self, req, shortest_paths):
+        costs = [0 for _ in xrange(self._iterations)]
+        average_factor = 1.0 / self._iterations
+        for i in xrange(self._iterations):
+            mapped_node = dict()
+            costs[i] = 0.0
+            for node in req.get_nodes():
+                restrictions = req.get_allowed_nodes(node)
+                if restrictions is None or len(restrictions) == 0:
+                    restrictions = self._scenario.substrate.get_nodes()
+                snode = random.choice(tuple(restrictions))
+                mapped_node[node] = snode
+                # mapping costs are negative to be consistent with mip calculation:
+                costs[i] -= self._scenario.substrate.get_node_type_cost(snode, req.node[node]["type"]) * req.node[node]["demand"] * average_factor
+            for edge in req.get_edges():
+                n1, n2 = edge
+                sn1 = mapped_node[n1]
+                sn2 = mapped_node[n2]
+                # mapping costs are negative to be consistent with mip calculation:
+                costs[i] -= shortest_paths[sn1][sn2] * req.edge[edge]["demand"] * average_factor
+        return sum(costs)
+
+
+class OptimalEmbeddingProfitCalculator(AbstractProfitCalculator):
+    """
+    Calculate profits for all new requests in a scenario.
+
+    The profit for each request is the cost of its optimal embedding
+    in the empty substrate, multiplied by the profit_factor parameter.
+    """
+
+    EXPECTED_PARAMETERS = [
+        "profit_factor",
+        "timelimit"
+    ]
+
+    def __init__(self, logger=None):
+        super(OptimalEmbeddingProfitCalculator, self).__init__(logger)
+        self._scenario = None
+
+    def generate_and_apply_profits(self, scenario, raw_parameters):
+        self._raw_parameters = raw_parameters
+        self._scenario = scenario
+
+        self.logger.info("Calculating vnet profits based on individual (optimal) min-cost embedding.".format())
+        cost_list = [self._solve_only_one_vnet_optimally(req)
+                     for req in self._scenario.requests]
+        self._apply_embedding_cost_as_request_profit(cost_list, raw_parameters)
+
+    def _apply_embedding_cost_as_request_profit(self, embedding_cost, scenario_parameters):
+        self.logger.info("Applying vnet profits to scenario {}".format(self._scenario))
+        for req, cost in itertools.izip(self._scenario.requests, embedding_cost):
+            req.profit = cost * scenario_parameters["profit_factor"]
+            self.logger.debug("\t{}\t{}".format(req.name, req.profit))
+
+    def _make_sub_scenario_containing_only(self, request):
+        copied_request = copy.deepcopy(request)
+        copied_request.setProfit(0.0)
+        return datamodel.Scenario("profit_calculation_{}".format(request.name),
+                                  self._scenario.substrate,
+                                  {copied_request.name: copied_request})
+
+    def _solve_only_one_vnet_optimally(self, req):
+        self.logger.debug("Calculating optimal solution for {}".format(req.name))
+        copied_request = copy.deepcopy(req)
+        copied_request.profit = 0.0
+        scenario_copy = copy.deepcopy(self._scenario)
+        scenario_copy.requests = [copied_request]
+        scenario_copy.objective = datamodel.Objective.MIN_COST
+
+        gurobi_settings = modelcreator.GurobiSettings(mipGap=0.001,
+                                                      iterationLimit=10 ** 99,
+                                                      nodeLimit=None,
+                                                      heuristics=None,
+                                                      threads=1,
+                                                      timelimit=self._raw_parameters["timelimit"])
+        mc = mip.ClassicMCFModel(scenario_copy)
+
+        mc.init_model_creator()
+        mc.model.setParam("OutputFlag", 0)
+        mc.apply_gurobi_settings(gurobi_settings)
+
+        solution = mc.compute_integral_solution()
+        if solution is None:
+            min_embedding_cost = 0.0
+        else:
+            min_embedding_cost = mc.status.objValue
+        # Some cleanup:
+        del scenario_copy
+        del mc.model
+        del mc
+        del copied_request
+        return min_embedding_cost
+
+
+class AbstractNodeMappingRestrictionGenerator(ScenariogenerationTask):
+    def __init__(self, logger):
+        super(AbstractNodeMappingRestrictionGenerator, self).__init__(logger)
+
+    def apply(self, scenario_parameters, scenario):
+        class_raw_parameters_dict = scenario_parameters[NODE_PLACEMENT_TASK].values()[0]
+        class_name = self.__class__.__name__
+        if class_name not in class_raw_parameters_dict:
+            raise ScenarioGeneratorError("")
+        raw_parameters = class_raw_parameters_dict[class_name]
+        self.generate_and_apply_restrictions(scenario, raw_parameters)
+
+    def generate_and_apply_restrictions(self, scenario, raw_parameters):
+        self.logger.info("{}: Generate node placement restrictions for {}".format(self.__class__.__name__, scenario.name))
+        for req in scenario.requests:
+            self.generate_restrictions_single_request(req, scenario.substrate, raw_parameters)
+
+    def generate_restrictions_single_request(self, req, substrate, raw_parameters):
+        raise NotImplementedError("This is an abstract method! Use one of the implementations defined below.")
+
+    def _number_of_nodes(self, req, node, number_of_substrate_nodes_with_correct_type, raw_parameters):
+        number_of_allowed_nodes = int(raw_parameters["potential_nodes_factor"] * number_of_substrate_nodes_with_correct_type)
+        number_of_allowed_nodes = max(1, number_of_allowed_nodes)  # at least 1 node should be allowed!
+        number_of_allowed_nodes = min(number_of_allowed_nodes, number_of_substrate_nodes_with_correct_type)
+        return number_of_allowed_nodes
+
+
+class UniformEmbeddingRestrictionGenerator(AbstractNodeMappingRestrictionGenerator):
+    """
+    Generate node placement restrictions by randomly choosing a fixed ratio of the
+    substrate nodes with suitable type. At least one substrate node is always chosen.
+    If the request node dictionary of a node contains the parameter "number_of_allowed_nodes",
+    then this number is used instead.
+
+    Example: Assuming a substrate with 20 nodes, 10 of which can support type "t1" and potential_nodes_factor=0.4.
+    Then, each request node of type "t1" is mapped to a random sample of 4 out of the 10 supporting nodes.
+
+    potential_nodes_factor: Floating point number between 0.0 and 1.0.
+    """
+    EXPECTED_PARAMETERS = [
+        "potential_nodes_factor"
+    ]
+
+    def __init__(self, logger=None):
+        super(UniformEmbeddingRestrictionGenerator, self).__init__(logger)
+
+    def generate_restrictions_single_request(self, req, substrate, raw_parameters):
+        self.logger.debug("\t{}".format(req.name))
+        for node in req.nodes:
+            if "fixed_node" in req.node[node]:
+                if req.node[node]["fixed_node"]:
+                    self.logger.debug("\t\t{} -> {}".format(node, req.get_allowed_nodes(node)))
+                    continue
+            allowed_nodes = substrate.get_nodes_by_type(req.node[node]["type"])
+            self.logger.debug("\t\t{} -> {}".format(node, allowed_nodes))
+            number_of_possible_nodes = len(allowed_nodes)
+            number_of_allowed_nodes = self._number_of_nodes(req, node, number_of_possible_nodes, raw_parameters)
+            allowed_nodes = random.sample(allowed_nodes, number_of_allowed_nodes)
+            allowed_nodes = set(allowed_nodes)
+            req.set_allowed_nodes(node, allowed_nodes)
+
+
+class NeighborhoodSearchRestrictionGenerator(AbstractNodeMappingRestrictionGenerator):
+    """
+    Generate node placement restrictions by traversing the substrate in a breadth-first-search, starting
+    at a randomly chosen "center" node. Whenever a substrate node supporting the node type is encountered,
+    it is added to the "allowed_nodes" list.
+
+    The number of allowed nodes is sampled from an exponential distribution with the mean "potential_nodes_factor".
+
+    potential_nodes_factor: Floating point number between 0.0 and 1.0.
+    """
+    EXPECTED_PARAMETERS = [
+        "potential_nodes_factor"
+    ]
+
+    def __init__(self, logger=None):
+        super(NeighborhoodSearchRestrictionGenerator, self).__init__(logger)
+
+    def generate_restrictions_single_request(self, req, substrate, raw_parameters):
+        for node in req.nodes:
+            if "fixed_node" in req.node[node]:
+                if req.node[node]["fixed_node"]:
+                    self.logger.debug("\t\t{} -> {}".format(node, req.get_allowed_nodes(node)))
+                    continue
+            ntype = req.node[node]["type"]
+            substrate_nodes_of_correct_type = substrate.get_nodes_by_type(ntype)
+            number_of_substrate_nodes = len(substrate_nodes_of_correct_type)
+
+            number_of_allowed_nodes = self._number_of_nodes(req, node, number_of_substrate_nodes, raw_parameters)
+
+            allowed_nodes = set()
+            visited_nodes = set()
+
+            center = random.choice(substrate_nodes_of_correct_type)
+            allowed_nodes.add(center)
+            visited_nodes.add(center)
+            nodes_to_explore = deque(neighbor for neighbor in substrate.get_out_neighbors(center))
+            while len(allowed_nodes) < number_of_allowed_nodes and nodes_to_explore:
+                next_node = nodes_to_explore.pop()
+                if next_node in substrate_nodes_of_correct_type:
+                    allowed_nodes.add(next_node)
+                visited_nodes.add(next_node)
+                nodes_to_explore.extendleft(snode for snode in substrate.get_out_neighbors(next_node) if snode not in visited_nodes)
+
+            req.set_allowed_nodes(node, allowed_nodes)
+            self.logger.debug("\t\t{} -> {}".format(node, allowed_nodes))
+
+
+class TopologyZooReader(ScenariogenerationTask):
+    # node_cost: [1.0]    #this is a multiplicative factor :)
+    EXPECTED_PARAMETERS = ["topology", "node_types", "edge_capacity",
+                           "node_cost_factor", "node_capacity", "node_type_distribution"]
+
+    def __init__(self, path=os.path.join(DATA_PATH, "topologyZoo"), logger=None):
+        super(TopologyZooReader, self).__init__(logger)
+        self.topology_zoo_dir = path
+        self._raw_nx_graphs = {}
+
+    def apply(self, scenario_parameters, scenario):
+        class_raw_parameters_dict = scenario_parameters[SUBSTRATE_GENERATION_TASK].values()[0]
+        class_name = self.__class__.__name__
+        if class_name not in class_raw_parameters_dict:
+            raise ScenarioGeneratorError("")
+        raw_parameters = class_raw_parameters_dict[class_name]
+        scenario.substrate = self.read_substrate(raw_parameters)
+
+    def read_substrate(self, raw_parameters):
+        filename = raw_parameters["topology"]
+        substrate = self.read_from_yaml(raw_parameters)
+        substrate.initialize_shortest_paths_costs()
+        return substrate
+
+    def read_from_yaml(self, raw_parameters, include_location=False):
+        topology = raw_parameters["topology"]
+        with open(os.path.abspath(os.path.join(self.topology_zoo_dir, topology + ".yml"))) as f:
+            graph_dict = yaml.safe_load(f)
+
+        nodes = graph_dict["nodes"].keys()
+        edges = graph_dict["edges"]
+        assigned_types = self._assign_node_types(nodes, raw_parameters)
+
+        dists = {}
+        # we compute at first the sum of all edge costs
+        total_edge_costs = 0
+        for edge in edges:
+            u, v = edge
+            u_lon = graph_dict["nodes"][u]["Longitude"]
+            u_lat = graph_dict["nodes"][u]["Latitude"]
+            v_lon = graph_dict["nodes"][v]["Longitude"]
+            v_lat = graph_dict["nodes"][v]["Latitude"]
+            dists[u, v] = cost = haversine(u_lon, u_lat, v_lon, v_lat)
+            total_edge_costs += 2 * cost * raw_parameters["edge_capacity"]
+
+        # this edge cost shall then equal the sum of all node costs
+        # hence we first compute for each type the total available capacity
+
+        total_capacity_per_type = {t: 0.0 for t in raw_parameters["node_types"]}
+        for node in nodes:
+            for type in assigned_types[node]:
+                total_capacity_per_type[type] += raw_parameters["node_capacity"]
+
+        sum_of_capacities = sum(total_capacity_per_type[type] for type in total_capacity_per_type.keys())
+
+        substrate = datamodel.Substrate(topology)
+
+        for node in nodes:
+            types = assigned_types[node]
+            capacity = {t: raw_parameters["node_capacity"] for t in types}
+            cost = {t: total_edge_costs / sum_of_capacities for t in types}
+            substrate.add_node(node, types, capacity, cost)
+            if include_location:
+                substrate.node[node]["Longitude"] = graph_dict["nodes"][node]["Longitude"]
+                substrate.node[node]["Latitude"] = graph_dict["nodes"][node]["Latitude"]
+
+        for (tail, head), dist in dists.items():
+            cost = dist
+            capacity = raw_parameters["edge_capacity"]
+            substrate.add_edge(tail, head, capacity=capacity, cost=cost, latency=cost)
+        return substrate
+
+    def _assign_node_types(self, nodes, raw_parameters):
+
+        nodes_per_function = max(1, int(raw_parameters["node_type_distribution"] * len(nodes)))
+        nodes_per_function = min(len(nodes), nodes_per_function)
+        assigned_types = {u: [] for u in nodes}
+
+        for node_type in raw_parameters["node_types"]:
+            for u in random.sample(nodes, nodes_per_function):
+                assigned_types[u].append(node_type)
+        return assigned_types
+
+
+def haversine(lon1, lat1, lon2, lat2):
+    """
+    Calculate the great circle distance between two points
+    on the earth (specified in decimal degrees)
+    """
+    # convert decimal degrees to radians
+    lon1, lat1, lon2, lat2 = map(math.radians, [lon1, lat1, lon2, lat2])
+
+    # haversine formula
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+    a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    c = 2 * math.asin(math.sqrt(a))
+    # 6367 km is the radius of the Earth
+    km = 6367 * c
+    latency = km / 200000
+    return latency

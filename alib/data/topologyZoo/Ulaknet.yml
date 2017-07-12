@@ -1,0 +1,166 @@
+nodes:
+  '0': {Latitude: 37.77417, Longitude: 29.0875}
+  '1': {Latitude: 38.67351, Longitude: 29.4058}
+  '2': {Latitude: 37.84501, Longitude: 27.83963}
+  '3': {Latitude: 37.21807, Longitude: 28.3665}
+  '4': {Latitude: 37.72028, Longitude: 30.29083}
+  '5': {Latitude: 36.9125, Longitude: 30.68972}
+  '6': {Latitude: 38.75667, Longitude: 30.54333}
+  '7': {Latitude: 37.76444, Longitude: 30.55222}
+  '8': {Latitude: 37.88738, Longitude: 41.13221}
+  '9': {Latitude: 37.93262, Longitude: 41.94025}
+  '10': {Latitude: 39.91987, Longitude: 32.85427}
+  '11': {Latitude: 40.65502, Longitude: 29.27693}
+  '12': {Latitude: 40.65333, Longitude: 35.83306}
+  '13': {Latitude: 40.31389, Longitude: 36.55444}
+  '14': {Latitude: 37.96583, Longitude: 34.67935}
+  '15': {Latitude: 36.20655, Longitude: 36.15722}
+  '16': {Latitude: 37.76441, Longitude: 38.27629}
+  '17': {Latitude: 39.91987, Longitude: 32.85427}
+  '18': {Latitude: 39.90861, Longitude: 41.27694}
+  '19': {Latitude: 41.63583, Longitude: 32.3375}
+  '20': {Latitude: 41.20488, Longitude: 32.62768}
+  '21': {Latitude: 36.79526, Longitude: 34.61792}
+  '22': {Latitude: 37.18111, Longitude: 33.215}
+  '23': {Latitude: 38.37255, Longitude: 34.02537}
+  '24': {Latitude: 37.86556, Longitude: 32.4825}
+  '25': {Latitude: 42.03087, Longitude: 35.17124}
+  '26': {Latitude: 41.28667, Longitude: 36.33}
+  '27': {Latitude: 37.00167, Longitude: 35.32889}
+  '28': {Latitude: 40.14192, Longitude: 29.97932}
+  '29': {Latitude: 40.91698, Longitude: 38.38741}
+  '30': {Latitude: 37.57444, Longitude: 43.74083}
+  '31': {Latitude: 38.67431, Longitude: 39.22321}
+  '32': {Latitude: 41.10871, Longitude: 42.70222}
+  '33': {Latitude: 41.18222, Longitude: 41.81944}
+  '34': {Latitude: 40.54889, Longitude: 34.95333}
+  '35': {Latitude: 38.88472, Longitude: 40.49389}
+  '36': {Latitude: 38.49239, Longitude: 43.38311}
+  '37': {Latitude: 37.07417, Longitude: 36.24778}
+  '38': {Latitude: 39.71944, Longitude: 43.05139}
+  '39': {Latitude: 40.98472, Longitude: 37.87889}
+  '40': {Latitude: 37.31309, Longitude: 40.74357}
+  '41': {Latitude: 38.35018, Longitude: 38.31667}
+  '42': {Latitude: 37.52278, Longitude: 42.45944}
+  '43': {Latitude: 37.91583, Longitude: 40.21889}
+  '44': {Latitude: 39.82, Longitude: 34.80444}
+  '45': {Latitude: 38.73222, Longitude: 35.48528}
+  '46': {Latitude: 40.60199, Longitude: 43.09495}
+  '47': {Latitude: 38.625, Longitude: 34.71222}
+  '48': {Latitude: 37.05944, Longitude: 37.3825}
+  '49': {Latitude: 39.84528, Longitude: 33.50639}
+  '50': {Latitude: 36.71611, Longitude: 37.115}
+  '51': {Latitude: 41.01384, Longitude: 28.94966}
+  '52': {Latitude: 39.14583, Longitude: 34.16389}
+  '53': {Latitude: 40.59995, Longitude: 33.6153}
+  '54': {Latitude: 41.37805, Longitude: 33.77528}
+  '55': {Latitude: 38.74525, Longitude: 41.50693}
+  '56': {Latitude: 39.77667, Longitude: 30.52056}
+  '57': {Latitude: 40.76694, Longitude: 29.91694}
+  '58': {Latitude: 40.78056, Longitude: 30.40333}
+  '59': {Latitude: 38.40115, Longitude: 42.10784}
+  '60': {Latitude: 40.19167, Longitude: 29.06111}
+  '61': {Latitude: 40.73583, Longitude: 31.60611}
+  '62': {Latitude: 40.83889, Longitude: 31.16389}
+  '63': {Latitude: 41.45139, Longitude: 31.79305}
+  '64': {Latitude: 41.02083, Longitude: 40.52194}
+  '65': {Latitude: 39.91987, Longitude: 32.85427}
+  '66': {Latitude: 39.91987, Longitude: 32.85427}
+  '67': {Latitude: 41.01384, Longitude: 28.94966}
+  '68': {Latitude: 41.005, Longitude: 39.72694}
+  '69': {Latitude: 39.92371, Longitude: 44.045}
+  '70': {Latitude: 38.61202, Longitude: 27.42646}
+  '71': {Latitude: 39.42417, Longitude: 29.98333}
+  '72': {Latitude: 39.75222, Longitude: 39.49278}
+  '73': {Latitude: 39.74833, Longitude: 37.01611}
+  '74': {Latitude: 41.01384, Longitude: 28.94966}
+  '75': {Latitude: 38.41273, Longitude: 27.13838}
+  '76': {Latitude: 39.91987, Longitude: 32.85427}
+  '77': {Latitude: 41.73508, Longitude: 27.22521}
+  '78': {Latitude: 40.97801, Longitude: 27.50852}
+  '79': {Latitude: 41.67719, Longitude: 26.55597}
+  '80': {Latitude: 40.14556, Longitude: 26.40639}
+  '81': {Latitude: 39.64917, Longitude: 27.88611}
+edges:
+- ['0', '75']
+- ['1', '75']
+- ['2', '75']
+- ['3', '75']
+- ['4', '76']
+- ['5', '76']
+- ['6', '75']
+- ['7', '76']
+- ['8', '76']
+- ['9', '76']
+- ['10', '76']
+- ['11', '74']
+- ['12', '76']
+- ['13', '76']
+- ['14', '76']
+- ['15', '76']
+- ['16', '76']
+- ['17', '76']
+- ['18', '76']
+- ['19', '76']
+- ['20', '76']
+- ['21', '76']
+- ['22', '76']
+- ['23', '76']
+- ['24', '76']
+- ['25', '76']
+- ['26', '76']
+- ['27', '76']
+- ['28', '74']
+- ['29', '76']
+- ['30', '76']
+- ['31', '76']
+- ['32', '76']
+- ['33', '76']
+- ['34', '76']
+- ['34', '39']
+- ['35', '76']
+- ['36', '76']
+- ['37', '49']
+- ['38', '72']
+- ['40', '44']
+- ['41', '76']
+- ['42', '76']
+- ['43', '76']
+- ['44', '76']
+- ['45', '76']
+- ['46', '76']
+- ['47', '76']
+- ['48', '76']
+- ['49', '76']
+- ['50', '76']
+- ['51', '74']
+- ['52', '76']
+- ['53', '76']
+- ['54', '76']
+- ['55', '76']
+- ['56', '76']
+- ['57', '74']
+- ['58', '74']
+- ['59', '76']
+- ['60', '74']
+- ['61', '76']
+- ['62', '76']
+- ['63', '76']
+- ['64', '76']
+- ['65', '76']
+- ['66', '76']
+- ['67', '74']
+- ['68', '76']
+- ['69', '76']
+- ['70', '75']
+- ['71', '75']
+- ['72', '76']
+- ['73', '76']
+- ['74', '76']
+- ['74', '77']
+- ['74', '78']
+- ['74', '79']
+- ['74', '80']
+- ['74', '75']
+- ['75', '76']
+- ['75', '81']

@@ -1,0 +1,49 @@
+nodes:
+  '0': {Latitude: 44.83333, Longitude: -0.56667}
+  '1': {Latitude: 43.60426, Longitude: 1.44367}
+  '2': {Latitude: 47.91667, Longitude: 1.9}
+  '3': {Latitude: 45.83153, Longitude: 1.2578}
+  '4': {Latitude: 47.31667, Longitude: 5.01667}
+  '5': {Latitude: 47.25, Longitude: 6.03333}
+  '6': {Latitude: 43.6, Longitude: 3.88333}
+  '7': {Latitude: 45.78333, Longitude: 3.08333}
+  '8': {Latitude: 45.16667, Longitude: 5.71667}
+  '9': {Latitude: 43.70313, Longitude: 7.26608}
+  '10': {Latitude: 45.75, Longitude: 4.85}
+  '11': {Latitude: 48.85341, Longitude: 2.3488}
+  '12': {Latitude: 42.3, Longitude: 9.15}
+  '13': {Latitude: 43.3, Longitude: 5.4}
+  '14': {Latitude: 47.21725, Longitude: -1.55336}
+  '15': {Latitude: 46.58333, Longitude: 0.33333}
+  '16': {Latitude: 48.58333, Longitude: 7.75}
+  '17': {Latitude: 48.68333, Longitude: 6.2}
+  '18': {Latitude: 49.25, Longitude: 4.03333}
+  '19': {Latitude: 49.41794, Longitude: 2.82606}
+  '20': {Latitude: 50.63333, Longitude: 3.06667}
+  '21': {Latitude: 49.44313, Longitude: 1.09932}
+  '22': {Latitude: 49.18585, Longitude: -0.35912}
+  '23': {Latitude: 48.08333, Longitude: -1.68333}
+edges:
+- ['0', '15']
+- ['1', '11']
+- ['1', '6']
+- ['2', '11']
+- ['2', '15']
+- ['3', '15']
+- ['4', '11']
+- ['4', '5']
+- ['7', '10']
+- ['8', '10']
+- ['9', '12']
+- ['9', '13']
+- ['10', '11']
+- ['10', '13']
+- ['11', '17']
+- ['11', '18']
+- ['11', '19']
+- ['11', '20']
+- ['11', '21']
+- ['11', '23']
+- ['14', '23']
+- ['16', '17']
+- ['21', '22']

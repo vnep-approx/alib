@@ -1,0 +1,51 @@
+nodes:
+  '0': {Latitude: 44.07833, Longitude: 22.09528}
+  '1': {Latitude: 44.80401, Longitude: 20.46513}
+  '2': {Latitude: 43.13667, Longitude: 20.51222}
+  '3': {Latitude: 43.58, Longitude: 21.33389}
+  '4': {Latitude: 42.55139, Longitude: 21.90028}
+  '5': {Latitude: 43.32472, Longitude: 21.90333}
+  '6': {Latitude: 43.15306, Longitude: 22.58611}
+  '7': {Latitude: 42.99806, Longitude: 21.94611}
+  '8': {Latitude: 44.01667, Longitude: 20.91667}
+  '9': {Latitude: 45.25167, Longitude: 19.83694}
+  '10': {Latitude: 44.74667, Longitude: 19.69}
+  '11': {Latitude: 46.1, Longitude: 19.66667}
+  '12': {Latitude: 44.80401, Longitude: 20.46513}
+  '13': {Latitude: 44.87083, Longitude: 20.64028}
+  '14': {Latitude: 44.80401, Longitude: 20.46513}
+  '15': {Latitude: 43.72583, Longitude: 20.68944}
+  '16': {Latitude: 43.28722, Longitude: 20.61528}
+  '17': {Latitude: 46.1, Longitude: 19.66667}
+  '18': {Latitude: 45.77417, Longitude: 19.11222}
+  '19': {Latitude: 45.38361, Longitude: 20.38194}
+  '20': {Latitude: 44.74667, Longitude: 19.69}
+  '21': {Latitude: 44.27513, Longitude: 19.89821}
+  '22': {Latitude: 43.85861, Longitude: 19.84878}
+  '23': {Latitude: 43.89139, Longitude: 20.34972}
+  '24': {Latitude: 44.33778, Longitude: 21.04556}
+edges:
+- ['0', '5']
+- ['1', '12']
+- ['2', '16']
+- ['3', '5']
+- ['3', '15']
+- ['4', '7']
+- ['5', '6']
+- ['5', '7']
+- ['8', '24']
+- ['8', '15']
+- ['9', '17']
+- ['9', '18']
+- ['9', '19']
+- ['9', '12']
+- ['10', '20']
+- ['11', '17']
+- ['12', '13']
+- ['12', '14']
+- ['12', '20']
+- ['12', '21']
+- ['12', '24']
+- ['15', '16']
+- ['21', '22']
+- ['22', '23']

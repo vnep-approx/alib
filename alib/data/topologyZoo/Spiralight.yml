@@ -1,0 +1,33 @@
+nodes:
+  '0': {Latitude: 43.0389, Longitude: -87.90647}
+  '1': {Latitude: 42.27113, Longitude: -89.094}
+  '2': {Latitude: 42.68279, Longitude: -89.01872}
+  '3': {Latitude: 43.01168, Longitude: -88.23148}
+  '4': {Latitude: 42.58613, Longitude: -87.8248}
+  '5': {Latitude: 43.07305, Longitude: -89.40123}
+  '6': {Latitude: 43.92247, Longitude: -90.27152}
+  '7': {Latitude: 44.97997, Longitude: -93.26384}
+  '8': {Latitude: 44.81135, Longitude: -91.49849}
+  '9': {Latitude: 44.95914, Longitude: -89.63012}
+  '10': {Latitude: 44.51916, Longitude: -88.01983}
+  '11': {Latitude: 44.26193, Longitude: -88.41538}
+  '12': {Latitude: 44.02471, Longitude: -88.54261}
+  '13': {Latitude: 43.775, Longitude: -88.43883}
+  '14': {Latitude: 43.45777, Longitude: -88.83733}
+edges:
+- ['0', '3']
+- ['0', '4']
+- ['1', '2']
+- ['1', '4']
+- ['2', '5']
+- ['3', '5']
+- ['5', '14']
+- ['5', '6']
+- ['6', '8']
+- ['7', '8']
+- ['7', '9']
+- ['9', '10']
+- ['10', '11']
+- ['11', '12']
+- ['12', '13']
+- ['13', '14']
