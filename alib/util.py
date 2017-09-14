@@ -616,12 +616,17 @@ def get_obj_gap(objective, bound):
 
 def get_graph_viz_string(graph, directed=True, get_edge_style=lambda e: ""):
     graphviz_lines = []
+
     if directed:
         graphviz_lines.append("digraph {} {{".format(graph.name))
         edge_symbol = "->"
     else:
         graphviz_lines.append("graph {} {{".format(graph.name))
         edge_symbol = "--"
+
+    for node in graph.nodes:
+        graphviz_lines.append("{} ;".format(node))
+
     for edge in sorted(graph.edges):
         n1, n2 = edge
         graphviz_lines.append("  {} {} {} [{}];".format("\"{}\"".format(n1), edge_symbol, "\"{}\"".format(n2), get_edge_style((n1, n2))))
