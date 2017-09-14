@@ -96,16 +96,21 @@ class Graph(object):
             self._add_edge_one_direction(tail=head, head=tail, **kwargs)
 
     def _add_edge_one_direction(self, tail, head, **kwargs):
+        new_edge = (tail, head)
+        if new_edge in self.edges:
+            raise ValueError("Duplicate edge {}!".format(new_edge))
+        if tail == head:
+            raise ValueError("Loop edges are not allowed ({0})".format(tail))
 
         self.out_neighbors[tail].append(head)
         self.in_neighbors[head].append(tail)
-        self.out_edges[tail].append((tail, head))
-        self.in_edges[head].append((tail, head))
+        self.out_edges[tail].append(new_edge)
+        self.in_edges[head].append(new_edge)
 
-        self.edges.add((tail, head))
-        self.edge[(tail, head)] = {}
+        self.edges.add(new_edge)
+        self.edge[new_edge] = {}
         for key, value in kwargs.items():
-            self.edge[(tail, head)][key] = value
+            self.edge[new_edge][key] = value
 
     def get_nodes(self):
         return self.nodes
@@ -145,7 +150,6 @@ class Graph(object):
         return self.shortest_paths_costs
 
     def initialize_shortest_paths_costs(self):
-
         # this can only be used if costs are defined as such for each edge
 
         for edge in self.edges:
@@ -312,12 +316,6 @@ class LinearRequest(Request):
         else:
             print "Path contains edges which are NOT in request edges"
 
-    def set_allowed_nodes(self, i, allowed_nodes):  # TODO: this changes nothing compared to Request.set_allowed_nodes
-        if i in self.nodes:
-            self.node[i]['allowed_nodes'] = allowed_nodes
-        else:
-            print "Request nodes are NOT contained in request"
-
     def get_out_edge(self, i):
         if len(self.out_edges[i]) == 0:
             return None
@@ -352,12 +350,13 @@ class Substrate(Graph):
         if isinstance(types, basestring):
             raise SubstrateError("Types should be a list or set of strings, not a single string. ({})".format(types))
         for node_type in types:
-            self.types.add(node_type)  # TODO: this could be a problem: if we add node types, we should remove them if there is an error...
-            # TODO: make sure that the type does not have the same name as a node (will be mixed with edges)
             if node_type not in capacity:
                 raise SubstrateError("No capacity defined for type {}".format(node_type))
+            if node_type in self.nodes:
+                raise SubstrateError("Type {} is also a node in the substrate.".format(node_type))
+            self.types.add(node_type)
 
-    def add_edge(self, tail, head, latency=1, capacity=1, cost=1, bidirected=True):
+    def add_edge(self, tail, head, latency=1.0, capacity=1.0, cost=1.0, bidirected=True):
         if tail in self.nodes and head in self.nodes:
             # is always bidirected
             super(Substrate, self).add_edge(tail, head, bidirected=bidirected,
@@ -365,23 +364,12 @@ class Substrate(Graph):
                                             capacity=capacity,
                                             cost=cost)
         else:
-            raise SubstrateError("Nodes {}, {} not a node in the substrate:\n{}".format(tail, head, self.nodes))
-
-    def add_type_to_node(self, u, node_type):  # TODO: what about capacity and cost?
-        """ adds a type to a specific node typelist """
-        if u not in self.nodes:
-            raise SubstrateError("Node {} was not found while adding type to node".format(u))
-        else:
-            if node_type not in self.node[u]["supported_types"]:
-                self.node[u]['supported_types'].append(node_type)
-
-    def set_type_to_node(self, u, ntype):  # TODO: is ntype a type? a list of types? what about capacity/cost?
-        self.node[u]['supported_types'] = ntype
+            raise SubstrateError("Nodes {} and/or {} are not in the substrate:\n{}".format(tail, head, self.nodes))
 
     def get_types(self):
         return self.types
 
-    def get_nodes_by_type(self, ntype):  # TODO: should this return a set?
+    def get_nodes_by_type(self, ntype):
         nodes = []
         for u in self.nodes:
             if ntype in self.node[u]['supported_types']:
@@ -404,10 +392,10 @@ class Substrate(Graph):
         return self.get_total_node_resources(node_type) / float(len(self.get_nodes_by_type(node_type)))
 
     def get_path_latency(self, path):
-        return sum(map(lambda x: self.get_edge_latency(x), path))
+        return sum(map(self.get_edge_latency, path))
 
-    def get_path_capacity(self, path):  # TODO: should this be a sum, or the minimum? The name of the function suggests the latter
-        return sum(map(self.get_edge_capacity, path))
+    def get_path_capacity(self, path):
+        return min(map(self.get_edge_capacity, path))
 
     def get_edge_latency(self, edge):
         return self.edge[edge]['latency']
@@ -432,8 +420,13 @@ class Substrate(Graph):
 
 
 class SubstrateX(object):
+    """
+    Extends the substrate class with efficient lookup of substrate resources given a capacity requirement.
+
+    This is separated from the Substrate class so that the resource data is not included in pickle files.
+    """
+
     def __init__(self, substrate):
-        # assert isinstance(substrate, Substrate)  # avoid having multiple SubstrateX layers!
         self.substrate = substrate
         self.substrate_edge_resources = sorted(self.substrate.edges,
                                                key=lambda edge: self.substrate.edge[edge]['capacity'])

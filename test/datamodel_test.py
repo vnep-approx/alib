@@ -153,13 +153,6 @@ class TestSubstrate:
         assert self.substrate.get_edge_latency(('node1', 'node2')) == 2
         assert self.substrate.get_edge_latency(('node1', 'node2')) == 2
 
-    def test_add_type(self):
-        u = "u"
-        self.substrate.add_node(u, [], {}, {})  # no types
-        assert len(self.substrate.node[u]["supported_types"]) == 0
-        self.substrate.add_type_to_node(u, "type")
-        assert "type" in self.substrate.node[u]["supported_types"]
-
     def test_get_out_edge(self):
         self.substrate.add_node('u', ["FW"], {"FW": 1}, {"FW": 1})
         self.substrate.add_node('v', ["FW"], {"FW": 1}, {"FW": 1})
@@ -172,9 +165,6 @@ class TestSubstrate:
         # Calling add_node without a list of supported types:
         with pytest.raises(datamodel.SubstrateError):
             copy.deepcopy(self.substrate).add_node("u", "types", {"types": 1.0}, {"types": 1.0})
-        # Calling add_add_type for a non-existing node:
-        with pytest.raises(datamodel.SubstrateError):
-            copy.deepcopy(self.substrate).add_type_to_node("some_node", "some_type")
         # Calling add_node with incomplete capacity dict:
         with pytest.raises(datamodel.SubstrateError):
             copy.deepcopy(self.substrate).add_node("u", ["t1", "t2"], {"t1": 1.0}, {"t1": 1.0, "t2": 1.0})

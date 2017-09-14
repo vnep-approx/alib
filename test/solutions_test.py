@@ -31,10 +31,10 @@ class TestScenarioSolution:
         self.substrate.add_node('v4', ["FW"], {"FW": 2}, {"FW": 1})
         self.substrate.add_node('v5', ["FW", "DPI"], {"FW": 2, "DPI": 2}, {"FW": 1, "DPI": 1})
         #           - EDGES
-        self.substrate.add_edge('v1', 'v2')
-        self.substrate.add_edge('v2', 'v3')
-        self.substrate.add_edge('v3', 'v4')
-        self.substrate.add_edge('v4', 'v5')
+        self.substrate.add_edge('v1', 'v2', capacity=2.0)
+        self.substrate.add_edge('v2', 'v3', capacity=2.0)
+        self.substrate.add_edge('v3', 'v4', capacity=2.0)
+        self.substrate.add_edge('v4', 'v5', capacity=2.0)
         # MAPPING 
         self.mapping.map_node('i1', 'v1')
         self.mapping.map_node('i2', 'v3')

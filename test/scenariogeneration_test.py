@@ -633,28 +633,28 @@ class TestRandomEmbeddingProfitCalculator:
         self.profit_calculator = scenariogeneration.RandomEmbeddingProfitCalculator()
 
     def test_profit_scales_with_profit_factor(self):
-        test_scenario = test_utils.get_test_scenario(number_of_requests=1, substrate_size=2)
+        test_scenario = test_utils.get_test_scenario(number_of_requests=1, substrate_size=3)
         req = test_scenario.requests[0]
-        sp1 = {"profit_factor": 1.0, "iterations": 5}
+        sp1 = {"profit_factor": 1.0, "iterations": 1000}
         self.profit_calculator.generate_and_apply_profits(test_scenario, sp1)
         p1 = req.profit
-        sp2 = {"profit_factor": 2.0, "iterations": 5}
+        sp2 = {"profit_factor": 2.0, "iterations": 1000}
 
         # sp2 = test_utils.rst.get_test_scenario_parameters(profit_factor=2.0)
         self.profit_calculator.generate_and_apply_profits(test_scenario, sp2)
         p2 = req.profit
-        sp3 = {"profit_factor": 3.0, "iterations": 5}
+        sp3 = {"profit_factor": 3.0, "iterations": 1000}
 
         self.profit_calculator.generate_and_apply_profits(test_scenario, sp3)
         p3 = req.profit
-        assert p2 == pytest.approx(2 * p1), "Profit should double with doubled profit_factor"
-        assert p3 == pytest.approx(3 * p1), "Profit should triple with tripled profit_factor"
+        assert p2 == pytest.approx(2 * p1, rel=0.05), "Profit should double with doubled profit_factor"
+        assert p3 == pytest.approx(3 * p1, rel=0.05), "Profit should triple with tripled profit_factor"
 
     def test_profit_scales_with_request_demand(self):
         scenario_1 = test_utils.get_test_scenario(request_demand=1)
         scenario_2 = test_utils.get_test_scenario(request_demand=2)
         scenario_3 = test_utils.get_test_scenario(request_demand=3)
-        scenario_parameters = {"profit_factor": 1.0, "iterations": 5}
+        scenario_parameters = {"profit_factor": 1.0, "iterations": 1000}
         self.profit_calculator.generate_and_apply_profits(scenario_1, scenario_parameters)
         req = scenario_1.requests[0]
         p1 = req.profit
@@ -664,8 +664,8 @@ class TestRandomEmbeddingProfitCalculator:
         self.profit_calculator.generate_and_apply_profits(scenario_3, scenario_parameters)
         req = scenario_3.requests[0]
         p3 = req.profit
-        assert p2 == pytest.approx(2 * p1), "Profit should double with doubled request demand"
-        assert p3 == pytest.approx(3 * p1), "Profit should triple with tripled request demand"
+        assert p2 == pytest.approx(2 * p1, rel=0.05), "Profit should double with doubled request demand"
+        assert p3 == pytest.approx(3 * p1, rel=0.05), "Profit should triple with tripled request demand"
 
     def test_can_calculate_profits_in_real_scenario(self):
         chain_gen = scenariogeneration.ServiceChainGenerator()
