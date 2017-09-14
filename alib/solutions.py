@@ -106,7 +106,11 @@ class IntegralScenarioSolution(object):
             if request.node[i]['demand'] > substrate.node[mapping.mapping_nodes[i]]['capacity']:
                 return False
         for ve in mapping.request.edge:
-            if request.edge[ve]['demand'] > substrate.get_path_capacity(mapping.mapping_edges[ve]):
+            mapped_path = mapping.mapping_edges[ve]
+            i, j = ve
+            if not mapped_path and mapping.mapping_nodes[i] == mapping.mapping_nodes[j]:
+                continue
+            if request.edge[ve]['demand'] > substrate.get_path_capacity(mapped_path):
                 return False
         return True
 
