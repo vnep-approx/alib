@@ -47,6 +47,18 @@ def deploy_code(codebase_id, remote_base_dir, local_base_dir, servers, extra):
 
 
 def f_deploy_code(codebase_id, remote_base_dir, local_base_dir, servers, extra):
+    """
+    Deploys the codebase on a remote server.
+
+    This function is separated from deploy_code so that it can be reused when extending the CLI from outside the alib.
+
+    :param codebase_id:
+    :param remote_base_dir:
+    :param local_base_dir:
+    :param servers:
+    :param extra:
+    :return:
+    """
     click.echo('Deploy codebase')
     if not local_base_dir:
         local_base_dir = os.path.abspath("../../")
@@ -70,6 +82,26 @@ def generate_scenarios(scenario_output_file, parameters, threads):
     f_generate_scenarios(scenario_output_file, parameters, threads)
 
 
+def f_generate_scenarios(scenario_output_file, parameter_file, threads):
+    """
+    Generates the scenarios according to the scenario parameters found in the parameter_file.
+
+    This function is separated from generate_scenarios so that it can be reused when extending the CLI from outside
+    the alib.
+
+    :param scenario_output_file: path to pickle file to which the resulting scenarios will be written
+    :param parameter_file: readable file object containing the scenario parameters in yml format
+    :param threads: number of concurrent threads used for scenario generation
+    :return:
+    """
+    click.echo('Generate Scenarios')
+    util.ExperimentPathHandler.initialize()
+    file_basename = os.path.basename(parameter_file.name).split(".")[0].lower()
+    log_file = os.path.join(util.ExperimentPathHandler.LOG_DIR, "{}_scenario_generation.log".format(file_basename))
+    util.initialize_root_logger(log_file)
+    scenariogeneration.generate_pickle_from_yml(parameter_file, scenario_output_file, threads)
+
+
 @cli.command()
 @click.argument('dc_baseline', type=click.File('r'))
 @click.argument('dc_randround', type=click.File('r'))
@@ -78,15 +110,6 @@ def full_evaluation(dc_baseline, dc_randround):
     randround_data = pickle.load(dc_randround)
     print "data loaded"
     evaluation.plot_heatmaps(baseline_data, randround_data)
-
-
-def f_generate_scenarios(scenario_output_file, parameters, threads):
-    click.echo('Generate Scenarios')
-    util.ExperimentPathHandler.initialize()
-    file_basename = os.path.basename(parameters.name).split(".")[0].lower()
-    log_file = os.path.join(util.ExperimentPathHandler.LOG_DIR, "{}_scenario_generation.log".format(file_basename))
-    util.initialize_root_logger(log_file)
-    scenariogeneration.generate_pickle_from_yml(parameters, scenario_output_file, threads)
 
 
 @cli.command()
@@ -105,6 +128,17 @@ def start_experiment(experiment_yaml,
 def f_start_experiment(experiment_yaml,
                        min_scenario_index, max_scenario_index,
                        concurrent):
+    """
+    Executes the experiment according to the execution parameters found in the experiment_yaml.
+
+    This function is separated from start_experiment so that it can be reused when extending the CLI from outside
+    the alib.
+
+    :param experiment_yaml: readable file object containing the execution parameters in yml format
+    :param scenario_output_file: path to pickle file to which the resulting scenarios will be written
+    :param threads: number of concurrent threads used for scenario generation
+    :return:
+    """
     click.echo('Start Experiment')
     util.ExperimentPathHandler.initialize()
     file_basename = os.path.basename(experiment_yaml.name).split(".")[0].lower()
