@@ -86,11 +86,6 @@ class TestRequest:
         self.request.add_latency_requirement(path, 41)
         assert self.request.get_latency_requirement(path) == 41
 
-        # duplicated edges
-        path = [("i", "j"), ("i", "j")]
-        self.request.add_latency_requirement(path, 17)
-        assert self.request.get_latency_requirement(path) == 17
-
 
 class TestScenario:
     def setup(self):

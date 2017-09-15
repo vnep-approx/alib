@@ -222,10 +222,12 @@ class Request(Graph):
     def add_latency_requirement(self, path, latency):
         """ adds to a specific 'path' a latency requirement
             important: the order of edges must be respected """
-        if set(path) <= self.edges:
-            self.graph['latency_requirement'][tuple(path)] = latency
+        if not set(path) <= self.edges:
+            print "Path contains edges which are NOT in request edges: {}".format(set(path) - self.edges)
+        elif any(path[i][1] != path[i + 1][0] for i in range(len(path) - 1)):
+            print "Path [{}] is not connected!".format(", ".join(str(e) for e in path))
         else:
-            print "Path contains edges which are NOT in request edges"
+            self.graph['latency_requirement'][tuple(path)] = latency
 
     def set_allowed_nodes(self, i, allowed_nodes):
         if i in self.nodes:
@@ -308,14 +310,6 @@ class LinearRequest(Request):
         if tail in self.nodes and head in self.nodes:
             super(LinearRequest, self).add_edge(tail, head, demand=demand)
 
-    def add_latency_requirement(self, path, latency):
-        """ adds to a specific 'path' a latency requirement
-            important: the order of edges must be respected """
-        if set(path) <= self.edges:
-            self.graph['latency_requirement'][tuple(path)] = latency
-        else:
-            print "Path contains edges which are NOT in request edges"
-
     def get_out_edge(self, i):
         if len(self.out_edges[i]) == 0:
             return None
@@ -368,6 +362,9 @@ class Substrate(Graph):
 
     def get_types(self):
         return self.types
+
+    def get_supported_node_types(self, node):
+        return self.node[node]['supported_types']
 
     def get_nodes_by_type(self, ntype):
         nodes = []

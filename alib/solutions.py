@@ -67,11 +67,11 @@ class IntegralScenarioSolution(object):
                 substrate_resources[ntype, u] = substrate.node[u]["capacity"][ntype]
         for req, mapping in self.request_mapping.items():
             for i, u in mapping.mapping_nodes.items():
-                t = req.node[i]["type"]
-                demand = req.node[i]["demand"]
+                t = req.get_type(i)
+                demand = req.get_node_demand(i)
                 substrate_resources[t, u] -= demand
             for ij, uv_list in mapping.mapping_edges.items():
-                demand = req.edge[ij]["demand"]
+                demand = req.get_edge_demand(ij)
                 for uv in uv_list:
                     substrate_resources[uv] -= demand
         for res, remaining_cap in substrate_resources.items():
@@ -82,19 +82,19 @@ class IntegralScenarioSolution(object):
         """ checks if requested types are in supported types from substrate
         """
         for i in mapping.mapping_nodes:
+            i_type = request.get_type(i)
             u = mapping.mapping_nodes[i]
-            if (request.node[i]['type'] not in
-                    substrate.node[u]['supported_types']):
-                print "Node:", u, " does not support type:", request.node[i]['type']
+            if i_type not in substrate.get_supported_node_types(u):
+                print "Node {} does not support type {}".format(u, request.node[i]['type'])
                 return False
         return True
 
     def latency_check(self, request, mapping, substrate):
-        for path in mapping.request.graph['latency_requirement'].keys():
+        for path, latency in mapping.request.graph['latency_requirement'].iteritems():
             sum = 0
             for ve in path:
                 sum += substrate.get_path_latency(mapping.mapping_edges[ve])
-                if sum > request.graph['latency_requirement'][path]:
+                if sum > latency:
                     return False
         return True
 
@@ -102,15 +102,19 @@ class IntegralScenarioSolution(object):
         """ checks if demand of all request nodes and edges is fullfilled by
         substrate capacity
         """
-        for i in mapping.mapping_nodes:
-            if request.node[i]['demand'] > substrate.node[mapping.mapping_nodes[i]]['capacity']:
+        for i, u_i in mapping.mapping_nodes.items():
+            i_demand = request.get_node_demand(i)
+            i_type = request.get_type(i)
+            u_i_capacity = substrate.get_node_type_capacity(u_i, i_type)
+            if u_i_capacity < i_demand:
                 return False
-        for ve in mapping.request.edge:
-            mapped_path = mapping.mapping_edges[ve]
-            i, j = ve
-            if not mapped_path and mapping.mapping_nodes[i] == mapping.mapping_nodes[j]:
+        for ij in mapping.request.edge:
+            i, j = ij
+            mapped_path = mapping.mapping_edges[ij]
+            if not mapped_path and mapping.mapping_nodes[i] == mapping.mapping_nodes[j]:  # end nodes are mapped to same node
                 continue
-            if request.edge[ve]['demand'] > substrate.get_path_capacity(mapped_path):
+            ij_demand = request.get_edge_demand(ij)
+            if substrate.get_path_capacity(mapped_path) < ij_demand:
                 return False
         return True
 
@@ -162,8 +166,7 @@ class FractionalScenarioSolution(object):
         """ checks if requested types are in supported types from substrate
         """
         for i in mapping.mapping_nodes:
-            if (request.node[i]['type'] not in
-                    substrate.node[mapping.mapping_nodes[i]]['supported_types']):
+            if (request.get_type(i) not in substrate.node[mapping.mapping_nodes[i]]['supported_types']):
                 print "Node:", mapping.mapping_nodes[i], " does not support type:", request.node[i]['type']
                 return False
         return True
@@ -183,22 +186,26 @@ class FractionalScenarioSolution(object):
         substrate capacity
         """
         for i in mapping.mapping_nodes:
-            if request.node[i]['demand'] > substrate.node[mapping.mapping_nodes[i]]['capacity']:
+            i_type = request.get_type(i)
+            i_demand = request.get_node_demand(i)
+            u_i = mapping.mapping_nodes[i]
+            u_i_capacity = substrate.get_node_type_capacity(u_i, i_type)
+            if u_i_capacity < i_demand:
                 s = "demand of Node {} is {} - higher than capacity of mapped node {} with capacity {}".format(
-                    i, request.node[i]['demand'],
-                    mapping.mapping_nodes[i],
-                    mapping.mapping_nodes[i]['capacity']
+                    i, i_demand, u_i, u_i_capacity
                 )
                 print s
                 return False
-        for ve in mapping.request.edge:
-            if mapping.mapping_edges[ve]:
-                if request.edge[ve]['demand'] > substrate.get_path_capacity(mapping.mapping_edges[ve]):
-                    print mapping.mapping_edges[ve]
-                    s = "demand of edge {} is {} - higher than capacity of mapped edge {} with capacity {}".format(ve, request.edge[ve]['demand'],
-                                                                                                                   mapping.mapping_edges[ve],
-                                                                                                                   substrate.get_path_capacity(mapping.mapping_edges[ve]))
-                    print s
+        for ij in mapping.request.edges:
+            mapped_path = mapping.mapping_edges[ij]
+            if mapped_path:
+                path_capacity = substrate.get_path_capacity(mapped_path)
+                ij_demand = request.get_edge_demand(ij)
+                if path_capacity < ij_demand:
+                    print mapped_path
+                    print "Demand of edge {} is {} - higher than capacity of mapped path {} with capacity {}".format(
+                        ij, ij_demand, mapped_path, path_capacity
+                    )
                     return False
         return True
 
@@ -229,50 +236,59 @@ class Mapping(object):
             raise Exception("No mapping found for substrate node {}".format(u))
 
     def map_node(self, i, u):
-        # check if i is a request node and u is a substrate node
         if i in self.mapping_nodes:
-            raise MappingError("Tried adding duplicate node mapping of {} onto {}".format(i, u))
-        if (i in self.request.nodes and u in self.substrate.nodes):
-            # check wether type is supported by substrate node and if it's
-            # allowed by request node
-            if (self.request.node[i]['type'] in
-                    self.substrate.node[u]['supported_types']):
-                if (self.request.node[i]['allowed_nodes'] is None or u in
-                    self.request.node[i]['allowed_nodes']):
-                    self.mapping_nodes[i] = u
-                else:
-                    raise MappingError("Node {} of request {} can not be mapped on substrate node {} because it is restricted to {}".format(i, self.request.name, u, self.request.node[i]['allowed_nodes']))
-            else:
-                raise MappingError("Request node {} needs type {} but substrate node {} does not support this type".format(i,
-                                                                                                                           self.request.node[i]['type'], u))
-        else:
-            raise MappingError("Request Noded {} can not be mapped on substrate node {}".format(i, u))
+            raise MappingError("Tried adding duplicate node mapping of {} onto {}. (already mapped to {})".format(i, u, self.mapping_nodes[i]))
+        if i not in self.request.nodes:
+            raise MappingError("Request node {} does not exist! (Tried mapping on substrate node {})".format(i, u))
+        if u not in self.substrate.nodes:
+            raise MappingError("Substrate node {} does not exist! (Tried mapping request node {})".format(u, i))
 
-    def map_edge(self, ve, ses):
+        i_type = self.request.get_type(i)
+        u_types = self.substrate.get_supported_node_types(u)
+        if i_type not in u_types:
+            raise MappingError("Request node {} needs type {} but substrate node {} does not support this type".format(
+                i, self.request.node[i]['type'], u
+            ))
+        i_allowed_nodes = self.request.get_allowed_nodes(i)
+        if i_allowed_nodes is None or u in i_allowed_nodes:
+            self.mapping_nodes[i] = u
+        else:
+            raise MappingError("Node {} of request {} cannot be mapped on substrate node {} because it is restricted to {}".format(
+                i, self.request.name, u, i_allowed_nodes
+            ))
+
+    def map_edge(self, ij, mapped_path):
         """ maps a virtual edge ve of a request to a path(multiple edges) se's of a
         substrate"""
-        if (ve in self.request.edges and set(ses) <= self.substrate.edges):
-            # empty path direct mapping
-            if not ses:
-                self.mapping_edges[ve] = ses
-            else:
-                vtail, vhead = ve
-                subfirsttail, subfirsthead = ses[0]
-                sublasttail, sublasthead = ses[-1]
-                # check that tail, head of ve are correctly mapped on tail, head of path
-                if self.mapping_nodes[vtail] == subfirsttail and self.mapping_nodes[vhead] == sublasthead:
-                    # it's only single edge mapped on single edge
-                    if not len(ses) > 1:
-                        self.mapping_edges[ve] = ses
-                    else:
-                        # check wether path is a real edge path and connected
-                        for i, currentedge in enumerate(ses):
-                            if i < len(ses) - 1:
-                                currenttail, currenthead = currentedge
-                                nexttail, nexthead = ses[i + 1]
-                                if not currenthead == nexttail:
-                                    raise MappingError("Path {} is not connected in substrate".format(ses))
-                        self.mapping_edges[ve] = ses
+
+        if ij in self.mapping_edges:
+            raise MappingError("Tried adding duplicate edge mapping of {} onto {}. (already mapped to {})".format(ij, mapped_path, self.mapping_edges[ij]))
+        if ij not in self.request.edges:
+            raise MappingError("Request edge {} does not exist!".format(ij))
+        if not set(mapped_path) <= self.substrate.edges:
+            raise MappingError("Mapping for {} contains edges not in the substrate!".format(ij, set(mapped_path) - self.substrate.edges))
+
+        # empty path direct mapping
+        if not mapped_path:
+            self.mapping_edges[ij] = mapped_path
+        else:
+            i, j = ij
+            subfirsttail, subfirsthead = mapped_path[0]
+            sublasttail, sublasthead = mapped_path[-1]
+            # check that tail, head of ve are correctly mapped on tail, head of path
+            if self.mapping_nodes[i] == subfirsttail and self.mapping_nodes[j] == sublasthead:
+                # it's only single edge mapped on single edge
+                if not len(mapped_path) > 1:
+                    self.mapping_edges[ij] = mapped_path
+                else:
+                    # check wether path is a real edge path and connected
+                    for i, currentedge in enumerate(mapped_path):
+                        if i < len(mapped_path) - 1:
+                            currenttail, currenthead = currentedge
+                            nexttail, nexthead = mapped_path[i + 1]
+                            if currenthead != nexttail:
+                                raise MappingError("Path {} is not connected in substrate".format(mapped_path))
+                    self.mapping_edges[ij] = mapped_path
 
     def get_mapping_of_node(self, i):
         return self.mapping_nodes[i]

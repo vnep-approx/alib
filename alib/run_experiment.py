@@ -220,9 +220,8 @@ class ExperimentExecution(object):
                                                                                     self.min_scenario_index,
                                                                                     self.max_scenario_index))
             for execution_id, parameters in enumerate(self.execution_parameters.algorithm_parameter_list):
-                self.pool.apply_async(_execute,
-                                      (scenario_index, execution_id, parameters, scenario),
-                                      callback=lambda res_tup: self._process_result(res_tup))
+                args = (scenario_index, execution_id, parameters, scenario)
+                self.pool.apply_async(_execute, args, callback=self._process_result)
                 log.info("Submitted to task queue: Scenario {}, Alg {}, Execution {}:".format(
                     scenario_index, parameters["ALG_ID"], execution_id)
                 )

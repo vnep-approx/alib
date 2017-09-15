@@ -52,7 +52,6 @@ class ClassicMCFResult(modelcreator.AlgorithmResult):
             self.solution.request_mapping[original_request] = mapping
 
 
-# TODO refactor such that the parent's variables request_load are used
 class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
     ALGORITHM_ID = "ClassicMCF"
 
@@ -71,8 +70,8 @@ class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
             for vnode in req.nodes:
                 self.var_y[req][vnode] = {}
                 for snode in self.substrate.nodes:
-                    supported_type = snode in self.substrate.get_nodes_by_type(req.node[vnode]['type'])
-                    allowed_nodes = req.node[vnode]['allowed_nodes']
+                    supported_type = req.get_type(vnode) in self.substrate.get_supported_node_types(snode)
+                    allowed_nodes = req.get_allowed_nodes(vnode)
                     is_allowed = allowed_nodes is None or snode in allowed_nodes
                     if supported_type and is_allowed:
                         variable_name = modelcreator.construct_name("y",
@@ -116,10 +115,11 @@ class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
         # node mapping
         for req in self.requests:
             for i in req.nodes:
-                expr = LinExpr([(-1.0, self.var_embedding_decision[req])] +
-                               [(1.0, self.var_y[req][i][snode]) for snode
-                                in self.var_y[req][i].keys()]
-                               )
+                expr = LinExpr(
+                    [(-1.0, self.var_embedding_decision[req])] +
+                    [(1.0, self.var_y[req][i][snode]) for snode
+                     in self.var_y[req][i].keys()]
+                )
                 constr_name = modelcreator.construct_name("flow_induction",
                                                           req_name=req.name,
                                                           vnode=i)  # Matthias: changed to conform to standard naming
@@ -148,9 +148,10 @@ class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
             for (t, u) in self.substrate.substrate_node_resources:
                 expr_terms = []
                 for i in req.nodes:
-                    if req.node[i]['type'] == t and u in self.var_y[req][i]:
-                        expr_terms.append(LinExpr(req.node[i]['demand'],
-                                                  self.var_y[req][i][u]))
+                    i_type = req.get_type(i)
+                    i_demand = req.get_node_demand(i)
+                    if i_type == t and u in self.var_y[req][i]:
+                        expr_terms.append(LinExpr(i_demand, self.var_y[req][i][u]))
 
                 expr_terms.append(LinExpr(-1.0, self.var_request_load[req][(t, u)]))
                 constr_name = modelcreator.construct_name("compute_request_node_load", req_name=req.name,
@@ -165,8 +166,8 @@ class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
             for sedge in self.substrate.substrate_edge_resources:
                 expr_terms = []
                 for vedge in req.edges:
-                    expr_terms.append(LinExpr(req.edge[vedge]['demand'],
-                                              self.var_z[req][vedge][sedge]))
+                    vedge_demand = req.get_edge_demand(vedge)
+                    expr_terms.append(LinExpr(vedge_demand, self.var_z[req][vedge][sedge]))
 
                 constr_name = modelcreator.construct_name("compute_request_edge_load", req_name=req.name,
                                                           sedge=sedge)
