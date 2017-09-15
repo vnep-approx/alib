@@ -336,7 +336,10 @@ def build_scenario(i_sp_tup, maxrep=1):
     i, sp = i_sp_tup
     logger = util.get_logger("sg_worker_{}".format(os.getpid()), make_file=False, propagate=False)
     logger.info("Generating scenario {}  with {}".format(i, sp))
-    scenario = datamodel.Scenario(name="scenario_{}_rep_{}".format(i / sp['maxrepetition'], sp['repetition']), substrate=None, requests=None)
+    scenario = datamodel.Scenario(name="scenario_{}_rep_{}".format(i / sp['maxrepetition'], sp['repetition']),
+                                  substrate=None,
+                                  requests=None,
+                                  objective=datamodel.Objective.MIN_COST)
     top_zoo_reader = TopologyZooReader()
     top_zoo_reader.apply(sp, scenario)
     class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
@@ -594,6 +597,7 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         """
         Calculate the latency (length of the shortest path from source to sink while
         respecting the restrictions of network functions)
+
         :param core_nodes_and_functions:
         :param source_location:
         :param target_location:
