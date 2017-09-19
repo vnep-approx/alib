@@ -19,12 +19,7 @@ class TestScenarioSolution:
         self.request.add_node('i3', 2, "FW")
         self.request.add_edge('i1', 'i2', 2)
         self.request.add_edge('i2', 'i3', 2)
-        # REQUEST LATENCY 
-        path = list(self.request.get_edges())
-        self.request.add_latency_requirement(path, 5)
-        latency = self.request.get_latency_requirement(path)
-        assert self.request.get_latency_requirement(path) == 5
-        # SUBSTRATE: - NODES 
+        # SUBSTRATE: - NODES
         self.substrate.add_node('v1', ["FW", "DPI"], {"FW": 2, "DPI": 2}, {"FW": 1, "DPI": 1})
         self.substrate.add_node('v2', ["FW"], {"FW": 2}, {"FW": 1})
         self.substrate.add_node('v3', ["FW", "DPI"], {"FW": 2, "DPI": 2}, {"FW": 1, "DPI": 1})

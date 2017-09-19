@@ -28,8 +28,7 @@ class TestChainRequestGenerator:
             "max_number_of_nodes": 4,
             "probability": 0.3,
             "node_resource_factor": 0.5,
-            "edge_resource_factor": 2.0,
-            "latency_factor": 1.0
+            "edge_resource_factor": 2.0
         }
 
         self.chain_gen = scenariogeneration.ServiceChainGenerator()
@@ -68,49 +67,6 @@ class TestChainRequestGenerator:
             current_node = req.out_neighbors[current_node][0]  # no random edges => only 1 out neighbor
 
         assert current_node == scenariogeneration.ServiceChainGenerator.TARGET_NODE, "Did not reach target Node! \n{}".format(req.edges)
-
-    def test_has_nonzero_latency_from_source_to_target(self):
-        for chain_length in range(30):
-            sp = dict(self.base_parameters)
-            sp["min_number_of_nodes"] = chain_length - 1
-            sp["max_number_of_nodes"] = chain_length - 1
-            req = self.chain_gen.generate_request("test_request",
-                                                  sp,
-                                                  self.substrate)
-            latency = req.graph["latency_requirement"].values()[0]
-            number_of_latency_constraints = len(req.graph["latency_requirement"].values())
-            assert number_of_latency_constraints == 1, "Exactly one latency path should exist"
-            assert latency >= 0.0, "Source to target should have non-negative latency."
-
-    def test_max_latency_scales_with_latency_factor(self):
-        sp1 = dict(self.base_parameters)
-        sp2 = dict(self.base_parameters)
-        sp3 = dict(self.base_parameters)
-        sp1["latency_factor"] = 1.0
-        sp2["latency_factor"] = 2.0
-        sp3["latency_factor"] = 3.0
-
-        scenariogeneration.random.seed(1)
-        numpy.random.seed(1)
-        req_1 = self.chain_gen.generate_request("test_request",
-                                                sp1,
-                                                self.substrate)
-        scenariogeneration.random.seed(1)
-        numpy.random.seed(1)
-        req_2 = self.chain_gen.generate_request("test_request",
-                                                sp2,
-                                                self.substrate)
-        scenariogeneration.random.seed(1)
-        numpy.random.seed(1)
-        req_3 = self.chain_gen.generate_request("test_request",
-                                                sp3,
-                                                self.substrate)
-        lat_1 = req_1.graph["latency_requirement"].values()[0]
-        lat_2 = req_2.graph["latency_requirement"].values()[0]
-        lat_3 = req_3.graph["latency_requirement"].values()[0]
-
-        assert lat_2 == pytest.approx(2 * lat_1), "latency requirement should double with doubled latency_factor"
-        assert lat_3 == pytest.approx(3 * lat_1), "latency requirement should triple with tripled latency_factor"
 
     def test_start_and_target_mapping_fixed_and_allowed_nodes_of_correct_type(self):
         sp = self.base_parameters
@@ -160,8 +116,7 @@ class TestExponentialRequestGenerator:
             "probability": 0.5,
             "node_resource_factor": 0.5,
             "edge_resource_factor": 2.0,
-            "potential_nodes_factor": 0.3,
-            "latency_factor": 1.0
+            "potential_nodes_factor": 0.3
         }
         self.substrate = scenariogeneration.TopologyZooReader().read_substrate(self.base_parameters)
 
@@ -207,8 +162,7 @@ class TestUniformRequestGenerator:
             "variability": 0.2,
             "node_resource_factor": 0.5,
             "edge_resource_factor": 2.0,
-            "potential_nodes_factor": 0.3,
-            "latency_factor": 1.0
+            "potential_nodes_factor": 0.3
         }
         self.substrate = scenariogeneration.TopologyZooReader().read_substrate(self.base_parameters)
 
@@ -417,8 +371,7 @@ class TestRequestGeneration:
             "variability": 0.8
         }.items())
         self.params[self.chains] = dict(base.items() + {
-            "probability": 1.0,
-            "latency_factor": 1.3
+            "probability": 1.0
         }.items())
 
         self.substrate = scenariogeneration.TopologyZooReader().read_substrate({
@@ -527,7 +480,6 @@ class TestNodePlacementRestriction:
             "node_resource_factor": 0.5,
             "edge_resource_factor": 2.0,
             "profit_factor": 1.5,
-            "latency_factor": 2.0,
             "iterations": 10,
             "max_cycles": 20,
             "layers": 4,
@@ -684,7 +636,6 @@ class TestRandomEmbeddingProfitCalculator:
             "node_resource_factor": 0.5,
             "edge_resource_factor": 2.0,
             "profit_factor": 1.5,
-            "latency_factor": 2.0,
             "iterations": 5
         }
         substrate = scenariogeneration.TopologyZooReader().read_substrate(raw_parameters)
@@ -714,7 +665,6 @@ class TestOptimalEmbeddingProfitCalculator:
             "node_resource_factor": 0.02,
             "edge_resource_factor": 50.0,
             "profit_factor": 1,
-            "latency_factor": 20.0,
             "timelimit": 20
         }
         self.substrate = scenariogeneration.TopologyZooReader().read_substrate(self.parameters)
@@ -826,10 +776,6 @@ class TestTopologyZooReader:
         for edge in sub.edges:
             cap = sub.get_edge_capacity(edge)
             assert cap == parameters["edge_capacity"], "Edge capacity {} did not match expected {}!".format(cap, parameters["edge_capacity"])
-            lat = sub.get_edge_latency(edge)
-            cost = sub.get_edge_cost(edge)
-            assert cost == pytest.approx(lat), "Edge latency {} should be the same as cost {}!".format(lat, cost)
-
 
 class TestSubstrateTransformation:
     def setup(self):
@@ -848,7 +794,6 @@ class TestSubstrateTransformation:
             "node_resource_factor": 0.02,
             "edge_resource_factor": 50.0,
             "profit_factor": 1,
-            "latency_factor": 2.0,
         }
         self.sub_reader = scenariogeneration.TopologyZooReader()
         self.sub = self.sub_reader.read_substrate(self.parameters)
