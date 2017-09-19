@@ -113,6 +113,14 @@ def full_evaluation(dc_baseline, dc_randround):
 
 
 @cli.command()
+@click.argument('pickle_file', type=click.File('r'))
+@click.argument('max_depth', default=10)
+def pretty_print(pickle_file, max_depth):
+    data = pickle.load(pickle_file)
+    pp = util.PrettyPrinter(max_depth=max_depth)
+    pp.pprint(data)
+
+@cli.command()
 @click.argument('experiment_yaml', type=click.File('r'))
 @click.argument('min_scenario_index', type=click.INT)
 @click.argument('max_scenario_index', type=click.INT)

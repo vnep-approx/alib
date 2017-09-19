@@ -265,6 +265,16 @@ class TestScenarioGenerator:
         x = self.sg.generate_scenarios(param_space, repetition=3)
         assert len(self.sg.scenario_parameter_container.scenario_parameter_combination_list) == 48
 
+    def test_pretty_printer(self):
+        with open(os.path.join(TEST_BASE_DIR, "yaml/one_of_each.yml"), "r") as f:
+            param_space = yaml.load(f)
+        x = self.sg.generate_scenarios(param_space, repetition=3)
+        with open(os.path.join(TEST_BASE_DIR, "test.pickle"), "r") as f:
+            data = pickle.load(f)
+        pp = util.PrettyPrinter(max_depth=3)
+        output_print = pp.pprint(data)
+        assert len(output_print) == 3567
+
     def test_tiny_yaml_file_produces_correct_scenario_para_container_dict(self):
         with open(os.path.join(TEST_BASE_DIR, "yaml/tinytiny.yml"), "r") as f:
             param_space = yaml.load(f)
