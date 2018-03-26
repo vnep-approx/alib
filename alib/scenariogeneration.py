@@ -861,6 +861,8 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             if self._generation_attemps > 10 ** 7:
                 self._abort()
         self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
+        print("\n\n\n",raw_parameters)
+        print(self._empirical_number_of_nodes_edges())
         return req
 
     def _generate_request_graph(self, name):

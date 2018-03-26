@@ -778,7 +778,7 @@ def scatter_obj_load(reduced_pickle_baseline, reduced_pickle_rand, saveplots=Fal
 
     filter_path, _ = extract_parameter_range(sps, "number_of_requests")
     # print "filter path is {}".format(filter_path)
-    filter_indices = lookup_scenarios_having_specific_values(spd, filter_path, 50)
+    #filter_indices = lookup_scenarios_having_specific_values(spd, filter_path, 50)
 
     x = [[], [], [], []]
     y = [[], [], [], []]

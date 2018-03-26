@@ -87,7 +87,7 @@ class ExperimentPathHandler(object):
     results.
     """
 
-    CURRENT_FILE_DIR = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
+    CURRENT_FILE_DIR = os.path.realpath(__file__)
     ALIB_DIR = None
 
     EXPERIMENT_DIR = None
@@ -148,6 +148,7 @@ class ExperimentPathHandler(object):
     def _get_alib_dir():
         alib_dir = None
         if os.getenv("ALIB_EXPERIMENT_HOME") is not None:
+            print("FOOO!")
             log.info("Setting path according to ALIB_EXPERIMENT_HOME")
             alib_dir = os.getenv("ALIB_EXPERIMENT_HOME")
         else:
