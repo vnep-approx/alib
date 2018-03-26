@@ -486,9 +486,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
 
     The source and target nodes are each mapped to a single substrate node.
 
-    Additionally, a latency constraint is generated for the chain connecting the source and target nodes.
-    The maximum latency is obtained by multiplying the latency_factor parameter with the length of the shortest-path
-    embedding.
     """
 
     SOURCE_NODE = "s"
@@ -498,7 +495,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         "number_of_requests",  # used for estimating average resource demand
         "min_number_of_nodes", "max_number_of_nodes",
         "probability",
-        "latency_factor",
         "node_resource_factor",
         "edge_resource_factor"
     ]
@@ -551,7 +547,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         selected_functions = [self._next_node_type() for _ in range(number_of_nodes_in_core)]
         core_nodes_and_functions = []
         previous_node = ServiceChainGenerator.SOURCE_NODE
-        latency_edges = []
         for node_type in selected_functions:
             new_node = str(len(req.get_nodes()) - 1)
             core_nodes_and_functions.append((new_node, node_type))
@@ -562,7 +557,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
                          allowed_nodes=self._substrate.get_nodes_by_type(node_type))
             req.add_edge(previous_node, new_node, selected_edge_resources)
             edge = (previous_node, new_node)
-            latency_edges.append(edge)
             previous_node = new_node
 
         target_demand = selected_edge_resources / self.average_request_edge_resources * self.average_request_node_resources_per_type[target_type]
@@ -571,9 +565,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
                      target_type,
                      allowed_nodes={target_location})
         req.add_edge(previous_node, ServiceChainGenerator.TARGET_NODE, selected_edge_resources)
-        latency_edges.append((previous_node, ServiceChainGenerator.TARGET_NODE))
-        max_latency = self._raw_parameters["latency_factor"] * self._calculate_min_latency(core_nodes_and_functions, source_location, target_location)
-        req.add_latency_requirement(latency_edges, max_latency)
 
         req.node[ServiceChainGenerator.SOURCE_NODE]["fixed_node"] = True
         req.node[ServiceChainGenerator.TARGET_NODE]["fixed_node"] = True
@@ -593,29 +584,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         target_location = random.choice(potential_target_nodes)
         return source_location, target_location
 
-    def _calculate_min_latency(self, core_nodes_and_functions, source_location, target_location):
-        """
-        Calculate the latency (length of the shortest path from source to sink while
-        respecting the restrictions of network functions)
-
-        :param core_nodes_and_functions:
-        :param source_location:
-        :param target_location:
-        :return:
-        """
-        last_layer = [(source_location, 0.0)]
-
-        for node, node_type in core_nodes_and_functions:
-            # print last_layer
-            next_layer = []
-            for end_node in self._substrate.get_nodes_by_type(node_type):
-                latency = min(lat + self._substrate.shortest_paths_costs[start_node][end_node]
-                              for start_node, lat in last_layer)
-                next_layer.append((end_node, latency))
-            last_layer = next_layer
-
-        result = min(latency + self._substrate.shortest_paths_costs[node][target_location] for node, latency in last_layer)
-        return result
 
     def _calculate_average_resource_demands(self):
         connection_probability = self._raw_parameters["probability"]
@@ -1445,7 +1413,7 @@ class TopologyZooReader(ScenariogenerationTask):
         for (tail, head), dist in dists.items():
             cost = dist
             capacity = raw_parameters["edge_capacity"]
-            substrate.add_edge(tail, head, capacity=capacity, cost=cost, latency=cost)
+            substrate.add_edge(tail, head, capacity=capacity, cost=cost)
         return substrate
 
     def _assign_node_types(self, nodes, raw_parameters):

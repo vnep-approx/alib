@@ -108,9 +108,16 @@ def f_generate_scenarios(scenario_output_file, parameter_file, threads):
 def full_evaluation(dc_baseline, dc_randround):
     baseline_data = pickle.load(dc_baseline)
     randround_data = pickle.load(dc_randround)
-    print "data loaded"
     evaluation.plot_heatmaps(baseline_data, randround_data)
 
+
+@cli.command()
+@click.argument('pickle_file', type=click.File('r'))
+@click.option('--col_output_limit', default=None)
+def pretty_print(pickle_file, col_output_limit):
+    data = pickle.load(pickle_file)
+    pp = util.PrettyPrinter()
+    print pp.pprint(data, col_output_limit=col_output_limit)
 
 @cli.command()
 @click.argument('experiment_yaml', type=click.File('r'))

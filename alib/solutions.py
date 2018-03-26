@@ -43,7 +43,7 @@ class IntegralScenarioSolution(object):
         self.request_mapping[req] = mapping
 
     def validate_solution(self):
-        """ validates types, latency and capacity for each request and given
+        """ validates types and capacity for each request and given
         mapping in scenario
         """
         if (not self.scenario.validate_types()):
@@ -53,7 +53,6 @@ class IntegralScenarioSolution(object):
                 mapping = self.request_mapping[request]
                 substrate = self.scenario.substrate
                 rules = [self.type_check(request, mapping, substrate),
-                         self.latency_check(request, mapping, substrate),
                          self.capacity_check(request, mapping, substrate)]
                 if not all(rules):
                     return False
@@ -87,15 +86,6 @@ class IntegralScenarioSolution(object):
             if i_type not in substrate.get_supported_node_types(u):
                 print "Node {} does not support type {}".format(u, request.node[i]['type'])
                 return False
-        return True
-
-    def latency_check(self, request, mapping, substrate):
-        for path, latency in mapping.request.graph['latency_requirement'].iteritems():
-            sum = 0
-            for ve in path:
-                sum += substrate.get_path_latency(mapping.mapping_edges[ve])
-                if sum > latency:
-                    return False
         return True
 
     def capacity_check(self, request, mapping, substrate):
@@ -146,7 +136,7 @@ class FractionalScenarioSolution(object):
         self.mapping_loads[mapping.name] = load
 
     def validate_solution(self):
-        """ validates types, latency and capacity for each request and given
+        """ validates types and capacity for each request and given
         list of mappings in scenario
         """
         if (not self.scenario.validate_types()):
@@ -156,7 +146,6 @@ class FractionalScenarioSolution(object):
                 for mapping in self.request_mapping[request]:
                     substrate = self.scenario.substrate
                     rules = [self.type_check(request, mapping, substrate),
-                             self.latency_check(request, mapping, substrate),
                              self.capacity_check(request, mapping, substrate)]
                 if not all(rules):
                     return False
@@ -169,16 +158,6 @@ class FractionalScenarioSolution(object):
             if (request.get_type(i) not in substrate.node[mapping.mapping_nodes[i]]['supported_types']):
                 print "Node:", mapping.mapping_nodes[i], " does not support type:", request.node[i]['type']
                 return False
-        return True
-
-    def latency_check(self, request, mapping, substrate):
-        for path in mapping.request.graph['latency_requirement'].keys():
-            sum = 0
-            for ve in path:
-                sum += substrate.get_path_latency(mapping.mapping_edges[ve])
-                if sum > request.graph['latency_requirement'][path]:
-                    print "Latency Check failed", sum
-                    return False
         return True
 
     def capacity_check(self, request, mapping, substrate):

@@ -349,7 +349,7 @@ class PrettyPrinter(object):
     _DESCRIBED_ABOVE = 1
     _DESCRIBED_BELOW = 2
 
-    def __init__(self, indent_offset=0, indent_step=2, whitelist=None, max_depth=10000):
+    def __init__(self, indent_offset=0, indent_step=1, whitelist=None, max_depth=10000):
         self.base_indent_offset = indent_offset
         self.indent_step = indent_step
         if whitelist is None:
@@ -357,30 +357,29 @@ class PrettyPrinter(object):
         self.whitelist = whitelist
         self.max_depth = max_depth
 
-        self._current_depth = 0
-        self._depth = None
         self._known_objects = None
 
-    def pprint(self, obj):
+    def pprint(self, obj, col_output_limit=None):
         """
         Generate a string representation of the object and its attributes.
 
         :param obj: A python object
+        :param col_output_limit: maximum collection limit
         :return: pretty printed string
         """
-        if not PrettyPrinter._has_class_and_module(obj):  # fallback in case obj has undefined class/module attributes
-            return str(obj)
+        # if not PrettyPrinter._has_class_and_module(obj):  # fallback in case obj has undefined class/module attributes
+        #     return str(obj)
         self._known_objects = set()
-        result = "\n".join(self._generate_lines(obj))
+        result = "\n".join(self._generate_lines(obj, col_output_limit=col_output_limit))
         return result
 
-    def _generate_lines(self, obj):
+    def _generate_lines(self, obj, depth=0, col_output_limit=None):
+        if not col_output_limit:
+            col_output_limit = sys.maxint
         self._objects_to_explore = [obj]
-        self._depth = [0]
         while self._objects_to_explore:
             obj = self._objects_to_explore.pop()
-            self._current_depth = self._depth.pop()
-            if self._current_depth > self.max_depth:
+            if depth > self.max_depth:
                 print "Maximum depth exceeded!"
                 continue
 
@@ -388,51 +387,90 @@ class PrettyPrinter(object):
             # if self._is_known(obj):
             #     continue
             self._remember(obj)
-            yield self._basic_object_description(obj)
+            yield self._basic_object_description(obj, depth)
 
-            # explore the object's attributes:
-            for attr in sorted(obj.__dict__.keys()):
-                value = obj.__dict__[attr]
-                position = self._get_relative_position_of_description(value)
-                if position == PrettyPrinter._DESCRIBED_BELOW:
-                    children.append(value)
-                line = self._get_basic_attribute_description(attr, value, position)
-
-                if isinstance(value, collections.Iterable) and not isinstance(value, basestring):
-                    contained_objects = self._get_objects_from_iterable(value)
-                    if contained_objects:
-                        line += " [see above or below]"
-                    children.extend(o for o in contained_objects if not self._is_known(o))
+            # what kind of type is the object?
+            if isinstance(obj, dict):
+                if not obj:
+                    header = self._get_header(depth + 1)
+                    yield "{header} empty dict\n".format(header=header)
+                line = ""
+                for index, (key, value) in enumerate(obj.iteritems()):
+                    if index < col_output_limit:
+                        if self._has_class_and_module(value):
+                            header = self._get_header(depth + 1)
+                            line = "{head}{key}:\n".format(head=header, key=key)
+                            for bla in self._generate_lines(value, depth=depth + 1, col_output_limit=col_output_limit):
+                                line += bla
+                        elif isinstance(value, (list, tuple, set, dict)):
+                            header = self._get_header(depth + 1)
+                            line = "{head}{key}:\n".format(head=header, key=key)
+                            if len(value) > 1:
+                                for bla in self._generate_lines(value, depth=depth + 1,  col_output_limit=col_output_limit):
+                                    line += bla
+                            else:
+                                header = self._get_header(depth + 2)
+                                line += "{head}{value}\n".format(head=header, value=value)
+                        else:
+                            header = self._get_header(depth + 1)
+                            line = "{head}{key}: {value}\n".format(head=header, key=key, value=value)
+                    else:
+                        header = self._get_header(depth + 1)
+                        line = "{header}[ ... ]\n".format(header=header)
+                        yield line
+                        break
+                    yield line
+            if isinstance(obj, (list, tuple, set)):
+                header = self._get_header(depth + 1)
+                line = "{head}{obj}\n".format(head=header, obj=obj)
+                for index, elem in enumerate(obj):
+                    if index < col_output_limit:
+                        if self._has_class_and_module(elem):
+                            for bla in self._generate_lines(elem, depth=depth + 1,  col_output_limit=col_output_limit):
+                                line += bla
+                        elif isinstance(elem, (list, tuple, set, dict)):
+                            for bla in self._generate_lines(elem, depth=depth + 1,  col_output_limit=col_output_limit):
+                                line += bla
+                    else:
+                        line += "{header}[ ... ]\n".format(header=header)
+                        break
                 yield line
 
-            # queue any new children for exploration
-            if children:
-                while children:
-                    child = children.pop()
-                    self._add_to_exploration_list(child)
+            if self._has_class_and_module(obj):
+                for attr in sorted(obj.__dict__.keys()):
+                    value = obj.__dict__[attr]
+                    if isinstance(value, (list, tuple, set, dict)):
+                            header = self._get_header(depth + 1)
+                            line = "{head}{attr}:\n".format(head=header, attr=attr)
+                            for bla in self._generate_lines(value, depth=depth + 1, col_output_limit=col_output_limit):
+                                line += bla
+                    else:
+                        header = self._get_header(depth + 1)
+                        line = "{head}{key}: {value}\n".format(head=header, key=attr, value=value)
+                    yield line
 
-    def _basic_object_description(self, obj):
-        header = self._get_header(self._current_depth)
-        line = "\n{head}{mod_class} @ {id}".format(head=header,
-                                                   mod_class=self._get_module_and_class(obj),
-                                                   id=hex(id(obj)))
+    def _basic_object_description(self, obj, depth):
+        header = self._get_header(depth)
+        if self._has_class_and_module(obj):
+            line = "{head}{mod_class} @ {id}\n".format(head=header,
+                                                       mod_class=self._get_module_and_class(obj),
+                                                       id=hex(id(obj)))
+        else:
+            line =""
         return line
 
     def _get_relative_position_of_description(self, value):
         position = PrettyPrinter._DESCRIBED_HERE
-        print value
         if PrettyPrinter._has_class_and_module(value):
-            print "value is class or module"
             if self._matches_whitelist(value):
-                print "is on whitelist"
                 if self._is_known(value):
                     position = PrettyPrinter._DESCRIBED_ABOVE
                 else:
                     position = PrettyPrinter._DESCRIBED_BELOW
         return position
 
-    def _get_basic_attribute_description(self, attr, value, pos):
-        header = self._get_header(self._current_depth + 1)
+    def _get_basic_attribute_description(self, attr, value, pos, depth):
+        header = self._get_header(depth + 1)
         if pos == PrettyPrinter._DESCRIBED_HERE:
             line = "{head}{attr}: {value}".format(head=header, attr=attr, value=value)
         elif pos == PrettyPrinter._DESCRIBED_ABOVE:
@@ -463,7 +501,7 @@ class PrettyPrinter(object):
 
     def _matches_whitelist(self, value):
         mod_class = self._get_module_and_class(value)
-        print "matches...", mod_class, self.whitelist, mod_class.split(".")
+        # print "matches...", mod_class, self.whitelist, mod_class.split(".")
         return any(allowed_module in mod_class.split(".") for allowed_module in self.whitelist)
 
     def _is_known(self, obj):
@@ -472,9 +510,6 @@ class PrettyPrinter(object):
     def _remember(self, obj):
         self._known_objects.add(id(obj))
 
-    def _add_to_exploration_list(self, obj):
-        self._objects_to_explore.append(obj)
-        self._depth.append(self._current_depth + 1)
 
     @staticmethod
     def _has_class_and_module(value):

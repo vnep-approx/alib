@@ -33,13 +33,6 @@ class TestLinearRequest:
 
         assert self.request.edges == {("i", "j"), ("j", "k")}
 
-    def test_path_latency(self):
-        self.initialize_request()
-
-        path = [("i", "j"), ("j", "k")]
-        self.request.add_latency_requirement(path, 100.0)
-        assert self.request.get_latency_requirement(path) == 100.0
-
     def test_out_edges(self):
         self.initialize_request()
         assert self.request.get_out_edge("i") == ("i", "j")
@@ -80,11 +73,6 @@ class TestRequest:
 
         assert self.request.edges == {("i", "j"), ("j", "k")}
 
-    def test_latency(self):
-        self.initialize_request()
-        path = [("i", "j"), ("j", "k")]
-        self.request.add_latency_requirement(path, 41)
-        assert self.request.get_latency_requirement(path) == 41
 
 
 class TestScenario:
@@ -100,11 +88,6 @@ class TestScenario:
         self.request.add_node('i3', 2, "FW")
         self.request.add_edge('i1', 'i2', 2)
         self.request.add_edge('i2', 'i3', 2)
-        # REQUEST LATENCY
-        path = list(self.request.get_edges())
-        self.request.add_latency_requirement(path, 5)
-        latency = self.request.get_latency_requirement(path)
-        assert self.request.get_latency_requirement(path) == 5
         # REQUEST TYPES
         print "Request requires types"
         print self.request.get_required_types()
@@ -145,8 +128,6 @@ class TestSubstrate:
         self.substrate.add_node('node2', ["DPI"], {"DPI": 1}, {"DPI": 1})
         self.substrate.add_edge('node1', 'node2', 2, 2, 2)
         assert self.substrate.get_edge_cost(('node1', 'node2')) == 2
-        assert self.substrate.get_edge_latency(('node1', 'node2')) == 2
-        assert self.substrate.get_edge_latency(('node1', 'node2')) == 2
 
     def test_get_out_edge(self):
         self.substrate.add_node('u', ["FW"], {"FW": 1}, {"FW": 1})
@@ -179,21 +160,13 @@ class TestSubstrate:
         assert set(self.substrate.get_nodes_by_type("t1")) == {"u", "v", "w"}
 
         # now, some edges:
-        self.substrate.add_edge("u", "v", latency=1.1, capacity=1.2, cost=1.3, bidirected=True)
-        self.substrate.add_edge("v", "w", latency=1.1, capacity=1.2, cost=1.3, bidirected=True)
+        self.substrate.add_edge("u", "v", capacity=1.2, cost=1.3, bidirected=True)
+        self.substrate.add_edge("v", "w",  capacity=1.2, cost=1.3, bidirected=True)
         assert self.substrate.get_total_edge_resources() == pytest.approx(4.8)  # doubled because edge is bidirected
         assert self.substrate.get_edge_capacity(("u", "v")) == pytest.approx(1.2)
 
-        # some paths and latencies, with and without duplicate edges:
-        path_1 = [("u", "v"), ("v", "w")]
-        assert self.substrate.get_path_latency(path_1) == pytest.approx(2.2)
-        path_2 = [("u", "v"), ("v", "w"), ("w", "v"), ("v", "u")]
-        assert self.substrate.get_path_latency(path_2) == pytest.approx(4.4)
-        path_3 = [("u", "v"), ("u", "v"), ("u", "v")]
-        assert self.substrate.get_path_latency(path_3) == pytest.approx(3.3)
-
         # add edges with a different capacity:
-        self.substrate.add_edge("u", "w", latency=1.1, capacity=4.8, cost=1.3, bidirected=True)
+        self.substrate.add_edge("u", "w", capacity=4.8, cost=1.3, bidirected=True)
         assert self.substrate.average_edge_capacity() == pytest.approx(2.4)
 
 

@@ -94,7 +94,7 @@ def get_test_substrate(number_of_nodes, node_types=None, capacity=10.0):
         for j in range(i + 1, number_of_nodes + 1):
             test_substrate.add_edge("test_substrate_node_{}".format(i),
                                     "test_substrate_node_{}".format(j),
-                                    capacity, bidirected=True)
+                                    capacity['universal'], bidirected=True)
     test_substrate.initialize_shortest_paths_costs()
     return test_substrate
 

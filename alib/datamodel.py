@@ -207,7 +207,6 @@ class Request(Graph):
 
     def __init__(self, name):
         super(Request, self).__init__(name)
-        self.graph['latency_requirement'] = {}
         self.types = set()
         self.profit = 0.0
 
@@ -218,16 +217,6 @@ class Request(Graph):
     def add_edge(self, tail, head, demand, allowed_edges=None):
         if tail in self.nodes and head in self.nodes:
             super(Request, self).add_edge(tail, head, demand=demand, allowed_edges=allowed_edges)
-
-    def add_latency_requirement(self, path, latency):
-        """ adds to a specific 'path' a latency requirement
-            important: the order of edges must be respected """
-        if not set(path) <= self.edges:
-            print "Path contains edges which are NOT in request edges: {}".format(set(path) - self.edges)
-        elif any(path[i][1] != path[i + 1][0] for i in range(len(path) - 1)):
-            print "Path [{}] is not connected!".format(", ".join(str(e) for e in path))
-        else:
-            self.graph['latency_requirement'][tuple(path)] = latency
 
     def set_allowed_nodes(self, i, allowed_nodes):
         if i in self.nodes:
@@ -250,12 +239,6 @@ class Request(Graph):
             self.edge[ij]['allowed_edges'] = allowed_edges
         else:
             print "Request edge {} is NOT contained in request".format(ij)
-
-    def get_latency_requirement(self, path):
-        return self.graph['latency_requirement'][tuple(path)]
-
-    def get_all_latency_requirements(self):
-        return self.graph['latency_requirement']
 
     def get_required_types(self):
         return self.types
@@ -291,7 +274,6 @@ class LinearRequest(Request):
 
     def __init__(self, name):
         super(LinearRequest, self).__init__(name)
-        self.graph['latency_requirement'] = {}
         self.sequence = []
         self.types = set()
 
@@ -317,12 +299,6 @@ class LinearRequest(Request):
             return self.out_edges[i][0]
         else:
             raise LinearRequestError("Linear Request cannot have multiple outgoing edges!")
-
-    def get_latency_requirement(self, path):
-        return self.graph['latency_requirement'][tuple(path)]
-
-    def get_all_latency_requirements(self):
-        return self.graph['latency_requirement']
 
     def get_required_types(self):
         return self.types
@@ -350,11 +326,10 @@ class Substrate(Graph):
                 raise SubstrateError("Type {} is also a node in the substrate.".format(node_type))
             self.types.add(node_type)
 
-    def add_edge(self, tail, head, latency=1.0, capacity=1.0, cost=1.0, bidirected=True):
+    def add_edge(self, tail, head, capacity=1.0, cost=1.0, bidirected=True):
         if tail in self.nodes and head in self.nodes:
             # is always bidirected
             super(Substrate, self).add_edge(tail, head, bidirected=bidirected,
-                                            latency=latency,
                                             capacity=capacity,
                                             cost=cost)
         else:
@@ -388,14 +363,8 @@ class Substrate(Graph):
     def average_node_capacity(self, node_type):
         return self.get_total_node_resources(node_type) / float(len(self.get_nodes_by_type(node_type)))
 
-    def get_path_latency(self, path):
-        return sum(map(self.get_edge_latency, path))
-
     def get_path_capacity(self, path):
         return min(map(self.get_edge_capacity, path))
-
-    def get_edge_latency(self, edge):
-        return self.edge[edge]['latency']
 
     def get_edge_cost(self, edge):
         return self.edge[edge]['cost']
