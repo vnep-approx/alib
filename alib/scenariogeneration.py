@@ -30,7 +30,7 @@ import math
 import multiprocessing as mp
 import os
 import yaml
-from collections import deque
+from collections import deque, namedtuple
 from random import Random
 
 import numpy.random
@@ -630,9 +630,9 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         expected_number_of_request_nodes = (float(number_of_requests) * (2 + average_number_of_nodes_in_core))  # add 2 for source & sink
         expected_number_of_request_edges = (float(number_of_requests) * (
             # edges of the main service chain:
-            (average_number_of_nodes_in_core - 1 + 2) +
-            # edges from random connections:
-            connection_probability * (average_number_of_nodes_in_core * (average_number_of_nodes_in_core - 2) + 1)
+                (average_number_of_nodes_in_core - 1 + 2) +
+                # edges from random connections:
+                connection_probability * (average_number_of_nodes_in_core * (average_number_of_nodes_in_core - 2) + 1)
         ))
 
         # TODO: this code assumes that all node types are evenly distributed in the request!
@@ -822,6 +822,9 @@ class UniformRequestGenerator(AbstractRequestGenerator):
         return req
 
 
+_CactusSubTree = namedtuple("_CactusSubTree", "root nodes")
+
+
 class CactusRequestGenerator(AbstractRequestGenerator):
     """
     Generate request topologies with the cactus graph property.
@@ -890,7 +893,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             req = self._generate_request_graph(name)
             is_feasible = self.verify_substrate_has_sufficient_capacity(req, substrate)
             self._generation_attemps += 1
-            if self._generation_attemps > 10 ** 7:
+            if self._generation_attemps > 10**7:
                 self._abort()
         self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
         return req
@@ -898,52 +901,56 @@ class CactusRequestGenerator(AbstractRequestGenerator):
     def _generate_request_graph(self, name):
         print "Generating", name
         self._select_node_edge_resources()
-        req = self._generate_tree(name)
+        req = self._generate_tree_with_correct_size(name)
         self._add_cactus_edges(req)
         return req
 
-    def _generate_tree(self, name):
+    def _generate_tree_with_correct_size(self, name):
         has_correct_size = False
         if self._generation_attemps is None:
             self._generation_attemps = 0
         req = None
         while not has_correct_size:
-            req = datamodel.Request(name)
-            layer = 0
-            fixed_nodes = []
-            root_type = self._next_node_type()
-            root_id = "{}_{}".format(CactusRequestGenerator.ROOT, req.name)
-            req.graph["root"] = root_id
-            allowed_nodes = self._substrate.get_nodes_by_type(root_type)
-            demand = self._node_demand_by_type[root_type]
-            self._add_node_to_request(req, root_id, demand, root_type, allowed_nodes, None, layer)
-            previous_layer = [root_id]
-            if self._raw_parameters["fix_root_mapping"]:
-                fixed_nodes.append(root_id)
-            for layer in xrange(1, self._raw_parameters["layers"] + 1):
-                current_layer = []
-                while previous_layer:
-                    parent_node = previous_layer.pop()
-                    number_of_children = self._pick_number_of_children()
-                    if number_of_children == 0 and self._raw_parameters["fix_leaf_mapping"]:
-                        fixed_nodes.append(parent_node)
-                    for i in xrange(1, number_of_children + 1):
-                        ntype = self._next_node_type()
-                        child_node = self._get_node_name(len(req.nodes) + 1, parent_node, layer, ntype, req)
-                        current_layer.append(child_node)
-                        allowed_nodes = self._substrate.get_nodes_by_type(ntype)
-                        demand = self._node_demand_by_type[ntype]
-                        self._add_node_to_request(req, child_node, demand, ntype, allowed_nodes, parent_node, layer)
-                        if layer == self._raw_parameters["layers"] and self._raw_parameters["fix_leaf_mapping"]:
-                            fixed_nodes.append(child_node)
-                        req.add_edge(parent_node, child_node, self._edge_demand)
-
-                previous_layer = current_layer
-            self._fix_nodes(req, fixed_nodes)
+            req = self._generate_tree(name)
             has_correct_size = self._raw_parameters["min_number_of_nodes"] <= len(req.nodes) <= self._raw_parameters["max_number_of_nodes"]
             self._generation_attemps += 1
-            if self._generation_attemps > 10 ** 7:
+            if self._generation_attemps > 10**7:
                 self._abort()
+        return req
+
+    def _generate_tree(self, name):
+        req = datamodel.Request(name)
+        layer = 0
+        fixed_nodes = []
+        root_type = self._next_node_type()
+        root_id = "{}_{}".format(CactusRequestGenerator.ROOT, req.name)
+        req.graph["root"] = root_id
+        allowed_nodes = self._substrate.get_nodes_by_type(root_type)
+        demand = self._node_demand_by_type[root_type]
+        self._add_node_to_request(req, root_id, demand, root_type, allowed_nodes, None, layer)
+        previous_layer = [root_id]
+        if self._raw_parameters["fix_root_mapping"]:
+            fixed_nodes.append(root_id)
+        for layer in xrange(1, self._raw_parameters["layers"] + 1):
+            current_layer = []
+            while previous_layer:
+                parent_node = previous_layer.pop()
+                number_of_children = self._pick_number_of_children()
+                if number_of_children == 0 and self._raw_parameters["fix_leaf_mapping"]:
+                    fixed_nodes.append(parent_node)
+                for i in xrange(1, number_of_children + 1):
+                    ntype = self._next_node_type()
+                    child_node = self._get_node_name(len(req.nodes) + 1, parent_node, layer, ntype, req)
+                    current_layer.append(child_node)
+                    allowed_nodes = self._substrate.get_nodes_by_type(ntype)
+                    demand = self._node_demand_by_type[ntype]
+                    self._add_node_to_request(req, child_node, demand, ntype, allowed_nodes, parent_node, layer)
+                    if layer == self._raw_parameters["layers"] and self._raw_parameters["fix_leaf_mapping"]:
+                        fixed_nodes.append(child_node)
+                    req.add_edge(parent_node, child_node, self._edge_demand)
+
+            previous_layer = current_layer
+        self._fix_nodes(req, fixed_nodes)
         return req
 
     def _fix_nodes(self, req, nodes):
@@ -960,30 +967,35 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         req.node[node]["layer"] = layer
 
     def _add_cactus_edges(self, req):
-        sub_trees = [(req.graph["root"], list(req.nodes))]
+        sub_trees = [_CactusSubTree(req.graph["root"], list(req.nodes))]
         cycles = 0
-        edges_on_cycle = set()
+        forbidden_edges = set()
         while sub_trees and (cycles < self._raw_parameters["max_cycles"]):
             cycles += 1
-            root_node, sub_tree = sub_trees.pop()
-            i = random.choice(sub_tree)
-            j = random.choice(sub_tree)
+            # choose a subtree
+            subtree= random.choice(sub_trees)
+
+            # Choose a non-adjacent random pair of nodes within this subtree
+            i = random.choice(subtree.nodes)
+            j = random.choice(subtree.nodes)
             while i == j or (i in req.get_out_neighbors(j)) or (j in req.get_out_neighbors(i)):
-                i = random.choice(sub_tree)
-                j = random.choice(sub_tree)
+                i = random.choice(subtree.nodes)
+                j = random.choice(subtree.nodes)
             if req.node[i]["layer"] > req.node[j]["layer"]:
                 i, j = j, i  # make edges always point down the tree
+
+            # decide to add new edge or not
             if random.random() < self._raw_parameters["probability"]:
                 req.add_edge(i, j, self._edge_demand)
-                edges_on_cycle.add((i, j))
 
-                path_i = CactusRequestGenerator._path_to_root(req, i, root_node)
-                path_j = CactusRequestGenerator._path_to_root(req, j, root_node)
-                new_cycle = path_i.symmetric_difference(path_j)  # only edges on the path to the first common ancestor lie on cycle
-                edges_on_cycle = edges_on_cycle.union(new_cycle)
+            # forbid any edges on the cycle to reduce the subtree list, regardless of whether edge was added to request
+            path_i = CactusRequestGenerator._path_to_root(req, i, subtree.root)
+            path_j = CactusRequestGenerator._path_to_root(req, j, subtree.root)
+            cycle_edges = path_i.symmetric_difference(path_j)  # only edges on the path to the first common ancestor lie on cycle
+            forbidden_edges = forbidden_edges.union(cycle_edges)
 
-                sub_trees = CactusRequestGenerator._list_nontrivial_allowed_subtrees(req, edges_on_cycle)
-                random.shuffle(sub_trees)
+            # Update the list of subtrees
+            sub_trees = CactusRequestGenerator._list_nontrivial_allowed_subtrees(req, forbidden_edges)
 
     @staticmethod
     def _path_to_root(req, u, root_node):
@@ -998,26 +1010,28 @@ class CactusRequestGenerator(AbstractRequestGenerator):
     def _list_nontrivial_allowed_subtrees(req, edges_on_cycle):
         visited_subtrees = set()
         result = []
-        for root_node in req.nodes:
+        for root_node in sorted(req.nodes, key=lambda i: req.node[i]["layer"]):
             if root_node in visited_subtrees:
                 continue
             visited_subtrees.add(root_node)
-            subtree = CactusRequestGenerator._get_subtree_under_node(req, root_node, edges_on_cycle)
+            subtree = CactusRequestGenerator._get_subtree_nodes_under_node(req, root_node, edges_on_cycle)
+            visited_subtrees |= set(subtree)
             if len(subtree) > 2:
-                result.append((root_node, subtree))
+                result.append(_CactusSubTree(root_node, subtree))
         return result
 
     @staticmethod
-    def _get_subtree_under_node(req, root, removed_edges):
+    def _get_subtree_nodes_under_node(req, root, removed_edges):
         stack = [root]
-        subtree = []
+        subtree_nodes = []
+        forbidden_nodes = set(itertools.chain(*removed_edges))
         while stack:
             u = stack.pop()
-            subtree.append(u)
+            subtree_nodes.append(u)
             for w in req.get_out_neighbors(u):
-                if all([w not in e for e in removed_edges]):
+                if u not in forbidden_nodes or w not in forbidden_nodes:
                     stack.append(w)
-        return subtree
+        return subtree_nodes
 
     def _pick_number_of_children(self):
         draw = random.random()
@@ -1229,7 +1243,7 @@ class OptimalEmbeddingProfitCalculator(AbstractProfitCalculator):
         scenario_copy.objective = datamodel.Objective.MIN_COST
 
         gurobi_settings = modelcreator.GurobiSettings(mipGap=0.001,
-                                                      iterationLimit=10 ** 99,
+                                                      iterationLimit=10**99,
                                                       nodeLimit=None,
                                                       heuristics=None,
                                                       threads=1,
@@ -1457,7 +1471,7 @@ def haversine(lon1, lat1, lon2, lat2):
     # haversine formula
     dlon = lon2 - lon1
     dlat = lat2 - lat1
-    a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
     c = 2 * math.asin(math.sqrt(a))
     # 6367 km is the radius of the Earth
     km = 6367 * c
