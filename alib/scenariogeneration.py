@@ -29,6 +29,8 @@ import itertools
 import math
 import multiprocessing as mp
 import os
+
+import time
 import yaml
 from collections import deque, namedtuple
 from random import Random
@@ -584,7 +586,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         target_location = random.choice(potential_target_nodes)
         return source_location, target_location
 
-
     def _calculate_average_resource_demands(self):
         connection_probability = self._raw_parameters["probability"]
         min_number_nodes = self._raw_parameters["min_number_of_nodes"]
@@ -941,7 +942,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         while sub_trees and (cycles < self._raw_parameters["max_cycles"]):
             cycles += 1
             # choose a subtree
-            subtree= random.choice(sub_trees)
+            subtree = random.choice(sub_trees)
 
             # Choose a non-adjacent random pair of nodes within this subtree
             i = random.choice(subtree.nodes)
@@ -1094,7 +1095,10 @@ class AbstractProfitCalculator(ScenariogenerationTask):
         class_raw_parameters_dict = scenario_parameters[PROFIT_CALCULATION_TASK].values()[0]
         class_name = self.__class__.__name__
         if class_name not in class_raw_parameters_dict:
-            raise ScenarioGeneratorError("")
+            valid_class_str = ", ".join(str(c) for c in class_raw_parameters_dict.keys())
+            raise ScenarioGeneratorError("{class_name} is not a valid profit calculation tasks (expected one of {valid_classes})".format(
+                class_name=class_name, valid_classes=valid_class_str
+            ))
         raw_parameters = class_raw_parameters_dict[class_name]
         self.generate_and_apply_profits(scenario, raw_parameters)
 
@@ -1131,10 +1135,13 @@ class RandomEmbeddingProfitCalculator(AbstractProfitCalculator):
             self._scenario.substrate.initialize_shortest_paths_costs()
 
         for req in self._scenario.requests:
+            start_time = time.clock()
             cost = self._get_average_cost_from_embedding_graph_randomly(
                 req, self._scenario.substrate.shortest_paths_costs
             )
             req.profit = -cost * raw_parameters["profit_factor"]
+            end_time = time.clock()
+            req.graph["profit_calculation_time"] = end_time - start_time
             self.logger.debug("\t{}\t{}".format(req.name, req.profit))
 
         self._iterations = None
@@ -1173,7 +1180,7 @@ class OptimalEmbeddingProfitCalculator(AbstractProfitCalculator):
 
     EXPECTED_PARAMETERS = [
         "profit_factor",
-        "timelimit"
+        "timelimit",
     ]
 
     def __init__(self, logger=None):
@@ -1227,6 +1234,9 @@ class OptimalEmbeddingProfitCalculator(AbstractProfitCalculator):
             min_embedding_cost = 0.0
         else:
             min_embedding_cost = mc.status.objValue
+        req.graph["profit_calculation_time"] = (mc.time_preprocess +
+                                                mc.time_optimization +
+                                                mc.time_postprocessing)
         # Some cleanup:
         del scenario_copy
         del mc.model
