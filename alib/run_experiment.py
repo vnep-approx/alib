@@ -240,7 +240,7 @@ class ExperimentExecution(object):
             (scenario_id, execution_id, alg_result) = res
             log.info("Processing solution for {}, {}: {}".format(scenario_id, execution_id, alg_result))
             alg_id = self.execution_parameters.algorithm_parameter_list[execution_id]["ALG_ID"]
-            with open("intermediate_result_{}_{}.pickle".format(scenario_id,execution_id), "wb") as f:
+            with open("intermediate_result_{}_{}.pickle".format(scenario_id,alg_id), "wb") as f:
                 pickle.dump((scenario_id,execution_id,alg_result), f)
             if alg_result is not None:
                 original_scenario = self.scenario_container.scenario_list[scenario_id]
