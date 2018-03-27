@@ -192,7 +192,19 @@ def f_inspect_specfic_cactus_request_graph_generation_and_output(name, raw_param
     param_value_list = []
     for key, value in raw_parameters.iteritems():
         param_key_list.append(key)
-        param_value_list.append(value)
+        #only the following parameters really define the graphs generated.
+        #hence for these the original lists are preserved, while for the other parameters
+        #only the last parameter is kept (hoping that it has the `largest` value)
+        if key in ["branching_distribution",
+                   "min_number_of_nodes",
+                   "max_number_of_nodes",
+                   "layers",
+                   "probability",
+                   "max_cycles",
+                   "iterations"]:
+            param_value_list.append(value)
+        else:
+            param_value_list.append([value[-1]])
 
     import numpy as np
     import matplotlib.pyplot as plt
