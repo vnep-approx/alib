@@ -837,7 +837,8 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         "iterations",
         "fix_root_mapping",
         "fix_leaf_mapping",
-        "normalize"
+        "normalize",
+        "arbitrary_edge_orientations"
     ]
 
     def __init__(self, logger=None):
@@ -857,31 +858,40 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         self._node_types = list(substrate.types)
         self._raw_parameters = raw_parameters
         self._substrate = substrate
-        print "LALLA"
         if self._scenario_parameters_have_changed:  # this operation may be quite expensive => only do it when the values are outdated
-            print "entering calculate average resource demands"
             self._calculate_average_resource_demands()
-        print "LALLALLALALLALALLALALLALA"
         req = None
         is_feasible = False
         self._generation_attemps = 0
         while not is_feasible:
-            print "not feasible"
             req = self._generate_request_graph(name)
             is_feasible = self.verify_substrate_has_sufficient_capacity(req, substrate)
             self._generation_attemps += 1
             if self._generation_attemps > 10**7:
                 self._abort()
         self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
-        print("\n\n\n",raw_parameters)
-        print(self._empirical_number_of_nodes_edges())
         return req
 
     def _generate_request_graph(self, name):
-        print "Generating", name
         self._select_node_edge_resources()
         req = self._generate_tree_with_correct_size(name)
         self._add_cactus_edges(req)
+        if self._raw_parameters["arbitrary_edge_orientations"]:
+            reoriented_req = datamodel.Request(req.name)
+            for node in req.nodes:
+                reoriented_req.add_node(node,
+                                        req.node[node]['demand'],
+                                        req.node[node]['type'],
+                                        req.node[node]['allowed_nodes'])
+            for (u,v) in req.edges:
+                u_prime, v_prime = u, v
+                if random.random() < 0.5:
+                    u_prime, v_prime = v, u
+
+                reoriented_req.add_edge(u_prime, v_prime,
+                                        req.edge[(u,v)]['demand'],
+                                        req.edge[(u,v)]['allowed_edges'])
+            return reoriented_req
         return req
 
     def _generate_tree_with_correct_size(self, name):
@@ -956,8 +966,8 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         cycles = 0
         forbidden_edges = set()
         if len(req.nodes) <= 2:
-            print "premature abort"
-            return len(forbidden_edges)
+            return
+        edges_on_cycle = 0
 
         while sub_trees and (cycles < self._raw_parameters["max_cycles"]):
             cycles += 1
@@ -973,19 +983,26 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             if req.node[i]["layer"] > req.node[j]["layer"]:
                 i, j = j, i  # make edges always point down the tree
 
+
+            edge_was_added = False
             # decide to add new edge or not
             if random.random() < self._raw_parameters["probability"]:
                 req.add_edge(i, j, self._edge_demand)
+                edge_was_added = True
 
             # forbid any edges on the cycle to reduce the subtree list, regardless of whether edge was added to request
             path_i = CactusRequestGenerator._path_to_root(req, i, subtree.root)
             path_j = CactusRequestGenerator._path_to_root(req, j, subtree.root)
             cycle_edges = path_i.symmetric_difference(path_j)  # only edges on the path to the first common ancestor lie on cycle
+            if edge_was_added:
+                edges_on_cycle += len(cycle_edges)
             forbidden_edges = forbidden_edges.union(cycle_edges)
 
             # Update the list of subtrees
             sub_trees = CactusRequestGenerator._list_nontrivial_allowed_subtrees(req, forbidden_edges)
-        return len(forbidden_edges)
+
+        if self._advanced_inspection_information is not None:
+            self._advanced_inspection_information.overall_cycle_edges += edges_on_cycle
 
     @staticmethod
     def _path_to_root(req, u, root_node):
@@ -1113,12 +1130,9 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             self.generated_cycles = []
 
     def advanced_empirical_number_of_nodes_edges(self, raw_parameters, substrate, iterations):
-        self._node_types = list(substrate.types)
-        self._raw_parameters = raw_parameters
-        self._substrate = substrate
-        self._node_demand_by_type = {nt: 0.0 for nt in self._node_types}
-        self._edge_demand = 0.0
         self._advanced_inspection_information = self.AdvancedInspectionResult()
+
+        raw_parameters["iterations"] = 1
 
         for i in xrange(iterations):
 
@@ -1126,8 +1140,9 @@ class CactusRequestGenerator(AbstractRequestGenerator):
                 print("{} of {} iterations done.".format(i, iterations))
 
 
-            req = self._generate_tree_with_correct_size("test")
-            self._advanced_inspection_information.overall_cycle_edges += self._add_cactus_edges(req)
+            req = self.generate_request(name="test",
+                                        raw_parameters=raw_parameters,
+                                        substrate=substrate)
 
             number_nodes = len(req.nodes)
             number_edges = len(req.edges)

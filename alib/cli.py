@@ -161,7 +161,9 @@ def f_start_experiment(experiment_yaml,
 
 @cli.command()
 @click.argument('yaml_file_with_cacus_request_graph_definition', type=click.Path())
-def inspect_cactus_request_graph_generation(yaml_file_with_cacus_request_graph_definition):
+@click.option('--iterations', type=click.INT, default=100000)
+def inspect_cactus_request_graph_generation(yaml_file_with_cacus_request_graph_definition,
+                                            iterations):
     util.ExperimentPathHandler.initialize()
     print(yaml_file_with_cacus_request_graph_definition)
     param_space = None
@@ -177,15 +179,14 @@ def inspect_cactus_request_graph_generation(yaml_file_with_cacus_request_graph_d
                 raw_parameters = values["CactusRequestGenerator"]
                 print "\n\nextracted the following parameters..."
                 print name, ": ", raw_parameters
-                f_inspect_specfic_cactus_request_graph_generation_and_output(name, raw_parameters)
+                f_inspect_specfic_cactus_request_graph_generation_and_output(name, raw_parameters, iterations)
 
-def f_inspect_specfic_cactus_request_graph_generation_and_output(name, raw_parameters):
+def f_inspect_specfic_cactus_request_graph_generation_and_output(name, raw_parameters, iterations):
     simple_substrate = datamodel.Substrate("stupid_simple")
     simple_substrate.add_node("u", ["universal"], capacity={"universal": 1000}, cost=1000)
     simple_substrate.add_node("v", ["universal"], capacity={"universal": 1000}, cost=1000)
     simple_substrate.add_edge("u", "v", capacity=1000, cost=1000, bidirected=True)
 
-    iterations = 500000
     # flatten values
     param_key_list = []
     param_value_list = []
