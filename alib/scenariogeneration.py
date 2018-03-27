@@ -503,6 +503,8 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         super(ServiceChainGenerator, self).__init__(logger)
         self.average_request_node_resources_per_type = None  # dictionary mapping node types to the average resource demand of a node of the given type
         self.average_request_edge_resources = None
+
+        print "test"
         self._raw_parameters = None
 
     def generate_request(self,
@@ -513,7 +515,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         self._substrate = substrate
         self._raw_parameters = raw_parameters
         self._calculate_average_resource_demands()
-
         req = self._generate_request_graph(name)
         while not self.verify_substrate_has_sufficient_capacity(req, substrate):
             req = self._generate_request_graph(name)
@@ -529,7 +530,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         else:
             req = datamodel.LinearRequest(name)
         selected_edge_resources = numpy.random.exponential(self.average_request_edge_resources)
-
         # initialize source & sink:
         source_type = self._next_node_type()
         target_type = self._next_node_type()
@@ -793,6 +793,9 @@ class UniformRequestGenerator(AbstractRequestGenerator):
 _CactusSubTree = namedtuple("_CactusSubTree", "root nodes")
 
 
+
+
+
 class CactusRequestGenerator(AbstractRequestGenerator):
     """
     Generate request topologies with the cactus graph property.
@@ -844,6 +847,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         self._node_demand_by_type = None
         self._edge_demand = None
         self._generation_attemps = None
+        self._advanced_inspection_information = None
 
     def generate_request(self,
                          name,
@@ -852,12 +856,16 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         self._node_types = list(substrate.types)
         self._raw_parameters = raw_parameters
         self._substrate = substrate
+        print "LALLA"
         if self._scenario_parameters_have_changed:  # this operation may be quite expensive => only do it when the values are outdated
+            print "entering calculate average resource demands"
             self._calculate_average_resource_demands()
+        print "LALLALLALALLALALLALALLALA"
         req = None
         is_feasible = False
         self._generation_attemps = 0
         while not is_feasible:
+            print "not feasible"
             req = self._generate_request_graph(name)
             is_feasible = self.verify_substrate_has_sufficient_capacity(req, substrate)
             self._generation_attemps += 1
@@ -883,6 +891,10 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         while not has_correct_size:
             req = self._generate_tree(name)
             has_correct_size = self._raw_parameters["min_number_of_nodes"] <= len(req.nodes) <= self._raw_parameters["max_number_of_nodes"]
+            if self._advanced_inspection_information is not None:
+                self._advanced_inspection_information.generation_tries_overall += 1
+                if not has_correct_size:
+                    self._advanced_inspection_information.generation_tries_failed += 1
             self._generation_attemps += 1
             if self._generation_attemps > 10**7:
                 self._abort()
@@ -906,6 +918,8 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             while previous_layer:
                 parent_node = previous_layer.pop()
                 number_of_children = self._pick_number_of_children()
+                while layer <= 1 and number_of_children < 1:
+                    number_of_children = self._pick_number_of_children()
                 if number_of_children == 0 and self._raw_parameters["fix_leaf_mapping"]:
                     fixed_nodes.append(parent_node)
                 for i in xrange(1, number_of_children + 1):
@@ -940,6 +954,10 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         sub_trees = [_CactusSubTree(req.graph["root"], list(req.nodes))]
         cycles = 0
         forbidden_edges = set()
+        if len(req.nodes) <= 2:
+            print "premature abort"
+            return len(forbidden_edges)
+
         while sub_trees and (cycles < self._raw_parameters["max_cycles"]):
             cycles += 1
             # choose a subtree
@@ -966,6 +984,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
 
             # Update the list of subtrees
             sub_trees = CactusRequestGenerator._list_nontrivial_allowed_subtrees(req, forbidden_edges)
+        return len(forbidden_edges)
 
     @staticmethod
     def _path_to_root(req, u, root_node):
@@ -1071,7 +1090,6 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         for i in xrange(iterations):
             req = self._generate_tree("test")
             self._add_cactus_edges(req)
-            # print len(req.nodes)
             total_nodes += len(req.nodes)
             total_edges += len(req.edges)
         random.setstate(r_state)
@@ -1079,6 +1097,50 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         total_edges /= float(iterations)
         self.logger.info("Expecting {} nodes, {} edges".format(total_nodes, total_edges))
         return total_nodes, total_edges
+
+
+
+    class AdvancedInspectionResult(object):
+
+        def __init__(self):
+            self.generation_tries_overall = 0
+            self.generation_tries_failed = 0
+            self.nodes_generated = 0
+            self.edges_generated = 0
+            self.overall_cycle_edges = 0
+            self.node_edge_comination = []
+            self.generated_cycles = []
+
+    def advanced_empirical_number_of_nodes_edges(self, raw_parameters, substrate, iterations):
+        self._node_types = list(substrate.types)
+        self._raw_parameters = raw_parameters
+        self._substrate = substrate
+        self._node_demand_by_type = {nt: 0.0 for nt in self._node_types}
+        self._edge_demand = 0.0
+        self._advanced_inspection_information = self.AdvancedInspectionResult()
+
+        for i in xrange(iterations):
+
+            if i % 100000 == 0 and i > 0:
+                print("{} of {} iterations done.".format(i, iterations))
+
+
+            req = self._generate_tree_with_correct_size("test")
+            self._advanced_inspection_information.overall_cycle_edges += self._add_cactus_edges(req)
+
+            number_nodes = len(req.nodes)
+            number_edges = len(req.edges)
+            cycles = number_edges - number_nodes + 1
+            if cycles == 0:
+                print "NO CYCLES!"
+            self._advanced_inspection_information.generated_cycles.append(cycles)
+
+            self._advanced_inspection_information.node_edge_comination.append((number_nodes, number_edges))
+
+            self._advanced_inspection_information.nodes_generated += number_nodes
+            self._advanced_inspection_information.edges_generated += number_edges
+
+        return self._advanced_inspection_information
 
     def _abort(self):
         raise RequestGenerationError(

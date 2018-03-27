@@ -23,10 +23,11 @@
 
 import os
 import pickle
-
+import yaml
 import click
+import itertools
 
-from . import evaluation, run_experiment, scenariogeneration, solutions, util
+from . import evaluation, run_experiment, scenariogeneration, solutions, util, datamodel
 
 REQUIRED_FOR_PICKLE = solutions  # this prevents pycharm from removing this import, which is required for unpickling solutions
 
@@ -157,6 +158,147 @@ def f_start_experiment(experiment_yaml,
         min_scenario_index, max_scenario_index,
         concurrent
     )
+
+@cli.command()
+@click.argument('yaml_file_with_cacus_request_graph_definition', type=click.Path())
+def inspect_cactus_request_graph_generation(yaml_file_with_cacus_request_graph_definition):
+    util.ExperimentPathHandler.initialize()
+    print(yaml_file_with_cacus_request_graph_definition)
+    param_space = None
+    with open(yaml_file_with_cacus_request_graph_definition, "r") as f:
+        param_space = yaml.load(f)
+    print "----------------------"
+    print param_space
+    print "----------------------"
+    for request_generation_task in param_space[scenariogeneration.REQUEST_GENERATION_TASK]:
+        for name, values in request_generation_task.iteritems():
+            print name, values
+            if "CactusRequestGenerator" in values:
+                raw_parameters = values["CactusRequestGenerator"]
+                print "\n\nextracted the following parameters..."
+                print name, ": ", raw_parameters
+                f_inspect_specfic_cactus_request_graph_generation_and_output(name, raw_parameters)
+
+def f_inspect_specfic_cactus_request_graph_generation_and_output(name, raw_parameters):
+    simple_substrate = datamodel.Substrate("stupid_simple")
+    simple_substrate.add_node("u", ["universal"], capacity={"universal": 1000}, cost=1000)
+    simple_substrate.add_node("v", ["universal"], capacity={"universal": 1000}, cost=1000)
+    simple_substrate.add_edge("u", "v", capacity=1000, cost=1000, bidirected=True)
+
+    iterations = 500000
+    # flatten values
+    param_key_list = []
+    param_value_list = []
+    for key, value in raw_parameters.iteritems():
+        param_key_list.append(key)
+        param_value_list.append(value)
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    def ecdf(x):
+        xs = np.sort(x)
+        ys = np.arange(1, len(xs) + 1) / float(len(xs))
+        return xs, ys
+
+
+    for param_combo_index, param_combo in enumerate(itertools.product(*param_value_list)):
+        flattended_raw_parameters = {}
+        for index, value in enumerate(param_combo):
+            flattended_raw_parameters[param_key_list[index]] = value
+
+        print flattended_raw_parameters
+        cactus_generator = scenariogeneration.CactusRequestGenerator()
+
+        advanced_information = cactus_generator.advanced_empirical_number_of_nodes_edges(flattended_raw_parameters, simple_substrate,iterations)
+
+        min_nodes = flattended_raw_parameters["min_number_of_nodes"]
+        max_nodes = flattended_raw_parameters["max_number_of_nodes"]
+
+        edge_count_per_node = {node_number : [] for node_number in range(min_nodes, max_nodes+1)}
+
+        node_numbers = []
+        edge_numbers = []
+
+        max_edge_count = 0
+        for node, edge in advanced_information.node_edge_comination:
+            edge_count_per_node[node].append(edge)
+            if edge > max_edge_count:
+                max_edge_count = edge
+            node_numbers.append(node)
+            edge_numbers.append(edge)
+
+        fig = plt.figure(figsize=(8,12))
+        ax = plt.subplot(111)
+
+        for node_number in range(min_nodes, max_nodes+4):
+            if node_number == max_nodes + 1:
+                xs, ys = ecdf(node_numbers)
+                xs = np.insert(xs, 0, min_nodes, axis=0)
+                xs = np.insert(xs, 0, min_nodes - 1, axis=0)
+            elif node_number == max_nodes + 2:
+                xs, ys = ecdf(edge_numbers)
+                xs = np.insert(xs, 0, min_nodes, axis=0)
+                xs = np.insert(xs, 0, min_nodes-1, axis=0)
+            elif node_number == max_nodes + 3:
+                xs, ys = ecdf(advanced_information.generated_cycles)
+                xs = np.insert(xs, 0, 1, axis=0)
+                xs = np.insert(xs, 0, 0, axis=0)
+            else:
+                if len(edge_count_per_node[node_number]) == 0:
+                    continue
+                xs, ys = ecdf(edge_count_per_node[node_number])
+                xs = np.insert(xs, 0, min(edge_count_per_node[node_number]), axis=0)
+                xs = np.insert(xs, 0, min(edge_count_per_node[node_number]) - 1, axis=0)
+
+            xs = np.append(xs, max_edge_count+1)
+            ys = np.insert(ys, 0, 0, axis=0)
+            ys = np.insert(ys, 0, 0, axis=0)
+            ys = np.append(ys, 1.0)
+            #print node_number, xs, ys
+            #print xs, ys
+            print "plot ....", node_number
+            label = "edge_count_per_node_count_{}".format(node_number)
+            if node_number == max_nodes + 1:
+                label = "node_count"
+            if node_number == max_nodes + 2:
+                label = "edge_count"
+                print xs[0:10], ys[0:10]
+            if node_number == max_nodes + 3:
+                label = "cycle_count"
+            if node_number <= max_nodes:
+                ax.step(xs, ys, label=label, linestyle="-.")
+            else:
+                ax.step(xs, ys, label=label, linestyle="-")
+
+        title = "\n".join(["{}: {}".format(key, value) for key, value in flattended_raw_parameters.iteritems()])
+        title += "\n\nExp. |V|: {}; Exp. |E|: {}; Exp. |C|: {}; Exp. CC: {}\n\n".format(
+            advanced_information.nodes_generated / float(iterations),
+            advanced_information.edges_generated / float(iterations),
+            sum(advanced_information.generated_cycles) / float(iterations),
+            advanced_information.overall_cycle_edges / float(advanced_information.edges_generated))
+        title += "failed generation attempts: {}%\n".format(advanced_information.generation_tries_failed/float(advanced_information.generation_tries_overall)*100.0)
+        title += "overall iterations: {}".format(iterations)
+
+        ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
+                  fancybox=True, shadow=True, ncol=2)
+        plt.title(title)
+        plt.xticks(range(0,max_edge_count+1))
+        plt.tight_layout()
+        #plt.show()
+        filename= util.ExperimentPathHandler.OUTPUT_DIR + "/{}_{}.pdf".format(name, param_combo_index)
+        print filename
+        plt.savefig(filename, dpi=300)
+
+
+        # overall_cycle_edges /= float(total_edges)
+        # total_nodes /= float(iterations)
+        # total_edges /= float(iterations)
+        #
+        # print("Expecting {} nodes, {} edges, {}% edges on cycle".format(total_nodes, total_edges,
+        #                                                                 overall_cycle_edges * 100))
+
+        #print edge_count_per_node
 
 
 if __name__ == '__main__':

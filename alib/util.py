@@ -106,9 +106,16 @@ class ExperimentPathHandler(object):
         ExperimentPathHandler.ALIB_DIR = ExperimentPathHandler._get_alib_dir()
         ExperimentPathHandler.EXPERIMENT_DIR = ExperimentPathHandler._get_experiment_dir()
 
-        ExperimentPathHandler.LOG_DIR = os.path.join(ExperimentPathHandler.EXPERIMENT_DIR, "log")
+        print ExperimentPathHandler.EXPERIMENT_DIR
+
+        ExperimentPathHandler.LOG_DIR = os.path.join(ExperimentPathHandler.EXPERIMENT_DIR , "log")
+
+        print ExperimentPathHandler.LOG_DIR
+
         ExperimentPathHandler.INPUT_DIR = os.path.join(ExperimentPathHandler.EXPERIMENT_DIR, "input")
+        print ExperimentPathHandler.INPUT_DIR
         ExperimentPathHandler.OUTPUT_DIR = os.path.join(ExperimentPathHandler.EXPERIMENT_DIR, "output")
+        print ExperimentPathHandler.OUTPUT_DIR
         ExperimentPathHandler.CODE_DIR = os.path.join(ExperimentPathHandler.EXPERIMENT_DIR, "sca")
 
         _experiment_paths = {ExperimentPathHandler.LOG_DIR,
@@ -180,20 +187,25 @@ class ExperimentPathHandler(object):
 
     @staticmethod
     def _get_experiment_dir():
-        parent, child = os.path.split(ExperimentPathHandler.CURRENT_FILE_DIR)
-        iterations = 0
-        while parent != ExperimentPathHandler.ALIB_DIR and iterations < 100:
-            parent, child = os.path.split(parent)
-            iterations += 1
-        if iterations >= 100:
-            raise AlibPathError("Exceeded iterations")
-        exp_dir = os.path.abspath(os.path.join(parent, child))
+        if os.getenv("ALIB_EXPERIMENT_HOME") is not None:
+            log.info("Setting experiment according to ALIB_EXPERIMENT_HOME")
+            exp_dir = os.getenv("ALIB_EXPERIMENT_HOME")
+            return os.path.abspath(exp_dir)
+        else:
+            parent, child = os.path.split(ExperimentPathHandler.CURRENT_FILE_DIR)
+            iterations = 0
+            while parent != ExperimentPathHandler.ALIB_DIR and iterations < 100:
+                parent, child = os.path.split(parent)
+                iterations += 1
+            if iterations >= 100:
+                raise AlibPathError("Exceeded iterations")
+            exp_dir = os.path.abspath(os.path.join(parent, child))
 
-        log.info("Experiment root dir: {}".format(exp_dir))
+            log.info("Experiment root dir: {}".format(exp_dir))
 
-        if not os.path.isdir(exp_dir):
-            raise AlibPathError("Invalid experiment path: {}".format(exp_dir))
-        return os.path.abspath(exp_dir)
+            if not os.path.isdir(exp_dir):
+                raise AlibPathError("Invalid experiment path: {}".format(exp_dir))
+            return os.path.abspath(exp_dir)
 
 
 class CodebaseDeployer(object):
