@@ -27,6 +27,7 @@ request_generation:
             min_number_of_nodes: [3]
             max_number_of_nodes: [10]
             probability: [0.5]
+            arbitrary_edge_orientations: [False]
             node_resource_factor: [1.25]
             edge_resource_factor: [1.0]
             max_cycles: [10]

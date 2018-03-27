@@ -1106,7 +1106,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         r_state = random.getstate()
         iterations = self._raw_parameters["iterations"]
         for i in xrange(iterations):
-            req = self._generate_tree("test")
+            req = self._generate_tree_with_correct_size("test")
             self._add_cactus_edges(req)
             total_nodes += len(req.nodes)
             total_edges += len(req.edges)

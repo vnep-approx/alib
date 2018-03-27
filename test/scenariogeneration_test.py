@@ -87,7 +87,7 @@ class TestChainRequestGenerator:
 
             # check the number of allowed nodes:
             if (req_node == scenariogeneration.ServiceChainGenerator.SOURCE_NODE
-                or req_node == scenariogeneration.ServiceChainGenerator.TARGET_NODE):
+                    or req_node == scenariogeneration.ServiceChainGenerator.TARGET_NODE):
                 assert number_of_allowed_nodes == 1, "Source and target should be fixed to a specific node"
 
             # check that each allowed node really allows the node type:
@@ -222,13 +222,14 @@ class TestCactusGenerator:
             "min_number_of_nodes": 3,
             "max_number_of_nodes": 3,
             "number_of_requests": 1,
-            "iterations": 10,
+            "iterations": 3,
             "max_cycles": 999,
             "layers": 4,
             "fix_root_mapping": True,
             "fix_leaf_mapping": True,
             "branching_distribution": (0.2, 0.4, 0.0, 0.0, 0.4),
             "probability": 1.0,
+            "arbitrary_edge_orientations": False,
             "node_resource_factor": 0.05,
             "edge_resource_factor": 20.0,
             "potential_nodes_factor": 1.0
@@ -239,6 +240,7 @@ class TestCactusGenerator:
         self.req_gen.generate_request_list(self.base_parameters, self.substrate)
         # Assert that the expected number of request nodes is equal to the fixed value
         # imposed by our choice of min_/max_number_of_nodes
+        # print r_list
         assert self.req_gen._expected_number_of_request_nodes_per_type == pytest.approx(3)
 
 
@@ -372,6 +374,7 @@ class TestRequestGeneration:
             "fix_leaf_mapping": True,
             "branching_distribution": (0.0, 0.8, 0.1, 0.1),
             "probability": 1.0,
+            "arbitrary_edge_orientations": False,
         }.items())
         self.params[self.exp] = dict(base.items() + {
             "probability": 1.0
@@ -493,6 +496,7 @@ class TestNodePlacementRestriction:
             "iterations": 10,
             "max_cycles": 20,
             "layers": 4,
+            "arbitrary_edge_orientations": False,
             "fix_root_mapping": True,
             "fix_leaf_mapping": True,
             "branching_distribution": (0.0, 0.5, 0.3, 0.15, 0.05)
@@ -653,6 +657,9 @@ class TestRandomEmbeddingProfitCalculator:
         real_scenario = datamodel.Scenario("test", substrate, requests)
         self.profit_calculator.generate_and_apply_profits(real_scenario, raw_parameters)
         total_profits = sum(req.profit for req in real_scenario.requests)
+        for req in requests:
+            assert "profit_calculation_time" in req.graph
+            assert req.graph["profit_calculation_time"] > 0
         assert total_profits > 0.1, "Profit should be non-zero"
 
 
@@ -685,6 +692,9 @@ class TestOptimalEmbeddingProfitCalculator:
     def test_profit_for_real_scenario_should_be_nonzero(self):
         self.pc.generate_and_apply_profits(self.scenario, self.parameters)
         total_profit = sum(r.profit for r in self.scenario.requests)
+        for req in self.scenario.requests:
+            assert "profit_calculation_time" in req.graph
+            assert req.graph["profit_calculation_time"] > 0
         assert total_profit > 0.0001, "Should generate non-zero profit"  # this should work once the min-cost objective is implemented in the ModelCreator
 
     def test_profit_for_artificial_scenario_should_be_correct(self):
@@ -777,7 +787,6 @@ class TestTopologyZooReader:
             assert cap == parameters["node_capacity"], "Node capacity {} did not match expected {}!".format(cap, parameters["node_capacity"])
             ##THIS TEST DOESNT WORK AS THE MEANING OF NODE_COST has changed (now a factor)..
 
-
             # cost = sub.get_node_type_cost(node, scenariogeneration.UNIVERSAL_NODE_TYPE)
             # self.assertEqual(cost, parameters["node_cost_factor"], "Node cost {} did not match expected {}!".format(cost, parameters["node_cost_factor"]))
 
@@ -786,6 +795,7 @@ class TestTopologyZooReader:
         for edge in sub.edges:
             cap = sub.get_edge_capacity(edge)
             assert cap == parameters["edge_capacity"], "Edge capacity {} did not match expected {}!".format(cap, parameters["edge_capacity"])
+
 
 class TestSubstrateTransformation:
     def setup(self):
