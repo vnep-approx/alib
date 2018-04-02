@@ -227,6 +227,7 @@ Param_NodefileStart = "NodefileStart"
 Param_NodeMethod = "NodeMethod"
 Param_Method = "Method"
 Param_BarConvTol = "BarConvTol"
+Param_NumericFocus = "NumericFocus"
 
 
 def isFeasibleStatus(status):
@@ -334,8 +335,9 @@ class GurobiSettings(object):
                  OptimalityTol=None,
                  Presolve=None,
                  NodefileStart=None,
-                 Method=None,
-                 NodeMethod=None):
+                 method=None,
+                 nodemethod=None,
+                 numericfocus=None):
         util.check_positive(mipGap)
         self.MIPGap = mipGap
 
@@ -370,26 +372,37 @@ class GurobiSettings(object):
         util.check_positive(NodefileStart)
         self.NodefileStart = NodefileStart
 
-        self.Method = Method
-        self.NodeMethod = NodeMethod
+        self.Method = method
+        self.NodeMethod = nodemethod
+
+        util.check_within_range(numericfocus, 0, 3)
+        util.check_int(numericfocus)
+        self.NumericFocus = numericfocus
 
     def setTimeLimit(self, newTimeLimit):
         util.check_positive(newTimeLimit)
         self.TimeLimit = newTimeLimit
 
     def __str__(self):
-        return "MIPGap: {0}; IterationLimit: {1}; NodeLimit: {2}; Heuristics: {3}; Threads: {4}; Timelimit: {5}".format(self.MIPGap,
-                                                                                                                        self.IterationLimit,
-                                                                                                                        self.NodeLimit,
-                                                                                                                        self.Heuristics,
-                                                                                                                        self.Threads,
-                                                                                                                        self.TimeLimit)
+        return "MIPGap: {0}; " \
+               "IterationLimit: {1}; " \
+               "NodeLimit: {2}; " \
+               "Heuristics: {3}; " \
+               "Threads: {4}; " \
+               "Timelimit: {5}; " \
+               "NumericFocus: {6}".format(self.MIPGap,
+                                          self.IterationLimit,
+                                          self.NodeLimit,
+                                          self.Heuristics,
+                                          self.Threads,
+                                          self.TimeLimit,
+                                          self.NumericFocus)
 
 
 class AbstractModelCreator(object):
     _listOfUserVariableParameters = [Param_MIPGap, Param_IterationLimit, Param_NodeLimit, Param_Heuristics,
                                      Param_Threads, Param_TimeLimit, Param_Cuts, Param_MIPFocus, Param_RootCutPasses,
-                                     Param_NodefileStart, Param_Method, Param_NodeMethod, Param_BarConvTol]
+                                     Param_NodefileStart, Param_Method, Param_NodeMethod, Param_BarConvTol, Param_NumericFocus]
 
     def __init__(self,
                  gurobi_settings=None,
@@ -674,6 +687,11 @@ class AbstractModelCreator(object):
             self.set_gurobi_parameter(Param_BarConvTol, gurobiSettings.BarConvTol)
         else:
             self.reset_gurobi_parameter(Param_BarConvTol)
+
+        if gurobiSettings.NumericFocus is not None:
+            self.set_gurobi_parameter(Param_NumericFocus, gurobiSettings.NumericFocus)
+        else:
+            self.reset_gurobi_parameter(Param_NumericFocus)
 
     def reset_all_parameters_to_default(self):
         for param in self._listOfUserVariableParameters:
