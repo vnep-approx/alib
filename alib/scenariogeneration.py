@@ -136,14 +136,14 @@ def verify_completeness_of_scenario_parameters(scenario_parameter_space):
         raise ExperimentSpecificationError("Error(s):\n  - " + "\n  - ".join(errors))
 
 
-def generate_pickle_from_yml(parameter_file, scenario_out_pickle, threads=1):
+def generate_pickle_from_yml(parameter_file, scenario_out_pickle, threads=1, scenario_index_offset=0):
     param_space = yaml.load(parameter_file)
     sg = ScenarioGenerator(threads)
     repetition = 1
     if 'scenario_repetition' in param_space:
         repetition = param_space['scenario_repetition']
         del param_space['scenario_repetition']
-    sg.generate_scenarios(param_space, repetition)
+    sg.generate_scenarios(param_space, repetition, scenario_index_offset=scenario_index_offset)
     container = sg.scenario_parameter_container
     out = os.path.abspath(os.path.join(util.ExperimentPathHandler.OUTPUT_DIR,
                                        scenario_out_pickle))
@@ -152,8 +152,9 @@ def generate_pickle_from_yml(parameter_file, scenario_out_pickle, threads=1):
 
 
 class ScenarioParameterContainer(object):
-    def __init__(self, scenario_parameter_room):
+    def __init__(self, scenario_parameter_room, scenario_index_offset=0):
         self.scenarioparameter_room = scenario_parameter_room
+        self.scenario_index_offset = scenario_index_offset
         self.scenario_list = []
         self.scenario_parameter_combination_list = []
         self.scenario_parameter_dict = {}
@@ -250,51 +251,33 @@ class ScenarioParameterContainer(object):
             if isinstance(value_list[0], list):
                 raw_parameter[key] = [tuple(x) for x in value_list]
 
+    def merge_with_other_scenario_parameter_container(self, other):
+        """
+        self.scenarioparameter_room =
+        self.scenario_list = []
+        self.scenario_parameter_combination_list = []
+        self.scenario_parameter_dict = {}
+        self.scenario_triple = {}
+        """
+        overlap = set(self.scenario_triple.keys()).intersection(other.scenario_triple.keys())
+        if overlap:
+            msg = "Cannot merge scenario parameter containers due to overlapping scenario IDs {}".format(
+                overlap
+            )
+            raise ScenarioGeneratorError(msg)
+        self.scenario_list += other.scenario_list
+        self.scenario_parameter_combination_list += other.scenario_parameter_combination_list
+        self.scenario_triple.update(other.scenario_triple)
 
-class ScenarioGenerator(object):
-    def __init__(self, threads=1):
-        self.scenario_parameter_container = None
-        self.threads = threads
-        self.repetition = 1
-
-    def generate_scenarios(self, scenario_parameter_space, repetition=1):
-        self.repetition = repetition
-        global_logger.info("Generating scenarios...")
-        self.scenario_parameter_container = ScenarioParameterContainer(scenario_parameter_space)
-        self.scenario_parameter_container.generate_all_scenario_parameter_combinations(repetition)
-        scenario_parameter_combination_list = self.scenario_parameter_container.scenario_parameter_combination_list
-        self.init_reverselookup_dict()
-        if self.threads > 1:
-            self._multiprocessed(scenario_parameter_combination_list)
-        else:
-            self._singleprocessed(scenario_parameter_combination_list)
-
-        return self.scenario_parameter_container.scenario_triple
-
-    def _singleprocessed(self, scenario_parameter_combination_list):
-        for i, sp in enumerate(scenario_parameter_combination_list):
-            index_un, scenario, sp_un = build_scenario((i, sp))
+        for i, (sp, scenario) in other.scenario_triple.items():
             self.fill_reverselookup_dict(sp, i)
-            self.scenario_parameter_container.scenario_list.append(scenario)
-            self.scenario_parameter_container.scenario_triple[i] = (sp, scenario)
-
-    def _multiprocessed(self, scenario_parameter_combination_list):
-        proc_pool = mp.Pool(processes=self.threads, maxtasksperchild=100)
-        out = proc_pool.map(build_scenario, list(enumerate(scenario_parameter_combination_list)))
-        proc_pool.close()
-        proc_pool.join()
-        for i, scenario, sp in out:
-            self.fill_reverselookup_dict(sp, i)
-            self.scenario_parameter_container.scenario_list.append(scenario)
-            self.scenario_parameter_container.scenario_triple[i] = (sp, scenario)
 
     def init_reverselookup_dict(self):
-        spd = self.scenario_parameter_container.scenario_parameter_dict
         for task in SCENARIO_GENERATION_TASKS:
-            spd.setdefault(task, dict())
+            self.scenario_parameter_dict.setdefault(task, dict())
 
     def fill_reverselookup_dict(self, sp, currentindex):
-        spd = self.scenario_parameter_container.scenario_parameter_dict
+        spd = self.scenario_parameter_dict
         for task in SCENARIO_GENERATION_TASKS:
             if task not in sp:
                 continue
@@ -311,6 +294,41 @@ class ScenarioGenerator(object):
                         spd[task][strat][class_name].setdefault(key, dict())
                         spd[task][strat][class_name][key].setdefault(val, set())
                         spd[task][strat][class_name][key][val].add(currentindex)
+
+
+class ScenarioGenerator(object):
+    def __init__(self, threads=1):
+        self.scenario_parameter_container = None
+        self.threads = threads
+        self.repetition = 1
+
+    def generate_scenarios(self, scenario_parameter_space, repetition=1, scenario_index_offset=0):
+        self.repetition = repetition
+        global_logger.info("Generating scenarios...")
+        self.scenario_parameter_container = ScenarioParameterContainer(scenario_parameter_space, scenario_index_offset=scenario_index_offset)
+        self.scenario_parameter_container.generate_all_scenario_parameter_combinations(repetition)
+        scenario_parameter_combination_list = self.scenario_parameter_container.scenario_parameter_combination_list
+        self.scenario_parameter_container.init_reverselookup_dict()
+        if self.threads > 1:
+            iterator = self._multiprocessed(scenario_parameter_combination_list, scenario_index_offset=scenario_index_offset)
+        else:
+            iterator = self._singleprocessed(scenario_parameter_combination_list, scenario_index_offset=scenario_index_offset)
+        for i, scenario, sp in iterator:
+            self.scenario_parameter_container.fill_reverselookup_dict(sp, i)
+            self.scenario_parameter_container.scenario_list.append(scenario)
+            self.scenario_parameter_container.scenario_triple[i] = (sp, scenario)
+        return self.scenario_parameter_container.scenario_triple
+
+    def _singleprocessed(self, scenario_parameter_combination_list, scenario_index_offset=0):
+        for i, sp in enumerate(scenario_parameter_combination_list, scenario_index_offset):
+            yield build_scenario((i, sp))
+
+    def _multiprocessed(self, scenario_parameter_combination_list, scenario_index_offset=0):
+        proc_pool = mp.Pool(processes=self.threads, maxtasksperchild=100)
+        for out in proc_pool.map(build_scenario, list(enumerate(scenario_parameter_combination_list, scenario_index_offset))):
+            yield out
+        proc_pool.close()
+        proc_pool.join()
 
 
 def build_scenario(i_sp_tup, maxrep=1):
@@ -794,9 +812,6 @@ class UniformRequestGenerator(AbstractRequestGenerator):
 _CactusSubTree = namedtuple("_CactusSubTree", "root nodes")
 
 
-
-
-
 class CactusRequestGenerator(AbstractRequestGenerator):
     """
     Generate request topologies with the cactus graph property.
@@ -883,14 +898,14 @@ class CactusRequestGenerator(AbstractRequestGenerator):
                                         req.node[node]['demand'],
                                         req.node[node]['type'],
                                         req.node[node]['allowed_nodes'])
-            for (u,v) in req.edges:
+            for (u, v) in req.edges:
                 u_prime, v_prime = u, v
                 if random.random() < 0.5:
                     u_prime, v_prime = v, u
 
                 reoriented_req.add_edge(u_prime, v_prime,
-                                        req.edge[(u,v)]['demand'],
-                                        req.edge[(u,v)]['allowed_edges'])
+                                        req.edge[(u, v)]['demand'],
+                                        req.edge[(u, v)]['allowed_edges'])
             return reoriented_req
         return req
 
@@ -982,7 +997,6 @@ class CactusRequestGenerator(AbstractRequestGenerator):
                 j = random.choice(subtree.nodes)
             if req.node[i]["layer"] > req.node[j]["layer"]:
                 i, j = j, i  # make edges always point down the tree
-
 
             edge_was_added = False
             # decide to add new edge or not
@@ -1116,8 +1130,6 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         self.logger.info("Expecting {} nodes, {} edges".format(total_nodes, total_edges))
         return total_nodes, total_edges
 
-
-
     class AdvancedInspectionResult(object):
 
         def __init__(self):
@@ -1138,7 +1150,6 @@ class CactusRequestGenerator(AbstractRequestGenerator):
 
             if i % 100000 == 0 and i > 0:
                 print("{} of {} iterations done.".format(i, iterations))
-
 
             req = self.generate_request(name="test",
                                         raw_parameters=raw_parameters,

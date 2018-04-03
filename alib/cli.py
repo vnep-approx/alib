@@ -79,11 +79,12 @@ def f_deploy_code(codebase_id, remote_base_dir, local_base_dir, servers, extra):
 @click.argument('scenario_output_file')
 @click.argument('parameters', type=click.File('r'))
 @click.option('--threads', default=1)
-def generate_scenarios(scenario_output_file, parameters, threads):
-    f_generate_scenarios(scenario_output_file, parameters, threads)
+@click.option('--scenario_index_offset', default=0)
+def generate_scenarios(scenario_output_file, parameters, threads, scenario_index_offset):
+    f_generate_scenarios(scenario_output_file, parameters, threads, scenario_index_offset)
 
 
-def f_generate_scenarios(scenario_output_file, parameter_file, threads):
+def f_generate_scenarios(scenario_output_file, parameter_file, threads, scenario_index_offset=0):
     """
     Generates the scenarios according to the scenario parameters found in the parameter_file.
 
@@ -93,6 +94,7 @@ def f_generate_scenarios(scenario_output_file, parameter_file, threads):
     :param scenario_output_file: path to pickle file to which the resulting scenarios will be written
     :param parameter_file: readable file object containing the scenario parameters in yml format
     :param threads: number of concurrent threads used for scenario generation
+    :param scenario_index_offset: offset that is added to every scenario ID. Useful when extending existing scenario sets.
     :return:
     """
     click.echo('Generate Scenarios')
@@ -100,7 +102,7 @@ def f_generate_scenarios(scenario_output_file, parameter_file, threads):
     file_basename = os.path.basename(parameter_file.name).split(".")[0].lower()
     log_file = os.path.join(util.ExperimentPathHandler.LOG_DIR, "{}_scenario_generation.log".format(file_basename))
     util.initialize_root_logger(log_file)
-    scenariogeneration.generate_pickle_from_yml(parameter_file, scenario_output_file, threads)
+    scenariogeneration.generate_pickle_from_yml(parameter_file, scenario_output_file, threads, scenario_index_offset=scenario_index_offset)
 
 
 @cli.command()

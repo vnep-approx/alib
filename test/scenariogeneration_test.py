@@ -266,16 +266,110 @@ class TestScenarioGenerator:
             param_space = yaml.load(f)
         x = self.sg.generate_scenarios(param_space, repetition=3)
         assert len(self.sg.scenario_parameter_container.scenario_parameter_combination_list) == 48
+        assert len(self.sg.scenario_parameter_container.scenario_triple) == 48
 
-    def test_pretty_printer(self):
-        with open(os.path.join(TEST_BASE_DIR, "yaml/one_of_each.yml"), "r") as f:
+    def test_scenario_id_offset(self):
+        with open(os.path.join(TEST_BASE_DIR, "yaml/tinytiny.yml"), "r") as f:
             param_space = yaml.load(f)
-        x = self.sg.generate_scenarios(param_space, repetition=3)
-        with open(os.path.join(TEST_BASE_DIR, "test.pickle"), "r") as f:
-            data = pickle.load(f)
-        pp = util.PrettyPrinter(max_depth=3)
-        output_print = pp.pprint(data)
-        assert len(output_print) == 3567
+        scenario_index_offset = 1337
+        x = self.sg.generate_scenarios(param_space, repetition=3, scenario_index_offset=scenario_index_offset)
+        num_scenarios = len(self.sg.scenario_parameter_container.scenario_parameter_combination_list)
+        expected = set(range(scenario_index_offset, num_scenarios + scenario_index_offset))
+        obtained = set(self.sg.scenario_parameter_container.scenario_triple.keys())
+        assert obtained == expected
+
+        scenario_ids_in_reverse_lookup = set()
+        spd = self.sg.scenario_parameter_container.scenario_parameter_dict
+        for task, strat_class_key_val_dict in spd.items():
+            for strat, class_key_val_dict in strat_class_key_val_dict.items():
+                all_set = set()
+                for class_name, key_val_dict in class_key_val_dict.items():
+                    if class_name == "all":
+                        continue
+                    for key, val_dict in key_val_dict.items():
+                        for val, id_set in val_dict.items():
+                            all_set |= id_set
+                            scenario_ids_in_reverse_lookup |= id_set
+                assert all_set == spd[task][strat]["all"]
+                assert len(all_set) != 0
+        assert scenario_ids_in_reverse_lookup == expected
+
+    def test_merge_scenario_parameter_container(self):
+        with open(os.path.join(TEST_BASE_DIR, "yaml/tinytiny.yml"), "r") as f:
+            param_space = yaml.load(f)
+        with open(os.path.join(TEST_BASE_DIR, "yaml/one_of_each.yml"), "r") as f:
+            param_space_2 = yaml.load(f)
+        self.sg.generate_scenarios(param_space, repetition=3, scenario_index_offset=0)
+        spc_base = self.sg.scenario_parameter_container
+        offset = len(spc_base.scenario_list)
+        self.sg2.generate_scenarios(param_space_2, repetition=2, scenario_index_offset=offset)
+        spc_other = self.sg2.scenario_parameter_container
+
+        spc_base_pre_merge = copy.deepcopy(spc_base)
+        spc_other_pre_merge = copy.deepcopy(spc_other)
+
+        def comparable_scenarios(scenario_list):
+            result = []
+            for s in scenario_list:
+                reqs = [(r.name, r.nodes, r.edges) for r in s.requests]
+                result.append((s.name, s.substrate.name, reqs, s.objective))
+            return result
+
+        spc_base.merge_with_other_scenario_parameter_container(spc_other)
+        obtained = comparable_scenarios(spc_base.scenario_list)
+        expected = comparable_scenarios(spc_base_pre_merge.scenario_list + spc_other_pre_merge.scenario_list)
+        assert len(expected) == len(obtained)
+        assert expected == obtained
+
+        expected_ids = set(range(0, len(spc_base_pre_merge.scenario_list) + len(spc_other_pre_merge.scenario_list)))
+        obtained_ids = set(spc_base.scenario_triple.keys())
+        assert expected_ids == obtained_ids
+
+        spd_base = copy.deepcopy(spc_base_pre_merge.scenario_parameter_dict)
+        spd_other = copy.deepcopy(spc_other_pre_merge.scenario_parameter_dict)
+        spd_merged = spc_base.scenario_parameter_dict
+        for task, strat_class_key_val_dict in spd_merged.items():
+            assert (task in spd_base) or (task in spd_other)
+            base_strat_class_key_val_dict = spd_base.get(task, {})
+            other_strat_class_key_val_dict = spd_other.get(task, {})
+            for strat, class_key_val_dict in strat_class_key_val_dict.items():
+                assert (strat in base_strat_class_key_val_dict) or (strat in other_strat_class_key_val_dict)
+                base_class_key_val_dict = base_strat_class_key_val_dict.get(strat, {})
+                other_class_key_val_dict = other_strat_class_key_val_dict.get(strat, {})
+                assert spd_merged[task][strat]["all"] == base_class_key_val_dict.get("all", set()) | other_class_key_val_dict.get("all", set())
+                for class_name, key_val_dict in class_key_val_dict.items():
+                    if class_name == "all":
+                        continue
+                    assert (class_name in base_class_key_val_dict) or (class_name in other_class_key_val_dict)
+                    base_key_val_dict = base_strat_class_key_val_dict.get(class_name, {})
+                    other_key_val_dict = other_strat_class_key_val_dict.get(class_name, {})
+                    for key, val_dict in key_val_dict.items():
+                        base_val_dict = base_class_key_val_dict.get(class_name, {}).get(key, {})
+                        other_val_dict = other_class_key_val_dict.get(class_name, {}).get(key, {})
+                        for val, id_set in val_dict.items():
+                            assert id_set == base_val_dict.get(val, set()) | other_val_dict.get(val, set())
+                            base_val_dict.pop(val, None)
+                            other_val_dict.pop(val, None)
+                        assert not base_val_dict
+                        assert not other_val_dict
+                        base_key_val_dict.pop(key, None)
+                        other_key_val_dict.pop(key, None)
+                    assert not base_key_val_dict
+                    assert not other_key_val_dict
+                    base_class_key_val_dict.pop(class_name, None)
+                    other_class_key_val_dict.pop(class_name, None)
+                    base_class_key_val_dict.pop("all", None)
+                    other_class_key_val_dict.pop("all", None)
+                base_strat_class_key_val_dict.pop(strat, None)
+                other_strat_class_key_val_dict.pop(strat, None)
+            assert not base_strat_class_key_val_dict
+            assert not other_strat_class_key_val_dict
+
+        # Check that "other" is not modified
+        assert comparable_scenarios(spc_other_pre_merge.scenario_list) == comparable_scenarios(spc_other.scenario_list)
+        assert spc_other_pre_merge.scenario_parameter_combination_list == spc_other.scenario_parameter_combination_list
+        assert spc_other_pre_merge.scenario_parameter_dict == spc_other.scenario_parameter_dict
+        assert spc_other_pre_merge.scenario_triple.keys() == spc_other.scenario_triple.keys()
 
     def test_tiny_yaml_file_produces_correct_scenario_para_container_dict(self):
         with open(os.path.join(TEST_BASE_DIR, "yaml/tinytiny.yml"), "r") as f:
