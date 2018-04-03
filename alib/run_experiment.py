@@ -243,7 +243,8 @@ class ExperimentExecution(object):
             with open("intermediate_result_{}_{}.pickle".format(scenario_id,alg_id), "wb") as f:
                 pickle.dump((scenario_id,execution_id,alg_result), f)
             if alg_result is not None:
-                original_scenario = self.scenario_container.scenario_list[scenario_id]
+                # original_scenario = self.scenario_container.scenario_list[scenario_id]
+                sp, original_scenario = self.scenario_container.scenario_triple[scenario_id]
                 alg_result.cleanup_references(original_scenario)
             self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
         except Exception as e:

@@ -32,7 +32,7 @@ def reduce_solution(solution_pickle):
     for algorithm in ssd.keys():
         for scenario_id in ssd[algorithm].keys():
             for exec_id in ssd[algorithm][scenario_id].keys():
-                scenario = solution.scenario_parameter_container.scenario_list[scenario_id]
+                params, scenario = solution.scenario_parameter_container.scenario_triple[scenario_id]
                 load = dict([((u, v), 0.0) for (u, v) in scenario.substrate.edges])
                 for u in scenario.substrate.nodes:
                     for types in scenario.substrate.node[u]['supported_types']:
