@@ -56,16 +56,9 @@ class ExperimentPathHandler(object):
 
             Otherwise the code traverses up through the file system
             starting at this file's location (paths.py) until it
-            finds a path containing the subfolders "input", "output", "log"
-            and "sca", indicating that this is the root folder of the experiment.
+            finds a path containing the subfolders "input", "output", "log",
+            indicating that this is the root folder of the experiment.
             ALIB_DIR is then set to the parent of this directory.
-
-            Finally, if no matching alib folder can be found, the default is
-            to use the relative path "../../..".
-
-        EXPERIMENT_DIR:
-            This is the directory containing the "input", "output", "log" and "sca"
-            folders for the current experiment. It is found by
 
         INPUT_DIR:
             This is the path containing any configuration files, scenario pickle files
@@ -79,49 +72,32 @@ class ExperimentPathHandler(object):
             This is the path where the results of this execution should be stored
             results.
 
-        CODE_DIR:
-            This is the path containing the deployed codebase. This path is added to
-            the system path variable to enable importing modules from the entire codebase.
-
     LOG_DIR and OUTPUT_DIR are required to be empty to avoid accidental overwriting of previous
     results.
     """
 
-    CURRENT_FILE_DIR = os.path.realpath(__file__)
     ALIB_DIR = None
-
-    EXPERIMENT_DIR = None
 
     LOG_DIR = "./log"
     INPUT_DIR = None
     OUTPUT_DIR = None
-    CODE_DIR = None
 
     def __init__(self):
         raise Exception("Run ExperimentPathHandler.initialize() and then access ExperimentPathHandler.LOG_DIR etc.")
 
     @staticmethod
-    def initialize():
+    def initialize(check_emptiness_output=True, check_emptiness_log=True):
         log.info("Initializing Paths...")
         ExperimentPathHandler.ALIB_DIR = ExperimentPathHandler._get_alib_dir()
         ExperimentPathHandler.EXPERIMENT_DIR = ExperimentPathHandler._get_experiment_dir()
 
-        print ExperimentPathHandler.EXPERIMENT_DIR
-
         ExperimentPathHandler.LOG_DIR = os.path.join(ExperimentPathHandler.EXPERIMENT_DIR , "log")
-
-        print ExperimentPathHandler.LOG_DIR
-
         ExperimentPathHandler.INPUT_DIR = os.path.join(ExperimentPathHandler.EXPERIMENT_DIR, "input")
-        print ExperimentPathHandler.INPUT_DIR
         ExperimentPathHandler.OUTPUT_DIR = os.path.join(ExperimentPathHandler.EXPERIMENT_DIR, "output")
-        print ExperimentPathHandler.OUTPUT_DIR
-        ExperimentPathHandler.CODE_DIR = os.path.join(ExperimentPathHandler.EXPERIMENT_DIR, "sca")
 
         _experiment_paths = {ExperimentPathHandler.LOG_DIR,
                              ExperimentPathHandler.INPUT_DIR,
-                             ExperimentPathHandler.OUTPUT_DIR,
-                             ExperimentPathHandler.CODE_DIR}
+                             ExperimentPathHandler.OUTPUT_DIR}
 
         # Check that all experiment paths exist:
         if not all(os.path.exists(p) for p in _experiment_paths):
@@ -136,16 +112,14 @@ class ExperimentPathHandler(object):
             ))
 
         # Check that output & log folders are empty, to avoid overwriting previous results:
-        if not ExperimentPathHandler._is_empty(ExperimentPathHandler.OUTPUT_DIR):
+        if check_emptiness_output and not ExperimentPathHandler._is_empty(ExperimentPathHandler.OUTPUT_DIR):
             raise AlibPathError("Experiment output path is not empty: {}".format(
                 ExperimentPathHandler.OUTPUT_DIR
             ))
-
-        if ExperimentPathHandler.CODE_DIR not in sys.path:
-            log.info("Adding alib code directory to system path variable: {}".format(
-                ExperimentPathHandler.CODE_DIR)
-            )
-            sys.path.append(ExperimentPathHandler.CODE_DIR)
+        if check_emptiness_log and not ExperimentPathHandler._is_empty(ExperimentPathHandler.LOG_DIR):
+            raise AlibPathError("Experiment log path is not empty: {}".format(
+                ExperimentPathHandler.LOG_DIR
+            ))
 
     @staticmethod
     def _is_empty(path):
@@ -155,19 +129,18 @@ class ExperimentPathHandler(object):
     def _get_alib_dir():
         alib_dir = None
         if os.getenv("ALIB_EXPERIMENT_HOME") is not None:
-            print("FOOO!")
             log.info("Setting path according to ALIB_EXPERIMENT_HOME")
             alib_dir = os.getenv("ALIB_EXPERIMENT_HOME")
         else:
             log.info("ALIB_EXPERIMENT_HOME environment variable not found")
-            potential_exp_dir = ExperimentPathHandler.CURRENT_FILE_DIR
+            potential_exp_dir = os.getcwd()
             parent = os.path.split(potential_exp_dir)[0]
             iterations = 0
             while potential_exp_dir and potential_exp_dir != parent:
                 potential_exp_dir = parent
                 parent = os.path.split(potential_exp_dir)[0]
-                if ({"log", "input", "output", "sca", "gurobi.log"} == set(os.listdir(potential_exp_dir)) or
-                            {"log", "input", "output", "sca"} == set(os.listdir(potential_exp_dir))):
+                if ({"log", "input", "output",} == set(os.listdir(potential_exp_dir)) or
+                            {"log", "input", "output"} == set(os.listdir(potential_exp_dir))):
                     log.info("Setting alib path according to first parent containing only input, log, output and sca folders")
                     alib_dir = parent
                     break
@@ -175,9 +148,6 @@ class ExperimentPathHandler(object):
 
             if iterations >= 100:
                 raise AlibPathError("Exceeded iterations")
-        if alib_dir is None:
-            log.info("Setting alib path to default, three levels above current file")
-            alib_dir = os.path.abspath(os.path.join(ExperimentPathHandler.CURRENT_FILE_DIR, '../../..'))
 
         if not os.path.isdir(alib_dir):
             raise AlibPathError("Invalid alib root path: {}".format(alib_dir))
@@ -192,7 +162,7 @@ class ExperimentPathHandler(object):
             exp_dir = os.getenv("ALIB_EXPERIMENT_HOME")
             return os.path.abspath(exp_dir)
         else:
-            parent, child = os.path.split(ExperimentPathHandler.CURRENT_FILE_DIR)
+            parent, child = os.path.split(os.getcwd())
             iterations = 0
             while parent != ExperimentPathHandler.ALIB_DIR and iterations < 100:
                 parent, child = os.path.split(parent)
@@ -536,8 +506,8 @@ def pretty_print(obj, indentOffset=0, indentStep=2, whitelist=None, max_depth=10
                          max_depth=max_depth).pprint(obj)
 
 
-def initialize_root_logger(filename, print_level=logging.INFO, file_level=logging.DEBUG):
-    if filename is not None and os.path.exists(filename):
+def initialize_root_logger(filename, print_level=logging.INFO, file_level=logging.DEBUG, allow_override=False):
+    if not allow_override and filename is not None and os.path.exists(filename):
         raise AlibPathError("Attempted to overwrite existing log file:  {}".format(filename))
     print "Initializing root logger: ", filename
     fmt = '%(levelname)-10s %(asctime)s %(lineno)4d:%(name)-32s\t %(message)s'
@@ -560,13 +530,13 @@ def initialize_root_logger(filename, print_level=logging.INFO, file_level=loggin
     root_logger.info("Initialized Root Logger")
 
 
-def get_logger(logger_name, make_file=True, make_stream=False, print_level=logging.INFO, file_level=logging.DEBUG, propagate=True):
+def get_logger(logger_name, make_file=True, make_stream=False, print_level=logging.INFO, file_level=logging.DEBUG, propagate=True, allow_override=False):
     logger = logging.getLogger(logger_name)
 
     if len(logger.handlers) == 0:
         if make_file:
             fname = os.path.join(ExperimentPathHandler.LOG_DIR, logger_name + ".log")
-            if os.path.exists(fname):
+            if not allow_override and os.path.exists(fname):
                 raise AlibPathError("Attempted to overwrite existing log file:  {}".format(fname))
             file_handler = logging.FileHandler(fname, mode="w")
             file_handler.setLevel(file_level)

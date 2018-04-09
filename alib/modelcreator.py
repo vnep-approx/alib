@@ -496,13 +496,17 @@ class AbstractModelCreator(object):
         solutionCount = self.model.getAttr("SolCount")
         nodecnt = self.model.getAttr("NodeCount")
 
-        if solutionCount > 0:
-            objVal = self.model.getAttr("ObjVal")
-            # interestingly, MIPGap and ObjBound cannot be accessed when there are no variables and the MIP is infeasible..
-            objGap = self.model.getAttr("MIPGap")
+        try:
+            if solutionCount > 0:
+                objVal = self.model.getAttr("ObjVal")
+                # interestingly, MIPGap and ObjBound cannot be accessed when there are no variables or the MIP is infeasible..
+                objGap = self.model.getAttr("MIPGap")
 
-        if isFeasibleStatus(gurobi_status):
-            objBound = self.model.getAttr("ObjBound")
+            if isFeasibleStatus(gurobi_status):
+                objBound = self.model.getAttr("ObjBound")
+        except Exception as e:
+            self.logger.error("Problem accessing Gurobi Values: {}".format(e))
+
 
         if solutionCount > 0:
             self.temporal_log.add_log_data(MIPData(nodecnt, objVal, objBound, solutionCount, -1),
@@ -880,7 +884,7 @@ class TemporalLog(object):
                 traceback.format_exc(limit=100)
             )
             for line in stacktrace.split("\n"):
-                log.error(line)
+                print(line)
             raise e
 
     def set_root_relaxation_entry(self, data, time_within_gurobi):
@@ -902,7 +906,7 @@ class TemporalLog(object):
             else:
                 last_entry = self.log_entries[-1]
                 if (isinstance(last_entry.data, LPData) or
-                            abs(new_entry.data.objective_value - last_entry.data.objective_value) > 0.0001):
+                        abs(new_entry.data.objective_value - last_entry.data.objective_value) > 0.0001):
                     self.improved_entries.append(new_entry)
         self.log_entries.append(new_entry)
 
