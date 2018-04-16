@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2016-2017 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
+# Copyright (c) 2016-2018 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -42,7 +42,15 @@ class SolutionError(Exception): pass
 
 
 class AlgorithmResult(object):
+    ''' Abstract Algorithm result only specifying specific functions and no data storage capabilities.
+
+    '''
+
     def get_solution(self):
+        '''
+
+        :return: the solution (as a namedtuple) stored in this class; abstract function
+        '''
         raise NotImplementedError("This is an abstract method! Use one of the implementations.")
 
     def cleanup_references(self, original_scenario):
@@ -50,6 +58,11 @@ class AlgorithmResult(object):
         self._cleanup_references_raw(original_scenario)
 
     def _check_scenarios_are_equal(self, original_scenario):
+        ''' Checks whether the scenario stored within this result equals the one handed over.
+
+        :param original_scenario:
+        :return:
+        '''
         errors = []
         solution = self.get_solution()
         own_scenario = solution.scenario
@@ -74,10 +87,25 @@ class AlgorithmResult(object):
             ))
 
     def _cleanup_references_raw(self, original_scenario):
+        ''' Abstract function used to cleanup references. In particular, this abstract function can be used to replace
+            references to objects stored inside the original scenario. This is useful as per default instances are
+            executed using multiple processes (multiprocessing) and accordingly, returned solutions do not reference
+            the original substrate graph. Essentially, implementing this function in a meaningful way, storage space
+            in the returned pickles is saved.
+
+        :param original_scenario:
+        :return:
+        '''
         raise NotImplementedError("This is an abstract method! Use one of the implementations.")
 
 
 def gurobi_callback(model, where):
+    ''' A guronbi callback used to log the temporal progress during the exection process of gurobi.
+
+    :param model: the gurobi model from which the callback is executed
+    :param where: code referencing for what reason (where in the execution) the callback is executed.
+    :return:
+    '''
     try:
         mc = model._mc
         if where == GRB.callback.POLLING:
@@ -245,6 +273,13 @@ def isFeasibleStatus(status):
 
 
 class GurobiStatus(object):
+
+    ''' Represents the status information of Gurobi after its execution.
+
+    In particular, this class stores Gurobi's status code, the solution count, the objective value, the objective bound,
+    the objective gap and whether an integral solution was computed.
+    '''
+
     LOADED = 1  # Model is loaded, but no solution information is available.
     OPTIMAL = 2  # Model was solved to optimality (subject to tolerances), and an optimal solution is available.
     INFEASIBLE = 3  # Model was proven to be infeasible.
@@ -321,6 +356,9 @@ class GurobiStatus(object):
 
 
 class GurobiSettings(object):
+    ''' Represents parameter settings for gurobi.
+
+    '''
     def __init__(self,
                  mipGap=None,
                  iterationLimit=None,
@@ -400,6 +438,14 @@ class GurobiSettings(object):
 
 
 class AbstractModelCreator(object):
+
+    ''' Abstract basis for classes creating Mixed-Integer or Linear Programming models.
+
+    Provides essential functionality as well as a structured way to create the model and measure the time
+    needed to create, execute and post-process the model.
+
+    '''
+
     _listOfUserVariableParameters = [Param_MIPGap, Param_IterationLimit, Param_NodeLimit, Param_Heuristics,
                                      Param_Threads, Param_TimeLimit, Param_Cuts, Param_MIPFocus, Param_RootCutPasses,
                                      Param_NodefileStart, Param_Method, Param_NodeMethod, Param_BarConvTol, Param_NumericFocus]
@@ -441,10 +487,14 @@ class AbstractModelCreator(object):
             self.logger = logger
 
     def init_model_creator(self):
+        ''' Initializes the modelcreator by generating the model. Afterwards, model.compute() can be called to let
+            Gurobi solve the model.
+
+        :return:
+        '''
 
         time_preprocess_start = time.clock()
 
-        # TODO other name?
         self.model = gurobipy.Model("test")
         self.model._mc = self
 
@@ -480,6 +530,11 @@ class AbstractModelCreator(object):
         raise NotImplementedError("This is an abstract method! Use one of the implementations.")
 
     def compute_integral_solution(self):
+        ''' Abstract function computing an integral solution to the model (generated before).
+
+        :return: Result of the optimization consisting of an instance of the GurobiStatus together with a result
+                 detailing the solution computed by Gurobi.
+        '''
         self.logger.info("Computing integral solution.")
         # do the optimization
         time_optimization_start = time.clock()
@@ -556,6 +611,11 @@ class AbstractModelCreator(object):
         raise NotImplementedError("This is an abstract method! Use one of the implementations.")
 
     def compute_fractional_solution(self):
+        ''' Assuming that the original model was a Mixed-Integer Program, this function relaxes the integrality conditions
+            on variables and solves the corresponding LP using Gurobi.
+
+        :return:    GurobiStatus together with a class corresponding to the solution computed in the LP
+        '''
 
         time_additional_preprocessing_start = time.clock()
         self.relax_model()
@@ -627,6 +687,11 @@ class AbstractModelCreator(object):
     ###
 
     def apply_gurobi_settings(self, gurobiSettings):
+        ''' Apply gurobi settings.
+
+        :param gurobiSettings:
+        :return:
+        '''
         if gurobiSettings.MIPGap is not None:
             self.set_gurobi_parameter(Param_MIPGap, gurobiSettings.MIPGap)
         else:
@@ -729,6 +794,11 @@ class AbstractModelCreator(object):
 
 
 class AbstractEmbeddingModelCreator(AbstractModelCreator):
+    ''' Abstract model creator designed specifically to tackle the Virtual Network Embedding Problem.
+
+        In particular, this class extends the AbstractModelCreator by instantiating some (generally needed) variables
+        and generating appropriate constraints. Furthermore, it adds support for different objectives.
+    '''
     def __init__(self,
                  scenario,
                  gurobi_settings=None,
@@ -854,6 +924,11 @@ LogEntry = namedtuple("LogEntry", ["globaltime",
 
 
 class TemporalLog(object):
+    ''' Class detailing the solution process of Gurobi during its execution.
+
+        Data is (should) be added to this class during the gurobi callback.
+
+    '''
     def __init__(self, log_interval_in_seconds=30.0):
         self.log_entries = []
         self.improved_entries = []
