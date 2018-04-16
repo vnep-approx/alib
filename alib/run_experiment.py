@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2016-2017 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
+# Copyright (c) 2016-2018 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -40,7 +40,6 @@ log = util.get_logger(__name__, make_file=False, propagate=True)
 
 ALGORITHMS = {
     mip.ClassicMCFModel.ALGORITHM_ID: mip.ClassicMCFModel,
-
 }
 
 
@@ -51,6 +50,14 @@ def register_algorithm(alg_id, alg_class):
 def run_experiment(experiment_yaml_file,
                    min_scenario_index, max_scenario_index,
                    concurrent):
+    '''Entry point for running experiments.
+
+    :param experiment_yaml_file: the yaml file detailing algorithm parameters / settings
+    :param min_scenario_index:   the minimal scenario index that shall be included in the execution
+    :param max_scenario_index:   the maximal scenario index that shall be included in the execution
+    :param concurrent:           the number of processes (!= threads: each process may use multiple threads) to execute the experiments
+    :return:
+    '''
     log.info("PID: {}".format(os.getpid()))
     execution = ExperimentExecution(
         min_scenario_index, max_scenario_index,
@@ -76,12 +83,23 @@ def run_experiment(experiment_yaml_file,
 
 
 class ExecutionParameters(object):
+    '''Container to store execution parameters (and expand to multiple execution parameters)
+
+    '''
     def __init__(self, execution_parameter_space):
+        '''
+
+        :param execution_parameter_space: dictionaries detailing parameters (from yaml file)
+        '''
         self.execution_parameter_space = execution_parameter_space
         self.algorithm_parameter_list = []
         self.reverse_lookup = {}
 
     def generate_parameter_combinations(self):
+        ''' Investigates the given dictionary structure and constructs the cartesian product of all parameters.
+
+        :return:
+        '''
         for algorithm in self.execution_parameter_space:
             alg_id = algorithm["ALGORITHM"]["ID"]
             self.reverse_lookup[alg_id] = {}
@@ -135,7 +153,7 @@ class ExecutionParameters(object):
                 [zip(all_parameters, product) for product in parameter_combinations]]
 
     def get_execution_ids(self, **kwargs):
-        """
+        """ returns (suitable) execution ids filtered by **kwargs
 
         :param kwargs:
         :return:
@@ -176,6 +194,9 @@ class ExecutionParameters(object):
 
 
 class ExperimentExecution(object):
+    '''Handles the execution of experiments: slices scenario space and uses multiprocessing to obtain results.
+
+    '''
     def __init__(self,
                  min_scenario_index,
                  max_scenario_index,
