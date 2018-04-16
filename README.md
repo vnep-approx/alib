@@ -66,4 +66,9 @@ virtual environment (using **pip install spinx**) and executing the above from w
 # Contact
 
 If you have any questions, feel free to use Github to contact us.
-You can also simply write a mail to mrost<AT>inet.tu-berlin<DOT>.de.
+You can also simply write a mail to mrost<AT>inet.tu-berlin<DOT>de.
+
+# Acknowledgement
+
+Major parts of this code were developed under the support of the **German BMBF Software
+Campus grant 01IS1205**.
