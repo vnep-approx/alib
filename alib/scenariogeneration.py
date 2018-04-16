@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2016-2017 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
+# Copyright (c) 2016-2018 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -83,6 +83,11 @@ REQUIRED_TASKS = {
 
 
 def verify_completeness_of_scenario_parameters(scenario_parameter_space):
+    ''' Checks scenario parameters for completeness and raises a warnings and exceptions if necessary.
+
+    :param scenario_parameter_space:
+    :return: nothing
+    '''
     errors = []
     warnings = []
     for task in SCENARIO_GENERATION_TASKS:
@@ -137,6 +142,14 @@ def verify_completeness_of_scenario_parameters(scenario_parameter_space):
 
 
 def generate_pickle_from_yml(parameter_file, scenario_out_pickle, threads=1, scenario_index_offset=0):
+    ''' main function to generate a scenario pickle from a parameter file
+
+    :param parameter_file: yaml file detailing the scenario parameterds
+    :param scenario_out_pickle: output file to write the pickle to
+    :param threads: number of threads that shall be used for generating the scenarios
+    :param scenario_index_offset: offset of scenario indicices to enable merging of distinct scenario storages
+    :return: None
+    '''
     param_space = yaml.load(parameter_file)
     sg = ScenarioGenerator(threads)
     repetition = 1
@@ -152,6 +165,9 @@ def generate_pickle_from_yml(parameter_file, scenario_out_pickle, threads=1, sce
 
 
 class ScenarioParameterContainer(object):
+    '''Represents a set of scenarios accessible via its parameters according to which the scenarios (instances) were generated.
+
+    '''
     def __init__(self, scenario_parameter_room, scenario_index_offset=0):
         self.scenarioparameter_room = scenario_parameter_room
         self.scenario_index_offset = scenario_index_offset
@@ -297,6 +313,9 @@ class ScenarioParameterContainer(object):
 
 
 class ScenarioGenerator(object):
+    '''Class to generate scenarios according to a specific parameter space.
+
+    '''
     def __init__(self, threads=1):
         self.scenario_parameter_container = None
         self.threads = threads
@@ -1445,6 +1464,10 @@ class NeighborhoodSearchRestrictionGenerator(AbstractNodeMappingRestrictionGener
 
 
 class TopologyZooReader(ScenariogenerationTask):
+    '''Casts topology zoo instances as substrates during the generation process
+
+    '''
+
     # node_cost: [1.0]    #this is a multiplicative factor :)
     EXPECTED_PARAMETERS = ["topology", "node_types", "edge_capacity",
                            "node_cost_factor", "node_capacity", "node_type_distribution"]

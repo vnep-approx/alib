@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2016-2017 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
+# Copyright (c) 2016-2018 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -33,6 +33,9 @@ class MappingError(Exception): pass
 
 
 class IntegralScenarioSolution(object):
+    ''' Represents an integral solution to a scenario, i.e. it indicates for a subset (or all) requests integral mappings.
+
+    '''
     def __init__(self, name, scenario):
         self.name = name
         self.scenario = scenario
@@ -43,8 +46,7 @@ class IntegralScenarioSolution(object):
         self.request_mapping[req] = mapping
 
     def validate_solution(self):
-        """ validates types and capacity for each request and given
-        mapping in scenario
+        """ validates types and capacity for each request and given mapping in scenario
         """
         if (not self.scenario.validate_types()):
             return False
@@ -120,6 +122,9 @@ class IntegralScenarioSolution(object):
 
 
 class FractionalScenarioSolution(object):
+    ''' Scenario solution in which for each request convex combinations of mappings are allowed.
+
+    '''
     def __init__(self, name, scenario):
         self.name = name
         self.scenario = scenario
@@ -198,6 +203,10 @@ class FractionalScenarioSolution(object):
 
 
 class Mapping(object):
+    ''' Represents a valid mapping of a single request on a sustrate.
+
+        Initially, the mapping is empty and needs to be populated by the map_node and map_edge functions.
+    '''
     def __init__(self, name, request, substrate, is_embedded):
         self.name = name
         self.request = request
@@ -206,15 +215,9 @@ class Mapping(object):
         self.mapping_edges = {}
         self.is_embedded = is_embedded
 
-    def lookup_request(self, u):
-        """ given a substrate node u - return the mapped request node else None
-        """
-        try:
-            return (key for key, value in self.mapping_nodes.items() if value == u).next()
-        except:
-            raise Exception("No mapping found for substrate node {}".format(u))
-
     def map_node(self, i, u):
+        ''' Maps the single request node i on to the substrate node u.
+        '''
         if i in self.mapping_nodes:
             raise MappingError("Tried adding duplicate node mapping of {} onto {}. (already mapped to {})".format(i, u, self.mapping_nodes[i]))
         if i not in self.request.nodes:
@@ -237,8 +240,7 @@ class Mapping(object):
             ))
 
     def map_edge(self, ij, mapped_path):
-        """ maps a virtual edge ve of a request to a path(multiple edges) se's of a
-        substrate"""
+        """ maps a virtual edge ij of the request to a path(multiple edges) mapped_path of the substrate"""
 
         if ij in self.mapping_edges:
             raise MappingError("Tried adding duplicate edge mapping of {} onto {}. (already mapped to {})".format(ij, mapped_path, self.mapping_edges[ij]))
@@ -277,10 +279,19 @@ class Mapping(object):
 
 
 class ScenarioSolutionStorage(object):
+    ''' Encapsulates the solutions for a whole set of scenarios.
+
+        In general, this storage mirrors the ScenarioParametersContainer: for each scenario of the container, one
+        solution (should be) is contained in the solution storage.
+    '''
     def __init__(self, scenario_parameter_container, execution_parameter_container):
-        self.algorithm_scenario_solution_dictionary = {}  # for evaluation, it was more useful to index solutions by algorithm first
+        # stores solutions for each algorithm and each scenario; dict --> dict --> dict
+        self.algorithm_scenario_solution_dictionary = {}
+        # stores the algorithm identifiers for which solutions are contained
         self.algorithms = set()
+        # the container with the original scenarios and its generation parameters
         self.scenario_parameter_container = scenario_parameter_container
+        # the container with the execution specifications
         self.execution_parameter_container = execution_parameter_container
 
     def add_solution(self, algorithm_id, scenario_id, execution_id, solution):
