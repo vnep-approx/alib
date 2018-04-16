@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2016-2017 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
+# Copyright (c) 2016-2018 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ import yaml
 import click
 import itertools
 
-from . import evaluation, run_experiment, scenariogeneration, solutions, util, datamodel
+from . import run_experiment, scenariogeneration, solutions, util, datamodel
 
 REQUIRED_FOR_PICKLE = solutions  # this prevents pycharm from removing this import, which is required for unpickling solutions
 
@@ -36,43 +36,6 @@ REQUIRED_FOR_PICKLE = solutions  # this prevents pycharm from removing this impo
 def cli():
     pass
 
-
-@cli.command()
-@click.argument('codebase_id')
-@click.argument('remote_base_dir', type=click.Path())
-@click.option('--local_base_dir', type=click.Path(exists=True), default=".")
-@click.argument('servers')
-@click.option('--extra', '-e', multiple=True, type=click.File())
-def deploy_code(codebase_id, remote_base_dir, local_base_dir, servers, extra):
-    f_deploy_code(codebase_id, remote_base_dir, local_base_dir, servers, extra)
-
-
-def f_deploy_code(codebase_id, remote_base_dir, local_base_dir, servers, extra):
-    """
-    Deploys the codebase on a remote server.
-
-    This function is separated from deploy_code so that it can be reused when extending the CLI from outside the alib.
-
-    :param codebase_id:
-    :param remote_base_dir:
-    :param local_base_dir:
-    :param servers:
-    :param extra:
-    :return:
-    """
-    click.echo('Deploy codebase')
-    if not local_base_dir:
-        local_base_dir = os.path.abspath("../../")
-    local_base_dir = os.path.abspath(local_base_dir)
-    deployer = util.CodebaseDeployer(
-        code_base_id=codebase_id,  # string, some unique codebase id
-        remote_base_dir=remote_base_dir,  # server path object specifying paths for codebase
-        local_base_path=local_base_dir,  # local root directory of the codebase
-        servers=servers.split(","),  # servers to deploy to
-        cleanup=True,  # delete auto-generated files?
-        extra=extra
-    )
-    deployer.deploy_codebase()
 
 
 @cli.command()
@@ -104,14 +67,6 @@ def f_generate_scenarios(scenario_output_file, parameter_file, threads, scenario
     util.initialize_root_logger(log_file)
     scenariogeneration.generate_pickle_from_yml(parameter_file, scenario_output_file, threads, scenario_index_offset=scenario_index_offset)
 
-
-@cli.command()
-@click.argument('dc_baseline', type=click.File('r'))
-@click.argument('dc_randround', type=click.File('r'))
-def full_evaluation(dc_baseline, dc_randround):
-    baseline_data = pickle.load(dc_baseline)
-    randround_data = pickle.load(dc_randround)
-    evaluation.plot_heatmaps(baseline_data, randround_data)
 
 
 @cli.command()
