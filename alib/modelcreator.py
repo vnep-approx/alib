@@ -373,7 +373,7 @@ class GurobiSettings(object):
                  OptimalityTol=None,
                  Presolve=None,
                  NodefileStart=None,
-                 method=None,
+                 Method=None,
                  nodemethod=None,
                  numericfocus=None):
         util.check_positive(mipGap)
@@ -410,7 +410,7 @@ class GurobiSettings(object):
         util.check_positive(NodefileStart)
         self.NodefileStart = NodefileStart
 
-        self.Method = method
+        self.Method = Method
         self.NodeMethod = nodemethod
 
         util.check_within_range(numericfocus, 0, 3)

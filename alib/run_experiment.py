@@ -65,7 +65,7 @@ def run_experiment(experiment_yaml_file,
     )
     exp_data = yaml.load(experiment_yaml_file)
     scenario_picklefile = os.path.abspath(os.path.join(
-        util.ExperimentPathHandler.INPUT_DIR, exp_data["SCENARIO_PICKLE"])
+        util.ExperimentPathHandler.INPUT_DIR, exp_data["SCENARIO_INPUT_PICKLE"])
     )
     with open(scenario_picklefile, "rb") as f:
         scenario_container = pickle.load(f)
@@ -75,7 +75,7 @@ def run_experiment(experiment_yaml_file,
     execution.setup(execution_parameter_container, scenario_container)
 
     result = execution.start_experiment()
-    solution_storage_file = exp_data["SCENARIO_PICKLE"].split(".")[0] + "_solutions.pickle"
+    solution_storage_file = exp_data["RESULT_OUTPUT_PICKLE"]
     output_file = os.path.join(util.ExperimentPathHandler.OUTPUT_DIR, solution_storage_file)
     log.info("Writing results to {}".format(output_file))
     with open(output_file, "wb") as f:
