@@ -1,20 +1,14 @@
 
 # Introduction
 
-This document provides an overview on how to run experiments using the alib codebase.
+This document provides an overview on the **alib**, short for **a library**. The alib provides a common **Python 2.7** basis
+for our **Virtual Network Embedding Problem (VNEP)** approximation framework. As such, it contains (among other things) 
+- A common **[data model](alib/datamodel.py)** to capture the notions of **substrate graphs** (physical networks), **request graphs** (virtual networks), and **embeddings** of requests to a substrate, **scenarios**, i.e. bundling multiple requests to be embedded on a common substrate.
+- A common **[scenario generation](alib/scenariogeneration.py)** framework to generate cartesian products of parameter spaces and to generate scenarios accordingly (at random).
+- A common **[scenario execution](alib/run_experiment.py)** framework to execute experments in parallel and using arbitrarily many different parameter configurations.
+- A common base for solving **[integer/linear programs](alib/modelcreator.py)** pertaining to the VNEP together with an implementation of the **[classic multi-commodity flow formulation](alib/mip.py)** for the VNEP.
 
-Experiments are based on a set of scenarios, to which an algorithm is applied.
-
-### Code Examples
-Example code for running a hypothetical experiments is included.
-
-This code is structured into three files:
-
- - mwe_scenario_parameters.py: Contains the scenario parameters for the experiment 
- - mwe_run_experiment.py: This file is executed on the experiment servers and performs the actual simulation. It usually generates or loads a scenario, runs an algorithm on this scenario, and saves the result.
- - mwe_deploy_experiment.py: This file deploys the codebase and some shell scripts to easily start the scenarios.
-
-## Dependencies and Requirements
+# Dependencies and Requirements
 
 The alib library requires Python 2.7. Required python libraries: gurobipy, numpy, cPickle, networkx 1.9, matplotlib. 
 
@@ -22,135 +16,35 @@ Note: Unfortunately, newer versions of networkx cannot parse many of the topolog
 
 Gurobi must be installed and the .../gurobi64/lib directory added to the environment variable LD_LIBRARY_PATH.
 
-All python code should be run with the Trivine directory as working directory.
+For generating and executing (etc.) experiments, the environment variable ALIB_EXPERIMENT_HOME must be set to a path,
+such that the subfolders input/ output/ and log/ exist.
 
-The servers running the experiment must be accessible with ssh and ssh keys should be configured.
+**Note**: Our source was only tested on Linux (specifically Ubuntu 14/16).  
 
-# Deployment
+# Installation
 
-## Server settings
-The file experiments/server_settings.py contains settings that should remain the same for all experiments.
+To install **alib**, we provide a setup script. Simply execute from within alib's root directory: 
 
- - SERVERS: A list of hostnames for the servers running the experiments.
- - REMOTE_CODE_BASE_DIR: The directory where the codebase is deployed on the servers.
- - REMOTE_EXPERIMENT_BASE_DIR: The directory where experiment results will be saved.
- - REMOTE_TOPOLOGY_DIR: The directory where the substrate topologies are stored as *.gml files
+```
+pip install .
+```
 
-#### Running Experiments Locally
-Experiments can be deployed and run locally by setting the "SERVERS" variable in server_settings.py to 
+Furthermore, if the code base will be edited by you, we propose to install it as editable:
+```
+pip install -e .
+```
+When choosing this option, sources are not copied during the installation but the local sources are used: changes to
+the sources are directly reflected in the installed package.
 
-    SERVERS = ["localhost"]
+We generally propose to install **alib** into a virtual environment.
 
-## The ExperimentDeployer
+# Test
 
-The ExperimentDeployer class in experiment_deployment.py simplifies the deployment of the codebase and generates scripts that can be used to start the experiment. 
+The test directory contains a large number of tests to check the correctness of our implementation and might also be useful
+to understand the code. 
 
-Required arguments:
+To execute the tests, simply execute pytest in the test directory.
 
- - number_of_parameters: Number of scenarios in the experiment. This is important for the generation of the scripts.
- - experiment_name: A name for the experiment. Determines the location of the experiment results. Should be unique to avoid overwriting existing data.
- - experiment_file: The python script which carries out the experiment. (in the example code, this is run_experiment.py)
- - code_base_id: A name for the codebase.
-
-Optional arguments:
-
- - servers=None: List of hostnames for the servers that should be used in the experiment. This overrides the list specified in experiments.server_settings.SERVERS. The default uses all servers specified in experiments.server_settings.SERVERS.
- - number_of_subservers=1: Number of experiments that are run in parallel on each server.
- - export_path="./deploy_scripts": Path for the temporary files which are generated during code deployment
- - cleanup=False: If set to True, the ExperimentDeployer will attempt to delete all files that it has written.
- - deploy=True: If set to False, nothing is uploaded to the servers.
-
-To deploy the experiment, simply call the ExperimentDeployer's deploy_experiment method.
-
-## Starting the Experiment
-
-The scripts generated by the ExperimentDeployer should be saved on the servers in the directory
-
-    $REMOTE_EXPERIMENT_BASE_DIR/$experiment_name/$code_base_id
-
-To start the experiment, run "exec_server{i}.sh" in this directory, where {i} refers to the index of the server.
-
-This command is useful to abort a running experiment:
-
-    pkill -f execSubServer* && killall python
-
-# Scenario Generation
-
-## ScenarioGenerator -- Generate New Vnets
-
-The ScenarioGenerator class is used to generate a scenario containing only new vnets. The vnet generation and the profit calculation for the vnets are deferred to a vnet generator and a profit calculator, respectively.
-
-### VNetGenerators
-The Vnet generator is responsible for generating the requests. Currently, there are three implementations to choose from.
-
-#### ServiceChainGenerator
-The ServiceChainGenerator generates vnets consisting of a chain from a source to a target, with additional random, directed edges added between the intermediate nodes. 
-
-The ServiceChainGenerator supports latency constraints between the source and sink nodes. The maximum latency is the distance of the shortest embedding, multiplied with the parameter "latencyFactor".
-
-Node placement restrictions are tied to network functions: Each node in the service chain is assigned a network function, and each network function is only supported by a subset of the substrate nodes. The distribution of network functions over the substrate nodes is controlled by the node_function_parameter.
-
-#### ExponentialRequestGenerator
-
-The ExponentialRequestGenerator generates vnets with randomly connected nodes. The number of nodes is sampled uniformly. Edge and node capacity requirements and the number of substrate nodes to which a node may be mapped are sampled from an exponential distribution.
-
-#### UniformVNetGenerator
-The UniformVNetGenerator generates vnets with randomly connected nodes. The number of nodes, edge and node capacity requirements and the number of substrate nodes to which a node may be mapped are sampled from a uniform distribution. The range of the distributions is determined by the "variability" parameter.
-
-### Profit Calculation
-
-Two methods of assigning a profit to the newly generated request graphs are currently implemented. Both methods determine a cost value for embedding a request. This cost, multiplied with the "objectiveSkewFactor" parameter, is the profit associated with the request.
-
-#### OptimalEmbeddingProfitCalculator
-This profit calculator generates profit values based on the cost of optimally embedding each vnet on an empty substrate. 
-
-The profit calculation is parallelized. The number of parallel calculations is set with the "threads" parameter passed to the constructor.
-
-#### RandomEmbeddingProfitCalculator
-This profit calculator generates profit values based on the average cost of randomly embedding each vnet. The number of iterations is passed to the constructor.
-
-# Scenario Parameters
-A brief summary of the scenario parameters:
-
-  - topology: 
-    - name of the substrate
-    - Should correspond to the filename of the gml-file of the substrates (e.g. Geant2012.gml -> "Geant2012")
-  - number_of_requests: 
-    - total number of vnets, including any old or elastic vnets
-    - arbitrary integer
-  - min_number_of_nodes: 
-    - smallest number of nodes allowed for one vnet
-    - arbitrary integer, should be equal to or smaller than maxNumberNodes
-  - max_number_of_nodes:
-    - greatest number of nodes allowed for one vnet
-    - arbitrary integer, should be equal to or greater than maxNumberNodes
-  - node_function_distribution: 
-    - ratio of substrate nodes which support 
-    - should be between 0 and 1
-  - probability
-    - connection probability for randomly connected edges
-    - should be between 0 and 1
-  - variability
-    - only used by the UniformVNetGenerator
-    - determines the ranges of the randomly sampled vnet parameters
-    - should be between 0 and 1
-  - potential_nodes_factor
-    - determine the number of nodes to which each vnet node may be mapped (node placement restrictions)
-  - node_resource_factor
-    - controls the node resource demand of the vnets
-    - increasing the nodeResFactor leads to a greater demand of node resources
-  - edge_resource_factor
-    - controls the edge resource demand of the vnets
-    - decreasing the edgeResFactor leads to a greater demand of edge resources
-  - profit_factor
-    - controls the profit assigned to each vnet
-  - max_reconfigurations
-    - only used by experiments with old vnets
-    - limit the number of edges and nodes which may be remapped
-  - latency_factor
-    - only used by the ServiceChainGenerator
-    - controls the latency restriction between source and target
-  - index
-    - this parameter is used to repeat the experiment
-
-
+```
+pytest .
+```
