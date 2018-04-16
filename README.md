@@ -1,8 +1,7 @@
 
 # Introduction
 
-This document provides an overview on the **alib**, short for **a library**. The alib provides a common **Python 2.7** basis
-for our **Virtual Network Embedding Problem (VNEP)** approximation framework. As such, it contains (among other things) 
+The **alib** (short for **a library**) provides a common **Python 2.7** basis for our **Virtual Network Embedding Problem (VNEP)** approximation framework. As such, it contains (among other things) 
 - A common **[data model](alib/datamodel.py)** to capture the notions of **substrate graphs** (physical networks), **request graphs** (virtual networks), and **embeddings** of requests to a substrate, **scenarios**, i.e. bundling multiple requests to be embedded on a common substrate.
 - A common **[scenario generation](alib/scenariogeneration.py)** framework to generate cartesian products of parameter spaces and to generate scenarios accordingly (at random).
 - A common **[scenario execution](alib/run_experiment.py)** framework to execute experments in parallel and using arbitrarily many different parameter configurations.
@@ -63,3 +62,8 @@ to create the HTML documentation.
 
 Note that **alib** must lie on the PYTHONPATH. If you use a virtual environment, we propose to install sphinx within the
 virtual environment (using **pip install spinx**) and executing the above from within the virtual environment. 
+
+# Contact
+
+If you have any questions, feel free to use Github to contact us.
+You can also simply write a mail to mrost<AT>inet.tu-berlin<DOT>.de.
