@@ -38,7 +38,7 @@ the sources are directly reflected in the installed package.
 
 We generally propose to install **alib** into a virtual environment.
 
-# Test
+# Tests
 
 The test directory contains a large number of tests to check the correctness of our implementation and might also be useful
 to understand the code. 
@@ -48,3 +48,18 @@ To execute the tests, simply execute pytest in the test directory.
 ```
 pytest .
 ```
+
+# API Documentation
+
+We provide a basic template to create an API documentatio using **[Sphinx](http://www.sphinx-doc.org)**. 
+
+To create the documentation, simply execute the makefile in **docs/**. Specifically, run for example
+
+```
+make html
+```
+
+to create the HTML documentation.
+
+Note that **alib** must lie on the PYTHONPATH. If you use a virtual environment, we propose to install sphinx within the
+virtual environment (using **pip install spinx**) and executing the above from within the virtual environment. 
