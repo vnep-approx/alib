@@ -37,6 +37,25 @@ the sources are directly reflected in the installed package.
 
 We generally propose to install **alib** into a virtual environment.
 
+# Usage
+
+You may either use our code via our API by importing the library or via our command line interface:
+
+```
+python -m alib.cli
+
+Usage: cli.py [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  generate_scenarios
+  inspect_cactus_request_graph_generation
+  pretty_print
+  start_experiment
+```
+
 # Tests
 
 The test directory contains a large number of tests to check the correctness of our implementation and might also be useful
