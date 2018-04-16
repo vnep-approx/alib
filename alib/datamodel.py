@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2016-2017 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
+# Copyright (c) 2016-2018 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -28,11 +28,17 @@ class LinearRequestError(Exception): pass
 
 
 class Objective(object):
+    ''' Enum representing the objective that shall be applied.
+
+    '''
     MIN_COST = 0
     MAX_PROFIT = 1
 
 
 class Scenario(object):
+    ''' Represents the scenario of embedding a given number of requests onto a single substrate network.
+
+    '''
     def __init__(self, name, substrate, requests, objective=Objective.MIN_COST):
         self.name = name
         self.requests = requests
@@ -59,8 +65,9 @@ class Scenario(object):
 
 
 class Graph(object):
-    """ representing a directed graph ( G = ( V , E) )
-        Attributes :
+    """ Representing a directed graph ( G = ( V , E) ).
+
+        Arbitrary attributes can be set for nodes and edges via **kwargs.
     """
 
     def __init__(self, name):
@@ -202,7 +209,9 @@ class Graph(object):
 
 
 class Request(Graph):
-    """ represents a request graph ?
+    """ Represents a request graph, i.e. a directed graph with demands for nodes and edges.
+
+        Note that each node is attributed with a resource type.
     """
 
     def __init__(self, name):
@@ -269,7 +278,7 @@ class Request(Graph):
 
 
 class LinearRequest(Request):
-    """ represents a linear request / service chain graph
+    """ Represents a linear request, i.e. a service chain graph: virtual nodes are chained.
     """
 
     def __init__(self, name):
@@ -305,8 +314,10 @@ class LinearRequest(Request):
 
 
 class Substrate(Graph):
-    """ representing a single substrate ( G_s = ( V_s , E_s) )
-        Attributes :
+    """ Represents a physical network.
+
+        The constructor must be passed a set of network function types. Each substrate node may host an arbitrary subset
+        of these functions and can have arbitrary capacities for each of these.
     """
 
     def __init__(self, name):
