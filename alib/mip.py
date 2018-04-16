@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2016-2017 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
+# Copyright (c) 2016-2018 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -31,6 +31,12 @@ class ClassicMCFError(Exception): pass
 
 
 class ClassicMCFResult(modelcreator.AlgorithmResult):
+    ''' Represents the result of a Multi-Commodity Flow IP Formulation.
+
+    Accordingly, it extends the regular AlgorithmResult by storing Gurobi status information as well as
+    a temporal log, detailing the solution process of Gurobi.
+
+    '''
     def __init__(self, solution, temporal_log, status):
         super(ClassicMCFResult, self).__init__()
         self.solution = solution
@@ -53,6 +59,12 @@ class ClassicMCFResult(modelcreator.AlgorithmResult):
 
 
 class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
+
+    ''' Gurobi model to construct and solve the multi-commodity flow formulation for the VNEP.
+
+        Important: inheriting from the AbstractEmbeddingModelCreator, only the core functionality is enabled in this class.
+    '''
+
     ALGORITHM_ID = "ClassicMCF"
 
     def __init__(self, scenario, gurobi_settings=None, logger=None):
