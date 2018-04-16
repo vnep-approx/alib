@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2016-2017 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
+# Copyright (c) 2016-2018 Matthias Rost, Elias Doehne, Tom Koch, Alexander Elvers
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -178,129 +178,6 @@ class ExperimentPathHandler(object):
             return os.path.abspath(exp_dir)
 
 
-class CodebaseDeployer(object):
-    """
-    This class simplifies deployment of the code.
-
-    """
-
-    def __init__(self,
-                 code_base_id,
-                 remote_base_dir,
-                 extra=None,
-                 local_base_path=".",
-                 servers=None,
-                 export_path="deployment",
-                 cleanup=True):
-
-        if servers is None:
-            servers = ["localhost"]
-        self.servers = servers
-        self.number_of_servers = len(servers)
-        self.local_base_path = os.path.abspath(local_base_path)
-        self.export_directory = os.path.abspath(os.path.join(local_base_path, export_path))
-        self.remote_base_dir = remote_base_dir
-        self.cleanup = cleanup
-        self.code_base_id = code_base_id
-        self._generated_files = set()
-        self.extra = extra
-
-    def deploy_codebase(self):
-        """
-        Make a copy of the codebase and deploy it on the servers.
-        :return:
-        """
-        self._create_paths_on_remote()
-        self._create_codebase_snapshot()
-        self._deploy_code_to_servers()
-        if self.extra:
-            self._deploy_extra_to_server()
-        if self.cleanup:
-            self._cleanup()
-
-    def _create_codebase_snapshot(self):
-        def ignored_files(path, names):  # see https://docs.python.org/2/library/shutil.html#shutil.copytree
-            if os.path.abspath(path) == self.export_directory or ".git" in path or ".idea" in path:
-                return names
-            print "\t", path
-            include = [".gml", ".py"]
-            only_files = (name for name in names if os.path.isfile(os.path.join(path, name)))
-            ignored = [name for name in only_files
-                       if not any(name.endswith(ext) for ext in include)]
-            return ignored
-
-        code_source_directory = self.local_base_path
-        code_export_directory = os.path.join(self.export_directory, self.code_base_id)
-        if os.path.exists(code_export_directory):
-            raise DeploymentError("The export directory exists!")
-        code_subdir_name = "sca"
-        src_dir = os.path.join(code_export_directory, code_subdir_name)
-        shutil.copytree(code_source_directory, src_dir, ignore=ignored_files)
-        tar = shutil.make_archive(code_export_directory,
-                                  format="gztar",
-                                  root_dir=self.export_directory,
-                                  base_dir=os.path.join(self.code_base_id, code_subdir_name))
-        if self.cleanup:
-            shutil.rmtree(code_export_directory)
-        self._generated_files.add(tar)
-
-    def _deploy_code_to_servers(self):
-        tar_name = self.code_base_id + ".tar.gz"
-        for server in self.servers:
-            scp_command = "scp {tar_file} {server}:{remote_code_dir}"
-            command = scp_command.format(tar_file=os.path.join(self.export_directory, tar_name),
-                                         server=server,
-                                         remote_code_dir=os.path.join(self.remote_base_dir, tar_name))
-            self._execute_command(command)
-            extract_tar_command = 'ssh {server} "cd {remote_code_dir} ; tar -xzvf {tar_name}"'
-            command = extract_tar_command.format(server=server,
-                                                 remote_code_dir=self.remote_base_dir,
-                                                 tar_name=tar_name)
-            self._execute_command(command)
-
-    def _deploy_extra_to_server(self):
-        for server in self.servers:
-            for filename in self.extra:
-                scp_command = "scp {extra_file} {server}:{remote_code_dir}"
-                command = scp_command.format(extra_file=os.path.abspath(filename.name),
-                                             server=server,
-                                             remote_code_dir=os.path.join(self.remote_base_dir, self.code_base_id,
-                                                                          "input/",
-                                                                          os.path.basename(filename.name)))
-                self._execute_command(command)
-
-    def _create_paths_on_remote(self):
-        subdir = ['input/', 'output/', 'log/']
-        for server in self.servers:
-            mkdir_command = "ssh {} \"mkdir {}\"".format(server, os.path.join(self.remote_base_dir, self.code_base_id))
-            self._execute_command(mkdir_command)
-            for sd in subdir:
-                mkdir_command = "ssh {} \"mkdir {}\"".format(server, os.path.join(self.remote_base_dir, self.code_base_id, sd))
-                self._execute_command(mkdir_command)
-
-    def _cleanup(self):
-        if self.cleanup:
-            print "Starting Cleanup..."
-            for f in self._generated_files:
-                f_path = os.path.abspath(f)
-                print "Deleting", f_path
-                if os.path.isdir(f):
-                    print "Cleanup: omitting directory {}".format(f)
-                    continue
-                if " " in f or "\t" in f or "\n" in f:
-                    print "Aborting cleanup, filename contains spaces: {}".format(f)
-                    break
-                if not f_path.startswith(os.path.abspath(self.export_directory)):
-                    print "Aborting cleanup, file seems outside of export directory: {}".format(f)
-                    break
-                os.remove(f)
-            self._generated_files = set()
-
-    def _execute_command(self, command):
-        print command
-        os.system(command)
-
-
 class PrintLogger(object):
     @staticmethod
     def debug(message, *args, **kwargs):
@@ -328,6 +205,10 @@ class PrintLogger(object):
 
 
 class PrettyPrinter(object):
+    ''' Custom implementation of a pretty printer to output classes nicely.
+
+    '''
+
     _DESCRIBED_HERE = 0
     _DESCRIBED_ABOVE = 1
     _DESCRIBED_BELOW = 2
