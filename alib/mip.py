@@ -112,10 +112,12 @@ class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
                                                                         obj=0.0,
                                                                         vtype=GRB.BINARY,
                                                                         name=variable_name)
+
         self.model.update()
 
     def create_constraints_other_than_bounding_loads_by_capacities(self):
         self.create_constraints_node_mapping()
+        self.create_constraints_forbidden_edges()
 
         self.create_constraints_flow_preservation_and_induction()
 
@@ -136,6 +138,20 @@ class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
                                                           req_name=req.name,
                                                           vnode=i)  # Matthias: changed to conform to standard naming
                 self.model.addConstr(expr, GRB.EQUAL, 0.0, name=constr_name)
+
+    def create_constraints_forbidden_edges(self):
+        for req in self.requests:
+            for ij in req.edges:
+                allowed_edges = req.edge[ij].get("allowed_edges")
+                if allowed_edges is None:
+                    continue
+                allowed = set(allowed_edges)
+                forbidden = [uv for uv in self.substrate.edges if uv not in allowed]
+                for uv in forbidden:
+                    constr_name = modelcreator.construct_name("forbid_edge_mapping",
+                                                              req_name=req.name, vedge=ij, sedge=uv)
+                    expr = LinExpr([(1.0, self.var_z[req][ij][uv])])
+                    self.model.addConstr(expr, GRB.EQUAL, 0.0, name=constr_name)
 
     def create_constraints_flow_preservation_and_induction(self):
         for req in self.requests:
@@ -290,3 +306,4 @@ class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
             self.model.addConstr(force_embedding_constraint, GRB.EQUAL, 1.0, name=name)
         else:
             self.model.addConstr(force_embedding_constraint, GRB.EQUAL, 0.0, name=name)
+
