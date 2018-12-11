@@ -64,6 +64,76 @@ class Scenario(object):
         return True
 
 
+class UndirectedGraph(object):
+    """ Simple representation of an unidrected graph (without any further attributes as weights, costs etc.)
+    """
+    def __init__(self, name):
+        self.name = name
+        self.nodes = set()
+        self.edges = set()
+
+        self.neighbors = {}
+        self.incident_edges = {}
+
+    def add_node(self, node):
+        self.nodes.add(node)
+        self.neighbors[node] = set()
+        self.incident_edges[node] = set()
+
+    def add_edge(self, i, j):
+        if i not in self.nodes or j not in self.nodes:
+            raise ValueError("Nodes not in graph!")
+        new_edge = frozenset([i, j])
+        if new_edge in self.edges:
+            raise ValueError("Duplicate edge {new_edge}!")
+        if len(new_edge) == 1:
+            raise ValueError("Loop edges are not allowed ({i})")
+
+        self.neighbors[i].add(j)
+        self.neighbors[j].add(i)
+        self.incident_edges[i].add(new_edge)
+        self.incident_edges[j].add(new_edge)
+        self.edges.add(new_edge)
+        return new_edge
+
+    def remove_node(self, node):
+        if node not in self.nodes:
+            raise ValueError("Node not in graph.")
+
+        edges_to_remove = list(self.incident_edges[node])
+
+        for incident_edge in edges_to_remove:
+            edge_as_list = list(incident_edge)
+            self.remove_edge(edge_as_list[0], edge_as_list[1])
+
+        del self.incident_edges[node]
+        del self.neighbors[node]
+        self.nodes.remove(node)
+
+    def remove_edge(self, i, j):
+        old_edge = frozenset([i, j])
+        if i not in self.nodes or j not in self.nodes:
+            raise ValueError("Nodes not in graph!")
+        if old_edge not in self.edges:
+            raise ValueError("Edge not in graph!")
+        self.neighbors[i].remove(j)
+        self.neighbors[j].remove(i)
+        self.incident_edges[i].remove(old_edge)
+        self.incident_edges[j].remove(old_edge)
+        self.edges.remove(old_edge)
+
+    def get_incident_edges(self, node):
+        return self.incident_edges[node]
+
+    def get_neighbors(self, node):
+        return self.neighbors[node]
+
+    def __str__(self):
+        return "{} {} with following attributes: \n\t\tNodes{}\n\t\tEdges{}".format(type(self).__name__, self.name,
+                                                                                    self.nodes, self.edges)
+
+
+
 class Graph(object):
     """ Representing a directed graph ( G = ( V , E) ).
 
@@ -421,6 +491,7 @@ class SubstrateX(object):
             for snode in self.substrate.get_nodes_by_type(ntype):
                 self.substrate_node_resources.append((ntype, snode))
                 self.substrate_resources.append((ntype, snode))
+                #print self.substrate.node[snode]
                 self.substrate_resource_capacities[(ntype, snode)] = self.substrate.node[snode]['capacity'][ntype]
 
         self.substrate_node_resources = sorted(

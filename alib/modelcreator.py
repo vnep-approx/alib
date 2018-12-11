@@ -486,6 +486,7 @@ class AbstractModelCreator(object):
         else:
             self.logger = logger
 
+
     def init_model_creator(self):
         ''' Initializes the modelcreator by generating the model. Afterwards, model.compute() can be called to let
             Gurobi solve the model.
