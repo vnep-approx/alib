@@ -128,9 +128,13 @@ class UndirectedGraph(object):
     def get_neighbors(self, node):
         return self.neighbors[node]
 
+    def get_edge_representation(self):
+        return [list(edge) for edge in self.edges]
+
     def __str__(self):
         return "{} {} with following attributes: \n\t\tNodes{}\n\t\tEdges{}".format(type(self).__name__, self.name,
                                                                                     self.nodes, self.edges)
+
 
 
 
