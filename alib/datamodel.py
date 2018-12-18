@@ -200,6 +200,42 @@ def is_connected_undirected_edge_representation(edge_list):
     else:
         return False
 
+def get_number_of_nodes_edge_list_representation(undirected_graph_edge_representation):
+    nodes = set()
+    for i,j in undirected_graph_edge_representation:
+        nodes.add(i)
+        nodes.add(j)
+    return len(nodes)
+
+
+
+class UndirectedGraphStorage(object):
+
+    def __init__(self, parameter_name):
+        self.parameter_name = parameter_name
+        self.undirected_edge_representation_storage = {}
+
+    def add_graph_as_edge_representation(self, parameter, edge_representation):
+        if parameter not in self.undirected_edge_representation_storage:
+            self.undirected_edge_representation_storage[parameter] = {}
+        number_of_nodes = get_number_of_nodes_edge_list_representation(edge_representation)
+        if number_of_nodes not in self.undirected_edge_representation_storage[parameter]:
+            self.undirected_edge_representation_storage[parameter][number_of_nodes] =  []
+
+        self.undirected_edge_representation_storage[parameter][number_of_nodes].append(edge_representation)
+
+    def add_graph(self, parameter, graph):
+        self.add_graph_as_edge_representation(parameter, graph.get_edge_representation())
+
+    def get_random_graph(self, parameter, number_of_nodes, random_instance):
+        if parameter not in self.undirected_edge_representation_storage:
+            raise ValueError("No graphs are stored for parameter {}".format(parameter))
+        if number_of_nodes not in self.undirected_edge_representation_storage[parameter]:
+            raise ValueError("No graphs are stored for parameter {} and number of nodes {}".format(parameter, number_of_nodes))
+
+        number_of_potential_graphs = len(self.undirected_edge_representation_storage[parameter][number_of_nodes])
+        random_instance
+
 
 
 
