@@ -21,6 +21,8 @@
 # SOFTWARE.
 #
 
+from collections import defaultdict
+
 class SubstrateError(Exception): pass
 
 
@@ -134,6 +136,69 @@ class UndirectedGraph(object):
     def __str__(self):
         return "{} {} with following attributes: \n\t\tNodes{}\n\t\tEdges{}".format(type(self).__name__, self.name,
                                                                                     self.nodes, self.edges)
+
+def get_undirected_graph_from_edge_representation(edge_list, name):
+    ''' returns an undirected graph given a list of edges
+    '''
+
+    graph = UndirectedGraph(name=name)
+
+    for i,j in edge_list:
+        if i not in graph.nodes:
+            graph.add_node(i)
+        if j not in graph.nodes:
+            graph.add_node(j)
+        graph.add_edge(i,j)
+
+def is_connected_undirected_edge_representation(edge_list):
+    ''' Given a list of edges, returns whether the result undirected graph is connected
+    '''
+    #each node is assigned the connected component id
+    node_to_connected_component_id = {}
+    # holds the nodes for each connected component ids
+    connected_component_id_to_nodes = defaultdict(list)
+
+    new_connected_component_id = 0
+
+    for i,j in edge_list:
+
+        if i in node_to_connected_component_id.keys() and j in node_to_connected_component_id.keys():
+            #both nodes are already known
+            connected_component_i = node_to_connected_component_id[i]
+            connected_component_j = node_to_connected_component_id[j]
+
+            if connected_component_i != connected_component_j:
+                #merge connected components, removing the connected component of node j
+
+                for k in connected_component_id_to_nodes[connected_component_j]:
+                    node_to_connected_component_id[k] = connected_component_i
+
+                connected_component_id_to_nodes[connected_component_i].extend(connected_component_id_to_nodes[connected_component_j])
+                del connected_component_id_to_nodes[connected_component_j]
+
+        elif i in node_to_connected_component_id.keys() and j not in node_to_connected_component_id.keys():
+            #add j to connected component of i
+            connected_component_i = node_to_connected_component_id[i]
+            node_to_connected_component_id[j] = connected_component_i
+            connected_component_id_to_nodes[connected_component_i].append(j)
+
+        elif i not in node_to_connected_component_id.keys() and j in node_to_connected_component_id.keys():
+            # add i to connected component of j
+            connected_component_j = node_to_connected_component_id[j]
+            node_to_connected_component_id[i] = connected_component_j
+            connected_component_id_to_nodes[connected_component_j].append(i)
+
+        else:
+            # create new connected component and add both nodes
+            new_connected_component_id += 1
+            node_to_connected_component_id[i] = new_connected_component_id
+            node_to_connected_component_id[j] = new_connected_component_id
+            connected_component_id_to_nodes[new_connected_component_id].extend([i,j])
+
+    if len(connected_component_id_to_nodes.keys()) == 1:
+        return True
+    else:
+        return False
 
 
 
