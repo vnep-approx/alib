@@ -22,10 +22,15 @@
 #
 
 import os
-import pickle
 import yaml
 import click
 import itertools
+
+try:
+    import cPickle as pickle
+except ImportError:
+    import pickle
+
 
 from . import run_experiment, scenariogeneration, solutions, util, datamodel
 
