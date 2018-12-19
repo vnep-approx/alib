@@ -28,6 +28,7 @@ import copy
 import itertools
 import math
 import multiprocessing as mp
+from multiprocessing.managers import BaseManager
 import os
 
 import time
@@ -312,6 +313,12 @@ class ScenarioParameterContainer(object):
                         spd[task][strat][class_name][key][val].add(currentindex)
 
 
+class CustomizedDataManager(BaseManager):
+    pass
+
+CustomizedDataManager.register('UndirectedGraphStorage', datamodel.UndirectedGraphStorage)
+
+
 class ScenarioGenerator(object):
     '''Class to generate scenarios according to a specific parameter space.
 
@@ -320,10 +327,29 @@ class ScenarioGenerator(object):
         self.scenario_parameter_container = None
         self.threads = threads
         self.repetition = 1
+        self.main_data_manager = None
+        self.actual_data_managers = {}
 
     def generate_scenarios(self, scenario_parameter_space, repetition=1, scenario_index_offset=0):
         self.repetition = repetition
         global_logger.info("Generating scenarios...")
+
+
+        if "data_managers" in scenario_parameter_space:
+            self.main_data_manager = CustomizedDataManager()
+            self.main_data_manager.start()
+            for key, value in scenario_parameter_space["data_managers"].iteritems():
+                if key == "UndirectedGraphStorage":
+                    global_logger.info("Starting UndirectedGraphStorage Manager")
+                    graph_storage_manager = self.main_data_manager.UndirectedGraphStorage(parameter_name=None)
+                    global_logger.info("\tLoading UndirectedGraphStorage data")
+                    graph_storage_manager.load_from_pickle(value)
+                    global_logger.info("\tDone.")
+                    self.actual_data_managers[key] = graph_storage_manager
+                else:
+                    raise ValueError("Data Manager {} is unknown.".format(key))
+            del scenario_parameter_space['data_managers']
+
         self.scenario_parameter_container = ScenarioParameterContainer(scenario_parameter_space, scenario_index_offset=scenario_index_offset)
         self.scenario_parameter_container.generate_all_scenario_parameter_combinations(repetition)
         scenario_parameter_combination_list = self.scenario_parameter_container.scenario_parameter_combination_list
@@ -340,17 +366,19 @@ class ScenarioGenerator(object):
 
     def _singleprocessed(self, scenario_parameter_combination_list, scenario_index_offset=0):
         for i, sp in enumerate(scenario_parameter_combination_list, scenario_index_offset):
-            yield build_scenario((i, sp))
+            yield build_scenario((i, sp, self.actual_data_managers))
 
     def _multiprocessed(self, scenario_parameter_combination_list, scenario_index_offset=0):
         proc_pool = mp.Pool(processes=self.threads, maxtasksperchild=100)
-        for out in proc_pool.map(build_scenario, list(enumerate(scenario_parameter_combination_list, scenario_index_offset))):
+        task_list = [(i+scenario_index_offset, scenario_parameter_combination_list[i], self.actual_data_managers) for i in range(len(scenario_parameter_combination_list))]
+
+        for out in proc_pool.map(build_scenario, task_list):
             yield out
         proc_pool.close()
         proc_pool.join()
 
 
-def build_scenario(i_sp_tup, maxrep=1):
+def build_scenario(i_sp_tup):
     """
     Build a single scenario based on the scenario parameters.
 
@@ -372,7 +400,15 @@ def build_scenario(i_sp_tup, maxrep=1):
     :return:
     """
 
-    i, sp = i_sp_tup
+    i, sp, datamanager_dict = None, None, None
+
+    if len(i_sp_tup) == 2:
+        i, sp = i_sp_tup
+    elif len(i_sp_tup) == 3:
+        i, sp, datamanager_dict = i_sp_tup
+    else:
+        raise ValueError("Don't know how to handle {} many arguments.".format(len(i_sp_tup)))
+
     logger = util.get_logger("sg_worker_{}".format(os.getpid()), make_file=False, propagate=False)
     logger.info("Generating scenario {}  with {}".format(i, sp))
     scenario = datamodel.Scenario(name="scenario_{}_rep_{}".format(i / sp['maxrepetition'], sp['repetition']),
@@ -384,6 +420,8 @@ def build_scenario(i_sp_tup, maxrep=1):
     class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
     global_name_space = globals()
     rg = global_name_space[class_name_request_generator]()
+    if datamanager_dict is not None:
+        rg.register_data_manager_dict(datamanager_dict)
     rg.apply(sp, scenario)
     if NODE_PLACEMENT_TASK in sp:
         class_name_npr = sp[NODE_PLACEMENT_TASK].values()[0].keys()[0]
@@ -432,6 +470,10 @@ class AbstractRequestGenerator(ScenariogenerationTask):
         self._raw_parameters = None
         self._scenario_parameters_have_changed = True  # to avoid redundant calculations on the same scenario
         self._node_types = None
+        self._data_manager_dict = None
+
+    def register_data_manager_dict(self, data_manager_dict):
+        self._data_manager_dict = data_manager_dict
 
     def apply(self, scenario_parameters, scenario):
         class_raw_parameters_dict = scenario_parameters[REQUEST_GENERATION_TASK].values()[0]
@@ -1193,6 +1235,180 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attemps, self._raw_parameters)
         )
 
+
+class TreewidthRequestGenerator(AbstractRequestGenerator):
+    """
+    Generate request topologies of bounded treewidth using a mandatory UndirectedGraphStorage.
+    Specifically, for graphs of treewidth 1 simple trees are generated while for higher treewidths the
+    graphs from the UndirectedGraphStorage are used.
+
+    To specify an UndirectedGraphStorage, a pickle has to be given in the yaml-file as a data manager like
+    data_managers:
+      UndirectedGraphStorage: <location_of_pickle>
+
+    """
+    EXPECTED_PARAMETERS = [
+        "number_of_requests",
+        "treewidth",
+        "min_number_of_nodes",
+        "max_number_of_nodes",
+        "node_resource_factor",
+        "edge_resource_factor",
+        "normalize"
+    ]
+
+    def __init__(self, logger=None):
+        super(TreewidthRequestGenerator, self).__init__(logger)
+        self._raw_parameters = None
+        self._substrate = None
+        self._node_demand_by_type = None
+        self._edge_demand = None
+
+    def generate_request(self,
+                         name,
+                         raw_parameters,
+                         substrate):
+        self._node_types = list(substrate.types)
+        self._raw_parameters = raw_parameters
+        self._substrate = substrate
+        self._treewidth = self._raw_parameters["treewidth"]
+        self._average_edge_numbers_of_treewidth = None
+        self._undirected_graph_storage = None
+        self._number_of_requests = self._raw_parameters["number_of_requests"]
+        self._min_number_nodes = int(self._raw_parameters["min_number_of_nodes"])
+        self._max_number_nodes = int(self._raw_parameters["max_number_of_nodes"])
+        self._number_of_nodes = None
+        if self._treewidth > 1:
+            self._undirected_graph_storage = self._data_manager_dict["UndirectedGraphStorage"]
+        self._calculate_average_resource_demands()
+        req = None
+        is_feasible = False
+        self._generation_attemps = 0
+        while not is_feasible:
+            req = self._generate_request_graph(name)
+            is_feasible = self.verify_substrate_has_sufficient_capacity(req, substrate)
+            self._generation_attemps += 1
+            if self._generation_attemps > 10 ** 7:
+                self._abort()
+        self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
+        return req
+
+    def _calculate_average_resource_demands(self):
+
+        self._expected_number_of_request_nodes_per_type = float(self._number_of_requests * (self._min_number_nodes + self._max_number_nodes)/2.0) / len(self._node_types)
+        self._expected_number_of_request_edges = None
+        if self._treewidth == 1:
+            self._expected_number_of_request_edges = (self._expected_number_of_request_nodes_per_type * len(self._node_types)) -1
+        else:
+            if self._average_edge_numbers_of_treewidth is None:
+                self._average_edge_numbers_of_treewidth = {}
+            if self._treewidth not in self._average_edge_numbers_of_treewidth.keys():
+                self._average_edge_numbers_of_treewidth[self._treewidth] = self._undirected_graph_storage.get_average_number_of_edges_for_parameter(self._treewidth)
+            self._expected_number_of_request_edges = 0
+            for number_of_nodes in range(self._min_number_nodes, self._max_number_nodes+1):
+                self._expected_number_of_request_edges += self._average_edge_numbers_of_treewidth[self._treewidth][number_of_nodes]
+            self._expected_number_of_request_edges = float(self._number_of_requests) * float(self._expected_number_of_request_edges) / (self._max_number_nodes - self._min_number_nodes + 1)
+
+
+        node_res = self._raw_parameters["node_resource_factor"]
+        edge_res_factor = self._raw_parameters["edge_resource_factor"]
+        self.average_request_edge_resources = (
+                                                      1.0 / edge_res_factor) * self._substrate.get_total_edge_resources() / self._expected_number_of_request_edges
+        self.average_request_node_resources_per_type = {}
+        for ntype in self._node_types:
+            self.average_request_node_resources_per_type[ntype] = node_res * (self._substrate.get_total_node_resources(
+                ntype) / self._expected_number_of_request_nodes_per_type)
+
+    def _select_node_edge_resources(self):
+        self._edge_demand = numpy.random.exponential(self.average_request_edge_resources)
+        self._node_demand_by_type = {}
+        for ntype in self._node_types:
+            self._node_demand_by_type[ntype] = self._edge_demand / self.average_request_edge_resources * \
+                                               self.average_request_node_resources_per_type[ntype]
+
+    def _select_number_of_nodes(self):
+        self._number_of_nodes = random.randint(self._min_number_nodes, self._max_number_nodes)
+
+    def _generate_edge_list_representation(self):
+
+        if self._treewidth == 1:
+            return self._generate_edge_representation_of_tree(self._number_of_nodes)
+        else:
+            return self._undirected_graph_storage.get_random_graph_as_edge_list_representation(self._treewidth, self._number_of_nodes)
+
+
+    def _generate_edge_representation_of_tree(self, number_of_nodes):
+        #first generate all potential edges
+        all_edges = [(str(i), str(j)) for i in range(1,number_of_nodes+1) for j in range(i+1, number_of_nodes+1)]
+        #shuffle them
+        random.shuffle(all_edges)
+        #use edges as long as these do not close cycles; to achieve that we use again the concept of connected components
+        #initially each node only reaches itself, while an edge connecting two nodes leads to the merging of
+        #the respective two connected components
+
+        node_to_connected_component_id = {str(i) : i for i in range(1, number_of_nodes+1)}
+        connected_component_id_to_nodes = {i: [str(i)] for i in range(1, number_of_nodes+1)}
+        result = []
+        current_edge_index = 0
+        while len(connected_component_id_to_nodes.keys()) > 1:
+            #check if adding edge would violate tree property
+            i,j = all_edges[current_edge_index]
+            component_i = node_to_connected_component_id[i]
+            component_j = node_to_connected_component_id[j]
+            if component_i == component_j:
+                #do not add edge
+                pass
+            else:
+                # add edge
+                result.append((i,j))
+                # merge
+                connected_component_id_to_nodes[component_i].extend(connected_component_id_to_nodes[component_j])
+                for node in connected_component_id_to_nodes[component_j]:
+                    node_to_connected_component_id[node] = component_i
+                del connected_component_id_to_nodes[component_j]
+            #consider next edge
+            current_edge_index += 1
+        return result
+
+    def _generate_request_graph(self, name):
+
+        def _get_node_name(node):
+            return name + "_" + node
+
+        self._select_number_of_nodes()
+
+        self._select_node_edge_resources()
+        req_edge_representation = self._generate_edge_list_representation()
+        nodes = [str(i) for i in range(1,self._number_of_nodes+1)]
+
+        req = datamodel.Request(name)
+
+        for node in nodes:
+            #select node type:
+            ntype = self._next_node_type()
+            allowed_nodes = self._substrate.get_nodes_by_type(ntype)
+
+            req.add_node(_get_node_name(node),
+                         self._node_demand_by_type[ntype],
+                         ntype,
+                         allowed_nodes)
+
+        for edge in req_edge_representation:
+            i,j = edge
+            #draw random orientation of edge:
+            actual_edge = (_get_node_name(i),_get_node_name(j))
+            if random.random() <= 0.5:
+                actual_edge = (_get_node_name(j),_get_node_name(i))
+            i,j = actual_edge
+            req.add_edge(i, j, self._edge_demand)
+
+        return req
+
+
+    def _abort(self):
+        raise RequestGenerationError(
+            "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attemps, self._raw_parameters)
+        )
 
 class AbstractProfitCalculator(ScenariogenerationTask):
     """Base class for the profit generation task."""
