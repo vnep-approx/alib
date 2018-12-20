@@ -411,7 +411,7 @@ def build_scenario(i_sp_tup):
         else:
             raise ValueError("Don't know how to handle {} many arguments.".format(len(i_sp_tup)))
 
-        logger = util.get_logger("sg_worker_{}".format(os.getpid()), make_file=True, propagate=True)
+        logger = util.get_logger("sg_worker_{}".format(os.getpid()), make_file=True, propagate=False)
         logger.info("Generating scenario {}  with {}".format(i, sp))
         scenario = datamodel.Scenario(name="scenario_{}_rep_{}".format(i / sp['maxrepetition'], sp['repetition']),
                                       substrate=None,
