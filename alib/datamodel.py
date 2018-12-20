@@ -114,6 +114,7 @@ class UndirectedGraph(object):
         edges_to_remove = list(self.incident_edges[node])
 
         for incident_edge in edges_to_remove:
+            print("Going to remove edge {}; current state is: {}".format(incident_edge, vars(self)))
             edge_as_list = list(incident_edge)
             self.remove_edge(edge_as_list[0], edge_as_list[1])
 
@@ -127,10 +128,13 @@ class UndirectedGraph(object):
             raise ValueError("Nodes not in graph!")
         if old_edge not in self.edges:
             raise ValueError("Edge not in graph!")
+
         self.neighbors[i].remove(j)
         self.neighbors[j].remove(i)
+
         self.incident_edges[i].remove(old_edge)
         self.incident_edges[j].remove(old_edge)
+
         self.edges.remove(old_edge)
 
     def get_incident_edges(self, node):
