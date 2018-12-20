@@ -400,38 +400,44 @@ def build_scenario(i_sp_tup):
     :return:
     """
 
-    i, sp, datamanager_dict = None, None, None
+    try:
 
-    if len(i_sp_tup) == 2:
-        i, sp = i_sp_tup
-    elif len(i_sp_tup) == 3:
-        i, sp, datamanager_dict = i_sp_tup
-    else:
-        raise ValueError("Don't know how to handle {} many arguments.".format(len(i_sp_tup)))
+        i, sp, datamanager_dict = None, None, None
 
-    logger = util.get_logger("sg_worker_{}".format(os.getpid()), make_file=False, propagate=False)
-    logger.info("Generating scenario {}  with {}".format(i, sp))
-    scenario = datamodel.Scenario(name="scenario_{}_rep_{}".format(i / sp['maxrepetition'], sp['repetition']),
-                                  substrate=None,
-                                  requests=None,
-                                  objective=datamodel.Objective.MIN_COST)
-    top_zoo_reader = TopologyZooReader()
-    top_zoo_reader.apply(sp, scenario)
-    class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
-    global_name_space = globals()
-    rg = global_name_space[class_name_request_generator]()
-    if datamanager_dict is not None:
-        rg.register_data_manager_dict(datamanager_dict)
-    rg.apply(sp, scenario)
-    if NODE_PLACEMENT_TASK in sp:
-        class_name_npr = sp[NODE_PLACEMENT_TASK].values()[0].keys()[0]
-        npr = global_name_space[class_name_npr]()
-        npr.apply(sp, scenario)
-    if PROFIT_CALCULATION_TASK in sp:
-        class_name_profit_calc = sp[PROFIT_CALCULATION_TASK].values()[0].keys()[0]
-        pc = global_name_space[class_name_profit_calc]()
-        pc.apply(sp, scenario)
-        scenario.objective = datamodel.Objective.MAX_PROFIT
+        if len(i_sp_tup) == 2:
+            i, sp = i_sp_tup
+        elif len(i_sp_tup) == 3:
+            i, sp, datamanager_dict = i_sp_tup
+        else:
+            raise ValueError("Don't know how to handle {} many arguments.".format(len(i_sp_tup)))
+
+        logger = util.get_logger("sg_worker_{}".format(os.getpid()), make_file=True, propagate=True)
+        logger.info("Generating scenario {}  with {}".format(i, sp))
+        scenario = datamodel.Scenario(name="scenario_{}_rep_{}".format(i / sp['maxrepetition'], sp['repetition']),
+                                      substrate=None,
+                                      requests=None,
+                                      objective=datamodel.Objective.MIN_COST)
+        top_zoo_reader = TopologyZooReader(logger=logger)
+        top_zoo_reader.apply(sp, scenario)
+        class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
+        global_name_space = globals()
+        rg = global_name_space[class_name_request_generator](logger=logger)
+        if datamanager_dict is not None:
+            rg.register_data_manager_dict(datamanager_dict)
+        rg.apply(sp, scenario)
+        if NODE_PLACEMENT_TASK in sp:
+            class_name_npr = sp[NODE_PLACEMENT_TASK].values()[0].keys()[0]
+            npr = global_name_space[class_name_npr](logger=logger)
+            npr.apply(sp, scenario)
+        if PROFIT_CALCULATION_TASK in sp:
+            class_name_profit_calc = sp[PROFIT_CALCULATION_TASK].values()[0].keys()[0]
+            pc = global_name_space[class_name_profit_calc](logger=logger)
+            pc.apply(sp, scenario)
+            scenario.objective = datamodel.Objective.MAX_PROFIT
+    except Exception as e:
+        with open("log/{}_error.log".format(os.getpid()), "w") as f:
+            import traceback
+            traceback.print_exc(file=f)
     return i, scenario, sp
 
 
@@ -1305,6 +1311,8 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
             if self._treewidth not in self._average_edge_numbers_of_treewidth.keys():
                 self._average_edge_numbers_of_treewidth[self._treewidth] = self._undirected_graph_storage.get_average_number_of_edges_for_parameter(self._treewidth)
             self._expected_number_of_request_edges = 0
+            self.logger.debug("Average edge numbers of treewidth {} are:\n{}".format(self._treewidth, self._average_edge_numbers_of_treewidth[self._treewidth]))
+
             for number_of_nodes in range(self._min_number_nodes, self._max_number_nodes+1):
                 self._expected_number_of_request_edges += self._average_edge_numbers_of_treewidth[self._treewidth][number_of_nodes]
             self._expected_number_of_request_edges = float(self._number_of_requests) * float(self._expected_number_of_request_edges) / (self._max_number_nodes - self._min_number_nodes + 1)
