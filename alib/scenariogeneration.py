@@ -1550,12 +1550,11 @@ class OptimalEmbeddingProfitCalculator(AbstractProfitCalculator):
         scenario_copy.objective = datamodel.Objective.MIN_COST
 
         gurobi_settings = modelcreator.GurobiSettings(mipGap=0.001,
-                                                      iterationLimit=10**99,
                                                       nodeLimit=None,
                                                       heuristics=None,
                                                       threads=1,
                                                       timelimit=self._raw_parameters["timelimit"])
-        mc = mip.ClassicMCFModel(scenario_copy)
+        mc = mip.ClassicMCFModel(scenario_copy, logger=self.logger)
 
         mc.init_model_creator()
         mc.model.setParam("OutputFlag", 0)
