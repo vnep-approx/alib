@@ -24,6 +24,7 @@
 from collections import defaultdict
 import random
 import numpy as np
+import multiprocessing
 
 try:
     import cPickle as pickle
@@ -226,85 +227,94 @@ class UndirectedGraphStorage(object):
             random_instance = random.Random()
         self.random_instance = random_instance
         self._average_number_of_edges_dict = {}
+        self.lock = multiprocessing.Lock()
 
     def add_graph_as_edge_representation(self, parameter, edge_representation):
-        if parameter not in self.undirected_edge_representation_storage:
-            self.undirected_edge_representation_storage[parameter] = {}
-        number_of_nodes = get_number_of_nodes_edge_list_representation(edge_representation)
-        if number_of_nodes not in self.undirected_edge_representation_storage[parameter]:
-            self.undirected_edge_representation_storage[parameter][number_of_nodes] =  []
+        with self.lock:
+            if parameter not in self.undirected_edge_representation_storage:
+                self.undirected_edge_representation_storage[parameter] = {}
+            number_of_nodes = get_number_of_nodes_edge_list_representation(edge_representation)
+            if number_of_nodes not in self.undirected_edge_representation_storage[parameter]:
+                self.undirected_edge_representation_storage[parameter][number_of_nodes] = []
 
-        self.undirected_edge_representation_storage[parameter][number_of_nodes].append(edge_representation)
+            self.undirected_edge_representation_storage[parameter][number_of_nodes].append(edge_representation)
 
     def load_from_pickle(self, pickle_path):
-        other_undirected_graph_storage = None
-        with open(pickle_path, "r") as f:
-            other_undirected_graph_storage = pickle.load(f)
+        with self.lock:
+            other_undirected_graph_storage = None
+            with open(pickle_path, "r") as f:
+                other_undirected_graph_storage = pickle.load(f)
 
-        self.parameter_name = other_undirected_graph_storage.parameter_name
-        self.undirected_edge_representation_storage = other_undirected_graph_storage.undirected_edge_representation_storage
+            self.parameter_name = other_undirected_graph_storage.parameter_name
+            self.undirected_edge_representation_storage = other_undirected_graph_storage.undirected_edge_representation_storage
 
     def add_graph(self, parameter, graph):
-        self.add_graph_as_edge_representation(parameter, graph.get_edge_representation())
+        with self.lock:
+            self.add_graph_as_edge_representation(parameter, graph.get_edge_representation())
 
 
     def get_random_graph(self, parameter, number_of_nodes, name=""):
-        edge_graph_representation = self.get_random_graph_as_edge_list_representation(parameter, number_of_nodes)
-        return get_undirected_graph_from_edge_representation(edge_graph_representation, name)
+        with self.lock:
+            edge_graph_representation = self.get_random_graph_as_edge_list_representation(parameter, number_of_nodes)
+            return get_undirected_graph_from_edge_representation(edge_graph_representation, name)
 
     def get_random_graph_as_edge_list_representation(self, parameter, number_of_nodes):
-        if parameter not in self.undirected_edge_representation_storage:
-            raise ValueError("No graphs are stored for parameter {}".format(parameter))
-        if number_of_nodes not in self.undirected_edge_representation_storage[parameter]:
-            raise ValueError("No graphs are stored for parameter {} and number of nodes {}".format(parameter, number_of_nodes))
+        with self.lock:
+            if parameter not in self.undirected_edge_representation_storage:
+                raise ValueError("No graphs are stored for parameter {}".format(parameter))
+            if number_of_nodes not in self.undirected_edge_representation_storage[parameter]:
+                raise ValueError("No graphs are stored for parameter {} and number of nodes {}".format(parameter, number_of_nodes))
 
-        number_of_potential_graphs = len(self.undirected_edge_representation_storage[parameter][number_of_nodes])
-        selected_index = self.random_instance.randint(0, number_of_potential_graphs-1)
-        return self.undirected_edge_representation_storage[parameter][number_of_nodes][selected_index]
+            number_of_potential_graphs = len(self.undirected_edge_representation_storage[parameter][number_of_nodes])
+            selected_index = self.random_instance.randint(0, number_of_potential_graphs-1)
+            return self.undirected_edge_representation_storage[parameter][number_of_nodes][selected_index]
 
     def _get_edge_distribution_information(self, parameter_value, number_of_nodes):
-        number_of_graphs = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes])
-        edge_counts = np.zeros(number_of_graphs)
-        for i in range(number_of_graphs):
-            edge_counts[i] = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes][i])
-        sorted_edge_counts = np.sort(edge_counts)
-        interesting_indices = [0] + [int(number_of_graphs*i/100.0) for i in [5,25,50,75,95]] + [number_of_graphs-1]
-        percentiles = [sorted_edge_counts[index] for index in interesting_indices]
-        return "min: {:>2}, max: {:>2}, median: {:>2};   5, 25, 75, 95 percentiles: {:>2} {:>2} {:>2} {:>2}".format(percentiles[0],
-                                                                                                                    percentiles[6],
-                                                                                                                    percentiles[3],
-                                                                                                                    percentiles[1],
-                                                                                                                    percentiles[2],
-                                                                                                                    percentiles[4],
-                                                                                                                    percentiles[5])
+        with self.lock:
+            number_of_graphs = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes])
+            edge_counts = np.zeros(number_of_graphs)
+            for i in range(number_of_graphs):
+                edge_counts[i] = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes][i])
+            sorted_edge_counts = np.sort(edge_counts)
+            interesting_indices = [0] + [int(number_of_graphs*i/100.0) for i in [5,25,50,75,95]] + [number_of_graphs-1]
+            percentiles = [sorted_edge_counts[index] for index in interesting_indices]
+            return "min: {:>2}, max: {:>2}, median: {:>2};   5, 25, 75, 95 percentiles: {:>2} {:>2} {:>2} {:>2}".format(percentiles[0],
+                                                                                                                        percentiles[6],
+                                                                                                                        percentiles[3],
+                                                                                                                        percentiles[1],
+                                                                                                                        percentiles[2],
+                                                                                                                        percentiles[4],
+                                                                                                                        percentiles[5])
 
     def get_average_number_of_edges_for_parameter(self, parameter_value):
-        if parameter_value in self._average_number_of_edges_dict.keys():
-            return self._average_number_of_edges_dict[parameter_value]
-        else:
-            self._average_number_of_edges_dict[parameter_value] = {}
-            for number_of_nodes in self.undirected_edge_representation_storage[parameter_value].keys():
-                number_of_graphs = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes])
-                edge_counts = np.zeros(number_of_graphs)
-                for i in range(number_of_graphs):
-                    edge_counts[i] = len(
-                        self.undirected_edge_representation_storage[parameter_value][number_of_nodes][i])
-                self._average_number_of_edges_dict[parameter_value][number_of_nodes] = np.average(edge_counts)
-            return self._average_number_of_edges_dict[parameter_value]
+        with self.lock:
+            if parameter_value in self._average_number_of_edges_dict.keys():
+                return self._average_number_of_edges_dict[parameter_value]
+            else:
+                self._average_number_of_edges_dict[parameter_value] = {}
+                for foolaa in self.undirected_edge_representation_storage[parameter_value].keys():
+                    number_of_graphs = len(self.undirected_edge_representation_storage[parameter_value][foolaa])
+                    edge_counts = np.zeros(number_of_graphs)
+                    for i in range(number_of_graphs):
+                        edge_counts[i] = len(
+                            self.undirected_edge_representation_storage[parameter_value][foolaa][i])
+                    self._average_number_of_edges_dict[parameter_value][foolaa] = np.average(edge_counts)
+                return self._average_number_of_edges_dict[parameter_value]
 
 
     def get_information(self):
-        result = ""
-        for parameter_value in self.undirected_edge_representation_storage.keys():
-            total = 0
-            result += "========================\nPARAMETER {} = {}\n========================\n".format(self.parameter_name, parameter_value)
-            for number_of_nodes in self.undirected_edge_representation_storage[parameter_value].keys():
-                number_of_graphs = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes])
-                edge_info = self._get_edge_distribution_information(parameter_value, number_of_nodes)
-                result += "\tnodes: {:>3} --> {:>5} graphs with edge distribution {}\n".format(number_of_nodes, number_of_graphs, edge_info)
-                total += number_of_graphs
-            result += "========================\nTOTAL: {} graphs\n========================\n".format(total)
-        return result
+        with self.lock:
+            result = ""
+            for parameter_value in self.undirected_edge_representation_storage.keys():
+                total = 0
+                result += "========================\nPARAMETER {} = {}\n========================\n".format(self.parameter_name, parameter_value)
+                for number_of_nodes in self.undirected_edge_representation_storage[parameter_value].keys():
+                    number_of_graphs = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes])
+                    edge_info = self._get_edge_distribution_information(parameter_value, number_of_nodes)
+                    result += "\tnodes: {:>3} --> {:>5} graphs with edge distribution {}\n".format(number_of_nodes, number_of_graphs, edge_info)
+                    total += number_of_graphs
+                result += "========================\nTOTAL: {} graphs\n========================\n".format(total)
+            return result
 
 
 class Graph(object):
