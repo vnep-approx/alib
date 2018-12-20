@@ -1311,7 +1311,6 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
             if self._treewidth not in self._average_edge_numbers_of_treewidth.keys():
                 self._average_edge_numbers_of_treewidth[self._treewidth] = self._undirected_graph_storage.get_average_number_of_edges_for_parameter(self._treewidth)
             self._expected_number_of_request_edges = 0
-            self.logger.debug("Average edge numbers of treewidth {} are:\n{}".format(self._treewidth, self._average_edge_numbers_of_treewidth[self._treewidth]))
 
             for number_of_nodes in range(self._min_number_nodes, self._max_number_nodes+1):
                 self._expected_number_of_request_edges += self._average_edge_numbers_of_treewidth[self._treewidth][number_of_nodes]
