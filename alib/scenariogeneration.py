@@ -28,13 +28,14 @@ import copy
 import itertools
 import math
 import multiprocessing as mp
-from multiprocessing.managers import BaseManager
+from multiprocessing.managers import BaseManager, SyncManager
 import os
 
 import time
 import yaml
 from collections import deque, namedtuple
 from random import Random
+from vnep_approx import treewidth_model
 
 import numpy.random
 
@@ -313,7 +314,7 @@ class ScenarioParameterContainer(object):
                         spd[task][strat][class_name][key][val].add(currentindex)
 
 
-class CustomizedDataManager(BaseManager):
+class CustomizedDataManager(SyncManager):
     pass
 
 CustomizedDataManager.register('UndirectedGraphStorage', datamodel.UndirectedGraphStorage)
@@ -342,10 +343,11 @@ class ScenarioGenerator(object):
                 if key == "UndirectedGraphStorage":
                     global_logger.info("Starting UndirectedGraphStorage Manager")
                     graph_storage_manager = self.main_data_manager.UndirectedGraphStorage(parameter_name=None)
+                    graph_storage_lock = self.main_data_manager.Lock()
                     global_logger.info("\tLoading UndirectedGraphStorage data")
                     graph_storage_manager.load_from_pickle(value)
                     global_logger.info("\tDone.")
-                    self.actual_data_managers[key] = graph_storage_manager
+                    self.actual_data_managers[key] = (graph_storage_manager, graph_storage_lock)
                 else:
                     raise ValueError("Data Manager {} is unknown.".format(key))
             del scenario_parameter_space['data_managers']
@@ -1269,6 +1271,7 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
         self._substrate = None
         self._node_demand_by_type = None
         self._edge_demand = None
+        self.DEBUG_MODE = True
 
     def generate_request(self,
                          name,
@@ -1285,7 +1288,9 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
         self._max_number_nodes = int(self._raw_parameters["max_number_of_nodes"])
         self._number_of_nodes = None
         if self._treewidth > 1:
-            self._undirected_graph_storage = self._data_manager_dict["UndirectedGraphStorage"]
+            graph_storage, graph_storage_lock = self._data_manager_dict["UndirectedGraphStorage"]
+            self._undirected_graph_storage = graph_storage
+            self._undirected_graph_storage_lock = graph_storage_lock
         self._calculate_average_resource_demands()
         req = None
         is_feasible = False
@@ -1309,7 +1314,8 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
             if self._average_edge_numbers_of_treewidth is None:
                 self._average_edge_numbers_of_treewidth = {}
             if self._treewidth not in self._average_edge_numbers_of_treewidth.keys():
-                self._average_edge_numbers_of_treewidth[self._treewidth] = self._undirected_graph_storage.get_average_number_of_edges_for_parameter(self._treewidth)
+                with self._undirected_graph_storage_lock:
+                    self._average_edge_numbers_of_treewidth[self._treewidth] = self._undirected_graph_storage.get_average_number_of_edges_for_parameter(self._treewidth)
             self._expected_number_of_request_edges = 0
 
             for number_of_nodes in range(self._min_number_nodes, self._max_number_nodes+1):
@@ -1337,11 +1343,13 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
         self._number_of_nodes = random.randint(self._min_number_nodes, self._max_number_nodes)
 
     def _generate_edge_list_representation(self):
-
         if self._treewidth == 1:
             return self._generate_edge_representation_of_tree(self._number_of_nodes)
         else:
-            return self._undirected_graph_storage.get_random_graph_as_edge_list_representation(self._treewidth, self._number_of_nodes)
+            result = None
+            with self._undirected_graph_storage_lock:
+                result = self._undirected_graph_storage.get_random_graph_as_edge_list_representation(self._treewidth, self._number_of_nodes)
+            return result
 
 
     def _generate_edge_representation_of_tree(self, number_of_nodes):
@@ -1386,7 +1394,7 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
 
         self._select_node_edge_resources()
         req_edge_representation = self._generate_edge_list_representation()
-        nodes = [str(i) for i in range(1,self._number_of_nodes+1)]
+        nodes = datamodel.get_nodes_of_edge_list_representation(req_edge_representation)
 
         req = datamodel.Request(name)
 
@@ -1408,6 +1416,22 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
                 actual_edge = (_get_node_name(j),_get_node_name(i))
             i,j = actual_edge
             req.add_edge(i, j, self._edge_demand)
+
+
+        if self.DEBUG_MODE:
+            #check connectdness of request graph
+            tmp_edges = list(req.edges)
+            tmp_undir_req_graph = datamodel.get_undirected_graph_from_edge_representation(tmp_edges)
+            assert tmp_undir_req_graph.check_connectedness()
+            td_comp = treewidth_model.TreeDecompositionComputation(tmp_undir_req_graph)
+            tree_decomp = td_comp.compute_tree_decomposition()
+            assert tree_decomp.width == self._treewidth
+            td_comp = treewidth_model.TreeDecompositionComputation(req)
+            tree_decomp = td_comp.compute_tree_decomposition()
+            assert tree_decomp.width == self._treewidth
+            sntd = treewidth_model.SmallSemiNiceTDArb(tree_decomp, req)
+            self.logger.info("SUCCESSFULLY PASSED TESTS [DEBUG_MODE=TRUE]")
+            assert len(req.nodes) == self._number_of_nodes
 
         return req
 
