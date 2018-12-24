@@ -486,6 +486,8 @@ class AbstractModelCreator(object):
         else:
             self.logger = logger
 
+        self._disable_temporal_information_output = False
+
 
     def init_model_creator(self):
         ''' Initializes the modelcreator by generating the model. Afterwards, model.compute() can be called to let
@@ -599,9 +601,10 @@ class AbstractModelCreator(object):
 
         self.time_postprocessing = time.clock() - self._time_postprocess_start
 
-        self.logger.debug("Preprocessing time:   {}".format(self.time_preprocess))
-        self.logger.debug("Optimization time:    {}".format(self.time_optimization))
-        self.logger.debug("Postprocessing time:  {}".format(self.time_postprocessing))
+        if not self._disable_temporal_information_output:
+            self.logger.debug("Preprocessing time:   {}".format(self.time_preprocess))
+            self.logger.debug("Optimization time:    {}".format(self.time_optimization))
+            self.logger.debug("Postprocessing time:  {}".format(self.time_postprocessing))
 
         return result
 
@@ -659,9 +662,10 @@ class AbstractModelCreator(object):
 
         self.time_postprocessing = time.clock() - self._time_postprocess_start
 
-        self.logger.debug("Preprocessing time:   {}".format(self.time_preprocess))
-        self.logger.debug("Optimization time:    {}".format(self.time_optimization))
-        self.logger.debug("Postprocessing time:  {}".format(self.time_postprocessing))
+        if not self._disable_temporal_information_output:
+            self.logger.debug("Preprocessing time:   {}".format(self.time_preprocess))
+            self.logger.debug("Optimization time:    {}".format(self.time_optimization))
+            self.logger.debug("Postprocessing time:  {}".format(self.time_postprocessing))
 
         return result
 

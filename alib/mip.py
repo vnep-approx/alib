@@ -67,8 +67,8 @@ class ClassicMCFModel(modelcreator.AbstractEmbeddingModelCreator):
 
     ALGORITHM_ID = "ClassicMCF"
 
-    def __init__(self, scenario, gurobi_settings=None, logger=None):
-        super(ClassicMCFModel, self).__init__(scenario=scenario, gurobi_settings=gurobi_settings, logger=logger)
+    def __init__(self, scenario, gurobi_settings=None, logger=None, optimization_callback=modelcreator.gurobi_callback):
+        super(ClassicMCFModel, self).__init__(scenario=scenario, gurobi_settings=gurobi_settings, logger=logger, optimization_callback=optimization_callback)
 
         self.var_y = {}
         self.var_z = {}
