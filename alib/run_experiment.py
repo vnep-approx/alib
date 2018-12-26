@@ -267,6 +267,10 @@ class ExperimentExecution(object):
                 # original_scenario = self.scenario_container.scenario_list[scenario_id]
                 sp, original_scenario = self.scenario_container.scenario_triple[scenario_id]
                 alg_result.cleanup_references(original_scenario)
+                #while this might look a little bit weird, but we pickle the information again after the references have been cleaned up
+                #as the function that actually cleans up the references might fail...
+                with open("intermediate_result_{}_{}.pickle".format(scenario_id, alg_id), "wb") as f:
+                    pickle.dump((scenario_id, execution_id, alg_result), f)
             self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
         except Exception as e:
             stacktrace = ("\nError in processing algorithm result {}:\n".format(res) +
