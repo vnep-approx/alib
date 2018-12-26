@@ -225,8 +225,8 @@ class ExperimentExecution(object):
                 old=self.max_scenario_index,
                 new=number_of_scenarios
             ))
-            self.max_scenario_index = number_of_scenarios
-        util.check_within_range(self.min_scenario_index, 0, self.max_scenario_index, none_allowed=False)
+            self.max_scenario_index = self.min_scenario_index + number_of_scenarios
+        #util.check_within_range(self.min_scenario_index, 0, self.max_scenario_index, none_allowed=False)
         util.check_int(self.min_scenario_index, False)
         util.check_int(self.max_scenario_index, False)
 
