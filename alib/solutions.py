@@ -61,6 +61,7 @@ class IntegralScenarioSolution(object):
         return True
 
     def validate_solution_fulfills_capacity(self):
+        result = True
         substrate = self.scenario.substrate
         substrate_resources = {uv: substrate.edge[uv]["capacity"] for uv in substrate.edges}
         for u in substrate.nodes:
@@ -77,7 +78,10 @@ class IntegralScenarioSolution(object):
                     substrate_resources[uv] -= demand
         for res, remaining_cap in substrate_resources.items():
             if remaining_cap < 0:
-                print res, "violated capacity by ", -remaining_cap
+                log.error("resource {} violated capacity by {}".format(res,-remaining_cap))
+                result = False
+        return result
+
 
     def type_check(self, request, mapping, substrate):
         """ checks if requested types are in supported types from substrate
