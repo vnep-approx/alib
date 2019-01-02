@@ -287,11 +287,37 @@ def f_merge_sss(sss_pickle_file_1, sss_pickle_file_2, output):
         sss_1 = pickle.load(f)
     with open(sss_pickle_file_2, "rb") as f:
         sss_2 = pickle.load(f)
+    if (not isinstance(sss_1, solutions.ScenarioSolutionStorage)
+            or not isinstance(sss_2, solutions.ScenarioSolutionStorage)):
+        raise ValueError("Expected pickle files for two ScenarioSolutionStorage instances!")
 
     sss_1.merge_with_other_sss(sss_2)
 
     with open(output, "wb") as f:
         pickle.dump(sss_1, f)
+
+
+@cli.command()
+@click.argument('scenario_container_pickle_file_1', type=click.Path(exists=True, dir_okay=False))
+@click.argument('scenario_container_pickle_file_2', type=click.Path(exists=True, dir_okay=False))
+@click.argument('output', type=click.Path(exists=False, dir_okay=False))
+def merge_scenario_containers(scenario_container_pickle_file_1, scenario_container_pickle_file_2, output):
+    f_merge_scenario_containers(scenario_container_pickle_file_1, scenario_container_pickle_file_2, output)
+
+
+def f_merge_scenario_containers(scenario_container_pickle_file_1, scenario_container_pickle_file_2, output):
+    with open(scenario_container_pickle_file_1, "rb") as f:
+        scenario_container_1 = pickle.load(f)
+    with open(scenario_container_pickle_file_2, "rb") as f:
+        scenario_container_2 = pickle.load(f)
+    if (not isinstance(scenario_container_1, scenariogeneration.ScenarioParameterContainer)
+            or not isinstance(scenario_container_2, scenariogeneration.ScenarioParameterContainer)):
+        raise ValueError("Expected pickle files for two ScenarioParameterContainer instances!")
+
+    scenario_container_1.merge_with_other_scenario_parameter_container(scenario_container_2)
+
+    with open(output, "wb") as f:
+        pickle.dump(scenario_container_1, f)
 
 
 if __name__ == '__main__':
