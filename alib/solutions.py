@@ -69,6 +69,8 @@ class IntegralScenarioSolution(object):
             for ntype in substrate.node[u]["supported_types"]:
                 substrate_resources[ntype, u] = substrate.node[u]["capacity"][ntype]
         for req, mapping in self.request_mapping.items():
+            if mapping is None:
+                continue
             for i, u in mapping.mapping_nodes.items():
                 t = req.get_type(i)
                 demand = req.get_node_demand(i)
