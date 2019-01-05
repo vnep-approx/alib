@@ -52,7 +52,7 @@ class IntegralScenarioSolution(object):
         if (not self.scenario.validate_types()):
             return False
         for request in self.scenario.requests:
-            if (request in self.request_mapping):
+            if (request in self.request_mapping and self.request_mapping[request] is not None):
                 mapping = self.request_mapping[request]
                 substrate = self.scenario.substrate
                 rules = [self.type_check(request, mapping, substrate),
