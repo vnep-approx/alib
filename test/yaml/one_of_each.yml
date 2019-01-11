@@ -1,3 +1,4 @@
+# Contains all parameters for request generation
 request_generation:
     - short_chains:  # some arbitrary identifier for the request generation scheme
         ServiceChainGenerator:
