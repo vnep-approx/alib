@@ -905,6 +905,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             self._generation_attemps += 1
             if self._generation_attemps > 10**7:
                 self._abort()
+        self.logger.debug("Generated cactus request {} with sufficient capacities at the substrate".format(name))
         self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
         return req
 
