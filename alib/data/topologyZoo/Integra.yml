@@ -73,194 +73,194 @@ edges:
   - '26'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.85003
     Longitude: -87.65005
-    !!python/unicode 'label': !!python/unicode 'Chicago'
-    !!python/unicode 'type': !!python/unicode 'PoP with Peering'
+    label: Chicago
+    type: PoP with Peering
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.78306
     Longitude: -96.80667
-    !!python/unicode 'label': !!python/unicode 'Dallas'
-    !!python/unicode 'type': !!python/unicode 'PoP with Peering'
+    label: Dallas
+    type: PoP with Peering
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.9429
     Longitude: -123.0351
-    !!python/unicode 'label': !!python/unicode 'Salem'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Salem
+    type: Customer Service PoP
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.05817
     Longitude: -121.31531
-    !!python/unicode 'geocode_append': !!python/unicode 'OR'
-    !!python/unicode 'label': !!python/unicode 'Bend'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    geocode_append: OR
+    label: Bend
+    type: Customer Service PoP
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.05207
     Longitude: -123.08675
-    !!python/unicode 'label': !!python/unicode 'Eugene'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Eugene
+    type: Customer Service PoP
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.52963
     Longitude: -119.8138
-    !!python/unicode 'label': !!python/unicode 'Reno'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Reno
+    type: Customer Service PoP
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.58907
     Longitude: -121.30273
-    !!python/unicode 'label': !!python/unicode 'Rancho Cordova'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Rancho Cordova
+    type: Customer Service PoP
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'New York'
-    !!python/unicode 'type': !!python/unicode 'PoP with Peering'
+    label: New York
+    type: PoP with Peering
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.04372
     Longitude: -77.48749
-    !!python/unicode 'label': !!python/unicode 'Ashburn'
-    !!python/unicode 'type': !!python/unicode 'PoP with Peering'
+    label: Ashburn
+    type: PoP with Peering
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.65878
     Longitude: -117.42605
-    !!python/unicode 'label': !!python/unicode 'Spokane'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Spokane
+    type: Customer Service PoP
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 46.87719
     Longitude: -96.7898
-    !!python/unicode 'geocode_append': !!python/unicode 'ND'
-    !!python/unicode 'label': !!python/unicode 'Fargo?'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    geocode_append: ND
+    label: Fargo?
+    type: Customer Service PoP
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.78329
     Longitude: -108.50069
-    !!python/unicode 'label': !!python/unicode 'Billings'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Billings
+    type: Customer Service PoP
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.5608
     Longitude: -94.16249
-    !!python/unicode 'geocode_append': !!python/unicode 'MN'
-    !!python/unicode 'label': !!python/unicode 'St Cloud'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    geocode_append: MN
+    label: St Cloud
+    type: Customer Service PoP
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.73915
     Longitude: -104.9847
-    !!python/unicode 'label': !!python/unicode 'Denver'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Denver
+    type: Customer Service PoP
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.223
     Longitude: -111.97383
-    !!python/unicode 'label': !!python/unicode 'Ogden'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Ogden
+    type: Customer Service PoP
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.2969
     Longitude: -111.69465
-    !!python/unicode 'label': !!python/unicode 'Orem'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Orem
+    type: Customer Service PoP
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.76078
     Longitude: -111.89105
-    !!python/unicode 'label': !!python/unicode 'Salt Lake City'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Salt Lake City
+    type: Customer Service PoP
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.6135
     Longitude: -116.20345
-    !!python/unicode 'label': !!python/unicode 'Boise'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Boise
+    type: Customer Service PoP
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.52345
     Longitude: -122.67621
-    !!python/unicode 'label': !!python/unicode 'Portland'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Portland
+    type: Customer Service PoP
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.60621
     Longitude: -122.33207
-    !!python/unicode 'label': !!python/unicode 'Seattle'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Seattle
+    type: Customer Service PoP
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.97997
     Longitude: -93.26384
-    !!python/unicode 'label': !!python/unicode 'Minneapolis/St Paul'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Minneapolis/St Paul
+    type: Customer Service PoP
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'Los Angeles'
-    !!python/unicode 'type': !!python/unicode 'PoP with Peering'
+    label: Los Angeles
+    type: PoP with Peering
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.35411
     Longitude: -121.95524
-    !!python/unicode 'label': !!python/unicode 'Santa Clara'
-    !!python/unicode 'type': !!python/unicode 'PoP with Peering'
+    label: Santa Clara
+    type: PoP with Peering
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.17497
     Longitude: -115.13722
-    !!python/unicode 'label': !!python/unicode 'Las Vegas'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Las Vegas
+    type: Customer Service PoP
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.44838
     Longitude: -112.07404
-    !!python/unicode 'label': !!python/unicode 'Phoenix'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Phoenix
+    type: Customer Service PoP
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.58157
     Longitude: -121.4944
-    !!python/unicode 'label': !!python/unicode 'Sacramento'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Sacramento
+    type: Customer Service PoP
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.44047
     Longitude: -122.71443
-    !!python/unicode 'label': !!python/unicode 'Santa Rose'
-    !!python/unicode 'type': !!python/unicode 'Customer Service PoP'
+    label: Santa Rose
+    type: Customer Service PoP

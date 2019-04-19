@@ -127,243 +127,243 @@ edges:
   - '40'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.80237
     Longitude: 7.15128
-    !!python/unicode 'label': !!python/unicode 'Fribourg'
+    label: Fribourg
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.5584
     Longitude: 7.57327
-    !!python/unicode 'label': !!python/unicode 'Basel'
+    label: Basel
   '10':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 46.20222
     Longitude: 6.14569
-    !!python/unicode 'label': !!python/unicode 'GBLX'
+    label: GBLX
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 46.20222
     Longitude: 6.14569
-    !!python/unicode 'label': !!python/unicode 'Swisscom'
+    label: Swisscom
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.36667
     Longitude: 8.55
-    !!python/unicode 'label': !!python/unicode 'Swisscom'
+    label: Swisscom
   '13':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.36667
     Longitude: 8.55
-    !!python/unicode 'label': !!python/unicode 'TELIA'
+    label: TELIA
   '14':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.36667
     Longitude: 8.55
-    !!python/unicode 'label': !!python/unicode 'SwissIX'
+    label: SwissIX
   '15':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.36667
     Longitude: 8.55
-    !!python/unicode 'label': !!python/unicode 'TIX'
+    label: TIX
   '16':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.65
     Longitude: 9.18333
-    !!python/unicode 'label': !!python/unicode 'BelWue'
+    label: BelWue
   '17':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 46.20222
     Longitude: 6.14569
-    !!python/unicode 'label': !!python/unicode 'CERN'
+    label: CERN
   '18':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 46.20222
     Longitude: 6.14569
-    !!python/unicode 'label': !!python/unicode 'CIXP'
+    label: CIXP
   '19':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 46.20222
     Longitude: 6.14569
-    !!python/unicode 'label': !!python/unicode 'AMS-IX'
+    label: AMS-IX
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.36493
     Longitude: 7.34453
-    !!python/unicode 'label': !!python/unicode 'Delemont'
+    label: Delemont
   '20':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.5584
     Longitude: 7.57327
-    !!python/unicode 'label': !!python/unicode 'SwissIX'
+    label: SwissIX
   '21':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 46.20222
     Longitude: 6.14569
-    !!python/unicode 'label': !!python/unicode 'GEANT2'
+    label: GEANT2
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.99179
     Longitude: 6.931
-    !!python/unicode 'label': !!python/unicode 'Neuchatel'
+    label: Neuchatel
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.36667
     Longitude: 8.55
-    !!python/unicode 'label': !!python/unicode 'IXEurope Zurich'
+    label: IXEurope Zurich
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.31667
     Longitude: 7.98333
-    !!python/unicode 'label': !!python/unicode 'Brig'
+    label: Brig
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.10276
     Longitude: 7.07245
-    !!python/unicode 'label': !!python/unicode 'Martigny'
+    label: Martigny
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.1921
     Longitude: 7.39586
-    !!python/unicode 'label': !!python/unicode 'Grenchen'
+    label: Grenchen
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.80429
     Longitude: 9.83723
-    !!python/unicode 'label': !!python/unicode 'Davos'
+    label: Davos
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Liechtenstein'
-    !!python/unicode 'Internal': 1
+    Country: Liechtenstein
+    Internal: '1'
     Latitude: 47.16667
     Longitude: 9.53333
-    !!python/unicode 'geocode_country': !!python/unicode 'Liechtenstein'
-    !!python/unicode 'label': !!python/unicode 'Liechtenstein'
+    geocode_country: Liechtenstein
+    label: Liechtenstein
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.22557
     Longitude: 8.82228
-    !!python/unicode 'label': !!python/unicode 'Rapperswil'
+    label: Rapperswil
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.94809
     Longitude: 7.44744
-    !!python/unicode 'label': !!python/unicode 'Bern'
+    label: Bern
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.03475
     Longitude: 8.91892
-    !!python/unicode 'label': !!python/unicode 'Manno'
+    label: Manno
   '31':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.36667
     Longitude: 8.55
-    !!python/unicode 'label': !!python/unicode 'Zurich (University)'
+    label: Zurich (University)
   '32':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.01692
     Longitude: 8.30956
-    !!python/unicode 'label': !!python/unicode 'Horw'
+    label: Horw
   '33':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.1237
     Longitude: 7.27887
-    !!python/unicode 'label': !!python/unicode 'Brugg'
+    label: Brugg
   '34':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.20222
     Longitude: 6.14569
-    !!python/unicode 'label': !!python/unicode 'CERN'
+    label: CERN
   '35':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.516
     Longitude: 6.63282
-    !!python/unicode 'label': !!python/unicode 'Lausanne (University)'
+    label: Lausanne (University)
   '36':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.20222
     Longitude: 6.14569
-    !!python/unicode 'label': !!python/unicode 'Geneva'
+    label: Geneva
   '37':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.516
     Longitude: 6.63282
-    !!python/unicode 'label': !!python/unicode 'Lausanne (EPFL)'
+    label: Lausanne (EPFL)
   '38':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.77852
     Longitude: 6.64115
-    !!python/unicode 'label': !!python/unicode 'Yverdon'
+    label: Yverdon
   '39':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.35515
     Longitude: 8.44256
-    !!python/unicode 'label': !!python/unicode 'Birmensdorf'
+    label: Birmensdorf
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.65
     Longitude: 9.18333
-    !!python/unicode 'label': !!python/unicode 'Kreuzlingen'
+    label: Kreuzlingen
   '40':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.30688
     Longitude: 8.55135
-    !!python/unicode 'label': !!python/unicode 'Rueschlikon'
+    label: Rueschlikon
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.5
     Longitude: 8.75
-    !!python/unicode 'label': !!python/unicode 'Winterthur'
+    label: Winterthur
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.42391
     Longitude: 9.37477
-    !!python/unicode 'label': !!python/unicode 'St. Gallen'
+    label: St. Gallen
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.52682
     Longitude: 8.21486
-    !!python/unicode 'label': !!python/unicode 'Villigen PSI'
+    label: Villigen PSI
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.36667
     Longitude: 8.55
-    !!python/unicode 'label': !!python/unicode 'Zurich (ETH)'
+    label: Zurich (ETH)
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.38789
     Longitude: 8.07375
-    !!python/unicode 'label': !!python/unicode 'Buchs SG'
+    label: Buchs SG
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.84986
     Longitude: 9.53287
-    !!python/unicode 'label': !!python/unicode 'Chur'
+    label: Chur

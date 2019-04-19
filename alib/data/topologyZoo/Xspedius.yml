@@ -99,240 +99,240 @@ edges:
   - '33'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.29038
     Longitude: -76.61219
-    !!python/unicode 'label': !!python/unicode 'Baltimore'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Baltimore
+    type: Core
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.98869
     Longitude: -84.47772
-    !!python/unicode 'label': !!python/unicode 'Lexington'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Lexington
+    type: ATM/FR/IP Node
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.33218
     Longitude: -81.65565
-    !!python/unicode 'label': !!python/unicode 'Jacksonville'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Jacksonville
+    type: Core
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 26.12231
     Longitude: -80.14338
-    !!python/unicode 'label': !!python/unicode 'Fort Lauderdale'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Fort Lauderdale
+    type: ATM/FR/IP Node
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 27.94752
     Longitude: -82.45843
-    !!python/unicode 'label': !!python/unicode 'Tampa'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Tampa
+    type: ATM/FR/IP Node
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.26715
     Longitude: -97.74306
-    !!python/unicode 'label': !!python/unicode 'Austin'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Austin
+    type: ATM/FR/IP Node
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.96118
     Longitude: -82.99879
-    !!python/unicode 'label': !!python/unicode 'Columbus'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Columbus
+    type: ATM/FR/IP Node
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.07264
     Longitude: -79.79198
-    !!python/unicode 'label': !!python/unicode 'Greensboro'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Greensboro
+    type: ATM/FR/IP Node
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.52066
     Longitude: -86.80249
-    !!python/unicode 'label': !!python/unicode 'Birmingham'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Birmingham
+    type: ATM/FR/IP Node
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.36681
     Longitude: -86.29997
-    !!python/unicode 'label': !!python/unicode 'Montgomery'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Montgomery
+    type: ATM/FR/IP Node
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.95465
     Longitude: -90.07507
-    !!python/unicode 'label': !!python/unicode 'New Orleans'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: New Orleans
+    type: ATM/FR/IP Node
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.69436
     Longitude: -88.04305
-    !!python/unicode 'label': !!python/unicode 'Mobile'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Mobile
+    type: ATM/FR/IP Node
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.15398
     Longitude: -95.99278
-    !!python/unicode 'label': !!python/unicode 'Tulsa'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Tulsa
+    type: Core
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.22709
     Longitude: -80.84313
-    !!python/unicode 'label': !!python/unicode 'Charlotte'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Charlotte
+    type: ATM/FR/IP Node
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.00071
     Longitude: -81.03481
-    !!python/unicode 'label': !!python/unicode 'Columbia'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Columbia
+    type: ATM/FR/IP Node
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.85262
     Longitude: -82.39401
-    !!python/unicode 'label': !!python/unicode 'Greenville'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Greenville
+    type: ATM/FR/IP Node
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
-    !!python/unicode 'label': !!python/unicode 'Atlanta'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Atlanta
+    type: Core
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.78306
     Longitude: -96.80667
-    !!python/unicode 'label': !!python/unicode 'Dallas'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Dallas
+    type: ATM/FR/IP Node
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.74648
     Longitude: -92.28959
-    !!python/unicode 'label': !!python/unicode 'Little Rock'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Little Rock
+    type: ATM/FR/IP Node
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.17497
     Longitude: -115.13722
-    !!python/unicode 'label': !!python/unicode 'Las Vegas'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Las Vegas
+    type: Core
   '27':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.83388
     Longitude: -104.82136
-    !!python/unicode 'label': !!python/unicode 'Colorado Springs'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Colorado Springs
+    type: Core
   '28':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.08449
     Longitude: -106.65114
-    !!python/unicode 'label': !!python/unicode 'Albuquerque'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Albuquerque
+    type: Core
   '29':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.22174
     Longitude: -110.92648
-    !!python/unicode 'label': !!python/unicode 'Tucson'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Tucson
+    type: Core
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.11417
     Longitude: -94.62746
-    !!python/unicode 'label': !!python/unicode 'Kansas City'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Kansas City
+    type: Core
   '30':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 31.75872
     Longitude: -106.48693
-    !!python/unicode 'label': !!python/unicode 'El Paso'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: El Paso
+    type: Core
   '31':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.72541
     Longitude: -97.32085
-    !!python/unicode 'label': !!python/unicode 'Fort Worth'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Fort Worth
+    type: Core
   '32':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.42412
     Longitude: -98.49363
-    !!python/unicode 'label': !!python/unicode 'San Antonio'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: San Antonio
+    type: ATM/FR/IP Node
   '33':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.76328
     Longitude: -95.36327
-    !!python/unicode 'label': !!python/unicode 'Houston'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Houston
+    type: ATM/FR/IP Node
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.14953
     Longitude: -90.04898
-    !!python/unicode 'label': !!python/unicode 'Memphis'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Memphis
+    type: Core
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.29876
     Longitude: -90.18481
-    !!python/unicode 'label': !!python/unicode 'Jackson'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Jackson
+    type: ATM/FR/IP Node
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.25424
     Longitude: -85.75941
-    !!python/unicode 'label': !!python/unicode 'Louisville'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Louisville
+    type: ATM/FR/IP Node
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.16589
     Longitude: -86.78444
-    !!python/unicode 'label': !!python/unicode 'Nashville'
-    !!python/unicode 'type': !!python/unicode 'Core'
+    label: Nashville
+    type: Core
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.21309
     Longitude: -93.2044
-    !!python/unicode 'label': !!python/unicode 'Lake Charles'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Lake Charles
+    type: ATM/FR/IP Node
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.45075
     Longitude: -91.15455
-    !!python/unicode 'label': !!python/unicode 'Baton Rouge'
-    !!python/unicode 'type': !!python/unicode 'ATM/FR/IP Node'
+    label: Baton Rouge
+    type: ATM/FR/IP Node

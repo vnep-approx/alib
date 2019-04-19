@@ -49,132 +49,132 @@ edges:
   - '20'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 45.41519
     Longitude: 11.88181
-    !!python/unicode 'label': !!python/unicode 'PD'
+    label: PD
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 45.46427
     Longitude: 9.18951
-    !!python/unicode 'label': !!python/unicode 'MI'
+    label: MI
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 45.46427
     Longitude: 9.18951
-    !!python/unicode 'label': !!python/unicode 'MI'
+    label: MI
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 41.89474
     Longitude: 12.4839
-    !!python/unicode 'label': !!python/unicode 'RM'
+    label: RM
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 40.83333
     Longitude: 14.25
-    !!python/unicode 'label': !!python/unicode 'NA'
+    label: NA
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 37.50213
     Longitude: 15.08719
-    !!python/unicode 'label': !!python/unicode 'CT'
+    label: CT
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 43.71553
     Longitude: 10.39659
-    !!python/unicode 'label': !!python/unicode 'PI'
+    label: PI
   '15':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 45.46427
     Longitude: 9.18951
-    !!python/unicode 'label': !!python/unicode 'Ten155'
+    label: Ten155
   '16':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 45.46427
     Longitude: 9.18951
-    !!python/unicode 'label': !!python/unicode 'USA'
+    label: USA
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 39.20738
     Longitude: 9.13462
-    !!python/unicode 'label': !!python/unicode 'CA'
+    label: CA
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 41.89474
     Longitude: 12.4839
-    !!python/unicode 'label': !!python/unicode 'RM'
+    label: RM
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 42.35055
     Longitude: 13.39954
-    !!python/unicode 'label': !!python/unicode 'AQ'
+    label: AQ
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 38.11582
     Longitude: 13.35976
-    !!python/unicode 'label': !!python/unicode 'PA'
+    label: PA
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 41.81632
     Longitude: 12.66868
-    !!python/unicode 'label': !!python/unicode 'FRA'
+    label: FRA
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 41.11773
     Longitude: 16.85118
-    !!python/unicode 'label': !!python/unicode 'BA'
+    label: BA
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 45.64861
     Longitude: 13.78
-    !!python/unicode 'label': !!python/unicode 'TS'
+    label: TS
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 43.76667
     Longitude: 11.25
-    !!python/unicode 'label': !!python/unicode 'FI'
+    label: FI
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 44.49381
     Longitude: 11.33875
-    !!python/unicode 'label': !!python/unicode 'BO'
+    label: BO
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 45.07049
     Longitude: 7.68682
-    !!python/unicode 'label': !!python/unicode 'TO'
+    label: TO
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 44.40632
     Longitude: 8.93386
-    !!python/unicode 'label': !!python/unicode 'GE'
+    label: GE
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 44.49381
     Longitude: 11.33875
-    !!python/unicode 'label': !!python/unicode 'BO'
+    label: BO
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 40.83333
     Longitude: 14.25
-    !!python/unicode 'label': !!python/unicode 'NA'
+    label: NA

@@ -35,110 +35,110 @@ edges:
   - '17'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 27.44671
     Longitude: -80.32561
-    !!python/unicode 'label': !!python/unicode 'Ft. Pierce'
+    label: Ft. Pierce
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 28.08363
     Longitude: -80.60811
-    !!python/unicode 'label': !!python/unicode 'Melbourne'
+    label: Melbourne
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.31879
     Longitude: -82.5593
-    !!python/unicode 'label': !!python/unicode 'Tarrytown'
+    label: Tarrytown
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.88209
     Longitude: -83.33238
-    !!python/unicode 'label': !!python/unicode 'Gordon'
+    label: Gordon
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.94162
     Longitude: -82.02206
-    !!python/unicode 'label': !!python/unicode 'Newell'
+    label: Newell
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 31.72381
     Longitude: -82.1979
-    !!python/unicode 'label': !!python/unicode 'Surrency'
+    label: Surrency
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.89469
     Longitude: -81.31452
-    !!python/unicode 'label': !!python/unicode 'St. Augustine'
+    label: St. Augustine
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.33218
     Longitude: -81.65565
-    !!python/unicode 'label': !!python/unicode 'Jacksonville'
+    label: Jacksonville
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 28.61222
     Longitude: -80.80755
-    !!python/unicode 'label': !!python/unicode 'Titusville'
+    label: Titusville
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.21081
     Longitude: -81.02283
-    !!python/unicode 'label': !!python/unicode 'Daytona Beach'
+    label: Daytona Beach
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 28.09196
     Longitude: -81.72341
-    !!python/unicode 'label': !!python/unicode 'Lake Alfred'
+    label: Lake Alfred
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 28.53834
     Longitude: -81.37924
-    !!python/unicode 'label': !!python/unicode 'Orlando'
+    label: Orlando
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 26.71534
     Longitude: -80.05337
-    !!python/unicode 'label': !!python/unicode 'West Palm Beach'
+    label: West Palm Beach
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 27.94752
     Longitude: -82.45843
-    !!python/unicode 'label': !!python/unicode 'Tampa'
+    label: Tampa
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 25.77427
     Longitude: -80.19366
-    !!python/unicode 'label': !!python/unicode 'Miami'
+    label: Miami
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 26.12231
     Longitude: -80.14338
-    !!python/unicode 'label': !!python/unicode 'Ft. Lauderdale'
+    label: Ft. Lauderdale
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.25373
     Longitude: -83.89852
-    !!python/unicode 'label': !!python/unicode 'Flovilla'
+    label: Flovilla
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
-    !!python/unicode 'label': !!python/unicode 'Atlanta'
+    label: Atlanta

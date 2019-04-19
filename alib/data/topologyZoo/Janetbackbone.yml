@@ -91,206 +91,206 @@ edges:
   - '28'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.46117
     Longitude: -0.93083
-    !!python/unicode 'label': !!python/unicode 'TVN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: TVN
+    type: Node
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.37795
     Longitude: -2.35907
-    !!python/unicode 'label': !!python/unicode 'SWERN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: SWERN
+    type: Node
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 55.95
     Longitude: -3.2
-    !!python/unicode 'label': !!python/unicode 'Sco-locate'
-    !!python/unicode 'type': !!python/unicode 'Blue Square'
+    label: Sco-locate
+    type: Blue Square
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.45625
     Longitude: -0.97113
-    !!python/unicode 'label': !!python/unicode 'Reading'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Reading
+    type: Core Node
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.79648
     Longitude: -1.54785
-    !!python/unicode 'label': !!python/unicode 'Leeds'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Leeds
+    type: Core Node
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.39254
     Longitude: -2.58024
-    !!python/unicode 'label': !!python/unicode 'Warrington'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Warrington
+    type: Core Node
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 55.86515
     Longitude: -4.25763
-    !!python/unicode 'label': !!python/unicode 'Glasgow'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Glasgow
+    type: Core Node
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'Telehouse'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Telehouse
+    type: Core Node
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'Telecity'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Telecity
+    type: Core Node
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'London'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: London
+    type: Core Node
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.45
     Longitude: -2.58333
-    !!python/unicode 'label': !!python/unicode 'Bristol'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Bristol
+    type: Core Node
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 54.58333
     Longitude: -2.83333
-    !!python/unicode 'geocode_id': !!python/unicode '2651712'
-    !!python/unicode 'label': !!python/unicode 'C&NLMAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    geocode_id: '2651712'
+    label: C&NLMAN
+    type: Node
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.5
     Longitude: -1.96667
-    !!python/unicode 'label': !!python/unicode 'MidMAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: MidMAN
+    type: Node
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 54.5
     Longitude: -6.5
-    !!python/unicode 'geocode_id': !!python/unicode '2641364'
-    !!python/unicode 'label': !!python/unicode 'NIRAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    geocode_id: '2641364'
+    label: NIRAN
+    type: Node
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 57.12
     Longitude: -4.71
-    !!python/unicode 'label': !!python/unicode 'UHIMI'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: UHIMI
+    type: Node
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 57.14369
     Longitude: -2.09814
-    !!python/unicode 'label': !!python/unicode 'AbMAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: AbMAN
+    type: Node
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 56.33871
     Longitude: -2.79902
-    !!python/unicode 'label': !!python/unicode 'FaTMAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: FaTMAN
+    type: Node
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 55.95
     Longitude: -3.2
-    !!python/unicode 'label': !!python/unicode 'EaStMAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: EaStMAN
+    type: Node
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 55.86515
     Longitude: -4.25763
-    !!python/unicode 'label': !!python/unicode 'Clydenet'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: Clydenet
+    type: Node
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 54.97328
     Longitude: -1.61396
-    !!python/unicode 'label': !!python/unicode 'NorMAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: NorMAN
+    type: Node
   '27':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 54.27966
     Longitude: -0.40443
-    !!python/unicode 'label': !!python/unicode 'YHMAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: YHMAN
+    type: Node
   '28':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.48095
     Longitude: -2.23743
-    !!python/unicode 'label': !!python/unicode 'NNW'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: NNW
+    type: Node
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.48
     Longitude: -3.18
-    !!python/unicode 'label': !!python/unicode 'WREN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: WREN
+    type: Node
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'LMN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: LMN
+    type: Node
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.2
     Longitude: 0.11667
-    !!python/unicode 'label': !!python/unicode 'EastNet'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: EastNet
+    type: Node
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 50.90395
     Longitude: -1.40428
-    !!python/unicode 'label': !!python/unicode 'LeNSE'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: LeNSE
+    type: Node
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.38914
     Longitude: 0.54863
-    !!python/unicode 'label': !!python/unicode 'Kentish MAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: Kentish MAN
+    type: Node
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.83111
     Longitude: -1.32806
-    !!python/unicode 'label': !!python/unicode 'EMMAN'
-    !!python/unicode 'type': !!python/unicode 'Node'
+    label: EMMAN
+    type: Node
   '9':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 53.94627
     Longitude: -4.54012
-    !!python/unicode 'label': !!python/unicode 'Dublin'
-    !!python/unicode 'type': !!python/unicode 'Blue Square'
+    label: Dublin
+    type: Blue Square

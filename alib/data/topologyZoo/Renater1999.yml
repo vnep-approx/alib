@@ -47,170 +47,170 @@ edges:
   - '22'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 44.83333
     Longitude: -0.56667
-    !!python/unicode 'label': !!python/unicode 'Bordeaux'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Bordeaux
+    type: NRD
   '1':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.60426
     Longitude: 1.44367
-    !!python/unicode 'label': !!python/unicode 'Toulouse'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Toulouse
+    type: NRD
   '10':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 45.75
     Longitude: 4.85
-    !!python/unicode 'label': !!python/unicode 'Lyon'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Lyon
+    type: NRD
   '11':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
-    !!python/unicode 'label': !!python/unicode 'Paris'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Paris
+    type: NRD
   '12':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 42.3
     Longitude: 9.15
-    !!python/unicode 'label': !!python/unicode 'Corte'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Corte
+    type: NRD
   '13':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.3
     Longitude: 5.4
-    !!python/unicode 'label': !!python/unicode 'Marseille'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Marseille
+    type: NRD
   '14':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 47.21725
     Longitude: -1.55336
-    !!python/unicode 'label': !!python/unicode 'Nantes'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Nantes
+    type: NRD
   '15':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 46.58333
     Longitude: 0.33333
-    !!python/unicode 'label': !!python/unicode 'Poiters'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Poiters
+    type: NRD
   '16':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.58333
     Longitude: 7.75
-    !!python/unicode 'label': !!python/unicode 'Strasbourg'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Strasbourg
+    type: NRD
   '17':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.68333
     Longitude: 6.2
-    !!python/unicode 'label': !!python/unicode 'Nancy'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Nancy
+    type: NRD
   '18':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.25
     Longitude: 4.03333
-    !!python/unicode 'label': !!python/unicode 'Reims'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Reims
+    type: NRD
   '19':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.41794
     Longitude: 2.82606
-    !!python/unicode 'label': !!python/unicode 'Compiegne'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Compiegne
+    type: NRD
   '2':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 47.91667
     Longitude: 1.9
-    !!python/unicode 'label': !!python/unicode 'Orleans'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Orleans
+    type: NRD
   '20':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 50.63333
     Longitude: 3.06667
-    !!python/unicode 'label': !!python/unicode 'Lille'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Lille
+    type: NRD
   '21':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.44313
     Longitude: 1.09932
-    !!python/unicode 'label': !!python/unicode 'Rouen'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Rouen
+    type: NRD
   '22':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.18585
     Longitude: -0.35912
-    !!python/unicode 'label': !!python/unicode 'Caen'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Caen
+    type: NRD
   '23':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.08333
     Longitude: -1.68333
-    !!python/unicode 'label': !!python/unicode 'Rennes'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Rennes
+    type: NRD
   '3':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 45.83153
     Longitude: 1.2578
-    !!python/unicode 'label': !!python/unicode 'Limoges'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Limoges
+    type: NRD
   '4':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 47.31667
     Longitude: 5.01667
-    !!python/unicode 'label': !!python/unicode 'Dijon'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Dijon
+    type: NRD
   '5':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 47.25
     Longitude: 6.03333
-    !!python/unicode 'label': !!python/unicode 'Besancon'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Besancon
+    type: NRD
   '6':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.6
     Longitude: 3.88333
-    !!python/unicode 'label': !!python/unicode 'Montpellier'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Montpellier
+    type: NRD
   '7':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 45.78333
     Longitude: 3.08333
-    !!python/unicode 'label': !!python/unicode 'Clermont-Ferrand'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Clermont-Ferrand
+    type: NRD
   '8':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 45.16667
     Longitude: 5.71667
-    !!python/unicode 'label': !!python/unicode 'Grenoble'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Grenoble
+    type: NRD
   '9':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.70313
     Longitude: 7.26608
-    !!python/unicode 'label': !!python/unicode 'Nice/Sophia'
-    !!python/unicode 'type': !!python/unicode 'NRD'
+    label: Nice/Sophia
+    type: NRD

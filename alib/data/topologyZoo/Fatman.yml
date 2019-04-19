@@ -43,107 +43,107 @@ edges:
   - '15'
 nodes:
   '0':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.11667
     Longitude: -3.16667
-    !!python/unicode 'label': !!python/unicode 'Carnegie College'
-    !!python/unicode 'type': !!python/unicode 'Green Node'
+    label: Carnegie College
+    type: Green Node
   '1':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.11667
     Longitude: -3.16667
-    !!python/unicode 'label': !!python/unicode 'Adam Smith College'
-    !!python/unicode 'type': !!python/unicode 'Green Node'
+    label: Adam Smith College
+    type: Green Node
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.79648
     Longitude: -1.54785
-    !!python/unicode 'label': !!python/unicode 'Leeds'
-    !!python/unicode 'type': !!python/unicode 'Orange Node'
+    label: Leeds
+    type: Orange Node
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 56.5
     Longitude: -2.96667
-    !!python/unicode 'label': !!python/unicode 'RNEP1'
-    !!python/unicode 'type': !!python/unicode 'Purple Node'
+    label: RNEP1
+    type: Purple Node
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 56.5
     Longitude: -2.96667
-    !!python/unicode 'label': !!python/unicode 'RNEP2'
-    !!python/unicode 'type': !!python/unicode 'Purple Node'
+    label: RNEP2
+    type: Purple Node
   '13':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.5
     Longitude: -2.96667
-    !!python/unicode 'label': !!python/unicode 'University of Abertay Dundee'
-    !!python/unicode 'type': !!python/unicode 'Blue Node'
+    label: University of Abertay Dundee
+    type: Blue Node
   '14':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.5
     Longitude: -2.96667
-    !!python/unicode 'label': !!python/unicode 'University of Dundee'
-    !!python/unicode 'type': !!python/unicode 'Blue Node'
+    label: University of Dundee
+    type: Blue Node
   '15':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.5
     Longitude: -2.96667
-    !!python/unicode 'label': !!python/unicode 'University of St Andrews'
-    !!python/unicode 'type': !!python/unicode 'Blue Node'
+    label: University of St Andrews
+    type: Blue Node
   '16':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.5
     Longitude: -2.96667
-    !!python/unicode 'label': !!python/unicode 'Elmwood College'
-    !!python/unicode 'type': !!python/unicode 'Green Node'
+    label: Elmwood College
+    type: Green Node
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 56.11667
     Longitude: -3.16667
-    !!python/unicode 'label': !!python/unicode 'Kirkcaldy'
-    !!python/unicode 'type': !!python/unicode 'Purple Node'
+    label: Kirkcaldy
+    type: Purple Node
   '3':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.11667
     Longitude: -3.16667
-    !!python/unicode 'label': !!python/unicode 'UoD Fife Campus'
-    !!python/unicode 'type': !!python/unicode 'Blue Node'
+    label: UoD Fife Campus
+    type: Blue Node
   '4':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 55.86515
     Longitude: -4.25763
-    !!python/unicode 'label': !!python/unicode 'Janet and Internet'
+    label: Janet and Internet
   '5':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.37222333333333
     Longitude: -3.033336666666667
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '6':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 53.79648
     Longitude: -1.54785
-    !!python/unicode 'label': !!python/unicode 'Janet and Internet'
+    label: Janet and Internet
   '7':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.5
     Longitude: -2.96667
-    !!python/unicode 'label': !!python/unicode 'Dundee College'
-    !!python/unicode 'type': !!python/unicode 'Green Node'
+    label: Dundee College
+    type: Green Node
   '8':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 56.5
     Longitude: -2.96667
-    !!python/unicode 'label': !!python/unicode 'Angus College'
-    !!python/unicode 'type': !!python/unicode 'Green Node'
+    label: Angus College
+    type: Green Node
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 55.86515
     Longitude: -4.25763
-    !!python/unicode 'label': !!python/unicode 'Glasgow'
-    !!python/unicode 'type': !!python/unicode 'Orange Node'
+    label: Glasgow
+    type: Orange Node

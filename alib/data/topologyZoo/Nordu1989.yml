@@ -13,42 +13,42 @@ edges:
   - '4'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Norway'
-    !!python/unicode 'Internal': 1
+    Country: Norway
+    Internal: '1'
     Latitude: 63.43049
     Longitude: 10.39506
-    !!python/unicode 'label': !!python/unicode 'Trondheim'
+    label: Trondheim
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Sweden'
-    !!python/unicode 'Internal': 1
+    Country: Sweden
+    Internal: '1'
     Latitude: 59.33258
     Longitude: 18.0649
-    !!python/unicode 'label': !!python/unicode 'Stockholm'
+    label: Stockholm
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Finland'
-    !!python/unicode 'Internal': 1
+    Country: Finland
+    Internal: '1'
     Latitude: 60.16952
     Longitude: 24.93545
-    !!python/unicode 'label': !!python/unicode 'Helsinki'
+    label: Helsinki
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Denmark'
-    !!python/unicode 'Internal': 1
+    Country: Denmark
+    Internal: '1'
     Latitude: 55.67594
     Longitude: 12.56553
-    !!python/unicode 'label': !!python/unicode 'Copenhagen'
+    label: Copenhagen
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'Reykjavik'
+    label: Reykjavik
   '5':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 59.33258
     Longitude: 18.0649
-    !!python/unicode 'label': !!python/unicode 'EUROPE'
+    label: EUROPE
   '6':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 59.33258
     Longitude: 18.0649
-    !!python/unicode 'label': !!python/unicode 'USA'
+    label: USA

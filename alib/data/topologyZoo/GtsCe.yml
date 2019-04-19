@@ -387,1038 +387,1038 @@ edges:
   - '147'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 52.73679
     Longitude: 15.22878
-    !!python/unicode 'label': !!python/unicode 'Gorzow'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Gorzow
+    type: GTS major Pops
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 51.93548
     Longitude: 15.50643
-    !!python/unicode 'label': !!python/unicode 'Zeilona Gora'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Zeilona Gora
+    type: GTS major Pops
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 54.37971
     Longitude: 19.81959
-    !!python/unicode 'label': !!python/unicode 'Braniewo'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Braniewo
+    type: GTS major Pops
   '100':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 53.01375
     Longitude: 18.59814
-    !!python/unicode 'label': !!python/unicode 'Torun'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Torun
+    type: GTS major Pops
   '101':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 51.25
     Longitude: 22.56667
-    !!python/unicode 'label': !!python/unicode 'Lublin'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Lublin
+    type: GTS major Pops
   '102':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 50.04132
     Longitude: 21.99901
-    !!python/unicode 'label': !!python/unicode 'Rzeszow'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Rzeszow
+    type: GTS major Pops
   '103':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 52.23064
     Longitude: 19.36409
-    !!python/unicode 'label': !!python/unicode 'Kutno'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Kutno
+    type: GTS major Pops
   '104':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 53.13333
     Longitude: 23.15
-    !!python/unicode 'label': !!python/unicode 'Bialystok'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Bialystok
+    type: GTS major Pops
   '105':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 51.40253
     Longitude: 21.14714
-    !!python/unicode 'label': !!python/unicode 'Radom'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Radom
+    type: GTS major Pops
   '106':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 51.75
     Longitude: 19.46667
-    !!python/unicode 'label': !!python/unicode 'Lodz'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Lodz
+    type: GTS major Pops
   '107':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 50.08333
     Longitude: 19.91667
-    !!python/unicode 'label': !!python/unicode 'Krakow'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Krakow
+    type: GTS major Pops
   '108':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 50.87033
     Longitude: 20.62752
-    !!python/unicode 'label': !!python/unicode 'Kielce'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Kielce
+    type: GTS major Pops
   '109':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 50.66667
     Longitude: 17.95
-    !!python/unicode 'label': !!python/unicode 'Opole'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Opole
+    type: GTS major Pops
   '11':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 53.62983333333333
     Longitude: 19.286446666666667
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '110':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 50.26667
     Longitude: 19.01667
-    !!python/unicode 'label': !!python/unicode 'Katowice'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Katowice
+    type: GTS major Pops
   '111':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 41.76667
     Longitude: 26.2
-    !!python/unicode 'label': !!python/unicode 'Svilengrad'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Svilengrad
+    type: GTS major Pops
   '112':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.67719
     Longitude: 26.55597
-    !!python/unicode 'label': !!python/unicode 'Edirne'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Edirne
+    type: GTS major Pops
   '113':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.59552
     Longitude: 17.25175
-    !!python/unicode 'label': !!python/unicode 'Olomouc'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Olomouc
+    type: GTS major Pops
   '114':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 48.84893
     Longitude: 17.13244
-    !!python/unicode 'label': !!python/unicode 'Hodonin'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Hodonin
+    type: GTS major Pops
   '115':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.21667
     Longitude: 17.66667
-    !!python/unicode 'label': !!python/unicode 'Zlin'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Zlin
+    type: GTS major Pops
   '116':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.83465
     Longitude: 18.28204
-    !!python/unicode 'label': !!python/unicode 'Ostrava'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Ostrava
+    type: GTS major Pops
   '117':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 43.21667
     Longitude: 27.91667
-    !!python/unicode 'label': !!python/unicode 'Varna'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Varna
+    type: GTS major Pops
   '118':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 48.97447
     Longitude: 14.47434
-    !!python/unicode 'label': !!python/unicode 'Ceske Budejovice'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Ceske Budejovice
+    type: GTS major Pops
   '119':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.3961
     Longitude: 15.59124
-    !!python/unicode 'label': !!python/unicode 'Jihlava'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Jihlava
+    type: GTS major Pops
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 43.21667
     Longitude: 27.91667
-    !!python/unicode 'label': !!python/unicode 'Poti, Georgia'
+    label: Poti, Georgia
   '120':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.19522
     Longitude: 16.60796
-    !!python/unicode 'label': !!python/unicode 'Brno'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Brno
+    type: GTS major Pops
   '121':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 49.81667
     Longitude: 19.03333
-    !!python/unicode 'label': !!python/unicode 'Bielsko'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Bielsko
+    type: GTS major Pops
   '122':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.50301
     Longitude: 13.63617
-    !!python/unicode 'label': !!python/unicode 'Most'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Most
+    type: GTS major Pops
   '123':
-    !!python/unicode 'Country': !!python/unicode 'Slovenia'
-    !!python/unicode 'Internal': 1
+    Country: Slovenia
+    Internal: '1'
     Latitude: 46.05108
     Longitude: 14.50513
-    !!python/unicode 'label': !!python/unicode 'Ljubljana'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Ljubljana
+    type: GTS major Hubs and Colocation Centers
   '124':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.81444
     Longitude: 15.97798
-    !!python/unicode 'label': !!python/unicode 'Zagreb'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Zagreb
+    type: GTS major Hubs and Colocation Centers
   '125':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'Frankfurt am Main'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Frankfurt am Main
+    type: GTS major Hubs and Colocation Centers
   '126':
-    !!python/unicode 'Country': !!python/unicode 'Russia'
-    !!python/unicode 'Internal': 1
+    Country: Russia
+    Internal: '1'
     Latitude: 55.75222
     Longitude: 37.61556
-    !!python/unicode 'label': !!python/unicode 'Moskva'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Moskva
+    type: Partnet Hubs
   '127':
-    !!python/unicode 'Country': !!python/unicode 'Russia'
-    !!python/unicode 'Internal': 1
+    Country: Russia
+    Internal: '1'
     Latitude: 59.89444
     Longitude: 30.26417
-    !!python/unicode 'label': !!python/unicode 'Sankt Peterburg'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Sankt Peterburg
+    type: Partnet Hubs
   '128':
-    !!python/unicode 'Country': !!python/unicode 'Sweden'
-    !!python/unicode 'Internal': 1
+    Country: Sweden
+    Internal: '1'
     Latitude: 59.33258
     Longitude: 18.0649
-    !!python/unicode 'label': !!python/unicode 'Stockholm'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Stockholm
+    type: Partnet Hubs
   '129':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.49801
     Longitude: 19.03991
-    !!python/unicode 'label': !!python/unicode 'Budapest'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Budapest
+    type: GTS major Hubs and Colocation Centers
   '13':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 39.91987
     Longitude: 32.85427
-    !!python/unicode 'label': !!python/unicode 'Georgia, Armenia, Iran, Iraq, Syria'
+    label: Georgia, Armenia, Iran, Iraq, Syria
   '130':
-    !!python/unicode 'Country': !!python/unicode 'Slovakia'
-    !!python/unicode 'Internal': 1
+    Country: Slovakia
+    Internal: '1'
     Latitude: 48.14816
     Longitude: 17.10674
-    !!python/unicode 'label': !!python/unicode 'Bratislava'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Bratislava
+    type: GTS major Hubs and Colocation Centers
   '131':
-    !!python/unicode 'Country': !!python/unicode 'Austria'
-    !!python/unicode 'Internal': 1
+    Country: Austria
+    Internal: '1'
     Latitude: 48.20849
     Longitude: 16.37208
-    !!python/unicode 'label': !!python/unicode 'Wien'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Wien
+    type: GTS major Hubs and Colocation Centers
   '132':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.52437
     Longitude: 13.41053
-    !!python/unicode 'label': !!python/unicode 'Berlin'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Berlin
+    type: GTS major Hubs and Colocation Centers
   '133':
-    !!python/unicode 'Country': !!python/unicode 'Kosovo'
-    !!python/unicode 'Internal': 1
+    Country: Kosovo
+    Internal: '1'
     Latitude: 42.67272
     Longitude: 21.16688
-    !!python/unicode 'label': !!python/unicode 'Pristina'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Pristina
+    type: Partnet Hubs
   '134':
-    !!python/unicode 'Country': !!python/unicode 'Montenegro'
-    !!python/unicode 'Internal': 1
+    Country: Montenegro
+    Internal: '1'
     Latitude: 42.44111
     Longitude: 19.26361
-    !!python/unicode 'label': !!python/unicode 'Podgorica'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Podgorica
+    type: Partnet Hubs
   '135':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.64917
     Longitude: 27.88611
-    !!python/unicode 'label': !!python/unicode 'Balikesir'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Balikesir
+    type: GTS major Pops
   '136':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.41273
     Longitude: 27.13838
-    !!python/unicode 'label': !!python/unicode 'Izmir'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Izmir
+    type: GTS major Pops
   '137':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.64028
     Longitude: 22.94389
-    !!python/unicode 'label': !!python/unicode 'Thessaloniki'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Thessaloniki
+    type: GTS major Pops
   '138':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 41.4
     Longitude: 23.21667
-    !!python/unicode 'label': !!python/unicode 'Petrich'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Petrich
+    type: GTS major Pops
   '139':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 43.41667
     Longitude: 24.61667
-    !!python/unicode 'label': !!python/unicode 'Pleven'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Pleven
+    type: GTS major Pops
   '14':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 52.860800000000005
     Longitude: 15.582823333333332
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '140':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 42.15
     Longitude: 24.75
-    !!python/unicode 'label': !!python/unicode 'Plovdiv'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Plovdiv
+    type: GTS major Pops
   '141':
-    !!python/unicode 'Country': !!python/unicode 'Bosnia and Herzegovina'
-    !!python/unicode 'Internal': 1
+    Country: Bosnia and Herzegovina
+    Internal: '1'
     Latitude: 43.84864
     Longitude: 18.35644
-    !!python/unicode 'label': !!python/unicode 'Sarajevo'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Sarajevo
+    type: Partnet Hubs
   '142':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.43225
     Longitude: 26.10626
-    !!python/unicode 'label': !!python/unicode 'Bucuresti'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Bucuresti
+    type: GTS major Hubs and Colocation Centers
   '143':
-    !!python/unicode 'Country': !!python/unicode 'Moldova'
-    !!python/unicode 'Internal': 1
+    Country: Moldova
+    Internal: '1'
     Latitude: 47.00556
     Longitude: 28.8575
-    !!python/unicode 'label': !!python/unicode 'Chisinau'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Chisinau
+    type: GTS major Hubs and Colocation Centers
   '144':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 42.69751
     Longitude: 23.32415
-    !!python/unicode 'label': !!python/unicode 'Sofia'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Sofia
+    type: GTS major Hubs and Colocation Centers
   '145':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.01384
     Longitude: 28.94966
-    !!python/unicode 'label': !!python/unicode 'Istanbul'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Istanbul
+    type: GTS major Hubs and Colocation Centers
   '146':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.01384
     Longitude: 28.94966
-    !!python/unicode 'label': !!python/unicode 'Istanbul'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Istanbul
+    type: GTS major Pops
   '147':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.91987
     Longitude: 32.85427
-    !!python/unicode 'label': !!python/unicode 'Ankara'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Ankara
+    type: Partnet Hubs
   '148':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'Skopje'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Skopje
+    type: Partnet Hubs
   '15':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.16258
     Longitude: 12.527705000000001
-    !!python/unicode 'label': !!python/unicode 'Amsterdam, London'
+    label: Amsterdam, London
   '16':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 54.27472666666667
     Longitude: 19.081276666666668
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '17':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 52.29217333333333
     Longitude: 15.294543333333332
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 52.10714
     Longitude: 19.94525
-    !!python/unicode 'label': !!python/unicode 'Lowicz'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Lowicz
+    type: GTS major Pops
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.48667
     Longitude: 25.78028
-    !!python/unicode 'geocode_id': !!python/unicode '664295'
-    !!python/unicode 'label': !!python/unicode 'Ulmi'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    geocode_id: '664295'
+    label: Ulmi
+    type: GTS major Pops
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Denmark'
-    !!python/unicode 'Internal': 1
+    Country: Denmark
+    Internal: '1'
     Latitude: 55.67594
     Longitude: 12.56553
-    !!python/unicode 'label': !!python/unicode 'Kobenhavn'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Kobenhavn
+    type: Partnet Hubs
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.80401
     Longitude: 20.46513
-    !!python/unicode 'label': !!python/unicode 'Beograd'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Beograd
+    type: GTS major Hubs and Colocation Centers
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.7975
     Longitude: 22.68028
-    !!python/unicode 'label': !!python/unicode 'Balvanesti'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Balvanesti
+    type: GTS major Pops
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 43.98333
     Longitude: 25.33333
-    !!python/unicode 'label': !!python/unicode 'Alexandria'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Alexandria
+    type: GTS major Pops
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.31667
     Longitude: 23.8
-    !!python/unicode 'label': !!python/unicode 'Craiova'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Craiova
+    type: GTS major Pops
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.18333
     Longitude: 21.31667
-    !!python/unicode 'label': !!python/unicode 'Arad'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Arad
+    type: GTS major Pops
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 47.06667
     Longitude: 21.93333
-    !!python/unicode 'label': !!python/unicode 'Oradea'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Oradea
+    type: GTS major Pops
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.41667
     Longitude: 22.21667
-    !!python/unicode 'label': !!python/unicode 'Caransebes'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Caransebes
+    type: GTS major Pops
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.74944
     Longitude: 21.22722
-    !!python/unicode 'label': !!python/unicode 'Timisoara'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Timisoara
+    type: GTS major Pops
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.95
     Longitude: 26.01667
-    !!python/unicode 'label': !!python/unicode 'Ploiesti'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Ploiesti
+    type: GTS major Pops
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 43.88333
     Longitude: 25.96667
-    !!python/unicode 'label': !!python/unicode 'Giurgiu'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Giurgiu
+    type: GTS major Pops
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 53.55
     Longitude: 10.0
-    !!python/unicode 'label': !!python/unicode 'Hamburg'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Hamburg
+    type: Partnet Hubs
   '30':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 55.75222
     Longitude: 37.61556
-    !!python/unicode 'label': !!python/unicode 'Kazakhstan'
+    label: Kazakhstan
   '31':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.23088
     Longitude: 16.62155
-    !!python/unicode 'label': !!python/unicode 'Szombathely'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Szombathely
+    type: GTS major Pops
   '32':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.18995
     Longitude: 18.41034
-    !!python/unicode 'label': !!python/unicode 'Szekesfehervar'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Szekesfehervar
+    type: GTS major Pops
   '33':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.56667
     Longitude: 18.41667
-    !!python/unicode 'label': !!python/unicode 'Tatabanya'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Tatabanya
+    type: GTS major Pops
   '34':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.76667
     Longitude: 17.25
-    !!python/unicode 'label': !!python/unicode 'Keszthely'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Keszthely
+    type: GTS major Pops
   '35':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.09327
     Longitude: 17.91149
-    !!python/unicode 'label': !!python/unicode 'Veszprem'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Veszprem
+    type: GTS major Pops
   '36':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.66817
     Longitude: 12.55188
-    !!python/unicode 'geocode_append': !!python/unicode 'Czech Republic'
-    !!python/unicode 'label': !!python/unicode 'Rozvadov'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    geocode_append: Czech Republic
+    label: Rozvadov
+    type: GTS major Pops
   '37':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.23271
     Longitude: 12.87117
-    !!python/unicode 'label': !!python/unicode 'Karlovy Vary'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Karlovy Vary
+    type: GTS major Pops
   '38':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.76711
     Longitude: 15.05619
-    !!python/unicode 'label': !!python/unicode 'Liberec'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Liberec
+    type: GTS major Pops
   '39':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.74747
     Longitude: 13.37759
-    !!python/unicode 'label': !!python/unicode 'Plzen'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Plzen
+    type: GTS major Pops
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 54.35205
     Longitude: 18.64637
-    !!python/unicode 'label': !!python/unicode 'Gdansk'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Gdansk
+    type: GTS major Pops
   '40':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 50.40169
     Longitude: 30.4497
-    !!python/unicode 'label': !!python/unicode 'Kyiv'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Kyiv
+    type: GTS major Hubs and Colocation Centers
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 52.22977
     Longitude: 21.01178
-    !!python/unicode 'label': !!python/unicode 'Warszawa'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Warszawa
+    type: GTS major Hubs and Colocation Centers
   '42':
-    !!python/unicode 'Country': !!python/unicode 'Albania'
-    !!python/unicode 'Internal': 1
+    Country: Albania
+    Internal: '1'
     Latitude: 41.3275
     Longitude: 19.81889
-    !!python/unicode 'label': !!python/unicode 'Tirane'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Tirane
+    type: Partnet Hubs
   '43':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.97945
     Longitude: 23.71622
-    !!python/unicode 'label': !!python/unicode 'Athina'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Athina
+    type: Partnet Hubs
   '44':
-    !!python/unicode 'Country': !!python/unicode 'Lithuania'
-    !!python/unicode 'Internal': 1
+    Country: Lithuania
+    Internal: '1'
     Latitude: 54.68916
     Longitude: 25.2798
-    !!python/unicode 'label': !!python/unicode 'Vilnius'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Vilnius
+    type: Partnet Hubs
   '45':
-    !!python/unicode 'Country': !!python/unicode 'Estonia'
-    !!python/unicode 'Internal': 1
+    Country: Estonia
+    Internal: '1'
     Latitude: 59.43696
     Longitude: 24.75353
-    !!python/unicode 'label': !!python/unicode 'Tallinn'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Tallinn
+    type: Partnet Hubs
   '46':
-    !!python/unicode 'Country': !!python/unicode 'Russia'
-    !!python/unicode 'Internal': 1
+    Country: Russia
+    Internal: '1'
     Latitude: 54.71
     Longitude: 20.5
-    !!python/unicode 'label': !!python/unicode 'Kaliningrad'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Kaliningrad
+    type: Partnet Hubs
   '47':
-    !!python/unicode 'Country': !!python/unicode 'Belarus'
-    !!python/unicode 'Internal': 1
+    Country: Belarus
+    Internal: '1'
     Latitude: 53.9
     Longitude: 27.56667
-    !!python/unicode 'label': !!python/unicode 'Minsk'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Minsk
+    type: Partnet Hubs
   '48':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.946
     Longitude: 24.10589
-    !!python/unicode 'label': !!python/unicode 'Riga'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Riga
+    type: Partnet Hubs
   '49':
-    !!python/unicode 'Country': !!python/unicode 'Finland'
-    !!python/unicode 'Internal': 1
+    Country: Finland
+    Internal: '1'
     Latitude: 60.16952
     Longitude: 24.93545
-    !!python/unicode 'label': !!python/unicode 'Helsinki'
-    !!python/unicode 'type': !!python/unicode 'Partnet Hubs'
+    label: Helsinki
+    type: Partnet Hubs
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 54.51889
     Longitude: 18.53188
-    !!python/unicode 'label': !!python/unicode 'Gdynia'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Gdynia
+    type: GTS major Pops
   '50':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.91667
     Longitude: 22.9
-    !!python/unicode 'geocode_id': !!python/unicode '670213'
-    !!python/unicode 'label': !!python/unicode 'Poieni'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    geocode_id: '670213'
+    label: Poieni
+    type: GTS major Pops
   '51':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 42.68583
     Longitude: 26.32917
-    !!python/unicode 'label': !!python/unicode 'Sliven'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Sliven
+    type: GTS major Pops
   '52':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 47.16667
     Longitude: 27.6
-    !!python/unicode 'label': !!python/unicode 'Iasi'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Iasi
+    type: GTS major Pops
   '53':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.45
     Longitude: 28.05
-    !!python/unicode 'label': !!python/unicode 'Galati'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Galati
+    type: GTS major Pops
   '54':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.64861
     Longitude: 25.60613
-    !!python/unicode 'label': !!python/unicode 'Brasov'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Brasov
+    type: GTS major Pops
   '55':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.56667
     Longitude: 26.9
-    !!python/unicode 'label': !!python/unicode 'Bacau'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Bacau
+    type: GTS major Pops
   '56':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.16667
     Longitude: 24.35
-    !!python/unicode 'label': !!python/unicode 'Medias'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Medias
+    type: GTS major Pops
   '57':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.76667
     Longitude: 23.6
-    !!python/unicode 'label': !!python/unicode 'Cluj'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Cluj
+    type: GTS major Pops
   '58':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.18333
     Longitude: 28.65
-    !!python/unicode 'label': !!python/unicode 'Constanta'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Constanta
+    type: GTS major Pops
   '59':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.76667
     Longitude: 25.43333
-    !!python/unicode 'geocode_id': !!python/unicode '678689'
-    !!python/unicode 'label': !!python/unicode 'Dumbravita'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    geocode_id: '678689'
+    label: Dumbravita
+    type: GTS major Pops
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 54.46405
     Longitude: 17.02872
-    !!python/unicode 'label': !!python/unicode 'Slupsk'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Slupsk
+    type: GTS major Pops
   '60':
-    !!python/unicode 'Country': !!python/unicode 'Slovakia'
-    !!python/unicode 'Internal': 1
+    Country: Slovakia
+    Internal: '1'
     Latitude: 47.76356
     Longitude: 18.12263
-    !!python/unicode 'label': !!python/unicode 'Komarno'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Komarno
+    type: GTS major Pops
   '61':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.68333
     Longitude: 17.63512
-    !!python/unicode 'label': !!python/unicode 'Gyor'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Gyor
+    type: GTS major Pops
   '62':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.68333
     Longitude: 16.6
-    !!python/unicode 'label': !!python/unicode 'Sopron'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Sopron
+    type: GTS major Pops
   '63':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 46.47747
     Longitude: 30.73262
-    !!python/unicode 'label': !!python/unicode 'Odesa'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Odesa
+    type: GTS major Pops
   '64':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 50.0
     Longitude: 36.25
-    !!python/unicode 'label': !!python/unicode 'Kharkiv'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Kharkiv
+    type: GTS major Pops
   '65':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 48.45
     Longitude: 34.98333
-    !!python/unicode 'label': !!python/unicode 'Dnipropetrovsk'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Dnipropetrovsk
+    type: GTS major Pops
   '66':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 49.83826
     Longitude: 24.02324
-    !!python/unicode 'label': !!python/unicode 'Lviv'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Lviv
+    type: GTS major Pops
   '67':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 50.01381
     Longitude: 20.98698
-    !!python/unicode 'label': !!python/unicode 'Tarnow'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Tarnow
+    type: GTS major Pops
   '68':
-    !!python/unicode 'Country': !!python/unicode 'Slovakia'
-    !!python/unicode 'Internal': 1
+    Country: Slovakia
+    Internal: '1'
     Latitude: 48.73333
     Longitude: 19.15
-    !!python/unicode 'label': !!python/unicode 'Banska Bystrica'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Banska Bystrica
+    type: GTS major Pops
   '69':
-    !!python/unicode 'Country': !!python/unicode 'Slovakia'
-    !!python/unicode 'Internal': 1
+    Country: Slovakia
+    Internal: '1'
     Latitude: 47.98544
     Longitude: 18.16195
-    !!python/unicode 'label': !!python/unicode 'Nove Zamky'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Nove Zamky
+    type: GTS major Pops
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 54.19438
     Longitude: 16.17222
-    !!python/unicode 'label': !!python/unicode 'Koszalin'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Koszalin
+    type: GTS major Pops
   '70':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.08804
     Longitude: 14.42076
-    !!python/unicode 'label': !!python/unicode 'Praha'
-    !!python/unicode 'type': !!python/unicode 'GTS major Hubs and Colocation Centers'
+    label: Praha
+    type: GTS major Hubs and Colocation Centers
   '71':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.18333
     Longitude: 20.2
-    !!python/unicode 'label': !!python/unicode 'Szolnok'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Szolnok
+    type: GTS major Pops
   '72':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.84
     Longitude: 16.84389
-    !!python/unicode 'label': !!python/unicode 'Zalaegerszeg'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Zalaegerszeg
+    type: GTS major Pops
   '73':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.88333
     Longitude: 17.43333
-    !!python/unicode 'label': !!python/unicode 'Tapolca'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Tapolca
+    type: GTS major Pops
   '74':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.97801
     Longitude: 27.50852
-    !!python/unicode 'label': !!python/unicode 'Tekirdag'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Tekirdag
+    type: GTS major Pops
   '75':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.07963
     Longitude: 12.37392
-    !!python/unicode 'label': !!python/unicode 'Cheb'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Cheb
+    type: GTS major Pops
   '76':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.6607
     Longitude: 14.03227
-    !!python/unicode 'label': !!python/unicode 'Usti nad Labem'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Usti nad Labem
+    type: GTS major Pops
   '77':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.20923
     Longitude: 15.83277
-    !!python/unicode 'label': !!python/unicode 'Hradec Kralove'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Hradec Kralove
+    type: GTS major Pops
   '78':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.98333
     Longitude: 18.93333
-    !!python/unicode 'label': !!python/unicode 'Dunaujvaros'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Dunaujvaros
+    type: GTS major Pops
   '79':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.43139
     Longitude: 19.4875
-    !!python/unicode 'label': !!python/unicode 'Kiskunhalas'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Kiskunhalas
+    type: GTS major Pops
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 54.17565
     Longitude: 15.58342
-    !!python/unicode 'label': !!python/unicode 'Kolobrzeg'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Kolobrzeg
+    type: GTS major Pops
   '80':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.21778
     Longitude: 19.54222
-    !!python/unicode 'geocode_append': !!python/unicode 'Hungary'
-    !!python/unicode 'label': !!python/unicode 'Tompa'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    geocode_append: Hungary
+    label: Tompa
+    type: GTS major Pops
   '81':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.253
     Longitude: 20.14824
-    !!python/unicode 'label': !!python/unicode 'Szeged'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Szeged
+    type: GTS major Pops
   '82':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.65
     Longitude: 20.26667
-    !!python/unicode 'label': !!python/unicode 'Szentes'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Szentes
+    type: GTS major Pops
   '83':
-    !!python/unicode 'Country': !!python/unicode 'Slovakia'
-    !!python/unicode 'Internal': 1
+    Country: Slovakia
+    Internal: '1'
     Latitude: 49.22315
     Longitude: 18.73941
-    !!python/unicode 'label': !!python/unicode 'Zilina'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Zilina
+    type: GTS major Pops
   '84':
-    !!python/unicode 'Country': !!python/unicode 'Slovakia'
-    !!python/unicode 'Internal': 1
+    Country: Slovakia
+    Internal: '1'
     Latitude: 48.71667
     Longitude: 21.25
-    !!python/unicode 'label': !!python/unicode 'Kosice'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Kosice
+    type: GTS major Pops
   '85':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.90618
     Longitude: 19.69128
-    !!python/unicode 'label': !!python/unicode 'Kecskemet'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Kecskemet
+    type: GTS major Pops
   '86':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 46.63333
     Longitude: 18.86667
-    !!python/unicode 'label': !!python/unicode 'Paks'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Paks
+    type: GTS major Pops
   '87':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 42.50606
     Longitude: 27.46781
-    !!python/unicode 'label': !!python/unicode 'Burgas'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Burgas
+    type: GTS major Pops
   '88':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.53333
     Longitude: 21.63333
-    !!python/unicode 'label': !!python/unicode 'Debrecen'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Debrecen
+    type: GTS major Pops
   '89':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 47.11667
     Longitude: 21.81667
-    !!python/unicode 'label': !!python/unicode 'Bors'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Bors
+    type: GTS major Pops
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 53.42894
     Longitude: 14.55302
-    !!python/unicode 'label': !!python/unicode 'Szczecin'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Szczecin
+    type: GTS major Pops
   '90':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 41.94028
     Longitude: 25.56944
-    !!python/unicode 'label': !!python/unicode 'Haskovo'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Haskovo
+    type: GTS major Pops
   '91':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 51.1
     Longitude: 17.03333
-    !!python/unicode 'label': !!python/unicode 'Wroclaw'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Wroclaw
+    type: GTS major Pops
   '92':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 51.84034
     Longitude: 16.57494
-    !!python/unicode 'label': !!python/unicode 'Leszno'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Leszno
+    type: GTS major Pops
   '93':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 52.79886
     Longitude: 18.26388
-    !!python/unicode 'label': !!python/unicode 'Inowroclaw'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Inowroclaw
+    type: GTS major Pops
   '94':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 52.41667
     Longitude: 16.96667
-    !!python/unicode 'label': !!python/unicode 'Poznan'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Poznan
+    type: GTS major Pops
   '95':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 54.09242
     Longitude: 18.77787
-    !!python/unicode 'label': !!python/unicode 'Tczew'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Tczew
+    type: GTS major Pops
   '96':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 53.1235
     Longitude: 18.00762
-    !!python/unicode 'label': !!python/unicode 'Bydgoszcz'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Bydgoszcz
+    type: GTS major Pops
   '97':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 52.64817
     Longitude: 19.0678
-    !!python/unicode 'label': !!python/unicode 'Wloclawek'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Wloclawek
+    type: GTS major Pops
   '98':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 53.78333
     Longitude: 20.48333
-    !!python/unicode 'label': !!python/unicode 'Olsztyn'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Olsztyn
+    type: GTS major Pops
   '99':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 52.22338
     Longitude: 18.25121
-    !!python/unicode 'label': !!python/unicode 'Konin'
-    !!python/unicode 'type': !!python/unicode 'GTS major Pops'
+    label: Konin
+    type: GTS major Pops

@@ -15,38 +15,38 @@ edges:
   - '5'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.60621
     Longitude: -122.33207
-    !!python/unicode 'label': !!python/unicode 'Seattle'
+    label: Seattle
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.77493
     Longitude: -122.41942
-    !!python/unicode 'label': !!python/unicode 'San Francisco'
+    label: San Francisco
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+    label: Los Angeles
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.85003
     Longitude: -87.65005
-    !!python/unicode 'label': !!python/unicode 'Chicago'
+    label: Chicago
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'New York City'
+    label: New York City
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.89511
     Longitude: -77.03637
-    !!python/unicode 'label': !!python/unicode 'Washington DC'
+    label: Washington DC

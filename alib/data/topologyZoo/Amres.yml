@@ -49,170 +49,170 @@ edges:
   - '23'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.07833
     Longitude: 22.09528
-    !!python/unicode 'label': !!python/unicode 'Bor'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Bor
+    type: Small Node
   '1':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 44.80401
     Longitude: 20.46513
-    !!python/unicode 'label': !!python/unicode 'Kosovska Mitrovica'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Kosovska Mitrovica
+    type: Small Node
   '10':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 44.74667
     Longitude: 19.69
-    !!python/unicode 'label': !!python/unicode 'Bosnia and Herzegovina'
+    label: Bosnia and Herzegovina
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 46.1
     Longitude: 19.66667
-    !!python/unicode 'label': !!python/unicode 'HUNGARNET'
+    label: HUNGARNET
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.80401
     Longitude: 20.46513
-    !!python/unicode 'label': !!python/unicode 'Beograd'
-    !!python/unicode 'type': !!python/unicode 'Large Node'
+    label: Beograd
+    type: Large Node
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.87083
     Longitude: 20.64028
-    !!python/unicode 'label': !!python/unicode 'Pancevo'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Pancevo
+    type: Small Node
   '14':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 44.80401
     Longitude: 20.46513
-    !!python/unicode 'label': !!python/unicode 'Telekom Serbia'
+    label: Telekom Serbia
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.72583
     Longitude: 20.68944
-    !!python/unicode 'label': !!python/unicode 'Kraljevo'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Kraljevo
+    type: Small Node
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.28722
     Longitude: 20.61528
-    !!python/unicode 'label': !!python/unicode 'Raska'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Raska
+    type: Small Node
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 46.1
     Longitude: 19.66667
-    !!python/unicode 'label': !!python/unicode 'Subotica'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Subotica
+    type: Small Node
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 45.77417
     Longitude: 19.11222
-    !!python/unicode 'label': !!python/unicode 'Sombor'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Sombor
+    type: Small Node
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 45.38361
     Longitude: 20.38194
-    !!python/unicode 'label': !!python/unicode 'Zrenjanin'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Zrenjanin
+    type: Small Node
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.13667
     Longitude: 20.51222
-    !!python/unicode 'label': !!python/unicode 'Novi Pazar'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Novi Pazar
+    type: Small Node
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.74667
     Longitude: 19.69
-    !!python/unicode 'label': !!python/unicode 'Sabac'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Sabac
+    type: Small Node
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.27513
     Longitude: 19.89821
-    !!python/unicode 'label': !!python/unicode 'Valjevo'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Valjevo
+    type: Small Node
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.85861
     Longitude: 19.84878
-    !!python/unicode 'label': !!python/unicode 'Uzice'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Uzice
+    type: Small Node
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.89139
     Longitude: 20.34972
-    !!python/unicode 'label': !!python/unicode 'Cacak'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Cacak
+    type: Small Node
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.33778
     Longitude: 21.04556
-    !!python/unicode 'label': !!python/unicode 'Velika Plana'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Velika Plana
+    type: Small Node
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.58
     Longitude: 21.33389
-    !!python/unicode 'label': !!python/unicode 'Krustevac'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Krustevac
+    type: Small Node
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 42.55139
     Longitude: 21.90028
-    !!python/unicode 'label': !!python/unicode 'Vranje'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Vranje
+    type: Small Node
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.32472
     Longitude: 21.90333
-    !!python/unicode 'label': !!python/unicode 'Nis'
-    !!python/unicode 'type': !!python/unicode 'Medium Node'
+    label: Nis
+    type: Medium Node
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.15306
     Longitude: 22.58611
-    !!python/unicode 'label': !!python/unicode 'Pirot'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Pirot
+    type: Small Node
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 42.99806
     Longitude: 21.94611
-    !!python/unicode 'label': !!python/unicode 'Leskovac'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Leskovac
+    type: Small Node
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.01667
     Longitude: 20.91667
-    !!python/unicode 'label': !!python/unicode 'Kragujevac'
-    !!python/unicode 'type': !!python/unicode 'Medium Node'
+    label: Kragujevac
+    type: Medium Node
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 45.25167
     Longitude: 19.83694
-    !!python/unicode 'label': !!python/unicode 'Novi Sad'
-    !!python/unicode 'type': !!python/unicode 'Medium Node'
+    label: Novi Sad
+    type: Medium Node

@@ -13,44 +13,44 @@ edges:
   - '5'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 45.25167
     Longitude: 19.83694
-    !!python/unicode 'label': !!python/unicode 'Novi Sad'
-    !!python/unicode 'type': !!python/unicode 'GSR12410'
+    label: Novi Sad
+    type: GSR12410
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.80401
     Longitude: 20.46513
-    !!python/unicode 'label': !!python/unicode 'Belgrade'
-    !!python/unicode 'type': !!python/unicode 'GSR12410'
+    label: Belgrade
+    type: GSR12410
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 44.01667
     Longitude: 20.91667
-    !!python/unicode 'label': !!python/unicode 'Kragujevac'
-    !!python/unicode 'type': !!python/unicode 'GSR12410'
+    label: Kragujevac
+    type: GSR12410
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.32472
     Longitude: 21.90333
-    !!python/unicode 'label': !!python/unicode 'Nis'
-    !!python/unicode 'type': !!python/unicode 'GSR12410'
+    label: Nis
+    type: GSR12410
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Serbia'
-    !!python/unicode 'Internal': 1
+    Country: Serbia
+    Internal: '1'
     Latitude: 43.58
     Longitude: 21.33389
-    !!python/unicode 'label': !!python/unicode 'Krusevac'
-    !!python/unicode 'type': !!python/unicode 'GSR12410'
+    label: Krusevac
+    type: GSR12410
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Montenegro'
-    !!python/unicode 'Internal': 1
+    Country: Montenegro
+    Internal: '1'
     Latitude: 42.44111
     Longitude: 19.26361
-    !!python/unicode 'label': !!python/unicode 'Podgorica'
-    !!python/unicode 'type': !!python/unicode 'GSR12410'
+    label: Podgorica
+    type: GSR12410

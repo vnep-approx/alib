@@ -65,185 +65,185 @@ edges:
   - '28'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.80172
     Longitude: -89.64371
-    !!python/unicode 'label': !!python/unicode 'ILLINOIS'
+    label: ILLINOIS
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.63622
     Longitude: -70.9342
-    !!python/unicode 'label': !!python/unicode 'MITRE'
-    !!python/unicode 'type': !!python/unicode '"T" Node'
+    label: MITRE
+    type: '"T" Node'
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.88101
     Longitude: -77.10428
-    !!python/unicode 'label': !!python/unicode 'ARPA'
-    !!python/unicode 'type': !!python/unicode '"T" Node'
+    label: ARPA
+    type: '"T" Node'
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.21285
     Longitude: -75.45573
-    !!python/unicode 'label': !!python/unicode 'RADC'
+    label: RADC
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.68574
     Longitude: -121.37217
-    !!python/unicode 'label': !!python/unicode 'McClellan'
+    label: McClellan
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.01945
     Longitude: -118.49119
-    !!python/unicode 'label': !!python/unicode 'RAND'
+    label: RAND
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.38605
     Longitude: -122.08385
-    !!python/unicode 'label': !!python/unicode 'AMES'
+    label: AMES
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.90776
     Longitude: -105.49222
-    !!python/unicode 'label': !!python/unicode 'NOAA {[Boulder, Colorado}}'
-    !!python/unicode 'type': !!python/unicode '"T" Node'
+    label: NOAA {[Boulder, Colorado}}
+    type: '"T" Node'
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.80484
     Longitude: -77.04692
-    !!python/unicode 'label': !!python/unicode 'SAAC'
-    !!python/unicode 'type': !!python/unicode '"T" Node'
+    label: SAAC
+    type: '"T" Node'
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.7119
     Longitude: -77.14589
-    !!python/unicode 'label': !!python/unicode 'BELVOIR'
+    label: BELVOIR
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.01945
     Longitude: -118.49119
-    !!python/unicode 'label': !!python/unicode 'SDC'
+    label: SDC
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.3751
     Longitude: -71.10561
-    !!python/unicode 'label': !!python/unicode 'BBN'
+    label: BBN
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.44118
     Longitude: -79.94283
-    !!python/unicode 'label': !!python/unicode 'CARNEGIE'
+    label: CARNEGIE
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.37843
     Longitude: -71.11644
-    !!python/unicode 'label': !!python/unicode 'HARVARD'
+    label: HARVARD
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.45383
     Longitude: -122.18219
-    !!python/unicode 'label': !!python/unicode 'SRI'
+    label: SRI
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.42083
     Longitude: -119.69819
-    !!python/unicode 'label': !!python/unicode 'UCSB'
+    label: UCSB
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'UCLA'
+    label: UCLA
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.44188
     Longitude: -122.14302
-    !!python/unicode 'label': !!python/unicode 'Stanford'
+    label: Stanford
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'USC'
-    !!python/unicode 'type': !!python/unicode '"T" Node'
+    label: USC
+    type: '"T" Node'
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.76078
     Longitude: -111.89105
-    !!python/unicode 'label': !!python/unicode 'UTAH'
+    label: UTAH
   '27':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.44732
     Longitude: -71.2245
-    !!python/unicode 'label': !!python/unicode 'Lincoln'
+    label: Lincoln
   '28':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.35954
     Longitude: -71.09172
-    !!python/unicode 'label': !!python/unicode 'MIT'
+    label: MIT
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.5045
     Longitude: -81.59707
-    !!python/unicode 'label': !!python/unicode 'CASE'
+    label: CASE
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.89511
     Longitude: -77.03637
-    !!python/unicode 'label': !!python/unicode 'ETAC'
+    label: ETAC
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.5427
     Longitude: -89.85035
-    !!python/unicode 'label': !!python/unicode 'AFGWC'
-    !!python/unicode 'type': !!python/unicode '"T" Node'
+    label: AFGWC
+    type: '"T" Node'
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.3751
     Longitude: -71.10561
-    !!python/unicode 'label': !!python/unicode 'BBN'
-    !!python/unicode 'type': !!python/unicode '"T" Node'
+    label: BBN
+    type: '"T" Node'
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.14344
     Longitude: -77.20137
-    !!python/unicode 'label': !!python/unicode 'NBS'
-    !!python/unicode 'type': !!python/unicode '"T" Node'
+    label: NBS
+    type: '"T" Node'
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.41474
     Longitude: -97.38663
-    !!python/unicode 'label': !!python/unicode 'Tinker'
+    label: Tinker
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.38605
     Longitude: -122.08385
-    !!python/unicode 'label': !!python/unicode 'AMES'
-    !!python/unicode 'type': !!python/unicode '"T" Node'
+    label: AMES
+    type: '"T" Node'

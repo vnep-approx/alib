@@ -118,35 +118,35 @@ edges:
 nodes:
   '0':
     Country: Netherlands
-    Internal: 1
+    Internal: '1'
     Latitude: 52.37403
     Longitude: 4.88969
     label: NL
     type: Fully Featured
   '1':
     Country: Belgium
-    Internal: 1
+    Internal: '1'
     Latitude: 50.85045
     Longitude: 4.34878
     label: BE
     type: Routerless
   '10':
     Country: Bulgaria
-    Internal: 1
+    Internal: '1'
     Latitude: 42.69751
     Longitude: 23.32415
     label: BG
     type: IP/MPLS only
   '11':
     Country: Romania
-    Internal: 1
+    Internal: '1'
     Latitude: 44.43225
     Longitude: 26.10626
     label: RO
     type: IP/MPLS only
   '12':
     Country: Turkey
-    Internal: 1
+    Internal: '1'
     Latitude: 39.05901
     Longitude: 34.91155
     geocode_country: Turkey
@@ -154,21 +154,21 @@ nodes:
     type: NREN POPs
   '13':
     Country: Greece
-    Internal: 1
+    Internal: '1'
     Latitude: 37.97945
     Longitude: 23.71622
     label: GR
     type: Off fibre net
   '14':
     Country: Cyprus
-    Internal: 1
+    Internal: '1'
     Latitude: 35.16667
     Longitude: 33.36667
     label: CY
     type: NREN POPs
   '15':
     Country: Israel
-    Internal: 1
+    Internal: '1'
     Latitude: 31.5
     Longitude: 34.75
     geocode_country: Israel
@@ -176,98 +176,98 @@ nodes:
     type: NREN POPs
   '16':
     Country: Malta
-    Internal: 1
+    Internal: '1'
     Latitude: 35.90917
     Longitude: 14.42556
     label: MT
     type: NREN POPs
   '17':
     Country: Macedonia
-    Internal: 1
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
     label: MK
     type: NREN POPs
   '18':
     Country: Montenegro
-    Internal: 1
+    Internal: '1'
     Latitude: 42.44111
     Longitude: 19.26361
     label: ME
     type: NREN POPs
   '19':
     Country: Hungary
-    Internal: 1
+    Internal: '1'
     Latitude: 47.49801
     Longitude: 19.03991
     label: HU
     type: Fully Featured
   '2':
     Country: Denmark
-    Internal: 1
+    Internal: '1'
     Latitude: 55.67594
     Longitude: 12.56553
     label: DK
     type: Fully Featured
   '20':
     Country: Slovakia
-    Internal: 1
+    Internal: '1'
     Latitude: 48.14816
     Longitude: 17.10674
     label: SK
     type: Routerless
   '21':
     Country: Portugal
-    Internal: 1
+    Internal: '1'
     Latitude: 38.71667
     Longitude: -9.13333
     label: PT
     type: Routerless Off Fibre net
   '22':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 40.4165
     Longitude: -3.70256
     label: ES
     type: Fully Featured
   '23':
     Country: Serbia
-    Internal: 1
+    Internal: '1'
     Latitude: 44.80401
     Longitude: 20.46513
     label: RS
     type: NREN POPs
   '24':
     Country: Croatia
-    Internal: 1
+    Internal: '1'
     Latitude: 45.81444
     Longitude: 15.97798
     label: HR
     type: Routerless
   '25':
     Country: Slovenia
-    Internal: 1
+    Internal: '1'
     Latitude: 46.05108
     Longitude: 14.50513
     label: SL
     type: Routerless
   '26':
     Country: Austria
-    Internal: 1
+    Internal: '1'
     Latitude: 48.20849
     Longitude: 16.37208
     label: AT
     type: Fully Featured
   '27':
     Country: Lithuania
-    Internal: 1
+    Internal: '1'
     Latitude: 54.9
     Longitude: 23.9
     label: LT
     type: IP/MPLS only
   '28':
     Country: Russia
-    Internal: 1
+    Internal: '1'
     Latitude: 55.75222
     Longitude: 37.61556
     geocode_id: '524901'
@@ -275,35 +275,35 @@ nodes:
     type: Routerless Off Fibre net
   '29':
     Country: Iceland
-    Internal: 1
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
     label: IS
     type: NORDUnet
   '3':
     Country: Poland
-    Internal: 1
+    Internal: '1'
     Latitude: 52.41667
     Longitude: 16.96667
     label: PL
     type: Off fibre net
   '30':
     Country: Ireland
-    Internal: 1
+    Internal: '1'
     Latitude: 53.34399
     Longitude: -6.26719
     label: IE
     type: Routerless
   '31':
     Country: United Kingdom
-    Internal: 1
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
     label: UK
     type: Fully Featured
   '32':
     Country: Norway
-    Internal: 1
+    Internal: '1'
     Latitude: 62.0
     Longitude: 10.0
     geocode_country: Norway
@@ -311,70 +311,70 @@ nodes:
     type: NORDUnet
   '33':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 59.33258
     Longitude: 18.0649
     label: SE
     type: NORDUnet
   '34':
     Country: Finland
-    Internal: 1
+    Internal: '1'
     Latitude: 60.45148
     Longitude: 22.26869
     label: FI
     type: NORDUnet
   '35':
     Country: Estonia
-    Internal: 1
+    Internal: '1'
     Latitude: 59.43696
     Longitude: 24.75353
     label: EE
     type: IP/MPLS only
   '36':
     Country: Latvia
-    Internal: 1
+    Internal: '1'
     Latitude: 56.946
     Longitude: 24.10589
     label: LV
     type: IP/MPLS only
   '4':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
     label: DE
     type: Fully Featured
   '5':
     Country: Czech Republic
-    Internal: 1
+    Internal: '1'
     Latitude: 50.08804
     Longitude: 14.42076
     label: CZ
     type: Fully Featured
   '6':
     Country: Luxembourg
-    Internal: 1
+    Internal: '1'
     Latitude: 49.61167
     Longitude: 6.13
     label: LU
     type: Routerless Off Fibre net
   '7':
     Country: France
-    Internal: 1
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
     label: FR
     type: Fully Featured
   '8':
     Country: Switzerland
-    Internal: 1
+    Internal: '1'
     Latitude: 46.94809
     Longitude: 7.44744
     label: CH
     type: Fully Featured
   '9':
     Country: Italy
-    Internal: 1
+    Internal: '1'
     Latitude: 45.46427
     Longitude: 9.18951
     label: IT

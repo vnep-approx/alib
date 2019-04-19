@@ -133,288 +133,288 @@ edges:
   - '41'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 29.65
     Longitude: 91.1
-    !!python/unicode 'label': !!python/unicode 'Lhasa'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Lhasa
+    type: Blue
   '1':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 36.05639
     Longitude: 103.79222
-    !!python/unicode 'label': !!python/unicode 'Lanzhou'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Lanzhou
+    type: Blue
   '10':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 39.9075
     Longitude: 116.39723
-    !!python/unicode 'label': !!python/unicode 'International Link 1'
+    label: International Link 1
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 31.22222
     Longitude: 121.45806
-    !!python/unicode 'label': !!python/unicode 'International Link 2'
+    label: International Link 2
   '12':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 22.81667
     Longitude: 108.31667
-    !!python/unicode 'label': !!python/unicode 'Nanning'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Nanning
+    type: Blue
   '13':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 28.2
     Longitude: 112.96667
-    !!python/unicode 'label': !!python/unicode 'Changsha'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Changsha
+    type: Blue
   '14':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 26.58333
     Longitude: 106.71667
-    !!python/unicode 'label': !!python/unicode 'Guiyang'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Guiyang
+    type: Blue
   '15':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 29.56278
     Longitude: 106.55278
-    !!python/unicode 'label': !!python/unicode 'Chongqing'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Chongqing
+    type: Blue
   '16':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 30.66667
     Longitude: 104.06667
-    !!python/unicode 'label': !!python/unicode 'Chengdu'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Chengdu
+    type: Blue
   '17':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 25.03889
     Longitude: 102.71833
-    !!python/unicode 'label': !!python/unicode 'Kunming'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Kunming
+    type: Blue
   '18':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 34.25833
     Longitude: 108.92861
-    !!python/unicode 'label': !!python/unicode 'Xi''an'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Xi'an
+    type: Blue
   '19':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 34.75778
     Longitude: 113.64861
-    !!python/unicode 'label': !!python/unicode 'Zhengzhou'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Zhengzhou
+    type: Blue
   '2':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 39.45472
     Longitude: 75.97972
-    !!python/unicode 'label': !!python/unicode 'Kashi'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Kashi
+    type: Blue
   '20':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 30.13062
     Longitude: 100.51803
-    !!python/unicode 'label': !!python/unicode 'International Link 4'
+    label: International Link 4
   '21':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 23.11667
     Longitude: 113.25
-    !!python/unicode 'label': !!python/unicode 'International Link 3'
+    label: International Link 3
   '22':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 20.04583
     Longitude: 110.34167
-    !!python/unicode 'label': !!python/unicode 'Haikou'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Haikou
+    type: Blue
   '23':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 30.13062
     Longitude: 100.51803
-    !!python/unicode 'label': !!python/unicode 'Hong Kong'
-    !!python/unicode 'type': !!python/unicode 'Pink'
+    label: Hong Kong
+    type: Pink
   '24':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 30.25528
     Longitude: 120.16889
-    !!python/unicode 'label': !!python/unicode 'Hangzhou'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Hangzhou
+    type: Blue
   '25':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 30.58333
     Longitude: 114.26667
-    !!python/unicode 'label': !!python/unicode 'Wuhan'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Wuhan
+    type: Blue
   '26':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 31.86389
     Longitude: 117.28083
-    !!python/unicode 'label': !!python/unicode 'Hefei'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Hefei
+    type: Blue
   '27':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 32.06167
     Longitude: 118.77778
-    !!python/unicode 'label': !!python/unicode 'Nanjing'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Nanjing
+    type: Blue
   '28':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 23.11667
     Longitude: 113.25
-    !!python/unicode 'label': !!python/unicode 'Guangzhou'
-    !!python/unicode 'type': !!python/unicode 'Green'
+    label: Guangzhou
+    type: Green
   '29':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 24.47979
     Longitude: 118.08187
-    !!python/unicode 'label': !!python/unicode 'Xiamen'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Xiamen
+    type: Blue
   '3':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 32.51667
     Longitude: 80.06667
-    !!python/unicode 'label': !!python/unicode 'Shiquanhe'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Shiquanhe
+    type: Blue
   '30':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 26.06139
     Longitude: 119.30611
-    !!python/unicode 'label': !!python/unicode 'Fuzhou'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Fuzhou
+    type: Blue
   '31':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 28.68333
     Longitude: 115.88333
-    !!python/unicode 'label': !!python/unicode 'Nandhang'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Nandhang
+    type: Blue
   '32':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 36.61667
     Longitude: 101.76667
-    !!python/unicode 'label': !!python/unicode 'Xining'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Xining
+    type: Blue
   '33':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 43.8
     Longitude: 87.58333
-    !!python/unicode 'label': !!python/unicode 'Urumqi'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Urumqi
+    type: Blue
   '34':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 45.75
     Longitude: 126.65
-    !!python/unicode 'label': !!python/unicode 'Harbin'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Harbin
+    type: Blue
   '35':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 43.88
     Longitude: 125.32278
-    !!python/unicode 'label': !!python/unicode 'Changchun'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Changchun
+    type: Blue
   '36':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 41.79222
     Longitude: 123.43278
-    !!python/unicode 'label': !!python/unicode 'Shenyang'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Shenyang
+    type: Blue
   '37':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 38.91222
     Longitude: 121.60222
-    !!python/unicode 'label': !!python/unicode 'Dalian'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Dalian
+    type: Blue
   '38':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 39.14222
     Longitude: 117.17667
-    !!python/unicode 'label': !!python/unicode 'Tianjin'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Tianjin
+    type: Blue
   '39':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 39.9075
     Longitude: 116.39723
-    !!python/unicode 'label': !!python/unicode 'Beijing'
-    !!python/unicode 'type': !!python/unicode 'Green'
+    label: Beijing
+    type: Green
   '4':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 36.66833
     Longitude: 116.99722
-    !!python/unicode 'label': !!python/unicode 'Jinan'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Jinan
+    type: Blue
   '40':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 40.81056
     Longitude: 111.65222
-    !!python/unicode 'label': !!python/unicode 'Hohhot'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Hohhot
+    type: Blue
   '41':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 38.46806
     Longitude: 106.27306
-    !!python/unicode 'label': !!python/unicode 'Yinchuan'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Yinchuan
+    type: Blue
   '5':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 36.09861
     Longitude: 120.37194
-    !!python/unicode 'label': !!python/unicode 'Qingdao'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Qingdao
+    type: Blue
   '6':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 37.86944
     Longitude: 112.56028
-    !!python/unicode 'label': !!python/unicode 'Taiyuan'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Taiyuan
+    type: Blue
   '7':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 38.04139
     Longitude: 114.47861
-    !!python/unicode 'label': !!python/unicode 'Shilazhuang'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Shilazhuang
+    type: Blue
   '8':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 31.22222
     Longitude: 121.45806
-    !!python/unicode 'label': !!python/unicode 'Shanghai'
-    !!python/unicode 'type': !!python/unicode 'Green'
+    label: Shanghai
+    type: Green
   '9':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 31.31139
     Longitude: 120.61806
-    !!python/unicode 'label': !!python/unicode 'Suzhou'
-    !!python/unicode 'type': !!python/unicode 'Blue'
+    label: Suzhou
+    type: Blue

@@ -7,6 +7,7 @@ install_requires = [
     "click==6.7",
     "pyyaml",
     "jsonpickle",
+    "unidecode",
 ]
 
 setup(

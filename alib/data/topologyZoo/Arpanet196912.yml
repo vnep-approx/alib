@@ -9,26 +9,26 @@ edges:
   - '2'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.45383
     Longitude: -122.18219
-    !!python/unicode 'label': !!python/unicode 'SRI'
+    label: SRI
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.42083
     Longitude: -119.69819
-    !!python/unicode 'label': !!python/unicode 'USCB'
+    label: USCB
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'UCLA'
+    label: UCLA
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.76078
     Longitude: -111.89105
-    !!python/unicode 'label': !!python/unicode 'UTAH'
+    label: UTAH

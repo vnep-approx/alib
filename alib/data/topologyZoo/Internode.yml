@@ -158,416 +158,416 @@ edges:
 nodes:
   '0':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -37.814
     Longitude: 144.96332
     label: mel4
     type: Domestic PoP
   '1':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -33.86785
     Longitude: 151.20732
     label: syd6
     type: International Gateway PoP
   '10':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -35.28346
     Longitude: 149.12807
     label: cbr1
     type: Domestic PoP
   '11':
-    Internal: 0
+    Internal: '0'
     Latitude: -37.814
     Longitude: 144.96332
     label: Optus
     type: Transit
   '12':
-    Internal: 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
     label: Astraweb
     type: Peer
   '13':
-    Internal: 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
     label: Google
     type: Peer
   '14':
-    Internal: 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
     label: Sprint
     type: Peer
   '15':
-    Internal: 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
     label: Equinix
     type: Peer
   '16':
     Country: Singapore
-    Internal: 1
+    Internal: '1'
     Latitude: 1.28967
     Longitude: 103.85007
     label: sin1
     type: International Gateway PoP
   '17':
-    Internal: 0
+    Internal: '0'
     Latitude: 1.28967
     Longitude: 103.85007
     label: Starhub
     type: Peer
   '18':
     Country: Hong Kong
-    Internal: 1
+    Internal: '1'
     Latitude: 22.28552
     Longitude: 114.15769
     label: hkg1
     type: International Gateway PoP
   '19':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 37.33939
     Longitude: -121.89496
     label: sjc2
     type: International Gateway PoP
   '2':
-    Internal: 0
+    Internal: '0'
     Latitude: -34.93333
     Longitude: 138.6
     label: University of Adelaide
     type: Peer
   '20':
     Country: Japan
-    Internal: 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
     label: nrt1
     type: International Gateway PoP
   '21':
     Country: New Zealand
-    Internal: 1
+    Internal: '1'
     Latitude: -36.86667
     Longitude: 174.76667
     label: akl1
     type: International Gateway PoP
   '22':
-    Internal: 0
+    Internal: '0'
     Latitude: -27.46794
     Longitude: 153.02809
     label: Optus
     type: Transit
   '23':
-    Internal: 0
+    Internal: '0'
     Latitude: -27.46794
     Longitude: 153.02809
     label: PIPE Networks
     type: Peer
   '24':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.04372
     Longitude: -77.48749
     label: iad1
     type: International Gateway PoP
   '25':
     Country: United Kingdom
-    Internal: 1
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
     label: lon1
     type: International Gateway PoP
   '26':
-    Internal: 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
     label: NTT
     type: Transit
   '27':
-    Internal: 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
     label: Level 3
     type: Transit
   '28':
-    Internal: 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
     label: PAIX
     type: Peer
   '29':
-    Internal: 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
     label: Global Crossing
     type: Transit
   '3':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -37.814
     Longitude: 144.96332
     label: mel6
     type: Domestic PoP
   '30':
-    Internal: 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
     label: Level 3
     type: Transit
   '31':
-    Internal: 0
+    Internal: '0'
     Latitude: 51.50853
     Longitude: -0.12574
     label: LINX 2
     type: Peer
   '32':
-    Internal: 0
+    Internal: '0'
     Latitude: 51.50853
     Longitude: -0.12574
     label: LINX 1
     type: Peer
   '33':
-    Internal: 0
+    Internal: '0'
     Latitude: 51.50853
     Longitude: -0.12574
     label: AMS IX
     type: Peer
   '34':
-    Internal: 0
+    Internal: '0'
     Latitude: 39.04372
     Longitude: -77.48749
     label: Equinix
     type: Peer
   '35':
-    Internal: 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
     label: Any2
     type: Peer
   '36':
-    Internal: 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
     label: Google
     type: Peer
   '37':
-    Internal: 0
+    Internal: '0'
     Latitude: 22.28552
     Longitude: 114.15769
     label: NTT
     type: Transit
   '38':
-    Internal: 0
+    Internal: '0'
     Latitude: 1.28967
     Longitude: 103.85007
     label: Equinix
     type: Peer
   '39':
-    Internal: 0
+    Internal: '0'
     Latitude: 22.28552
     Longitude: 114.15769
     label: Equinix
     type: Peer
   '4':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -27.46794
     Longitude: 153.02809
     label: bne1
     type: Domestic PoP
   '40':
-    Internal: 0
+    Internal: '0'
     Latitude: 22.28552
     Longitude: 114.15769
     label: HKIX
     type: Peer
   '41':
-    Internal: 0
+    Internal: '0'
     Latitude: 35.61488
     Longitude: 139.5813
     label: Equinix
     type: Peer
   '42':
-    Internal: 0
+    Internal: '0'
     Latitude: 35.61488
     Longitude: 139.5813
     label: NTT
     type: Transit
   '43':
-    Internal: 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
     label: NTT
     type: Transit
   '44':
-    Internal: 0
+    Internal: '0'
     Latitude: 35.61488
     Longitude: 139.5813
     label: JPIX
     type: Peer
   '45':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
     label: lax1
     type: International Gateway PoP
   '46':
-    Internal: 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
     label: Google
     type: Peer
   '47':
-    Internal: 0
+    Internal: '0'
     Latitude: -35.28346
     Longitude: 149.12807
     label: TransIX
     type: Peer
   '48':
-    Internal: 0
+    Internal: '0'
     Latitude: -37.814
     Longitude: 144.96332
     label: PIPE Networks
     type: Peer
   '49':
-    Internal: 0
+    Internal: '0'
     Latitude: -42.87936
     Longitude: 147.32941
     label: PIPE Networks
     type: Peer
   '5':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -42.87936
     Longitude: 147.32941
     label: hba1
     type: Domestic PoP
   '50':
-    Internal: 0
+    Internal: '0'
     Latitude: -37.814
     Longitude: 144.96332
     label: AARNet
     type: Peer
   '51':
-    Internal: 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
     label: PIPE Networks
     type: Peer
   '52':
-    Internal: 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
     label: PacNet
     type: Peer
   '53':
-    Internal: 0
+    Internal: '0'
     Latitude: -35.28346
     Longitude: 149.12807
     label: AARNet
     type: Peer
   '54':
-    Internal: 0
+    Internal: '0'
     Latitude: -35.28346
     Longitude: 149.12807
     label: PIPE Networks
     type: Peer
   '55':
-    Internal: 0
+    Internal: '0'
     Latitude: -34.93333
     Longitude: 138.6
     label: AARNet
     type: Peer
   '56':
-    Internal: 0
+    Internal: '0'
     Latitude: -31.93333
     Longitude: 115.83333
     label: AARNet
     type: Peer
   '57':
-    Internal: 0
+    Internal: '0'
     Latitude: -34.93333
     Longitude: 138.6
     label: Optus
     type: Transit
   '58':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -31.93333
     Longitude: 115.83333
     label: per2
     type: International Gateway PoP
   '59':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -31.93333
     Longitude: 115.83333
     label: per1
     type: International Gateway PoP
   '6':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -33.86785
     Longitude: 151.20732
     label: syd7
     type: International Gateway PoP
   '60':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -34.93333
     Longitude: 138.6
     label: adl6
     type: Domestic PoP
   '61':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -34.93333
     Longitude: 138.6
     label: adl2
     type: Domestic PoP
   '62':
-    Internal: 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
     label: Global Crossing
     type: Transit
   '63':
-    Internal: 0
+    Internal: '0'
     Latitude: -34.93333
     Longitude: 138.6
     label: PIPE Networks
     type: Peer
   '64':
-    Internal: 0
+    Internal: '0'
     Latitude: -31.93333
     Longitude: 115.83333
     label: Optus
     type: Transit
   '65':
-    Internal: 0
+    Internal: '0'
     Latitude: -31.93333
     Longitude: 115.83333
     label: WAIX
     type: Peer
   '7':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -27.46794
     Longitude: 153.02809
     label: bne4
     type: Domestic PoP
   '8':
-    Internal: 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
     label: Sprint
     type: Peer
   '9':
-    Internal: 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
     label: Equinix

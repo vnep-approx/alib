@@ -320,5 +320,19 @@ def f_merge_scenario_containers(scenario_container_pickle_file_1, scenario_conta
         pickle.dump(scenario_container_1, f)
 
 
+@cli.command()
+@click.option('--min_number_nodes', type=click.INT, default=10)
+@click.option('--max_number_nodes', type=click.INT, default=100000)
+def summarize_topology_zoo_graphs(min_number_nodes, max_number_nodes):
+    scenariogeneration.summarize_topology_zoo_graphs(min_number_nodes, max_number_nodes)
+
+
+@cli.command()
+@click.argument('gml_path', type=click.Path())
+@click.argument('yml_path', type=click.Path())
+@click.option('--consider_disconnected/--discard_disconnected', default="True")
+def convert_topology_zoo_gml_to_yml(gml_path, yml_path, consider_disconnected):
+    scenariogeneration.convert_topology_zoo_gml_to_yml(gml_path, yml_path, consider_disconnected)
+
 if __name__ == '__main__':
     cli()

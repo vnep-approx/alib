@@ -17,44 +17,44 @@ edges:
   - '6'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.60621
     Longitude: -122.33207
-    !!python/unicode 'label': !!python/unicode 'Seattle'
+    label: Seattle
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.35411
     Longitude: -121.95524
-    !!python/unicode 'label': !!python/unicode 'Santa Clara'
+    label: Santa Clara
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.44838
     Longitude: -112.07404
-    !!python/unicode 'label': !!python/unicode 'Phoenix'
+    label: Phoenix
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.22174
     Longitude: -110.92648
-    !!python/unicode 'label': !!python/unicode 'Tucson'
+    label: Tucson
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.89511
     Longitude: -77.03637
-    !!python/unicode 'label': !!python/unicode 'Washington, DC'
+    label: Washington, DC
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.29038
     Longitude: -76.61219
-    !!python/unicode 'label': !!python/unicode 'Baltimore'
+    label: Baltimore
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.44062
     Longitude: -79.99589
-    !!python/unicode 'label': !!python/unicode 'Pittsburgh'
+    label: Pittsburgh

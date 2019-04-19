@@ -116,175 +116,175 @@ edges:
 nodes:
   '0':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 40.71427
     Longitude: -74.00597
     label: NY54
     type: Completion 2007 - 2008
   '1':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 42.3751
     Longitude: -71.10561
     label: CMBR
     type: Completion 2007 - 2008
   '10':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 29.95465
     Longitude: -90.07507
     label: NWOR
     type: Completion 2007 - 2008
   '11':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 29.76328
     Longitude: -95.36327
     label: HSTN
     type: Completed
   '12':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 29.42412
     Longitude: -98.49363
     label: SNAN
     type: Completion 2007 - 2008
   '13':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.78306
     Longitude: -96.80667
     label: DLLS
     type: Completed
   '14':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 28.53834
     Longitude: -81.37924
     label: ORLD
     type: Completed
   '15':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.73915
     Longitude: -104.9847
     label: DNVR
     type: Completion 2007 - 2008
   '16':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.11417
     Longitude: -94.62746
     label: KSCY
     type: Completion 2007 - 2008
   '17':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 37.77493
     Longitude: -122.41942
     label: SNFN
     type: Completed
   '18':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 38.58157
     Longitude: -121.4944
     label: SCRM
     type: Completion 2007 - 2008
   '19':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 45.52345
     Longitude: -122.67621
     label: PTLD
     type: Completion 2007 - 2008
   '2':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 41.85003
     Longitude: -87.65005
     label: CHCG
     type: Completed
   '20':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 47.60621
     Longitude: -122.33207
     label: STTL
     type: Completion 2007 - 2008
   '21':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 40.76078
     Longitude: -111.89105
     label: SLKC
     type: Completion 2007 - 2008
   '22':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
     label: LA03
     type: Completed
   '23':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.71533
     Longitude: -117.15726
     label: SNDG
     type: Completion 2007 - 2008
   '24':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.44838
     Longitude: -112.07404
     label: PHNX
     type: Completion 2007 - 2008
   '3':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 41.4995
     Longitude: -81.69541
     label: CLEV
     type: Completed
   '4':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.7721
     Longitude: -78.63861
     label: RLGH
     type: Completion 2007 - 2008
   '5':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
     label: ATLN
     type: Completed
   '6':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.95234
     Longitude: -75.16379
     label: PHLA
     type: Completed
   '7':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 38.89511
     Longitude: -77.03637
     label: WASH
     type: Completed
   '8':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.16589
     Longitude: -86.78444
     label: NSVL
     type: Completion 2007 - 2008
   '9':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 38.62727
     Longitude: -90.19789
     label: STLS

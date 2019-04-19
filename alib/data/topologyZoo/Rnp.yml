@@ -69,185 +69,185 @@ edges:
   - '30'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -8.05389
     Longitude: -34.88111
-    !!python/unicode 'label': !!python/unicode 'Revife'
+    label: Revife
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -9.66583
     Longitude: -35.73528
-    !!python/unicode 'label': !!python/unicode 'Maceio'
+    label: Maceio
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -3.10194
     Longitude: -60.025
-    !!python/unicode 'label': !!python/unicode 'Manaus'
+    label: Manaus
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -16.67861
     Longitude: -49.25389
-    !!python/unicode 'label': !!python/unicode 'Goiania'
+    label: Goiania
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -15.59611
     Longitude: -56.09667
-    !!python/unicode 'label': !!python/unicode 'Cuiaba'
+    label: Cuiaba
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -25.42778
     Longitude: -49.27306
-    !!python/unicode 'label': !!python/unicode 'Curitiba'
+    label: Curitiba
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -30.03306
     Longitude: -51.23
-    !!python/unicode 'label': !!python/unicode 'Porto Alegro'
+    label: Porto Alegro
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -27.59667
     Longitude: -48.54917
-    !!python/unicode 'label': !!python/unicode 'Florianopolis'
+    label: Florianopolis
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -23.5475
     Longitude: -46.63611
-    !!python/unicode 'label': !!python/unicode 'Sao Paulo'
+    label: Sao Paulo
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -8.76194
     Longitude: -63.90389
-    !!python/unicode 'label': !!python/unicode 'Porto Velho'
+    label: Porto Velho
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -9.97472
     Longitude: -67.81
-    !!python/unicode 'label': !!python/unicode 'Rio Branco'
+    label: Rio Branco
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -10.21278
     Longitude: -48.36028
-    !!python/unicode 'label': !!python/unicode 'Palmas'
+    label: Palmas
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -7.23056
     Longitude: -35.88111
-    !!python/unicode 'label': !!python/unicode 'Campina Grande'
+    label: Campina Grande
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -20.44278
     Longitude: -54.64639
-    !!python/unicode 'label': !!python/unicode 'Campo Grande'
+    label: Campo Grande
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -5.08917
     Longitude: -42.80194
-    !!python/unicode 'label': !!python/unicode 'Teresina'
+    label: Teresina
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -5.795
     Longitude: -35.20944
-    !!python/unicode 'label': !!python/unicode 'Natal'
+    label: Natal
   '23':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -23.5475
     Longitude: -46.63611
-    !!python/unicode 'label': !!python/unicode 'RedCLARA'
+    label: RedCLARA
   '24':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -23.5475
     Longitude: -46.63611
-    !!python/unicode 'label': !!python/unicode 'Inetnet Comercial'
+    label: Inetnet Comercial
   '25':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -23.5475
     Longitude: -46.63611
-    !!python/unicode 'label': !!python/unicode 'Americas Light'
+    label: Americas Light
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: 2.81972
     Longitude: -60.67333
-    !!python/unicode 'label': !!python/unicode 'Boa Vista'
+    label: Boa Vista
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: 0.03889
     Longitude: -51.06639
-    !!python/unicode 'label': !!python/unicode 'Macapa'
+    label: Macapa
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -1.45583
     Longitude: -48.50444
-    !!python/unicode 'label': !!python/unicode 'Belem'
+    label: Belem
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -2.52972
     Longitude: -44.30278
-    !!python/unicode 'label': !!python/unicode 'Sao Luis'
+    label: Sao Luis
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -7.115
     Longitude: -34.86306
-    !!python/unicode 'label': !!python/unicode 'Jobo Passoa'
+    label: Jobo Passoa
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -3.71722
     Longitude: -38.54306
-    !!python/unicode 'label': !!python/unicode 'Fortaleza'
+    label: Fortaleza
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -15.77972
     Longitude: -47.92972
-    !!python/unicode 'label': !!python/unicode 'Brasilia'
+    label: Brasilia
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -19.92083
     Longitude: -43.93778
-    !!python/unicode 'label': !!python/unicode 'Belo Horizonte'
+    label: Belo Horizonte
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -10.91111
     Longitude: -37.07167
-    !!python/unicode 'label': !!python/unicode 'Aracaju'
+    label: Aracaju
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -12.97111
     Longitude: -38.51083
-    !!python/unicode 'label': !!python/unicode 'Salvador'
+    label: Salvador
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -20.31944
     Longitude: -40.33778
-    !!python/unicode 'label': !!python/unicode 'Vitoria'
+    label: Vitoria
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Brazil'
-    !!python/unicode 'Internal': 1
+    Country: Brazil
+    Internal: '1'
     Latitude: -22.90278
     Longitude: -43.2075
-    !!python/unicode 'label': !!python/unicode 'Rio de Janeiro'
+    label: Rio de Janeiro

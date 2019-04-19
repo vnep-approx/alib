@@ -185,620 +185,620 @@ edges:
   - '86'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.75368
     Longitude: 7.14609
-    !!python/unicode 'label': !!python/unicode 'Ependes'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Ependes
+    type: Transmission Site
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.34999
     Longitude: 7.90329
-    !!python/unicode 'label': !!python/unicode 'Olten'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Olten
+    type: Transmission Site
   '10':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 45.75
     Longitude: 4.85
-    !!python/unicode 'label': !!python/unicode 'Lyon'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Lyon
+    type: Point of Presence
   '11':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 45.9
     Longitude: 5.005556666666666
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '12':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 44.08333
     Longitude: 4.75
-    !!python/unicode 'geocode_append': !!python/unicode 'Arrondissement de Nimes'
-    !!python/unicode 'label': !!python/unicode 'Montfaucon'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    geocode_append: Arrondissement de Nimes
+    label: Montfaucon
+    type: Transmission Site
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Belgium'
-    !!python/unicode 'Internal': 1
+    Country: Belgium
+    Internal: '1'
     Latitude: 51.21667
     Longitude: 4.41667
-    !!python/unicode 'label': !!python/unicode 'Antwerp (NMBS)'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Antwerp (NMBS)
+    type: Point of Presence
   '14':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.60426
     Longitude: 1.44367
-    !!python/unicode 'label': !!python/unicode 'Toulouse'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Toulouse
+    type: Point of Presence
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Belgium'
-    !!python/unicode 'Internal': 1
+    Country: Belgium
+    Internal: '1'
     Latitude: 50.85045
     Longitude: 4.34878
-    !!python/unicode 'label': !!python/unicode 'Brussels MIDI (NMBS)'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Brussels MIDI (NMBS)
+    type: Point of Presence
   '16':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.29695
     Longitude: 5.38107
-    !!python/unicode 'label': !!python/unicode 'Marseille'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Marseille
+    type: Point of Presence
   '17':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 44.83333
     Longitude: -0.56667
-    !!python/unicode 'label': !!python/unicode 'Bordeaux'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Bordeaux
+    type: Point of Presence
   '18':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.00202
     Longitude: 3.36786
-    !!python/unicode 'label': !!python/unicode 'Azy-sur-Marne'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Azy-sur-Marne
+    type: Transmission Site
   '19':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.95
     Longitude: 2.86667
-    !!python/unicode 'label': !!python/unicode 'Meaux'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Meaux
+    type: Transmission Site
   '2':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.18333
     Longitude: 2.73333
-    !!python/unicode 'label': !!python/unicode 'Souppes'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Souppes
+    type: Transmission Site
   '20':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.83333
     Longitude: 4.98333
-    !!python/unicode 'label': !!python/unicode 'Revigny'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Revigny
+    type: Transmission Site
   '21':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.05
     Longitude: 4.18333
-    !!python/unicode 'label': !!python/unicode 'Conde-sur-Marne'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Conde-sur-Marne
+    type: Transmission Site
   '22':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 50.68333
     Longitude: 3.25
-    !!python/unicode 'label': !!python/unicode 'Leers-Nord Estampuis'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Leers-Nord Estampuis
+    type: Transmission Site
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Belgium'
-    !!python/unicode 'Internal': 1
+    Country: Belgium
+    Internal: '1'
     Latitude: 50.56765
     Longitude: 3.4492
-    !!python/unicode 'label': !!python/unicode 'Antoing (NMBS)'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Antoing (NMBS)
+    type: Transmission Site
   '24':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.47591
     Longitude: 2.8821
-    !!python/unicode 'label': !!python/unicode 'Thourotte'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Thourotte
+    type: Transmission Site
   '25':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 50.45
     Longitude: 2.93333
-    !!python/unicode 'label': !!python/unicode 'Courrieres'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Courrieres
+    type: Transmission Site
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Belgium'
-    !!python/unicode 'Internal': 1
+    Country: Belgium
+    Internal: '1'
     Latitude: 51.05
     Longitude: 3.71667
-    !!python/unicode 'label': !!python/unicode 'Gent'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Gent
+    type: Transmission Site
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Belgium'
-    !!python/unicode 'Internal': 1
+    Country: Belgium
+    Internal: '1'
     Latitude: 51.21667
     Longitude: 4.41667
-    !!python/unicode 'label': !!python/unicode 'Antwerp'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Antwerp
+    type: Transmission Site
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.94809
     Longitude: 7.44744
-    !!python/unicode 'label': !!python/unicode 'Bern'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Bern
+    type: Point of Presence
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.36667
     Longitude: 8.55
-    !!python/unicode 'label': !!python/unicode 'Zurich'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Zurich
+    type: Point of Presence
   '3':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 47.63343
     Longitude: 2.7438
-    !!python/unicode 'label': !!python/unicode 'Briare'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Briare
+    type: Transmission Site
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.56667
     Longitude: 7.6
-    !!python/unicode 'label': !!python/unicode 'Basel'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Basel
+    type: Point of Presence
   '31':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.68333
     Longitude: 6.2
-    !!python/unicode 'label': !!python/unicode 'Nancy'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Nancy
+    type: Point of Presence
   '32':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.58333
     Longitude: 7.75
-    !!python/unicode 'label': !!python/unicode 'Strasbourg'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Strasbourg
+    type: Point of Presence
   '33':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.48833
     Longitude: 8.46472
-    !!python/unicode 'label': !!python/unicode 'Mannheim'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Mannheim
+    type: Point of Presence
   '34':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'Frankfurt'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Frankfurt
+    type: Point of Presence
   '35':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'Internexion'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Internexion
+    type: Point of Presence
   '36':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
-    !!python/unicode 'label': !!python/unicode 'Paris La Defense'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Paris La Defense
+    type: Point of Presence
   '37':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.20222
     Longitude: 6.14569
-    !!python/unicode 'label': !!python/unicode 'Geneva'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Geneva
+    type: Point of Presence
   '38':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.41667
     Longitude: -0.56667
-    !!python/unicode 'label': !!python/unicode 'Egham'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Egham
+    type: Point of Presence
   '39':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'London Telehouse North'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: London Telehouse North
+    type: Point of Presence
   '4':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 46.98956
     Longitude: 3.159
-    !!python/unicode 'label': !!python/unicode 'Nevers'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Nevers
+    type: Transmission Site
   '40':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.48333
     Longitude: 1.75
-    !!python/unicode 'label': !!python/unicode 'Lowestoft'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Lowestoft
+    type: Point of Presence
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 52.37403
     Longitude: 4.88969
-    !!python/unicode 'label': !!python/unicode 'Amsterdam (Schipluidlaan/Deflandlaan)'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Amsterdam (Schipluidlaan/Deflandlaan)
+    type: Point of Presence
   '42':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
-    !!python/unicode 'label': !!python/unicode 'Paris (35Rdj)'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Paris (35Rdj)
+    type: Point of Presence
   '43':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.91667
     Longitude: 2.91667
-    !!python/unicode 'label': !!python/unicode 'Biaches'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Biaches
+    type: Point of Presence
   '44':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.9
     Longitude: 2.3
-    !!python/unicode 'label': !!python/unicode 'Amiens'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Amiens
+    type: Point of Presence
   '45':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.11303
     Longitude: -0.18312
-    !!python/unicode 'label': !!python/unicode 'Crawley'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Crawley
+    type: Point of Presence
   '46':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 51.9225
     Longitude: 4.47917
-    !!python/unicode 'label': !!python/unicode 'Rotterdam'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Rotterdam
+    type: Point of Presence
   '47':
-    !!python/unicode 'Country': !!python/unicode 'Belgium'
-    !!python/unicode 'Internal': 1
+    Country: Belgium
+    Internal: '1'
     Latitude: 50.85045
     Longitude: 4.34878
-    !!python/unicode 'label': !!python/unicode 'Brussels Tollaan'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Brussels Tollaan
+    type: Point of Presence
   '48':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.8292
     Longitude: 1.29673
-    !!python/unicode 'label': !!python/unicode 'Grisolles'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Grisolles
+    type: Transmission Site
   '49':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 44.18333
     Longitude: 0.68333
-    !!python/unicode 'label': !!python/unicode 'Bon-Encontre'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Bon-Encontre
+    type: Transmission Site
   '5':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 46.62214
     Longitude: 3.76953
-    !!python/unicode 'label': !!python/unicode 'Bourbon'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Bourbon
+    type: Transmission Site
   '50':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 47.58333
     Longitude: 1.33333
-    !!python/unicode 'label': !!python/unicode 'Blois'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Blois
+    type: Transmission Site
   '51':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 47.91667
     Longitude: 7.55
-    !!python/unicode 'label': !!python/unicode 'Nambsheim'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Nambsheim
+    type: Transmission Site
   '52':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 46.58333
     Longitude: 0.33333
-    !!python/unicode 'label': !!python/unicode 'Availles (Poiters)'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Availles (Poiters)
+    type: Transmission Site
   '53':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 47.38333
     Longitude: 0.68333
-    !!python/unicode 'label': !!python/unicode 'Veretz (Tours)'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Veretz (Tours)
+    type: Transmission Site
   '54':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 45.63333
     Longitude: 0.05
-    !!python/unicode 'label': !!python/unicode 'Nersac'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Nersac
+    type: Transmission Site
   '55':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 46.05
     Longitude: -0.43333
-    !!python/unicode 'label': !!python/unicode 'Blanzay'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Blanzay
+    type: Transmission Site
   '56':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 44.51667
     Longitude: 0.03333
-    !!python/unicode 'label': !!python/unicode 'Meilhan'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Meilhan
+    type: Transmission Site
   '57':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 44.88333
     Longitude: -0.1
-    !!python/unicode 'label': !!python/unicode 'St-Christophe'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: St-Christophe
+    type: Transmission Site
   '58':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 45.23333
     Longitude: 4.8
-    !!python/unicode 'label': !!python/unicode 'Andancette'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Andancette
+    type: Transmission Site
   '59':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.22172
     Longitude: 6.77616
-    !!python/unicode 'label': !!python/unicode 'Dusseldorf'
-    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+    label: Dusseldorf
+    type: Point of Presence
   '6':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 46.43333
     Longitude: 4.28333
-    !!python/unicode 'label': !!python/unicode 'Charolles'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Charolles
+    type: Transmission Site
   '60':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.69084
     Longitude: 5.20709
-    !!python/unicode 'label': !!python/unicode 'Cazan'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Cazan
+    type: Transmission Site
   '61':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 44.56667
     Longitude: 4.75
-    !!python/unicode 'label': !!python/unicode 'Montelimar'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Montelimar
+    type: Transmission Site
   '62':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.75
     Longitude: 4.51667
-    !!python/unicode 'label': !!python/unicode 'Pichegu'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Pichegu
+    type: Transmission Site
   '63':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.43774
     Longitude: 4.94457
-    !!python/unicode 'label': !!python/unicode 'Fos'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Fos
+    type: Transmission Site
   '64':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.31667
     Longitude: 3.08333
-    !!python/unicode 'label': !!python/unicode 'Poilhes'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Poilhes
+    type: Transmission Site
   '65':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.6
     Longitude: 3.88333
-    !!python/unicode 'label': !!python/unicode 'Sete (Montpellier)'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Sete (Montpellier)
+    type: Transmission Site
   '66':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.36667
     Longitude: 1.8
-    !!python/unicode 'label': !!python/unicode 'Avignonet'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Avignonet
+    type: Transmission Site
   '67':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 43.2
     Longitude: 2.55
-    !!python/unicode 'label': !!python/unicode 'Marseillette'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Marseillette
+    type: Transmission Site
   '68':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 47.91667
     Longitude: 1.9
-    !!python/unicode 'label': !!python/unicode 'Artenay (Orleans)'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Artenay (Orleans)
+    type: Transmission Site
   '69':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.43333
     Longitude: 2.56667
-    !!python/unicode 'geocode_append': !!python/unicode 'Saint-Martin-en-Biere'
-    !!python/unicode 'label': !!python/unicode 'St-Martin'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    geocode_append: Saint-Martin-en-Biere
+    label: St-Martin
+    type: Transmission Site
   '7':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 46.1
     Longitude: 4.75
-    !!python/unicode 'label': !!python/unicode 'Belleville'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Belleville
+    type: Transmission Site
   '70':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.07861
     Longitude: 0.58167
-    !!python/unicode 'label': !!python/unicode 'Snow Hill'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Snow Hill
+    type: Transmission Site
   '71':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.27051
     Longitude: 0.82103
-    !!python/unicode 'label': !!python/unicode 'Pakenham'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Pakenham
+    type: Transmission Site
   '72':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 52.37487
     Longitude: 4.53409
-    !!python/unicode 'label': !!python/unicode 'Zandvoort'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Zandvoort
+    type: Transmission Site
   '73':
-    !!python/unicode 'Country': !!python/unicode 'Belgium'
-    !!python/unicode 'Internal': 1
+    Country: Belgium
+    Internal: '1'
     Latitude: 51.46272
     Longitude: 4.45393
-    !!python/unicode 'geocode_append': !!python/unicode 'Belgium'
-    !!python/unicode 'label': !!python/unicode 'Essen'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    geocode_append: Belgium
+    label: Essen
+    type: Transmission Site
   '74':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.6
     Longitude: 2.48333
-    !!python/unicode 'label': !!python/unicode 'Corbeil'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Corbeil
+    type: Transmission Site
   '75':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 49.10744
     Longitude: 2.22818
-    !!python/unicode 'label': !!python/unicode 'L''Isle Adam'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: L'Isle Adam
+    type: Transmission Site
   '76':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 50.182
     Longitude: 1.494
-    !!python/unicode 'label': !!python/unicode 'Cayeux-sur-Mer'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Cayeux-sur-Mer
+    type: Transmission Site
   '77':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 50.8
     Longitude: 0.23333
-    !!python/unicode 'label': !!python/unicode 'Polegate'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Polegate
+    type: Transmission Site
   '78':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.7
     Longitude: 7.0
-    !!python/unicode 'label': !!python/unicode 'Xouxange'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Xouxange
+    type: Transmission Site
   '79':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.7
     Longitude: 5.7
-    !!python/unicode 'label': !!python/unicode 'Troussey'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Troussey
+    type: Transmission Site
   '8':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 45.85
     Longitude: 5.41667
-    !!python/unicode 'label': !!python/unicode 'Sault Brenaz'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Sault Brenaz
+    type: Transmission Site
   '80':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.86667
     Longitude: 6.15
-    !!python/unicode 'label': !!python/unicode 'Elten'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Elten
+    type: Transmission Site
   '81':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 52.01167
     Longitude: 5.42778
-    !!python/unicode 'label': !!python/unicode 'Leersum/Doorn??'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Leersum/Doorn??
+    type: Transmission Site
   '82':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.56667
     Longitude: 6.36667
-    !!python/unicode 'label': !!python/unicode 'Kapella'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Kapella
+    type: Transmission Site
   '83':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.88333
     Longitude: 7.05
-    !!python/unicode 'label': !!python/unicode 'Porz'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Porz
+    type: Transmission Site
   '84':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.56667
     Longitude: 7.28333
-    !!python/unicode 'label': !!python/unicode 'Linz'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Linz
+    type: Transmission Site
   '85':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.55
     Longitude: 7.6
-    !!python/unicode 'label': !!python/unicode 'Dernbach'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Dernbach
+    type: Transmission Site
   '86':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.13333
     Longitude: 8.3
-    !!python/unicode 'label': !!python/unicode 'Naurod'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Naurod
+    type: Transmission Site
   '87':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.9
     Longitude: 7.16667
-    !!python/unicode 'label': !!python/unicode 'Berg'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Berg
+    type: Transmission Site
   '9':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 45.8
     Longitude: 5.76667
-    !!python/unicode 'label': !!python/unicode 'Lavours'
-    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+    label: Lavours
+    type: Transmission Site

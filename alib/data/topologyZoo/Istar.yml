@@ -47,136 +47,136 @@ edges:
   - '21'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 45.50884
     Longitude: -73.58781
-    !!python/unicode 'label': !!python/unicode 'Montreal'
+    label: Montreal
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 46.81228
     Longitude: -71.21454
-    !!python/unicode 'label': !!python/unicode 'Quebec'
+    label: Quebec
   '10':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 43.70011
     Longitude: -79.4163
-    !!python/unicode 'label': !!python/unicode 'ANS CO+RE T1'
+    label: ANS CO+RE T1
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.24966
     Longitude: -123.11934
-    !!python/unicode 'label': !!python/unicode 'internetMCI T3'
+    label: internetMCI T3
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 48.43294
     Longitude: -123.3693
-    !!python/unicode 'label': !!python/unicode 'Victoria'
+    label: Victoria
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 43.70011
     Longitude: -79.4163
-    !!python/unicode 'label': !!python/unicode 'Toronto'
+    label: Toronto
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 43.23341
     Longitude: -79.94964
-    !!python/unicode 'label': !!python/unicode 'Hamilton'
+    label: Hamilton
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 49.24966
     Longitude: -123.11934
-    !!python/unicode 'label': !!python/unicode 'Vancouver'
+    label: Vancouver
   '16':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.24966
     Longitude: -123.11934
-    !!python/unicode 'label': !!python/unicode 'ANS CO+RE T1'
+    label: ANS CO+RE T1
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 51.05011
     Longitude: -114.08529
-    !!python/unicode 'label': !!python/unicode 'Calgary'
+    label: Calgary
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 53.55014
     Longitude: -113.46871
-    !!python/unicode 'label': !!python/unicode 'Edmonton'
+    label: Edmonton
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 49.69999
     Longitude: -112.81856
-    !!python/unicode 'label': !!python/unicode 'Lethbridge'
+    label: Lethbridge
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 42.98339
     Longitude: -81.23304
-    !!python/unicode 'label': !!python/unicode 'London'
+    label: London
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 49.8844
     Longitude: -97.14704
-    !!python/unicode 'label': !!python/unicode 'Winnipeg'
+    label: Winnipeg
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 45.41117
     Longitude: -75.69812
-    !!python/unicode 'label': !!python/unicode 'Ottawa'
+    label: Ottawa
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 43.4501
     Longitude: -80.48299
-    !!python/unicode 'label': !!python/unicode 'Kitchener'
+    label: Kitchener
   '3':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 43.70011
     Longitude: -79.4163
-    !!python/unicode 'label': !!python/unicode 'internetMCI T3'
+    label: internetMCI T3
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 46.11594
     Longitude: -64.80186
-    !!python/unicode 'label': !!python/unicode 'Moncton'
+    label: Moncton
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 44.646
     Longitude: -63.57333
-    !!python/unicode 'label': !!python/unicode 'Halifax'
+    label: Halifax
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 45.40008
     Longitude: -71.89908
-    !!python/unicode 'label': !!python/unicode 'Sherbrooke'
+    label: Sherbrooke
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 45.27271
     Longitude: -66.06766
-    !!python/unicode 'label': !!python/unicode 'Saint John'
+    label: Saint John
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 46.1351
     Longitude: -60.1831
-    !!python/unicode 'label': !!python/unicode 'Sydney'
+    label: Sydney
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 43.83345
     Longitude: -66.11557
-    !!python/unicode 'label': !!python/unicode 'Yarmouth'
+    label: Yarmouth

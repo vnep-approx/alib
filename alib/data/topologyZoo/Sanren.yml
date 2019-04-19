@@ -15,44 +15,44 @@ edges:
   - '6'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'South Africa'
-    !!python/unicode 'Internal': 1
+    Country: South Africa
+    Internal: '1'
     Latitude: -26.20227
     Longitude: 28.04363
-    !!python/unicode 'label': !!python/unicode 'Johannesburg'
+    label: Johannesburg
   '1':
-    !!python/unicode 'Country': !!python/unicode 'South Africa'
-    !!python/unicode 'Internal': 1
+    Country: South Africa
+    Internal: '1'
     Latitude: -25.74486
     Longitude: 28.18783
-    !!python/unicode 'label': !!python/unicode 'Pretoria'
+    label: Pretoria
   '2':
-    !!python/unicode 'Country': !!python/unicode 'South Africa'
-    !!python/unicode 'Internal': 1
+    Country: South Africa
+    Internal: '1'
     Latitude: -29.85
     Longitude: 31.01667
-    !!python/unicode 'label': !!python/unicode 'Durban'
+    label: Durban
   '3':
-    !!python/unicode 'Country': !!python/unicode 'South Africa'
-    !!python/unicode 'Internal': 1
+    Country: South Africa
+    Internal: '1'
     Latitude: -29.13333
     Longitude: 26.2
-    !!python/unicode 'label': !!python/unicode 'Bloemfontein'
+    label: Bloemfontein
   '4':
-    !!python/unicode 'Country': !!python/unicode 'South Africa'
-    !!python/unicode 'Internal': 1
+    Country: South Africa
+    Internal: '1'
     Latitude: -33.01529
     Longitude: 27.91162
-    !!python/unicode 'label': !!python/unicode 'East London'
+    label: East London
   '5':
-    !!python/unicode 'Country': !!python/unicode 'South Africa'
-    !!python/unicode 'Internal': 1
+    Country: South Africa
+    Internal: '1'
     Latitude: -33.96667
     Longitude: 25.58333
-    !!python/unicode 'label': !!python/unicode 'Port Elizabeth'
+    label: Port Elizabeth
   '6':
-    !!python/unicode 'Country': !!python/unicode 'South Africa'
-    !!python/unicode 'Internal': 1
+    Country: South Africa
+    Internal: '1'
     Latitude: -33.91667
     Longitude: 18.41667
-    !!python/unicode 'label': !!python/unicode 'Cape Town'
+    label: Cape Town

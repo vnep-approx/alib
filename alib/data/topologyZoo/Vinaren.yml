@@ -53,179 +53,179 @@ edges:
   - '24'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 16.46667
     Longitude: 107.6
-    !!python/unicode 'label': !!python/unicode 'Hue'
-    !!python/unicode 'type': !!python/unicode 'VinaREN NOC'
+    label: Hue
+    type: VinaREN NOC
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 21.0245
     Longitude: 105.84117
-    !!python/unicode 'label': !!python/unicode 'VN HN'
-    !!python/unicode 'type': !!python/unicode 'VinaREN NOC'
+    label: VN HN
+    type: VinaREN NOC
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 10.25
     Longitude: 105.96667
-    !!python/unicode 'label': !!python/unicode 'Vinh'
-    !!python/unicode 'type': !!python/unicode 'Member Network'
+    label: Vinh
+    type: Member Network
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 21.59278
     Longitude: 105.84417
-    !!python/unicode 'label': !!python/unicode 'Thai Nguyen'
-    !!python/unicode 'type': !!python/unicode 'Member Network'
+    label: Thai Nguyen
+    type: Member Network
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 10.38333
     Longitude: 105.41667
-    !!python/unicode 'label': !!python/unicode 'An Giang'
-    !!python/unicode 'type': !!python/unicode 'Member Network'
+    label: An Giang
+    type: Member Network
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 11.94646
     Longitude: 108.44193
-    !!python/unicode 'label': !!python/unicode 'Da Lat'
-    !!python/unicode 'type': !!python/unicode 'Member Network'
+    label: Da Lat
+    type: Member Network
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 20.85611
     Longitude: 106.68222
-    !!python/unicode 'label': !!python/unicode 'Hai Phong'
-    !!python/unicode 'type': !!python/unicode 'Member Network'
+    label: Hai Phong
+    type: Member Network
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -25.0
     Longitude: 135.0
-    !!python/unicode 'geocode_country': !!python/unicode 'Australia'
-    !!python/unicode 'label': !!python/unicode 'AU'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NREN NOC'
+    geocode_country: Australia
+    label: AU
+    type: TEIN 2 NREN NOC
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 10.03333
     Longitude: 105.78333
-    !!python/unicode 'label': !!python/unicode 'CT'
-    !!python/unicode 'type': !!python/unicode 'VinaREN NOC'
+    label: CT
+    type: VinaREN NOC
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Thailand'
-    !!python/unicode 'Internal': 1
+    Country: Thailand
+    Internal: '1'
     Latitude: 15.0
     Longitude: 100.0
-    !!python/unicode 'geocode_country': !!python/unicode 'Thailand'
-    !!python/unicode 'label': !!python/unicode 'TH'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NREN NOC'
+    geocode_country: Thailand
+    label: TH
+    type: TEIN 2 NREN NOC
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Malaysia'
-    !!python/unicode 'Internal': 1
+    Country: Malaysia
+    Internal: '1'
     Latitude: 2.5
     Longitude: 112.5
-    !!python/unicode 'geocode_country': !!python/unicode 'Malaysia'
-    !!python/unicode 'label': !!python/unicode 'MY'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NREN NOC'
+    geocode_country: Malaysia
+    label: MY
+    type: TEIN 2 NREN NOC
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -5.0
     Longitude: 120.0
-    !!python/unicode 'geocode_country': !!python/unicode 'Indonesia'
-    !!python/unicode 'label': !!python/unicode 'ID'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NREN NOC'
+    geocode_country: Indonesia
+    label: ID
+    type: TEIN 2 NREN NOC
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 10.75
     Longitude: 106.66667
-    !!python/unicode 'label': !!python/unicode 'HCM'
-    !!python/unicode 'type': !!python/unicode 'VinaREN NOC'
+    label: HCM
+    type: VinaREN NOC
   '20':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 35.68536
     Longitude: 139.75309
-    !!python/unicode 'label': !!python/unicode 'Abilene Internet2 USA'
+    label: Abilene Internet2 USA
   '21':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 21.0245
     Longitude: 105.84117
-    !!python/unicode 'label': !!python/unicode 'Internet'
+    label: Internet
   '22':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 35.0
     Longitude: 105.0
-    !!python/unicode 'label': !!python/unicode 'EU'
+    label: EU
   '23':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 1.36667
     Longitude: 103.8
-    !!python/unicode 'label': !!python/unicode 'EU'
+    label: EU
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Singapore'
-    !!python/unicode 'Internal': 1
+    Country: Singapore
+    Internal: '1'
     Latitude: 1.36667
     Longitude: 103.8
-    !!python/unicode 'geocode_country': !!python/unicode 'Singapore'
-    !!python/unicode 'label': !!python/unicode 'SG'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NOC'
+    geocode_country: Singapore
+    label: SG
+    type: TEIN 2 NOC
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 16.06778
     Longitude: 108.22083
-    !!python/unicode 'label': !!python/unicode 'DN'
-    !!python/unicode 'type': !!python/unicode 'VinaREN NOC'
+    label: DN
+    type: VinaREN NOC
   '4':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 37.0
     Longitude: 127.5
-    !!python/unicode 'geocode_country': !!python/unicode 'Korea'
-    !!python/unicode 'label': !!python/unicode 'KR'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NREN NOC'
+    geocode_country: Korea
+    label: KR
+    type: TEIN 2 NREN NOC
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.68536
     Longitude: 139.75309
-    !!python/unicode 'geocode_country': !!python/unicode 'Japan'
-    !!python/unicode 'label': !!python/unicode 'JP'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NREN NOC'
+    geocode_country: Japan
+    label: JP
+    type: TEIN 2 NREN NOC
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Hong Kong'
-    !!python/unicode 'Internal': 1
+    Country: Hong Kong
+    Internal: '1'
     Latitude: 22.25
     Longitude: 114.16667
-    !!python/unicode 'geocode_country': !!python/unicode 'Hong Kong'
-    !!python/unicode 'label': !!python/unicode 'HK'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NOC'
+    geocode_country: Hong Kong
+    label: HK
+    type: TEIN 2 NOC
   '7':
-    !!python/unicode 'Country': !!python/unicode 'China'
-    !!python/unicode 'Internal': 1
+    Country: China
+    Internal: '1'
     Latitude: 35.0
     Longitude: 105.0
-    !!python/unicode 'geocode_country': !!python/unicode 'China'
-    !!python/unicode 'label': !!python/unicode 'CN'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NOC'
+    geocode_country: China
+    label: CN
+    type: TEIN 2 NOC
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Philippines'
-    !!python/unicode 'Internal': 1
+    Country: Philippines
+    Internal: '1'
     Latitude: 13.0
     Longitude: 122.0
-    !!python/unicode 'geocode_country': !!python/unicode 'Philippines'
-    !!python/unicode 'label': !!python/unicode 'PH'
-    !!python/unicode 'type': !!python/unicode 'TEIN 2 NREN NOC'
+    geocode_country: Philippines
+    label: PH
+    type: TEIN 2 NREN NOC
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Vietnam'
-    !!python/unicode 'Internal': 1
+    Country: Vietnam
+    Internal: '1'
     Latitude: 12.25
     Longitude: 109.18333
-    !!python/unicode 'label': !!python/unicode 'Nha Trang'
-    !!python/unicode 'type': !!python/unicode 'Member Network'
+    label: Nha Trang
+    type: Member Network

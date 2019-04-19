@@ -75,144 +75,144 @@ edges:
   - '23'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.49801
     Longitude: 19.03991
-    !!python/unicode 'label': !!python/unicode 'Budapest'
+    label: Budapest
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 48.13743
     Longitude: 11.57549
-    !!python/unicode 'label': !!python/unicode 'Munich'
+    label: Munich
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 50.05
     Longitude: -5.2
-    !!python/unicode 'label': !!python/unicode 'Goonhilly'
+    label: Goonhilly
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'New York'
+    label: New York
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'Washington'
+    label: Washington
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Spain'
-    !!python/unicode 'Internal': 1
+    Country: Spain
+    Internal: '1'
     Latitude: 40.4165
     Longitude: -3.70256
-    !!python/unicode 'label': !!python/unicode 'Madrid'
+    label: Madrid
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Finland'
-    !!python/unicode 'Internal': 1
+    Country: Finland
+    Internal: '1'
     Latitude: 60.16952
     Longitude: 24.93545
-    !!python/unicode 'label': !!python/unicode 'Helsinki'
+    label: Helsinki
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Denmark'
-    !!python/unicode 'Internal': 1
+    Country: Denmark
+    Internal: '1'
     Latitude: 55.67594
     Longitude: 12.56553
-    !!python/unicode 'label': !!python/unicode 'Copenhagen'
+    label: Copenhagen
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'London'
+    label: London
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'London'
+    label: London
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.03333
     Longitude: -2.85
-    !!python/unicode 'label': !!python/unicode 'Madley'
+    label: Madley
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Ireland'
-    !!python/unicode 'Internal': 1
+    Country: Ireland
+    Internal: '1'
     Latitude: 53.34399
     Longitude: -6.26719
-    !!python/unicode 'label': !!python/unicode 'Dublin'
+    label: Dublin
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.08804
     Longitude: 14.42076
-    !!python/unicode 'label': !!python/unicode 'Prague'
+    label: Prague
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Belgium'
-    !!python/unicode 'Internal': 1
+    Country: Belgium
+    Internal: '1'
     Latitude: 50.85045
     Longitude: 4.34878
-    !!python/unicode 'label': !!python/unicode 'Brussels'
+    label: Brussels
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 52.37403
     Longitude: 4.88969
-    !!python/unicode 'label': !!python/unicode 'Amsterdam'
+    label: Amsterdam
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Sweden'
-    !!python/unicode 'Internal': 1
+    Country: Sweden
+    Internal: '1'
     Latitude: 57.70716
     Longitude: 11.96679
-    !!python/unicode 'label': !!python/unicode 'Gothenburg'
+    label: Gothenburg
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Sweden'
-    !!python/unicode 'Internal': 1
+    Country: Sweden
+    Internal: '1'
     Latitude: 59.33258
     Longitude: 18.0649
-    !!python/unicode 'label': !!python/unicode 'Stockholm'
+    label: Stockholm
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Austria'
-    !!python/unicode 'Internal': 1
+    Country: Austria
+    Internal: '1'
     Latitude: 48.20849
     Longitude: 16.37208
-    !!python/unicode 'label': !!python/unicode 'Vienna'
+    label: Vienna
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.22172
     Longitude: 6.77616
-    !!python/unicode 'label': !!python/unicode 'Dusseldorf'
+    label: Dusseldorf
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'Frankfurt'
+    label: Frankfurt
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 47.36667
     Longitude: 8.55
-    !!python/unicode 'label': !!python/unicode 'Zurich'
+    label: Zurich
   '7':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
-    !!python/unicode 'label': !!python/unicode 'Paris'
+    label: Paris
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 45.46427
     Longitude: 9.18951
-    !!python/unicode 'label': !!python/unicode 'Milan'
+    label: Milan
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Spain'
-    !!python/unicode 'Internal': 1
+    Country: Spain
+    Internal: '1'
     Latitude: 41.38879
     Longitude: 2.15899
-    !!python/unicode 'label': !!python/unicode 'Barcelona'
+    label: Barcelona

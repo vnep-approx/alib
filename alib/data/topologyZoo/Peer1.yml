@@ -41,98 +41,98 @@ edges:
   - '15'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.04372
     Longitude: -77.48749
-    !!python/unicode 'label': !!python/unicode 'Herndon/Ashburn'
+    label: Herndon/Ashburn
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 25.77427
     Longitude: -80.19366
-    !!python/unicode 'label': !!python/unicode 'Miami'
+    label: Miami
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.54827
     Longitude: -121.98857
-    !!python/unicode 'label': !!python/unicode 'Fremont'
+    label: Fremont
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Costa Rica'
-    !!python/unicode 'Internal': 1
+    Country: Costa Rica
+    Internal: '1'
     Latitude: 9.93333
     Longitude: -84.08333
-    !!python/unicode 'label': !!python/unicode 'San Jose'
+    label: San Jose
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+    label: Los Angeles
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.78306
     Longitude: -96.80667
-    !!python/unicode 'label': !!python/unicode 'Dallas'
+    label: Dallas
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.42412
     Longitude: -98.49363
-    !!python/unicode 'label': !!python/unicode 'San Antonio'
+    label: San Antonio
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
-    !!python/unicode 'label': !!python/unicode 'Atlanta'
+    label: Atlanta
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 45.50884
     Longitude: -73.58781
-    !!python/unicode 'label': !!python/unicode 'Montreal'
+    label: Montreal
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'New York'
+    label: New York
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'London'
+    label: London
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 52.37403
     Longitude: 4.88969
-    !!python/unicode 'label': !!python/unicode 'Amsterdam'
+    label: Amsterdam
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.85003
     Longitude: -87.65005
-    !!python/unicode 'label': !!python/unicode 'Chicago'
+    label: Chicago
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 43.70011
     Longitude: -79.4163
-    !!python/unicode 'label': !!python/unicode 'Toronto'
+    label: Toronto
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Canada'
-    !!python/unicode 'Internal': 1
+    Country: Canada
+    Internal: '1'
     Latitude: 49.24966
     Longitude: -123.11934
-    !!python/unicode 'label': !!python/unicode 'Vancouver'
+    label: Vancouver
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.60621
     Longitude: -122.33207
-    !!python/unicode 'label': !!python/unicode 'Seattle'
+    label: Seattle

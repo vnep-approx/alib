@@ -71,166 +71,166 @@ edges:
   - '30'
 nodes:
   '0':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -31.93333
     Longitude: 115.83333
-    !!python/unicode 'label': !!python/unicode 'AKAMAI'
+    label: AKAMAI
   '1':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -31.93333
     Longitude: 115.83333
-    !!python/unicode 'label': !!python/unicode 'Velocix'
+    label: Velocix
   '10':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'VOCUS'
+    label: VOCUS
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'TELSTRA'
+    label: TELSTRA
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'REACH'
+    label: REACH
   '13':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'AKAMAI'
+    label: AKAMAI
   '14':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'GOOGLE'
+    label: GOOGLE
   '15':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'PIPE'
+    label: PIPE
   '16':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -42.87936
     Longitude: 147.32941
-    !!python/unicode 'label': !!python/unicode 'PIPE'
+    label: PIPE
   '17':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'Equinix'
+    label: Equinix
   '18':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'AARNET'
+    label: AARNET
   '19':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -27.46794
     Longitude: 153.02809
-    !!python/unicode 'label': !!python/unicode 'AKAMAI'
+    label: AKAMAI
   '2':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -31.93333
     Longitude: 115.83333
-    !!python/unicode 'label': !!python/unicode 'AARNET'
+    label: AARNET
   '20':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -27.46794
     Longitude: 153.02809
-    !!python/unicode 'label': !!python/unicode 'PIPE'
+    label: PIPE
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -42.87936
     Longitude: 147.32941
-    !!python/unicode 'label': !!python/unicode 'Hobart'
+    label: Hobart
   '22':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -31.93333
     Longitude: 115.83333
-    !!python/unicode 'label': !!python/unicode 'Google'
+    label: Google
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -12.46113
     Longitude: 130.84185
-    !!python/unicode 'label': !!python/unicode 'Darwin'
+    label: Darwin
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -34.93333
     Longitude: 138.6
-    !!python/unicode 'label': !!python/unicode 'Adelaide'
+    label: Adelaide
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -31.93333
     Longitude: 115.83333
-    !!python/unicode 'label': !!python/unicode 'Perth'
+    label: Perth
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -27.46794
     Longitude: 153.02809
-    !!python/unicode 'label': !!python/unicode 'Brisbane'
+    label: Brisbane
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'Sydney1'
+    label: Sydney1
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'Sydney2'
+    label: Sydney2
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -35.28346
     Longitude: 149.12807
-    !!python/unicode 'label': !!python/unicode 'Canberra'
+    label: Canberra
   '3':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -31.93333
     Longitude: 115.83333
-    !!python/unicode 'label': !!python/unicode 'WADE'
+    label: WADE
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -37.814
     Longitude: 144.96332
-    !!python/unicode 'label': !!python/unicode 'Melbourne'
+    label: Melbourne
   '4':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -35.28346
     Longitude: 149.12807
-    !!python/unicode 'label': !!python/unicode 'Pipe'
+    label: Pipe
   '5':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -35.28346
     Longitude: 149.12807
-    !!python/unicode 'label': !!python/unicode 'AARNET'
+    label: AARNET
   '6':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -34.93333
     Longitude: 138.6
-    !!python/unicode 'label': !!python/unicode 'Pipe'
+    label: Pipe
   '7':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -35.28346
     Longitude: 149.12807
-    !!python/unicode 'label': !!python/unicode 'Transact'
+    label: Transact
   '8':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -37.814
     Longitude: 144.96332
-    !!python/unicode 'label': !!python/unicode 'AKAMAI'
+    label: AKAMAI
   '9':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -37.814
     Longitude: 144.96332
-    !!python/unicode 'label': !!python/unicode 'PIPE'
+    label: PIPE

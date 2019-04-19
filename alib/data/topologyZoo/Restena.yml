@@ -43,110 +43,110 @@ edges:
   - '16'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.65833
     Longitude: 6.13722
-    !!python/unicode 'label': !!python/unicode 'Walferdange'
+    label: Walferdange
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.61167
     Longitude: 6.13
-    !!python/unicode 'label': !!python/unicode 'CCRN'
+    label: CCRN
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.62389
     Longitude: 6.14944
-    !!python/unicode 'label': !!python/unicode 'BCE'
+    label: BCE
   '11':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 49.62389
     Longitude: 6.14944
-    !!python/unicode 'label': !!python/unicode 'ADSL (via Tango)'
+    label: ADSL (via Tango)
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.62083
     Longitude: 6.12167
-    !!python/unicode 'label': !!python/unicode 'UNI.iu'
+    label: UNI.iu
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.62278
     Longitude: 6.10778
-    !!python/unicode 'label': !!python/unicode 'Rollingergrund'
+    label: Rollingergrund
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.6025
     Longitude: 6.12417
-    !!python/unicode 'label': !!python/unicode 'Campus Geesseknaeppchen'
+    label: Campus Geesseknaeppchen
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.49583
     Longitude: 5.98056
-    !!python/unicode 'label': !!python/unicode 'Esch-sur-Alzette'
+    label: Esch-sur-Alzette
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.51861
     Longitude: 6.10278
-    !!python/unicode 'label': !!python/unicode 'Bettembourg'
+    label: Bettembourg
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.61167
     Longitude: 6.13
-    !!python/unicode 'label': !!python/unicode 'Luxembourg'
+    label: Luxembourg
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.62083
     Longitude: 6.12167
-    !!python/unicode 'label': !!python/unicode 'Limpertsberg'
+    label: Limpertsberg
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.8475
     Longitude: 6.10417
-    !!python/unicode 'label': !!python/unicode 'Ettelbruck'
+    label: Ettelbruck
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.86778
     Longitude: 6.15583
-    !!python/unicode 'label': !!python/unicode 'Diekirch'
+    label: Diekirch
   '4':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.62389
     Longitude: 6.14944
-    !!python/unicode 'label': !!python/unicode 'GEANT Paris (FR)'
+    label: GEANT Paris (FR)
   '5':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.62389
     Longitude: 6.14944
-    !!python/unicode 'label': !!python/unicode 'Internet via Bruxelles (BE)'
+    label: Internet via Bruxelles (BE)
   '6':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 49.62389
     Longitude: 6.14944
-    !!python/unicode 'label': !!python/unicode 'ADSL (via EPT)'
+    label: ADSL (via EPT)
   '7':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.49583
     Longitude: 5.98056
-    !!python/unicode 'label': !!python/unicode 'France'
+    label: France
   '8':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.62389
     Longitude: 6.14944
-    !!python/unicode 'label': !!python/unicode 'GEANT Frankfurt (DE)'
+    label: GEANT Frankfurt (DE)
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.62389
     Longitude: 6.14944
-    !!python/unicode 'label': !!python/unicode 'RESTENA'
+    label: RESTENA

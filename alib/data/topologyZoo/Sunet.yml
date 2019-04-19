@@ -100,157 +100,157 @@ edges:
 nodes:
   '0':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 57.70716
     Longitude: 11.96679
     label: Goteborg
   '1':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 58.39118
     Longitude: 13.84506
     label: Skovde
   '10':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 55.70584
     Longitude: 13.19321
     label: Lund
   '11':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 56.03129
     Longitude: 14.15242
     label: Kristianstad
   '12':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 56.20999
     Longitude: 15.27602
     label: Ronneby
   '13':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 56.66157
     Longitude: 16.36163
     label: Kalmar
   '14':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 57.64089
     Longitude: 18.29602
     label: Visby
   '15':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 55.60587
     Longitude: 13.00073
     label: Malmo
   '16':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 59.33258
     Longitude: 18.0649
     label: Stockholm
   '17':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 65.85
     Longitude: 23.16667
     label: Vasten
   '18':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 67.85572
     Longitude: 20.22513
     label: Kiruna
   '19':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 65.58415
     Longitude: 22.15465
     label: Lulea
   '2':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 59.27412
     Longitude: 15.2066
     label: Orebro
   '20':
-    Internal: 1
+    Internal: '1'
     Latitude: 63.934619999999995
     Longitude: 19.90689
-    hyperedge: 1
+    hyperedge: '1'
     label: None
   '21':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 63.82842
     Longitude: 20.25972
     label: Umea
   '22':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 62.39129
     Longitude: 17.3063
     label: Sundsvall
   '23':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 60.67452
     Longitude: 17.14174
     label: Gavle
   '24':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 60.4858
     Longitude: 15.43714
     label: Borlange
   '25':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 59.8585
     Longitude: 17.64543
     label: Uppsala
   '3':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 59.3793
     Longitude: 13.50357
     label: Karlstad
   '4':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 56.67446
     Longitude: 12.85676
     label: Halmstad
   '5':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 58.41667
     Longitude: 15.61667
     label: Linkoping
   '6':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 57.72101
     Longitude: 12.9401
     label: Boras
   '7':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 58.28365
     Longitude: 12.28864
     label: Trollhattan
   '8':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 57.78145
     Longitude: 14.15618
     label: Jonkoping
   '9':
     Country: Sweden
-    Internal: 1
+    Internal: '1'
     Latitude: 56.86667
     Longitude: 14.81667
     label: Vaxjo

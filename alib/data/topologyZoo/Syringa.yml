@@ -149,506 +149,506 @@ edges:
   - '73'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.61211
     Longitude: -116.39151
-    !!python/unicode 'label': !!python/unicode 'Meridian'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Meridian
+    type: Access POP
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.8735
     Longitude: -116.4993
-    !!python/unicode 'label': !!python/unicode 'Emmett'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Emmett
+    type: Access POP
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.34657
     Longitude: -114.79173
-    !!python/unicode 'label': !!python/unicode 'Fairfield'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Fairfield
+    type: Access POP
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.30768
     Longitude: -113.94475
-    !!python/unicode 'label': !!python/unicode 'Carey'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Carey
+    type: Access POP
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.41269
     Longitude: -113.57806
-    !!python/unicode 'label': !!python/unicode 'Albion'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Albion
+    type: Access POP
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.3063
     Longitude: -113.36917
-    !!python/unicode 'label': !!python/unicode 'Malta'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Malta
+    type: Access POP
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.61908
     Longitude: -113.67723
-    !!python/unicode 'label': !!python/unicode 'Rupert'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Rupert
+    type: Access POP
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.53574
     Longitude: -113.79279
-    !!python/unicode 'label': !!python/unicode 'Burley'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Burley
+    type: Access POP
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.31242
     Longitude: -111.79524
-    !!python/unicode 'label': !!python/unicode 'Bone'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Bone
+    type: Access POP
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.5263
     Longitude: -111.93302
-    !!python/unicode 'label': !!python/unicode 'Iona'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Iona
+    type: Access POP
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.07158
     Longitude: -111.44829
-    !!python/unicode 'label': !!python/unicode 'Ashton'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Ashton
+    type: Access POP
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.81447
     Longitude: -111.1602
-    !!python/unicode 'label': !!python/unicode 'Tetonia'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Tetonia
+    type: Access POP
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.66294
     Longitude: -116.68736
-    !!python/unicode 'label': !!python/unicode 'Caldwell'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Caldwell
+    type: Access POP
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.72325
     Longitude: -111.11133
-    !!python/unicode 'label': !!python/unicode 'Driggs'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Driggs
+    type: Access POP
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.6027
     Longitude: -111.11133
-    !!python/unicode 'label': !!python/unicode 'Victor'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Victor
+    type: Access POP
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.47993
     Longitude: -110.76243
-    !!python/unicode 'label': !!python/unicode 'Jackson'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Jackson
+    type: Access POP
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.9827
     Longitude: -111.04382
-    !!python/unicode 'label': !!python/unicode 'Freedom'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Freedom
+    type: Access POP
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.72493
     Longitude: -110.93187
-    !!python/unicode 'label': !!python/unicode 'Afton'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Afton
+    type: Access POP
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.90686
     Longitude: -111.53078
-    !!python/unicode 'label': !!python/unicode 'Henry'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Henry
+    type: Access POP
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.93879
     Longitude: -114.71311
-    !!python/unicode 'label': !!python/unicode 'Gooding'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Gooding
+    type: Access POP
   '27':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.51963
     Longitude: -114.31532
-    !!python/unicode 'label': !!python/unicode 'Hailey'
-    !!python/unicode 'type': !!python/unicode 'Central Office'
+    label: Hailey
+    type: Central Office
   '28':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 43.6135
     Longitude: -116.20345
-    !!python/unicode 'label': !!python/unicode 'Coeur D''Alene'
+    label: Coeur D'Alene
   '29':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.8713
     Longitude: -112.44553
-    !!python/unicode 'label': !!python/unicode 'Pocatello'
-    !!python/unicode 'type': !!python/unicode 'POP'
+    label: Pocatello
+    type: POP
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.54072
     Longitude: -116.56346
-    !!python/unicode 'label': !!python/unicode 'Nampa'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Nampa
+    type: Access POP
   '30':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.19047
     Longitude: -112.34498
-    !!python/unicode 'label': !!python/unicode 'Blackfoot'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Blackfoot
+    type: Access POP
   '31':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.59713
     Longitude: -113.23611
-    !!python/unicode 'label': !!python/unicode 'Raft River'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Raft River
+    type: Access POP
   '32':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 42.3814
     Longitude: -112.00403333333334
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '33':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.56297
     Longitude: -114.46087
-    !!python/unicode 'label': !!python/unicode 'Twin Falls'
-    !!python/unicode 'type': !!python/unicode 'POP'
+    label: Twin Falls
+    type: POP
   '34':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.65437
     Longitude: -111.60467
-    !!python/unicode 'label': !!python/unicode 'Soda Springs'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Soda Springs
+    type: Access POP
   '35':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.22715
     Longitude: -111.40104
-    !!python/unicode 'label': !!python/unicode 'Paris'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Paris
+    type: Access POP
   '36':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.61936
     Longitude: -112.01107
-    !!python/unicode 'label': !!python/unicode 'Lava Hot Springs'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Lava Hot Springs
+    type: Access POP
   '37':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.42853
     Longitude: -112.12441
-    !!python/unicode 'label': !!python/unicode 'Downey'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Downey
+    type: Access POP
   '38':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.19159
     Longitude: -112.2508
-    !!python/unicode 'label': !!python/unicode 'Malad City'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Malad City
+    type: Access POP
   '39':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.65047
     Longitude: -112.19302
-    !!python/unicode 'label': !!python/unicode 'McCammon'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: McCammon
+    type: Access POP
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.13295
     Longitude: -115.6912
-    !!python/unicode 'label': !!python/unicode 'Tipanuk'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Tipanuk
+    type: Access POP
   '40':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.93879
     Longitude: -114.71311
-    !!python/unicode 'label': !!python/unicode 'Gooding'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Gooding
+    type: Access POP
   '41':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.46658
     Longitude: -112.03414
-    !!python/unicode 'label': !!python/unicode 'Idaho Falls'
-    !!python/unicode 'type': !!python/unicode 'Central Office'
+    label: Idaho Falls
+    type: Central Office
   '42':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 43.6135
     Longitude: -116.20345
-    !!python/unicode 'label': !!python/unicode 'Cheyenne'
+    label: Cheyenne
   '43':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.9549
     Longitude: -115.3009
-    !!python/unicode 'label': !!python/unicode 'Glenn''s Ferry'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Glenn's Ferry
+    type: Access POP
   '44':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.98324
     Longitude: -114.67476
-    !!python/unicode 'label': !!python/unicode 'Jack Pot'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Jack Pot
+    type: Access POP
   '45':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 43.6135
     Longitude: -116.20345
-    !!python/unicode 'label': !!python/unicode 'Salt Lake City'
+    label: Salt Lake City
   '46':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.24325
     Longitude: -113.88196
-    !!python/unicode 'label': !!python/unicode 'Oakley'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Oakley
+    type: Access POP
   '47':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.81212
     Longitude: -114.89867
-    !!python/unicode 'label': !!python/unicode 'Hagerman'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Hagerman
+    type: Access POP
   '48':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.78602
     Longitude: -112.85444
-    !!python/unicode 'label': !!python/unicode 'American Falls'
-    !!python/unicode 'type': !!python/unicode 'POP'
+    label: American Falls
+    type: POP
   '49':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.9663
     Longitude: -111.68218
-    !!python/unicode 'label': !!python/unicode 'St Anthony'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: St Anthony
+    type: Access POP
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.13295
     Longitude: -115.6912
-    !!python/unicode 'label': !!python/unicode 'Mountain Home'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Mountain Home
+    type: Access POP
   '50':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.1763
     Longitude: -112.23082
-    !!python/unicode 'label': !!python/unicode 'Dubois'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Dubois
+    type: Access POP
   '51':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 43.39129333333333
     Longitude: -114.3506
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '52':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.50464
     Longitude: -114.23173
-    !!python/unicode 'label': !!python/unicode 'Challis'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Challis
+    type: Access POP
   '53':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.21742
     Longitude: -114.93858
-    !!python/unicode 'label': !!python/unicode 'Stanley'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Stanley
+    type: Access POP
   '54':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.8713
     Longitude: -114.65729
-    !!python/unicode 'label': !!python/unicode 'Galena'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Galena
+    type: Access POP
   '55':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 43.6135
     Longitude: -116.20345
-    !!python/unicode 'label': !!python/unicode 'Missoula'
+    label: Missoula
   '56':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.84157
     Longitude: -112.43637
-    !!python/unicode 'label': !!python/unicode 'Terreton'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Terreton
+    type: Access POP
   '57':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.78352
     Longitude: -113.00472
-    !!python/unicode 'label': !!python/unicode 'Howe'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Howe
+    type: Access POP
   '58':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.63657
     Longitude: -113.30028
-    !!python/unicode 'label': !!python/unicode 'Arco'
-    !!python/unicode 'type': !!python/unicode 'POP'
+    label: Arco
+    type: POP
   '59':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.91463
     Longitude: -113.61336
-    !!python/unicode 'label': !!python/unicode 'Mackay'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Mackay
+    type: Access POP
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.68916
     Longitude: -116.27071
-    !!python/unicode 'label': !!python/unicode 'Hidden Springs'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Hidden Springs
+    type: Access POP
   '60':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 44.57266
     Longitude: -116.67599
-    !!python/unicode 'label': !!python/unicode 'Halfway'
+    label: Halfway
   '61':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.57019
     Longitude: -114.60782
-    !!python/unicode 'label': !!python/unicode 'Filer'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Filer
+    type: Access POP
   '62':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 43.6135
     Longitude: -116.20345
-    !!python/unicode 'label': !!python/unicode 'Spokane'
+    label: Spokane
   '63':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.09631
     Longitude: -111.87662
-    !!python/unicode 'label': !!python/unicode 'Preston'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Preston
+    type: Access POP
   '64':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.07822
     Longitude: -116.93377
-    !!python/unicode 'label': !!python/unicode 'Payette'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Payette
+    type: Access POP
   '65':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.00766
     Longitude: -116.91655
-    !!python/unicode 'label': !!python/unicode 'Fruitland'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Fruitland
+    type: Access POP
   '66':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.17575
     Longitude: -113.8959
-    !!python/unicode 'label': !!python/unicode 'Salmon'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Salmon
+    type: Access POP
   '67':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.72989
     Longitude: -116.4382
-    !!python/unicode 'label': !!python/unicode 'Council'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Council
+    type: Access POP
   '68':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.91101
     Longitude: -116.09874
-    !!python/unicode 'label': !!python/unicode 'McCall'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: McCall
+    type: Access POP
   '69':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.57266
     Longitude: -116.67599
-    !!python/unicode 'label': !!python/unicode 'Cambridge'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Cambridge
+    type: Access POP
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.6135
     Longitude: -116.20345
-    !!python/unicode 'label': !!python/unicode 'Boise'
-    !!python/unicode 'type': !!python/unicode 'Central Office'
+    label: Boise
+    type: Central Office
   '70':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.62878
     Longitude: -116.4507
-    !!python/unicode 'label': !!python/unicode 'Mesa'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Mesa
+    type: Access POP
   '71':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.55711
     Longitude: -116.43403
-    !!python/unicode 'label': !!python/unicode 'Indian Valley'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Indian Valley
+    type: Access POP
   '72':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.47127
     Longitude: -116.73461
-    !!python/unicode 'label': !!python/unicode 'Midvale'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Midvale
+    type: Access POP
   '73':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.251
     Longitude: -116.96933
-    !!python/unicode 'label': !!python/unicode 'Weiser'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Weiser
+    type: Access POP
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.57325
     Longitude: -112.87721
-    !!python/unicode 'label': !!python/unicode 'Rockland'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Rockland
+    type: Access POP
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.45575
     Longitude: -112.56831
-    !!python/unicode 'label': !!python/unicode 'Arbon'
-    !!python/unicode 'type': !!python/unicode 'Access POP'
+    label: Arbon
+    type: Access POP

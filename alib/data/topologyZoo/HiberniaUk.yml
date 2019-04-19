@@ -31,103 +31,103 @@ edges:
   - '14'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'London'
-    !!python/unicode 'type': !!python/unicode 'Large Node'
+    label: London
+    type: Large Node
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.64779
     Longitude: -3.00648
-    !!python/unicode 'label': !!python/unicode 'Southport'
-    !!python/unicode 'type': !!python/unicode 'Large Node'
+    label: Southport
+    type: Large Node
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.79648
     Longitude: -1.54785
-    !!python/unicode 'label': !!python/unicode 'Leeds'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Leeds
+    type: Small Node
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.46667
     Longitude: -1.91667
-    !!python/unicode 'label': !!python/unicode 'Birmingham'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Birmingham
+    type: Small Node
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.41058
     Longitude: -2.97794
-    !!python/unicode 'label': !!python/unicode 'Liverpool'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Liverpool
+    type: Small Node
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.45625
     Longitude: -0.97113
-    !!python/unicode 'label': !!python/unicode 'Reading'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Reading
+    type: Small Node
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.45
     Longitude: -2.58333
-    !!python/unicode 'label': !!python/unicode 'Bristol'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Bristol
+    type: Small Node
   '2':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 51.45625
     Longitude: -0.97113
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '3':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.48095
     Longitude: -2.23743
-    !!python/unicode 'label': !!python/unicode 'Manchester'
-    !!python/unicode 'type': !!python/unicode 'Large Node'
+    label: Manchester
+    type: Large Node
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.57364
     Longitude: -0.24777
-    !!python/unicode 'label': !!python/unicode 'Peterborough'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Peterborough
+    type: Small Node
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.2
     Longitude: 0.11667
-    !!python/unicode 'label': !!python/unicode 'Cambridge'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Cambridge
+    type: Small Node
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.38297
     Longitude: -1.4659
-    !!python/unicode 'label': !!python/unicode 'Sheffield'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Sheffield
+    type: Small Node
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 52.63333
     Longitude: -1.13333
-    !!python/unicode 'label': !!python/unicode 'Leicester'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Leicester
+    type: Small Node
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.93225
     Longitude: -2.20958
-    !!python/unicode 'label': !!python/unicode 'Bracewell'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Bracewell
+    type: Small Node

@@ -175,343 +175,343 @@ edges:
   - '57'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.83333
     Longitude: 12.91667
-    !!python/unicode 'label': !!python/unicode 'CHE'
+    label: CHE
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.33962
     Longitude: 12.37129
-    !!python/unicode 'label': !!python/unicode 'LEI'
+    label: LEI
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.00472
     Longitude: 8.38583
-    !!python/unicode 'label': !!python/unicode 'FZK'
+    label: FZK
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 48.78232
     Longitude: 9.17702
-    !!python/unicode 'label': !!python/unicode 'STU'
+    label: STU
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 52.39886
     Longitude: 13.06566
-    !!python/unicode 'label': !!python/unicode 'DeCix'
+    label: DeCix
   '13':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 52.39886
     Longitude: 13.06566
-    !!python/unicode 'label': !!python/unicode 'Telia'
+    label: Telia
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.03333
     Longitude: 8.53333
-    !!python/unicode 'label': !!python/unicode 'BIE'
+    label: BIE
   '15':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 51.33962
     Longitude: 12.37129
-    !!python/unicode 'label': !!python/unicode 'Telekom'
+    label: Telekom
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.53333
     Longitude: 9.93333
-    !!python/unicode 'label': !!python/unicode 'GOE'
+    label: GOE
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 53.07516
     Longitude: 8.80777
-    !!python/unicode 'label': !!python/unicode 'BRE'
+    label: BRE
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.26667
     Longitude: 7.18333
-    !!python/unicode 'label': !!python/unicode 'WUP'
+    label: WUP
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.93333
     Longitude: 6.95
-    !!python/unicode 'label': !!python/unicode 'BIR'
+    label: BIR
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.52437
     Longitude: 13.41053
-    !!python/unicode 'label': !!python/unicode 'ADH'
+    label: ADH
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.73333
     Longitude: 7.1
-    !!python/unicode 'label': !!python/unicode 'BON'
+    label: BON
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.81667
     Longitude: 8.76667
-    !!python/unicode 'label': !!python/unicode 'MAR'
+    label: MAR
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.58333
     Longitude: 8.65
-    !!python/unicode 'label': !!python/unicode 'GIE'
+    label: GIE
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.31667
     Longitude: 9.5
-    !!python/unicode 'label': !!python/unicode 'KAS'
+    label: KAS
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.71905
     Longitude: 8.75439
-    !!python/unicode 'label': !!python/unicode 'PAD'
+    label: PAD
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 53.16667
     Longitude: 8.2
-    !!python/unicode 'label': !!python/unicode 'EWE'
+    label: EWE
   '26':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 52.37052
     Longitude: 9.73322
-    !!python/unicode 'label': !!python/unicode 'Telekom'
+    label: Telekom
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.96236
     Longitude: 7.62571
-    !!python/unicode 'label': !!python/unicode 'MUE'
+    label: MUE
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.23333
     Longitude: 7.0
-    !!python/unicode 'label': !!python/unicode 'SAA'
+    label: SAA
   '29':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'GC'
+    label: GC
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.05089
     Longitude: 13.73832
-    !!python/unicode 'label': !!python/unicode 'DRE'
+    label: DRE
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 53.55
     Longitude: 10.0
-    !!python/unicode 'label': !!python/unicode 'DES'
+    label: DES
   '31':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 53.55
     Longitude: 10.0
-    !!python/unicode 'label': !!python/unicode 'HAM'
+    label: HAM
   '32':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 54.32133
     Longitude: 10.13489
-    !!python/unicode 'label': !!python/unicode 'KIE'
+    label: KIE
   '33':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 54.0887
     Longitude: 12.14049
-    !!python/unicode 'label': !!python/unicode 'ROS'
+    label: ROS
   '34':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.16667
     Longitude: 11.66667
-    !!python/unicode 'label': !!python/unicode 'MAG'
+    label: MAG
   '35':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.26667
     Longitude: 10.53333
-    !!python/unicode 'label': !!python/unicode 'BRA'
+    label: BRA
   '36':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.45
     Longitude: 7.75
-    !!python/unicode 'label': !!python/unicode 'KAI'
+    label: KAI
   '37':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 54.1
     Longitude: 13.38333
-    !!python/unicode 'label': !!python/unicode 'GRE'
+    label: GRE
   '38':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.51667
     Longitude: 7.45
-    !!python/unicode 'label': !!python/unicode 'DOR'
+    label: DOR
   '39':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.48333
     Longitude: 7.21667
-    !!python/unicode 'label': !!python/unicode 'BOC'
+    label: BOC
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.87056
     Longitude: 8.64944
-    !!python/unicode 'label': !!python/unicode 'GSI'
+    label: GSI
   '40':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 48.13743
     Longitude: 11.57549
-    !!python/unicode 'label': !!python/unicode 'FHM'
+    label: FHM
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.015
     Longitude: 12.09556
-    !!python/unicode 'label': !!python/unicode 'REG'
+    label: REG
   '42':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 48.36667
     Longitude: 10.88333
-    !!python/unicode 'label': !!python/unicode 'AUG'
+    label: AUG
   '43':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 48.25
     Longitude: 11.65
-    !!python/unicode 'label': !!python/unicode 'GAR'
+    label: GAR
   '44':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 51.45
     Longitude: 7.01667
-    !!python/unicode 'label': !!python/unicode 'DUI'
+    label: DUI
   '45':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.93333
     Longitude: 6.36667
-    !!python/unicode 'label': !!python/unicode 'FZJ'
+    label: FZJ
   '46':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.77664
     Longitude: 6.08342
-    !!python/unicode 'label': !!python/unicode 'AAC'
+    label: AAC
   '47':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.78778
     Longitude: 9.93611
-    !!python/unicode 'label': !!python/unicode 'WUE'
+    label: WUE
   '48':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.52437
     Longitude: 13.41053
-    !!python/unicode 'label': !!python/unicode 'TUB'
+    label: TUB
   '49':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.52437
     Longitude: 13.41053
-    !!python/unicode 'label': !!python/unicode 'HUB'
+    label: HUB
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.40768
     Longitude: 8.69079
-    !!python/unicode 'label': !!python/unicode 'HEI'
+    label: HEI
   '50':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.37052
     Longitude: 9.73322
-    !!python/unicode 'label': !!python/unicode 'HAN'
+    label: HAN
   '51':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'FRA'
+    label: FRA
   '52':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.39886
     Longitude: 13.06566
-    !!python/unicode 'label': !!python/unicode 'POT'
+    label: POT
   '53':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.58972
     Longitude: 11.00389
-    !!python/unicode 'label': !!python/unicode 'ERL'
+    label: ERL
   '54':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 49.94806
     Longitude: 11.57833
-    !!python/unicode 'label': !!python/unicode 'BAY'
+    label: BAY
   '55':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.34714
     Longitude: 14.55062
-    !!python/unicode 'label': !!python/unicode 'FFO'
+    label: FFO
   '56':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.52437
     Longitude: 13.41053
-    !!python/unicode 'label': !!python/unicode 'ZIB'
+    label: ZIB
   '57':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.36667
     Longitude: 13.61667
-    !!python/unicode 'label': !!python/unicode 'ZEU'
+    label: ZEU
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.93333
     Longitude: 11.58333
-    !!python/unicode 'label': !!python/unicode 'JEN'
+    label: JEN
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.68333
     Longitude: 10.9
-    !!python/unicode 'label': !!python/unicode 'ILM'
+    label: ILM
   '8':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'DeCix'
+    label: DeCix
   '9':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'Geant'
+    label: Geant

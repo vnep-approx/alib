@@ -66,115 +66,115 @@ edges:
 nodes:
   '0':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 42.81687
     Longitude: -1.64323
     label: Navarra
   '1':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 42.46667
     Longitude: -2.45
     label: Rioja
   '10':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 43.36029
     Longitude: -5.84476
     label: Asturias
   '11':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 38.88333
     Longitude: -6.96667
     label: Extremadura
   '12':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 37.37722
     Longitude: -5.98694
     label: Andalucia
   '13':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 28.1
     Longitude: -15.41667
     label: Canarias (las palmas)
   '14':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 28.48333
     Longitude: -16.31667
     label: Canarias (tenerife)
   '15':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 38.98333
     Longitude: -3.93333
     label: Castilla La Mancha
   '16':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 40.4165
     Longitude: -3.70256
     label: Nacional
   '17':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 40.4165
     Longitude: -3.70256
     label: Madrid
   '18':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 41.65
     Longitude: -4.71667
     label: Castilla Y Leon
   '2':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 43.46472
     Longitude: -3.80444
     label: Cantabria
   '3':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 43.0
     Longitude: -2.75
     label: Pais Vasco
   '4':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 39.56939
     Longitude: 2.65024
     label: Baleares
   '5':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 39.46975
     Longitude: -0.37739
     label: Valencia
   '6':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 41.65606
     Longitude: -0.87734
     label: Aragon
   '7':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 41.38879
     Longitude: 2.15899
     label: Cataluna
   '8':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 37.98333
     Longitude: -1.11667
     label: Murcia
   '9':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 42.88052
     Longitude: -8.54569
     label: Galacia

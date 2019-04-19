@@ -125,432 +125,432 @@ edges:
   - '61'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 41.12278
     Longitude: 25.39639
-    !!python/unicode 'label': !!python/unicode 'Komotini'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Komotini
+    type: Main PoP
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.8475
     Longitude: 25.87444
-    !!python/unicode 'label': !!python/unicode 'Alexandroypoli'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Alexandroypoli
+    type: Main PoP
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.75722
     Longitude: 26.97694
-    !!python/unicode 'label': !!python/unicode 'Samos'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Samos
+    type: PoP
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 36.44083
     Longitude: 28.2225
-    !!python/unicode 'label': !!python/unicode 'Rhodes'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Rhodes
+    type: Main PoP
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.62139
     Longitude: 21.40778
-    !!python/unicode 'label': !!python/unicode 'Agrinio'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Agrinio
+    type: PoP
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.37019
     Longitude: 21.42952
-    !!python/unicode 'label': !!python/unicode 'Mesologgi'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Mesologgi
+    type: PoP
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.95
     Longitude: 20.75
-    !!python/unicode 'label': !!python/unicode 'Prevezza'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Prevezza
+    type: PoP
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.16056
     Longitude: 20.98528
-    !!python/unicode 'label': !!python/unicode 'Arta'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Arta
+    type: PoP
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.9
     Longitude: 22.43333
-    !!python/unicode 'label': !!python/unicode 'Lamia'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Lamia
+    type: PoP
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.31667
     Longitude: 23.63333
-    !!python/unicode 'label': !!python/unicode 'Inofita'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Inofita
+    type: PoP
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 35.36472
     Longitude: 24.47139
-    !!python/unicode 'label': !!python/unicode 'Rethymnon'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Rethymnon
+    type: PoP
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 35.05
     Longitude: 24.86667
-    !!python/unicode 'label': !!python/unicode 'Moires'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Moires
+    type: PoP
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 41.14139
     Longitude: 24.88361
-    !!python/unicode 'label': !!python/unicode 'Xanthi'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Xanthi
+    type: PoP
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 35.19139
     Longitude: 25.71333
-    !!python/unicode 'label': !!python/unicode 'Ag. Nikolaos'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Ag. Nikolaos
+    type: Main PoP
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 35.01
     Longitude: 25.73528
-    !!python/unicode 'label': !!python/unicode 'Ierapetra'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Ierapetra
+    type: PoP
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 35.2
     Longitude: 26.09861
-    !!python/unicode 'label': !!python/unicode 'Siteia'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Siteia
+    type: PoP
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.94068
     Longitude: 22.95734
-    !!python/unicode 'label': !!python/unicode 'Corinth'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Corinth
+    type: PoP
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.46667
     Longitude: 22.16667
-    !!python/unicode 'label': !!python/unicode 'Itea'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Itea
+    type: PoP
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 41.00167
     Longitude: 22.28611
-    !!python/unicode 'label': !!python/unicode 'Livadia'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Livadia
+    type: PoP
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.51667
     Longitude: 21.26667
-    !!python/unicode 'label': !!python/unicode 'Kastoria'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Kastoria
+    type: PoP
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.63722
     Longitude: 22.42028
-    !!python/unicode 'label': !!python/unicode 'Larissa'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Larissa
+    type: Main PoP
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.8275
     Longitude: 20.70194
-    !!python/unicode 'label': !!python/unicode 'Lefkada'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Lefkada
+    type: PoP
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.9225
     Longitude: 21.80278
-    !!python/unicode 'label': !!python/unicode 'Grevena'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Grevena
+    type: PoP
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.93972
     Longitude: 24.40194
-    !!python/unicode 'label': !!python/unicode 'Kavala'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Kavala
+    type: Main PoP
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.50389
     Longitude: 20.26556
-    !!python/unicode 'label': !!python/unicode 'Igoumenitsa'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Igoumenitsa
+    type: PoP
   '31':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.18109
     Longitude: 20.48903
-    !!python/unicode 'label': !!python/unicode 'Argostoli'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Argostoli
+    type: PoP
   '32':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 39.309865
     Longitude: 23.330055
-    !!python/unicode 'label': !!python/unicode 'Internet'
+    label: Internet
   '33':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.24444
     Longitude: 21.73444
-    !!python/unicode 'label': !!python/unicode 'Patra'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Patra
+    type: Main PoP
   '34':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.16227
     Longitude: 23.49089
-    !!python/unicode 'label': !!python/unicode 'Sklathos'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Sklathos
+    type: PoP
   '35':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.46361
     Longitude: 23.59944
-    !!python/unicode 'label': !!python/unicode 'Chalkida'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Chalkida
+    type: Main PoP
   '36':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.36556
     Longitude: 21.92167
-    !!python/unicode 'label': !!python/unicode 'Karditsa'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Karditsa
+    type: PoP
   '37':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.36667
     Longitude: 22.94583
-    !!python/unicode 'label': !!python/unicode 'Volos'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Volos
+    type: PoP
   '38':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.91667
     Longitude: 21.78333
-    !!python/unicode 'label': !!python/unicode 'Karpenisi'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Karpenisi
+    type: PoP
   '39':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.55528
     Longitude: 21.7675
-    !!python/unicode 'label': !!python/unicode 'Trikana'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Trikana
+    type: PoP
   '4':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 37.97945
     Longitude: 23.71622
-    !!python/unicode 'label': !!python/unicode 'Interconnection Greece'
+    label: Interconnection Greece
   '40':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.62
     Longitude: 19.91972
-    !!python/unicode 'label': !!python/unicode 'Corfu'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Corfu
+    type: PoP
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.6675
     Longitude: 20.85083
-    !!python/unicode 'label': !!python/unicode 'Ioaninna'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Ioaninna
+    type: Main PoP
   '42':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 35.30903
     Longitude: 25.37112
-    !!python/unicode 'label': !!python/unicode 'Hersonlssos'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Hersonlssos
+    type: PoP
   '43':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 35.32787
     Longitude: 25.14341
-    !!python/unicode 'label': !!python/unicode 'Heraklion'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Heraklion
+    type: Main PoP
   '44':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.63333
     Longitude: 22.73333
-    !!python/unicode 'label': !!python/unicode 'Argos'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Argos
+    type: PoP
   '45':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.45
     Longitude: 24.93333
-    !!python/unicode 'label': !!python/unicode 'Syros'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Syros
+    type: PoP
   '46':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.44529
     Longitude: 25.32872
-    !!python/unicode 'label': !!python/unicode 'Mykonos'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Mykonos
+    type: PoP
   '47':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 36.38613
     Longitude: 25.42959
-    !!python/unicode 'label': !!python/unicode 'Santorini'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Santorini
+    type: PoP
   '48':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 35.51222
     Longitude: 24.01556
-    !!python/unicode 'label': !!python/unicode 'Chania'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Chania
+    type: Main PoP
   '49':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.07333
     Longitude: 22.42972
-    !!python/unicode 'label': !!python/unicode 'Sparta'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Sparta
+    type: PoP
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.36778
     Longitude: 26.13583
-    !!python/unicode 'label': !!python/unicode 'Chios'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Chios
+    type: PoP
   '50':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.03889
     Longitude: 22.11417
-    !!python/unicode 'label': !!python/unicode 'Kalamata'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Kalamata
+    type: PoP
   '51':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.50889
     Longitude: 22.37944
-    !!python/unicode 'label': !!python/unicode 'Tripoli'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Tripoli
+    type: Main PoP
   '52':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.37444
     Longitude: 23.43833
-    !!python/unicode 'label': !!python/unicode 'Polygyros'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Polygyros
+    type: PoP
   '53':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 41.15444
     Longitude: 24.13944
-    !!python/unicode 'label': !!python/unicode 'Drama'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Drama
+    type: PoP
   '54':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 41.08556
     Longitude: 23.54972
-    !!python/unicode 'label': !!python/unicode 'Serres'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Serres
+    type: Main PoP
   '55':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.64028
     Longitude: 22.94389
-    !!python/unicode 'label': !!python/unicode 'Thessaloniki'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Thessaloniki
+    type: Main PoP
   '56':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.99194
     Longitude: 22.87083
-    !!python/unicode 'label': !!python/unicode 'Kilkis'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Kilkis
+    type: PoP
   '57':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.80056
     Longitude: 22.04722
-    !!python/unicode 'label': !!python/unicode 'Edessa'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Edessa
+    type: PoP
   '58':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.78197
     Longitude: 21.40981
-    !!python/unicode 'label': !!python/unicode 'Florina'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Florina
+    type: PoP
   '59':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.52333
     Longitude: 22.20361
-    !!python/unicode 'label': !!python/unicode 'Verola'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Verola
+    type: PoP
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 39.31079
     Longitude: 26.22025
-    !!python/unicode 'label': !!python/unicode 'Lesbos'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Lesbos
+    type: PoP
   '60':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.30111
     Longitude: 21.78639
-    !!python/unicode 'label': !!python/unicode 'Kozani'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Kozani
+    type: PoP
   '61':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.27194
     Longitude: 22.5025
-    !!python/unicode 'label': !!python/unicode 'Katerina'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Katerina
+    type: PoP
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.97945
     Longitude: 23.71622
-    !!python/unicode 'label': !!python/unicode 'Athens'
-    !!python/unicode 'type': !!python/unicode 'Main PoP'
+    label: Athens
+    type: Main PoP
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 37.79139
     Longitude: 20.89528
-    !!python/unicode 'label': !!python/unicode 'Zakynthos'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Zakynthos
+    type: PoP
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 40.15889
     Longitude: 20.78472
-    !!python/unicode 'label': !!python/unicode 'Pyrgos'
-    !!python/unicode 'type': !!python/unicode 'PoP'
+    label: Pyrgos
+    type: PoP

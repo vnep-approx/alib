@@ -61,122 +61,122 @@ edges:
   - '19'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.17497
     Longitude: -115.13722
-    !!python/unicode 'label': !!python/unicode 'Las Vegas'
+    label: Las Vegas
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+    label: Los Angeles
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
-    !!python/unicode 'label': !!python/unicode 'Atlanta'
+    label: Atlanta
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.76328
     Longitude: -95.36327
-    !!python/unicode 'label': !!python/unicode 'Houston'
+    label: Houston
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.65878
     Longitude: -117.42605
-    !!python/unicode 'label': !!python/unicode 'Spokane'
+    label: Spokane
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.6135
     Longitude: -116.20345
-    !!python/unicode 'label': !!python/unicode 'Boise'
+    label: Boise
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.76078
     Longitude: -111.89105
-    !!python/unicode 'label': !!python/unicode 'Salt Lake City'
+    label: Salt Lake City
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.97997
     Longitude: -93.26384
-    !!python/unicode 'label': !!python/unicode 'Minneapolis'
+    label: Minneapolis
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.85003
     Longitude: -87.65005
-    !!python/unicode 'label': !!python/unicode 'Chicago'
+    label: Chicago
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.15478
     Longitude: -77.61556
-    !!python/unicode 'label': !!python/unicode 'Rochester'
+    label: Rochester
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.73566
     Longitude: -74.17237
-    !!python/unicode 'label': !!python/unicode 'Newark'
+    label: Newark
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.89511
     Longitude: -77.03637
-    !!python/unicode 'label': !!python/unicode 'Washington DC'
+    label: Washington DC
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.78306
     Longitude: -96.80667
-    !!python/unicode 'label': !!python/unicode 'Dallas'
+    label: Dallas
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.44838
     Longitude: -112.07404
-    !!python/unicode 'label': !!python/unicode 'Phoenix'
+    label: Phoenix
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.35411
     Longitude: -121.95524
-    !!python/unicode 'label': !!python/unicode 'Santa Clara'
+    label: Santa Clara
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.52345
     Longitude: -122.67621
-    !!python/unicode 'label': !!python/unicode 'Portland'
+    label: Portland
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.58157
     Longitude: -121.4944
-    !!python/unicode 'label': !!python/unicode 'Sacramento'
+    label: Sacramento
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.44188
     Longitude: -122.14302
-    !!python/unicode 'label': !!python/unicode 'Palo Alto'
+    label: Palo Alto
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.25288
     Longitude: -122.44429
-    !!python/unicode 'label': !!python/unicode 'Tacoma'
+    label: Tacoma
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.60621
     Longitude: -122.33207
-    !!python/unicode 'label': !!python/unicode 'Seattle'
+    label: Seattle

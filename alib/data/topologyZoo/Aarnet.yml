@@ -49,116 +49,116 @@ edges:
   - '18'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'Sydney1'
+    label: Sydney1
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -27.46794
     Longitude: 153.02809
-    !!python/unicode 'label': !!python/unicode 'Brisbane2'
+    label: Brisbane2
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -35.28346
     Longitude: 149.12807
-    !!python/unicode 'label': !!python/unicode 'Canberra2'
+    label: Canberra2
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -31.93333
     Longitude: 115.83333
-    !!python/unicode 'label': !!python/unicode 'Perth1'
+    label: Perth1
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -31.93333
     Longitude: 115.83333
-    !!python/unicode 'label': !!python/unicode 'Perth2'
+    label: Perth2
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -34.93333
     Longitude: 138.6
-    !!python/unicode 'label': !!python/unicode 'Adelaide1'
+    label: Adelaide1
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -34.93333
     Longitude: 138.6
-    !!python/unicode 'label': !!python/unicode 'Adelaide2'
+    label: Adelaide2
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -37.814
     Longitude: 144.96332
-    !!python/unicode 'label': !!python/unicode 'Melbourne1'
+    label: Melbourne1
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -37.814
     Longitude: 144.96332
-    !!python/unicode 'label': !!python/unicode 'Melbourne2'
+    label: Melbourne2
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -23.7
     Longitude: 133.88333
-    !!python/unicode 'label': !!python/unicode 'Alice Springs'
+    label: Alice Springs
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -12.46113
     Longitude: 130.84185
-    !!python/unicode 'label': !!python/unicode 'Darwin'
+    label: Darwin
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -35.28346
     Longitude: 149.12807
-    !!python/unicode 'label': !!python/unicode 'Canberra1'
+    label: Canberra1
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'Sydney2'
+    label: Sydney2
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -19.25
     Longitude: 146.8
-    !!python/unicode 'label': !!python/unicode 'Townsville'
+    label: Townsville
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -16.91667
     Longitude: 145.76667
-    !!python/unicode 'label': !!python/unicode 'Cairns'
+    label: Cairns
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -27.46794
     Longitude: 153.02809
-    !!python/unicode 'label': !!python/unicode 'Brisbane1'
+    label: Brisbane1
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -23.38333
     Longitude: 150.5
-    !!python/unicode 'label': !!python/unicode 'Rockhampton'
+    label: Rockhampton
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -30.51667
     Longitude: 151.65
-    !!python/unicode 'label': !!python/unicode 'Armidale'
+    label: Armidale
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -42.87936
     Longitude: 147.32941
-    !!python/unicode 'label': !!python/unicode 'Hobart'
+    label: Hobart

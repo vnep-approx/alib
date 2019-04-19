@@ -434,224 +434,224 @@ edges:
 nodes:
   '0':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 38.89511
     Longitude: -77.03637
     label: Washington DC
     type: Core IP Network POP
   '1':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 25.77427
     Longitude: -80.19366
     label: Miami
     type: Core IP Network POP
   '13':
     Country: Sri Lanka
-    Internal: 1
+    Internal: '1'
     Latitude: 6.93194
     Longitude: 79.84778
     label: Colombo
     type: Partner POP
   '2':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
     label: Atlanta
     type: Core IP Network POP
   '20':
     Country: South Korea
-    Internal: 1
+    Internal: '1'
     Latitude: 37.56826
     Longitude: 126.97783
     label: Seoul
     type: Core IP Network POP
   '24':
     Country: United Kingdom
-    Internal: 1
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
     label: London
     type: Core IP Network POP
   '26':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 37.38605
     Longitude: -122.08385
     label: Mountain View
     type: Private Peering Point
   '28':
     Country: Myanmar [Burma]
-    Internal: 1
+    Internal: '1'
     Latitude: 16.80528
     Longitude: 96.15611
     label: Rangoon
     type: Partner POP
   '29':
     Country: Hong Kong
-    Internal: 1
+    Internal: '1'
     Latitude: 22.28552
     Longitude: 114.15769
     label: Hong Kong
     type: Core IP Network POP
   '3':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 40.71427
     Longitude: -74.00597
     label: New York City
     type: Core IP Network POP
   '30':
     Country: Japan
-    Internal: 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
     label: Tokyo
     type: Core IP Network POP
   '31':
     Country: Japan
-    Internal: 1
+    Internal: '1'
     Latitude: 34.69374
     Longitude: 135.50218
     label: Osaka
     type: Core IP Network POP
   '32':
     Country: Poland
-    Internal: 1
+    Internal: '1'
     Latitude: 52.22977
     Longitude: 21.01178
     label: Warsaw
     type: Core IP Network POP
   '34':
     Country: Vietnam
-    Internal: 1
+    Internal: '1'
     Latitude: 21.0245
     Longitude: 105.84117
     label: Hanoi
     type: Partner POP
   '35':
     Country: Philippines
-    Internal: 1
+    Internal: '1'
     Latitude: 14.6042
     Longitude: 120.9822
     label: Manila
     type: Partner POP
   '36':
     Country: Hungary
-    Internal: 1
+    Internal: '1'
     Latitude: 46.31667
     Longitude: 20.11667
     label: Tapei
     type: Core IP Network POP
   '37':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.78306
     Longitude: -96.80667
     label: Dallas
     type: Core IP Network POP
   '38':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 29.76328
     Longitude: -95.36327
     label: Houston
     type: Core IP Network POP
   '39':
     Country: Malaysia
-    Internal: 1
+    Internal: '1'
     Latitude: 3.1412
     Longitude: 101.68653
     label: Kuala Lumpur
     type: Core IP Network POP
   '4':
     Country: Switzerland
-    Internal: 1
+    Internal: '1'
     Latitude: 46.20222
     Longitude: 6.14569
     label: Geneva
     type: Core IP Network POP
   '40':
     Country: Singapore
-    Internal: 1
+    Internal: '1'
     Latitude: 1.28967
     Longitude: 103.85007
     label: Singapore
     type: Core IP Network POP
   '41':
     Country: Indonesia
-    Internal: 1
+    Internal: '1'
     Latitude: -6.21462
     Longitude: 106.84513
     label: Jakarta
     type: Partner POP
   '42':
     Country: Australia
-    Internal: 1
+    Internal: '1'
     Latitude: -33.86785
     Longitude: 151.20732
     label: Sydney
     type: Core IP Network POP
   '43':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 37.33939
     Longitude: -121.89496
     label: San Jose
     type: Core IP Network POP
   '44':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
     label: Los Angeles
     type: Core IP Network POP
   '45':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 47.60621
     Longitude: -122.33207
     label: Seattle
     type: Core IP Network POP
   '46':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 41.85003
     Longitude: -87.65005
     label: Chicago
     type: Core IP Network POP
   '5':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
     label: Frankfurt
     type: Core IP Network POP
   '6':
     Country: France
-    Internal: 1
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
     label: Paris
     type: Core IP Network POP
   '7':
     Country: Spain
-    Internal: 1
+    Internal: '1'
     Latitude: 40.4165
     Longitude: -3.70256
     label: Madrid
     type: Core IP Network POP
   '8':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 51.22172
     Longitude: 6.77616
     label: Dusseldorf
     type: Core IP Network POP
   '9':
     Country: Netherlands
-    Internal: 1
+    Internal: '1'
     Latitude: 52.37403
     Longitude: 4.88969
     label: Amsterdam

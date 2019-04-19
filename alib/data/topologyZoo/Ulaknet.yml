@@ -165,567 +165,567 @@ edges:
   - '81'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.77417
     Longitude: 29.0875
-    !!python/unicode 'label': !!python/unicode 'Denizli'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Denizli
+    type: Yellow Colour
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.67351
     Longitude: 29.4058
-    !!python/unicode 'label': !!python/unicode 'Usak'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Usak
+    type: Yellow Colour
   '10':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 39.91987
     Longitude: 32.85427
-    !!python/unicode 'label': !!python/unicode 'Gazimagusa'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Gazimagusa
+    type: Yellow Colour
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.65502
     Longitude: 29.27693
-    !!python/unicode 'label': !!python/unicode 'Yalova'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Yalova
+    type: Yellow Colour
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.65333
     Longitude: 35.83306
-    !!python/unicode 'label': !!python/unicode 'Amasya'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Amasya
+    type: Yellow Colour
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.31389
     Longitude: 36.55444
-    !!python/unicode 'label': !!python/unicode 'Tokat'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Tokat
+    type: Yellow Colour
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.96583
     Longitude: 34.67935
-    !!python/unicode 'label': !!python/unicode 'Nigde'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Nigde
+    type: Yellow Colour
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 36.20655
     Longitude: 36.15722
-    !!python/unicode 'label': !!python/unicode 'Hatay'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Hatay
+    type: Yellow Colour
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.76441
     Longitude: 38.27629
-    !!python/unicode 'label': !!python/unicode 'Adiyaman'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Adiyaman
+    type: Yellow Colour
   '17':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 39.91987
     Longitude: 32.85427
-    !!python/unicode 'label': !!python/unicode 'K. Maras'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: K. Maras
+    type: Yellow Colour
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.90861
     Longitude: 41.27694
-    !!python/unicode 'label': !!python/unicode 'Erzurum'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Erzurum
+    type: Yellow Colour
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.63583
     Longitude: 32.3375
-    !!python/unicode 'label': !!python/unicode 'Bartin'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Bartin
+    type: Yellow Colour
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.84501
     Longitude: 27.83963
-    !!python/unicode 'label': !!python/unicode 'Aydin'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Aydin
+    type: Yellow Colour
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.20488
     Longitude: 32.62768
-    !!python/unicode 'label': !!python/unicode 'Karabuk'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Karabuk
+    type: Yellow Colour
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 36.79526
     Longitude: 34.61792
-    !!python/unicode 'label': !!python/unicode 'Mersin'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Mersin
+    type: Yellow Colour
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.18111
     Longitude: 33.215
-    !!python/unicode 'label': !!python/unicode 'Karaman'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Karaman
+    type: Yellow Colour
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.37255
     Longitude: 34.02537
-    !!python/unicode 'label': !!python/unicode 'Aksaray'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Aksaray
+    type: Yellow Colour
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.86556
     Longitude: 32.4825
-    !!python/unicode 'label': !!python/unicode 'Konya'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Konya
+    type: Yellow Colour
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 42.03087
     Longitude: 35.17124
-    !!python/unicode 'label': !!python/unicode 'Sinop'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Sinop
+    type: Yellow Colour
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.28667
     Longitude: 36.33
-    !!python/unicode 'label': !!python/unicode 'Samsun'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Samsun
+    type: Yellow Colour
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.00167
     Longitude: 35.32889
-    !!python/unicode 'label': !!python/unicode 'Adana'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Adana
+    type: Yellow Colour
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.14192
     Longitude: 29.97932
-    !!python/unicode 'label': !!python/unicode 'Bilecik'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Bilecik
+    type: Yellow Colour
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.91698
     Longitude: 38.38741
-    !!python/unicode 'label': !!python/unicode 'Giresun'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Giresun
+    type: Yellow Colour
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.21807
     Longitude: 28.3665
-    !!python/unicode 'label': !!python/unicode 'Mugla'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Mugla
+    type: Yellow Colour
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.57444
     Longitude: 43.74083
-    !!python/unicode 'label': !!python/unicode 'Hakkari'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Hakkari
+    type: Yellow Colour
   '31':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.67431
     Longitude: 39.22321
-    !!python/unicode 'label': !!python/unicode 'Elazig'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Elazig
+    type: Yellow Colour
   '32':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.10871
     Longitude: 42.70222
-    !!python/unicode 'label': !!python/unicode 'Ardahan'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Ardahan
+    type: Yellow Colour
   '33':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.18222
     Longitude: 41.81944
-    !!python/unicode 'label': !!python/unicode 'Artvin'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Artvin
+    type: Yellow Colour
   '34':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.54889
     Longitude: 34.95333
-    !!python/unicode 'label': !!python/unicode 'Corum'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Corum
+    type: Yellow Colour
   '35':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.88472
     Longitude: 40.49389
-    !!python/unicode 'label': !!python/unicode 'Bingol'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Bingol
+    type: Yellow Colour
   '36':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.49239
     Longitude: 43.38311
-    !!python/unicode 'label': !!python/unicode 'Van'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Van
+    type: Yellow Colour
   '37':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.07417
     Longitude: 36.24778
-    !!python/unicode 'label': !!python/unicode 'Osmaniye'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Osmaniye
+    type: Yellow Colour
   '38':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.71944
     Longitude: 43.05139
-    !!python/unicode 'label': !!python/unicode 'Agri'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Agri
+    type: Yellow Colour
   '39':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.98472
     Longitude: 37.87889
-    !!python/unicode 'label': !!python/unicode 'Ordu'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Ordu
+    type: Yellow Colour
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.72028
     Longitude: 30.29083
-    !!python/unicode 'label': !!python/unicode 'Burdur'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Burdur
+    type: Yellow Colour
   '40':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.31309
     Longitude: 40.74357
-    !!python/unicode 'label': !!python/unicode 'Mardin'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Mardin
+    type: Yellow Colour
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.35018
     Longitude: 38.31667
-    !!python/unicode 'label': !!python/unicode 'Malatya'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Malatya
+    type: Yellow Colour
   '42':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.52278
     Longitude: 42.45944
-    !!python/unicode 'label': !!python/unicode 'Sirnak'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Sirnak
+    type: Yellow Colour
   '43':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.91583
     Longitude: 40.21889
-    !!python/unicode 'label': !!python/unicode 'Diyarbakir'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Diyarbakir
+    type: Yellow Colour
   '44':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.82
     Longitude: 34.80444
-    !!python/unicode 'label': !!python/unicode 'Yozgat'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Yozgat
+    type: Yellow Colour
   '45':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.73222
     Longitude: 35.48528
-    !!python/unicode 'label': !!python/unicode 'Kayseri'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Kayseri
+    type: Yellow Colour
   '46':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.60199
     Longitude: 43.09495
-    !!python/unicode 'label': !!python/unicode 'Kars'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Kars
+    type: Yellow Colour
   '47':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.625
     Longitude: 34.71222
-    !!python/unicode 'label': !!python/unicode 'Nevsehir'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Nevsehir
+    type: Yellow Colour
   '48':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.05944
     Longitude: 37.3825
-    !!python/unicode 'label': !!python/unicode 'Gaziantep'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Gaziantep
+    type: Yellow Colour
   '49':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.84528
     Longitude: 33.50639
-    !!python/unicode 'label': !!python/unicode 'Kirikkale'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Kirikkale
+    type: Yellow Colour
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 36.9125
     Longitude: 30.68972
-    !!python/unicode 'label': !!python/unicode 'Antalya'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Antalya
+    type: Yellow Colour
   '50':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 36.71611
     Longitude: 37.115
-    !!python/unicode 'label': !!python/unicode 'Kilis'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Kilis
+    type: Yellow Colour
   '51':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 41.01384
     Longitude: 28.94966
-    !!python/unicode 'label': !!python/unicode 'GEANT'
+    label: GEANT
   '52':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.14583
     Longitude: 34.16389
-    !!python/unicode 'label': !!python/unicode 'Kirsehir'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Kirsehir
+    type: Yellow Colour
   '53':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.59995
     Longitude: 33.6153
-    !!python/unicode 'label': !!python/unicode 'Cankiri'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Cankiri
+    type: Yellow Colour
   '54':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.37805
     Longitude: 33.77528
-    !!python/unicode 'label': !!python/unicode 'Kastamonu'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Kastamonu
+    type: Yellow Colour
   '55':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.74525
     Longitude: 41.50693
-    !!python/unicode 'label': !!python/unicode 'Mus'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Mus
+    type: Yellow Colour
   '56':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.77667
     Longitude: 30.52056
-    !!python/unicode 'label': !!python/unicode 'Eskisehir'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Eskisehir
+    type: Yellow Colour
   '57':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.76694
     Longitude: 29.91694
-    !!python/unicode 'label': !!python/unicode 'Kocaeli'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Kocaeli
+    type: Yellow Colour
   '58':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.78056
     Longitude: 30.40333
-    !!python/unicode 'label': !!python/unicode 'Sakarya'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Sakarya
+    type: Yellow Colour
   '59':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.40115
     Longitude: 42.10784
-    !!python/unicode 'label': !!python/unicode 'Bitlis'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Bitlis
+    type: Yellow Colour
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.75667
     Longitude: 30.54333
-    !!python/unicode 'label': !!python/unicode 'Afyonkarahisar'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Afyonkarahisar
+    type: Yellow Colour
   '60':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.19167
     Longitude: 29.06111
-    !!python/unicode 'label': !!python/unicode 'Bursa'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Bursa
+    type: Yellow Colour
   '61':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.73583
     Longitude: 31.60611
-    !!python/unicode 'label': !!python/unicode 'Bolu'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Bolu
+    type: Yellow Colour
   '62':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.83889
     Longitude: 31.16389
-    !!python/unicode 'label': !!python/unicode 'Duzce'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Duzce
+    type: Yellow Colour
   '63':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.45139
     Longitude: 31.79305
-    !!python/unicode 'label': !!python/unicode 'Zonguldak'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Zonguldak
+    type: Yellow Colour
   '64':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.02083
     Longitude: 40.52194
-    !!python/unicode 'label': !!python/unicode 'Rize'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Rize
+    type: Yellow Colour
   '65':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 39.91987
     Longitude: 32.85427
-    !!python/unicode 'label': !!python/unicode 'S. Urfa'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: S. Urfa
+    type: Yellow Colour
   '66':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 39.91987
     Longitude: 32.85427
-    !!python/unicode 'label': !!python/unicode 'Internet'
+    label: Internet
   '67':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 41.01384
     Longitude: 28.94966
-    !!python/unicode 'label': !!python/unicode 'Internet'
+    label: Internet
   '68':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.005
     Longitude: 39.72694
-    !!python/unicode 'label': !!python/unicode 'Trabzon'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Trabzon
+    type: Yellow Colour
   '69':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.92371
     Longitude: 44.045
-    !!python/unicode 'label': !!python/unicode 'Igdir'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Igdir
+    type: Yellow Colour
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.76444
     Longitude: 30.55222
-    !!python/unicode 'label': !!python/unicode 'Isparta'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Isparta
+    type: Yellow Colour
   '70':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.61202
     Longitude: 27.42646
-    !!python/unicode 'label': !!python/unicode 'Manisa'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Manisa
+    type: Yellow Colour
   '71':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.42417
     Longitude: 29.98333
-    !!python/unicode 'label': !!python/unicode 'Kutahya'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Kutahya
+    type: Yellow Colour
   '72':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.75222
     Longitude: 39.49278
-    !!python/unicode 'label': !!python/unicode 'Erzincan'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Erzincan
+    type: Yellow Colour
   '73':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.74833
     Longitude: 37.01611
-    !!python/unicode 'label': !!python/unicode 'Sivas'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Sivas
+    type: Yellow Colour
   '74':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.01384
     Longitude: 28.94966
-    !!python/unicode 'label': !!python/unicode 'Istanbul'
-    !!python/unicode 'type': !!python/unicode 'Red Colour'
+    label: Istanbul
+    type: Red Colour
   '75':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 38.41273
     Longitude: 27.13838
-    !!python/unicode 'label': !!python/unicode 'iZMiR'
-    !!python/unicode 'type': !!python/unicode 'Red Colour'
+    label: iZMiR
+    type: Red Colour
   '76':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.91987
     Longitude: 32.85427
-    !!python/unicode 'label': !!python/unicode 'Ankara'
-    !!python/unicode 'type': !!python/unicode 'Red Colour'
+    label: Ankara
+    type: Red Colour
   '77':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.73508
     Longitude: 27.22521
-    !!python/unicode 'label': !!python/unicode 'Kirklareli'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Kirklareli
+    type: Yellow Colour
   '78':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.97801
     Longitude: 27.50852
-    !!python/unicode 'label': !!python/unicode 'Tekirdag'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Tekirdag
+    type: Yellow Colour
   '79':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 41.67719
     Longitude: 26.55597
-    !!python/unicode 'label': !!python/unicode 'Edirne'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Edirne
+    type: Yellow Colour
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.88738
     Longitude: 41.13221
-    !!python/unicode 'label': !!python/unicode 'Batman'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Batman
+    type: Yellow Colour
   '80':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 40.14556
     Longitude: 26.40639
-    !!python/unicode 'label': !!python/unicode 'Canakkale'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Canakkale
+    type: Yellow Colour
   '81':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.64917
     Longitude: 27.88611
-    !!python/unicode 'label': !!python/unicode 'Balikesin'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Balikesin
+    type: Yellow Colour
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 37.93262
     Longitude: 41.94025
-    !!python/unicode 'label': !!python/unicode 'Siirt'
-    !!python/unicode 'type': !!python/unicode 'Yellow Colour'
+    label: Siirt
+    type: Yellow Colour

@@ -47,144 +47,144 @@ edges:
   - '23'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 48.19696
     Longitude: -106.63671
-    !!python/unicode 'label': !!python/unicode 'Glasgow'
+    label: Glasgow
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 48.14002
     Longitude: -104.22272
-    !!python/unicode 'label': !!python/unicode 'Bainville'
+    label: Bainville
   '10':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 48.14002
     Longitude: -104.22272
-    !!python/unicode 'label': !!python/unicode 'DCN Network'
+    label: DCN Network
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.8183
     Longitude: -110.66744
-    !!python/unicode 'label': !!python/unicode 'Fort Benton'
+    label: Fort Benton
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.99604
     Longitude: -115.78156
-    !!python/unicode 'label': !!python/unicode 'Seattle'
+    label: Seattle
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 48.55
     Longitude: -109.68409
-    !!python/unicode 'label': !!python/unicode 'Havre'
+    label: Havre
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 46.26638
     Longitude: -106.67781
-    !!python/unicode 'label': !!python/unicode 'Forsyth'
+    label: Forsyth
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 46.40834
     Longitude: -105.84056
-    !!python/unicode 'label': !!python/unicode 'Miles City'
+    label: Miles City
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.99604
     Longitude: -115.78156
-    !!python/unicode 'label': !!python/unicode 'Noxon'
+    label: Noxon
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 48.19579
     Longitude: -114.31291
-    !!python/unicode 'label': !!python/unicode 'Kalispell'
+    label: Kalispell
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 48.63304
     Longitude: -112.32616
-    !!python/unicode 'label': !!python/unicode 'N Cutbank'
+    label: N Cutbank
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.61467
     Longitude: -111.98028
-    !!python/unicode 'label': !!python/unicode 'Fairfield'
+    label: Fairfield
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.10529
     Longitude: -104.71246
-    !!python/unicode 'label': !!python/unicode 'Glendive'
+    label: Glendive
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.50024
     Longitude: -111.30081
-    !!python/unicode 'label': !!python/unicode 'Great Falls'
+    label: Great Falls
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 46.97552
     Longitude: -109.69685
-    !!python/unicode 'label': !!python/unicode 'Moore'
+    label: Moore
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.83494
     Longitude: -109.95546
-    !!python/unicode 'label': !!python/unicode 'Big Timber'
+    label: Big Timber
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.78329
     Longitude: -108.50069
-    !!python/unicode 'label': !!python/unicode 'Billings'
+    label: Billings
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 48.14446
     Longitude: -104.5169
-    !!python/unicode 'label': !!python/unicode 'Culbertson'
+    label: Culbertson
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 46.95494
     Longitude: -112.68171
-    !!python/unicode 'label': !!python/unicode 'Lincoln'
+    label: Lincoln
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 46.59271
     Longitude: -112.03611
-    !!python/unicode 'label': !!python/unicode 'Helena'
+    label: Helena
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.21631
     Longitude: -112.63752
-    !!python/unicode 'label': !!python/unicode 'Dillion'
+    label: Dillion
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 46.87215
     Longitude: -113.994
-    !!python/unicode 'label': !!python/unicode 'Missoula'
+    label: Missoula
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.67965
     Longitude: -111.03856
-    !!python/unicode 'label': !!python/unicode 'Bozeman'
+    label: Bozeman
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 48.77475
     Longitude: -104.56246
-    !!python/unicode 'label': !!python/unicode 'Sheridan'
+    label: Sheridan

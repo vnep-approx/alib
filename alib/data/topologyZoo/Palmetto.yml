@@ -142,271 +142,271 @@ edges:
 nodes:
   '0':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.92487
     Longitude: -81.02508
     label: Rock Hill
   '1':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.22709
     Longitude: -80.84313
     label: Charlotte
   '10':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.49182
     Longitude: -80.85565
     label: Orangeburg
   '11':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.56042
     Longitude: -81.71955
     label: Aiken
   '12':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.70486
     Longitude: -81.21426
     label: Chester
   '13':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.00071
     Longitude: -81.03481
     label: Columbia
   '14':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.92044
     Longitude: -80.34147
     label: Sumter
   '15':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.37683
     Longitude: -79.2945
     label: Georgetown
   '16':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.196
     Longitude: -80.01314
     label: Moncks Corner
   '17':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.77657
     Longitude: -79.93092
     label: Charleston
   '18':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.186
     Longitude: -80.57565
     label: St George
   '19':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.90517
     Longitude: -80.66677
     label: Walterboro
   '2':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.41488
     Longitude: -80.34868
     label: Bethune
   '20':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.69018
     Longitude: -80.85066
     label: Yemassee
   '21':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.5018
     Longitude: -81.96512
     label: Augusta
   '22':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.21632
     Longitude: -80.75261
     label: Hilton Head
   '23':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.43158
     Longitude: -80.66983
     label: Beaufort
   '24':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.08354
     Longitude: -81.09983
     label: Savannah
   '25':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.1954
     Longitude: -82.16179
     label: Greenwood
   '26':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.33345
     Longitude: -82.3879
     label: Due West
   '27':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.94957
     Longitude: -81.93205
     label: Spartanburg
   '28':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.60095
     Longitude: -82.55402
     label: Asheville
   '29':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.2168
     Longitude: -81.67455
     label: Boone
   '3':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.72043
     Longitude: -80.7709
     label: Lancaster
   '30':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.73319
     Longitude: -81.3412
     label: Hickory
   '31':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.50344
     Longitude: -82.65013
     label: Anderson
   '32':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.68344
     Longitude: -82.83737
     label: Clemson
   '33':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.57732
     Longitude: -83.33239
     label: Toccoa
   '34':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.85262
     Longitude: -82.39401
     label: Greenville
   '35':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.68906
     Longitude: -78.88669
     label: Myrtle Beach
   '36':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.19543
     Longitude: -79.76256
     label: Florence
   '37':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.34763
     Longitude: -81.53288
     label: Baldwin
   '38':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.50541
     Longitude: -81.12092
     label: Sparta
   '39':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.4993
     Longitude: -80.60729
     label: Level Cross
   '4':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.06014
     Longitude: -80.62062
     label: Courtney
   '40':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.07264
     Longitude: -79.79198
     label: Greensboro
   '41':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.7721
     Longitude: -78.63861
     label: Raleigh
   '42':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.9246
     Longitude: -77.79665
     label: Rocky Mount
   '43':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.05266
     Longitude: -78.87836
     label: Fayetteville
   '44':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.22573
     Longitude: -77.94471
     label: Wilmington
   '5':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.82403
     Longitude: -80.25338
     label: Lexington
   '6':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.40875
     Longitude: -80.57951
     label: Concord
   '7':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.64375
     Longitude: -80.46256
     label: Salisbury
   '8':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.95569
     Longitude: -80.00532
     label: High Point
   '9':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.70791
     Longitude: -79.81364
     label: Asheboro

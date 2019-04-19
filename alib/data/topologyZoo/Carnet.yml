@@ -87,304 +87,304 @@ edges:
   - '37'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.14861
     Longitude: 17.24667
-    !!python/unicode 'label': !!python/unicode 'Stara Gradnifska'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Stara Gradnifska
+    type: Smaller Centre
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.475
     Longitude: 16.78194
-    !!python/unicode 'label': !!python/unicode 'Kutina'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Kutina
+    type: Smaller Centre
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 43.1725
     Longitude: 16.44278
-    !!python/unicode 'label': !!python/unicode 'Hvar'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Hvar
+    type: Smaller Centre
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 42.64807
     Longitude: 18.09216
-    !!python/unicode 'label': !!python/unicode 'Dubrovnik'
-    !!python/unicode 'type': !!python/unicode 'Larger University Centre'
+    label: Dubrovnik
+    type: Larger University Centre
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.08
     Longitude: 13.64
-    !!python/unicode 'label': !!python/unicode 'Rovinj'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Rovinj
+    type: Smaller Centre
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.27639
     Longitude: 13.72083
-    !!python/unicode 'label': !!python/unicode 'Visnjan'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Visnjan
+    type: Smaller Centre
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.33917
     Longitude: 14.30833
-    !!python/unicode 'label': !!python/unicode 'Opatija'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Opatija
+    type: Smaller Centre
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.22583
     Longitude: 13.59389
-    !!python/unicode 'label': !!python/unicode 'Porec'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Porec
+    type: Smaller Centre
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.41
     Longitude: 13.66194
-    !!python/unicode 'label': !!python/unicode 'Buje'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Buje
+    type: Smaller Centre
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 44.11972
     Longitude: 15.24222
-    !!python/unicode 'label': !!python/unicode 'Zadar'
-    !!python/unicode 'type': !!python/unicode 'Larger University Centre'
+    label: Zadar
+    type: Larger University Centre
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 44.10667
     Longitude: 15.38056
-    !!python/unicode 'label': !!python/unicode 'Zenumik D'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Zenumik D
+    type: Smaller Centre
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 44.04389
     Longitude: 16.2
-    !!python/unicode 'label': !!python/unicode 'Knin'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Knin
+    type: Smaller Centre
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.16028
     Longitude: 18.01556
-    !!python/unicode 'label': !!python/unicode 'Slavonski'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Slavonski
+    type: Smaller Centre
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 43.5125
     Longitude: 16.25167
-    !!python/unicode 'label': !!python/unicode 'Trogic'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Trogic
+    type: Smaller Centre
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 43.34778
     Longitude: 16.73389
-    !!python/unicode 'label': !!python/unicode 'Pucisca'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Pucisca
+    type: Smaller Centre
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 43.55
     Longitude: 16.5
-    !!python/unicode 'label': !!python/unicode 'Solin'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Solin
+    type: Smaller Centre
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 43.72722
     Longitude: 15.90583
-    !!python/unicode 'label': !!python/unicode 'Sibenik'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Sibenik
+    type: Smaller Centre
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 44.86833
     Longitude: 13.84806
-    !!python/unicode 'label': !!python/unicode 'Pula'
-    !!python/unicode 'type': !!python/unicode 'Larger University Centre'
+    label: Pula
+    type: Larger University Centre
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 44.53056
     Longitude: 14.46861
-    !!python/unicode 'label': !!python/unicode 'M. Losinj'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: M. Losinj
+    type: Smaller Centre
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.34306
     Longitude: 14.40917
-    !!python/unicode 'label': !!python/unicode 'Rijeka'
-    !!python/unicode 'type': !!python/unicode 'Larger University Centre'
+    label: Rijeka
+    type: Larger University Centre
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 43.50891
     Longitude: 16.43915
-    !!python/unicode 'label': !!python/unicode 'Split'
-    !!python/unicode 'type': !!python/unicode 'Larger University Centre'
+    label: Split
+    type: Larger University Centre
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 46.38444
     Longitude: 16.43389
-    !!python/unicode 'label': !!python/unicode 'Cakovec'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Cakovec
+    type: Smaller Centre
   '29':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 45.81444
     Longitude: 15.97798
-    !!python/unicode 'label': !!python/unicode 'GEANT'
+    label: GEANT
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.34028
     Longitude: 17.68528
-    !!python/unicode 'label': !!python/unicode 'Pozega'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Pozega
+    type: Smaller Centre
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 44.54611
     Longitude: 15.37472
-    !!python/unicode 'label': !!python/unicode 'Gospic'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Gospic
+    type: Smaller Centre
   '31':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 44.86944
     Longitude: 15.2375
-    !!python/unicode 'label': !!python/unicode 'Otocac'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Otocac
+    type: Smaller Centre
   '32':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.28833
     Longitude: 18.80472
-    !!python/unicode 'label': !!python/unicode 'Vinkovci'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Vinkovci
+    type: Smaller Centre
   '33':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 45.81444
     Longitude: 15.97798
-    !!python/unicode 'label': !!python/unicode 'BIHarnet'
+    label: BIHarnet
   '34':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.34333
     Longitude: 18.99972
-    !!python/unicode 'label': !!python/unicode 'Vukovar'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Vukovar
+    type: Smaller Centre
   '35':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.30833
     Longitude: 18.41056
-    !!python/unicode 'label': !!python/unicode 'Dakovo'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Dakovo
+    type: Smaller Centre
   '36':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.81444
     Longitude: 15.97798
-    !!python/unicode 'label': !!python/unicode 'Zagreb'
-    !!python/unicode 'type': !!python/unicode 'Larger University Centre'
+    label: Zagreb
+    type: Larger University Centre
   '37':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.85639
     Longitude: 15.80778
-    !!python/unicode 'label': !!python/unicode 'Zabresic'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Zabresic
+    type: Smaller Centre
   '38':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.80306
     Longitude: 15.71806
-    !!python/unicode 'label': !!python/unicode 'Samobor'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Samobor
+    type: Smaller Centre
   '39':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 46.30444
     Longitude: 16.33778
-    !!python/unicode 'label': !!python/unicode 'Varazdin'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Varazdin
+    type: Smaller Centre
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.7125
     Longitude: 16.07556
-    !!python/unicode 'label': !!python/unicode 'Gorica'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Gorica
+    type: Smaller Centre
   '40':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 46.02194
     Longitude: 16.5425
-    !!python/unicode 'label': !!python/unicode 'Krizevci'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Krizevci
+    type: Smaller Centre
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.89861
     Longitude: 16.84889
-    !!python/unicode 'label': !!python/unicode 'Bjelovar'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Bjelovar
+    type: Smaller Centre
   '42':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.83194
     Longitude: 17.38389
-    !!python/unicode 'label': !!python/unicode 'Virovitica'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Virovitica
+    type: Smaller Centre
   '43':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.55111
     Longitude: 18.69389
-    !!python/unicode 'label': !!python/unicode 'Osijek'
-    !!python/unicode 'type': !!python/unicode 'Larger University Centre'
+    label: Osijek
+    type: Larger University Centre
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.48722
     Longitude: 15.54778
-    !!python/unicode 'label': !!python/unicode 'Karlovac'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Karlovac
+    type: Smaller Centre
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.46611
     Longitude: 16.37833
-    !!python/unicode 'label': !!python/unicode 'Sisak'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Sisak
+    type: Smaller Centre
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.4375
     Longitude: 16.29
-    !!python/unicode 'label': !!python/unicode 'Petrinja'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Petrinja
+    type: Smaller Centre
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.66833
     Longitude: 15.64861
-    !!python/unicode 'label': !!python/unicode 'Jastrebarsko'
-    !!python/unicode 'type': !!python/unicode 'Smaller Centre'
+    label: Jastrebarsko
+    type: Smaller Centre
   '9':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 45.81444
     Longitude: 15.97798
-    !!python/unicode 'label': !!python/unicode 'GEANT'
+    label: GEANT

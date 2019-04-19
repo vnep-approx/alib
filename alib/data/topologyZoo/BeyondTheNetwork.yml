@@ -131,315 +131,315 @@ edges:
   - '52'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.35843
     Longitude: -71.05977
-    !!python/unicode 'label': !!python/unicode 'Boston'
+    label: Boston
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.33143
     Longitude: -83.04575
-    !!python/unicode 'label': !!python/unicode 'Detroit'
+    label: Detroit
   '10':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.60621
     Longitude: -122.33207
-    !!python/unicode 'label': !!python/unicode 'Seattle'
-    !!python/unicode 'type': !!python/unicode 'Private Peering Point'
+    label: Seattle
+    type: Private Peering Point
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'Los Angeles'
-    !!python/unicode 'type': !!python/unicode 'Private Peering Point'
+    label: Los Angeles
+    type: Private Peering Point
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
-    !!python/unicode 'label': !!python/unicode 'San Jose'
-    !!python/unicode 'type': !!python/unicode 'Private Peering Point'
+    label: San Jose
+    type: Private Peering Point
   '13':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'BtN London POP'
+    label: BtN London POP
   '14':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.60621
     Longitude: -122.33207
-    !!python/unicode 'label': !!python/unicode 'SIX'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: SIX
+    type: NAP Connection
   '15':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 38.90122
     Longitude: -77.26526
-    !!python/unicode 'label': !!python/unicode 'MAE East'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: MAE East
+    type: NAP Connection
   '16':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 32.78306
     Longitude: -96.80667
-    !!python/unicode 'label': !!python/unicode 'MAE Central'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: MAE Central
+    type: NAP Connection
   '17':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 33.749
     Longitude: -84.38798
-    !!python/unicode 'label': !!python/unicode 'PAIX'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: PAIX
+    type: NAP Connection
   '18':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 25.77427
     Longitude: -80.19366
-    !!python/unicode 'label': !!python/unicode 'PAIX'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: PAIX
+    type: NAP Connection
   '19':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
-    !!python/unicode 'label': !!python/unicode 'PAIX'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: PAIX
+    type: NAP Connection
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.95234
     Longitude: -75.16379
-    !!python/unicode 'label': !!python/unicode 'Philadelphia'
+    label: Philadelphia
   '20':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 37.33939
     Longitude: -121.89496
-    !!python/unicode 'label': !!python/unicode 'MAE West'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: MAE West
+    type: NAP Connection
   '21':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'BtN Frankfurt POP'
+    label: BtN Frankfurt POP
   '22':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'BtN London POP'
+    label: BtN London POP
   '23':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 39.04372
     Longitude: -77.48749
-    !!python/unicode 'label': !!python/unicode 'AShburn'
-    !!python/unicode 'type': !!python/unicode 'Private Peering Point'
+    label: AShburn
+    type: Private Peering Point
   '24':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 25.77427
     Longitude: -80.19366
-    !!python/unicode 'label': !!python/unicode 'Miami'
-    !!python/unicode 'type': !!python/unicode 'Private Peering Point'
+    label: Miami
+    type: Private Peering Point
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.44062
     Longitude: -79.99589
-    !!python/unicode 'label': !!python/unicode 'Pittsburgh'
+    label: Pittsburgh
   '26':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.60621
     Longitude: -122.33207
-    !!python/unicode 'label': !!python/unicode 'PAIX'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: PAIX
+    type: NAP Connection
   '27':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'BtN Hong Kong POP'
+    label: BtN Hong Kong POP
   '28':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'BtN Hong Kong POP'
+    label: BtN Hong Kong POP
   '29':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 33.749
     Longitude: -84.38798
-    !!python/unicode 'label': !!python/unicode 'Atlanta'
-    !!python/unicode 'type': !!python/unicode 'Private Peering Point'
+    label: Atlanta
+    type: Private Peering Point
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'New York'
+    label: New York
   '30':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 41.85003
     Longitude: -87.65005
-    !!python/unicode 'label': !!python/unicode 'Chicago'
-    !!python/unicode 'type': !!python/unicode 'Private Peering Point'
+    label: Chicago
+    type: Private Peering Point
   '31':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'New York'
-    !!python/unicode 'type': !!python/unicode 'Private Peering Point'
+    label: New York
+    type: Private Peering Point
   '32':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 32.78306
     Longitude: -96.80667
-    !!python/unicode 'label': !!python/unicode 'Dallas'
-    !!python/unicode 'type': !!python/unicode 'Private Peering Point'
+    label: Dallas
+    type: Private Peering Point
   '33':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'NY-IIX'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: NY-IIX
+    type: NAP Connection
   '34':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 41.85003
     Longitude: -87.65005
-    !!python/unicode 'label': !!python/unicode 'Ameritech AADS'
-    !!python/unicode 'type': !!python/unicode 'NAP Connection'
+    label: Ameritech AADS
+    type: NAP Connection
   '35':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.78306
     Longitude: -96.80667
-    !!python/unicode 'label': !!python/unicode 'Dallas'
+    label: Dallas
   '36':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.42412
     Longitude: -98.49363
-    !!python/unicode 'label': !!python/unicode 'San Antonio'
+    label: San Antonio
   '37':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.44838
     Longitude: -112.07404
-    !!python/unicode 'label': !!python/unicode 'Phoenix'
+    label: Phoenix
   '38':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.71533
     Longitude: -117.15726
-    !!python/unicode 'label': !!python/unicode 'San Diego'
+    label: San Diego
   '39':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 27.94752
     Longitude: -82.45843
-    !!python/unicode 'label': !!python/unicode 'Tampa'
+    label: Tampa
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.58157
     Longitude: -121.4944
-    !!python/unicode 'label': !!python/unicode 'Sacramento'
+    label: Sacramento
   '40':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 25.77427
     Longitude: -80.19366
-    !!python/unicode 'label': !!python/unicode 'Miami'
+    label: Miami
   '41':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.95465
     Longitude: -90.07507
-    !!python/unicode 'label': !!python/unicode 'New Orleans'
+    label: New Orleans
   '42':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.76328
     Longitude: -95.36327
-    !!python/unicode 'label': !!python/unicode 'Houston'
+    label: Houston
   '43':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.89511
     Longitude: -77.03637
-    !!python/unicode 'label': !!python/unicode 'Washington'
+    label: Washington
   '44':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.29038
     Longitude: -76.61219
-    !!python/unicode 'label': !!python/unicode 'Baltimore'
+    label: Baltimore
   '45':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.73915
     Longitude: -104.9847
-    !!python/unicode 'label': !!python/unicode 'Denver'
+    label: Denver
   '46':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.97997
     Longitude: -93.26384
-    !!python/unicode 'label': !!python/unicode 'Minneapolis'
+    label: Minneapolis
   '47':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.85003
     Longitude: -87.65005
-    !!python/unicode 'label': !!python/unicode 'Chicago'
+    label: Chicago
   '48':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.11417
     Longitude: -94.62746
-    !!python/unicode 'label': !!python/unicode 'Kansas City'
+    label: Kansas City
   '49':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
-    !!python/unicode 'label': !!python/unicode 'Atlanta'
+    label: Atlanta
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.33939
     Longitude: -121.89496
-    !!python/unicode 'label': !!python/unicode 'San Jose'
+    label: San Jose
   '50':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.7721
     Longitude: -78.63861
-    !!python/unicode 'label': !!python/unicode 'Raleigh'
+    label: Raleigh
   '51':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.04372
     Longitude: -77.48749
-    !!python/unicode 'label': !!python/unicode 'Ashburn'
+    label: Ashburn
   '52':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.90122
     Longitude: -77.26526
-    !!python/unicode 'label': !!python/unicode 'Vienna'
+    label: Vienna
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 47.60621
     Longitude: -122.33207
-    !!python/unicode 'label': !!python/unicode 'Seattle'
+    label: Seattle
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 45.52345
     Longitude: -122.67621
-    !!python/unicode 'label': !!python/unicode 'Portland'
+    label: Portland
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.36883
     Longitude: -122.03635
-    !!python/unicode 'label': !!python/unicode 'Sunnyvale'
+    label: Sunnyvale
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+    label: Los Angeles

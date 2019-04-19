@@ -53,122 +53,122 @@ edges:
   - '19'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.07176
     Longitude: -70.76255
-    !!python/unicode 'label': !!python/unicode 'Portsmouth'
+    label: Portsmouth
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.19786
     Longitude: -70.87367
-    !!python/unicode 'label': !!python/unicode 'Dover'
+    label: Dover
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.80118
     Longitude: -68.77781
-    !!python/unicode 'label': !!python/unicode 'Bangor'
+    label: Bangor
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.66147
     Longitude: -70.25533
-    !!python/unicode 'label': !!python/unicode 'Portland'
+    label: Portland
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.25646
     Longitude: -70.25617
-    !!python/unicode 'label': !!python/unicode 'Turner'
+    label: Turner
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.40423
     Longitude: -70.79062
-    !!python/unicode 'label': !!python/unicode 'Bethel'
+    label: Bethel
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.21396
     Longitude: -70.54478
-    !!python/unicode 'label': !!python/unicode 'Norway'
+    label: Norway
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.73591
     Longitude: -70.552
-    !!python/unicode 'label': !!python/unicode 'Standish'
+    label: Standish
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.28951
     Longitude: -70.36534
-    !!python/unicode 'label': !!python/unicode 'Buckfield'
+    label: Buckfield
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.31062
     Longitude: -69.77949
-    !!python/unicode 'label': !!python/unicode 'Augusta'
+    label: Augusta
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.10035
     Longitude: -70.21478
-    !!python/unicode 'label': !!python/unicode 'Lewiston'
+    label: Lewiston
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.31062
     Longitude: -69.77949
-    !!python/unicode 'label': !!python/unicode 'Augusta'
+    label: Augusta
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.49258
     Longitude: -70.45338
-    !!python/unicode 'label': !!python/unicode 'Biddeford'
+    label: Biddeford
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.43925
     Longitude: -70.77422
-    !!python/unicode 'label': !!python/unicode 'Sanford'
+    label: Sanford
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.35843
     Longitude: -71.05977
-    !!python/unicode 'label': !!python/unicode 'Boston'
+    label: Boston
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.27926
     Longitude: -71.41617
-    !!python/unicode 'label': !!python/unicode 'Framingham'
+    label: Framingham
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.99564
     Longitude: -71.45479
-    !!python/unicode 'label': !!python/unicode 'Manchester'
+    label: Manchester
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.93369
     Longitude: -72.27814
-    !!python/unicode 'label': !!python/unicode 'Keene'
+    label: Keene
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.26259
     Longitude: -71.80229
-    !!python/unicode 'label': !!python/unicode 'Worcester'
+    label: Worcester
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.10148
     Longitude: -72.58981
-    !!python/unicode 'label': !!python/unicode 'Springfield'
+    label: Springfield

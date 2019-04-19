@@ -133,312 +133,312 @@ edges:
   - '50'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 28.32001
     Longitude: -80.60755
-    !!python/unicode 'label': !!python/unicode 'Cocoa Beach'
+    label: Cocoa Beach
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.21081
     Longitude: -81.02283
-    !!python/unicode 'label': !!python/unicode 'Daytona Beach'
+    label: Daytona Beach
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.80816
     Longitude: -84.1702
-    !!python/unicode 'label': !!python/unicode 'Stone Mt?'
+    label: Stone Mt?
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.16589
     Longitude: -86.78444
-    !!python/unicode 'label': !!python/unicode 'Nashville'
+    label: Nashville
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.96064
     Longitude: -83.92074
-    !!python/unicode 'label': !!python/unicode 'Knoxville'
+    label: Knoxville
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.95465
     Longitude: -90.07507
-    !!python/unicode 'label': !!python/unicode 'New Orleans?'
+    label: New Orleans?
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.22409
     Longitude: -92.01984
-    !!python/unicode 'label': !!python/unicode 'Lafayette'
+    label: Lafayette
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.45075
     Longitude: -91.15455
-    !!python/unicode 'label': !!python/unicode 'Baton Rouge'
+    label: Baton Rouge
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.52515
     Longitude: -93.75018
-    !!python/unicode 'label': !!python/unicode 'Shreveport'
+    label: Shreveport
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.29876
     Longitude: -90.18481
-    !!python/unicode 'label': !!python/unicode 'Jackson'
+    label: Jackson
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.14953
     Longitude: -90.04898
-    !!python/unicode 'label': !!python/unicode 'Memphis'
+    label: Memphis
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.77422
     Longitude: -87.11333
-    !!python/unicode 'label': !!python/unicode 'Owensboro'
+    label: Owensboro
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 26.71534
     Longitude: -80.05337
-    !!python/unicode 'label': !!python/unicode 'West Palm Beach'
+    label: West Palm Beach
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.25424
     Longitude: -85.75941
-    !!python/unicode 'label': !!python/unicode 'Louisville'
+    label: Louisville
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.2098
     Longitude: -84.55883
-    !!python/unicode 'geocode_append': !!python/unicode 'KY'
-    !!python/unicode 'label': !!python/unicode 'Georgetown'
+    geocode_append: KY
+    label: Georgetown
   '22':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 32.590869999999995
     Longitude: -85.4591
-    !!python/unicode 'label': !!python/unicode '?'
+    label: '?'
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.07264
     Longitude: -79.79198
-    !!python/unicode 'label': !!python/unicode 'Greensboro'
+    label: Greensboro
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.46623
     Longitude: -82.51651
-    !!python/unicode 'geocode_append': !!python/unicode 'NC'
-    !!python/unicode 'label': !!python/unicode 'Arden'
+    geocode_append: NC
+    label: Arden
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.22709
     Longitude: -80.84313
-    !!python/unicode 'label': !!python/unicode 'Charlotte'
+    label: Charlotte
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.09986
     Longitude: -80.24422
-    !!python/unicode 'label': !!python/unicode 'Winston'
+    label: Winston
   '27':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.00071
     Longitude: -81.03481
-    !!python/unicode 'label': !!python/unicode 'Columbia'
+    label: Columbia
   '28':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.47097
     Longitude: -81.97484
-    !!python/unicode 'geocode_append': !!python/unicode 'GA'
-    !!python/unicode 'label': !!python/unicode 'Augusta'
+    geocode_append: GA
+    label: Augusta
   '29':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.19543
     Longitude: -79.76256
-    !!python/unicode 'label': !!python/unicode 'Florence'
+    label: Florence
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 27.19755
     Longitude: -80.25283
-    !!python/unicode 'label': !!python/unicode 'Stuart'
+    label: Stuart
   '30':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.77657
     Longitude: -79.93092
-    !!python/unicode 'geocode_append': !!python/unicode 'SC'
-    !!python/unicode 'label': !!python/unicode 'Charleston'
+    geocode_append: SC
+    label: Charleston
   '31':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.95465
     Longitude: -90.07507
-    !!python/unicode 'label': !!python/unicode 'New Orleans'
+    label: New Orleans
   '32':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.27519
     Longitude: -89.78117
-    !!python/unicode 'label': !!python/unicode 'Slidell'
+    label: Slidell
   '33':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.73037
     Longitude: -86.5861
-    !!python/unicode 'label': !!python/unicode 'Huntsville'
+    label: Huntsville
   '34':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.04563
     Longitude: -85.30968
-    !!python/unicode 'label': !!python/unicode 'Chatanooga'
+    label: Chatanooga
   '35':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
-    !!python/unicode 'label': !!python/unicode 'Atlanta'
+    label: Atlanta
   '36':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.96095
     Longitude: -83.37794
-    !!python/unicode 'label': !!python/unicode 'Athens'
+    label: Athens
   '37':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.39603
     Longitude: -88.88531
-    !!python/unicode 'label': !!python/unicode 'Biloxi'
+    label: Biloxi
   '38':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.42131
     Longitude: -87.21691
-    !!python/unicode 'label': !!python/unicode 'Pensacola'
+    label: Pensacola
   '39':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.36681
     Longitude: -86.29997
-    !!python/unicode 'label': !!python/unicode 'Montgomery'
+    label: Montgomery
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.33218
     Longitude: -81.65565
-    !!python/unicode 'label': !!python/unicode 'Jacksonville'
+    label: Jacksonville
   '40':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.52066
     Longitude: -86.80249
-    !!python/unicode 'label': !!python/unicode 'Birmingham'
+    label: Birmingham
   '41':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 26.12231
     Longitude: -80.14338
-    !!python/unicode 'label': !!python/unicode 'Ft Lauderdale'
+    label: Ft Lauderdale
   '42':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 26.35869
     Longitude: -80.0831
-    !!python/unicode 'label': !!python/unicode 'Boca Raton'
+    label: Boca Raton
   '43':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.69436
     Longitude: -88.04305
-    !!python/unicode 'label': !!python/unicode 'Mobile'
+    label: Mobile
   '44':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.85262
     Longitude: -82.39401
-    !!python/unicode 'label': !!python/unicode 'Greenville'
+    label: Greenville
   '45':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.94957
     Longitude: -81.93205
-    !!python/unicode 'label': !!python/unicode 'Spartanburg'
+    label: Spartanburg
   '46':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.80816
     Longitude: -84.1702
-    !!python/unicode 'label': !!python/unicode 'Stone Mt?'
+    label: Stone Mt?
   '47':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.22573
     Longitude: -77.94471
-    !!python/unicode 'label': !!python/unicode 'Wilmington'
+    label: Wilmington
   '48':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 28.53834
     Longitude: -81.37924
-    !!python/unicode 'label': !!python/unicode 'Orlando'
+    label: Orlando
   '49':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 25.77427
     Longitude: -80.19366
-    !!python/unicode 'label': !!python/unicode 'Miami'
+    label: Miami
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.08354
     Longitude: -81.09983
-    !!python/unicode 'label': !!python/unicode 'Savannah'
+    label: Savannah
   '50':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 25.77427
     Longitude: -80.19366
-    !!python/unicode 'label': !!python/unicode 'Miami?'
+    label: Miami?
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.15881
     Longitude: -85.66021
-    !!python/unicode 'label': !!python/unicode 'Panama City'
+    label: Panama City
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.65163
     Longitude: -82.32483
-    !!python/unicode 'label': !!python/unicode 'Gainesville'
+    label: Gainesville
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 31.57851
     Longitude: -84.15574
-    !!python/unicode 'geocode_append': !!python/unicode 'GA'
-    !!python/unicode 'label': !!python/unicode 'Albany'
+    geocode_append: GA
+    label: Albany
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.84069
     Longitude: -83.6324
-    !!python/unicode 'label': !!python/unicode 'Macon'
+    label: Macon

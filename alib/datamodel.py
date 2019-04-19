@@ -353,10 +353,11 @@ class Graph(object):
         self.in_edges = {}
         self.node = {}
         self.edge = {}
-        self.shortest_paths_costs = {}
+        self.shortest_paths_costs = None
         self._shortest_paths_attribute_identifier = "cost"
 
     def add_node(self, node, **kwargs):
+
         self.nodes.add(node)
         self.out_neighbors[node] = []
         self.in_neighbors[node] = []
@@ -365,6 +366,7 @@ class Graph(object):
         self.node[node] = {}
         for key, value in kwargs.items():
             self.node[node][key] = value
+        #print "added node: {}, now there are {} nodes".format(node, len(self.nodes))
 
     def add_edge(self, tail, head, bidirected=False, **kwargs):
         if (tail not in self.nodes) or (head not in self.nodes):
@@ -431,6 +433,8 @@ class Graph(object):
     def initialize_shortest_paths_costs(self):
         # this can only be used if costs are defined as such for each edge
 
+        self.shortest_paths_costs = {}
+
         for edge in self.edges:
             if self._shortest_paths_attribute_identifier not in self.edge[edge]:
                 raise Exception("cost not defined for edge {}".format(edge))
@@ -460,7 +464,9 @@ class Graph(object):
         for u in self.nodes:
             for v in self.nodes:
                 if self.shortest_paths_costs[u][v] is None:
+                    print "node {} cannot reach node {}".format(u, v)
                     return False
+
 
         return True
 

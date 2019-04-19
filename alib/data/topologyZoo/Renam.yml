@@ -9,30 +9,30 @@ edges:
   - '4'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Moldova'
-    !!python/unicode 'Internal': 1
+    Country: Moldova
+    Internal: '1'
     Latitude: 47.00556
     Longitude: 28.8575
-    !!python/unicode 'label': !!python/unicode 'Chisinau'
+    label: Chisinau
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Moldova'
-    !!python/unicode 'Internal': 1
+    Country: Moldova
+    Internal: '1'
     Latitude: 47.76167
     Longitude: 27.92889
-    !!python/unicode 'label': !!python/unicode 'Balti'
+    label: Balti
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Moldova'
-    !!python/unicode 'Internal': 1
+    Country: Moldova
+    Internal: '1'
     Latitude: 45.9075
     Longitude: 28.19444
-    !!python/unicode 'label': !!python/unicode '       Cahul'
+    label: '       Cahul'
   '3':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.00556
     Longitude: 28.8575
-    !!python/unicode 'label': !!python/unicode 'StarNet ISP'
+    label: StarNet ISP
   '4':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.00556
     Longitude: 28.8575
-    !!python/unicode 'label': !!python/unicode 'RoEduNet'
+    label: RoEduNet

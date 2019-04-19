@@ -37,95 +37,95 @@ edges:
   - '15'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 65.68353
     Longitude: -18.0878
-    !!python/unicode 'label': !!python/unicode 'Solborg-Akureyri'
+    label: Solborg-Akureyri
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'Fjarski'
+    label: Fjarski
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'Taeknigarour'
+    label: Taeknigarour
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'Sturlugata'
+    label: Sturlugata
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'Hringbraut'
+    label: Hringbraut
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'Bustaoavegur'
+    label: Bustaoavegur
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 63.41972
     Longitude: -20.2944
-    !!python/unicode 'label': !!python/unicode 'Ofanleiti'
+    label: Ofanleiti
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 66.15134
     Longitude: -18.90512
-    !!python/unicode 'label': !!python/unicode 'Keldhaholt'
+    label: Keldhaholt
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 65.68353
     Longitude: -18.0878
-    !!python/unicode 'label': !!python/unicode 'FSA-Akureyri'
+    label: FSA-Akureyri
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 65.68353
     Longitude: -18.0878
-    !!python/unicode 'label': !!python/unicode 'DST-Akureyri'
+    label: DST-Akureyri
   '4':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'RIX'
+    label: RIX
   '5':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'NORDUnet'
+    label: NORDUnet
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 66.15134
     Longitude: -18.90512
-    !!python/unicode 'label': !!python/unicode 'Hvanneyri'
+    label: Hvanneyri
   '7':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 66.15134
     Longitude: -18.90512
-    !!python/unicode 'label': !!python/unicode 'Bifrost'
+    label: Bifrost
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'Grensas'
+    label: Grensas
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'Skulagata'
+    label: Skulagata

@@ -149,483 +149,483 @@ edges:
   - '68'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.59861
     Longitude: 24.20222
-    !!python/unicode 'label': !!python/unicode 'Iecava'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Iecava
+    type: Large Orange Node
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.55972
     Longitude: 23.77194
-    !!python/unicode 'label': !!python/unicode 'Vircava'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Vircava
+    type: Large Orange Node
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.66363
     Longitude: 22.48807
-    !!python/unicode 'label': !!python/unicode 'Saldus'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Saldus
+    type: Large Orange Node
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.59
     Longitude: 21.13862
-    !!python/unicode 'label': !!python/unicode 'Kapsede'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Kapsede
+    type: Large Orange Node
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.34751
     Longitude: 25.55514
-    !!python/unicode 'label': !!python/unicode 'Viesite'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Viesite
+    type: Large Blue Node
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.60477
     Longitude: 25.25534
-    !!python/unicode 'label': !!python/unicode 'Aizkroukle'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Aizkroukle
+    type: Large Blue Node
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.55253
     Longitude: 26.92449
-    !!python/unicode 'label': !!python/unicode 'Vilani'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Vilani
+    type: Large Blue Node
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.17767
     Longitude: 26.75291
-    !!python/unicode 'label': !!python/unicode 'Gulbene'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Gulbene
+    type: Large Blue Node
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.89752
     Longitude: 25.33155
-    !!python/unicode 'label': !!python/unicode 'Rujiena'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Rujiena
+    type: Large Blue Node
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.75361
     Longitude: 24.35806
-    !!python/unicode 'label': !!python/unicode 'Salagriva'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Salagriva
+    type: Large Blue Node
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.76694
     Longitude: 24.8825
-    !!python/unicode 'label': !!python/unicode 'Aloja'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Aloja
+    type: Large Orange Node
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.86329
     Longitude: 25.05475
-    !!python/unicode 'label': !!python/unicode 'Mazsalaca'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Mazsalaca
+    type: Large Orange Node
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 55.89514
     Longitude: 27.16799
-    !!python/unicode 'label': !!python/unicode 'Kraslava'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Kraslava
+    type: Large Orange Node
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.62574
     Longitude: 25.68535
-    !!python/unicode 'label': !!python/unicode 'Strenci'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Strenci
+    type: Large Orange Node
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.59639
     Longitude: 24.85139
-    !!python/unicode 'label': !!python/unicode 'Pociems'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Pociems
+    type: Large Orange Node
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.51287
     Longitude: 24.71941
-    !!python/unicode 'label': !!python/unicode 'Limbazi'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Limbazi
+    type: Large Orange Node
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.46389
     Longitude: 24.46778
-    !!python/unicode 'label': !!python/unicode 'Liepupe'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Liepupe
+    type: Large Orange Node
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.645
     Longitude: 25.12058
-    !!python/unicode 'label': !!python/unicode 'Skriveri'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Skriveri
+    type: Large Blue Node
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.54108
     Longitude: 25.42751
-    !!python/unicode 'label': !!python/unicode 'Valmiera'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Valmiera
+    type: Large Blue Node
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.5
     Longitude: 27.31667
-    !!python/unicode 'label': !!python/unicode 'Rezekne'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Rezekne
+    type: Large Blue Node
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.12944
     Longitude: 24.27444
-    !!python/unicode 'label': !!python/unicode 'Carnikava'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Carnikava
+    type: Large Blue Node
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.6425
     Longitude: 24.92056
-    !!python/unicode 'label': !!python/unicode 'Jumprava'
-    !!python/unicode 'type': !!python/unicode 'Small Red Node'
+    label: Jumprava
+    type: Small Red Node
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.7451
     Longitude: 24.72439
-    !!python/unicode 'label': !!python/unicode 'Kegums'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Kegums
+    type: Large Blue Node
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.70694
     Longitude: 24.35194
-    !!python/unicode 'label': !!python/unicode 'Baldone'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Baldone
+    type: Large Orange Node
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.946
     Longitude: 24.10589
-    !!python/unicode 'label': !!python/unicode 'Riga'
-    !!python/unicode 'type': !!python/unicode 'GEANT2 PoP'
+    label: Riga
+    type: GEANT2 PoP
   '31':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 55.88333
     Longitude: 26.53333
-    !!python/unicode 'label': !!python/unicode 'Daugapils'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Daugapils
+    type: Large Blue Node
   '32':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.38944
     Longitude: 21.56056
-    !!python/unicode 'label': !!python/unicode 'Ventspits'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Ventspits
+    type: Large Blue Node
   '33':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.53521
     Longitude: 21.16782
-    !!python/unicode 'label': !!python/unicode 'Grobina'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Grobina
+    type: Large Blue Node
   '34':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.51667
     Longitude: 21.01667
-    !!python/unicode 'label': !!python/unicode 'Liepaja'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Liepaja
+    type: Large Blue Node
   '35':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.94111
     Longitude: 24.28972
-    !!python/unicode 'label': !!python/unicode 'Ulbroka'
-    !!python/unicode 'type': !!python/unicode 'Small Red Node'
+    label: Ulbroka
+    type: Small Red Node
   '36':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.78528
     Longitude: 23.93806
-    !!python/unicode 'label': !!python/unicode 'Olaine'
-    !!python/unicode 'type': !!python/unicode 'Small Red Node'
+    label: Olaine
+    type: Small Red Node
   '37':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.72066
     Longitude: 24.80743
-    !!python/unicode 'label': !!python/unicode 'Lielvarde'
-    !!python/unicode 'type': !!python/unicode 'Small Red Node'
+    label: Lielvarde
+    type: Small Red Node
   '38':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.83333
     Longitude: 24.5
-    !!python/unicode 'label': !!python/unicode 'Ikskile'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Ikskile
+    type: Large Blue Node
   '39':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.86014
     Longitude: 24.36544
-    !!python/unicode 'label': !!python/unicode 'Salaspils'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Salaspils
+    type: Large Blue Node
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.45981
     Longitude: 22.90169
-    !!python/unicode 'label': !!python/unicode 'Auce'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Auce
+    type: Large Orange Node
   '40':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.4075
     Longitude: 24.19056
-    !!python/unicode 'label': !!python/unicode 'Bauska'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Bauska
+    type: Large Blue Node
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.49903
     Longitude: 25.85735
-    !!python/unicode 'label': !!python/unicode 'Jekabpils'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Jekabpils
+    type: Large Blue Node
   '42':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.65
     Longitude: 23.71278
-    !!python/unicode 'label': !!python/unicode 'Jelgava'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Jelgava
+    type: Large Blue Node
   '43':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.83991
     Longitude: 23.58902
-    !!python/unicode 'label': !!python/unicode 'Kalnciems'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Kalnciems
+    type: Large Blue Node
   '44':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.82662
     Longitude: 24.23
-    !!python/unicode 'label': !!python/unicode 'Kekava'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Kekava
+    type: Large Blue Node
   '45':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 56.946
     Longitude: 24.10589
-    !!python/unicode 'label': !!python/unicode 'GEANT2'
+    label: GEANT2
   '46':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.68833
     Longitude: 23.5
-    !!python/unicode 'label': !!python/unicode 'Livberze'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Livberze
+    type: Large Blue Node
   '47':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.3224
     Longitude: 24.74301
-    !!python/unicode 'label': !!python/unicode 'Ledurga'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Ledurga
+    type: Large Orange Node
   '48':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.15194
     Longitude: 24.86472
-    !!python/unicode 'label': !!python/unicode 'Sigulda'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Sigulda
+    type: Large Orange Node
   '49':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.968
     Longitude: 23.77038
-    !!python/unicode 'label': !!python/unicode 'Jurmala'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Jurmala
+    type: Large Orange Node
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.7
     Longitude: 22.53333
-    !!python/unicode 'label': !!python/unicode 'Broceni'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Broceni
+    type: Large Orange Node
   '50':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.96694
     Longitude: 23.15528
-    !!python/unicode 'label': !!python/unicode 'Tukums'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Tukums
+    type: Large Orange Node
   '51':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.24562
     Longitude: 22.58137
-    !!python/unicode 'label': !!python/unicode 'Talsi'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Talsi
+    type: Large Orange Node
   '52':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.71667
     Longitude: 21.6
-    !!python/unicode 'label': !!python/unicode 'Aizpute'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Aizpute
+    type: Large Orange Node
   '53':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.18074
     Longitude: 24.70731
-    !!python/unicode 'label': !!python/unicode 'Ragona'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Ragona
+    type: Large Orange Node
   '54':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.09361
     Longitude: 24.54861
-    !!python/unicode 'label': !!python/unicode 'Vangazi'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Vangazi
+    type: Large Orange Node
   '55':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.07583
     Longitude: 24.32139
-    !!python/unicode 'label': !!python/unicode 'Adazi'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Adazi
+    type: Large Orange Node
   '56':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.68639
     Longitude: 23.78778
-    !!python/unicode 'label': !!python/unicode 'Ozolnieki'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Ozolnieki
+    type: Large Orange Node
   '57':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.41588
     Longitude: 23.68335
-    !!python/unicode 'label': !!python/unicode 'Eleja'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Eleja
+    type: Large Blue Node
   '58':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.8162
     Longitude: 24.61401
-    !!python/unicode 'label': !!python/unicode 'Ogre'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Ogre
+    type: Large Orange Node
   '59':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.29444
     Longitude: 26.72459
-    !!python/unicode 'label': !!python/unicode 'Preili'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Preili
+    type: Large Orange Node
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.53722
     Longitude: 23.69639
-    !!python/unicode 'label': !!python/unicode 'Platone'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Platone
+    type: Large Orange Node
   '60':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.35431
     Longitude: 26.17579
-    !!python/unicode 'label': !!python/unicode 'Livani'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Livani
+    type: Large Orange Node
   '61':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.1313
     Longitude: 27.26583
-    !!python/unicode 'label': !!python/unicode 'Balvi'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Balvi
+    type: Large Orange Node
   '62':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.78405
     Longitude: 27.68829
-    !!python/unicode 'label': !!python/unicode 'Karsava'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Karsava
+    type: Large Orange Node
   '63':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.77535
     Longitude: 27.71902
-    !!python/unicode 'label': !!python/unicode 'Malnava'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Malnava
+    type: Large Orange Node
   '64':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.63333
     Longitude: 27.71667
-    !!python/unicode 'label': !!python/unicode 'Pusmucova'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Pusmucova
+    type: Large Orange Node
   '65':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.56667
     Longitude: 27.66667
-    !!python/unicode 'label': !!python/unicode 'Zvigzdene'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Zvigzdene
+    type: Large Orange Node
   '66':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.55
     Longitude: 27.71667
-    !!python/unicode 'label': !!python/unicode 'Ludza'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Ludza
+    type: Large Orange Node
   '67':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.55
     Longitude: 27.88333
-    !!python/unicode 'label': !!python/unicode 'Cibla'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Cibla
+    type: Large Orange Node
   '68':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.38616
     Longitude: 28.12165
-    !!python/unicode 'label': !!python/unicode 'Zilupe'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Zilupe
+    type: Large Orange Node
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.625
     Longitude: 23.27861
-    !!python/unicode 'label': !!python/unicode 'Dobele'
-    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+    label: Dobele
+    type: Large Orange Node
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.15861
     Longitude: 24.70278
-    !!python/unicode 'label': !!python/unicode 'Krimulda'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Krimulda
+    type: Large Blue Node
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 57.60861
     Longitude: 24.60722
-    !!python/unicode 'label': !!python/unicode 'Vijkene'
-    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+    label: Vijkene
+    type: Large Blue Node

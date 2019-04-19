@@ -79,212 +79,212 @@ edges:
   - '34'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.95465
     Longitude: -90.07507
-    !!python/unicode 'label': !!python/unicode 'New Orleans'
+    label: New Orleans
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.79576
     Longitude: -90.82287
-    !!python/unicode 'label': !!python/unicode 'Thi''bodaux'
+    label: Thi'bodaux
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.42412
     Longitude: -98.49363
-    !!python/unicode 'label': !!python/unicode 'San Antonio'
+    label: San Antonio
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.26715
     Longitude: -97.74306
-    !!python/unicode 'label': !!python/unicode 'Austin'
+    label: Austin
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.62798
     Longitude: -96.33441
-    !!python/unicode 'label': !!python/unicode 'College Station'
+    label: College Station
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 31.54933
     Longitude: -97.14667
-    !!python/unicode 'label': !!python/unicode 'Waco'
+    label: Waco
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 31.76072
     Longitude: -93.08627
-    !!python/unicode 'label': !!python/unicode 'Natchitoches'
+    label: Natchitoches
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.76328
     Longitude: -95.36327
-    !!python/unicode 'label': !!python/unicode 'Houston'
+    label: Houston
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.05799
     Longitude: -94.79548
-    !!python/unicode 'label': !!python/unicode 'Liberty'
+    label: Liberty
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.53353
     Longitude: -92.08151
-    !!python/unicode 'label': !!python/unicode 'Opelousas'
+    label: Opelousas
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.84436
     Longitude: -92.2579
-    !!python/unicode 'label': !!python/unicode 'St Landry'
+    label: St Landry
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 31.04658
     Longitude: -93.20544
-    !!python/unicode 'label': !!python/unicode 'Fort Polk'
+    label: Fort Polk
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.47547
     Longitude: -90.10091
-    !!python/unicode 'label': !!python/unicode 'Covington'
+    label: Covington
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.01488
     Longitude: -93.34212
-    !!python/unicode 'label': !!python/unicode 'Coushatta'
+    label: Coushatta
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.03577
     Longitude: -94.42436
-    !!python/unicode 'label': !!python/unicode 'Nome'
+    label: Nome
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.08605
     Longitude: -94.10185
-    !!python/unicode 'label': !!python/unicode 'Beaumont'
+    label: Beaumont
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.21309
     Longitude: -93.2044
-    !!python/unicode 'label': !!python/unicode 'Lake Charles'
+    label: Lake Charles
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.84631
     Longitude: -93.28905
-    !!python/unicode 'label': !!python/unicode 'Deridder'
+    label: Deridder
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.29876
     Longitude: -90.18481
-    !!python/unicode 'label': !!python/unicode 'Jackson'
+    label: Jackson
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.27519
     Longitude: -89.78117
-    !!python/unicode 'label': !!python/unicode 'Slidell'
+    label: Slidell
   '27':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.78306
     Longitude: -96.80667
-    !!python/unicode 'label': !!python/unicode 'Dallas'
+    label: Dallas
   '28':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.35126
     Longitude: -95.30106
-    !!python/unicode 'label': !!python/unicode 'Tyler'
+    label: Tyler
   '29':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.5007
     Longitude: -94.74049
-    !!python/unicode 'label': !!python/unicode 'Longview'
+    label: Longview
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.36742
     Longitude: -89.09282
-    !!python/unicode 'label': !!python/unicode 'Gulfport'
+    label: Gulfport
   '30':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.52515
     Longitude: -93.75018
-    !!python/unicode 'label': !!python/unicode 'Shreveport'
+    label: Shreveport
   '31':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.51599
     Longitude: -93.73212
-    !!python/unicode 'label': !!python/unicode 'Bossier City'
+    label: Bossier City
   '32':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.61543
     Longitude: -93.28684
-    !!python/unicode 'label': !!python/unicode 'Minden'
+    label: Minden
   '33':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.52321
     Longitude: -92.63793
-    !!python/unicode 'label': !!python/unicode 'Ruston'
+    label: Ruston
   '34':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.50931
     Longitude: -92.1193
-    !!python/unicode 'label': !!python/unicode 'Monroe'
+    label: Monroe
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.45075
     Longitude: -91.15455
-    !!python/unicode 'label': !!python/unicode 'Baton Rouge'
+    label: Baton Rouge
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.22409
     Longitude: -92.01984
-    !!python/unicode 'label': !!python/unicode 'Lafayette'
+    label: Lafayette
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.69937
     Longitude: -91.20677
-    !!python/unicode 'label': !!python/unicode 'Morgan City'
+    label: Morgan City
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.50436
     Longitude: -90.4612
-    !!python/unicode 'label': !!python/unicode 'Hammond'
+    label: Hammond
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 31.31129
     Longitude: -92.44514
-    !!python/unicode 'label': !!python/unicode 'Alexandria'
+    label: Alexandria
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 31.53406
     Longitude: -92.94766
-    !!python/unicode 'label': !!python/unicode 'Derry'
+    label: Derry

@@ -65,172 +65,172 @@ edges:
   - '29'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 18.51957
     Longitude: 73.85535
-    !!python/unicode 'label': !!python/unicode 'Pune'
+    label: Pune
   '1':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 22.71792
     Longitude: 75.8333
-    !!python/unicode 'label': !!python/unicode 'Indore'
+    label: Indore
   '10':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 22.56972
     Longitude: 88.36972
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 20.23333
     Longitude: 85.83333
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 12.97623
     Longitude: 77.60329
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '13':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 18.51957
     Longitude: 73.85535
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '14':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 19.01441
     Longitude: 72.84794
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '15':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 28.63576
     Longitude: 77.22445
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '16':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 13.08784
     Longitude: 80.27847
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '17':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 17.37528
     Longitude: 78.47444
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '18':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 8.48333
     Longitude: 76.91667
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '19':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 12.97623
     Longitude: 77.60329
-    !!python/unicode 'label': !!python/unicode 'None'
+    label: None
   '2':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 8.48333
     Longitude: 76.91667
-    !!python/unicode 'label': !!python/unicode 'Trivandrum'
+    label: Trivandrum
   '20':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 13.08784
     Longitude: 80.27847
-    !!python/unicode 'label': !!python/unicode 'Chennai'
+    label: Chennai
   '21':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 12.97623
     Longitude: 77.60329
-    !!python/unicode 'label': !!python/unicode 'Bengaluru'
+    label: Bengaluru
   '22':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 28.63576
     Longitude: 77.22445
-    !!python/unicode 'label': !!python/unicode 'Delhi'
+    label: Delhi
   '23':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 26.18617
     Longitude: 91.75095
-    !!python/unicode 'label': !!python/unicode 'Guwahati'
+    label: Guwahati
   '24':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 29.45
     Longitude: 75.68333
-    !!python/unicode 'label': !!python/unicode 'Gorakhpur'
+    label: Gorakhpur
   '25':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 26.46667
     Longitude: 80.35
-    !!python/unicode 'label': !!python/unicode 'Kanpur'
+    label: Kanpur
   '26':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 25.45
     Longitude: 81.85
-    !!python/unicode 'label': !!python/unicode 'Allahabad'
+    label: Allahabad
   '27':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 22.56972
     Longitude: 88.36972
-    !!python/unicode 'label': !!python/unicode 'Kalkota'
+    label: Kalkota
   '28':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 20.23333
     Longitude: 85.83333
-    !!python/unicode 'label': !!python/unicode 'Bhubaneswar'
+    label: Bhubaneswar
   '29':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 17.37528
     Longitude: 78.47444
-    !!python/unicode 'label': !!python/unicode 'Hyderabad'
+    label: Hyderabad
   '3':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 19.01441
     Longitude: 72.84794
-    !!python/unicode 'label': !!python/unicode 'Mumbai'
+    label: Mumbai
   '4':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 19.01441
     Longitude: 72.84794
-    !!python/unicode 'label': !!python/unicode 'None'
-    !!python/unicode 'type': !!python/unicode '4 Computers'
+    label: None
+    type: 4 Computers
   '5':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 12.97623
     Longitude: 77.60329
-    !!python/unicode 'label': !!python/unicode 'None'
-    !!python/unicode 'type': !!python/unicode '4 Computers'
+    label: None
+    type: 4 Computers
   '6':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 23.03333
     Longitude: 72.61667
-    !!python/unicode 'label': !!python/unicode 'Ahmedabad'
+    label: Ahmedabad
   '7':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 26.91667
     Longitude: 75.81667
-    !!python/unicode 'label': !!python/unicode 'Jaipur'
+    label: Jaipur
   '8':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 26.46667
     Longitude: 80.35
-    !!python/unicode 'label': !!python/unicode 'None'
-    !!python/unicode 'type': !!python/unicode '4 Computers'
+    label: None
+    type: 4 Computers
   '9':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 28.63576
     Longitude: 77.22445
-    !!python/unicode 'label': !!python/unicode 'None'
-    !!python/unicode 'type': !!python/unicode '4 Computers'
+    label: None
+    type: 4 Computers

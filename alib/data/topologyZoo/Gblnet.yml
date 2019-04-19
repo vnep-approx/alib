@@ -15,50 +15,50 @@ edges:
   - '7'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.07897
     Longitude: -0.14008
-    !!python/unicode 'label': !!python/unicode 'New York'
+    label: New York
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'London'
+    label: London
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Sweden'
-    !!python/unicode 'Internal': 1
+    Country: Sweden
+    Internal: '1'
     Latitude: 59.33258
     Longitude: 18.0649
-    !!python/unicode 'label': !!python/unicode 'Stockholm'
+    label: Stockholm
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Russia'
-    !!python/unicode 'Internal': 1
+    Country: Russia
+    Internal: '1'
     Latitude: 59.89444
     Longitude: 30.26417
-    !!python/unicode 'label': !!python/unicode 'St Petersburg'
+    label: St Petersburg
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Russia'
-    !!python/unicode 'Internal': 1
+    Country: Russia
+    Internal: '1'
     Latitude: 55.75222
     Longitude: 37.61556
-    !!python/unicode 'label': !!python/unicode 'Moscow'
+    label: Moscow
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 52.37403
     Longitude: 4.88969
-    !!python/unicode 'label': !!python/unicode 'Amsterdam'
+    label: Amsterdam
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'Frankfurt'
+    label: Frankfurt
   '7':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
-    !!python/unicode 'label': !!python/unicode 'Paris'
+    label: Paris

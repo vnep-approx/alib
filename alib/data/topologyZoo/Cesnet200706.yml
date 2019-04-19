@@ -103,260 +103,260 @@ edges:
   - '43'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.20923
     Longitude: 15.83277
-    !!python/unicode 'label': !!python/unicode 'Hradec Kralove'
+    label: Hradec Kralove
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.90436
     Longitude: 16.44413
-    !!python/unicode 'label': !!python/unicode 'Ceska Trebova'
+    label: Ceska Trebova
   '10':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.83465
     Longitude: 18.28204
-    !!python/unicode 'label': !!python/unicode 'PIONIER'
+    label: PIONIER
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.19522
     Longitude: 16.60796
-    !!python/unicode 'label': !!python/unicode 'ACONET'
+    label: ACONET
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.96382
     Longitude: 14.072
-    !!python/unicode 'label': !!python/unicode 'Beroun'
+    label: Beroun
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.96459
     Longitude: 12.70118
-    !!python/unicode 'label': !!python/unicode 'Marlanske Lazne'
+    label: Marlanske Lazne
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.50301
     Longitude: 13.63617
-    !!python/unicode 'label': !!python/unicode 'Most'
+    label: Most
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.43172
     Longitude: 15.81402
-    !!python/unicode 'label': !!python/unicode 'Dvur Kralove'
+    label: Dvur Kralove
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.08967
     Longitude: 17.70385
-    !!python/unicode 'label': !!python/unicode 'Krnov'
+    label: Krnov
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.01018
     Longitude: 17.12253
-    !!python/unicode 'label': !!python/unicode 'Kyjov'
+    label: Kyjov
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.3961
     Longitude: 15.59124
-    !!python/unicode 'label': !!python/unicode 'Jihlava'
+    label: Jihlava
   '19':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.19522
     Longitude: 16.60796
-    !!python/unicode 'label': !!python/unicode 'SANET'
+    label: SANET
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.14404
     Longitude: 15.00301
-    !!python/unicode 'label': !!python/unicode 'Jindrichuv Hradec'
+    label: Jindrichuv Hradec
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.72431
     Longitude: 15.17108
-    !!python/unicode 'label': !!python/unicode 'Jablonec n N'
+    label: Jablonec n N
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.86809
     Longitude: 16.31298
-    !!python/unicode 'label': !!python/unicode 'Litomysl'
+    label: Litomysl
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.06975
     Longitude: 17.45969
-    !!python/unicode 'label': !!python/unicode 'Uherske Hradiste'
+    label: Uherske Hradiste
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.47188
     Longitude: 17.11184
-    !!python/unicode 'label': !!python/unicode 'Prostejov'
+    label: Prostejov
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.18418
     Longitude: 15.45275
-    !!python/unicode 'label': !!python/unicode 'Telc'
+    label: Telc
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.99403
     Longitude: 14.85922
-    !!python/unicode 'label': !!python/unicode 'Kostelec n C.L'
+    label: Kostelec n C.L
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.00364
     Longitude: 14.77065
-    !!python/unicode 'label': !!python/unicode 'Trebon'
+    label: Trebon
   '27':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 50.08804
     Longitude: 14.42076
-    !!python/unicode 'label': !!python/unicode 'GEANT'
+    label: GEANT
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.93866
     Longitude: 17.90257
-    !!python/unicode 'label': !!python/unicode 'Opava'
+    label: Opava
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.84452
     Longitude: 18.49166
-    !!python/unicode 'label': !!python/unicode 'Karvina'
+    label: Karvina
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.04075
     Longitude: 15.77659
-    !!python/unicode 'label': !!python/unicode 'Pardubice'
+    label: Pardubice
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.94839
     Longitude: 15.26816
-    !!python/unicode 'label': !!python/unicode 'Kutna Hora'
+    label: Kutna Hora
   '31':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.17734
     Longitude: 14.35733
-    !!python/unicode 'label': !!python/unicode 'Rez'
+    label: Rez
   '32':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.41441
     Longitude: 14.6578
-    !!python/unicode 'label': !!python/unicode 'Tabor'
+    label: Tabor
   '33':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.3088
     Longitude: 14.1475
-    !!python/unicode 'label': !!python/unicode 'Pisek'
+    label: Pisek
   '34':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 50.08804
     Longitude: 14.42076
-    !!python/unicode 'label': !!python/unicode 'NIX'
+    label: NIX
   '35':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 50.08804
     Longitude: 14.42076
-    !!python/unicode 'label': !!python/unicode 'Internet'
+    label: Internet
   '36':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.07963
     Longitude: 12.37392
-    !!python/unicode 'label': !!python/unicode 'Cheb'
+    label: Cheb
   '37':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.74747
     Longitude: 13.37759
-    !!python/unicode 'label': !!python/unicode 'Plzen'
+    label: Plzen
   '38':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.78215
     Longitude: 14.21478
-    !!python/unicode 'label': !!python/unicode 'Decin'
+    label: Decin
   '39':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.6607
     Longitude: 14.03227
-    !!python/unicode 'label': !!python/unicode 'Usti nad Labem'
+    label: Usti nad Labem
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.27747
     Longitude: 16.99897
-    !!python/unicode 'label': !!python/unicode 'Vyskov'
+    label: Vyskov
   '40':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.08804
     Longitude: 14.42076
-    !!python/unicode 'label': !!python/unicode 'Praha'
+    label: Praha
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.76711
     Longitude: 15.05619
-    !!python/unicode 'label': !!python/unicode 'Liberec'
+    label: Liberec
   '42':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.14242
     Longitude: 15.11881
-    !!python/unicode 'label': !!python/unicode 'Podebrady'
+    label: Podebrady
   '43':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 48.97447
     Longitude: 14.47434
-    !!python/unicode 'label': !!python/unicode 'Ceske Budejovice'
+    label: Ceske Budejovice
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.21667
     Longitude: 17.66667
-    !!python/unicode 'label': !!python/unicode 'Zlin'
+    label: Zlin
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.59552
     Longitude: 17.25175
-    !!python/unicode 'label': !!python/unicode 'Olomouc'
+    label: Olomouc
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.19522
     Longitude: 16.60796
-    !!python/unicode 'label': !!python/unicode 'Brno'
+    label: Brno
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 48.75897
     Longitude: 16.88203
-    !!python/unicode 'label': !!python/unicode 'Breclav,Lednice'
+    label: Breclav,Lednice
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 49.83465
     Longitude: 18.28204
-    !!python/unicode 'label': !!python/unicode 'Ostrava'
+    label: Ostrava

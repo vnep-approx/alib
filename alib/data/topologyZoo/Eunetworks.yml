@@ -40,85 +40,85 @@ edges:
 nodes:
   '0':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 53.55
     Longitude: 10.0
     label: Hamburg
   '10':
     Country: Netherlands
-    Internal: 1
+    Internal: '1'
     Latitude: 51.9225
     Longitude: 4.47917
     label: Rotterdam
   '11':
     Country: Netherlands
-    Internal: 1
+    Internal: '1'
     Latitude: 52.07667
     Longitude: 4.29861
     label: The Hague
   '12':
     Country: Netherlands
-    Internal: 1
+    Internal: '1'
     Latitude: 52.37403
     Longitude: 4.88969
     label: Amsterdam
   '13':
     Country: Netherlands
-    Internal: 1
+    Internal: '1'
     Latitude: 52.09083
     Longitude: 5.12222
     label: Utrecht
   '14':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 51.22172
     Longitude: 6.77616
     label: Dusseldorf
   '2':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 48.78232
     Longitude: 9.17702
     label: Stuttgart
   '3':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 48.13743
     Longitude: 11.57549
     label: Munich
   '4':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 52.52437
     Longitude: 13.41053
     label: Berlin
   '5':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 50.93333
     Longitude: 6.95
     label: Cologne
   '6':
     Country: Germany
-    Internal: 1
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
     label: Frankfurt
   '7':
     Country: Ireland
-    Internal: 1
+    Internal: '1'
     Latitude: 53.34399
     Longitude: -6.26719
     label: Dublin
   '8':
     Country: United Kingdom
-    Internal: 1
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
     label: London
   '9':
     Country: France
-    Internal: 1
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
     label: Paris

@@ -83,197 +83,197 @@ edges:
   - '32'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.75169
     Longitude: -92.41491
-    !!python/unicode 'label': !!python/unicode 'Bloomfield'
+    label: Bloomfield
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.25861
     Longitude: -95.93779
-    !!python/unicode 'label': !!python/unicode 'Omaha'
+    label: Omaha
   '10':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 43.06377333333333
     Longitude: -96.08169333333335
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '11':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 42.712939999999996
     Longitude: -95.23759
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '12':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 42.433794999999996
     Longitude: -93.474245
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '13':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 43.15357
     Longitude: -93.20104
-    !!python/unicode 'label': !!python/unicode 'Minneapolis'
+    label: Minneapolis
   '14':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 41.25861
     Longitude: -95.93779
-    !!python/unicode 'label': !!python/unicode 'Kansas City'
+    label: Kansas City
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.50056
     Longitude: -90.66457
-    !!python/unicode 'label': !!python/unicode 'Dubuque'
+    label: Dubuque
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.52364
     Longitude: -90.57764
-    !!python/unicode 'label': !!python/unicode 'Davenport'
+    label: Davenport
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.66113
     Longitude: -91.53017
-    !!python/unicode 'label': !!python/unicode 'Iowa City'
+    label: Iowa City
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.00833
     Longitude: -91.64407
-    !!python/unicode 'label': !!python/unicode 'Cedar Rapids'
+    label: Cedar Rapids
   '19':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 41.52364
     Longitude: -90.57764
-    !!python/unicode 'label': !!python/unicode 'Chicago'
+    label: Chicago
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.2964
     Longitude: -92.64436
-    !!python/unicode 'label': !!python/unicode 'Oskaloosa'
+    label: Oskaloosa
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.96364
     Longitude: -91.55794
-    !!python/unicode 'label': !!python/unicode 'Mt. Pleasant'
+    label: Mt. Pleasant
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.00863
     Longitude: -91.96267
-    !!python/unicode 'label': !!python/unicode 'Fairfield'
+    label: Fairfield
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.42447
     Longitude: -91.04321
-    !!python/unicode 'label': !!python/unicode 'Muscatine'
+    label: Muscatine
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.03471
     Longitude: -93.61994
-    !!python/unicode 'label': !!python/unicode 'Ames'
+    label: Ames
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.04943
     Longitude: -92.90798
-    !!python/unicode 'label': !!python/unicode 'Marshalltown'
+    label: Marshalltown
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.14136
     Longitude: -95.14444
-    !!python/unicode 'label': !!python/unicode 'Spencer'
+    label: Spencer
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.54997
     Longitude: -96.70033
-    !!python/unicode 'label': !!python/unicode 'Sioux Falls'
+    label: Sioux Falls
   '27':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.49747
     Longitude: -94.16802
-    !!python/unicode 'label': !!python/unicode 'Ft Dodge'
+    label: Ft Dodge
   '28':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.15357
     Longitude: -93.20104
-    !!python/unicode 'label': !!python/unicode 'Mason City'
+    label: Mason City
   '29':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.49276
     Longitude: -92.34296
-    !!python/unicode 'label': !!python/unicode 'Waterloo'
+    label: Waterloo
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.02001
     Longitude: -92.4113
-    !!python/unicode 'label': !!python/unicode 'Ottumwa'
+    label: Ottumwa
   '30':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.74305
     Longitude: -92.72241
-    !!python/unicode 'label': !!python/unicode 'Grinnell'
+    label: Grinnell
   '31':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.69971
     Longitude: -93.04798
-    !!python/unicode 'label': !!python/unicode 'Newton'
+    label: Newton
   '32':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.60054
     Longitude: -93.60911
-    !!python/unicode 'label': !!python/unicode 'Des Moines'
+    label: Des Moines
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.0586
     Longitude: -94.36135
-    !!python/unicode 'label': !!python/unicode 'Creston'
+    label: Creston
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.03389
     Longitude: -93.7655
-    !!python/unicode 'label': !!python/unicode 'Osceola'
+    label: Osceola
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.98166
     Longitude: -95.10415
-    !!python/unicode 'label': !!python/unicode 'Stanton'
+    label: Stanton
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.65304
     Longitude: -95.32555
-    !!python/unicode 'label': !!python/unicode 'Harlan'
+    label: Harlan
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.74194
     Longitude: -95.03831
-    !!python/unicode 'label': !!python/unicode 'Clarinda'
+    label: Clarinda
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.49999
     Longitude: -96.40031
-    !!python/unicode 'label': !!python/unicode 'Sioux City'
+    label: Sioux City

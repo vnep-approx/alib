@@ -31,111 +31,111 @@ edges:
   - '13'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 42.1537
     Longitude: 42.33517
-    !!python/unicode 'label': !!python/unicode 'Cisco 3640 Samtredia'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 3640 Samtredia
+    type: Router
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 41.64159
     Longitude: 41.63593
-    !!python/unicode 'label': !!python/unicode 'Cisco 2621 Batumi'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 2621 Batumi
+    type: Router
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 41.54949
     Longitude: 44.99323
-    !!python/unicode 'label': !!python/unicode 'Rustavi CO14'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Rustavi CO14
+    type: Router
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 41.91978
     Longitude: 45.47315
-    !!python/unicode 'label': !!python/unicode 'Cisco 3640 Telavi'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 3640 Telavi
+    type: Router
   '12':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 41.54949
     Longitude: 44.99323
-    !!python/unicode 'label': !!python/unicode 'Corecess DX6524'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Corecess DX6524
+    type: Router
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 41.54949
     Longitude: 44.99323
-    !!python/unicode 'label': !!python/unicode 'Rustavi CO15'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Rustavi CO15
+    type: Router
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 41.98422
     Longitude: 44.11578
-    !!python/unicode 'label': !!python/unicode 'Cisco 3640 Gori'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 3640 Gori
+    type: Router
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 42.24961
     Longitude: 42.69974
-    !!python/unicode 'label': !!python/unicode 'Cisco 3640 Kutaisi C07'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 3640 Kutaisi C07
+    type: Router
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 42.24961
     Longitude: 42.69974
-    !!python/unicode 'label': !!python/unicode 'Cisco 2511 Kutaisi'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 2511 Kutaisi
+    type: Router
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 42.24961
     Longitude: 42.69974
-    !!python/unicode 'label': !!python/unicode 'Cisco 3640 Kutaisi C04'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 3640 Kutaisi C04
+    type: Router
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 42.14616
     Longitude: 41.67197
-    !!python/unicode 'label': !!python/unicode 'Cisco 3640 Poti'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 3640 Poti
+    type: Router
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 42.5088
     Longitude: 41.87088
-    !!python/unicode 'label': !!python/unicode 'Cisco 3640 Zugididi'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 3640 Zugididi
+    type: Router
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 41.99414
     Longitude: 43.59994
-    !!python/unicode 'label': !!python/unicode 'Cisco 3640 Khashuri'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Cisco 3640 Khashuri
+    type: Router
   '7':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 42.24961
     Longitude: 42.69974
-    !!python/unicode 'label': !!python/unicode 'Corecess DX6524'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Corecess DX6524
+    type: Router
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Georgia'
-    !!python/unicode 'Internal': 1
+    Country: Georgia
+    Internal: '1'
     Latitude: 41.69411
     Longitude: 44.83368
-    !!python/unicode 'label': !!python/unicode 'Tbilisi GRENA Network'
-    !!python/unicode 'type': !!python/unicode 'MAN'
+    label: Tbilisi GRENA Network
+    type: MAN
   '9':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 41.54949
     Longitude: 44.99323
-    !!python/unicode 'label': !!python/unicode 'Corecess DX6524'
-    !!python/unicode 'type': !!python/unicode 'Router'
+    label: Corecess DX6524
+    type: Router

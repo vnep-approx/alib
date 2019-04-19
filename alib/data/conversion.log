@@ -4137,9 +4137,7 @@ Successfully estimated latitude for node 9 based on neighbors
 16 {u'Latitude': 55.67594, u'Country': u'Denmark', u'Internal': 1, u'Longitude': 12.56553, u'label': u'Copenhagen'}
 17 {u'Latitude': 53.55, u'Country': u'Germany', u'Internal': 1, u'Longitude': 10.0, u'label': u'Hamburg'}
 Node 6 not contained in graph; edge (6, 15) not considered. This should be due to the graph not being connected.
-Node 15 not contained in graph; edge (6, 15) not considered. This should be due to the graph not being connected.
 Node 13 not contained in graph; edge (13, 15) not considered. This should be due to the graph not being connected.
-Node 15 not contained in graph; edge (13, 15) not considered. This should be due to the graph not being connected.
 writing topologyZoo/Nordu2010.yml
 file topologyZoo_orig/Nordu2010.gml sucessfully converted to yml file topologyZoo/Nordu2010.yml! 
 
@@ -10380,19 +10378,12 @@ Graph is not connected, considering only the largest connected component with 30
 34 {u'Latitude': 55.75222, u'Country': u'Russia', u'Internal': 1, u'Longitude': 37.61556, u'label': u'Moscow'}
 36 {u'Latitude': 51.33962, u'Country': u'Germany', u'Internal': 1, u'Longitude': 12.37129, u'label': u'Leipzig'}
 Node 2 not contained in graph; edge (2, 29) not considered. This should be due to the graph not being connected.
-Node 29 not contained in graph; edge (2, 29) not considered. This should be due to the graph not being connected.
 Node 2 not contained in graph; edge (2, 30) not considered. This should be due to the graph not being connected.
-Node 30 not contained in graph; edge (2, 30) not considered. This should be due to the graph not being connected.
 Node 29 not contained in graph; edge (29, 37) not considered. This should be due to the graph not being connected.
-Node 37 not contained in graph; edge (29, 37) not considered. This should be due to the graph not being connected.
 Node 29 not contained in graph; edge (29, 30) not considered. This should be due to the graph not being connected.
-Node 30 not contained in graph; edge (29, 30) not considered. This should be due to the graph not being connected.
 Node 33 not contained in graph; edge (33, 35) not considered. This should be due to the graph not being connected.
-Node 35 not contained in graph; edge (33, 35) not considered. This should be due to the graph not being connected.
 Node 33 not contained in graph; edge (33, 38) not considered. This should be due to the graph not being connected.
-Node 38 not contained in graph; edge (33, 38) not considered. This should be due to the graph not being connected.
 Node 37 not contained in graph; edge (37, 38) not considered. This should be due to the graph not being connected.
-Node 38 not contained in graph; edge (37, 38) not considered. This should be due to the graph not being connected.
 writing topologyZoo/DeutscheTelekom.yml
 file topologyZoo_orig/DeutscheTelekom.gml sucessfully converted to yml file topologyZoo/DeutscheTelekom.yml! 
 

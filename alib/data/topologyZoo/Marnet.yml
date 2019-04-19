@@ -55,121 +55,119 @@ edges:
   - '17'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 41.74583
     Longitude: 22.19583
-    !!python/unicode 'label': !!python/unicode 'F. of Mining and Geology Stip'
+    label: F. of Mining and Geology Stip
   '1':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'ONnet NEOTEL SONET'
+    label: ONnet NEOTEL SONET
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'National and Univ Library'
+    label: National and Univ Library
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'I. of Earthquake Engineering'
+    label: I. of Earthquake Engineering
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'I. of National History'
+    label: I. of National History
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'I. of Macedonian Literature'
+    label: I. of Macedonian Literature
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 41.03111
     Longitude: 21.34028
-    !!python/unicode 'label': !!python/unicode 'St Clement of Ohrid University in
-      Bitola'
+    label: St Clement of Ohrid University in Bitola
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'Several Ministries of the Government'
+    label: Several Ministries of the Government
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'Campus Arch and Civil Eng'
+    label: Campus Arch and Civil Eng
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'CampusTechnical'
+    label: CampusTechnical
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'Campus Medicine'
+    label: Campus Medicine
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'CampusBiotech. Sciences'
+    label: CampusBiotech. Sciences
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'NOC and CampusSocial Sciences'
+    label: NOC and CampusSocial Sciences
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'I. of Economy'
+    label: I. of Economy
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'NationalBroadcastingcompany Comm.
-      Tower'
+    label: NationalBroadcastingcompany Comm. Tower
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'I of Political and Juridical Res'
+    label: I of Political and Juridical Res
   '6':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'GEANT SEEREN'
+    label: GEANT SEEREN
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'Campus Natural Sciences and Mathematics'
+    label: Campus Natural Sciences and Mathematics
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Macedonia'
-    !!python/unicode 'Internal': 1
+    Country: Macedonia
+    Internal: '1'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'F. of Pedagogy'
+    label: F. of Pedagogy
   '9':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 42.0
     Longitude: 21.43333
-    !!python/unicode 'label': !!python/unicode 'MOL'
+    label: MOL

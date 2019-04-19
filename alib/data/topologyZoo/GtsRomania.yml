@@ -49,145 +49,145 @@ edges:
   - '20'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.31667
     Longitude: 23.8
-    !!python/unicode 'label': !!python/unicode 'Craiova'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Craiova
+    type: Small Node
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.95
     Longitude: 26.01667
-    !!python/unicode 'label': !!python/unicode 'Plaiesti'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Plaiesti
+    type: Small Node
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.54245
     Longitude: 24.55747
-    !!python/unicode 'label': !!python/unicode 'Targu Mures'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Targu Mures
+    type: Small Node
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.74944
     Longitude: 21.22722
-    !!python/unicode 'label': !!python/unicode 'Timisoara'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Timisoara
+    type: Small Node
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.8
     Longitude: 24.15
-    !!python/unicode 'label': !!python/unicode 'Sibiu'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Sibiu
+    type: Small Node
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 47.16667
     Longitude: 27.6
-    !!python/unicode 'label': !!python/unicode 'Iasi'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Iasi
+    type: Small Node
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.91667
     Longitude: 26.33333
-    !!python/unicode 'label': !!python/unicode 'Piatra Neamt'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Piatra Neamt
+    type: Small Node
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.56667
     Longitude: 26.9
-    !!python/unicode 'label': !!python/unicode 'Bacau'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Bacau
+    type: Small Node
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.88333
     Longitude: 22.9
-    !!python/unicode 'label': !!python/unicode 'Deva'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Deva
+    type: Small Node
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.76667
     Longitude: 23.6
-    !!python/unicode 'label': !!python/unicode 'Cluj'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Cluj
+    type: Small Node
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 47.06667
     Longitude: 21.93333
-    !!python/unicode 'label': !!python/unicode 'Oradea'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Oradea
+    type: Small Node
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 47.11667
     Longitude: 21.81667
-    !!python/unicode 'label': !!python/unicode 'Bors'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Bors
+    type: Small Node
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.64861
     Longitude: 25.60613
-    !!python/unicode 'label': !!python/unicode 'Brasov'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Brasov
+    type: Small Node
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 46.18333
     Longitude: 21.31667
-    !!python/unicode 'label': !!python/unicode 'Arad'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Arad
+    type: Small Node
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.93333
     Longitude: 25.45
-    !!python/unicode 'label': !!python/unicode 'Targoviste'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Targoviste
+    type: Small Node
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.18333
     Longitude: 28.65
-    !!python/unicode 'label': !!python/unicode 'Constanta'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Constanta
+    type: Small Node
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.43225
     Longitude: 26.10626
-    !!python/unicode 'label': !!python/unicode 'Bucarest'
-    !!python/unicode 'type': !!python/unicode 'Large Node'
+    label: Bucarest
+    type: Large Node
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.45
     Longitude: 28.05
-    !!python/unicode 'label': !!python/unicode 'Galati'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Galati
+    type: Small Node
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 45.7
     Longitude: 27.18333
-    !!python/unicode 'label': !!python/unicode 'Focsani'
-    !!python/unicode 'type': !!python/unicode 'Small Node'
+    label: Focsani
+    type: Small Node
   '8':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 47.11667
     Longitude: 21.81667
-    !!python/unicode 'label': !!python/unicode 'Budapest'
+    label: Budapest
   '9':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 46.18333
     Longitude: 21.31667
-    !!python/unicode 'label': !!python/unicode 'Budapest'
+    label: Budapest

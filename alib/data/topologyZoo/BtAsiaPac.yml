@@ -63,118 +63,118 @@ edges:
   - '17'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.21462
     Longitude: 106.84513
-    !!python/unicode 'label': !!python/unicode 'Jakarta'
+    label: Jakarta
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -31.93333
     Longitude: 115.83333
-    !!python/unicode 'label': !!python/unicode 'Perth'
+    label: Perth
   '10':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 28.63576
     Longitude: 77.22445
-    !!python/unicode 'label': !!python/unicode 'New Delhi'
+    label: New Delhi
   '11':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 19.01441
     Longitude: 72.84794
-    !!python/unicode 'label': !!python/unicode 'Mumbai'
+    label: Mumbai
   '12':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 37.56826
     Longitude: 126.97783
-    !!python/unicode 'label': !!python/unicode 'Seoul'
+    label: Seoul
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'Tokyo'
+    label: Tokyo
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Taiwan'
-    !!python/unicode 'Internal': 1
+    Country: Taiwan
+    Internal: '1'
     Latitude: 25.04776
     Longitude: 121.53185
-    !!python/unicode 'label': !!python/unicode 'Taipei'
+    label: Taipei
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Hong Kong'
-    !!python/unicode 'Internal': 1
+    Country: Hong Kong
+    Internal: '1'
     Latitude: 22.28552
     Longitude: 114.15769
-    !!python/unicode 'label': !!python/unicode 'Hong Kong'
+    label: Hong Kong
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Philippines'
-    !!python/unicode 'Internal': 1
+    Country: Philippines
+    Internal: '1'
     Latitude: 14.6042
     Longitude: 120.9822
-    !!python/unicode 'label': !!python/unicode 'Manila'
+    label: Manila
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Thailand'
-    !!python/unicode 'Internal': 1
+    Country: Thailand
+    Internal: '1'
     Latitude: 13.75
     Longitude: 100.51667
-    !!python/unicode 'label': !!python/unicode 'Bangkok'
+    label: Bangkok
   '18':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 13.08784
     Longitude: 80.27847
-    !!python/unicode 'label': !!python/unicode 'Chenai'
+    label: Chenai
   '19':
-    !!python/unicode 'Country': !!python/unicode 'India'
-    !!python/unicode 'Internal': 1
+    Country: India
+    Internal: '1'
     Latitude: 19.01441
     Longitude: 72.84794
-    !!python/unicode 'label': !!python/unicode 'Mumbai'
+    label: Mumbai
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Singapore'
-    !!python/unicode 'Internal': 1
+    Country: Singapore
+    Internal: '1'
     Latitude: 1.28967
     Longitude: 103.85007
-    !!python/unicode 'label': !!python/unicode 'Singapore'
+    label: Singapore
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Malaysia'
-    !!python/unicode 'Internal': 1
+    Country: Malaysia
+    Internal: '1'
     Latitude: 3.1412
     Longitude: 101.68653
-    !!python/unicode 'label': !!python/unicode 'Kuala Lumpur'
+    label: Kuala Lumpur
   '4':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 8.010850000000001
     Longitude: 134.98210333333336
-    !!python/unicode 'label': !!python/unicode 'San Jose'
+    label: San Jose
   '5':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: -3.2085299999999988
     Longitude: 144.928245
-    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+    label: Los Angeles
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Australia'
-    !!python/unicode 'Internal': 1
+    Country: Australia
+    Internal: '1'
     Latitude: -33.86785
     Longitude: 151.20732
-    !!python/unicode 'label': !!python/unicode 'Sydney'
+    label: Sydney
   '7':
-    !!python/unicode 'Country': !!python/unicode 'New Zealand'
-    !!python/unicode 'Internal': 1
+    Country: New Zealand
+    Internal: '1'
     Latitude: -36.86667
     Longitude: 174.76667
-    !!python/unicode 'label': !!python/unicode 'Auckland'
+    label: Auckland
   '8':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 14.196533333333335
     Longitude: 96.95190000000001
-    !!python/unicode 'label': !!python/unicode 'London'
+    label: London
   '9':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 22.28552
     Longitude: 114.15769
-    !!python/unicode 'label': !!python/unicode 'Palo Alto'
+    label: Palo Alto

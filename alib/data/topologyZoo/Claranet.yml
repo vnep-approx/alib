@@ -37,92 +37,92 @@ edges:
   - '14'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Portugal'
-    !!python/unicode 'Internal': 1
+    Country: Portugal
+    Internal: '1'
     Latitude: 37.01667
     Longitude: -7.93333
-    !!python/unicode 'label': !!python/unicode 'Faro'
+    label: Faro
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Spain'
-    !!python/unicode 'Internal': 1
+    Country: Spain
+    Internal: '1'
     Latitude: 40.4165
     Longitude: -3.70256
-    !!python/unicode 'label': !!python/unicode 'Madrid'
+    label: Madrid
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 50.11667
     Longitude: 8.68333
-    !!python/unicode 'label': !!python/unicode 'Frankfurt'
+    label: Frankfurt
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 48.13743
     Longitude: 11.57549
-    !!python/unicode 'label': !!python/unicode 'Munich'
+    label: Munich
   '12':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
-    !!python/unicode 'label': !!python/unicode 'Paris'
+    label: Paris
   '13':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.08333
     Longitude: -1.68333
-    !!python/unicode 'label': !!python/unicode 'Rennes'
+    label: Rennes
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'London'
+    label: London
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Portugal'
-    !!python/unicode 'Internal': 1
+    Country: Portugal
+    Internal: '1'
     Latitude: 41.15
     Longitude: -8.61667
-    !!python/unicode 'label': !!python/unicode 'Porto'
+    label: Porto
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Portugal'
-    !!python/unicode 'Internal': 1
+    Country: Portugal
+    Internal: '1'
     Latitude: 38.71667
     Longitude: -9.13333
-    !!python/unicode 'label': !!python/unicode 'Lisbon'
+    label: Lisbon
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Spain'
-    !!python/unicode 'Internal': 1
+    Country: Spain
+    Internal: '1'
     Latitude: 41.38879
     Longitude: 2.15899
-    !!python/unicode 'label': !!python/unicode 'Barcelona'
+    label: Barcelona
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.48095
     Longitude: -2.23743
-    !!python/unicode 'label': !!python/unicode 'Manchester'
+    label: Manchester
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 53.07897
     Longitude: -0.14008
-    !!python/unicode 'label': !!python/unicode 'New York'
+    label: New York
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 52.37403
     Longitude: 4.88969
-    !!python/unicode 'label': !!python/unicode 'Amsterdam'
+    label: Amsterdam
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 51.44083
     Longitude: 5.47778
-    !!python/unicode 'label': !!python/unicode 'Eindhoven'
+    label: Eindhoven
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.52437
     Longitude: 13.41053
-    !!python/unicode 'label': !!python/unicode 'Berlin'
+    label: Berlin

@@ -28,7 +28,7 @@ edges:
 nodes:
   '0':
     Country: Ireland
-    Internal: 1
+    Internal: '1'
     Latitude: 53.27194
     Longitude: -9.04889
     label: Galway
@@ -36,7 +36,7 @@ nodes:
     y: '104.0'
   '1':
     Country: Ireland
-    Internal: 1
+    Internal: '1'
     Latitude: 52.66472
     Longitude: -8.62306
     label: Limerick
@@ -44,7 +44,7 @@ nodes:
     y: '149.0'
   '2':
     Country: Ireland
-    Internal: 1
+    Internal: '1'
     Latitude: 51.89861
     Longitude: -8.49583
     label: Cork
@@ -52,7 +52,7 @@ nodes:
     y: '273.0'
   '3':
     Country: Ireland
-    Internal: 1
+    Internal: '1'
     Latitude: 53.34399
     Longitude: -6.26719
     label: CityWest
@@ -60,7 +60,7 @@ nodes:
     y: '85.0'
   '4':
     Country: Ireland
-    Internal: 1
+    Internal: '1'
     Latitude: 53.34399
     Longitude: -6.26719
     label: DCU (Dublin City University
@@ -68,7 +68,7 @@ nodes:
     y: '114.0'
   '5':
     Country: Ireland
-    Internal: 1
+    Internal: '1'
     Latitude: 53.34399
     Longitude: -6.26719
     label: TDC (Trinity College Dublin)
@@ -76,7 +76,7 @@ nodes:
     y: '270.0'
   '6':
     Country: Ireland
-    Internal: 1
+    Internal: '1'
     Latitude: 53.34399
     Longitude: -6.26719
     label: Kilcarbery

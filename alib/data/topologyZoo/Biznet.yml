@@ -67,175 +67,175 @@ edges:
   - '28'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.72639
     Longitude: 109.00944
-    !!python/unicode 'label': !!python/unicode 'Cilacap'
+    label: Cilacap
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.42139
     Longitude: 109.23444
-    !!python/unicode 'label': !!python/unicode 'Purwokerto'
+    label: Purwokerto
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -9.59806
     Longitude: 123.77028
-    !!python/unicode 'label': !!python/unicode 'Nusa Dua'
+    label: Nusa Dua
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.24917
     Longitude: 112.75083
-    !!python/unicode 'label': !!python/unicode 'Surabaya'
+    label: Surabaya
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.81667
     Longitude: 112.01667
-    !!python/unicode 'label': !!python/unicode 'Kediri'
+    label: Kediri
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.6298
     Longitude: 111.5239
-    !!python/unicode 'label': !!python/unicode 'Madium'
+    label: Madium
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.9
     Longitude: 112.05
-    !!python/unicode 'label': !!python/unicode 'Tuban'
+    label: Tuban
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -8.2215
     Longitude: 114.3646
-    !!python/unicode 'label': !!python/unicode 'Banyunwangi'
+    label: Banyunwangi
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -8.16604
     Longitude: 113.70317
-    !!python/unicode 'label': !!python/unicode 'Jember'
+    label: Jember
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.7543
     Longitude: 113.2159
-    !!python/unicode 'label': !!python/unicode 'Probolinggo'
+    label: Probolinggo
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.9797
     Longitude: 112.6304
-    !!python/unicode 'label': !!python/unicode 'Malang'
+    label: Malang
   '19':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: -6.06667
     Longitude: 105.88333
-    !!python/unicode 'label': !!python/unicode 'Bakauhuni'
+    label: Bakauhuni
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.91806
     Longitude: 106.92667
-    !!python/unicode 'label': !!python/unicode 'Sukabumi'
+    label: Sukabumi
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.76667
     Longitude: 105.85
-    !!python/unicode 'label': !!python/unicode 'Cibaliung'
+    label: Cibaliung
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.8694
     Longitude: 109.1402
-    !!python/unicode 'label': !!python/unicode 'Tegal'
+    label: Tegal
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.7063
     Longitude: 108.557
-    !!python/unicode 'label': !!python/unicode 'Cirebon'
+    label: Cirebon
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.90389
     Longitude: 107.61861
-    !!python/unicode 'label': !!python/unicode 'Bandung'
+    label: Bandung
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.30333
     Longitude: 107.30556
-    !!python/unicode 'label': !!python/unicode 'Karawang'
+    label: Karawang
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.21462
     Longitude: 106.84513
-    !!python/unicode 'label': !!python/unicode 'Jakarta'
+    label: Jakarta
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.59444
     Longitude: 106.78917
-    !!python/unicode 'label': !!python/unicode 'Bogor'
+    label: Bogor
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.1149
     Longitude: 106.1502
-    !!python/unicode 'label': !!python/unicode 'Serang'
+    label: Serang
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.06667
     Longitude: 105.88333
-    !!python/unicode 'label': !!python/unicode 'Anyer'
+    label: Anyer
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.33333
     Longitude: 108.2
-    !!python/unicode 'label': !!python/unicode 'Tasikmalaya'
+    label: Tasikmalaya
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.8886
     Longitude: 109.6753
-    !!python/unicode 'label': !!python/unicode 'Pekalongan'
+    label: Pekalongan
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.9932
     Longitude: 110.4203
-    !!python/unicode 'label': !!python/unicode 'Semarang'
+    label: Semarang
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.47056
     Longitude: 110.21778
-    !!python/unicode 'label': !!python/unicode 'Magelang'
+    label: Magelang
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.78278
     Longitude: 110.36083
-    !!python/unicode 'label': !!python/unicode 'Yogyakarta'
+    label: Yogyakarta
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -6.8048
     Longitude: 110.8405
-    !!python/unicode 'label': !!python/unicode 'Kudus'
+    label: Kudus
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Indonesia'
-    !!python/unicode 'Internal': 1
+    Country: Indonesia
+    Internal: '1'
     Latitude: -7.55611
     Longitude: 110.83167
-    !!python/unicode 'label': !!python/unicode 'Surakarta'
+    label: Surakarta

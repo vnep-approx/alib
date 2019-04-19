@@ -153,493 +153,493 @@ edges:
   - '71'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 33.60639
     Longitude: 130.41806
-    !!python/unicode 'label': !!python/unicode 'Fukuoka DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Fukuoka DC
+    type: Core Node
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 33.23806
     Longitude: 131.6125
-    !!python/unicode 'label': !!python/unicode 'Oita U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Oita U
+    type: Edge Node
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 33.83916
     Longitude: 132.76574
-    !!python/unicode 'label': !!python/unicode 'Matsuyama DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Matsuyama DC
+    type: Core Node
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.34028
     Longitude: 134.04333
-    !!python/unicode 'label': !!python/unicode 'Kagawa U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kagawa U
+    type: Edge Node
   '12':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.18147
     Longitude: 136.90641
-    !!python/unicode 'label': !!python/unicode 'Kamioka Obs, ICRR, U Tokyo'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kamioka Obs, ICRR, U Tokyo
+    type: Edge Node
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.60472
     Longitude: 140.12333
-    !!python/unicode 'label': !!python/unicode 'Chiba U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Chiba U
+    type: Edge Node
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.16667
     Longitude: 133.56667
-    !!python/unicode 'label': !!python/unicode 'Shinshu U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Shinshu U
+    type: Edge Node
   '15':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.18147
     Longitude: 136.90641
-    !!python/unicode 'label': !!python/unicode 'NIFS'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: NIFS
+    type: Edge Node
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 36.59444
     Longitude: 136.62556
-    !!python/unicode 'label': !!python/unicode 'Kanazawa U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kanazawa U
+    type: Edge Node
   '17':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 36.59444
     Longitude: 136.62556
-    !!python/unicode 'label': !!python/unicode 'JAIST'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: JAIST
+    type: Edge Node
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.80559
     Longitude: 135.77841
-    !!python/unicode 'label': !!python/unicode 'Doshisha U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Doshisha U
+    type: Edge Node
   '19':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.02107
     Longitude: 135.75385
-    !!python/unicode 'label': !!python/unicode 'ICR, Kyoto U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: ICR, Kyoto U
+    type: Edge Node
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 33.0
     Longitude: 131.0
-    !!python/unicode 'label': !!python/unicode 'Kyushu U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kyushu U
+    type: Edge Node
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.18147
     Longitude: 136.90641
-    !!python/unicode 'label': !!python/unicode 'Nagoya DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Nagoya DC
+    type: Core Node
   '21':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.18147
     Longitude: 136.90641
-    !!python/unicode 'label': !!python/unicode 'NINS-Okazaki'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: NINS-Okazaki
+    type: Edge Node
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.97694
     Longitude: 138.38306
-    !!python/unicode 'label': !!python/unicode 'Shizuoka U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Shizuoka U
+    type: Edge Node
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.18147
     Longitude: 136.90641
-    !!python/unicode 'label': !!python/unicode 'Nagoya U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Nagoya U
+    type: Edge Node
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 36.59444
     Longitude: 136.62556
-    !!python/unicode 'label': !!python/unicode 'Kanazawa DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Kanazawa DC
+    type: Core Node
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 36.69528
     Longitude: 137.21139
-    !!python/unicode 'label': !!python/unicode 'Toyama U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Toyama U
+    type: Edge Node
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.66389
     Longitude: 138.56833
-    !!python/unicode 'label': !!python/unicode 'Yamanashi U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Yamanashi U
+    type: Edge Node
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.06583
     Longitude: 134.55944
-    !!python/unicode 'label': !!python/unicode 'U Tokushima'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: U Tokushima
+    type: Edge Node
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'Tokyo DC3'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Tokyo DC3
+    type: Core Node
   '29':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'NII'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: NII
+    type: Edge Node
   '3':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 33.60639
     Longitude: 130.41806
-    !!python/unicode 'label': !!python/unicode 'Kyushu IT'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kyushu IT
+    type: Edge Node
   '30':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'NII-CHiba'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: NII-CHiba
+    type: Edge Node
   '31':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'GSIST, U Tokyo'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: GSIST, U Tokyo
+    type: Edge Node
   '32':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'U Electro-Communications'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: U Electro-Communications
+    type: Edge Node
   '33':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'RIKEN'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: RIKEN
+    type: Edge Node
   '34':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'Tokyo DC1'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Tokyo DC1
+    type: Core Node
   '35':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'Tokyo DC2'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Tokyo DC2
+    type: Core Node
   '36':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'JAXA-ISAS'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: JAXA-ISAS
+    type: Edge Node
   '37':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'Yokohama National U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Yokohama National U
+    type: Edge Node
   '38':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.62522
     Longitude: 139.42416
-    !!python/unicode 'label': !!python/unicode 'Keio U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Keio U
+    type: Edge Node
   '39':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'Tokyo IT'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Tokyo IT
+    type: Edge Node
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.39627
     Longitude: 132.45937
-    !!python/unicode 'label': !!python/unicode 'Hiroshima U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Hiroshima U
+    type: Edge Node
   '40':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 37.90222
     Longitude: 139.02361
-    !!python/unicode 'label': !!python/unicode 'Niigata U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Niigata U
+    type: Edge Node
   '41':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 36.06443
     Longitude: 136.22257
-    !!python/unicode 'label': !!python/unicode 'Fukui U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Fukui U
+    type: Edge Node
   '42':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 36.2
     Longitude: 140.1
-    !!python/unicode 'label': !!python/unicode 'KEK'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: KEK
+    type: Edge Node
   '43':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 36.2
     Longitude: 140.1
-    !!python/unicode 'label': !!python/unicode 'JAEA'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: JAEA
+    type: Edge Node
   '44':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 36.2
     Longitude: 140.1
-    !!python/unicode 'label': !!python/unicode 'Tsukuba DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Tsukuba DC
+    type: Core Node
   '45':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 36.2
     Longitude: 140.1
-    !!python/unicode 'label': !!python/unicode 'U Tsukuba'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: U Tsukuba
+    type: Edge Node
   '46':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 36.39111
     Longitude: 139.06083
-    !!python/unicode 'label': !!python/unicode 'Gunma U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Gunma U
+    type: Edge Node
   '47':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'ISM'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: ISM
+    type: Edge Node
   '48':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'U Tokyo'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: U Tokyo
+    type: Edge Node
   '49':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.02107
     Longitude: 135.75385
-    !!python/unicode 'label': !!python/unicode 'Kyoto DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Kyoto DC
+    type: Core Node
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.39627
     Longitude: 132.45937
-    !!python/unicode 'label': !!python/unicode 'Hiroshima DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Hiroshima DC
+    type: Core Node
   '50':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.02107
     Longitude: 135.75385
-    !!python/unicode 'label': !!python/unicode 'Kyoto U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kyoto U
+    type: Edge Node
   '51':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 38.3
     Longitude: 139.55
-    !!python/unicode 'label': !!python/unicode 'Waseda U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Waseda U
+    type: Edge Node
   '52':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.27339
     Longitude: 136.5065
-    !!python/unicode 'label': !!python/unicode 'Kansai U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kansai U
+    type: Edge Node
   '53':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.69374
     Longitude: 135.50218
-    !!python/unicode 'label': !!python/unicode 'Osaka U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Osaka U
+    type: Edge Node
   '54':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.6913
     Longitude: 135.183
-    !!python/unicode 'label': !!python/unicode 'Kobe U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kobe U
+    type: Edge Node
   '55':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'JAMSTEC'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: JAMSTEC
+    type: Edge Node
   '56':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 34.69374
     Longitude: 135.50218
-    !!python/unicode 'label': !!python/unicode 'JASRI'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: JASRI
+    type: Edge Node
   '57':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.5
     Longitude: 134.23333
-    !!python/unicode 'label': !!python/unicode 'Tottori U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Tottori U
+    type: Edge Node
   '58':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.66167
     Longitude: 133.935
-    !!python/unicode 'label': !!python/unicode 'Okayama U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Okayama U
+    type: Edge Node
   '59':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.69374
     Longitude: 135.50218
-    !!python/unicode 'label': !!python/unicode 'Osaka DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Osaka DC
+    type: Core Node
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 33.83916
     Longitude: 132.76574
-    !!python/unicode 'label': !!python/unicode 'Ehime U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Ehime U
+    type: Edge Node
   '60':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'NAOJ'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: NAOJ
+    type: Edge Node
   '61':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.90807
     Longitude: 139.65657
-    !!python/unicode 'label': !!python/unicode 'Saitama U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Saitama U
+    type: Edge Node
   '62':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'JAXA-IAT'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: JAXA-IAT
+    type: Edge Node
   '63':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'Tokyo U Ag and Tech'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Tokyo U Ag and Tech
+    type: Edge Node
   '64':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 32.74472
     Longitude: 129.87361
-    !!python/unicode 'label': !!python/unicode 'Nagasaki U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Nagasaki U
+    type: Edge Node
   '65':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 33.60639
     Longitude: 130.41806
-    !!python/unicode 'label': !!python/unicode 'Kurnamoto U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kurnamoto U
+    type: Edge Node
   '66':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 43.06417
     Longitude: 141.34694
-    !!python/unicode 'label': !!python/unicode 'Sapporo DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Sapporo DC
+    type: Core Node
   '67':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 43.06417
     Longitude: 141.34694
-    !!python/unicode 'label': !!python/unicode 'Hokkaido U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Hokkaido U
+    type: Edge Node
   '68':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 43.06417
     Longitude: 141.34694
-    !!python/unicode 'label': !!python/unicode 'Kitami IT'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kitami IT
+    type: Edge Node
   '69':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 40.59306
     Longitude: 140.4725
-    !!python/unicode 'label': !!python/unicode 'Hirosaki U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Hirosaki U
+    type: Edge Node
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.18583
     Longitude: 131.47139
-    !!python/unicode 'label': !!python/unicode 'Yamaguchi U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Yamaguchi U
+    type: Edge Node
   '70':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 38.26889
     Longitude: 140.87194
-    !!python/unicode 'label': !!python/unicode 'Sendai DC'
-    !!python/unicode 'type': !!python/unicode 'Core Node'
+    label: Sendai DC
+    type: Core Node
   '71':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 32.76667
     Longitude: 131.36667
-    !!python/unicode 'label': !!python/unicode 'Tohoku U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Tohoku U
+    type: Edge Node
   '72':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 33.60639
     Longitude: 130.41806
-    !!python/unicode 'label': !!python/unicode 'U of the Ryukyus'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: U of the Ryukyus
+    type: Edge Node
   '73':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 31.56018
     Longitude: 130.55814
-    !!python/unicode 'label': !!python/unicode 'Kagoshima U'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: Kagoshima U
+    type: Edge Node
   '8':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'IMS, U Tokyo'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: IMS, U Tokyo
+    type: Edge Node
   '9':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 35.61488
     Longitude: 139.5813
-    !!python/unicode 'label': !!python/unicode 'ISSP, U Tokyo'
-    !!python/unicode 'type': !!python/unicode 'Edge Node'
+    label: ISSP, U Tokyo
+    type: Edge Node

@@ -33,92 +33,92 @@ edges:
   - '14'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.0389
     Longitude: -87.90647
-    !!python/unicode 'label': !!python/unicode 'Milwaukee'
+    label: Milwaukee
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.27113
     Longitude: -89.094
-    !!python/unicode 'label': !!python/unicode 'Rockford'
+    label: Rockford
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.51916
     Longitude: -88.01983
-    !!python/unicode 'label': !!python/unicode 'Green Bay'
+    label: Green Bay
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.26193
     Longitude: -88.41538
-    !!python/unicode 'label': !!python/unicode 'Appleton'
+    label: Appleton
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.02471
     Longitude: -88.54261
-    !!python/unicode 'label': !!python/unicode 'Oshkosh'
+    label: Oshkosh
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.775
     Longitude: -88.43883
-    !!python/unicode 'label': !!python/unicode 'Fon Du Lac'
+    label: Fon Du Lac
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.45777
     Longitude: -88.83733
-    !!python/unicode 'label': !!python/unicode 'Beaver Dam'
+    label: Beaver Dam
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.68279
     Longitude: -89.01872
-    !!python/unicode 'label': !!python/unicode 'Janesville'
+    label: Janesville
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.01168
     Longitude: -88.23148
-    !!python/unicode 'label': !!python/unicode 'Waukesha'
+    label: Waukesha
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.58613
     Longitude: -87.8248
-    !!python/unicode 'label': !!python/unicode 'Chicago'
+    label: Chicago
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.07305
     Longitude: -89.40123
-    !!python/unicode 'label': !!python/unicode 'Madison'
+    label: Madison
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.92247
     Longitude: -90.27152
-    !!python/unicode 'label': !!python/unicode 'Camp Douglas'
+    label: Camp Douglas
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.97997
     Longitude: -93.26384
-    !!python/unicode 'label': !!python/unicode 'Minneaopolis'
+    label: Minneaopolis
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.81135
     Longitude: -91.49849
-    !!python/unicode 'label': !!python/unicode 'Eau Claire'
+    label: Eau Claire
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.95914
     Longitude: -89.63012
-    !!python/unicode 'label': !!python/unicode 'Wausau'
+    label: Wausau

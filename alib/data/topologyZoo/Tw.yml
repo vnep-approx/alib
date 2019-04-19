@@ -238,427 +238,427 @@ edges:
 nodes:
   '0':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.71533
     Longitude: -117.15726
     label: San Diego
   '1':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.78779
     Longitude: -117.85311
     label: Orange County
   '10':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 37.80437
     Longitude: -122.2708
     label: Oakland
   '11':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 38.58157
     Longitude: -121.4944
     label: Sacramento
   '12':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 43.15478
     Longitude: -77.61556
     label: Rochester
   '13':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 42.09869
     Longitude: -75.91797
     label: Binghamton
   '14':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.75895
     Longitude: -84.19161
     label: Dayton
   '15':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.96118
     Longitude: -82.99879
     label: Columbus
   '16':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.52066
     Longitude: -86.80249
     label: Birmingham
   '17':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.14953
     Longitude: -90.04898
     label: Memphis
   '18':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 30.22409
     Longitude: -92.01984
     label: Lafayette
   '19':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 30.45075
     Longitude: -91.15455
     label: Baton Rouge
   '2':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 31.75872
     Longitude: -106.48693
     label: El Paso
   '20':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 29.95465
     Longitude: -90.07507
     label: New Orleans
   '21':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.29876
     Longitude: -90.18481
     label: Jackson
   '22':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 30.69436
     Longitude: -88.04305
     label: Mobile
   '23':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.36681
     Longitude: -86.29997
     label: Montgomery
   '24':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.96118
     Longitude: -82.99879
     label: Columbus
   '25':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
     label: Atlanta
   '26':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 27.94752
     Longitude: -82.45843
     label: Tampa
   '27':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 38.89511
     Longitude: -77.03637
     label: Washington DC
   '28':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.7721
     Longitude: -78.63861
     label: Raleigh
   '29':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 38.62727
     Longitude: -90.19789
     label: St Louis
   '3':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 21.30694
     Longitude: -157.85833
     label: Honolulu
   '30':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.52515
     Longitude: -93.75018
     label: Shreveport
   '31':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 28.53834
     Longitude: -81.37924
     label: Orlando
   '32':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.73915
     Longitude: -104.9847
     label: Denver
   '33':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.05266
     Longitude: -78.87836
     label: Fayatteville
   '34':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 42.65258
     Longitude: -73.75623
     label: Albany
   '35':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 37.98869
     Longitude: -84.47772
     label: Lexington
   '36':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.162
     Longitude: -84.45689
     label: Cincinnati
   '37':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.00071
     Longitude: -81.03481
     label: Columnia
   '38':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.16589
     Longitude: -86.78444
     label: Nashville
   '4':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.28275
     Longitude: -120.65962
     label: San Louis Obispo
   '40':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.85262
     Longitude: -82.39401
     label: Greenville
   '41':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.22709
     Longitude: -80.84313
     label: Charlotte
   '42':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.07264
     Longitude: -79.79198
     label: Greensboro
   '43':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.11417
     Longitude: -94.62746
     label: Kansas City
   '44':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.74648
     Longitude: -92.28959
     label: Little Rock
   '45':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 44.97997
     Longitude: -93.26384
     label: Minneapolis
   '46':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.15398
     Longitude: -95.99278
     label: Tulsa
   '47':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 41.85003
     Longitude: -87.65005
     label: Chicago
   '48':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 43.0389
     Longitude: -87.90647
     label: Milwauke
   '49':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 38.25424
     Longitude: -85.75941
     label: Louisville
   '5':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 37.77493
     Longitude: -122.41942
     label: San Francisco
   '51':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 30.21309
     Longitude: -93.2044
     label: Lake Charles
   '53':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 30.33218
     Longitude: -81.65565
     label: Jacksonville
   '54':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.72541
     Longitude: -97.32085
     label: Fort Worth
   '55':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.17497
     Longitude: -115.13722
     label: Las Vegas
   '56':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.37329
     Longitude: -119.01871
     label: Bakersfield
   '57':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 36.74773
     Longitude: -119.77237
     label: Fresno
   '58':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 29.76328
     Longitude: -95.36327
     label: Houston
   '59':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 29.42412
     Longitude: -98.49363
     label: San Antonio
   '6':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
     label: Los Angeles
   '60':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 30.26715
     Longitude: -97.74306
     label: Austin
   '61':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.78306
     Longitude: -96.80667
     label: Dallas
   '62':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 25.77427
     Longitude: -80.19366
     label: Miami
   '63':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.76838
     Longitude: -86.15804
     label: Indianapolis
   '64':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 26.12231
     Longitude: -80.14338
     label: Fort Lauderdale
   '66':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 33.44838
     Longitude: -112.07404
     label: Phoenix
   '67':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 32.22174
     Longitude: -110.92648
     label: Tucson
   '68':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 43.6135
     Longitude: -116.20345
     label: Boise
   '69':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 47.65878
     Longitude: -117.42605
     label: Spokane
   '7':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 34.42083
     Longitude: -119.69819
     label: Santa Barbara
   '70':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 47.60621
     Longitude: -122.33207
     label: Seattle
   '71':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 45.52345
     Longitude: -122.67621
     label: Portland
   '72':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 40.71427
     Longitude: -74.00597
     label: New York
   '73':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 38.83388
     Longitude: -104.82136
     label: Colorado Springs
   '75':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 35.08449
     Longitude: -106.65114
     label: Albuquerque
   '8':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 40.72816
     Longitude: -74.07764
     label: New Jersey
   '9':
     Country: United States
-    Internal: 1
+    Internal: '1'
     Latitude: 39.29038
     Longitude: -76.61219
     label: Baltimore

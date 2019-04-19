@@ -105,208 +105,208 @@ edges:
   - '33'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Netherlands'
-    !!python/unicode 'Internal': 1
+    Country: Netherlands
+    Internal: '1'
     Latitude: 52.37403
     Longitude: 4.88969
-    !!python/unicode 'label': !!python/unicode 'NL'
+    label: NL
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Belgium'
-    !!python/unicode 'Internal': 1
+    Country: Belgium
+    Internal: '1'
     Latitude: 50.85045
     Longitude: 4.34878
-    !!python/unicode 'label': !!python/unicode 'BE'
+    label: BE
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Greece'
-    !!python/unicode 'Internal': 1
+    Country: Greece
+    Internal: '1'
     Latitude: 38.24444
     Longitude: 21.73444
-    !!python/unicode 'label': !!python/unicode 'GR'
+    label: GR
   '11':
-    !!python/unicode 'Country': !!python/unicode 'Cyprus'
-    !!python/unicode 'Internal': 1
+    Country: Cyprus
+    Internal: '1'
     Latitude: 35.16667
     Longitude: 33.36667
-    !!python/unicode 'label': !!python/unicode 'CY'
+    label: CY
   '12':
-    !!python/unicode 'Country': !!python/unicode 'Israel'
-    !!python/unicode 'Internal': 1
+    Country: Israel
+    Internal: '1'
     Latitude: 31.5
     Longitude: 34.75
-    !!python/unicode 'geocode_country': !!python/unicode 'Israel'
-    !!python/unicode 'label': !!python/unicode 'IL'
+    geocode_country: Israel
+    label: IL
   '13':
-    !!python/unicode 'Country': !!python/unicode 'Malta'
-    !!python/unicode 'Internal': 1
+    Country: Malta
+    Internal: '1'
     Latitude: 35.90917
     Longitude: 14.42556
-    !!python/unicode 'label': !!python/unicode 'MT'
+    label: MT
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Turkey'
-    !!python/unicode 'Internal': 1
+    Country: Turkey
+    Internal: '1'
     Latitude: 39.05901
     Longitude: 34.91155
-    !!python/unicode 'geocode_country': !!python/unicode 'Turkey'
-    !!python/unicode 'label': !!python/unicode 'TR'
+    geocode_country: Turkey
+    label: TR
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Romania'
-    !!python/unicode 'Internal': 1
+    Country: Romania
+    Internal: '1'
     Latitude: 44.43225
     Longitude: 26.10626
-    !!python/unicode 'label': !!python/unicode 'RO'
+    label: RO
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Hungary'
-    !!python/unicode 'Internal': 1
+    Country: Hungary
+    Internal: '1'
     Latitude: 47.49801
     Longitude: 19.03991
-    !!python/unicode 'label': !!python/unicode 'HU'
+    label: HU
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Slovakia'
-    !!python/unicode 'Internal': 1
+    Country: Slovakia
+    Internal: '1'
     Latitude: 48.14816
     Longitude: 17.10674
-    !!python/unicode 'label': !!python/unicode 'SK'
+    label: SK
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Portugal'
-    !!python/unicode 'Internal': 1
+    Country: Portugal
+    Internal: '1'
     Latitude: 38.71667
     Longitude: -9.13333
-    !!python/unicode 'label': !!python/unicode 'PT'
+    label: PT
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Spain'
-    !!python/unicode 'Internal': 1
+    Country: Spain
+    Internal: '1'
     Latitude: 40.4165
     Longitude: -3.70256
-    !!python/unicode 'label': !!python/unicode 'ES'
+    label: ES
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Denmark'
-    !!python/unicode 'Internal': 1
+    Country: Denmark
+    Internal: '1'
     Latitude: 55.67594
     Longitude: 12.56553
-    !!python/unicode 'label': !!python/unicode 'DK'
+    label: DK
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Bulgaria'
-    !!python/unicode 'Internal': 1
+    Country: Bulgaria
+    Internal: '1'
     Latitude: 42.69751
     Longitude: 23.32415
-    !!python/unicode 'label': !!python/unicode 'BG'
+    label: BG
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Croatia'
-    !!python/unicode 'Internal': 1
+    Country: Croatia
+    Internal: '1'
     Latitude: 45.23167
     Longitude: 16.53917
-    !!python/unicode 'label': !!python/unicode 'HR'
+    label: HR
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Slovenia'
-    !!python/unicode 'Internal': 1
+    Country: Slovenia
+    Internal: '1'
     Latitude: 46.05108
     Longitude: 14.50513
-    !!python/unicode 'label': !!python/unicode 'SL'
+    label: SL
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Austria'
-    !!python/unicode 'Internal': 1
+    Country: Austria
+    Internal: '1'
     Latitude: 48.30639
     Longitude: 14.28611
-    !!python/unicode 'label': !!python/unicode 'AT'
+    label: AT
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Belarus'
-    !!python/unicode 'Internal': 1
+    Country: Belarus
+    Internal: '1'
     Latitude: 53.76667
     Longitude: 26.8
-    !!python/unicode 'label': !!python/unicode 'LT'
+    label: LT
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Russia'
-    !!python/unicode 'Internal': 1
+    Country: Russia
+    Internal: '1'
     Latitude: 55.75222
     Longitude: 37.61556
-    !!python/unicode 'label': !!python/unicode 'RU'
+    label: RU
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Iceland'
-    !!python/unicode 'Internal': 1
+    Country: Iceland
+    Internal: '1'
     Latitude: 64.13548
     Longitude: -21.89541
-    !!python/unicode 'label': !!python/unicode 'IS'
+    label: IS
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Ireland'
-    !!python/unicode 'Internal': 1
+    Country: Ireland
+    Internal: '1'
     Latitude: 53.34399
     Longitude: -6.26719
-    !!python/unicode 'label': !!python/unicode 'IE'
+    label: IE
   '28':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.50853
     Longitude: -0.12574
-    !!python/unicode 'label': !!python/unicode 'UK'
+    label: UK
   '29':
-    !!python/unicode 'Country': !!python/unicode 'Finland'
-    !!python/unicode 'Internal': 1
+    Country: Finland
+    Internal: '1'
     Latitude: 65.01236
     Longitude: 25.46816
-    !!python/unicode 'label': !!python/unicode 'NO'
+    label: 'NO'
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Poland'
-    !!python/unicode 'Internal': 1
+    Country: Poland
+    Internal: '1'
     Latitude: 52.41667
     Longitude: 16.96667
-    !!python/unicode 'label': !!python/unicode 'PL'
+    label: PL
   '30':
-    !!python/unicode 'Country': !!python/unicode 'Sweden'
-    !!python/unicode 'Internal': 1
+    Country: Sweden
+    Internal: '1'
     Latitude: 59.33258
     Longitude: 18.0649
-    !!python/unicode 'label': !!python/unicode 'SE'
+    label: SE
   '31':
-    !!python/unicode 'Country': !!python/unicode 'Finland'
-    !!python/unicode 'Internal': 1
+    Country: Finland
+    Internal: '1'
     Latitude: 60.45148
     Longitude: 22.26869
-    !!python/unicode 'label': !!python/unicode 'FI'
+    label: FI
   '32':
-    !!python/unicode 'Country': !!python/unicode 'Estonia'
-    !!python/unicode 'Internal': 1
+    Country: Estonia
+    Internal: '1'
     Latitude: 59.43696
     Longitude: 24.75353
-    !!python/unicode 'label': !!python/unicode 'EE'
+    label: EE
   '33':
-    !!python/unicode 'Country': !!python/unicode 'Latvia'
-    !!python/unicode 'Internal': 1
+    Country: Latvia
+    Internal: '1'
     Latitude: 56.946
     Longitude: 24.10589
-    !!python/unicode 'label': !!python/unicode 'LV'
+    label: LV
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Germany'
-    !!python/unicode 'Internal': 1
+    Country: Germany
+    Internal: '1'
     Latitude: 52.52437
     Longitude: 13.41053
-    !!python/unicode 'label': !!python/unicode 'DE'
+    label: DE
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
-    !!python/unicode 'Internal': 1
+    Country: Czech Republic
+    Internal: '1'
     Latitude: 50.08804
     Longitude: 14.42076
-    !!python/unicode 'label': !!python/unicode 'CZ'
+    label: CZ
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Luxembourg'
-    !!python/unicode 'Internal': 1
+    Country: Luxembourg
+    Internal: '1'
     Latitude: 49.61167
     Longitude: 6.13
-    !!python/unicode 'label': !!python/unicode 'LU'
+    label: LU
   '7':
-    !!python/unicode 'Country': !!python/unicode 'France'
-    !!python/unicode 'Internal': 1
+    Country: France
+    Internal: '1'
     Latitude: 48.85341
     Longitude: 2.3488
-    !!python/unicode 'label': !!python/unicode 'FR'
+    label: FR
   '8':
-    !!python/unicode 'Country': !!python/unicode 'Switzerland'
-    !!python/unicode 'Internal': 1
+    Country: Switzerland
+    Internal: '1'
     Latitude: 46.94809
     Longitude: 7.44744
-    !!python/unicode 'label': !!python/unicode 'CH'
+    label: CH
   '9':
-    !!python/unicode 'Country': !!python/unicode 'Italy'
-    !!python/unicode 'Internal': 1
+    Country: Italy
+    Internal: '1'
     Latitude: 41.89474
     Longitude: 12.4839
-    !!python/unicode 'label': !!python/unicode 'IT'
+    label: IT

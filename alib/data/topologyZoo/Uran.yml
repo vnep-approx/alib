@@ -49,141 +49,141 @@ edges:
   - '22'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 46.63333
     Longitude: 32.6
-    !!python/unicode 'label': !!python/unicode 'Kherson'
+    label: Kherson
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 46.96667
     Longitude: 32.0
-    !!python/unicode 'label': !!python/unicode 'Mykolaiv'
+    label: Mykolaiv
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 49.43333
     Longitude: 32.06667
-    !!python/unicode 'label': !!python/unicode 'Cherkassy'
+    label: Cherkassy
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 46.47747
     Longitude: 30.73262
-    !!python/unicode 'label': !!python/unicode 'Odessa-IX'
+    label: Odessa-IX
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 50.0
     Longitude: 36.25
-    !!python/unicode 'label': !!python/unicode 'Kharkiv-IX'
+    label: Kharkiv-IX
   '13':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 50.45466
     Longitude: 30.5238
-    !!python/unicode 'label': !!python/unicode 'UA-IX'
+    label: UA-IX
   '14':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 47.81667
     Longitude: 35.18333
-    !!python/unicode 'label': !!python/unicode 'Zaporizhia'
+    label: Zaporizhia
   '15':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 48.45
     Longitude: 34.98333
-    !!python/unicode 'label': !!python/unicode 'Dnipropetrovsk'
+    label: Dnipropetrovsk
   '16':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 49.83826
     Longitude: 24.02324
-    !!python/unicode 'label': !!python/unicode 'Lviv'
+    label: Lviv
   '17':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 50.75
     Longitude: 25.33333
-    !!python/unicode 'label': !!python/unicode 'Lutsk'
+    label: Lutsk
   '18':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 50.25
     Longitude: 28.66667
-    !!python/unicode 'label': !!python/unicode 'Zhitomir'
+    label: Zhitomir
   '19':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 50.45466
     Longitude: 30.5238
-    !!python/unicode 'label': !!python/unicode 'Kiev'
+    label: Kiev
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 44.58883
     Longitude: 33.5224
-    !!python/unicode 'label': !!python/unicode 'Sevastopol'
+    label: Sevastopol
   '20':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 50.08333
     Longitude: 31.46667
-    !!python/unicode 'label': !!python/unicode 'Pereyaslav'
+    label: Pereyaslav
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 49.58333
     Longitude: 34.56667
-    !!python/unicode 'label': !!python/unicode 'Poltava'
+    label: Poltava
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 50.0
     Longitude: 36.25
-    !!python/unicode 'label': !!python/unicode 'Kharkiv'
+    label: Kharkiv
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 48.0
     Longitude: 37.8
-    !!python/unicode 'label': !!python/unicode 'Donetsk'
+    label: Donetsk
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 44.95844
     Longitude: 34.10558
-    !!python/unicode 'label': !!python/unicode 'Simferopol'
+    label: Simferopol
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 49.23333
     Longitude: 28.48333
-    !!python/unicode 'label': !!python/unicode 'Vinnitsa'
+    label: Vinnitsa
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 49.41667
     Longitude: 27.0
-    !!python/unicode 'label': !!python/unicode 'Khmelnitsky'
+    label: Khmelnitsky
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 46.47747
     Longitude: 30.73262
-    !!python/unicode 'label': !!python/unicode 'Odessa'
+    label: Odessa
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Ukraine'
-    !!python/unicode 'Internal': 1
+    Country: Ukraine
+    Internal: '1'
     Latitude: 48.66667
     Longitude: 26.56667
-    !!python/unicode 'label': !!python/unicode 'Kamianets-Podilsky'
+    label: Kamianets-Podilsky
   '8':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 50.45466
     Longitude: 30.5238
-    !!python/unicode 'label': !!python/unicode 'Frankfurt (Internet)'
+    label: Frankfurt (Internet)
   '9':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 49.83826
     Longitude: 24.02324
-    !!python/unicode 'label': !!python/unicode 'Poznan (GEANT & Internet)'
+    label: Poznan (GEANT & Internet)

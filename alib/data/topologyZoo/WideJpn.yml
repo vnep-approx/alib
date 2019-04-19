@@ -67,171 +67,171 @@ edges:
   - '25'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.68333
     Longitude: 139.76667
-    !!python/unicode 'label': !!python/unicode 'KDDI Otemachi'
+    label: KDDI Otemachi
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.71732
     Longitude: 139.76575
-    !!python/unicode 'label': !!python/unicode 'Nezu'
+    label: Nezu
   '10':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.68333
     Longitude: 135.48333
-    !!python/unicode 'label': !!python/unicode 'Dojima'
+    label: Dojima
   '11':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 37.77493
     Longitude: -122.41942
-    !!python/unicode 'label': !!python/unicode 'PAIX'
+    label: PAIX
   '12':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 35.68333
     Longitude: 139.76667
-    !!python/unicode 'label': !!python/unicode 'TITECH'
+    label: TITECH
   '13':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 35.68333
     Longitude: 139.76667
-    !!python/unicode 'label': !!python/unicode 'T-Lex'
+    label: T-Lex
   '14':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 35.68333
     Longitude: 139.76667
-    !!python/unicode 'label': !!python/unicode 'JGN2Plus'
+    label: JGN2Plus
   '15':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 35.34194
     Longitude: 139.47
-    !!python/unicode 'label': !!python/unicode 'AI3'
+    label: AI3
   '16':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'LAIIX'
+    label: LAIIX
   '17':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 35.68333
     Longitude: 139.76667
-    !!python/unicode 'label': !!python/unicode 'DIX-IE'
+    label: DIX-IE
   '18':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 35.68333
     Longitude: 139.76667
-    !!python/unicode 'label': !!python/unicode 'KDDI'
+    label: KDDI
   '19':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 35.68333
     Longitude: 139.76667
-    !!python/unicode 'label': !!python/unicode 'APAN'
+    label: APAN
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 32.76667
     Longitude: 129.95
-    !!python/unicode 'label': !!python/unicode 'Yagami'
+    label: Yagami
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.05223
     Longitude: -118.24368
-    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+    label: Los Angeles
   '21':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.34194
     Longitude: 139.47
-    !!python/unicode 'label': !!python/unicode 'Fujisawa'
+    label: Fujisawa
   '22':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.68505
     Longitude: 135.80485
-    !!python/unicode 'label': !!python/unicode 'Nara'
+    label: Nara
   '23':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 33.60639
     Longitude: 130.41806
-    !!python/unicode 'label': !!python/unicode 'Fukuoka'
+    label: Fukuoka
   '24':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.39627
     Longitude: 132.45937
-    !!python/unicode 'label': !!python/unicode 'Hiroshima'
+    label: Hiroshima
   '25':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 34.58333
     Longitude: 133.76667
-    !!python/unicode 'label': !!python/unicode 'Kurashiki'
+    label: Kurashiki
   '26':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 33.78333
     Longitude: 129.8
-    !!python/unicode 'label': !!python/unicode 'Sakyo'
+    label: Sakyo
   '27':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 36.40263
     Longitude: 136.45088
-    !!python/unicode 'label': !!python/unicode 'Komatsu'
+    label: Komatsu
   '28':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 38.26889
     Longitude: 140.87194
-    !!python/unicode 'label': !!python/unicode 'Sendai'
+    label: Sendai
   '29':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.77493
     Longitude: -122.41942
-    !!python/unicode 'label': !!python/unicode 'San Francisco'
+    label: San Francisco
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.55159
     Longitude: 139.6716
-    !!python/unicode 'label': !!python/unicode 'ShinKawasaki'
+    label: ShinKawasaki
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.65583
     Longitude: 139.32389
-    !!python/unicode 'label': !!python/unicode 'Hachioji'
+    label: Hachioji
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Thailand'
-    !!python/unicode 'Internal': 1
+    Country: Thailand
+    Internal: '1'
     Latitude: 13.75
     Longitude: 100.51667
-    !!python/unicode 'label': !!python/unicode 'Bangkok'
+    label: Bangkok
   '6':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 35.68333
     Longitude: 139.76667
-    !!python/unicode 'label': !!python/unicode 'NTT Otemachi'
+    label: NTT Otemachi
   '7':
-    !!python/unicode 'Country': !!python/unicode 'Japan'
-    !!python/unicode 'Internal': 1
+    Country: Japan
+    Internal: '1'
     Latitude: 36.2
     Longitude: 140.1
-    !!python/unicode 'label': !!python/unicode 'Tsukuba'
+    label: Tsukuba
   '8':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 34.68333
     Longitude: 135.48333
-    !!python/unicode 'label': !!python/unicode 'NSPIXP-3'
+    label: NSPIXP-3
   '9':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 34.68333
     Longitude: 135.48333
-    !!python/unicode 'label': !!python/unicode 'JGN2Plus'
+    label: JGN2Plus

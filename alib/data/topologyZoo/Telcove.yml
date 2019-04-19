@@ -141,502 +141,502 @@ edges:
   - '69'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 27.33643
     Longitude: -82.53065
-    !!python/unicode 'label': !!python/unicode 'Sarasota'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Sarasota
+    type: Telcove Markets Served
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 26.62168
     Longitude: -81.84059
-    !!python/unicode 'label': !!python/unicode 'Fort Myers'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Fort Myers
+    type: Telcove Markets Served
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 28.61222
     Longitude: -80.80755
-    !!python/unicode 'label': !!python/unicode 'Titusville'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Titusville
+    type: Telcove Markets Served
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 28.53834
     Longitude: -81.37924
-    !!python/unicode 'label': !!python/unicode 'Orlando'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Orlando
+    type: Telcove Markets Served
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.44957
     Longitude: -78.86892
-    !!python/unicode 'label': !!python/unicode 'Harrisonburg'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Harrisonburg
+    type: Telcove Markets Served
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.02931
     Longitude: -78.47668
-    !!python/unicode 'label': !!python/unicode 'Charlottesville'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Charlottesville
+    type: Telcove Markets Served
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.18566
     Longitude: -78.16333
-    !!python/unicode 'label': !!python/unicode 'Winchester'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Winchester
+    type: Telcove Markets Served
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.30318
     Longitude: -77.46054
-    !!python/unicode 'label': !!python/unicode 'Fredericksburg'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Fredericksburg
+    type: Telcove Markets Served
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.73566
     Longitude: -74.17237
-    !!python/unicode 'label': !!python/unicode 'Newark'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Newark
+    type: Telcove Markets Served
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.65984
     Longitude: -75.51464
-    !!python/unicode 'label': !!python/unicode 'Central New Jersey'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Central New Jersey
+    type: Telcove Markets Served
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.33143
     Longitude: -83.04575
-    !!python/unicode 'label': !!python/unicode 'Detroit'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Detroit
+    type: Telcove Markets Served
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.12922
     Longitude: -80.08506
-    !!python/unicode 'label': !!python/unicode 'Erie'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Erie
+    type: Telcove Markets Served
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 27.94752
     Longitude: -82.45843
-    !!python/unicode 'label': !!python/unicode 'Tampa'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Tampa
+    type: Telcove Markets Served
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.88645
     Longitude: -78.87837
-    !!python/unicode 'label': !!python/unicode 'Buffalo'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Buffalo
+    type: Telcove Markets Served
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.04812
     Longitude: -76.14742
-    !!python/unicode 'label': !!python/unicode 'Syracuse'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Syracuse
+    type: Telcove Markets Served
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 43.1009
     Longitude: -75.23266
-    !!python/unicode 'label': !!python/unicode 'Rome-Utica'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Rome-Utica
+    type: Telcove Markets Served
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 44.47588
     Longitude: -73.21207
-    !!python/unicode 'label': !!python/unicode 'Burlington'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Burlington
+    type: Telcove Markets Served
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 42.65258
     Longitude: -73.75623
-    !!python/unicode 'label': !!python/unicode 'Albany'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Albany
+    type: Telcove Markets Served
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'New York City'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: New York City
+    type: Telcove Markets Served
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.89511
     Longitude: -77.03637
-    !!python/unicode 'label': !!python/unicode 'Washington, DC'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Washington, DC
+    type: Telcove Markets Served
   '27':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.21081
     Longitude: -81.02283
-    !!python/unicode 'label': !!python/unicode 'Daytona Beach'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Daytona Beach
+    type: Telcove Markets Served
   '28':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.77479
     Longitude: -78.02056
-    !!python/unicode 'label': !!python/unicode 'Coudersport'
-    !!python/unicode 'type': !!python/unicode 'Network Management Centre'
+    label: Coudersport
+    type: Network Management Centre
   '29':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.27097
     Longitude: -79.94143
-    !!python/unicode 'label': !!python/unicode 'Roanoke'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Roanoke
+    type: Telcove Markets Served
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 27.96585
     Longitude: -82.8001
-    !!python/unicode 'label': !!python/unicode 'Clearwater'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Clearwater
+    type: Telcove Markets Served
   '30':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.58597
     Longitude: -79.39502
-    !!python/unicode 'label': !!python/unicode 'Danville'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Danville
+    type: Telcove Markets Served
   '31':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.14958
     Longitude: -79.0717
-    !!python/unicode 'label': !!python/unicode 'Staunton'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Staunton
+    type: Telcove Markets Served
   '32':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.34982
     Longitude: -81.63262
-    !!python/unicode 'label': !!python/unicode 'Charleston'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Charleston
+    type: Telcove Markets Served
   '33':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.29038
     Longitude: -76.61219
-    !!python/unicode 'label': !!python/unicode 'Baltimore'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Baltimore
+    type: Telcove Markets Served
   '34':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.05266
     Longitude: -78.87836
-    !!python/unicode 'label': !!python/unicode 'Fayetteville'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Fayetteville
+    type: Telcove Markets Served
   '35':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.22709
     Longitude: -80.84313
-    !!python/unicode 'label': !!python/unicode 'Charlotte'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Charlotte
+    type: Telcove Markets Served
   '36':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.51736
     Longitude: -82.35489
-    !!python/unicode 'geocode_append': !!python/unicode 'Tennessee'
-    !!python/unicode 'label': !!python/unicode 'Tri-Cities'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    geocode_append: Tennessee
+    label: Tri-Cities
+    type: Telcove Markets Served
   '38':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.09986
     Longitude: -80.24422
-    !!python/unicode 'label': !!python/unicode 'Winston-Salem'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Winston-Salem
+    type: Telcove Markets Served
   '39':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.07264
     Longitude: -79.79198
-    !!python/unicode 'label': !!python/unicode 'Greensboro'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Greensboro
+    type: Telcove Markets Served
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 26.71534
     Longitude: -80.05337
-    !!python/unicode 'label': !!python/unicode 'West Palm Beach'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: West Palm Beach
+    type: Telcove Markets Served
   '40':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.95234
     Longitude: -75.16379
-    !!python/unicode 'label': !!python/unicode 'Philadelphia'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Philadelphia
+    type: Telcove Markets Served
   '41':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.60843
     Longitude: -75.49018
-    !!python/unicode 'label': !!python/unicode 'Allentown'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Allentown
+    type: Telcove Markets Served
   '42':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.2737
     Longitude: -76.88442
-    !!python/unicode 'label': !!python/unicode 'Harrisburg'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Harrisburg
+    type: Telcove Markets Served
   '43':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.03788
     Longitude: -76.30551
-    !!python/unicode 'geocode_append': !!python/unicode 'Pennsylvania'
-    !!python/unicode 'label': !!python/unicode 'Lancaster'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    geocode_append: Pennsylvania
+    label: Lancaster
+    type: Telcove Markets Served
   '44':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 41.40897
     Longitude: -75.66241
-    !!python/unicode 'label': !!python/unicode 'Scranton'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Scranton
+    type: Telcove Markets Served
   '45':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.7934
     Longitude: -77.86
-    !!python/unicode 'label': !!python/unicode 'State College'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: State College
+    type: Telcove Markets Served
   '46':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.41427
     Longitude: -77.41054
-    !!python/unicode 'label': !!python/unicode 'Frederick'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Frederick
+    type: Telcove Markets Served
   '47':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.00071
     Longitude: -81.03481
-    !!python/unicode 'label': !!python/unicode 'Columbia'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Columbia
+    type: Telcove Markets Served
   '48':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.55376
     Longitude: -77.46026
-    !!python/unicode 'label': !!python/unicode 'Richmond'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Richmond
+    type: Telcove Markets Served
   '49':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.44062
     Longitude: -79.99589
-    !!python/unicode 'label': !!python/unicode 'Pittsburgh'
-    !!python/unicode 'type': !!python/unicode 'Core Router/PoP'
+    label: Pittsburgh
+    type: Core Router/PoP
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 28.08363
     Longitude: -80.60811
-    !!python/unicode 'label': !!python/unicode 'Melbourne'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Melbourne
+    type: Telcove Markets Served
   '50':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.96118
     Longitude: -82.99879
-    !!python/unicode 'label': !!python/unicode 'Columbus'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Columbus
+    type: Telcove Markets Served
   '51':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.85262
     Longitude: -82.39401
-    !!python/unicode 'label': !!python/unicode 'Greenville'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Greenville
+    type: Telcove Markets Served
   '52':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.47097
     Longitude: -81.97484
-    !!python/unicode 'geocode_append': !!python/unicode 'Georgia'
-    !!python/unicode 'label': !!python/unicode 'Augusta'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    geocode_append: Georgia
+    label: Augusta
+    type: Telcove Markets Served
   '53':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.08354
     Longitude: -81.09983
-    !!python/unicode 'label': !!python/unicode 'Savannah'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Savannah
+    type: Telcove Markets Served
   '54':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.33218
     Longitude: -81.65565
-    !!python/unicode 'label': !!python/unicode 'Jacksonville'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Jacksonville
+    type: Telcove Markets Served
   '55':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.94957
     Longitude: -81.93205
-    !!python/unicode 'label': !!python/unicode 'Spartanburg'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Spartanburg
+    type: Telcove Markets Served
   '56':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.98869
     Longitude: -84.47772
-    !!python/unicode 'label': !!python/unicode 'Lexington'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Lexington
+    type: Telcove Markets Served
   '57':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.25424
     Longitude: -85.75941
-    !!python/unicode 'label': !!python/unicode 'Louisville'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Louisville
+    type: Telcove Markets Served
   '58':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.16589
     Longitude: -86.78444
-    !!python/unicode 'label': !!python/unicode 'Nashville'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Nashville
+    type: Telcove Markets Served
   '59':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 33.749
     Longitude: -84.38798
-    !!python/unicode 'label': !!python/unicode 'Atlanta'
-    !!python/unicode 'type': !!python/unicode 'Core Router/PoP'
+    label: Atlanta
+    type: Core Router/PoP
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 26.12231
     Longitude: -80.14338
-    !!python/unicode 'label': !!python/unicode 'Fort Lauderdale'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Fort Lauderdale
+    type: Telcove Markets Served
   '60':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.71427
     Longitude: -74.00597
-    !!python/unicode 'label': !!python/unicode 'York'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: York
+    type: Telcove Markets Served
   '61':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 35.7721
     Longitude: -78.63861
-    !!python/unicode 'label': !!python/unicode 'Raleigh'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Raleigh
+    type: Telcove Markets Served
   '63':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.42131
     Longitude: -87.21691
-    !!python/unicode 'label': !!python/unicode 'Pensacola'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Pensacola
+    type: Telcove Markets Served
   '64':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.43826
     Longitude: -84.28073
-    !!python/unicode 'label': !!python/unicode 'Tallahassee'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Tallahassee
+    type: Telcove Markets Served
   '65':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.69224
     Longitude: -97.33754
-    !!python/unicode 'label': !!python/unicode 'Wichita'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Wichita
+    type: Telcove Markets Served
   '66':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.11417
     Longitude: -94.62746
-    !!python/unicode 'label': !!python/unicode 'Kansas City'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Kansas City
+    type: Telcove Markets Served
   '67':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 34.74648
     Longitude: -92.28959
-    !!python/unicode 'label': !!python/unicode 'Little Rock'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Little Rock
+    type: Telcove Markets Served
   '68':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.76328
     Longitude: -95.36327
-    !!python/unicode 'label': !!python/unicode 'Houston'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Houston
+    type: Telcove Markets Served
   '69':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 29.95465
     Longitude: -90.07507
-    !!python/unicode 'label': !!python/unicode 'New Orleans'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: New Orleans
+    type: Telcove Markets Served
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 25.77427
     Longitude: -80.19366
-    !!python/unicode 'label': !!python/unicode 'Miami'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Miami
+    type: Telcove Markets Served
   '70':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.45075
     Longitude: -91.15455
-    !!python/unicode 'label': !!python/unicode 'Baton Rouge'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Baton Rouge
+    type: Telcove Markets Served
   '71':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 32.29876
     Longitude: -90.18481
-    !!python/unicode 'label': !!python/unicode 'Jackson'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Jackson
+    type: Telcove Markets Served
   '72':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 30.69436
     Longitude: -88.04305
-    !!python/unicode 'label': !!python/unicode 'Mobile'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Mobile
+    type: Telcove Markets Served
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.84681
     Longitude: -76.28522
-    !!python/unicode 'label': !!python/unicode 'Norfolk'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Norfolk
+    type: Telcove Markets Served
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.41375
     Longitude: -79.14225
-    !!python/unicode 'label': !!python/unicode 'Lynchburg'
-    !!python/unicode 'type': !!python/unicode 'Telcove Markets Served'
+    label: Lynchburg
+    type: Telcove Markets Served

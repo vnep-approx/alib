@@ -25,80 +25,80 @@ edges:
   - '12'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 35.82194
     Longitude: 127.14889
-    !!python/unicode 'label': !!python/unicode 'Jeonju'
+    label: Jeonju
   '1':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 33.50972
     Longitude: 126.52194
-    !!python/unicode 'label': !!python/unicode 'Jeju'
+    label: Jeju
   '10':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 36.32139
     Longitude: 127.41972
-    !!python/unicode 'label': !!python/unicode 'Daejeon'
+    label: Daejeon
   '11':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 36.03222
     Longitude: 129.365
-    !!python/unicode 'label': !!python/unicode 'Pohang'
+    label: Pohang
   '12':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 35.87028
     Longitude: 128.59111
-    !!python/unicode 'label': !!python/unicode 'Daegu'
+    label: Daegu
   '2':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 35.15472
     Longitude: 126.91556
-    !!python/unicode 'label': !!python/unicode 'Kwangju'
+    label: Kwangju
   '3':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 35.10278
     Longitude: 129.04028
-    !!python/unicode 'label': !!python/unicode 'Busan'
+    label: Busan
   '4':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 35.22806
     Longitude: 128.68111
-    !!python/unicode 'label': !!python/unicode 'Changwon'
+    label: Changwon
   '5':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 37.56826
     Longitude: 126.97783
-    !!python/unicode 'label': !!python/unicode 'Seoul'
+    label: Seoul
   '6':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 37.45361
     Longitude: 126.73167
-    !!python/unicode 'label': !!python/unicode 'Incheon'
+    label: Incheon
   '7':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 37.29111
     Longitude: 127.00889
-    !!python/unicode 'label': !!python/unicode 'Suwon'
+    label: Suwon
   '8':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 36.8065
     Longitude: 127.1522
-    !!python/unicode 'label': !!python/unicode 'Cheonan'
+    label: Cheonan
   '9':
-    !!python/unicode 'Country': !!python/unicode 'South Korea'
-    !!python/unicode 'Internal': 1
+    Country: South Korea
+    Internal: '1'
     Latitude: 35.55292
     Longitude: 127.49042
-    !!python/unicode 'label': !!python/unicode 'Ochang'
+    label: Ochang

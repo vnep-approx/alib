@@ -167,462 +167,462 @@ edges:
   - '66'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.09642
     Longitude: -94.36106
-    !!python/unicode 'label': !!python/unicode 'Rich Hill'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Rich Hill
+    type: MNA Tier 3 Collocation
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.36778
     Longitude: -94.36217
-    !!python/unicode 'label': !!python/unicode 'Kearney'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Kearney
+    type: MNA Tier 3 Collocation
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.91084
     Longitude: -94.38217
-    !!python/unicode 'label': !!python/unicode 'Lees Summit'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Lees Summit
+    type: MNA Tier 3 Collocation
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.70446
     Longitude: -93.22826
-    !!python/unicode 'label': !!python/unicode 'Sedalia'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Sedalia
+    type: MNA Tier 2 Collocation
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.2081
     Longitude: -91.16042
-    !!python/unicode 'label': !!python/unicode 'Sullivan'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Sullivan
+    type: MNA Tier 3 Collocation
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.9681
     Longitude: -91.35487
-    !!python/unicode 'label': !!python/unicode 'Steelville'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Steelville
+    type: MNA Tier 3 Collocation
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.65558
     Longitude: -92.77992
-    !!python/unicode 'label': !!python/unicode 'Tipton'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Tipton
+    type: MNA Tier 3 Collocation
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.06282
     Longitude: -91.40348
-    !!python/unicode 'label': !!python/unicode 'Cuba'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Cuba
+    type: MNA Tier 3 Collocation
   '16':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.44059
     Longitude: -92.54518
-    !!python/unicode 'label': !!python/unicode 'Huntsville'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Huntsville
+    type: MNA Tier 2 Collocation
   '17':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.41837
     Longitude: -92.43824
-    !!python/unicode 'label': !!python/unicode 'Moberly'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Moberly
+    type: MNA Tier 3 Collocation
   '18':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.26863
     Longitude: -92.95326
-    !!python/unicode 'label': !!python/unicode 'Green City'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Green City
+    type: MNA Tier 3 Collocation
   '19':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.19475
     Longitude: -92.58325
-    !!python/unicode 'label': !!python/unicode 'Kirksville'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Kirksville
+    type: MNA Tier 3 Collocation
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.44555
     Longitude: -95.06609
-    !!python/unicode 'label': !!python/unicode 'Burlington Junction'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Burlington Junction
+    type: MNA Tier 3 Collocation
   '20':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.15004
     Longitude: -92.30213
-    !!python/unicode 'label': !!python/unicode 'Hurdland'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Hurdland
+    type: MNA Tier 3 Collocation
   '21':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.70838
     Longitude: -91.35848
-    !!python/unicode 'label': !!python/unicode 'Hannibal'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Hannibal
+    type: MNA Tier 2 Collocation
   '22':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.79421
     Longitude: -91.52321
-    !!python/unicode 'label': !!python/unicode 'Palmyra'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Palmyra
+    type: MNA Tier 3 Collocation
   '23':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.58532
     Longitude: -91.40098
-    !!python/unicode 'label': !!python/unicode 'New London'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: New London
+    type: MNA Tier 3 Collocation
   '24':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.89865
     Longitude: -92.48102
-    !!python/unicode 'label': !!python/unicode 'Atlanta'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Atlanta
+    type: MNA Tier 3 Collocation
   '25':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.74698
     Longitude: -92.56408
-    !!python/unicode 'label': !!python/unicode 'Bevier'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Bevier
+    type: MNA Tier 3 Collocation
   '26':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.6673
     Longitude: -90.2527
-    !!python/unicode 'label': !!python/unicode 'East Saint Louis'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: East Saint Louis
+    type: MNA Tier 3 Collocation
   '27':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 38.6673
     Longitude: -90.2527
-    !!python/unicode 'label': !!python/unicode 'To Chicago'
+    label: To Chicago
   '28':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.95143
     Longitude: -91.77127
-    !!python/unicode 'label': !!python/unicode 'Rolla'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Rolla
+    type: MNA Tier 2 Collocation
   '29':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.87474
     Longitude: -92.91158
-    !!python/unicode 'label': !!python/unicode 'Pilot Grove'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Pilot Grove
+    type: MNA Tier 3 Collocation
   '3':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 40.44555
     Longitude: -95.06609
-    !!python/unicode 'label': !!python/unicode 'To Omaha'
+    label: To Omaha
   '30':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.5767
     Longitude: -92.17352
-    !!python/unicode 'label': !!python/unicode 'Jefferson City'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 1 Collocation'
+    label: Jefferson City
+    type: MNA Tier 1 Collocation
   '31':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 37.44598
     Longitude: -95.02821
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '32':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 38.94171
     Longitude: -91.5780075
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '33':
-    !!python/unicode 'Internal': 1
+    Internal: '1'
     Latitude: 39.73217333333333
     Longitude: -91.64154666666667
-    !!python/unicode 'hyperedge': 1
-    !!python/unicode 'label': !!python/unicode 'None'
+    hyperedge: '1'
+    label: None
   '34':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.67918
     Longitude: -94.59357
-    !!python/unicode 'label': !!python/unicode 'Cleveland'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Cleveland
+    type: MNA Tier 3 Collocation
   '35':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.15398
     Longitude: -95.99278
-    !!python/unicode 'label': !!python/unicode 'Tulsa'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Tulsa
+    type: MNA Tier 2 Collocation
   '36':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.08423
     Longitude: -94.51328
-    !!python/unicode 'label': !!python/unicode 'Joplin'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 1 Collocation'
+    label: Joplin
+    type: MNA Tier 1 Collocation
   '37':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.69393
     Longitude: -92.04295
-    !!python/unicode 'label': !!python/unicode 'Shelbina'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Shelbina
+    type: MNA Tier 3 Collocation
   '38':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.48087
     Longitude: -92.00128
-    !!python/unicode 'label': !!python/unicode 'Paris'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Paris
+    type: MNA Tier 3 Collocation
   '39':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.27254
     Longitude: -91.5746
-    !!python/unicode 'label': !!python/unicode 'Farber'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Farber
+    type: MNA Tier 3 Collocation
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.76279
     Longitude: -93.73605
-    !!python/unicode 'label': !!python/unicode 'Warrensburg'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Warrensburg
+    type: MNA Tier 3 Collocation
   '40':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.31087
     Longitude: -91.48849
-    !!python/unicode 'label': !!python/unicode 'Vandalia'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Vandalia
+    type: MNA Tier 3 Collocation
   '41':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.95171
     Longitude: -92.33407
-    !!python/unicode 'label': !!python/unicode 'Columbia'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 1 Collocation'
+    label: Columbia
+    type: MNA Tier 1 Collocation
   '42':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.16976
     Longitude: -91.88295
-    !!python/unicode 'label': !!python/unicode 'Mexico'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Mexico
+    type: MNA Tier 2 Collocation
   '43':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.67504
     Longitude: -91.87434
-    !!python/unicode 'label': !!python/unicode 'Mokane'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Mokane
+    type: MNA Tier 3 Collocation
   '44':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.0181
     Longitude: -91.89712
-    !!python/unicode 'label': !!python/unicode 'Auxvasse'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Auxvasse
+    type: MNA Tier 3 Collocation
   '45':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 37.21533
     Longitude: -93.29824
-    !!python/unicode 'label': !!python/unicode 'Springfield'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 1 Collocation'
+    label: Springfield
+    type: MNA Tier 1 Collocation
   '46':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.87863
     Longitude: -93.18882
-    !!python/unicode 'label': !!python/unicode 'Linneus'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Linneus
+    type: MNA Tier 3 Collocation
   '47':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.47696
     Longitude: -93.00326
-    !!python/unicode 'label': !!python/unicode 'Unionville'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Unionville
+    type: MNA Tier 3 Collocation
   '48':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.0953
     Longitude: -93.54521
-    !!python/unicode 'label': !!python/unicode 'Alma'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Alma
+    type: MNA Tier 3 Collocation
   '49':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.35835
     Longitude: -93.49577
-    !!python/unicode 'label': !!python/unicode 'Carrollton'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Carrollton
+    type: MNA Tier 2 Collocation
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.07251
     Longitude: -93.71716
-    !!python/unicode 'label': !!python/unicode 'Higginsville'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Higginsville
+    type: MNA Tier 3 Collocation
   '50':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.53613
     Longitude: -93.44021
-    !!python/unicode 'label': !!python/unicode 'Tina'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Tina
+    type: MNA Tier 3 Collocation
   '51':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.79529
     Longitude: -93.55244
-    !!python/unicode 'label': !!python/unicode 'Chillicothe'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Chillicothe
+    type: MNA Tier 2 Collocation
   '52':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 40.44555
     Longitude: -95.06609
-    !!python/unicode 'label': !!python/unicode 'To Des Moines'
+    label: To Des Moines
   '53':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.40084
     Longitude: -93.5805
-    !!python/unicode 'label': !!python/unicode 'Princeton'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Princeton
+    type: MNA Tier 3 Collocation
   '54':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.0789
     Longitude: -93.61661
-    !!python/unicode 'label': !!python/unicode 'Trenton'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Trenton
+    type: MNA Tier 2 Collocation
   '55':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.12308
     Longitude: -93.19687
-    !!python/unicode 'label': !!python/unicode 'Marshall'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Marshall
+    type: MNA Tier 3 Collocation
   '56':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.94166
     Longitude: -94.83025
-    !!python/unicode 'label': !!python/unicode 'Savannah'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Savannah
+    type: MNA Tier 3 Collocation
   '57':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.3461
     Longitude: -94.87247
-    !!python/unicode 'label': !!python/unicode 'Maryville'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Maryville
+    type: MNA Tier 2 Collocation
   '58':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.20083
     Longitude: -95.07442
-    !!python/unicode 'label': !!python/unicode 'Maitland'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Maitland
+    type: MNA Tier 3 Collocation
   '59':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.41111
     Longitude: -95.51693
-    !!python/unicode 'label': !!python/unicode 'Rock Port'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Rock Port
+    type: MNA Tier 3 Collocation
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.61946
     Longitude: -94.68079
-    !!python/unicode 'label': !!python/unicode 'Louisburg'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Louisburg
+    type: MNA Tier 3 Collocation
   '60':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.98694
     Longitude: -95.14498
-    !!python/unicode 'label': !!python/unicode 'Oregon'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Oregon
+    type: MNA Tier 3 Collocation
   '61':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.76861
     Longitude: -94.84663
-    !!python/unicode 'label': !!python/unicode 'Saint Joseph'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 1 Collocation'
+    label: Saint Joseph
+    type: MNA Tier 1 Collocation
   '62':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.09973
     Longitude: -94.57857
-    !!python/unicode 'label': !!python/unicode 'Kansas City'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 1 Collocation'
+    label: Kansas City
+    type: MNA Tier 1 Collocation
   '63':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.54834
     Longitude: -94.32995
-    !!python/unicode 'label': !!python/unicode 'Lathrop'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Lathrop
+    type: MNA Tier 3 Collocation
   '64':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 39.74028
     Longitude: -94.24106
-    !!python/unicode 'label': !!python/unicode 'Cameron'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Cameron
+    type: MNA Tier 3 Collocation
   '65':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.24861
     Longitude: -94.33107
-    !!python/unicode 'label': !!python/unicode 'Albany'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Albany
+    type: MNA Tier 3 Collocation
   '66':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 40.26833
     Longitude: -94.02829
-    !!python/unicode 'label': !!python/unicode 'Bethany'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Bethany
+    type: MNA Tier 3 Collocation
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.71918
     Longitude: -94.45856
-    !!python/unicode 'label': !!python/unicode 'Peculiar'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 3 Collocation'
+    label: Peculiar
+    type: MNA Tier 3 Collocation
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 36.64367
     Longitude: -93.21851
-    !!python/unicode 'label': !!python/unicode 'Branson'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 2 Collocation'
+    label: Branson
+    type: MNA Tier 2 Collocation
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United States'
-    !!python/unicode 'Internal': 1
+    Country: United States
+    Internal: '1'
     Latitude: 38.62727
     Longitude: -90.19789
-    !!python/unicode 'label': !!python/unicode 'Saint Louis'
-    !!python/unicode 'type': !!python/unicode 'MNA Tier 1 Collocation'
+    label: Saint Louis
+    type: MNA Tier 1 Collocation

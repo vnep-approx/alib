@@ -25,11 +25,14 @@ import pkg_resources
 
 import cPickle as pickle
 import copy
+import networkx as nx
 import itertools
+import glob
 import math
 import multiprocessing as mp
 from multiprocessing.managers import BaseManager, SyncManager
 import os
+from unidecode import unidecode
 
 import time
 import yaml
@@ -1819,3 +1822,201 @@ def haversine(lon1, lat1, lon2, lat2):
     km = 6367 * c
     latency = km / 200000
     return latency
+
+
+def convert_topology_zoo_gml_to_yml(gml_path, yml_path, consider_disconnected):
+    network_files = glob.glob(gml_path  + "/*.gml")
+
+    for net_file in network_files:
+        # Extract name of network from file path
+        path, filename = os.path.split(net_file)
+        network_name = os.path.splitext(filename)[0]
+
+
+        try:
+            print "reading file {}".format(net_file)
+            try:
+                graph = nx.read_gml(net_file, label="id")
+            except Exception as ex:
+                if "duplicated" in str(ex) and "multigraph 1" in str(ex):
+                    print "Multigraph detected; fixing the problem"
+                    with open(net_file, "r") as f:
+                        graph_source = f.read()
+                    graph_source = graph_source.replace("graph [", "graph [\n  multigraph 1")
+                    graph = nx.parse_gml(graph_source, label="id")
+                    print "tried to fix it.."
+
+
+
+            largest_cc = max(nx.connected_components(graph), key=len)
+
+            if len(largest_cc) < graph.number_of_nodes():
+                if consider_disconnected:
+                    print "Graph is not connected, considering only the largest connected component with {} nodes".format(len(largest_cc))
+                else:
+                    print "Graph is not connected, discarding it!"
+                    continue
+
+
+            nodes = largest_cc
+
+            yml_contents = {"nodes": {}, "edges": []}
+            for node in nodes:
+                data = graph.node[node]
+                print node, data
+                longitude = 0
+                latitude = 0
+                if "Longitude" in data:
+                    longitude = data["Longitude"]
+                else:
+                    for neighbor in graph.neighbors(node):
+                        if "Longitude" in graph.node[neighbor]:
+                            longitude += graph.node[neighbor]["Longitude"]
+                        else:
+                            print "Could NOT estimate longitude for node {} based on neighbors. Aborting conversion.".format(node)
+                            raise RuntimeError("Could not approximate longitude")
+                    print "Successfully estimated longitude for node {} based on neighbors".format(node)
+                    longitude /= float(len(list(graph.neighbors(node))))
+
+
+                if "Latitude" in data:
+                    latitude = data["Latitude"]
+                else:
+                    for neighbor in graph.neighbors(node):
+                        if "Latitude" in graph.node[neighbor]:
+                            latitude += graph.node[neighbor]["Latitude"]
+                        else:
+                            print "Could NOT estimate latitude for node {} based on neighbors. Aborting conversion.".format(node)
+                            raise RuntimeError("Could not approximate latitude")
+                    print "Successfully estimated latitude for node {} based on neighbors".format(node)
+                    latitude /= float(len(list(graph.neighbors(node))))
+
+                yml_contents["nodes"][str(node)] = {'Longitude': longitude, "Latitude": latitude}
+                for data_key, data_value in data.iteritems():
+                    if data_key == "Longitude" or data_key == "Latitude":
+                        continue
+                    else:
+                        yml_contents["nodes"][str(node)][unidecode(str(data_key))] = unidecode(str(data_value))
+
+
+            for u,v, data in graph.edges(data=True):
+                if u not in nodes:
+                    print("Node {} not contained in graph; edge {} not considered. This should be due to the graph not being connected.".format(u, (u,v)))
+                    continue
+                if v not in nodes:
+                    print(
+                        "Node {} not contained in graph; edge {} not considered. This should be due to the graph not being connected.".format(
+                            v, (u, v)))
+                    continue
+                if (str(u), str(v)) in yml_contents["edges"]:
+                    print "Edge {} already known (MultiGraph), discarding it".format((str(u), str(v)))
+                    continue
+                else:
+                    yml_contents["edges"].append([str(u),str(v)])
+
+            output_filename = os.path.join(yml_path, network_name + ".yml")
+            print "writing {}".format(output_filename)
+            with open(output_filename, "w") as output:
+                yaml.dump(yml_contents, output)
+            print "file {} sucessfully converted to yml file {}! \n\n\n".format(net_file, output_filename)
+
+        except Exception as ex:
+            import traceback
+            print "conversion of file {} to yml was NOT sucessful! \n\n\n".format(net_file)
+            print "non successfull! {}\n\n\n".format(str(ex))
+            traceback.print_exc()
+
+
+
+def summarize_topology_zoo_graphs(min_number_nodes=20, max_number_nodes=100):
+    network_files = glob.glob(os.path.join(DATA_PATH, "topologyZoo/") + "*.yml")
+    #network_files = glob.glob(os.path.join(DATA_PATH, "topologyZoo/") + "DeutscheTelekom.yml")
+
+    networks_by_name = {}
+
+    multiple_occuring_networks = {}
+
+    reader = TopologyZooReader()
+
+    print "network_files", network_files
+
+    raw_parameters = {"topology": "UNDEFINED",
+                      "node_types": ["universal"],
+                      "node_capacity": 100.0,
+                      "edge_capacity": 100.0,
+                      "node_type_distribution": 1.0}
+
+    for net_file in network_files:
+        # Extract name of network from file path
+        path, filename = os.path.split(net_file)
+        network_name = os.path.splitext(filename)[0]
+
+        raw_parameters["topology"] = network_name
+
+        print "trying to parse {} ".format(network_name)
+        graph = reader.read_from_yaml(raw_parameters)
+
+        if not graph.check_connectivity():
+            print("graph {} is NOT connected!".format(network_name))
+            continue
+
+        networks_by_name[network_name] = graph
+
+        nameWithoutDate = ''.join([i for i in network_name if not i.isdigit()])
+        dateInformation = ''.join([i for i in network_name if i.isdigit()])
+
+        if nameWithoutDate != network_name and len(dateInformation) >= 4:
+            # there is some sort of year inormation included
+            if nameWithoutDate not in multiple_occuring_networks:
+                multiple_occuring_networks[nameWithoutDate] = []
+
+            multiple_occuring_networks[nameWithoutDate].append((network_name, dateInformation))
+
+    # select only the most current graphs
+    for mNetwork in multiple_occuring_networks.keys():
+        listOfNetworks = multiple_occuring_networks[mNetwork]
+        bestName = None
+        bestDate = None
+        for network_name, dateInformation in listOfNetworks:
+            if len(dateInformation) < 6:
+                dateInformation = dateInformation + "0" * (6 - len(dateInformation))
+            if bestDate is None or int(dateInformation) > int(bestDate):
+                bestDate = dateInformation
+                bestName = network_name
+
+        for network_name, dateInformation in listOfNetworks:
+            if network_name != bestName:
+                print("deleting {} as it is superseded by {}".format(network_name, bestName))
+                del networks_by_name[network_name]
+
+    print networks_by_name
+    print multiple_occuring_networks
+
+    # order networks according to increasing complexity
+    orderedDictOfNetworks = {}
+    for network, graph in networks_by_name.items():
+        n = graph.get_number_of_nodes()
+        if n < min_number_nodes or n > max_number_nodes:
+            print "not considering graph ", network
+            continue
+        if n not in orderedDictOfNetworks.keys():
+            orderedDictOfNetworks[n] = []
+        orderedDictOfNetworks[n].append((network, graph))
+
+
+
+
+    numberOfgraphs = 0
+    for numberOfNodes in sorted(orderedDictOfNetworks.keys()):
+        print("n = {}: {}\n\t{}".format(numberOfNodes, len(orderedDictOfNetworks[numberOfNodes]),[(x,y.get_number_of_edges()) for (x,y) in orderedDictOfNetworks[numberOfNodes]]))
+        numberOfgraphs += len(orderedDictOfNetworks[numberOfNodes])
+
+    print("\n" + "-" * 40)
+    print("Selected {} graphs.".format(numberOfgraphs))
+
+    print("\nsaving list of selected topologies..\n")
+
+
+
+
+

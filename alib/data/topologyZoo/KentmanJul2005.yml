@@ -35,115 +35,115 @@ edges:
   - '15'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.33265
     Longitude: 0.5046
-    !!python/unicode 'label': !!python/unicode 'Blue Bell Hill'
-    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+    label: Blue Bell Hill
+    type: Radio Mast
   '1':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.18249
     Longitude: 0.93678
-    !!python/unicode 'label': !!python/unicode 'Wye'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    label: Wye
+    type: HE/FE site
   '10':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.15222
     Longitude: 0.24307
-    !!python/unicode 'label': !!python/unicode 'CCCU-S'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    label: CCCU-S
+    type: HE/FE site
   '11':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.35895
     Longitude: 1.40616
-    !!python/unicode 'label': !!python/unicode 'CCCU-T'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    label: CCCU-T
+    type: HE/FE site
   '12':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.37992
     Longitude: 0.51438
-    !!python/unicode 'label': !!python/unicode 'KIAD-R'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    label: KIAD-R
+    type: HE/FE site
   '13':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.27537
     Longitude: 1.09078
-    !!python/unicode 'label': !!python/unicode 'KIAD-C'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    label: KIAD-C
+    type: HE/FE site
   '14':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.27115
     Longitude: 0.49799
-    !!python/unicode 'label': !!python/unicode 'KIAD-M'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    label: KIAD-M
+    type: HE/FE site
   '15':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.18333
     Longitude: 0.28333
-    !!python/unicode 'label': !!python/unicode 'Tonbridge'
-    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+    label: Tonbridge
+    type: Radio Mast
   '2':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.29169
     Longitude: 0.97929
-    !!python/unicode 'label': !!python/unicode 'Dunkirk'
-    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+    label: Dunkirk
+    type: Radio Mast
   '3':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.4
     Longitude: 0.43333
-    !!python/unicode 'label': !!python/unicode 'Beacon Hill'
-    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+    label: Beacon Hill
+    type: Radio Mast
   '4':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.27904
     Longitude: 1.07992
-    !!python/unicode 'label': !!python/unicode 'Kent'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    label: Kent
+    type: HE/FE site
   '5':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.37891
     Longitude: 0.52786
-    !!python/unicode 'label': !!python/unicode 'Horsted'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    label: Horsted
+    type: HE/FE site
   '6':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.08333
     Longitude: 0.53333
-    !!python/unicode 'label': !!python/unicode 'Cranbrook'
-    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+    label: Cranbrook
+    type: Radio Mast
   '7':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.18249
     Longitude: 0.93678
-    !!python/unicode 'label': !!python/unicode 'NTL-Wye'
-    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+    label: NTL-Wye
+    type: Radio Mast
   '8':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.44628
     Longitude: 0.07703
-    !!python/unicode 'geocode_append': !!python/unicode 'Medway'
-    !!python/unicode 'label': !!python/unicode 'University of Greenwich'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    geocode_append: Medway
+    label: University of Greenwich
+    type: HE/FE site
   '9':
-    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
-    !!python/unicode 'Internal': 1
+    Country: United Kingdom
+    Internal: '1'
     Latitude: 51.27934
     Longitude: 1.08936
-    !!python/unicode 'label': !!python/unicode 'CCCU-C'
-    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+    label: CCCU-C
+    type: HE/FE site

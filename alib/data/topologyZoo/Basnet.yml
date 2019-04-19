@@ -13,43 +13,43 @@ edges:
   - '6'
 nodes:
   '0':
-    !!python/unicode 'Country': !!python/unicode 'Belarus'
-    !!python/unicode 'Internal': 1
+    Country: Belarus
+    Internal: '1'
     Latitude: 53.67679
     Longitude: 23.83029
-    !!python/unicode 'label': !!python/unicode 'Grodno'
+    label: Grodno
   '1':
-    !!python/unicode 'Country': !!python/unicode 'Belarus'
-    !!python/unicode 'Internal': 1
+    Country: Belarus
+    Internal: '1'
     Latitude: 53.9
     Longitude: 27.56667
-    !!python/unicode 'label': !!python/unicode 'Minsk'
+    label: Minsk
   '2':
-    !!python/unicode 'Country': !!python/unicode 'Belarus'
-    !!python/unicode 'Internal': 1
+    Country: Belarus
+    Internal: '1'
     Latitude: 55.19048
     Longitude: 30.2033
-    !!python/unicode 'label': !!python/unicode 'Vitebsk'
+    label: Vitebsk
   '3':
-    !!python/unicode 'Country': !!python/unicode 'Belarus'
-    !!python/unicode 'Internal': 1
+    Country: Belarus
+    Internal: '1'
     Latitude: 53.9141
     Longitude: 30.33764
-    !!python/unicode 'label': !!python/unicode 'Mogilev'
+    label: Mogilev
   '4':
-    !!python/unicode 'Country': !!python/unicode 'Belarus'
-    !!python/unicode 'Internal': 1
+    Country: Belarus
+    Internal: '1'
     Latitude: 52.43826
     Longitude: 30.98227
-    !!python/unicode 'label': !!python/unicode 'Gomel'
+    label: Gomel
   '5':
-    !!python/unicode 'Country': !!python/unicode 'Belarus'
-    !!python/unicode 'Internal': 1
+    Country: Belarus
+    Internal: '1'
     Latitude: 52.09755
     Longitude: 23.68775
-    !!python/unicode 'label': !!python/unicode 'Brest'
+    label: Brest
   '6':
-    !!python/unicode 'Internal': 0
+    Internal: '0'
     Latitude: 53.9
     Longitude: 27.56667
-    !!python/unicode 'label': !!python/unicode 'Pionier GEANT 2'
+    label: Pionier GEANT 2
