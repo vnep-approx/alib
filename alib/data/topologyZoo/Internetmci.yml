@@ -1,54 +1,206 @@
-nodes:
-  '0': {Latitude: 29.76328, Longitude: -95.36327}
-  '1': {Latitude: 26.23786, Longitude: -80.12477}
-  '2': {Latitude: 33.81261, Longitude: -84.63438}
-  '3': {Latitude: 32.78306, Longitude: -96.80667}
-  '4': {Latitude: 42.13565, Longitude: -71.97007}
-  '5': {Latitude: 40.71427, Longitude: -74.00597}
-  '6': {Latitude: 34.05223, Longitude: -118.24368}
-  '7': {Latitude: 34.1064, Longitude: -117.37032}
-  '8': {Latitude: 40.79871, Longitude: -74.23904}
-  '9': {Latitude: 38.89511, Longitude: -77.03637}
-  '10': {Latitude: 36.07264, Longitude: -79.79198}
-  '11': {Latitude: 47.60621, Longitude: -122.33207}
-  '12': {Latitude: 37.77493, Longitude: -122.41942}
-  '13': {Latitude: 38.58157, Longitude: -121.4944}
-  '14': {Latitude: 39.73915, Longitude: -104.9847}
-  '15': {Latitude: 39.09112, Longitude: -94.41551}
-  '16': {Latitude: 36.99228, Longitude: -91.96987}
-  '17': {Latitude: 41.80892, Longitude: -88.01117}
-  '18': {Latitude: 41.31366, Longitude: -81.72457}
 edges:
-- ['0', '1']
-- ['0', '3']
-- ['1', '2']
-- ['2', '10']
-- ['2', '3']
-- ['2', '9']
-- ['2', '7']
-- ['3', '16']
-- ['3', '15']
-- ['3', '7']
-- ['4', '8']
-- ['4', '9']
-- ['4', '5']
-- ['4', '16']
-- ['5', '8']
-- ['6', '12']
-- ['6', '7']
-- ['7', '12']
-- ['8', '9']
-- ['8', '14']
-- ['8', '16']
-- ['8', '18']
-- ['9', '16']
-- ['9', '10']
-- ['11', '12']
-- ['11', '14']
-- ['12', '13']
-- ['12', '14']
-- ['14', '16']
-- ['14', '15']
-- ['15', '16']
-- ['16', '17']
-- ['17', '18']
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '0'
+  - '3'
+- - '1'
+  - '2'
+- - '1'
+  - '2'
+- - '2'
+  - '10'
+- - '2'
+  - '3'
+- - '2'
+  - '9'
+- - '2'
+  - '7'
+- - '3'
+  - '16'
+- - '3'
+  - '15'
+- - '3'
+  - '7'
+- - '4'
+  - '8'
+- - '4'
+  - '8'
+- - '4'
+  - '9'
+- - '4'
+  - '5'
+- - '4'
+  - '16'
+- - '5'
+  - '8'
+- - '5'
+  - '8'
+- - '6'
+  - '12'
+- - '6'
+  - '7'
+- - '6'
+  - '7'
+- - '7'
+  - '12'
+- - '7'
+  - '12'
+- - '8'
+  - '9'
+- - '8'
+  - '9'
+- - '8'
+  - '14'
+- - '8'
+  - '16'
+- - '8'
+  - '18'
+- - '8'
+  - '18'
+- - '9'
+  - '16'
+- - '9'
+  - '10'
+- - '11'
+  - '12'
+- - '11'
+  - '12'
+- - '11'
+  - '14'
+- - '12'
+  - '14'
+- - '12'
+  - '14'
+- - '12'
+  - '13'
+- - '12'
+  - '13'
+- - '14'
+  - '16'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '16'
+  - '17'
+- - '16'
+  - '17'
+- - '17'
+  - '18'
+nodes:
+  '0':
+    Country: United States
+    Internal: 1
+    Latitude: 29.76328
+    Longitude: -95.36327
+    label: Houston
+  '1':
+    Country: United States
+    Internal: 1
+    Latitude: 26.23786
+    Longitude: -80.12477
+    label: Pompano Beach
+  '10':
+    Country: United States
+    Internal: 1
+    Latitude: 36.07264
+    Longitude: -79.79198
+    label: Greensboro
+  '11':
+    Country: United States
+    Internal: 1
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle
+  '12':
+    Country: United States
+    Internal: 1
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: San Francisco
+  '13':
+    Country: United States
+    Internal: 1
+    Latitude: 38.58157
+    Longitude: -121.4944
+    label: Sacramento
+  '14':
+    Country: United States
+    Internal: 1
+    Latitude: 39.73915
+    Longitude: -104.9847
+    label: Denver
+  '15':
+    Country: United States
+    Internal: 1
+    Latitude: 39.09112
+    Longitude: -94.41551
+    label: Independence
+  '16':
+    Country: United States
+    Internal: 1
+    Latitude: 36.99228
+    Longitude: -91.96987
+    label: Willow Springs
+  '17':
+    Country: United States
+    Internal: 1
+    Latitude: 41.80892
+    Longitude: -88.01117
+    label: Downers Grove
+  '18':
+    Country: United States
+    Internal: 1
+    Latitude: 41.31366
+    Longitude: -81.72457
+    label: North Royalton
+  '2':
+    Country: United States
+    Internal: 1
+    Latitude: 33.81261
+    Longitude: -84.63438
+    label: Austell
+  '3':
+    Country: United States
+    Internal: 1
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas
+  '4':
+    Country: United States
+    Internal: 1
+    Latitude: 42.13565
+    Longitude: -71.97007
+    label: Charlton
+  '5':
+    Country: United States
+    Internal: 1
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+  '6':
+    Country: United States
+    Internal: 1
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+  '7':
+    Country: United States
+    Internal: 1
+    Latitude: 34.1064
+    Longitude: -117.37032
+    label: Rialto
+  '8':
+    Country: United States
+    Internal: 1
+    Latitude: 40.79871
+    Longitude: -74.23904
+    label: West Orange
+  '9':
+    Country: United States
+    Internal: 1
+    Latitude: 38.89511
+    Longitude: -77.03637
+    label: Washington, DC

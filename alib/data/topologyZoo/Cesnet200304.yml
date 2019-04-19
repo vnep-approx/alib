@@ -1,64 +1,239 @@
-nodes:
-  '0': {Latitude: 50.20923, Longitude: 15.83277}
-  '1': {Latitude: 49.90436, Longitude: 16.44413}
-  '2': {Latitude: 49.14404, Longitude: 15.00301}
-  '3': {Latitude: 50.04075, Longitude: 15.77659}
-  '4': {Latitude: 49.27747, Longitude: 16.99897}
-  '5': {Latitude: 49.21667, Longitude: 17.66667}
-  '6': {Latitude: 49.59552, Longitude: 17.25175}
-  '7': {Latitude: 49.19522, Longitude: 16.60796}
-  '8': {Latitude: 48.75897, Longitude: 16.88203}
-  '9': {Latitude: 49.83465, Longitude: 18.28204}
-  '10': {Latitude: 49.99403, Longitude: 14.85922}
-  '11': {Latitude: 49.00364, Longitude: 14.77065}
-  '12': {Latitude: 50.08804, Longitude: 14.42076}
-  '13': {Latitude: 49.93866, Longitude: 17.90257}
-  '14': {Latitude: 49.84452, Longitude: 18.49166}
-  '15': {Latitude: 49.94839, Longitude: 15.26816}
-  '16': {Latitude: 50.17734, Longitude: 14.35733}
-  '17': {Latitude: 49.41441, Longitude: 14.6578}
-  '18': {Latitude: 49.3088, Longitude: 14.1475}
-  '19': {Latitude: 50.08804, Longitude: 14.42076}
-  '20': {Latitude: 50.08804, Longitude: 14.42076}
-  '21': {Latitude: 50.07963, Longitude: 12.37392}
-  '22': {Latitude: 49.74747, Longitude: 13.37759}
-  '23': {Latitude: 50.78215, Longitude: 14.21478}
-  '24': {Latitude: 50.6607, Longitude: 14.03227}
-  '25': {Latitude: 50.08804, Longitude: 14.42076}
-  '26': {Latitude: 50.76711, Longitude: 15.05619}
-  '27': {Latitude: 50.14242, Longitude: 15.11881}
-  '28': {Latitude: 48.97447, Longitude: 14.47434}
 edges:
-- ['0', '1']
-- ['0', '26']
-- ['0', '3']
-- ['0', '9']
-- ['2', '28']
-- ['3', '25']
-- ['3', '15']
-- ['4', '7']
-- ['5', '6']
-- ['5', '7']
-- ['6', '9']
-- ['6', '7']
-- ['7', '8']
-- ['7', '25']
-- ['7', '28']
-- ['9', '14']
-- ['9', '13']
-- ['10', '27']
-- ['11', '28']
-- ['12', '25']
-- ['16', '25']
-- ['17', '25']
-- ['18', '28']
-- ['19', '25']
-- ['20', '25']
-- ['21', '22']
-- ['22', '24']
-- ['22', '25']
-- ['23', '24']
-- ['24', '25']
-- ['25', '26']
-- ['25', '27']
-- ['25', '28']
+- - '0'
+  - '1'
+- - '0'
+  - '26'
+- - '0'
+  - '3'
+- - '0'
+  - '9'
+- - '2'
+  - '28'
+- - '3'
+  - '25'
+- - '3'
+  - '15'
+- - '4'
+  - '7'
+- - '5'
+  - '6'
+- - '5'
+  - '7'
+- - '6'
+  - '9'
+- - '6'
+  - '7'
+- - '7'
+  - '8'
+- - '7'
+  - '25'
+- - '7'
+  - '28'
+- - '9'
+  - '14'
+- - '9'
+  - '13'
+- - '10'
+  - '27'
+- - '11'
+  - '28'
+- - '12'
+  - '25'
+- - '16'
+  - '25'
+- - '17'
+  - '25'
+- - '18'
+  - '28'
+- - '19'
+  - '25'
+- - '20'
+  - '25'
+- - '21'
+  - '22'
+- - '22'
+  - '24'
+- - '22'
+  - '25'
+- - '23'
+  - '24'
+- - '24'
+  - '25'
+- - '25'
+  - '26'
+- - '25'
+  - '27'
+- - '25'
+  - '28'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.20923
+    Longitude: 15.83277
+    !!python/unicode 'label': !!python/unicode 'Hradec Kralove'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.90436
+    Longitude: 16.44413
+    !!python/unicode 'label': !!python/unicode 'Ceska Trebova'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.99403
+    Longitude: 14.85922
+    !!python/unicode 'label': !!python/unicode 'Kostelec n C.L'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.00364
+    Longitude: 14.77065
+    !!python/unicode 'label': !!python/unicode 'Trebon'
+  '12':
+    !!python/unicode 'Internal': 0
+    Latitude: 50.08804
+    Longitude: 14.42076
+    !!python/unicode 'label': !!python/unicode 'GEANT'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.93866
+    Longitude: 17.90257
+    !!python/unicode 'label': !!python/unicode 'Opava'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.84452
+    Longitude: 18.49166
+    !!python/unicode 'label': !!python/unicode 'Karvina'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.94839
+    Longitude: 15.26816
+    !!python/unicode 'label': !!python/unicode 'Kutna Hora'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.17734
+    Longitude: 14.35733
+    !!python/unicode 'label': !!python/unicode 'Rez'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.41441
+    Longitude: 14.6578
+    !!python/unicode 'label': !!python/unicode 'Tabor'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.3088
+    Longitude: 14.1475
+    !!python/unicode 'label': !!python/unicode 'Pisek'
+  '19':
+    !!python/unicode 'Internal': 0
+    Latitude: 50.08804
+    Longitude: 14.42076
+    !!python/unicode 'label': !!python/unicode 'NIX'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.14404
+    Longitude: 15.00301
+    !!python/unicode 'label': !!python/unicode 'Jindrichuv Hradec'
+  '20':
+    !!python/unicode 'Internal': 0
+    Latitude: 50.08804
+    Longitude: 14.42076
+    !!python/unicode 'label': !!python/unicode 'USA'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.07963
+    Longitude: 12.37392
+    !!python/unicode 'label': !!python/unicode 'Cheb'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.74747
+    Longitude: 13.37759
+    !!python/unicode 'label': !!python/unicode 'Plzen'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.78215
+    Longitude: 14.21478
+    !!python/unicode 'label': !!python/unicode 'Decin'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.6607
+    Longitude: 14.03227
+    !!python/unicode 'label': !!python/unicode 'Usti nad Labem'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.08804
+    Longitude: 14.42076
+    !!python/unicode 'label': !!python/unicode 'Praha'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.76711
+    Longitude: 15.05619
+    !!python/unicode 'label': !!python/unicode 'Liberec'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.14242
+    Longitude: 15.11881
+    !!python/unicode 'label': !!python/unicode 'Podebrady'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.97447
+    Longitude: 14.47434
+    !!python/unicode 'label': !!python/unicode 'Ceske Budejovice'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.04075
+    Longitude: 15.77659
+    !!python/unicode 'label': !!python/unicode 'Pardubice'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.27747
+    Longitude: 16.99897
+    !!python/unicode 'label': !!python/unicode 'Vyskov'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.21667
+    Longitude: 17.66667
+    !!python/unicode 'label': !!python/unicode 'Zlin'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.59552
+    Longitude: 17.25175
+    !!python/unicode 'label': !!python/unicode 'Olomouc'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.19522
+    Longitude: 16.60796
+    !!python/unicode 'label': !!python/unicode 'Brno'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.75897
+    Longitude: 16.88203
+    !!python/unicode 'label': !!python/unicode 'Breclav,Lednice'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.83465
+    Longitude: 18.28204
+    !!python/unicode 'label': !!python/unicode 'Ostrava'

@@ -1,58 +1,249 @@
-nodes:
-  '0': {Latitude: 51.27537, Longitude: 1.09078}
-  '1': {Latitude: 51.27402, Longitude: 1.08782}
-  '3': {Latitude: 51.39485, Longitude: 0.54608}
-  '4': {Latitude: 51.13959, Longitude: 0.86101}
-  '5': {Latitude: 51.27115, Longitude: 0.49799}
-  '6': {Latitude: 51.35426, Longitude: 1.43483}
-  '7': {Latitude: 51.36106, Longitude: 1.43006}
-  '8': {Latitude: 51.27631, Longitude: 0.52191}
-  '9': {Latitude: 51.21667, Longitude: 0.33333}
-  '10': {Latitude: 51.18249, Longitude: 0.93678}
-  '11': {Latitude: 51.08333, Longitude: 0.53333}
-  '12': {Latitude: 51.18333, Longitude: 0.28333}
-  '13': {Latitude: 51.18787, Longitude: 0.2647}
-  '14': {Latitude: 51.29762, Longitude: 1.06121}
-  '15': {Latitude: 51.33265, Longitude: 0.5046}
-  '16': {Latitude: 51.4, Longitude: 0.43333}
-  '17': {Latitude: 51.29169, Longitude: 0.97929}
-  '18': {Latitude: 51.45, Longitude: 0.21667}
-  '19': {Latitude: 51.37992, Longitude: 0.51438}
-  '20': {Latitude: 51.44628, Longitude: 0.07703}
-  '21': {Latitude: 51.44628, Longitude: 0.07703}
-  '22': {Latitude: 51.27934, Longitude: 1.08936}
-  '23': {Latitude: 51.18249, Longitude: 0.93678}
-  '24': {Latitude: 51.25665, Longitude: 0.54953}
-  '25': {Latitude: 51.15222, Longitude: 0.24307}
-  '26': {Latitude: 51.35895, Longitude: 1.40616}
-  '27': {Latitude: 51.28554, Longitude: 0.21928}
 edges:
-- ['0', '14']
-- ['1', '14']
-- ['3', '21']
-- ['4', '23']
-- ['5', '15']
-- ['6', '26']
-- ['7', '14']
-- ['8', '21']
-- ['9', '12']
-- ['10', '11']
-- ['10', '23']
-- ['11', '15']
-- ['12', '25']
-- ['13', '25']
-- ['14', '17']
-- ['14', '21']
-- ['14', '26']
-- ['15', '16']
-- ['15', '25']
-- ['15', '21']
-- ['16', '17']
-- ['16', '19']
-- ['16', '21']
-- ['18', '20']
-- ['20', '21']
-- ['21', '24']
-- ['21', '25']
-- ['21', '27']
-- ['22', '23']
+- - '0'
+  - '14'
+- - '1'
+  - '14'
+- - '3'
+  - '21'
+- - '4'
+  - '23'
+- - '5'
+  - '15'
+- - '6'
+  - '26'
+- - '7'
+  - '14'
+- - '8'
+  - '21'
+- - '9'
+  - '12'
+- - '10'
+  - '11'
+- - '10'
+  - '23'
+- - '11'
+  - '15'
+- - '12'
+  - '25'
+- - '13'
+  - '25'
+- - '14'
+  - '17'
+- - '14'
+  - '21'
+- - '14'
+  - '26'
+- - '15'
+  - '16'
+- - '15'
+  - '25'
+- - '15'
+  - '21'
+- - '16'
+  - '17'
+- - '16'
+  - '19'
+- - '16'
+  - '21'
+- - '18'
+  - '20'
+- - '20'
+  - '21'
+- - '21'
+  - '24'
+- - '21'
+  - '25'
+- - '21'
+  - '27'
+- - '22'
+  - '23'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.27537
+    Longitude: 1.09078
+    !!python/unicode 'label': !!python/unicode 'KIAD-C'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.27402
+    Longitude: 1.08782
+    !!python/unicode 'label': !!python/unicode 'Canterbury College'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.18249
+    Longitude: 0.93678
+    !!python/unicode 'label': !!python/unicode 'NTL-Wye'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.08333
+    Longitude: 0.53333
+    !!python/unicode 'label': !!python/unicode 'Cranbrook'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.18333
+    Longitude: 0.28333
+    !!python/unicode 'label': !!python/unicode 'Tonbridge'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.18787
+    Longitude: 0.2647
+    !!python/unicode 'label': !!python/unicode 'West Kent College'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.29762
+    Longitude: 1.06121
+    !!python/unicode 'label': !!python/unicode 'UoK-C'
+    !!python/unicode 'type': !!python/unicode 'PoP Site'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.33265
+    Longitude: 0.5046
+    !!python/unicode 'label': !!python/unicode 'Blue Bell Hill'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.4
+    Longitude: 0.43333
+    !!python/unicode 'label': !!python/unicode 'Beacon Hill'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.29169
+    Longitude: 0.97929
+    !!python/unicode 'label': !!python/unicode 'Dunkirk'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.45
+    Longitude: 0.21667
+    !!python/unicode 'label': !!python/unicode 'NW Kent College - Dartford'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.37992
+    Longitude: 0.51438
+    !!python/unicode 'label': !!python/unicode 'KIAD-R'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.44628
+    Longitude: 0.07703
+    !!python/unicode 'label': !!python/unicode 'UoG-AH'
+    !!python/unicode 'type': !!python/unicode 'PoP Site'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.44628
+    Longitude: 0.07703
+    !!python/unicode 'geocode_append': !!python/unicode 'Medway'
+    !!python/unicode 'label': !!python/unicode 'University of Greenwich'
+    !!python/unicode 'type': !!python/unicode 'PoP Site'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.27934
+    Longitude: 1.08936
+    !!python/unicode 'label': !!python/unicode 'CCCU-C'
+    !!python/unicode 'type': !!python/unicode 'PoP Site'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.18249
+    Longitude: 0.93678
+    !!python/unicode 'label': !!python/unicode 'IC-Wye'
+    !!python/unicode 'type': !!python/unicode 'PoP Site'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.25665
+    Longitude: 0.54953
+    !!python/unicode 'label': !!python/unicode 'EIS-Maidstone'
+    !!python/unicode 'type': !!python/unicode 'PoP Site'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.15222
+    Longitude: 0.24307
+    !!python/unicode 'label': !!python/unicode 'CCCU-S'
+    !!python/unicode 'type': !!python/unicode 'PoP Site'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.35895
+    Longitude: 1.40616
+    !!python/unicode 'label': !!python/unicode 'CCCU-T'
+    !!python/unicode 'type': !!python/unicode 'PoP Site'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.28554
+    Longitude: 0.21928
+    !!python/unicode 'label': !!python/unicode 'Dorton College'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.39485
+    Longitude: 0.54608
+    !!python/unicode 'label': !!python/unicode 'Mid Kent College'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.13959
+    Longitude: 0.86101
+    !!python/unicode 'label': !!python/unicode 'South Kent College - Ashford'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.27115
+    Longitude: 0.49799
+    !!python/unicode 'label': !!python/unicode 'KIAD-O'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.35426
+    Longitude: 1.43483
+    !!python/unicode 'label': !!python/unicode 'Thanet College'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.36106
+    Longitude: 1.43006
+    !!python/unicode 'label': !!python/unicode 'Hilderstone College'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.27631
+    Longitude: 0.52191
+    !!python/unicode 'label': !!python/unicode 'Kent ACL'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.21667
+    Longitude: 0.33333
+    !!python/unicode 'label': !!python/unicode 'Hadlow College'
+    !!python/unicode 'type': !!python/unicode 'Connected Site'

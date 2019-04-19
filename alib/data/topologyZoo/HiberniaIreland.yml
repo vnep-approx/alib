@@ -1,18 +1,70 @@
-nodes:
-  '0': {Latitude: 53.34399, Longitude: -6.26719}
-  '1': {Latitude: 53.27194, Longitude: -9.04889}
-  '2': {Latitude: 52.66472, Longitude: -8.62306}
-  '3': {Latitude: 51.89861, Longitude: -8.49583}
-  '4': {Latitude: 52.25833, Longitude: -7.11194}
-  '5': {Latitude: 53.03441, Longitude: -7.29979}
-  '6': {Latitude: 53.34399, Longitude: -6.26719}
-  '7': {Latitude: 53.34399, Longitude: -6.26719}
 edges:
-- ['0', '4']
-- ['0', '5']
-- ['0', '6']
-- ['0', '7']
-- ['1', '2']
-- ['2', '3']
-- ['2', '5']
-- ['3', '4']
+- - '0'
+  - '4'
+- - '0'
+  - '5'
+- - '0'
+  - '6'
+- - '0'
+  - '7'
+- - '1'
+  - '2'
+- - '2'
+  - '3'
+- - '2'
+  - '5'
+- - '3'
+  - '4'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Ireland'
+    !!python/unicode 'Internal': 1
+    Latitude: 53.34399
+    Longitude: -6.26719
+    !!python/unicode 'label': !!python/unicode 'Dublin'
+    !!python/unicode 'type': !!python/unicode 'Large Node'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Ireland'
+    !!python/unicode 'Internal': 1
+    Latitude: 53.27194
+    Longitude: -9.04889
+    !!python/unicode 'label': !!python/unicode 'Galway'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Ireland'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.66472
+    Longitude: -8.62306
+    !!python/unicode 'label': !!python/unicode 'Limerick'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Ireland'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.89861
+    Longitude: -8.49583
+    !!python/unicode 'label': !!python/unicode 'Cork'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Ireland'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.25833
+    Longitude: -7.11194
+    !!python/unicode 'label': !!python/unicode 'Waterford'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Ireland'
+    !!python/unicode 'Internal': 1
+    Latitude: 53.03441
+    Longitude: -7.29979
+    !!python/unicode 'label': !!python/unicode 'Portlaioise'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '6':
+    !!python/unicode 'Internal': 0
+    Latitude: 53.34399
+    Longitude: -6.26719
+    !!python/unicode 'label': !!python/unicode 'None'
+  '7':
+    !!python/unicode 'Internal': 0
+    Latitude: 53.34399
+    Longitude: -6.26719
+    !!python/unicode 'label': !!python/unicode 'None'

@@ -1,114 +1,468 @@
-nodes:
-  '0': {Latitude: 54.45018, Longitude: -110.2017}
-  '1': {Latitude: 55.16667, Longitude: -118.80271}
-  '2': {Latitude: 53.55014, Longitude: -113.46871}
-  '3': {Latitude: 56.7335, Longitude: -111.38519}
-  '4': {Latitude: 50.66648, Longitude: -120.3192}
-  '5': {Latitude: 40.9126, Longitude: -73.83708}
-  '6': {Latitude: 55.7666, Longitude: -120.23616}
-  '7': {Latitude: 53.9166, Longitude: -122.75301}
-  '8': {Latitude: 49.88307, Longitude: -119.48568}
-  '9': {Latitude: 49.48062, Longitude: -119.58584}
-  '10': {Latitude: 50.20011, Longitude: -66.38208}
-  '11': {Latitude: 46.23525, Longitude: -63.12671}
-  '12': {Latitude: 40.71427, Longitude: -74.00597}
-  '13': {Latitude: 45.41117, Longitude: -75.69812}
-  '14': {Latitude: 45.50884, Longitude: -73.58781}
-  '15': {Latitude: 45.40008, Longitude: -71.89908}
-  '16': {Latitude: 46.81228, Longitude: -71.21454}
-  '17': {Latitude: 48.42749, Longitude: -71.06352}
-  '18': {Latitude: 48.44879, Longitude: -68.52396}
-  '19': {Latitude: 49.21679, Longitude: -68.14894}
-  '20': {Latitude: 45.27271, Longitude: -66.06766}
-  '21': {Latitude: 46.11594, Longitude: -64.80186}
-  '22': {Latitude: 44.646, Longitude: -63.57333}
-  '23': {Latitude: 45.94541, Longitude: -66.66558}
-  '24': {Latitude: 47.56494, Longitude: -52.70931}
-  '25': {Latitude: 45.36685, Longitude: -63.28198}
-  '26': {Latitude: 49.69999, Longitude: -112.81856}
-  '27': {Latitude: 51.05011, Longitude: -114.08529}
-  '28': {Latitude: 42.88645, Longitude: -78.87837}
-  '29': {Latitude: 43.70011, Longitude: -79.4163}
-  '30': {Latitude: 48.43294, Longitude: -123.3693}
-  '31': {Latitude: 47.60621, Longitude: -122.33207}
-  '32': {Latitude: 49.68657, Longitude: -124.9936}
-  '33': {Latitude: 49.24966, Longitude: -123.11934}
-  '34': {Latitude: 41.85003, Longitude: -87.65005}
-  '35': {Latitude: 34.05223, Longitude: -118.24368}
-  '36': {Latitude: 37.44188, Longitude: -122.14302}
-  '37': {Latitude: 37.77493, Longitude: -122.41942}
-  '38': {Latitude: 50.05006, Longitude: -110.66834}
-  '39': {Latitude: 52.26682, Longitude: -113.802}
-  '40': {Latitude: 38.89511, Longitude: -77.03637}
-  '41': {Latitude: 33.749, Longitude: -84.38798}
-  '42': {Latitude: 32.78306, Longitude: -96.80667}
-  '43': {Latitude: 46.49, Longitude: -80.99001}
-  '44': {Latitude: 48.4001, Longitude: -89.31683}
-  '45': {Latitude: 49.8844, Longitude: -97.14704}
-  '46': {Latitude: 52.11679, Longitude: -106.63452}
-  '47': {Latitude: 50.45008, Longitude: -104.6178}
 edges:
-- ['0', '2']
-- ['1', '2']
-- ['1', '6']
-- ['2', '3']
-- ['2', '4']
-- ['2', '39']
-- ['2', '46']
-- ['4', '33']
-- ['4', '5']
-- ['4', '7']
-- ['5', '8']
-- ['6', '7']
-- ['8', '9']
-- ['8', '27']
-- ['8', '33']
-- ['10', '19']
-- ['11', '25']
-- ['11', '21']
-- ['12', '40']
-- ['12', '28']
-- ['12', '14']
-- ['13', '29']
-- ['13', '14']
-- ['14', '16']
-- ['14', '15']
-- ['15', '16']
-- ['16', '17']
-- ['16', '21']
-- ['16', '23']
-- ['17', '18']
-- ['18', '19']
-- ['20', '21']
-- ['20', '22']
-- ['20', '23']
-- ['21', '25']
-- ['22', '24']
-- ['22', '25']
-- ['24', '25']
-- ['26', '27']
-- ['27', '33']
-- ['27', '38']
-- ['27', '39']
-- ['28', '29']
-- ['29', '34']
-- ['29', '43']
-- ['30', '32']
-- ['30', '33']
-- ['30', '31']
-- ['31', '33']
-- ['31', '35']
-- ['31', '36']
-- ['31', '37']
-- ['34', '42']
-- ['34', '45']
-- ['35', '40']
-- ['35', '36']
-- ['36', '37']
-- ['38', '47']
-- ['40', '41']
-- ['41', '42']
-- ['43', '44']
-- ['44', '45']
-- ['45', '46']
-- ['45', '47']
+- - '0'
+  - '2'
+- - '1'
+  - '2'
+- - '1'
+  - '6'
+- - '2'
+  - '3'
+- - '2'
+  - '4'
+- - '2'
+  - '39'
+- - '2'
+  - '46'
+- - '4'
+  - '33'
+- - '4'
+  - '5'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '6'
+  - '7'
+- - '8'
+  - '9'
+- - '8'
+  - '27'
+- - '8'
+  - '33'
+- - '10'
+  - '19'
+- - '11'
+  - '25'
+- - '11'
+  - '21'
+- - '12'
+  - '40'
+- - '12'
+  - '28'
+- - '12'
+  - '14'
+- - '13'
+  - '29'
+- - '13'
+  - '14'
+- - '14'
+  - '16'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '15'
+  - '16'
+- - '16'
+  - '17'
+- - '16'
+  - '23'
+- - '16'
+  - '21'
+- - '17'
+  - '18'
+- - '18'
+  - '19'
+- - '20'
+  - '21'
+- - '20'
+  - '22'
+- - '20'
+  - '23'
+- - '21'
+  - '25'
+- - '22'
+  - '24'
+- - '22'
+  - '25'
+- - '24'
+  - '25'
+- - '26'
+  - '27'
+- - '27'
+  - '33'
+- - '27'
+  - '38'
+- - '27'
+  - '39'
+- - '28'
+  - '29'
+- - '29'
+  - '34'
+- - '29'
+  - '43'
+- - '30'
+  - '32'
+- - '30'
+  - '33'
+- - '30'
+  - '31'
+- - '31'
+  - '33'
+- - '31'
+  - '35'
+- - '31'
+  - '36'
+- - '31'
+  - '37'
+- - '34'
+  - '42'
+- - '34'
+  - '45'
+- - '35'
+  - '40'
+- - '35'
+  - '36'
+- - '36'
+  - '37'
+- - '38'
+  - '47'
+- - '40'
+  - '41'
+- - '41'
+  - '42'
+- - '43'
+  - '44'
+- - '44'
+  - '45'
+- - '45'
+  - '46'
+- - '45'
+  - '47'
+nodes:
+  '0':
+    Country: Canada
+    Internal: 1
+    Latitude: 54.45018
+    Longitude: -110.2017
+    label: Cold Lake
+    type: City
+  '1':
+    Country: Canada
+    Internal: 1
+    Latitude: 55.16667
+    Longitude: -118.80271
+    label: Grande Prairie
+    type: City
+  '10':
+    Country: Canada
+    Internal: 1
+    Latitude: 50.20011
+    Longitude: -66.38208
+    label: Sept -Iles
+    type: City
+  '11':
+    Country: Canada
+    Internal: 1
+    Latitude: 46.23525
+    Longitude: -63.12671
+    label: Charlottetown
+    type: City
+  '12':
+    Country: United States
+    Internal: 1
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+    type: City with Colocation
+  '13':
+    Country: Canada
+    Internal: 1
+    Latitude: 45.41117
+    Longitude: -75.69812
+    label: Ottawa
+    type: City with Colocation
+  '14':
+    Country: Canada
+    Internal: 1
+    Latitude: 45.50884
+    Longitude: -73.58781
+    label: Montreal
+    type: City
+  '15':
+    Country: Canada
+    Internal: 1
+    Latitude: 45.40008
+    Longitude: -71.89908
+    label: Sherbrooke
+    type: City
+  '16':
+    Country: Canada
+    Internal: 1
+    Latitude: 46.81228
+    Longitude: -71.21454
+    label: Quebec City
+    type: City
+  '17':
+    Country: Canada
+    Internal: 1
+    Latitude: 48.42749
+    Longitude: -71.06352
+    label: Chicoutimi
+    type: City
+  '18':
+    Country: Canada
+    Internal: 1
+    Latitude: 48.44879
+    Longitude: -68.52396
+    label: Rimouski
+    type: City
+  '19':
+    Country: Canada
+    Internal: 1
+    Latitude: 49.21679
+    Longitude: -68.14894
+    label: Baie-Comeau
+    type: City
+  '2':
+    Country: Canada
+    Internal: 1
+    Latitude: 53.55014
+    Longitude: -113.46871
+    label: Edmonton
+    type: City
+  '20':
+    Country: Canada
+    Internal: 1
+    Latitude: 45.27271
+    Longitude: -66.06766
+    label: Saint John
+    type: City
+  '21':
+    Country: Canada
+    Internal: 1
+    Latitude: 46.11594
+    Longitude: -64.80186
+    label: Moncton
+    type: City
+  '22':
+    Country: Canada
+    Internal: 1
+    Latitude: 44.646
+    Longitude: -63.57333
+    label: Halifax
+    type: City
+  '23':
+    Country: Canada
+    Internal: 1
+    Latitude: 45.94541
+    Longitude: -66.66558
+    label: Fredericton
+    type: City
+  '24':
+    Country: Canada
+    Internal: 1
+    Latitude: 47.56494
+    Longitude: -52.70931
+    label: St John's
+    type: City
+  '25':
+    Country: Canada
+    Internal: 1
+    Latitude: 45.36685
+    Longitude: -63.28198
+    label: Onslow
+    type: City
+  '26':
+    Country: Canada
+    Internal: 1
+    Latitude: 49.69999
+    Longitude: -112.81856
+    label: Lethbridge
+    type: City
+  '27':
+    Country: Canada
+    Internal: 1
+    Latitude: 51.05011
+    Longitude: -114.08529
+    label: Calgary
+    type: City with Colocation
+  '28':
+    Country: United States
+    Internal: 1
+    Latitude: 42.88645
+    Longitude: -78.87837
+    label: Buffalo
+    type: City
+  '29':
+    Country: Canada
+    Internal: 1
+    Latitude: 43.70011
+    Longitude: -79.4163
+    label: Toronto
+    type: City with Colocation
+  '3':
+    Country: Canada
+    Internal: 1
+    Latitude: 56.7335
+    Longitude: -111.38519
+    label: Fort McMurray
+    type: City
+  '30':
+    Country: Canada
+    Internal: 1
+    Latitude: 48.43294
+    Longitude: -123.3693
+    label: Victoria
+    type: City
+  '31':
+    Country: United States
+    Internal: 1
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle
+    type: City
+  '32':
+    Country: Canada
+    Internal: 1
+    Latitude: 49.68657
+    Longitude: -124.9936
+    label: Courtenay
+    type: City
+  '33':
+    Country: Canada
+    Internal: 1
+    Latitude: 49.24966
+    Longitude: -123.11934
+    label: Vancouver
+    type: City with Colocation
+  '34':
+    Country: United States
+    Internal: 1
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+    type: City
+  '35':
+    Country: United States
+    Internal: 1
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+    type: City
+  '36':
+    Country: United States
+    Internal: 1
+    Latitude: 37.44188
+    Longitude: -122.14302
+    label: Palo Alto
+    type: City
+  '37':
+    Country: United States
+    Internal: 1
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: San Francisco
+    type: City
+  '38':
+    Country: Canada
+    Internal: 1
+    Latitude: 50.05006
+    Longitude: -110.66834
+    label: Medicine Hat
+    type: City
+  '39':
+    Country: Canada
+    Internal: 1
+    Latitude: 52.26682
+    Longitude: -113.802
+    label: Red Deer
+    type: City
+  '4':
+    Country: Canada
+    Internal: 1
+    Latitude: 50.66648
+    Longitude: -120.3192
+    label: Kamloops
+    type: City
+  '40':
+    Country: United States
+    Internal: 1
+    Latitude: 38.89511
+    Longitude: -77.03637
+    label: Washington
+    type: City
+  '41':
+    Country: United States
+    Internal: 1
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta
+    type: City
+  '42':
+    Country: United States
+    Internal: 1
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas
+    type: City
+  '43':
+    Country: Canada
+    Internal: 1
+    Latitude: 46.49
+    Longitude: -80.99001
+    label: Sudbury
+    type: City
+  '44':
+    Country: Canada
+    Internal: 1
+    Latitude: 48.4001
+    Longitude: -89.31683
+    label: Thunder Bay
+    type: City
+  '45':
+    Country: Canada
+    Internal: 1
+    Latitude: 49.8844
+    Longitude: -97.14704
+    label: Winnipeg
+    type: City
+  '46':
+    Country: Canada
+    Internal: 1
+    Latitude: 52.11679
+    Longitude: -106.63452
+    label: Saskatoon
+    type: City
+  '47':
+    Country: Canada
+    Internal: 1
+    Latitude: 50.45008
+    Longitude: -104.6178
+    label: Regina
+    type: City
+  '5':
+    Country: United States
+    Internal: 1
+    Latitude: 40.9126
+    Longitude: -73.83708
+    label: Vernon
+    type: City
+  '6':
+    Country: Canada
+    Internal: 1
+    Latitude: 55.7666
+    Longitude: -120.23616
+    label: Dawson Creek
+    type: City
+  '7':
+    Country: Canada
+    Internal: 1
+    Latitude: 53.9166
+    Longitude: -122.75301
+    label: Prince George
+    type: City
+  '8':
+    Country: Canada
+    Internal: 1
+    Latitude: 49.88307
+    Longitude: -119.48568
+    label: Kelowna
+    type: City
+  '9':
+    Country: Canada
+    Internal: 1
+    Latitude: 49.48062
+    Longitude: -119.58584
+    label: Penticton?
+    type: City

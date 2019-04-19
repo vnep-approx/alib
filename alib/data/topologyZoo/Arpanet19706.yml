@@ -1,21 +1,76 @@
-nodes:
-  '0': {Latitude: 42.37843, Longitude: -71.11644}
-  '1': {Latitude: 37.45383, Longitude: -122.18219}
-  '2': {Latitude: 34.42083, Longitude: -119.69819}
-  '3': {Latitude: 34.05223, Longitude: -118.24368}
-  '4': {Latitude: 34.01945, Longitude: -118.49119}
-  '5': {Latitude: 34.01945, Longitude: -118.49119}
-  '6': {Latitude: 40.76078, Longitude: -111.89105}
-  '7': {Latitude: 42.35954, Longitude: -71.09172}
-  '8': {Latitude: 42.3751, Longitude: -71.10561}
 edges:
-- ['0', '8']
-- ['1', '2']
-- ['1', '3']
-- ['2', '3']
-- ['3', '4']
-- ['4', '8']
-- ['4', '5']
-- ['5', '6']
-- ['6', '7']
-- ['7', '8']
+- - '0'
+  - '8'
+- - '1'
+  - '2'
+- - '1'
+  - '3'
+- - '2'
+  - '3'
+- - '3'
+  - '4'
+- - '4'
+  - '8'
+- - '4'
+  - '5'
+- - '5'
+  - '6'
+- - '6'
+  - '7'
+- - '7'
+  - '8'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.37843
+    Longitude: -71.11644
+    !!python/unicode 'label': !!python/unicode 'HARVARD'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.45383
+    Longitude: -122.18219
+    !!python/unicode 'label': !!python/unicode 'SRI'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.42083
+    Longitude: -119.69819
+    !!python/unicode 'label': !!python/unicode 'UCSB'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.05223
+    Longitude: -118.24368
+    !!python/unicode 'label': !!python/unicode 'UCLA'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.01945
+    Longitude: -118.49119
+    !!python/unicode 'label': !!python/unicode 'RAND'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.01945
+    Longitude: -118.49119
+    !!python/unicode 'label': !!python/unicode 'SDC'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.76078
+    Longitude: -111.89105
+    !!python/unicode 'label': !!python/unicode 'UTAH'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.35954
+    Longitude: -71.09172
+    !!python/unicode 'label': !!python/unicode 'MIT'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.3751
+    Longitude: -71.10561
+    !!python/unicode 'label': !!python/unicode 'BBN'

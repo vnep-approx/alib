@@ -1,53 +1,194 @@
-nodes:
-  '0': {Latitude: -36.86667, Longitude: 174.76667}
-  '1': {Latitude: -18.0, Longitude: 178.0}
-  '2': {Latitude: -33.86785, Longitude: 151.20732}
-  '3': {Latitude: -36.86667, Longitude: 174.76667}
-  '4': {Latitude: 38.58157, Longitude: -121.4944}
-  '5': {Latitude: 34.05223, Longitude: -118.24368}
-  '6': {Latitude: 21.30694, Longitude: -157.85833}
-  '7': {Latitude: 21.30694, Longitude: -157.85833}
-  '8': {Latitude: 24.0, Longitude: 121.0}
-  '9': {Latitude: 13.0, Longitude: 122.0}
-  '10': {Latitude: -37.814, Longitude: 144.96332}
-  '11': {Latitude: -33.86785, Longitude: 151.20732}
-  '12': {Latitude: 37.0, Longitude: 127.5}
-  '13': {Latitude: 35.68536, Longitude: 139.75309}
-  '14': {Latitude: 13.44444, Longitude: 144.73667}
-  '15': {Latitude: 13.0, Longitude: 122.0}
-  '16': {Latitude: 22.25, Longitude: 114.16667}
-  '17': {Latitude: 1.36667, Longitude: 103.8}
-  '18': {Latitude: 15.0, Longitude: 100.0}
-  '19': {Latitude: -31.93333, Longitude: 115.83333}
 edges:
-- ['0', '3']
-- ['0', '11']
-- ['1', '2']
-- ['1', '6']
-- ['2', '10']
-- ['2', '11']
-- ['2', '14']
-- ['3', '7']
-- ['4', '13']
-- ['4', '6']
-- ['4', '5']
-- ['5', '7']
-- ['6', '13']
-- ['6', '14']
-- ['6', '7']
-- ['8', '16']
-- ['8', '12']
-- ['8', '15']
-- ['9', '16']
-- ['9', '14']
-- ['9', '15']
-- ['10', '19']
-- ['12', '13']
-- ['13', '16']
-- ['13', '14']
-- ['14', '15']
-- ['14', '17']
-- ['15', '16']
-- ['16', '17']
-- ['17', '18']
-- ['17', '19']
+- - '0'
+  - '3'
+- - '0'
+  - '11'
+- - '1'
+  - '2'
+- - '1'
+  - '6'
+- - '2'
+  - '10'
+- - '2'
+  - '11'
+- - '2'
+  - '14'
+- - '3'
+  - '7'
+- - '4'
+  - '13'
+- - '4'
+  - '6'
+- - '4'
+  - '5'
+- - '5'
+  - '7'
+- - '6'
+  - '13'
+- - '6'
+  - '14'
+- - '6'
+  - '7'
+- - '8'
+  - '16'
+- - '8'
+  - '12'
+- - '8'
+  - '15'
+- - '9'
+  - '16'
+- - '9'
+  - '14'
+- - '9'
+  - '15'
+- - '10'
+  - '19'
+- - '12'
+  - '13'
+- - '13'
+  - '16'
+- - '13'
+  - '14'
+- - '14'
+  - '15'
+- - '14'
+  - '17'
+- - '15'
+  - '16'
+- - '16'
+  - '17'
+- - '17'
+  - '18'
+- - '17'
+  - '19'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'New Zealand'
+    !!python/unicode 'Internal': 1
+    Latitude: -36.86667
+    Longitude: 174.76667
+    !!python/unicode 'label': !!python/unicode 'Auckland 2'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Fiji'
+    !!python/unicode 'Internal': 1
+    Latitude: -18.0
+    Longitude: 178.0
+    !!python/unicode 'geocode_country': !!python/unicode 'Fiji'
+    !!python/unicode 'label': !!python/unicode 'Fiji'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Australia'
+    !!python/unicode 'Internal': 1
+    Latitude: -37.814
+    Longitude: 144.96332
+    !!python/unicode 'label': !!python/unicode 'Melbourne'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Australia'
+    !!python/unicode 'Internal': 1
+    Latitude: -33.86785
+    Longitude: 151.20732
+    !!python/unicode 'label': !!python/unicode 'Sydney 2'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'South Korea'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.0
+    Longitude: 127.5
+    !!python/unicode 'geocode_country': !!python/unicode 'Korea'
+    !!python/unicode 'label': !!python/unicode 'Korea'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.68536
+    Longitude: 139.75309
+    !!python/unicode 'geocode_country': !!python/unicode 'Japan'
+    !!python/unicode 'label': !!python/unicode 'Japan'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'Guam'
+    !!python/unicode 'Internal': 1
+    Latitude: 13.44444
+    Longitude: 144.73667
+    !!python/unicode 'geocode_country': !!python/unicode 'Guam'
+    !!python/unicode 'label': !!python/unicode 'Guam'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Philippines'
+    !!python/unicode 'Internal': 1
+    Latitude: 13.0
+    Longitude: 122.0
+    !!python/unicode 'geocode_country': !!python/unicode 'Philippines'
+    !!python/unicode 'label': !!python/unicode 'Philippines 1'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Hong Kong'
+    !!python/unicode 'Internal': 1
+    Latitude: 22.25
+    Longitude: 114.16667
+    !!python/unicode 'geocode_country': !!python/unicode 'Hong Kong'
+    !!python/unicode 'label': !!python/unicode 'Hong Kong'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Singapore'
+    !!python/unicode 'Internal': 1
+    Latitude: 1.36667
+    Longitude: 103.8
+    !!python/unicode 'geocode_country': !!python/unicode 'Singapore'
+    !!python/unicode 'label': !!python/unicode 'Singapore/Malaysia'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Thailand'
+    !!python/unicode 'Internal': 1
+    Latitude: 15.0
+    Longitude: 100.0
+    !!python/unicode 'geocode_country': !!python/unicode 'Thailand'
+    !!python/unicode 'label': !!python/unicode 'Thailand'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Australia'
+    !!python/unicode 'Internal': 1
+    Latitude: -31.93333
+    Longitude: 115.83333
+    !!python/unicode 'label': !!python/unicode 'Perth'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Australia'
+    !!python/unicode 'Internal': 1
+    Latitude: -33.86785
+    Longitude: 151.20732
+    !!python/unicode 'label': !!python/unicode 'Sydney 1'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'New Zealand'
+    !!python/unicode 'Internal': 1
+    Latitude: -36.86667
+    Longitude: 174.76667
+    !!python/unicode 'label': !!python/unicode 'Auckland 1'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.58157
+    Longitude: -121.4944
+    !!python/unicode 'label': !!python/unicode 'Sacramento'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.05223
+    Longitude: -118.24368
+    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 21.30694
+    Longitude: -157.85833
+    !!python/unicode 'label': !!python/unicode 'Hawaii 1'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 21.30694
+    Longitude: -157.85833
+    !!python/unicode 'label': !!python/unicode 'Hawaii 2'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Taiwan'
+    !!python/unicode 'Internal': 1
+    Latitude: 24.0
+    Longitude: 121.0
+    !!python/unicode 'geocode_country': !!python/unicode 'Taiwan'
+    !!python/unicode 'label': !!python/unicode 'Taiwan'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Philippines'
+    !!python/unicode 'Internal': 1
+    Latitude: 13.0
+    Longitude: 122.0
+    !!python/unicode 'geocode_country': !!python/unicode 'Philippines'
+    !!python/unicode 'label': !!python/unicode 'Philippines 2'

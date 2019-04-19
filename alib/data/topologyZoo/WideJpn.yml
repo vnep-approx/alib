@@ -1,65 +1,237 @@
-nodes:
-  '0': {Latitude: 35.68333, Longitude: 139.76667}
-  '1': {Latitude: 35.71732, Longitude: 139.76575}
-  '2': {Latitude: 32.76667, Longitude: 129.95}
-  '3': {Latitude: 35.55159, Longitude: 139.6716}
-  '4': {Latitude: 35.65583, Longitude: 139.32389}
-  '5': {Latitude: 13.75, Longitude: 100.51667}
-  '6': {Latitude: 35.68333, Longitude: 139.76667}
-  '7': {Latitude: 36.2, Longitude: 140.1}
-  '8': {Latitude: 34.68333, Longitude: 135.48333}
-  '9': {Latitude: 34.68333, Longitude: 135.48333}
-  '10': {Latitude: 34.68333, Longitude: 135.48333}
-  '11': {Latitude: 37.77493, Longitude: -122.41942}
-  '12': {Latitude: 35.68333, Longitude: 139.76667}
-  '13': {Latitude: 35.68333, Longitude: 139.76667}
-  '14': {Latitude: 35.68333, Longitude: 139.76667}
-  '15': {Latitude: 35.34194, Longitude: 139.47}
-  '16': {Latitude: 34.05223, Longitude: -118.24368}
-  '17': {Latitude: 35.68333, Longitude: 139.76667}
-  '18': {Latitude: 35.68333, Longitude: 139.76667}
-  '19': {Latitude: 35.68333, Longitude: 139.76667}
-  '20': {Latitude: 34.05223, Longitude: -118.24368}
-  '21': {Latitude: 35.34194, Longitude: 139.47}
-  '22': {Latitude: 34.68505, Longitude: 135.80485}
-  '23': {Latitude: 33.60639, Longitude: 130.41806}
-  '24': {Latitude: 34.39627, Longitude: 132.45937}
-  '25': {Latitude: 34.58333, Longitude: 133.76667}
-  '26': {Latitude: 33.78333, Longitude: 129.8}
-  '27': {Latitude: 36.40263, Longitude: 136.45088}
-  '28': {Latitude: 38.26889, Longitude: 140.87194}
-  '29': {Latitude: 37.77493, Longitude: -122.41942}
 edges:
-- ['0', '1']
-- ['0', '4']
-- ['0', '6']
-- ['0', '12']
-- ['0', '17']
-- ['0', '18']
-- ['0', '19']
-- ['0', '20']
-- ['1', '2']
-- ['1', '28']
-- ['2', '3']
-- ['2', '21']
-- ['5', '6']
-- ['6', '7']
-- ['6', '10']
-- ['6', '13']
-- ['6', '14']
-- ['6', '27']
-- ['8', '10']
-- ['9', '10']
-- ['10', '22']
-- ['10', '23']
-- ['10', '24']
-- ['10', '25']
-- ['10', '26']
-- ['11', '29']
-- ['15', '21']
-- ['16', '20']
-- ['20', '29']
-- ['21', '22']
-- ['22', '26']
-- ['23', '24']
-- ['23', '25']
+- - '0'
+  - '1'
+- - '0'
+  - '4'
+- - '0'
+  - '6'
+- - '0'
+  - '12'
+- - '0'
+  - '17'
+- - '0'
+  - '18'
+- - '0'
+  - '19'
+- - '0'
+  - '20'
+- - '1'
+  - '2'
+- - '1'
+  - '28'
+- - '2'
+  - '3'
+- - '2'
+  - '21'
+- - '5'
+  - '6'
+- - '6'
+  - '7'
+- - '6'
+  - '10'
+- - '6'
+  - '13'
+- - '6'
+  - '14'
+- - '6'
+  - '27'
+- - '8'
+  - '10'
+- - '9'
+  - '10'
+- - '10'
+  - '22'
+- - '10'
+  - '23'
+- - '10'
+  - '24'
+- - '10'
+  - '25'
+- - '10'
+  - '26'
+- - '11'
+  - '29'
+- - '15'
+  - '21'
+- - '16'
+  - '20'
+- - '20'
+  - '29'
+- - '21'
+  - '22'
+- - '22'
+  - '26'
+- - '23'
+  - '24'
+- - '23'
+  - '25'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.68333
+    Longitude: 139.76667
+    !!python/unicode 'label': !!python/unicode 'KDDI Otemachi'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.71732
+    Longitude: 139.76575
+    !!python/unicode 'label': !!python/unicode 'Nezu'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.68333
+    Longitude: 135.48333
+    !!python/unicode 'label': !!python/unicode 'Dojima'
+  '11':
+    !!python/unicode 'Internal': 0
+    Latitude: 37.77493
+    Longitude: -122.41942
+    !!python/unicode 'label': !!python/unicode 'PAIX'
+  '12':
+    !!python/unicode 'Internal': 0
+    Latitude: 35.68333
+    Longitude: 139.76667
+    !!python/unicode 'label': !!python/unicode 'TITECH'
+  '13':
+    !!python/unicode 'Internal': 0
+    Latitude: 35.68333
+    Longitude: 139.76667
+    !!python/unicode 'label': !!python/unicode 'T-Lex'
+  '14':
+    !!python/unicode 'Internal': 0
+    Latitude: 35.68333
+    Longitude: 139.76667
+    !!python/unicode 'label': !!python/unicode 'JGN2Plus'
+  '15':
+    !!python/unicode 'Internal': 0
+    Latitude: 35.34194
+    Longitude: 139.47
+    !!python/unicode 'label': !!python/unicode 'AI3'
+  '16':
+    !!python/unicode 'Internal': 0
+    Latitude: 34.05223
+    Longitude: -118.24368
+    !!python/unicode 'label': !!python/unicode 'LAIIX'
+  '17':
+    !!python/unicode 'Internal': 0
+    Latitude: 35.68333
+    Longitude: 139.76667
+    !!python/unicode 'label': !!python/unicode 'DIX-IE'
+  '18':
+    !!python/unicode 'Internal': 0
+    Latitude: 35.68333
+    Longitude: 139.76667
+    !!python/unicode 'label': !!python/unicode 'KDDI'
+  '19':
+    !!python/unicode 'Internal': 0
+    Latitude: 35.68333
+    Longitude: 139.76667
+    !!python/unicode 'label': !!python/unicode 'APAN'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.76667
+    Longitude: 129.95
+    !!python/unicode 'label': !!python/unicode 'Yagami'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.05223
+    Longitude: -118.24368
+    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.34194
+    Longitude: 139.47
+    !!python/unicode 'label': !!python/unicode 'Fujisawa'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.68505
+    Longitude: 135.80485
+    !!python/unicode 'label': !!python/unicode 'Nara'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.60639
+    Longitude: 130.41806
+    !!python/unicode 'label': !!python/unicode 'Fukuoka'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.39627
+    Longitude: 132.45937
+    !!python/unicode 'label': !!python/unicode 'Hiroshima'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.58333
+    Longitude: 133.76667
+    !!python/unicode 'label': !!python/unicode 'Kurashiki'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.78333
+    Longitude: 129.8
+    !!python/unicode 'label': !!python/unicode 'Sakyo'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.40263
+    Longitude: 136.45088
+    !!python/unicode 'label': !!python/unicode 'Komatsu'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.26889
+    Longitude: 140.87194
+    !!python/unicode 'label': !!python/unicode 'Sendai'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.77493
+    Longitude: -122.41942
+    !!python/unicode 'label': !!python/unicode 'San Francisco'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.55159
+    Longitude: 139.6716
+    !!python/unicode 'label': !!python/unicode 'ShinKawasaki'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.65583
+    Longitude: 139.32389
+    !!python/unicode 'label': !!python/unicode 'Hachioji'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Thailand'
+    !!python/unicode 'Internal': 1
+    Latitude: 13.75
+    Longitude: 100.51667
+    !!python/unicode 'label': !!python/unicode 'Bangkok'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.68333
+    Longitude: 139.76667
+    !!python/unicode 'label': !!python/unicode 'NTT Otemachi'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.2
+    Longitude: 140.1
+    !!python/unicode 'label': !!python/unicode 'Tsukuba'
+  '8':
+    !!python/unicode 'Internal': 0
+    Latitude: 34.68333
+    Longitude: 135.48333
+    !!python/unicode 'label': !!python/unicode 'NSPIXP-3'
+  '9':
+    !!python/unicode 'Internal': 0
+    Latitude: 34.68333
+    Longitude: 135.48333
+    !!python/unicode 'label': !!python/unicode 'JGN2Plus'

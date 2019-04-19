@@ -1,79 +1,299 @@
-nodes:
-  '0': {Latitude: 48.1, Longitude: 20.78333}
-  '1': {Latitude: 48.31667, Longitude: 21.58333}
-  '2': {Latitude: 47.78333, Longitude: 19.93333}
-  '3': {Latitude: 47.90265, Longitude: 20.37329}
-  '4': {Latitude: 47.6, Longitude: 19.36667}
-  '5': {Latitude: 47.5, Longitude: 19.91667}
-  '6': {Latitude: 47.95539, Longitude: 21.71671}
-  '7': {Latitude: 47.53333, Longitude: 21.63333}
-  '8': {Latitude: 47.18333, Longitude: 20.2}
-  '9': {Latitude: 46.90618, Longitude: 19.69128}
-  '10': {Latitude: 47.18995, Longitude: 18.41034}
-  '11': {Latitude: 47.09327, Longitude: 17.91149}
-  '12': {Latitude: 46.76667, Longitude: 17.25}
-  '13': {Latitude: 46.45347, Longitude: 16.99104}
-  '14': {Latitude: 46.84, Longitude: 16.84389}
-  '15': {Latitude: 47.23088, Longitude: 16.62155}
-  '16': {Latitude: 46.36667, Longitude: 17.8}
-  '17': {Latitude: 46.35, Longitude: 18.71667}
-  '18': {Latitude: 46.41667, Longitude: 20.33333}
-  '19': {Latitude: 46.68333, Longitude: 21.1}
-  '20': {Latitude: 46.86667, Longitude: 20.55}
-  '21': {Latitude: 46.98333, Longitude: 18.93333}
-  '22': {Latitude: 46.18333, Longitude: 18.96667}
-  '23': {Latitude: 46.08333, Longitude: 18.23333}
-  '24': {Latitude: 46.58333, Longitude: 21.18333}
-  '25': {Latitude: 46.253, Longitude: 20.14824}
-  '26': {Latitude: 47.86667, Longitude: 17.28333}
-  '27': {Latitude: 47.68333, Longitude: 16.6}
-  '28': {Latitude: 47.49801, Longitude: 19.03991}
-  '29': {Latitude: 48.09872, Longitude: 19.80303}
-  '30': {Latitude: 47.78333, Longitude: 19.13333}
-  '31': {Latitude: 47.8, Longitude: 18.75}
-  '32': {Latitude: 47.49801, Longitude: 19.03991}
-  '33': {Latitude: 47.73333, Longitude: 18.11667}
-  '34': {Latitude: 47.61667, Longitude: 18.83333}
-  '35': {Latitude: 47.68333, Longitude: 17.63512}
 edges:
-- ['0', '32']
-- ['0', '1']
-- ['0', '3']
-- ['0', '7']
-- ['2', '4']
-- ['4', '32']
-- ['4', '5']
-- ['5', '8']
-- ['6', '7']
-- ['7', '32']
-- ['7', '19']
-- ['8', '9']
-- ['9', '21']
-- ['10', '11']
-- ['11', '32']
-- ['11', '27']
-- ['11', '12']
-- ['13', '16']
-- ['13', '14']
-- ['14', '15']
-- ['15', '27']
-- ['16', '23']
-- ['17', '23']
-- ['18', '25']
-- ['18', '19']
-- ['19', '20']
-- ['21', '32']
-- ['22', '23']
-- ['23', '25']
-- ['23', '32']
-- ['24', '25']
-- ['25', '32']
-- ['26', '35']
-- ['27', '35']
-- ['28', '32']
-- ['29', '32']
-- ['30', '32']
-- ['31', '32']
-- ['32', '33']
-- ['32', '34']
-- ['32', '35']
+- - '0'
+  - '32'
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '0'
+  - '7'
+- - '2'
+  - '4'
+- - '4'
+  - '32'
+- - '4'
+  - '5'
+- - '5'
+  - '8'
+- - '6'
+  - '7'
+- - '7'
+  - '32'
+- - '7'
+  - '19'
+- - '8'
+  - '9'
+- - '9'
+  - '21'
+- - '10'
+  - '11'
+- - '11'
+  - '32'
+- - '11'
+  - '27'
+- - '11'
+  - '12'
+- - '13'
+  - '16'
+- - '13'
+  - '14'
+- - '14'
+  - '15'
+- - '15'
+  - '27'
+- - '16'
+  - '23'
+- - '17'
+  - '23'
+- - '18'
+  - '25'
+- - '18'
+  - '19'
+- - '19'
+  - '20'
+- - '21'
+  - '32'
+- - '22'
+  - '23'
+- - '23'
+  - '25'
+- - '23'
+  - '32'
+- - '24'
+  - '25'
+- - '25'
+  - '32'
+- - '26'
+  - '35'
+- - '27'
+  - '35'
+- - '28'
+  - '32'
+- - '29'
+  - '32'
+- - '30'
+  - '32'
+- - '31'
+  - '32'
+- - '32'
+  - '33'
+- - '32'
+  - '34'
+- - '32'
+  - '35'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.1
+    Longitude: 20.78333
+    !!python/unicode 'label': !!python/unicode 'Miskolc'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.31667
+    Longitude: 21.58333
+    !!python/unicode 'label': !!python/unicode 'Sarospatak'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.18995
+    Longitude: 18.41034
+    !!python/unicode 'label': !!python/unicode 'Szekesfahervar'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.09327
+    Longitude: 17.91149
+    !!python/unicode 'label': !!python/unicode 'Veszprem'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.76667
+    Longitude: 17.25
+    !!python/unicode 'label': !!python/unicode 'Keszthely'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.45347
+    Longitude: 16.99104
+    !!python/unicode 'label': !!python/unicode 'Nagykanizsa'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.84
+    Longitude: 16.84389
+    !!python/unicode 'label': !!python/unicode 'Zalaegerszeg'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.23088
+    Longitude: 16.62155
+    !!python/unicode 'label': !!python/unicode 'Szombathely'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.36667
+    Longitude: 17.8
+    !!python/unicode 'label': !!python/unicode 'Kaposvar'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.35
+    Longitude: 18.71667
+    !!python/unicode 'label': !!python/unicode 'Szekszard'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.41667
+    Longitude: 20.33333
+    !!python/unicode 'label': !!python/unicode 'Hodmazovasarhely'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.68333
+    Longitude: 21.1
+    !!python/unicode 'label': !!python/unicode 'Bekescsaba'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.78333
+    Longitude: 19.93333
+    !!python/unicode 'label': !!python/unicode 'Gyongyos'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.86667
+    Longitude: 20.55
+    !!python/unicode 'label': !!python/unicode 'Szavas'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.98333
+    Longitude: 18.93333
+    !!python/unicode 'label': !!python/unicode 'Dunaujvaros'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.18333
+    Longitude: 18.96667
+    !!python/unicode 'label': !!python/unicode 'Baja'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.08333
+    Longitude: 18.23333
+    !!python/unicode 'label': !!python/unicode 'Pecs'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.58333
+    Longitude: 21.18333
+    !!python/unicode 'label': !!python/unicode 'Szabadka'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.253
+    Longitude: 20.14824
+    !!python/unicode 'label': !!python/unicode 'Szeged'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.86667
+    Longitude: 17.28333
+    !!python/unicode 'label': !!python/unicode 'Mosonmagyarovar'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.68333
+    Longitude: 16.6
+    !!python/unicode 'label': !!python/unicode 'Sopron'
+  '28':
+    !!python/unicode 'Internal': 0
+    Latitude: 47.49801
+    Longitude: 19.03991
+    !!python/unicode 'label': !!python/unicode 'GEANT'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.09872
+    Longitude: 19.80303
+    !!python/unicode 'label': !!python/unicode 'Salgotarjan'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.90265
+    Longitude: 20.37329
+    !!python/unicode 'label': !!python/unicode 'Eger'
+  '30':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.78333
+    Longitude: 19.13333
+    !!python/unicode 'label': !!python/unicode 'Vac'
+  '31':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.8
+    Longitude: 18.75
+    !!python/unicode 'label': !!python/unicode 'Esztergom'
+  '32':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.49801
+    Longitude: 19.03991
+    !!python/unicode 'label': !!python/unicode 'Budapest'
+  '33':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.73333
+    Longitude: 18.11667
+    !!python/unicode 'label': !!python/unicode 'Revkomarom'
+  '34':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.61667
+    Longitude: 18.83333
+    !!python/unicode 'label': !!python/unicode 'Piliscsaba'
+  '35':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.68333
+    Longitude: 17.63512
+    !!python/unicode 'label': !!python/unicode 'Gyor'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.6
+    Longitude: 19.36667
+    !!python/unicode 'label': !!python/unicode 'Godollo'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.5
+    Longitude: 19.91667
+    !!python/unicode 'label': !!python/unicode 'Jaszbereny'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.95539
+    Longitude: 21.71671
+    !!python/unicode 'label': !!python/unicode 'Nyiregyhaza'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.53333
+    Longitude: 21.63333
+    !!python/unicode 'label': !!python/unicode 'Debrecen'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.18333
+    Longitude: 20.2
+    !!python/unicode 'label': !!python/unicode 'Szolnok'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Hungary'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.90618
+    Longitude: 19.69128
+    !!python/unicode 'label': !!python/unicode 'Kecskemet'

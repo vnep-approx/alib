@@ -1,61 +1,238 @@
-nodes:
-  '0': {Latitude: 34.67279, Longitude: 3.263}
-  '1': {Latitude: 36.26417, Longitude: 2.75393}
-  '2': {Latitude: 36.7525, Longitude: 3.04197}
-  '3': {Latitude: 36.47004, Longitude: 2.8277}
-  '4': {Latitude: 33.35608, Longitude: 6.86319}
-  '5': {Latitude: 36.65944, Longitude: 5.67186}
-  '6': {Latitude: 33.8, Longitude: 2.86514}
-  '7': {Latitude: 31.94932, Longitude: 5.32502}
-  '8': {Latitude: 36.365, Longitude: 6.61472}
-  '9': {Latitude: 34.85038, Longitude: 5.72805}
-  '10': {Latitude: 35.55597, Longitude: 6.17414}
-  '11': {Latitude: 36.71182, Longitude: 4.04591}
-  '12': {Latitude: 36.9, Longitude: 7.76667}
-  '13': {Latitude: 36.46214, Longitude: 7.42608}
-  '14': {Latitude: 35.40417, Longitude: 8.12417}
-  '15': {Latitude: 35.87541, Longitude: 7.11353}
-  '16': {Latitude: 36.75587, Longitude: 5.08433}
-  '17': {Latitude: 36.19112, Longitude: 5.41373}
-  '18': {Latitude: 36.87617, Longitude: 6.90921}
-  '19': {Latitude: 36.82055, Longitude: 5.76671}
-  '20': {Latitude: 35.37103, Longitude: 1.31699}
-  '21': {Latitude: 36.7525, Longitude: 3.04197}
-  '22': {Latitude: 36.7525, Longitude: 3.04197}
-  '23': {Latitude: 36.19591, Longitude: 1.25538}
-  '24': {Latitude: 35.69111, Longitude: -0.64167}
-  '25': {Latitude: 35.93115, Longitude: 0.08918}
-  '26': {Latitude: 34.87833, Longitude: -1.315}
-  '27': {Latitude: 35.18994, Longitude: -0.63085}
-  '28': {Latitude: 34.83034, Longitude: 0.15171}
-  '29': {Latitude: 35.31473, Longitude: -0.05037}
 edges:
-- ['0', '22']
-- ['1', '22']
-- ['2', '22']
-- ['3', '22']
-- ['4', '7']
-- ['5', '8']
-- ['6', '7']
-- ['7', '22']
-- ['8', '9']
-- ['8', '10']
-- ['8', '12']
-- ['8', '13']
-- ['8', '14']
-- ['8', '15']
-- ['8', '18']
-- ['8', '19']
-- ['8', '22']
-- ['11', '22']
-- ['16', '22']
-- ['17', '22']
-- ['20', '24']
-- ['21', '22']
-- ['22', '23']
-- ['22', '24']
-- ['24', '25']
-- ['24', '26']
-- ['24', '27']
-- ['24', '28']
-- ['24', '29']
+- - '0'
+  - '22'
+- - '1'
+  - '22'
+- - '2'
+  - '22'
+- - '3'
+  - '22'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '6'
+  - '7'
+- - '7'
+  - '22'
+- - '8'
+  - '9'
+- - '8'
+  - '10'
+- - '8'
+  - '12'
+- - '8'
+  - '13'
+- - '8'
+  - '14'
+- - '8'
+  - '15'
+- - '8'
+  - '18'
+- - '8'
+  - '19'
+- - '8'
+  - '22'
+- - '11'
+  - '22'
+- - '16'
+  - '22'
+- - '17'
+  - '22'
+- - '20'
+  - '24'
+- - '21'
+  - '22'
+- - '22'
+  - '23'
+- - '22'
+  - '24'
+- - '24'
+  - '25'
+- - '24'
+  - '26'
+- - '24'
+  - '27'
+- - '24'
+  - '28'
+- - '24'
+  - '29'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.67279
+    Longitude: 3.263
+    !!python/unicode 'label': !!python/unicode 'Djelfa'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.26417
+    Longitude: 2.75393
+    !!python/unicode 'label': !!python/unicode 'Medea'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.55597
+    Longitude: 6.17414
+    !!python/unicode 'label': !!python/unicode 'Batna'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.71182
+    Longitude: 4.04591
+    !!python/unicode 'label': !!python/unicode 'Tizi Ouzou'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.9
+    Longitude: 7.76667
+    !!python/unicode 'label': !!python/unicode 'Annaba'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.46214
+    Longitude: 7.42608
+    !!python/unicode 'label': !!python/unicode 'Guelma'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.40417
+    Longitude: 8.12417
+    !!python/unicode 'label': !!python/unicode 'Tebessa'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.87541
+    Longitude: 7.11353
+    !!python/unicode 'label': !!python/unicode 'Oum el Bouaghi'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.75587
+    Longitude: 5.08433
+    !!python/unicode 'label': !!python/unicode 'Bejaia'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.19112
+    Longitude: 5.41373
+    !!python/unicode 'label': !!python/unicode 'Setif'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.87617
+    Longitude: 6.90921
+    !!python/unicode 'label': !!python/unicode 'Skikda'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.82055
+    Longitude: 5.76671
+    !!python/unicode 'label': !!python/unicode 'Jijel'
+  '2':
+    !!python/unicode 'Internal': 0
+    Latitude: 36.7525
+    Longitude: 3.04197
+    !!python/unicode 'label': !!python/unicode 'Internet'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.37103
+    Longitude: 1.31699
+    !!python/unicode 'label': !!python/unicode 'Tiaret'
+  '21':
+    !!python/unicode 'Internal': 0
+    Latitude: 36.7525
+    Longitude: 3.04197
+    !!python/unicode 'label': !!python/unicode 'GEANT'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.7525
+    Longitude: 3.04197
+    !!python/unicode 'label': !!python/unicode 'Alger'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.19591
+    Longitude: 1.25538
+    !!python/unicode 'label': !!python/unicode 'Chlef'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.69111
+    Longitude: -0.64167
+    !!python/unicode 'label': !!python/unicode 'Oran'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.93115
+    Longitude: 0.08918
+    !!python/unicode 'label': !!python/unicode 'Mostaganem'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.87833
+    Longitude: -1.315
+    !!python/unicode 'label': !!python/unicode 'Tlemcen'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.18994
+    Longitude: -0.63085
+    !!python/unicode 'label': !!python/unicode 'Sidi Bel Abbes'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.83034
+    Longitude: 0.15171
+    !!python/unicode 'label': !!python/unicode 'Saida'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.31473
+    Longitude: -0.05037
+    !!python/unicode 'label': !!python/unicode 'Mascara'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.47004
+    Longitude: 2.8277
+    !!python/unicode 'label': !!python/unicode 'Blida'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.35608
+    Longitude: 6.86319
+    !!python/unicode 'label': !!python/unicode 'ElOued'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.65944
+    Longitude: 5.67186
+    !!python/unicode 'label': !!python/unicode 'Msila'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.8
+    Longitude: 2.86514
+    !!python/unicode 'label': !!python/unicode 'Laghouat'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 31.94932
+    Longitude: 5.32502
+    !!python/unicode 'label': !!python/unicode 'Ouargla'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.365
+    Longitude: 6.61472
+    !!python/unicode 'label': !!python/unicode 'Constantine'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Algeria'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.85038
+    Longitude: 5.72805
+    !!python/unicode 'label': !!python/unicode 'Biskra'

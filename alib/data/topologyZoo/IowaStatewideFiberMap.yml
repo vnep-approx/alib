@@ -1,76 +1,279 @@
-nodes:
-  '0': {Latitude: 40.75169, Longitude: -92.41491}
-  '1': {Latitude: 41.25861, Longitude: -95.93779}
-  '2': {Latitude: 41.2964, Longitude: -92.64436}
-  '3': {Latitude: 41.02001, Longitude: -92.4113}
-  '4': {Latitude: 41.0586, Longitude: -94.36135}
-  '5': {Latitude: 41.03389, Longitude: -93.7655}
-  '6': {Latitude: 40.98166, Longitude: -95.10415}
-  '7': {Latitude: 41.65304, Longitude: -95.32555}
-  '8': {Latitude: 40.74194, Longitude: -95.03831}
-  '9': {Latitude: 42.49999, Longitude: -96.40031}
-  '10': {Latitude: 43.06377333333333, Longitude: -96.08169333333335}
-  '11': {Latitude: 42.712939999999996, Longitude: -95.23759}
-  '12': {Latitude: 42.433794999999996, Longitude: -93.474245}
-  '13': {Latitude: 43.15357, Longitude: -93.20104}
-  '14': {Latitude: 41.25861, Longitude: -95.93779}
-  '15': {Latitude: 42.50056, Longitude: -90.66457}
-  '16': {Latitude: 41.52364, Longitude: -90.57764}
-  '17': {Latitude: 41.66113, Longitude: -91.53017}
-  '18': {Latitude: 42.00833, Longitude: -91.64407}
-  '19': {Latitude: 41.52364, Longitude: -90.57764}
-  '20': {Latitude: 40.96364, Longitude: -91.55794}
-  '21': {Latitude: 41.00863, Longitude: -91.96267}
-  '22': {Latitude: 41.42447, Longitude: -91.04321}
-  '23': {Latitude: 42.03471, Longitude: -93.61994}
-  '24': {Latitude: 42.04943, Longitude: -92.90798}
-  '25': {Latitude: 43.14136, Longitude: -95.14444}
-  '26': {Latitude: 43.54997, Longitude: -96.70033}
-  '27': {Latitude: 42.49747, Longitude: -94.16802}
-  '28': {Latitude: 43.15357, Longitude: -93.20104}
-  '29': {Latitude: 42.49276, Longitude: -92.34296}
-  '30': {Latitude: 41.74305, Longitude: -92.72241}
-  '31': {Latitude: 41.69971, Longitude: -93.04798}
-  '32': {Latitude: 41.60054, Longitude: -93.60911}
 edges:
-- ['0', '3']
-- ['0', '5']
-- ['0', '21']
-- ['1', '6']
-- ['1', '14']
-- ['1', '7']
-- ['2', '3']
-- ['2', '30']
-- ['4', '5']
-- ['4', '6']
-- ['5', '32']
-- ['6', '8']
-- ['6', '7']
-- ['7', '32']
-- ['7', '9']
-- ['9', '10']
-- ['9', '11']
-- ['10', '26']
-- ['10', '25']
-- ['11', '27']
-- ['11', '25']
-- ['12', '24']
-- ['12', '27']
-- ['12', '28']
-- ['12', '23']
-- ['13', '28']
-- ['15', '16']
-- ['16', '17']
-- ['16', '18']
-- ['16', '19']
-- ['16', '22']
-- ['17', '18']
-- ['18', '29']
-- ['18', '30']
-- ['20', '21']
-- ['20', '22']
-- ['23', '32']
-- ['24', '31']
-- ['28', '29']
-- ['30', '31']
-- ['31', '32']
+- - '0'
+  - '3'
+- - '0'
+  - '5'
+- - '0'
+  - '21'
+- - '1'
+  - '6'
+- - '1'
+  - '14'
+- - '1'
+  - '7'
+- - '2'
+  - '3'
+- - '2'
+  - '30'
+- - '4'
+  - '5'
+- - '4'
+  - '6'
+- - '5'
+  - '32'
+- - '6'
+  - '8'
+- - '6'
+  - '7'
+- - '7'
+  - '32'
+- - '7'
+  - '9'
+- - '9'
+  - '10'
+- - '9'
+  - '11'
+- - '10'
+  - '26'
+- - '10'
+  - '25'
+- - '11'
+  - '27'
+- - '11'
+  - '25'
+- - '12'
+  - '24'
+- - '12'
+  - '27'
+- - '12'
+  - '28'
+- - '12'
+  - '23'
+- - '13'
+  - '28'
+- - '15'
+  - '16'
+- - '16'
+  - '17'
+- - '16'
+  - '18'
+- - '16'
+  - '19'
+- - '16'
+  - '22'
+- - '17'
+  - '18'
+- - '18'
+  - '29'
+- - '18'
+  - '30'
+- - '20'
+  - '21'
+- - '20'
+  - '22'
+- - '23'
+  - '32'
+- - '24'
+  - '31'
+- - '28'
+  - '29'
+- - '30'
+  - '31'
+- - '31'
+  - '32'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.75169
+    Longitude: -92.41491
+    !!python/unicode 'label': !!python/unicode 'Bloomfield'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.25861
+    Longitude: -95.93779
+    !!python/unicode 'label': !!python/unicode 'Omaha'
+  '10':
+    !!python/unicode 'Internal': 1
+    Latitude: 43.06377333333333
+    Longitude: -96.08169333333335
+    !!python/unicode 'hyperedge': 1
+    !!python/unicode 'label': !!python/unicode 'None'
+  '11':
+    !!python/unicode 'Internal': 1
+    Latitude: 42.712939999999996
+    Longitude: -95.23759
+    !!python/unicode 'hyperedge': 1
+    !!python/unicode 'label': !!python/unicode 'None'
+  '12':
+    !!python/unicode 'Internal': 1
+    Latitude: 42.433794999999996
+    Longitude: -93.474245
+    !!python/unicode 'hyperedge': 1
+    !!python/unicode 'label': !!python/unicode 'None'
+  '13':
+    !!python/unicode 'Internal': 0
+    Latitude: 43.15357
+    Longitude: -93.20104
+    !!python/unicode 'label': !!python/unicode 'Minneapolis'
+  '14':
+    !!python/unicode 'Internal': 0
+    Latitude: 41.25861
+    Longitude: -95.93779
+    !!python/unicode 'label': !!python/unicode 'Kansas City'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.50056
+    Longitude: -90.66457
+    !!python/unicode 'label': !!python/unicode 'Dubuque'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.52364
+    Longitude: -90.57764
+    !!python/unicode 'label': !!python/unicode 'Davenport'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.66113
+    Longitude: -91.53017
+    !!python/unicode 'label': !!python/unicode 'Iowa City'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.00833
+    Longitude: -91.64407
+    !!python/unicode 'label': !!python/unicode 'Cedar Rapids'
+  '19':
+    !!python/unicode 'Internal': 0
+    Latitude: 41.52364
+    Longitude: -90.57764
+    !!python/unicode 'label': !!python/unicode 'Chicago'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.2964
+    Longitude: -92.64436
+    !!python/unicode 'label': !!python/unicode 'Oskaloosa'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.96364
+    Longitude: -91.55794
+    !!python/unicode 'label': !!python/unicode 'Mt. Pleasant'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.00863
+    Longitude: -91.96267
+    !!python/unicode 'label': !!python/unicode 'Fairfield'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.42447
+    Longitude: -91.04321
+    !!python/unicode 'label': !!python/unicode 'Muscatine'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.03471
+    Longitude: -93.61994
+    !!python/unicode 'label': !!python/unicode 'Ames'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.04943
+    Longitude: -92.90798
+    !!python/unicode 'label': !!python/unicode 'Marshalltown'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.14136
+    Longitude: -95.14444
+    !!python/unicode 'label': !!python/unicode 'Spencer'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.54997
+    Longitude: -96.70033
+    !!python/unicode 'label': !!python/unicode 'Sioux Falls'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.49747
+    Longitude: -94.16802
+    !!python/unicode 'label': !!python/unicode 'Ft Dodge'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.15357
+    Longitude: -93.20104
+    !!python/unicode 'label': !!python/unicode 'Mason City'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.49276
+    Longitude: -92.34296
+    !!python/unicode 'label': !!python/unicode 'Waterloo'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.02001
+    Longitude: -92.4113
+    !!python/unicode 'label': !!python/unicode 'Ottumwa'
+  '30':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.74305
+    Longitude: -92.72241
+    !!python/unicode 'label': !!python/unicode 'Grinnell'
+  '31':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.69971
+    Longitude: -93.04798
+    !!python/unicode 'label': !!python/unicode 'Newton'
+  '32':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.60054
+    Longitude: -93.60911
+    !!python/unicode 'label': !!python/unicode 'Des Moines'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.0586
+    Longitude: -94.36135
+    !!python/unicode 'label': !!python/unicode 'Creston'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.03389
+    Longitude: -93.7655
+    !!python/unicode 'label': !!python/unicode 'Osceola'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.98166
+    Longitude: -95.10415
+    !!python/unicode 'label': !!python/unicode 'Stanton'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.65304
+    Longitude: -95.32555
+    !!python/unicode 'label': !!python/unicode 'Harlan'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.74194
+    Longitude: -95.03831
+    !!python/unicode 'label': !!python/unicode 'Clarinda'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.49999
+    Longitude: -96.40031
+    !!python/unicode 'label': !!python/unicode 'Sioux City'

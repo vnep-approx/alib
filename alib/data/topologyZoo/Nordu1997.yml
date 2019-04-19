@@ -1,29 +1,110 @@
-nodes:
-  '0': {Latitude: 49.83826, Longitude: 24.02324}
-  '1': {Latitude: 59.91273, Longitude: 10.74609}
-  '2': {Latitude: 54.9, Longitude: 23.9}
-  '3': {Latitude: 52.22977, Longitude: 21.01178}
-  '4': {Latitude: 59.43696, Longitude: 24.75353}
-  '5': {Latitude: 56.946, Longitude: 24.10589}
-  '6': {Latitude: 59.33258, Longitude: 18.0649}
-  '7': {Latitude: 60.16952, Longitude: 24.93545}
-  '8': {Latitude: 55.67594, Longitude: 12.56553}
-  '9': {Latitude: 64.13548, Longitude: -21.89541}
-  '10': {Latitude: 59.33258, Longitude: 18.0649}
-  '11': {Latitude: 59.33258, Longitude: 18.0649}
-  '12': {Latitude: 61.78491, Longitude: 34.34691}
-  '13': {Latitude: 59.89444, Longitude: 30.26417}
 edges:
-- ['0', '6']
-- ['1', '6']
-- ['2', '6']
-- ['3', '6']
-- ['4', '7']
-- ['5', '6']
-- ['6', '7']
-- ['6', '8']
-- ['6', '9']
-- ['6', '10']
-- ['6', '11']
-- ['7', '12']
-- ['7', '13']
+- - '0'
+  - '6'
+- - '1'
+  - '6'
+- - '2'
+  - '6'
+- - '3'
+  - '6'
+- - '4'
+  - '7'
+- - '5'
+  - '6'
+- - '6'
+  - '7'
+- - '6'
+  - '8'
+- - '6'
+  - '9'
+- - '6'
+  - '10'
+- - '6'
+  - '11'
+- - '7'
+  - '12'
+- - '7'
+  - '13'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Ukraine'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.83826
+    Longitude: 24.02324
+    !!python/unicode 'label': !!python/unicode 'Lviv'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Norway'
+    !!python/unicode 'Internal': 1
+    Latitude: 59.91273
+    Longitude: 10.74609
+    !!python/unicode 'label': !!python/unicode 'Oslo'
+  '10':
+    !!python/unicode 'Internal': 0
+    Latitude: 59.33258
+    Longitude: 18.0649
+    !!python/unicode 'label': !!python/unicode 'TEN-34'
+  '11':
+    !!python/unicode 'Internal': 0
+    Latitude: 59.33258
+    Longitude: 18.0649
+    !!python/unicode 'label': !!python/unicode 'USA'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Russia'
+    !!python/unicode 'Internal': 1
+    Latitude: 61.78491
+    Longitude: 34.34691
+    !!python/unicode 'label': !!python/unicode 'Petrozavodsk'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Russia'
+    !!python/unicode 'Internal': 1
+    Latitude: 59.89444
+    Longitude: 30.26417
+    !!python/unicode 'label': !!python/unicode 'St Petersburg'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.9
+    Longitude: 23.9
+    !!python/unicode 'label': !!python/unicode 'Kaunas'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Poland'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.22977
+    Longitude: 21.01178
+    !!python/unicode 'label': !!python/unicode 'Warsaw'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Estonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 59.43696
+    Longitude: 24.75353
+    !!python/unicode 'label': !!python/unicode 'Tallinn'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.946
+    Longitude: 24.10589
+    !!python/unicode 'label': !!python/unicode 'Riga'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Sweden'
+    !!python/unicode 'Internal': 1
+    Latitude: 59.33258
+    Longitude: 18.0649
+    !!python/unicode 'label': !!python/unicode 'Stockholm'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Finland'
+    !!python/unicode 'Internal': 1
+    Latitude: 60.16952
+    Longitude: 24.93545
+    !!python/unicode 'label': !!python/unicode 'Helsinki'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Denmark'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.67594
+    Longitude: 12.56553
+    !!python/unicode 'label': !!python/unicode 'Copenhagen'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Iceland'
+    !!python/unicode 'Internal': 1
+    Latitude: 64.13548
+    Longitude: -21.89541
+    !!python/unicode 'label': !!python/unicode 'Reykjavik'

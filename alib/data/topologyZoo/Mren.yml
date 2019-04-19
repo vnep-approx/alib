@@ -1,13 +1,48 @@
-nodes:
-  '0': {Latitude: 43.03834, Longitude: 19.74758}
-  '1': {Latitude: 42.7731, Longitude: 18.94446}
-  '2': {Latitude: 42.44111, Longitude: 19.26361}
-  '3': {Latitude: 42.43306, Longitude: 18.82833}
-  '4': {Latitude: 42.42067, Longitude: 18.76825}
-  '5': {Latitude: 42.45306, Longitude: 18.5375}
 edges:
-- ['0', '2']
-- ['1', '2']
-- ['2', '3']
-- ['2', '4']
-- ['2', '5']
+- - '0'
+  - '2'
+- - '1'
+  - '2'
+- - '2'
+  - '3'
+- - '2'
+  - '4'
+- - '2'
+  - '5'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Montenegro'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.03834
+    Longitude: 19.74758
+    !!python/unicode 'label': !!python/unicode 'Bijelo Polje'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Montenegro'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.7731
+    Longitude: 18.94446
+    !!python/unicode 'label': !!python/unicode 'Niksic'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Montenegro'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.44111
+    Longitude: 19.26361
+    !!python/unicode 'label': !!python/unicode 'Podgorica'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Montenegro'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.43306
+    Longitude: 18.82833
+    !!python/unicode 'label': !!python/unicode 'Njegusi'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Montenegro'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.42067
+    Longitude: 18.76825
+    !!python/unicode 'label': !!python/unicode 'Kotor'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Montenegro'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.45306
+    Longitude: 18.5375
+    !!python/unicode 'label': !!python/unicode 'Herceg Novi'

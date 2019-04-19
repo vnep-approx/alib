@@ -1,37 +1,144 @@
-nodes:
-  '0': {Latitude: 27.44671, Longitude: -80.32561}
-  '1': {Latitude: 28.08363, Longitude: -80.60811}
-  '2': {Latitude: 28.09196, Longitude: -81.72341}
-  '3': {Latitude: 28.53834, Longitude: -81.37924}
-  '4': {Latitude: 26.71534, Longitude: -80.05337}
-  '5': {Latitude: 27.94752, Longitude: -82.45843}
-  '6': {Latitude: 25.77427, Longitude: -80.19366}
-  '7': {Latitude: 26.12231, Longitude: -80.14338}
-  '8': {Latitude: 33.25373, Longitude: -83.89852}
-  '9': {Latitude: 33.749, Longitude: -84.38798}
-  '10': {Latitude: 32.31879, Longitude: -82.5593}
-  '11': {Latitude: 32.88209, Longitude: -83.33238}
-  '12': {Latitude: 30.94162, Longitude: -82.02206}
-  '13': {Latitude: 31.72381, Longitude: -82.1979}
-  '14': {Latitude: 29.89469, Longitude: -81.31452}
-  '15': {Latitude: 30.33218, Longitude: -81.65565}
-  '16': {Latitude: 28.61222, Longitude: -80.80755}
-  '17': {Latitude: 29.21081, Longitude: -81.02283}
 edges:
-- ['0', '1']
-- ['0', '4']
-- ['1', '16']
-- ['2', '3']
-- ['2', '5']
-- ['3', '17']
-- ['4', '7']
-- ['6', '7']
-- ['8', '9']
-- ['8', '11']
-- ['10', '11']
-- ['10', '13']
-- ['12', '13']
-- ['12', '15']
-- ['14', '17']
-- ['14', '15']
-- ['16', '17']
+- - '0'
+  - '1'
+- - '0'
+  - '4'
+- - '1'
+  - '16'
+- - '2'
+  - '3'
+- - '2'
+  - '5'
+- - '3'
+  - '17'
+- - '4'
+  - '7'
+- - '6'
+  - '7'
+- - '8'
+  - '9'
+- - '8'
+  - '11'
+- - '10'
+  - '11'
+- - '10'
+  - '13'
+- - '12'
+  - '13'
+- - '12'
+  - '15'
+- - '14'
+  - '17'
+- - '14'
+  - '15'
+- - '16'
+  - '17'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 27.44671
+    Longitude: -80.32561
+    !!python/unicode 'label': !!python/unicode 'Ft. Pierce'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 28.08363
+    Longitude: -80.60811
+    !!python/unicode 'label': !!python/unicode 'Melbourne'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.31879
+    Longitude: -82.5593
+    !!python/unicode 'label': !!python/unicode 'Tarrytown'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.88209
+    Longitude: -83.33238
+    !!python/unicode 'label': !!python/unicode 'Gordon'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.94162
+    Longitude: -82.02206
+    !!python/unicode 'label': !!python/unicode 'Newell'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 31.72381
+    Longitude: -82.1979
+    !!python/unicode 'label': !!python/unicode 'Surrency'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 29.89469
+    Longitude: -81.31452
+    !!python/unicode 'label': !!python/unicode 'St. Augustine'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.33218
+    Longitude: -81.65565
+    !!python/unicode 'label': !!python/unicode 'Jacksonville'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 28.61222
+    Longitude: -80.80755
+    !!python/unicode 'label': !!python/unicode 'Titusville'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 29.21081
+    Longitude: -81.02283
+    !!python/unicode 'label': !!python/unicode 'Daytona Beach'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 28.09196
+    Longitude: -81.72341
+    !!python/unicode 'label': !!python/unicode 'Lake Alfred'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 28.53834
+    Longitude: -81.37924
+    !!python/unicode 'label': !!python/unicode 'Orlando'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 26.71534
+    Longitude: -80.05337
+    !!python/unicode 'label': !!python/unicode 'West Palm Beach'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 27.94752
+    Longitude: -82.45843
+    !!python/unicode 'label': !!python/unicode 'Tampa'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 25.77427
+    Longitude: -80.19366
+    !!python/unicode 'label': !!python/unicode 'Miami'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 26.12231
+    Longitude: -80.14338
+    !!python/unicode 'label': !!python/unicode 'Ft. Lauderdale'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.25373
+    Longitude: -83.89852
+    !!python/unicode 'label': !!python/unicode 'Flovilla'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.749
+    Longitude: -84.38798
+    !!python/unicode 'label': !!python/unicode 'Atlanta'

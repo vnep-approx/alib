@@ -1,75 +1,268 @@
-nodes:
-  '0': {Latitude: 48.4001, Longitude: -89.31683}
-  '1': {Latitude: 41.85003, Longitude: -87.65005}
-  '2': {Latitude: 50.45008, Longitude: -104.6178}
-  '3': {Latitude: 49.8844, Longitude: -97.14704}
-  '4': {Latitude: 45.41117, Longitude: -75.69812}
-  '5': {Latitude: 45.50884, Longitude: -73.58781}
-  '6': {Latitude: 42.33143, Longitude: -83.04575}
-  '7': {Latitude: 43.70011, Longitude: -79.4163}
-  '8': {Latitude: 45.94541, Longitude: -66.66558}
-  '9': {Latitude: 46.23525, Longitude: -63.12671}
-  '10': {Latitude: 47.60621, Longitude: -122.33207}
-  '11': {Latitude: 42.35843, Longitude: -71.05977}
-  '12': {Latitude: 47.60621, Longitude: -122.33207}
-  '13': {Latitude: 41.85003, Longitude: -87.65005}
-  '14': {Latitude: 47.56494, Longitude: -52.70931}
-  '15': {Latitude: 40.71427, Longitude: -74.00597}
-  '16': {Latitude: 47.56494, Longitude: -52.70931}
-  '17': {Latitude: 44.646, Longitude: -63.57333}
-  '18': {Latitude: 41.85003, Longitude: -87.65005}
-  '19': {Latitude: 41.85003, Longitude: -87.65005}
-  '20': {Latitude: 40.71427, Longitude: -74.00597}
-  '21': {Latitude: 40.71427, Longitude: -74.00597}
-  '22': {Latitude: 51.05011, Longitude: -114.08529}
-  '23': {Latitude: 52.11679, Longitude: -106.63452}
-  '24': {Latitude: 60.71611, Longitude: -135.05375}
-  '25': {Latitude: 62.456, Longitude: -114.35255}
-  '26': {Latitude: 53.55014, Longitude: -113.46871}
-  '27': {Latitude: 50.66648, Longitude: -120.3192}
-  '28': {Latitude: 49.88307, Longitude: -119.48568}
-  '29': {Latitude: 49.24966, Longitude: -123.11934}
-  '30': {Latitude: 48.43294, Longitude: -123.3693}
-  '31': {Latitude: 47.60621, Longitude: -122.33207}
 edges:
-- ['0', '3']
-- ['0', '7']
-- ['1', '3']
-- ['1', '6']
-- ['1', '13']
-- ['1', '18']
-- ['1', '19']
-- ['1', '22']
-- ['1', '31']
-- ['2', '3']
-- ['2', '22']
-- ['3', '7']
-- ['3', '22']
-- ['3', '23']
-- ['4', '5']
-- ['4', '7']
-- ['5', '8']
-- ['5', '17']
-- ['5', '11']
-- ['6', '7']
-- ['7', '15']
-- ['8', '9']
-- ['9', '17']
-- ['10', '31']
-- ['11', '15']
-- ['12', '31']
-- ['14', '16']
-- ['15', '17']
-- ['15', '20']
-- ['15', '21']
-- ['16', '17']
-- ['22', '27']
-- ['22', '26']
-- ['23', '26']
-- ['24', '26']
-- ['25', '26']
-- ['27', '28']
-- ['27', '29']
-- ['29', '30']
-- ['29', '31']
-- ['30', '31']
+- - '0'
+  - '3'
+- - '0'
+  - '7'
+- - '1'
+  - '3'
+- - '1'
+  - '6'
+- - '1'
+  - '13'
+- - '1'
+  - '18'
+- - '1'
+  - '19'
+- - '1'
+  - '22'
+- - '1'
+  - '31'
+- - '2'
+  - '3'
+- - '2'
+  - '22'
+- - '3'
+  - '7'
+- - '3'
+  - '22'
+- - '3'
+  - '23'
+- - '4'
+  - '5'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '5'
+  - '17'
+- - '5'
+  - '11'
+- - '6'
+  - '7'
+- - '7'
+  - '15'
+- - '8'
+  - '9'
+- - '9'
+  - '17'
+- - '10'
+  - '31'
+- - '11'
+  - '15'
+- - '12'
+  - '31'
+- - '14'
+  - '16'
+- - '15'
+  - '17'
+- - '15'
+  - '20'
+- - '15'
+  - '21'
+- - '16'
+  - '17'
+- - '22'
+  - '27'
+- - '22'
+  - '26'
+- - '23'
+  - '26'
+- - '24'
+  - '26'
+- - '25'
+  - '26'
+- - '27'
+  - '28'
+- - '27'
+  - '29'
+- - '29'
+  - '30'
+- - '29'
+  - '31'
+- - '30'
+  - '31'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.4001
+    Longitude: -89.31683
+    !!python/unicode 'label': !!python/unicode 'Thunder Bay'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.85003
+    Longitude: -87.65005
+    !!python/unicode 'label': !!python/unicode 'Chicago'
+  '10':
+    !!python/unicode 'Internal': 0
+    Latitude: 47.60621
+    Longitude: -122.33207
+    !!python/unicode 'label': !!python/unicode 'Asie-Pacifique'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.35843
+    Longitude: -71.05977
+    !!python/unicode 'label': !!python/unicode 'Boston'
+  '12':
+    !!python/unicode 'Internal': 0
+    Latitude: 47.60621
+    Longitude: -122.33207
+    !!python/unicode 'label': !!python/unicode 'Asia-Pacific'
+  '13':
+    !!python/unicode 'Internal': 0
+    Latitude: 41.85003
+    Longitude: -87.65005
+    !!python/unicode 'label': !!python/unicode 'Amerique du Nord et Amerique du Sud'
+  '14':
+    !!python/unicode 'Internal': 0
+    Latitude: 47.56494
+    Longitude: -52.70931
+    !!python/unicode 'label': !!python/unicode 'Europe'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.71427
+    Longitude: -74.00597
+    !!python/unicode 'label': !!python/unicode 'New York'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.56494
+    Longitude: -52.70931
+    !!python/unicode 'label': !!python/unicode 'St John''s'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.646
+    Longitude: -63.57333
+    !!python/unicode 'label': !!python/unicode 'Halifax'
+  '18':
+    !!python/unicode 'Internal': 0
+    Latitude: 41.85003
+    Longitude: -87.65005
+    !!python/unicode 'label': !!python/unicode 'North and South America'
+  '19':
+    !!python/unicode 'Internal': 0
+    Latitude: 41.85003
+    Longitude: -87.65005
+    !!python/unicode 'label': !!python/unicode 'Europe and other countries'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.45008
+    Longitude: -104.6178
+    !!python/unicode 'label': !!python/unicode 'Regina'
+  '20':
+    !!python/unicode 'Internal': 0
+    Latitude: 40.71427
+    Longitude: -74.00597
+    !!python/unicode 'label': !!python/unicode 'Europe et autres pays'
+  '21':
+    !!python/unicode 'Internal': 0
+    Latitude: 40.71427
+    Longitude: -74.00597
+    !!python/unicode 'label': !!python/unicode 'Europe and other countries'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.05011
+    Longitude: -114.08529
+    !!python/unicode 'label': !!python/unicode 'Calgary'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.11679
+    Longitude: -106.63452
+    !!python/unicode 'label': !!python/unicode 'Saskatoon'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 60.71611
+    Longitude: -135.05375
+    !!python/unicode 'label': !!python/unicode 'Whitehorse'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 62.456
+    Longitude: -114.35255
+    !!python/unicode 'label': !!python/unicode 'Yellowknife'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 53.55014
+    Longitude: -113.46871
+    !!python/unicode 'label': !!python/unicode 'Edmonton'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.66648
+    Longitude: -120.3192
+    !!python/unicode 'label': !!python/unicode 'Kamloops'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.88307
+    Longitude: -119.48568
+    !!python/unicode 'label': !!python/unicode 'Kelowna'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.24966
+    Longitude: -123.11934
+    !!python/unicode 'label': !!python/unicode 'Vancouver'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.8844
+    Longitude: -97.14704
+    !!python/unicode 'label': !!python/unicode 'Winnipeg'
+  '30':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.43294
+    Longitude: -123.3693
+    !!python/unicode 'label': !!python/unicode 'Victoria'
+  '31':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.60621
+    Longitude: -122.33207
+    !!python/unicode 'label': !!python/unicode 'Seattle'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.41117
+    Longitude: -75.69812
+    !!python/unicode 'label': !!python/unicode 'Ottawa'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.50884
+    Longitude: -73.58781
+    !!python/unicode 'label': !!python/unicode 'Montreal'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.33143
+    Longitude: -83.04575
+    !!python/unicode 'label': !!python/unicode 'Windsor/Detroit'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.70011
+    Longitude: -79.4163
+    !!python/unicode 'label': !!python/unicode 'Toronto'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.94541
+    Longitude: -66.66558
+    !!python/unicode 'label': !!python/unicode 'Fredericton'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Canada'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.23525
+    Longitude: -63.12671
+    !!python/unicode 'label': !!python/unicode 'Charlottetown'

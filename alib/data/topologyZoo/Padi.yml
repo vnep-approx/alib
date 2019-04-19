@@ -1,15 +1,56 @@
-nodes:
-  '3': {Latitude: 4.3238, Longitude: 100.9299}
-  '7': {Latitude: 4.3238, Longitude: 100.9299}
-  '10': {Latitude: 4.3238, Longitude: 100.9299}
-  '11': {Latitude: 4.3238, Longitude: 100.9299}
-  '12': {Latitude: 4.3238, Longitude: 100.9299}
-  '13': {Latitude: 4.3238, Longitude: 100.9299}
-  '14': {Latitude: 4.3238, Longitude: 100.9299}
 edges:
-- ['3', '11']
-- ['7', '11']
-- ['10', '11']
-- ['11', '12']
-- ['11', '13']
-- ['11', '14']
+- - '3'
+  - '11'
+- - '7'
+  - '11'
+- - '10'
+  - '11'
+- - '11'
+  - '12'
+- - '11'
+  - '13'
+- - '11'
+  - '14'
+nodes:
+  '10':
+    !!python/unicode 'Internal': 1
+    Latitude: 4.3238
+    Longitude: 100.9299
+    !!python/unicode 'label': !!python/unicode 'BZU'
+    !!python/unicode 'type': !!python/unicode 'University'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Malaysia'
+    !!python/unicode 'Internal': 1
+    Latitude: 4.3238
+    Longitude: 100.9299
+    !!python/unicode 'label': !!python/unicode 'PADI2'
+    !!python/unicode 'type': !!python/unicode 'University'
+  '12':
+    !!python/unicode 'Internal': 1
+    Latitude: 4.3238
+    Longitude: 100.9299
+    !!python/unicode 'label': !!python/unicode 'QOU'
+    !!python/unicode 'type': !!python/unicode 'University'
+  '13':
+    !!python/unicode 'Internal': 1
+    Latitude: 4.3238
+    Longitude: 100.9299
+    !!python/unicode 'label': !!python/unicode 'AQU'
+    !!python/unicode 'type': !!python/unicode 'University'
+  '14':
+    !!python/unicode 'Internal': 1
+    Latitude: 4.3238
+    Longitude: 100.9299
+    !!python/unicode 'label': !!python/unicode 'BU'
+    !!python/unicode 'type': !!python/unicode 'University'
+  '3':
+    !!python/unicode 'Internal': 1
+    Latitude: 4.3238
+    Longitude: 100.9299
+    !!python/unicode 'label': !!python/unicode 'PPU'
+    !!python/unicode 'type': !!python/unicode 'University'
+  '7':
+    !!python/unicode 'Internal': 0
+    Latitude: 4.3238
+    Longitude: 100.9299
+    !!python/unicode 'label': !!python/unicode 'GEANT'

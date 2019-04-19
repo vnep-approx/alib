@@ -1,17 +1,64 @@
-nodes:
-  '0': {Latitude: 53.07897, Longitude: -0.14008}
-  '1': {Latitude: 51.50853, Longitude: -0.12574}
-  '2': {Latitude: 59.33258, Longitude: 18.0649}
-  '3': {Latitude: 59.89444, Longitude: 30.26417}
-  '4': {Latitude: 55.75222, Longitude: 37.61556}
-  '5': {Latitude: 52.37403, Longitude: 4.88969}
-  '6': {Latitude: 50.11667, Longitude: 8.68333}
-  '7': {Latitude: 48.85341, Longitude: 2.3488}
 edges:
-- ['0', '5']
-- ['1', '5']
-- ['2', '3']
-- ['2', '5']
-- ['3', '4']
-- ['5', '6']
-- ['5', '7']
+- - '0'
+  - '5'
+- - '1'
+  - '5'
+- - '2'
+  - '3'
+- - '2'
+  - '5'
+- - '3'
+  - '4'
+- - '5'
+  - '6'
+- - '5'
+  - '7'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 53.07897
+    Longitude: -0.14008
+    !!python/unicode 'label': !!python/unicode 'New York'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.50853
+    Longitude: -0.12574
+    !!python/unicode 'label': !!python/unicode 'London'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Sweden'
+    !!python/unicode 'Internal': 1
+    Latitude: 59.33258
+    Longitude: 18.0649
+    !!python/unicode 'label': !!python/unicode 'Stockholm'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Russia'
+    !!python/unicode 'Internal': 1
+    Latitude: 59.89444
+    Longitude: 30.26417
+    !!python/unicode 'label': !!python/unicode 'St Petersburg'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Russia'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.75222
+    Longitude: 37.61556
+    !!python/unicode 'label': !!python/unicode 'Moscow'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Netherlands'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.37403
+    Longitude: 4.88969
+    !!python/unicode 'label': !!python/unicode 'Amsterdam'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.11667
+    Longitude: 8.68333
+    !!python/unicode 'label': !!python/unicode 'Frankfurt'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.85341
+    Longitude: 2.3488
+    !!python/unicode 'label': !!python/unicode 'Paris'

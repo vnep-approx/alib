@@ -1,35 +1,128 @@
-nodes:
-  '0': {Latitude: 37.01667, Longitude: -7.93333}
-  '1': {Latitude: 40.4165, Longitude: -3.70256}
-  '2': {Latitude: 41.15, Longitude: -8.61667}
-  '3': {Latitude: 38.71667, Longitude: -9.13333}
-  '4': {Latitude: 41.38879, Longitude: 2.15899}
-  '5': {Latitude: 53.48095, Longitude: -2.23743}
-  '6': {Latitude: 53.07897, Longitude: -0.14008}
-  '7': {Latitude: 52.37403, Longitude: 4.88969}
-  '8': {Latitude: 51.44083, Longitude: 5.47778}
-  '9': {Latitude: 52.52437, Longitude: 13.41053}
-  '10': {Latitude: 50.11667, Longitude: 8.68333}
-  '11': {Latitude: 48.13743, Longitude: 11.57549}
-  '12': {Latitude: 48.85341, Longitude: 2.3488}
-  '13': {Latitude: 48.08333, Longitude: -1.68333}
-  '14': {Latitude: 51.50853, Longitude: -0.12574}
 edges:
-- ['0', '3']
-- ['1', '3']
-- ['1', '4']
-- ['2', '3']
-- ['3', '14']
-- ['4', '12']
-- ['5', '14']
-- ['6', '14']
-- ['7', '8']
-- ['7', '10']
-- ['7', '14']
-- ['9', '10']
-- ['9', '11']
-- ['10', '11']
-- ['10', '12']
-- ['10', '14']
-- ['12', '13']
-- ['12', '14']
+- - '0'
+  - '3'
+- - '1'
+  - '3'
+- - '1'
+  - '4'
+- - '2'
+  - '3'
+- - '3'
+  - '14'
+- - '4'
+  - '12'
+- - '5'
+  - '14'
+- - '6'
+  - '14'
+- - '7'
+  - '8'
+- - '7'
+  - '10'
+- - '7'
+  - '14'
+- - '9'
+  - '10'
+- - '9'
+  - '11'
+- - '10'
+  - '11'
+- - '10'
+  - '12'
+- - '10'
+  - '14'
+- - '12'
+  - '13'
+- - '12'
+  - '14'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Portugal'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.01667
+    Longitude: -7.93333
+    !!python/unicode 'label': !!python/unicode 'Faro'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Spain'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.4165
+    Longitude: -3.70256
+    !!python/unicode 'label': !!python/unicode 'Madrid'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.11667
+    Longitude: 8.68333
+    !!python/unicode 'label': !!python/unicode 'Frankfurt'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.13743
+    Longitude: 11.57549
+    !!python/unicode 'label': !!python/unicode 'Munich'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.85341
+    Longitude: 2.3488
+    !!python/unicode 'label': !!python/unicode 'Paris'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.08333
+    Longitude: -1.68333
+    !!python/unicode 'label': !!python/unicode 'Rennes'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.50853
+    Longitude: -0.12574
+    !!python/unicode 'label': !!python/unicode 'London'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Portugal'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.15
+    Longitude: -8.61667
+    !!python/unicode 'label': !!python/unicode 'Porto'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Portugal'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.71667
+    Longitude: -9.13333
+    !!python/unicode 'label': !!python/unicode 'Lisbon'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Spain'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.38879
+    Longitude: 2.15899
+    !!python/unicode 'label': !!python/unicode 'Barcelona'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 53.48095
+    Longitude: -2.23743
+    !!python/unicode 'label': !!python/unicode 'Manchester'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 53.07897
+    Longitude: -0.14008
+    !!python/unicode 'label': !!python/unicode 'New York'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Netherlands'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.37403
+    Longitude: 4.88969
+    !!python/unicode 'label': !!python/unicode 'Amsterdam'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Netherlands'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.44083
+    Longitude: 5.47778
+    !!python/unicode 'label': !!python/unicode 'Eindhoven'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.52437
+    Longitude: 13.41053
+    !!python/unicode 'label': !!python/unicode 'Berlin'

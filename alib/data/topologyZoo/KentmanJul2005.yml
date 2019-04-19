@@ -1,35 +1,149 @@
-nodes:
-  '0': {Latitude: 51.33265, Longitude: 0.5046}
-  '1': {Latitude: 51.18249, Longitude: 0.93678}
-  '2': {Latitude: 51.29169, Longitude: 0.97929}
-  '3': {Latitude: 51.4, Longitude: 0.43333}
-  '4': {Latitude: 51.27904, Longitude: 1.07992}
-  '5': {Latitude: 51.37891, Longitude: 0.52786}
-  '6': {Latitude: 51.08333, Longitude: 0.53333}
-  '7': {Latitude: 51.18249, Longitude: 0.93678}
-  '8': {Latitude: 51.44628, Longitude: 0.07703}
-  '9': {Latitude: 51.27934, Longitude: 1.08936}
-  '10': {Latitude: 51.15222, Longitude: 0.24307}
-  '11': {Latitude: 51.35895, Longitude: 1.40616}
-  '12': {Latitude: 51.37992, Longitude: 0.51438}
-  '13': {Latitude: 51.27537, Longitude: 1.09078}
-  '14': {Latitude: 51.27115, Longitude: 0.49799}
-  '15': {Latitude: 51.18333, Longitude: 0.28333}
 edges:
-- ['0', '3']
-- ['0', '5']
-- ['0', '6']
-- ['0', '8']
-- ['0', '14']
-- ['0', '15']
-- ['1', '4']
-- ['1', '7']
-- ['2', '3']
-- ['2', '4']
-- ['3', '8']
-- ['3', '12']
-- ['4', '11']
-- ['4', '13']
-- ['4', '9']
-- ['6', '7']
-- ['10', '15']
+- - '0'
+  - '3'
+- - '0'
+  - '5'
+- - '0'
+  - '6'
+- - '0'
+  - '8'
+- - '0'
+  - '14'
+- - '0'
+  - '15'
+- - '1'
+  - '4'
+- - '1'
+  - '7'
+- - '2'
+  - '3'
+- - '2'
+  - '4'
+- - '3'
+  - '8'
+- - '3'
+  - '12'
+- - '4'
+  - '11'
+- - '4'
+  - '13'
+- - '4'
+  - '9'
+- - '6'
+  - '7'
+- - '10'
+  - '15'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.33265
+    Longitude: 0.5046
+    !!python/unicode 'label': !!python/unicode 'Blue Bell Hill'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.18249
+    Longitude: 0.93678
+    !!python/unicode 'label': !!python/unicode 'Wye'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.15222
+    Longitude: 0.24307
+    !!python/unicode 'label': !!python/unicode 'CCCU-S'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.35895
+    Longitude: 1.40616
+    !!python/unicode 'label': !!python/unicode 'CCCU-T'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.37992
+    Longitude: 0.51438
+    !!python/unicode 'label': !!python/unicode 'KIAD-R'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.27537
+    Longitude: 1.09078
+    !!python/unicode 'label': !!python/unicode 'KIAD-C'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.27115
+    Longitude: 0.49799
+    !!python/unicode 'label': !!python/unicode 'KIAD-M'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.18333
+    Longitude: 0.28333
+    !!python/unicode 'label': !!python/unicode 'Tonbridge'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.29169
+    Longitude: 0.97929
+    !!python/unicode 'label': !!python/unicode 'Dunkirk'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.4
+    Longitude: 0.43333
+    !!python/unicode 'label': !!python/unicode 'Beacon Hill'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.27904
+    Longitude: 1.07992
+    !!python/unicode 'label': !!python/unicode 'Kent'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.37891
+    Longitude: 0.52786
+    !!python/unicode 'label': !!python/unicode 'Horsted'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.08333
+    Longitude: 0.53333
+    !!python/unicode 'label': !!python/unicode 'Cranbrook'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.18249
+    Longitude: 0.93678
+    !!python/unicode 'label': !!python/unicode 'NTL-Wye'
+    !!python/unicode 'type': !!python/unicode 'Radio Mast'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.44628
+    Longitude: 0.07703
+    !!python/unicode 'geocode_append': !!python/unicode 'Medway'
+    !!python/unicode 'label': !!python/unicode 'University of Greenwich'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.27934
+    Longitude: 1.08936
+    !!python/unicode 'label': !!python/unicode 'CCCU-C'
+    !!python/unicode 'type': !!python/unicode 'HE/FE site'

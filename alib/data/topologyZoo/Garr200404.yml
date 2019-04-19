@@ -1,48 +1,180 @@
-nodes:
-  '0': {Latitude: 45.41519, Longitude: 11.88181}
-  '1': {Latitude: 45.46427, Longitude: 9.18951}
-  '2': {Latitude: 38.11582, Longitude: 13.35976}
-  '3': {Latitude: 45.64861, Longitude: 13.78}
-  '4': {Latitude: 43.76667, Longitude: 11.25}
-  '5': {Latitude: 44.49381, Longitude: 11.33875}
-  '6': {Latitude: 45.07049, Longitude: 7.68682}
-  '7': {Latitude: 44.40632, Longitude: 8.93386}
-  '8': {Latitude: 44.49381, Longitude: 11.33875}
-  '9': {Latitude: 40.83333, Longitude: 14.25}
-  '10': {Latitude: 45.46427, Longitude: 9.18951}
-  '11': {Latitude: 41.89474, Longitude: 12.4839}
-  '12': {Latitude: 40.83333, Longitude: 14.25}
-  '13': {Latitude: 37.50213, Longitude: 15.08719}
-  '14': {Latitude: 43.71553, Longitude: 10.39659}
-  '15': {Latitude: 45.46427, Longitude: 9.18951}
-  '16': {Latitude: 45.46427, Longitude: 9.18951}
-  '17': {Latitude: 39.20738, Longitude: 9.13462}
-  '18': {Latitude: 41.89474, Longitude: 12.4839}
-  '19': {Latitude: 42.35055, Longitude: 13.39954}
-  '20': {Latitude: 41.81632, Longitude: 12.66868}
-  '21': {Latitude: 41.11773, Longitude: 16.85118}
 edges:
-- ['0', '5']
-- ['1', '3']
-- ['1', '5']
-- ['1', '6']
-- ['1', '7']
-- ['1', '10']
-- ['1', '12']
-- ['1', '15']
-- ['1', '16']
-- ['1', '18']
-- ['2', '12']
-- ['4', '5']
-- ['5', '8']
-- ['5', '12']
-- ['5', '14']
-- ['5', '18']
-- ['9', '12']
-- ['11', '18']
-- ['12', '13']
-- ['12', '18']
-- ['12', '21']
-- ['17', '18']
-- ['18', '19']
-- ['18', '20']
+- - '0'
+  - '5'
+- - '1'
+  - '3'
+- - '1'
+  - '5'
+- - '1'
+  - '6'
+- - '1'
+  - '7'
+- - '1'
+  - '10'
+- - '1'
+  - '12'
+- - '1'
+  - '15'
+- - '1'
+  - '16'
+- - '1'
+  - '18'
+- - '2'
+  - '12'
+- - '4'
+  - '5'
+- - '5'
+  - '8'
+- - '5'
+  - '12'
+- - '5'
+  - '14'
+- - '5'
+  - '18'
+- - '9'
+  - '12'
+- - '11'
+  - '18'
+- - '12'
+  - '13'
+- - '12'
+  - '18'
+- - '12'
+  - '21'
+- - '17'
+  - '18'
+- - '18'
+  - '19'
+- - '18'
+  - '20'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.41519
+    Longitude: 11.88181
+    !!python/unicode 'label': !!python/unicode 'PD'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'MI'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'MI'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.89474
+    Longitude: 12.4839
+    !!python/unicode 'label': !!python/unicode 'RM'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.83333
+    Longitude: 14.25
+    !!python/unicode 'label': !!python/unicode 'NA'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.50213
+    Longitude: 15.08719
+    !!python/unicode 'label': !!python/unicode 'CT'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.71553
+    Longitude: 10.39659
+    !!python/unicode 'label': !!python/unicode 'PI'
+  '15':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'Ten155'
+  '16':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'USA'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 39.20738
+    Longitude: 9.13462
+    !!python/unicode 'label': !!python/unicode 'CA'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.89474
+    Longitude: 12.4839
+    !!python/unicode 'label': !!python/unicode 'RM'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.35055
+    Longitude: 13.39954
+    !!python/unicode 'label': !!python/unicode 'AQ'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.11582
+    Longitude: 13.35976
+    !!python/unicode 'label': !!python/unicode 'PA'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.81632
+    Longitude: 12.66868
+    !!python/unicode 'label': !!python/unicode 'FRA'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.11773
+    Longitude: 16.85118
+    !!python/unicode 'label': !!python/unicode 'BA'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.64861
+    Longitude: 13.78
+    !!python/unicode 'label': !!python/unicode 'TS'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.76667
+    Longitude: 11.25
+    !!python/unicode 'label': !!python/unicode 'FI'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.49381
+    Longitude: 11.33875
+    !!python/unicode 'label': !!python/unicode 'BO'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.07049
+    Longitude: 7.68682
+    !!python/unicode 'label': !!python/unicode 'TO'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.40632
+    Longitude: 8.93386
+    !!python/unicode 'label': !!python/unicode 'GE'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.49381
+    Longitude: 11.33875
+    !!python/unicode 'label': !!python/unicode 'BO'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.83333
+    Longitude: 14.25
+    !!python/unicode 'label': !!python/unicode 'NA'

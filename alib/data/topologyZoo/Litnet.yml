@@ -1,88 +1,384 @@
-nodes:
-  '0': {Latitude: 55.73333, Longitude: 26.25}
-  '1': {Latitude: 55.73333, Longitude: 24.35}
-  '2': {Latitude: 55.96667, Longitude: 25.58333}
-  '3': {Latitude: 55.83333, Longitude: 24.96667}
-  '4': {Latitude: 55.63389, Longitude: 22.93417}
-  '5': {Latitude: 55.71722, Longitude: 21.1175}
-  '6': {Latitude: 55.81667, Longitude: 23.53333}
-  '7': {Latitude: 55.91139, Longitude: 21.84417}
-  '8': {Latitude: 55.25222, Longitude: 22.28972}
-  '9': {Latitude: 55.35917, Longitude: 21.70222}
-  '10': {Latitude: 54.63333, Longitude: 23.95}
-  '11': {Latitude: 54.63333, Longitude: 24.93333}
-  '12': {Latitude: 55.35, Longitude: 26.16667}
-  '13': {Latitude: 55.25, Longitude: 24.75}
-  '14': {Latitude: 55.05, Longitude: 24.95}
-  '15': {Latitude: 55.07778, Longitude: 22.76639}
-  '16': {Latitude: 54.95472, Longitude: 23.03583}
-  '17': {Latitude: 54.65167, Longitude: 23.03222}
-  '18': {Latitude: 54.56667, Longitude: 23.35}
-  '19': {Latitude: 54.4, Longitude: 24.05}
-  '20': {Latitude: 54.01667, Longitude: 23.96667}
-  '21': {Latitude: 54.3, Longitude: 25.38333}
-  '22': {Latitude: 54.9, Longitude: 23.9}
-  '23': {Latitude: 55.23333, Longitude: 25.41667}
-  '24': {Latitude: 55.6, Longitude: 26.41667}
-  '25': {Latitude: 56.05944, Longitude: 24.40361}
-  '26': {Latitude: 54.9, Longitude: 23.9}
-  '27': {Latitude: 55.28833, Longitude: 23.97472}
-  '28': {Latitude: 55.37361, Longitude: 23.12167}
-  '29': {Latitude: 55.5, Longitude: 25.6}
-  '30': {Latitude: 55.52557, Longitude: 25.10264}
-  '31': {Latitude: 55.08333, Longitude: 24.28333}
-  '32': {Latitude: 54.68916, Longitude: 25.2798}
-  '33': {Latitude: 55.71722, Longitude: 21.1175}
-  '34': {Latitude: 55.98139, Longitude: 22.24722}
-  '35': {Latitude: 56.31667, Longitude: 22.33333}
-  '36': {Latitude: 55.93333, Longitude: 23.31667}
-  '37': {Latitude: 56.24028, Longitude: 23.61528}
-  '38': {Latitude: 56.2, Longitude: 24.75}
-  '39': {Latitude: 55.93333, Longitude: 23.31667}
-  '40': {Latitude: 54.68916, Longitude: 25.2798}
-  '41': {Latitude: 55.9175, Longitude: 21.06861}
-  '42': {Latitude: 55.87583, Longitude: 21.25083}
 edges:
-- ['0', '1']
-- ['1', '32']
-- ['1', '38']
-- ['1', '39']
-- ['1', '24']
-- ['1', '30']
-- ['2', '39']
-- ['3', '39']
-- ['4', '39']
-- ['5', '33']
-- ['6', '39']
-- ['7', '39']
-- ['8', '33']
-- ['9', '33']
-- ['10', '26']
-- ['11', '32']
-- ['12', '32']
-- ['13', '32']
-- ['14', '32']
-- ['15', '26']
-- ['16', '26']
-- ['17', '26']
-- ['18', '26']
-- ['19', '26']
-- ['20', '32']
-- ['21', '26']
-- ['22', '26']
-- ['23', '32']
-- ['25', '32']
-- ['26', '32']
-- ['26', '33']
-- ['26', '27']
-- ['26', '28']
-- ['26', '31']
-- ['29', '32']
-- ['32', '40']
-- ['33', '34']
-- ['33', '39']
-- ['33', '42']
-- ['33', '41']
-- ['35', '39']
-- ['36', '39']
-- ['37', '39']
+- - '0'
+  - '1'
+- - '1'
+  - '32'
+- - '1'
+  - '38'
+- - '1'
+  - '39'
+- - '1'
+  - '24'
+- - '1'
+  - '30'
+- - '2'
+  - '39'
+- - '3'
+  - '39'
+- - '4'
+  - '39'
+- - '5'
+  - '33'
+- - '6'
+  - '39'
+- - '7'
+  - '39'
+- - '8'
+  - '33'
+- - '9'
+  - '33'
+- - '10'
+  - '26'
+- - '11'
+  - '32'
+- - '12'
+  - '32'
+- - '13'
+  - '32'
+- - '14'
+  - '32'
+- - '15'
+  - '26'
+- - '16'
+  - '26'
+- - '17'
+  - '26'
+- - '18'
+  - '26'
+- - '19'
+  - '26'
+- - '20'
+  - '32'
+- - '21'
+  - '26'
+- - '22'
+  - '26'
+- - '23'
+  - '32'
+- - '25'
+  - '32'
+- - '26'
+  - '32'
+- - '26'
+  - '33'
+- - '26'
+  - '27'
+- - '26'
+  - '28'
+- - '26'
+  - '31'
+- - '29'
+  - '32'
+- - '32'
+  - '40'
+- - '33'
+  - '34'
+- - '33'
+  - '39'
+- - '33'
+  - '42'
+- - '33'
+  - '41'
+- - '35'
+  - '39'
+- - '36'
+  - '39'
+- - '37'
+  - '39'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.73333
+    Longitude: 26.25
+    !!python/unicode 'label': !!python/unicode 'Zarasai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.73333
+    Longitude: 24.35
+    !!python/unicode 'label': !!python/unicode 'Panevezys'
+    !!python/unicode 'type': !!python/unicode 'Major City PoP'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.63333
+    Longitude: 23.95
+    !!python/unicode 'label': !!python/unicode 'Prienai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.63333
+    Longitude: 24.93333
+    !!python/unicode 'label': !!python/unicode 'Trakar'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.35
+    Longitude: 26.16667
+    !!python/unicode 'label': !!python/unicode 'Ignalina'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.25
+    Longitude: 24.75
+    !!python/unicode 'label': !!python/unicode 'Ukmerge'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.05
+    Longitude: 24.95
+    !!python/unicode 'label': !!python/unicode 'Sirvintos'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.07778
+    Longitude: 22.76639
+    !!python/unicode 'label': !!python/unicode 'Jurbarkas'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.95472
+    Longitude: 23.03583
+    !!python/unicode 'label': !!python/unicode 'Sakiai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.65167
+    Longitude: 23.03222
+    !!python/unicode 'label': !!python/unicode 'Vilkaviskis'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.56667
+    Longitude: 23.35
+    !!python/unicode 'label': !!python/unicode 'Marijampole'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.4
+    Longitude: 24.05
+    !!python/unicode 'label': !!python/unicode 'Alytus'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.96667
+    Longitude: 25.58333
+    !!python/unicode 'label': !!python/unicode 'Rokiskis'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.01667
+    Longitude: 23.96667
+    !!python/unicode 'label': !!python/unicode 'Druskininkai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.3
+    Longitude: 25.38333
+    !!python/unicode 'label': !!python/unicode 'Salcininkai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '22':
+    !!python/unicode 'Internal': 0
+    Latitude: 54.9
+    Longitude: 23.9
+    !!python/unicode 'label': !!python/unicode 'GEANT'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.23333
+    Longitude: 25.41667
+    !!python/unicode 'label': !!python/unicode 'Moletai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.6
+    Longitude: 26.41667
+    !!python/unicode 'label': !!python/unicode 'Visaginas'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.05944
+    Longitude: 24.40361
+    !!python/unicode 'label': !!python/unicode 'Pasvalys'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.9
+    Longitude: 23.9
+    !!python/unicode 'label': !!python/unicode 'Kaunas'
+    !!python/unicode 'type': !!python/unicode 'Major City PoP'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.28833
+    Longitude: 23.97472
+    !!python/unicode 'label': !!python/unicode 'Kedainiai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.37361
+    Longitude: 23.12167
+    !!python/unicode 'label': !!python/unicode 'Raseiniai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.5
+    Longitude: 25.6
+    !!python/unicode 'label': !!python/unicode 'Utena'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.83333
+    Longitude: 24.96667
+    !!python/unicode 'label': !!python/unicode 'Kupiskis'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '30':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.52557
+    Longitude: 25.10264
+    !!python/unicode 'label': !!python/unicode 'Anyksciai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '31':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.08333
+    Longitude: 24.28333
+    !!python/unicode 'label': !!python/unicode 'Jonava'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '32':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 54.68916
+    Longitude: 25.2798
+    !!python/unicode 'label': !!python/unicode 'Vilnius'
+    !!python/unicode 'type': !!python/unicode 'Major City PoP'
+  '33':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.71722
+    Longitude: 21.1175
+    !!python/unicode 'label': !!python/unicode 'Klaipeda'
+    !!python/unicode 'type': !!python/unicode 'Major City PoP'
+  '34':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.98139
+    Longitude: 22.24722
+    !!python/unicode 'label': !!python/unicode 'Telsiai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '35':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.31667
+    Longitude: 22.33333
+    !!python/unicode 'label': !!python/unicode 'Mazeikiai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '36':
+    !!python/unicode 'Internal': 1
+    Latitude: 55.93333
+    Longitude: 23.31667
+    !!python/unicode 'label': !!python/unicode 'N.Akmene'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '37':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.24028
+    Longitude: 23.61528
+    !!python/unicode 'label': !!python/unicode 'Joniskis'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '38':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.2
+    Longitude: 24.75
+    !!python/unicode 'label': !!python/unicode 'Birzai'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '39':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.93333
+    Longitude: 23.31667
+    !!python/unicode 'label': !!python/unicode 'Siauliai'
+    !!python/unicode 'type': !!python/unicode 'Major City PoP'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.63389
+    Longitude: 22.93417
+    !!python/unicode 'label': !!python/unicode 'Kelme'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '40':
+    !!python/unicode 'Internal': 1
+    Latitude: 54.68916
+    Longitude: 25.2798
+    !!python/unicode 'label': !!python/unicode 'Skoudas'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '41':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.9175
+    Longitude: 21.06861
+    !!python/unicode 'label': !!python/unicode 'Palanga'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '42':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.87583
+    Longitude: 21.25083
+    !!python/unicode 'label': !!python/unicode 'Kretinga'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '5':
+    !!python/unicode 'Internal': 1
+    Latitude: 55.71722
+    Longitude: 21.1175
+    !!python/unicode 'label': !!python/unicode 'Siale'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.81667
+    Longitude: 23.53333
+    !!python/unicode 'label': !!python/unicode 'Radviliskis'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.91139
+    Longitude: 21.84417
+    !!python/unicode 'label': !!python/unicode 'Plunge'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.25222
+    Longitude: 22.28972
+    !!python/unicode 'label': !!python/unicode 'Taurage'
+    !!python/unicode 'type': !!python/unicode 'PoP'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Lithuania'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.35917
+    Longitude: 21.70222
+    !!python/unicode 'label': !!python/unicode 'Zemaiciu Naumiestis'
+    !!python/unicode 'type': !!python/unicode 'PoP'

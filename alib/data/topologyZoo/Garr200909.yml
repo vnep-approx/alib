@@ -1,126 +1,457 @@
-nodes:
-  '0': {Latitude: 45.46427, Longitude: 9.18951}
-  '1': {Latitude: 39.20738, Longitude: 9.13462}
-  '2': {Latitude: 45.46427, Longitude: 9.18951}
-  '3': {Latitude: 45.46427, Longitude: 9.18951}
-  '4': {Latitude: 39.20738, Longitude: 9.13462}
-  '5': {Latitude: 41.89474, Longitude: 12.4839}
-  '6': {Latitude: 42.35055, Longitude: 13.39954}
-  '7': {Latitude: 40.72722, Longitude: 8.56028}
-  '8': {Latitude: 41.89474, Longitude: 12.4839}
-  '9': {Latitude: 43.09674, Longitude: 12.38286}
-  '10': {Latitude: 38.89079, Longitude: 16.5987}
-  '11': {Latitude: 43.76667, Longitude: 11.25}
-  '12': {Latitude: 44.49381, Longitude: 11.33875}
-  '13': {Latitude: 45.46427, Longitude: 9.18951}
-  '14': {Latitude: 45.41519, Longitude: 11.88181}
-  '15': {Latitude: 45.64861, Longitude: 13.78}
-  '16': {Latitude: 40.83333, Longitude: 14.25}
-  '17': {Latitude: 38.19327, Longitude: 15.54969}
-  '18': {Latitude: 39.30999, Longitude: 16.25019}
-  '19': {Latitude: 37.50213, Longitude: 15.08719}
-  '20': {Latitude: 38.11582, Longitude: 13.35976}
-  '21': {Latitude: 37.50213, Longitude: 15.08719}
-  '22': {Latitude: 45.46427, Longitude: 9.18951}
-  '23': {Latitude: 45.46427, Longitude: 9.18951}
-  '24': {Latitude: 41.89474, Longitude: 12.4839}
-  '25': {Latitude: 43.76667, Longitude: 11.25}
-  '26': {Latitude: 43.76667, Longitude: 11.25}
-  '27': {Latitude: 45.43861, Longitude: 12.32667}
-  '28': {Latitude: 45.41519, Longitude: 11.88181}
-  '29': {Latitude: 45.46427, Longitude: 9.18951}
-  '30': {Latitude: 46.06787, Longitude: 11.12108}
-  '31': {Latitude: 45.46427, Longitude: 9.18951}
-  '32': {Latitude: 45.46427, Longitude: 9.18951}
-  '33': {Latitude: 44.40632, Longitude: 8.93386}
-  '34': {Latitude: 45.07049, Longitude: 7.68682}
-  '35': {Latitude: 40.67797, Longitude: 14.76599}
-  '36': {Latitude: 40.64432, Longitude: 15.80857}
-  '37': {Latitude: 41.56003, Longitude: 14.66753}
-  '38': {Latitude: 41.81632, Longitude: 12.66868}
-  '39': {Latitude: 42.35055, Longitude: 13.39954}
-  '40': {Latitude: 43.59816, Longitude: 13.51008}
-  '41': {Latitude: 40.66852, Longitude: 16.60158}
-  '42': {Latitude: 40.35703, Longitude: 18.17202}
-  '43': {Latitude: 41.11773, Longitude: 16.85118}
-  '44': {Latitude: 41.46093, Longitude: 15.54925}
-  '45': {Latitude: 45.46427, Longitude: 9.18951}
-  '46': {Latitude: 45.46427, Longitude: 9.18951}
-  '47': {Latitude: 45.46427, Longitude: 9.18951}
-  '48': {Latitude: 45.07049, Longitude: 7.68682}
-  '49': {Latitude: 41.89474, Longitude: 12.4839}
-  '50': {Latitude: 45.46427, Longitude: 9.18951}
-  '51': {Latitude: 44.82678, Longitude: 11.62071}
-  '52': {Latitude: 45.18446, Longitude: 9.16145}
-  '53': {Latitude: 43.71553, Longitude: 10.39659}
-  '54': {Latitude: 43.72621, Longitude: 12.63633}
 edges:
-- ['0', '29']
-- ['1', '4']
-- ['2', '29']
-- ['3', '31']
-- ['4', '8']
-- ['4', '7']
-- ['4', '49']
-- ['5', '49']
-- ['6', '49']
-- ['6', '39']
-- ['8', '38']
-- ['8', '39']
-- ['8', '40']
-- ['8', '9']
-- ['8', '49']
-- ['8', '19']
-- ['10', '18']
-- ['11', '25']
-- ['12', '40']
-- ['12', '43']
-- ['12', '49']
-- ['12', '51']
-- ['12', '25']
-- ['12', '28']
-- ['12', '29']
-- ['13', '31']
-- ['13', '52']
-- ['13', '29']
-- ['13', '30']
-- ['13', '47']
-- ['14', '28']
-- ['15', '50']
-- ['15', '28']
-- ['16', '49']
-- ['16', '19']
-- ['16', '37']
-- ['16', '35']
-- ['16', '43']
-- ['17', '19']
-- ['18', '19']
-- ['19', '20']
-- ['19', '21']
-- ['22', '31']
-- ['23', '31']
-- ['24', '49']
-- ['25', '26']
-- ['25', '53']
-- ['27', '28']
-- ['28', '29']
-- ['29', '46']
-- ['29', '50']
-- ['29', '31']
-- ['31', '32']
-- ['31', '33']
-- ['31', '34']
-- ['31', '45']
-- ['31', '49']
-- ['31', '50']
-- ['32', '50']
-- ['33', '53']
-- ['34', '48']
-- ['34', '53']
-- ['36', '43']
-- ['38', '49']
-- ['40', '54']
-- ['41', '43']
-- ['42', '43']
-- ['43', '44']
-- ['49', '53']
+- - '0'
+  - '29'
+- - '1'
+  - '4'
+- - '2'
+  - '29'
+- - '3'
+  - '31'
+- - '4'
+  - '8'
+- - '4'
+  - '7'
+- - '4'
+  - '49'
+- - '5'
+  - '49'
+- - '6'
+  - '49'
+- - '6'
+  - '39'
+- - '8'
+  - '38'
+- - '8'
+  - '39'
+- - '8'
+  - '40'
+- - '8'
+  - '9'
+- - '8'
+  - '49'
+- - '8'
+  - '19'
+- - '10'
+  - '18'
+- - '11'
+  - '25'
+- - '12'
+  - '40'
+- - '12'
+  - '43'
+- - '12'
+  - '49'
+- - '12'
+  - '51'
+- - '12'
+  - '25'
+- - '12'
+  - '28'
+- - '12'
+  - '29'
+- - '13'
+  - '31'
+- - '13'
+  - '52'
+- - '13'
+  - '29'
+- - '13'
+  - '30'
+- - '13'
+  - '47'
+- - '14'
+  - '28'
+- - '15'
+  - '50'
+- - '15'
+  - '28'
+- - '16'
+  - '49'
+- - '16'
+  - '19'
+- - '16'
+  - '37'
+- - '16'
+  - '35'
+- - '16'
+  - '43'
+- - '17'
+  - '19'
+- - '18'
+  - '19'
+- - '19'
+  - '20'
+- - '19'
+  - '21'
+- - '22'
+  - '31'
+- - '23'
+  - '31'
+- - '24'
+  - '49'
+- - '25'
+  - '26'
+- - '25'
+  - '53'
+- - '27'
+  - '28'
+- - '28'
+  - '29'
+- - '29'
+  - '46'
+- - '29'
+  - '50'
+- - '29'
+  - '31'
+- - '31'
+  - '32'
+- - '31'
+  - '33'
+- - '31'
+  - '34'
+- - '31'
+  - '45'
+- - '31'
+  - '49'
+- - '31'
+  - '50'
+- - '32'
+  - '50'
+- - '33'
+  - '53'
+- - '34'
+  - '48'
+- - '34'
+  - '53'
+- - '36'
+  - '43'
+- - '38'
+  - '49'
+- - '40'
+  - '54'
+- - '41'
+  - '43'
+- - '42'
+  - '43'
+- - '43'
+  - '44'
+- - '49'
+  - '53'
+nodes:
+  '0':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'Svizzera'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 39.20738
+    Longitude: 9.13462
+    !!python/unicode 'label': !!python/unicode 'CA'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.89079
+    Longitude: 16.5987
+    !!python/unicode 'label': !!python/unicode 'CZ'
+  '11':
+    !!python/unicode 'Internal': 0
+    Latitude: 43.76667
+    Longitude: 11.25
+    !!python/unicode 'label': !!python/unicode 'TIX'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.49381
+    Longitude: 11.33875
+    !!python/unicode 'label': !!python/unicode 'BO'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'MI-3'
+  '14':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.41519
+    Longitude: 11.88181
+    !!python/unicode 'label': !!python/unicode 'VSIX'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.64861
+    Longitude: 13.78
+    !!python/unicode 'label': !!python/unicode 'TS-1'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.83333
+    Longitude: 14.25
+    !!python/unicode 'label': !!python/unicode 'NA'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.19327
+    Longitude: 15.54969
+    !!python/unicode 'label': !!python/unicode 'ME'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 39.30999
+    Longitude: 16.25019
+    !!python/unicode 'label': !!python/unicode 'CS'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.50213
+    Longitude: 15.08719
+    !!python/unicode 'label': !!python/unicode 'CT'
+  '2':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'Global Crossing'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.11582
+    Longitude: 13.35976
+    !!python/unicode 'label': !!python/unicode 'PA'
+  '21':
+    !!python/unicode 'Internal': 0
+    Latitude: 37.50213
+    Longitude: 15.08719
+    !!python/unicode 'label': !!python/unicode 'EUMED CONNECT'
+  '22':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'MIX    '
+  '23':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'TELIA'
+  '24':
+    !!python/unicode 'Internal': 0
+    Latitude: 41.89474
+    Longitude: 12.4839
+    !!python/unicode 'label': !!python/unicode 'Level3'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.76667
+    Longitude: 11.25
+    !!python/unicode 'label': !!python/unicode 'FI'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.76667
+    Longitude: 11.25
+    !!python/unicode 'label': !!python/unicode 'Fi'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.43861
+    Longitude: 12.32667
+    !!python/unicode 'label': !!python/unicode 'VE'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.41519
+    Longitude: 11.88181
+    !!python/unicode 'label': !!python/unicode 'PD'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'MI-1'
+  '3':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'GEANT'
+  '30':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.06787
+    Longitude: 11.12108
+    !!python/unicode 'label': !!python/unicode 'TN'
+  '31':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'MI-2'
+  '32':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'CO'
+  '33':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.40632
+    Longitude: 8.93386
+    !!python/unicode 'label': !!python/unicode 'GE'
+  '34':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.07049
+    Longitude: 7.68682
+    !!python/unicode 'label': !!python/unicode 'TO'
+  '35':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.67797
+    Longitude: 14.76599
+    !!python/unicode 'label': !!python/unicode 'SA'
+  '36':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.64432
+    Longitude: 15.80857
+    !!python/unicode 'label': !!python/unicode 'PZ'
+  '37':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.56003
+    Longitude: 14.66753
+    !!python/unicode 'label': !!python/unicode 'CB'
+  '38':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.81632
+    Longitude: 12.66868
+    !!python/unicode 'label': !!python/unicode 'FRA'
+  '39':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.35055
+    Longitude: 13.39954
+    !!python/unicode 'label': !!python/unicode 'AQ'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 39.20738
+    Longitude: 9.13462
+    !!python/unicode 'label': !!python/unicode 'CA-1'
+  '40':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.59816
+    Longitude: 13.51008
+    !!python/unicode 'label': !!python/unicode 'AN'
+  '41':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.66852
+    Longitude: 16.60158
+    !!python/unicode 'label': !!python/unicode 'MT'
+  '42':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.35703
+    Longitude: 18.17202
+    !!python/unicode 'label': !!python/unicode 'LE'
+  '43':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.11773
+    Longitude: 16.85118
+    !!python/unicode 'label': !!python/unicode 'BA'
+  '44':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.46093
+    Longitude: 15.54925
+    !!python/unicode 'label': !!python/unicode 'FG'
+  '45':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'Google'
+  '46':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'GEANT'
+  '47':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'MI-5'
+  '48':
+    !!python/unicode 'Internal': 0
+    Latitude: 45.07049
+    Longitude: 7.68682
+    !!python/unicode 'label': !!python/unicode 'TO-PIX'
+  '49':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.89474
+    Longitude: 12.4839
+    !!python/unicode 'label': !!python/unicode 'RM-2'
+  '5':
+    !!python/unicode 'Internal': 0
+    Latitude: 41.89474
+    Longitude: 12.4839
+    !!python/unicode 'label': !!python/unicode 'NAMEX'
+  '50':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'Mi-4'
+  '51':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.82678
+    Longitude: 11.62071
+    !!python/unicode 'label': !!python/unicode 'Fe'
+  '52':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.18446
+    Longitude: 9.16145
+    !!python/unicode 'label': !!python/unicode 'Pv'
+  '53':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.71553
+    Longitude: 10.39659
+    !!python/unicode 'label': !!python/unicode 'PI'
+  '54':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.72621
+    Longitude: 12.63633
+    !!python/unicode 'label': !!python/unicode 'Ur'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.35055
+    Longitude: 13.39954
+    !!python/unicode 'label': !!python/unicode 'AQ-1'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.72722
+    Longitude: 8.56028
+    !!python/unicode 'label': !!python/unicode 'SS'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.89474
+    Longitude: 12.4839
+    !!python/unicode 'label': !!python/unicode 'RM-1'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.09674
+    Longitude: 12.38286
+    !!python/unicode 'label': !!python/unicode 'PG'

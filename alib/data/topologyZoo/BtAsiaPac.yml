@@ -1,53 +1,180 @@
-nodes:
-  '0': {Latitude: -6.21462, Longitude: 106.84513}
-  '1': {Latitude: -31.93333, Longitude: 115.83333}
-  '2': {Latitude: 1.28967, Longitude: 103.85007}
-  '3': {Latitude: 3.1412, Longitude: 101.68653}
-  '4': {Latitude: 8.010850000000001, Longitude: 134.98210333333336}
-  '5': {Latitude: -3.208529999999998, Longitude: 144.928245}
-  '6': {Latitude: -33.86785, Longitude: 151.20732}
-  '7': {Latitude: -36.86667, Longitude: 174.76667}
-  '8': {Latitude: 14.196533333333335, Longitude: 96.95190000000001}
-  '9': {Latitude: 22.28552, Longitude: 114.15769}
-  '10': {Latitude: 28.63576, Longitude: 77.22445}
-  '11': {Latitude: 19.01441, Longitude: 72.84794}
-  '12': {Latitude: 37.56826, Longitude: 126.97783}
-  '13': {Latitude: 35.61488, Longitude: 139.5813}
-  '14': {Latitude: 25.04776, Longitude: 121.53185}
-  '15': {Latitude: 22.28552, Longitude: 114.15769}
-  '16': {Latitude: 14.6042, Longitude: 120.9822}
-  '17': {Latitude: 13.75, Longitude: 100.51667}
-  '18': {Latitude: 13.08784, Longitude: 80.27847}
-  '19': {Latitude: 19.01441, Longitude: 72.84794}
 edges:
-- ['0', '15']
-- ['1', '2']
-- ['1', '6']
-- ['1', '15']
-- ['2', '3']
-- ['2', '6']
-- ['2', '8']
-- ['2', '17']
-- ['2', '18']
-- ['2', '19']
-- ['4', '13']
-- ['4', '6']
-- ['4', '15']
-- ['5', '7']
-- ['5', '13']
-- ['5', '6']
-- ['5', '15']
-- ['6', '7']
-- ['8', '11']
-- ['8', '15']
-- ['9', '15']
-- ['10', '11']
-- ['11', '15']
-- ['12', '13']
-- ['12', '15']
-- ['13', '14']
-- ['13', '15']
-- ['13', '16']
-- ['14', '15']
-- ['15', '16']
-- ['15', '17']
+- - '0'
+  - '15'
+- - '1'
+  - '2'
+- - '1'
+  - '6'
+- - '1'
+  - '15'
+- - '2'
+  - '3'
+- - '2'
+  - '6'
+- - '2'
+  - '8'
+- - '2'
+  - '17'
+- - '2'
+  - '18'
+- - '2'
+  - '19'
+- - '4'
+  - '13'
+- - '4'
+  - '6'
+- - '4'
+  - '15'
+- - '5'
+  - '7'
+- - '5'
+  - '13'
+- - '5'
+  - '6'
+- - '5'
+  - '15'
+- - '6'
+  - '7'
+- - '8'
+  - '11'
+- - '8'
+  - '15'
+- - '9'
+  - '15'
+- - '10'
+  - '11'
+- - '11'
+  - '15'
+- - '12'
+  - '13'
+- - '12'
+  - '15'
+- - '13'
+  - '14'
+- - '13'
+  - '15'
+- - '13'
+  - '16'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '15'
+  - '17'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Indonesia'
+    !!python/unicode 'Internal': 1
+    Latitude: -6.21462
+    Longitude: 106.84513
+    !!python/unicode 'label': !!python/unicode 'Jakarta'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Australia'
+    !!python/unicode 'Internal': 1
+    Latitude: -31.93333
+    Longitude: 115.83333
+    !!python/unicode 'label': !!python/unicode 'Perth'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'India'
+    !!python/unicode 'Internal': 1
+    Latitude: 28.63576
+    Longitude: 77.22445
+    !!python/unicode 'label': !!python/unicode 'New Delhi'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'India'
+    !!python/unicode 'Internal': 1
+    Latitude: 19.01441
+    Longitude: 72.84794
+    !!python/unicode 'label': !!python/unicode 'Mumbai'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'South Korea'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.56826
+    Longitude: 126.97783
+    !!python/unicode 'label': !!python/unicode 'Seoul'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Japan'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.61488
+    Longitude: 139.5813
+    !!python/unicode 'label': !!python/unicode 'Tokyo'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'Taiwan'
+    !!python/unicode 'Internal': 1
+    Latitude: 25.04776
+    Longitude: 121.53185
+    !!python/unicode 'label': !!python/unicode 'Taipei'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Hong Kong'
+    !!python/unicode 'Internal': 1
+    Latitude: 22.28552
+    Longitude: 114.15769
+    !!python/unicode 'label': !!python/unicode 'Hong Kong'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Philippines'
+    !!python/unicode 'Internal': 1
+    Latitude: 14.6042
+    Longitude: 120.9822
+    !!python/unicode 'label': !!python/unicode 'Manila'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Thailand'
+    !!python/unicode 'Internal': 1
+    Latitude: 13.75
+    Longitude: 100.51667
+    !!python/unicode 'label': !!python/unicode 'Bangkok'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'India'
+    !!python/unicode 'Internal': 1
+    Latitude: 13.08784
+    Longitude: 80.27847
+    !!python/unicode 'label': !!python/unicode 'Chenai'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'India'
+    !!python/unicode 'Internal': 1
+    Latitude: 19.01441
+    Longitude: 72.84794
+    !!python/unicode 'label': !!python/unicode 'Mumbai'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Singapore'
+    !!python/unicode 'Internal': 1
+    Latitude: 1.28967
+    Longitude: 103.85007
+    !!python/unicode 'label': !!python/unicode 'Singapore'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Malaysia'
+    !!python/unicode 'Internal': 1
+    Latitude: 3.1412
+    Longitude: 101.68653
+    !!python/unicode 'label': !!python/unicode 'Kuala Lumpur'
+  '4':
+    !!python/unicode 'Internal': 0
+    Latitude: 8.010850000000001
+    Longitude: 134.98210333333336
+    !!python/unicode 'label': !!python/unicode 'San Jose'
+  '5':
+    !!python/unicode 'Internal': 0
+    Latitude: -3.2085299999999988
+    Longitude: 144.928245
+    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Australia'
+    !!python/unicode 'Internal': 1
+    Latitude: -33.86785
+    Longitude: 151.20732
+    !!python/unicode 'label': !!python/unicode 'Sydney'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'New Zealand'
+    !!python/unicode 'Internal': 1
+    Latitude: -36.86667
+    Longitude: 174.76667
+    !!python/unicode 'label': !!python/unicode 'Auckland'
+  '8':
+    !!python/unicode 'Internal': 0
+    Latitude: 14.196533333333335
+    Longitude: 96.95190000000001
+    !!python/unicode 'label': !!python/unicode 'London'
+  '9':
+    !!python/unicode 'Internal': 0
+    Latitude: 22.28552
+    Longitude: 114.15769
+    !!python/unicode 'label': !!python/unicode 'Palo Alto'

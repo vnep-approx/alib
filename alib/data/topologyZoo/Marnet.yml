@@ -1,49 +1,175 @@
-nodes:
-  '0': {Latitude: 41.74583, Longitude: 22.19583}
-  '1': {Latitude: 42.0, Longitude: 21.43333}
-  '2': {Latitude: 42.0, Longitude: 21.43333}
-  '3': {Latitude: 42.0, Longitude: 21.43333}
-  '4': {Latitude: 42.0, Longitude: 21.43333}
-  '5': {Latitude: 42.0, Longitude: 21.43333}
-  '6': {Latitude: 42.0, Longitude: 21.43333}
-  '7': {Latitude: 42.0, Longitude: 21.43333}
-  '8': {Latitude: 42.0, Longitude: 21.43333}
-  '9': {Latitude: 42.0, Longitude: 21.43333}
-  '10': {Latitude: 42.0, Longitude: 21.43333}
-  '11': {Latitude: 42.0, Longitude: 21.43333}
-  '12': {Latitude: 42.0, Longitude: 21.43333}
-  '13': {Latitude: 42.0, Longitude: 21.43333}
-  '14': {Latitude: 41.03111, Longitude: 21.34028}
-  '15': {Latitude: 42.0, Longitude: 21.43333}
-  '16': {Latitude: 42.0, Longitude: 21.43333}
-  '17': {Latitude: 42.0, Longitude: 21.43333}
-  '18': {Latitude: 42.0, Longitude: 21.43333}
-  '19': {Latitude: 42.0, Longitude: 21.43333}
 edges:
-- ['0', '2']
-- ['1', '4']
-- ['2', '3']
-- ['2', '4']
-- ['2', '5']
-- ['2', '6']
-- ['2', '7']
-- ['2', '9']
-- ['2', '10']
-- ['2', '11']
-- ['2', '12']
-- ['2', '13']
-- ['2', '14']
-- ['2', '15']
-- ['2', '16']
-- ['2', '17']
-- ['2', '18']
-- ['2', '19']
-- ['4', '7']
-- ['4', '10']
-- ['4', '11']
-- ['4', '16']
-- ['4', '17']
-- ['4', '18']
-- ['4', '19']
-- ['5', '17']
-- ['8', '17']
+- - '0'
+  - '2'
+- - '1'
+  - '4'
+- - '2'
+  - '3'
+- - '2'
+  - '4'
+- - '2'
+  - '5'
+- - '2'
+  - '6'
+- - '2'
+  - '7'
+- - '2'
+  - '9'
+- - '2'
+  - '10'
+- - '2'
+  - '11'
+- - '2'
+  - '12'
+- - '2'
+  - '13'
+- - '2'
+  - '14'
+- - '2'
+  - '15'
+- - '2'
+  - '16'
+- - '2'
+  - '17'
+- - '2'
+  - '18'
+- - '2'
+  - '19'
+- - '4'
+  - '7'
+- - '4'
+  - '10'
+- - '4'
+  - '11'
+- - '4'
+  - '16'
+- - '4'
+  - '17'
+- - '4'
+  - '18'
+- - '4'
+  - '19'
+- - '5'
+  - '17'
+- - '8'
+  - '17'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.74583
+    Longitude: 22.19583
+    !!python/unicode 'label': !!python/unicode 'F. of Mining and Geology Stip'
+  '1':
+    !!python/unicode 'Internal': 0
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'ONnet NEOTEL SONET'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'National and Univ Library'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'I. of Earthquake Engineering'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'I. of National History'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'I. of Macedonian Literature'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.03111
+    Longitude: 21.34028
+    !!python/unicode 'label': !!python/unicode 'St Clement of Ohrid University in
+      Bitola'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'Several Ministries of the Government'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'Campus Arch and Civil Eng'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'CampusTechnical'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'Campus Medicine'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'CampusBiotech. Sciences'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'NOC and CampusSocial Sciences'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'I. of Economy'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'NationalBroadcastingcompany Comm.
+      Tower'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'I of Political and Juridical Res'
+  '6':
+    !!python/unicode 'Internal': 0
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'GEANT SEEREN'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'Campus Natural Sciences and Mathematics'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Macedonia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'F. of Pedagogy'
+  '9':
+    !!python/unicode 'Internal': 0
+    Latitude: 42.0
+    Longitude: 21.43333
+    !!python/unicode 'label': !!python/unicode 'MOL'

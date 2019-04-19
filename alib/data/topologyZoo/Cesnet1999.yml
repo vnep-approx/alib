@@ -1,27 +1,102 @@
-nodes:
-  '0': {Latitude: 50.08804, Longitude: 14.42076}
-  '1': {Latitude: 49.21667, Longitude: 17.66667}
-  '2': {Latitude: 49.83465, Longitude: 18.28204}
-  '3': {Latitude: 49.59552, Longitude: 17.25175}
-  '4': {Latitude: 49.19522, Longitude: 16.60796}
-  '5': {Latitude: 49.74747, Longitude: 13.37759}
-  '6': {Latitude: 50.6607, Longitude: 14.03227}
-  '7': {Latitude: 50.08804, Longitude: 14.42076}
-  '8': {Latitude: 50.76711, Longitude: 15.05619}
-  '9': {Latitude: 48.97447, Longitude: 14.47434}
-  '10': {Latitude: 50.08804, Longitude: 14.42076}
-  '11': {Latitude: 50.04075, Longitude: 15.77659}
-  '12': {Latitude: 50.20923, Longitude: 15.83277}
 edges:
-- ['0', '7']
-- ['1', '4']
-- ['2', '4']
-- ['3', '4']
-- ['4', '7']
-- ['5', '7']
-- ['6', '7']
-- ['7', '8']
-- ['7', '9']
-- ['7', '10']
-- ['7', '11']
-- ['7', '12']
+- - '0'
+  - '7'
+- - '1'
+  - '4'
+- - '2'
+  - '4'
+- - '3'
+  - '4'
+- - '4'
+  - '7'
+- - '5'
+  - '7'
+- - '6'
+  - '7'
+- - '7'
+  - '8'
+- - '7'
+  - '9'
+- - '7'
+  - '10'
+- - '7'
+  - '11'
+- - '7'
+  - '12'
+nodes:
+  '0':
+    !!python/unicode 'Internal': 0
+    Latitude: 50.08804
+    Longitude: 14.42076
+    !!python/unicode 'label': !!python/unicode 'TEN-155'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.21667
+    Longitude: 17.66667
+    !!python/unicode 'label': !!python/unicode 'Zlin'
+  '10':
+    !!python/unicode 'Internal': 0
+    Latitude: 50.08804
+    Longitude: 14.42076
+    !!python/unicode 'label': !!python/unicode 'NIX'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.04075
+    Longitude: 15.77659
+    !!python/unicode 'label': !!python/unicode 'Pardubice'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.20923
+    Longitude: 15.83277
+    !!python/unicode 'label': !!python/unicode 'Hradec Kralove'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.83465
+    Longitude: 18.28204
+    !!python/unicode 'label': !!python/unicode 'Ostrava'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.59552
+    Longitude: 17.25175
+    !!python/unicode 'label': !!python/unicode 'Olomouc'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.19522
+    Longitude: 16.60796
+    !!python/unicode 'label': !!python/unicode 'Brno'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.74747
+    Longitude: 13.37759
+    !!python/unicode 'label': !!python/unicode 'Plzen'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.6607
+    Longitude: 14.03227
+    !!python/unicode 'label': !!python/unicode 'Usti nad Labem'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.08804
+    Longitude: 14.42076
+    !!python/unicode 'label': !!python/unicode 'Praha'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.76711
+    Longitude: 15.05619
+    !!python/unicode 'label': !!python/unicode 'Liberec'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Czech Republic'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.97447
+    Longitude: 14.47434
+    !!python/unicode 'label': !!python/unicode 'Ceske Budejovice'

@@ -1,119 +1,444 @@
-nodes:
-  '0': {Latitude: 28.32001, Longitude: -80.60755}
-  '1': {Latitude: 29.21081, Longitude: -81.02283}
-  '2': {Latitude: 26.71534, Longitude: -80.05337}
-  '3': {Latitude: 27.19755, Longitude: -80.25283}
-  '4': {Latitude: 30.33218, Longitude: -81.65565}
-  '5': {Latitude: 32.08354, Longitude: -81.09983}
-  '6': {Latitude: 30.15881, Longitude: -85.66021}
-  '7': {Latitude: 29.65163, Longitude: -82.32483}
-  '8': {Latitude: 31.57851, Longitude: -84.15574}
-  '9': {Latitude: 32.84069, Longitude: -83.6324}
-  '10': {Latitude: 33.80816, Longitude: -84.1702}
-  '11': {Latitude: 36.16589, Longitude: -86.78444}
-  '12': {Latitude: 35.96064, Longitude: -83.92074}
-  '13': {Latitude: 29.95465, Longitude: -90.07507}
-  '14': {Latitude: 30.22409, Longitude: -92.01984}
-  '15': {Latitude: 30.45075, Longitude: -91.15455}
-  '16': {Latitude: 32.52515, Longitude: -93.75018}
-  '17': {Latitude: 32.29876, Longitude: -90.18481}
-  '18': {Latitude: 35.14953, Longitude: -90.04898}
-  '19': {Latitude: 37.77422, Longitude: -87.11333}
-  '20': {Latitude: 38.25424, Longitude: -85.75941}
-  '21': {Latitude: 38.2098, Longitude: -84.55883}
-  '22': {Latitude: 32.590869999999995, Longitude: -85.4591}
-  '23': {Latitude: 36.07264, Longitude: -79.79198}
-  '24': {Latitude: 35.46623, Longitude: -82.51651}
-  '25': {Latitude: 35.22709, Longitude: -80.84313}
-  '26': {Latitude: 36.09986, Longitude: -80.24422}
-  '27': {Latitude: 34.00071, Longitude: -81.03481}
-  '28': {Latitude: 33.47097, Longitude: -81.97484}
-  '29': {Latitude: 34.19543, Longitude: -79.76256}
-  '30': {Latitude: 32.77657, Longitude: -79.93092}
-  '31': {Latitude: 29.95465, Longitude: -90.07507}
-  '32': {Latitude: 30.27519, Longitude: -89.78117}
-  '33': {Latitude: 34.73037, Longitude: -86.5861}
-  '34': {Latitude: 35.04563, Longitude: -85.30968}
-  '35': {Latitude: 33.749, Longitude: -84.38798}
-  '36': {Latitude: 33.96095, Longitude: -83.37794}
-  '37': {Latitude: 30.39603, Longitude: -88.88531}
-  '38': {Latitude: 30.42131, Longitude: -87.21691}
-  '39': {Latitude: 32.36681, Longitude: -86.29997}
-  '40': {Latitude: 33.52066, Longitude: -86.80249}
-  '41': {Latitude: 26.12231, Longitude: -80.14338}
-  '42': {Latitude: 26.35869, Longitude: -80.0831}
-  '43': {Latitude: 30.69436, Longitude: -88.04305}
-  '44': {Latitude: 34.85262, Longitude: -82.39401}
-  '45': {Latitude: 34.94957, Longitude: -81.93205}
-  '46': {Latitude: 33.80816, Longitude: -84.1702}
-  '47': {Latitude: 34.22573, Longitude: -77.94471}
-  '48': {Latitude: 28.53834, Longitude: -81.37924}
-  '49': {Latitude: 25.77427, Longitude: -80.19366}
-  '50': {Latitude: 25.77427, Longitude: -80.19366}
 edges:
-- ['0', '48']
-- ['1', '4']
-- ['2', '42']
-- ['3', '50']
-- ['4', '35']
-- ['4', '49']
-- ['5', '46']
-- ['6', '26']
-- ['6', '31']
-- ['7', '48']
-- ['8', '46']
-- ['9', '46']
-- ['10', '39']
-- ['10', '35']
-- ['10', '46']
-- ['10', '15']
-- ['11', '35']
-- ['11', '31']
-- ['12', '35']
-- ['12', '31']
-- ['13', '15']
-- ['14', '15']
-- ['15', '16']
-- ['17', '35']
-- ['17', '31']
-- ['18', '31']
-- ['19', '20']
-- ['20', '35']
-- ['20', '21']
-- ['20', '31']
-- ['22', '25']
-- ['22', '31']
-- ['23', '26']
-- ['24', '26']
-- ['25', '35']
-- ['25', '31']
-- ['26', '35']
-- ['26', '47']
-- ['27', '35']
-- ['27', '28']
-- ['27', '29']
-- ['27', '30']
-- ['27', '31']
-- ['31', '32']
-- ['31', '34']
-- ['31', '37']
-- ['31', '39']
-- ['31', '40']
-- ['31', '43']
-- ['31', '35']
-- ['31', '49']
-- ['31', '38']
-- ['33', '40']
-- ['34', '35']
-- ['35', '40']
-- ['35', '43']
-- ['35', '44']
-- ['35', '48']
-- ['35', '49']
-- ['36', '46']
-- ['38', '44']
-- ['41', '50']
-- ['42', '50']
-- ['44', '45']
-- ['48', '49']
-- ['49', '50']
+- - '0'
+  - '48'
+- - '1'
+  - '4'
+- - '2'
+  - '42'
+- - '3'
+  - '50'
+- - '4'
+  - '35'
+- - '4'
+  - '49'
+- - '5'
+  - '46'
+- - '6'
+  - '26'
+- - '6'
+  - '31'
+- - '7'
+  - '48'
+- - '8'
+  - '46'
+- - '9'
+  - '46'
+- - '10'
+  - '39'
+- - '10'
+  - '35'
+- - '10'
+  - '46'
+- - '10'
+  - '15'
+- - '11'
+  - '35'
+- - '11'
+  - '31'
+- - '12'
+  - '35'
+- - '12'
+  - '31'
+- - '13'
+  - '15'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '17'
+  - '35'
+- - '17'
+  - '31'
+- - '18'
+  - '31'
+- - '19'
+  - '20'
+- - '20'
+  - '35'
+- - '20'
+  - '21'
+- - '20'
+  - '31'
+- - '22'
+  - '25'
+- - '22'
+  - '31'
+- - '23'
+  - '26'
+- - '24'
+  - '26'
+- - '25'
+  - '35'
+- - '25'
+  - '31'
+- - '26'
+  - '47'
+- - '26'
+  - '35'
+- - '27'
+  - '35'
+- - '27'
+  - '28'
+- - '27'
+  - '29'
+- - '27'
+  - '30'
+- - '27'
+  - '31'
+- - '31'
+  - '32'
+- - '31'
+  - '34'
+- - '31'
+  - '43'
+- - '31'
+  - '37'
+- - '31'
+  - '39'
+- - '31'
+  - '40'
+- - '31'
+  - '38'
+- - '31'
+  - '35'
+- - '31'
+  - '49'
+- - '33'
+  - '40'
+- - '34'
+  - '35'
+- - '35'
+  - '43'
+- - '35'
+  - '49'
+- - '35'
+  - '40'
+- - '35'
+  - '44'
+- - '35'
+  - '48'
+- - '36'
+  - '46'
+- - '38'
+  - '44'
+- - '41'
+  - '50'
+- - '42'
+  - '50'
+- - '44'
+  - '45'
+- - '48'
+  - '49'
+- - '49'
+  - '50'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 28.32001
+    Longitude: -80.60755
+    !!python/unicode 'label': !!python/unicode 'Cocoa Beach'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 29.21081
+    Longitude: -81.02283
+    !!python/unicode 'label': !!python/unicode 'Daytona Beach'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.80816
+    Longitude: -84.1702
+    !!python/unicode 'label': !!python/unicode 'Stone Mt?'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.16589
+    Longitude: -86.78444
+    !!python/unicode 'label': !!python/unicode 'Nashville'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.96064
+    Longitude: -83.92074
+    !!python/unicode 'label': !!python/unicode 'Knoxville'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 29.95465
+    Longitude: -90.07507
+    !!python/unicode 'label': !!python/unicode 'New Orleans?'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.22409
+    Longitude: -92.01984
+    !!python/unicode 'label': !!python/unicode 'Lafayette'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.45075
+    Longitude: -91.15455
+    !!python/unicode 'label': !!python/unicode 'Baton Rouge'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.52515
+    Longitude: -93.75018
+    !!python/unicode 'label': !!python/unicode 'Shreveport'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.29876
+    Longitude: -90.18481
+    !!python/unicode 'label': !!python/unicode 'Jackson'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.14953
+    Longitude: -90.04898
+    !!python/unicode 'label': !!python/unicode 'Memphis'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.77422
+    Longitude: -87.11333
+    !!python/unicode 'label': !!python/unicode 'Owensboro'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 26.71534
+    Longitude: -80.05337
+    !!python/unicode 'label': !!python/unicode 'West Palm Beach'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.25424
+    Longitude: -85.75941
+    !!python/unicode 'label': !!python/unicode 'Louisville'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.2098
+    Longitude: -84.55883
+    !!python/unicode 'geocode_append': !!python/unicode 'KY'
+    !!python/unicode 'label': !!python/unicode 'Georgetown'
+  '22':
+    !!python/unicode 'Internal': 1
+    Latitude: 32.590869999999995
+    Longitude: -85.4591
+    !!python/unicode 'label': !!python/unicode '?'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.07264
+    Longitude: -79.79198
+    !!python/unicode 'label': !!python/unicode 'Greensboro'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.46623
+    Longitude: -82.51651
+    !!python/unicode 'geocode_append': !!python/unicode 'NC'
+    !!python/unicode 'label': !!python/unicode 'Arden'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.22709
+    Longitude: -80.84313
+    !!python/unicode 'label': !!python/unicode 'Charlotte'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.09986
+    Longitude: -80.24422
+    !!python/unicode 'label': !!python/unicode 'Winston'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.00071
+    Longitude: -81.03481
+    !!python/unicode 'label': !!python/unicode 'Columbia'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.47097
+    Longitude: -81.97484
+    !!python/unicode 'geocode_append': !!python/unicode 'GA'
+    !!python/unicode 'label': !!python/unicode 'Augusta'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.19543
+    Longitude: -79.76256
+    !!python/unicode 'label': !!python/unicode 'Florence'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 27.19755
+    Longitude: -80.25283
+    !!python/unicode 'label': !!python/unicode 'Stuart'
+  '30':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.77657
+    Longitude: -79.93092
+    !!python/unicode 'geocode_append': !!python/unicode 'SC'
+    !!python/unicode 'label': !!python/unicode 'Charleston'
+  '31':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 29.95465
+    Longitude: -90.07507
+    !!python/unicode 'label': !!python/unicode 'New Orleans'
+  '32':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.27519
+    Longitude: -89.78117
+    !!python/unicode 'label': !!python/unicode 'Slidell'
+  '33':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.73037
+    Longitude: -86.5861
+    !!python/unicode 'label': !!python/unicode 'Huntsville'
+  '34':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 35.04563
+    Longitude: -85.30968
+    !!python/unicode 'label': !!python/unicode 'Chatanooga'
+  '35':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.749
+    Longitude: -84.38798
+    !!python/unicode 'label': !!python/unicode 'Atlanta'
+  '36':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.96095
+    Longitude: -83.37794
+    !!python/unicode 'label': !!python/unicode 'Athens'
+  '37':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.39603
+    Longitude: -88.88531
+    !!python/unicode 'label': !!python/unicode 'Biloxi'
+  '38':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.42131
+    Longitude: -87.21691
+    !!python/unicode 'label': !!python/unicode 'Pensacola'
+  '39':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.36681
+    Longitude: -86.29997
+    !!python/unicode 'label': !!python/unicode 'Montgomery'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.33218
+    Longitude: -81.65565
+    !!python/unicode 'label': !!python/unicode 'Jacksonville'
+  '40':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.52066
+    Longitude: -86.80249
+    !!python/unicode 'label': !!python/unicode 'Birmingham'
+  '41':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 26.12231
+    Longitude: -80.14338
+    !!python/unicode 'label': !!python/unicode 'Ft Lauderdale'
+  '42':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 26.35869
+    Longitude: -80.0831
+    !!python/unicode 'label': !!python/unicode 'Boca Raton'
+  '43':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.69436
+    Longitude: -88.04305
+    !!python/unicode 'label': !!python/unicode 'Mobile'
+  '44':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.85262
+    Longitude: -82.39401
+    !!python/unicode 'label': !!python/unicode 'Greenville'
+  '45':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.94957
+    Longitude: -81.93205
+    !!python/unicode 'label': !!python/unicode 'Spartanburg'
+  '46':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.80816
+    Longitude: -84.1702
+    !!python/unicode 'label': !!python/unicode 'Stone Mt?'
+  '47':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.22573
+    Longitude: -77.94471
+    !!python/unicode 'label': !!python/unicode 'Wilmington'
+  '48':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 28.53834
+    Longitude: -81.37924
+    !!python/unicode 'label': !!python/unicode 'Orlando'
+  '49':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 25.77427
+    Longitude: -80.19366
+    !!python/unicode 'label': !!python/unicode 'Miami'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.08354
+    Longitude: -81.09983
+    !!python/unicode 'label': !!python/unicode 'Savannah'
+  '50':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 25.77427
+    Longitude: -80.19366
+    !!python/unicode 'label': !!python/unicode 'Miami?'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 30.15881
+    Longitude: -85.66021
+    !!python/unicode 'label': !!python/unicode 'Panama City'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 29.65163
+    Longitude: -82.32483
+    !!python/unicode 'label': !!python/unicode 'Gainesville'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 31.57851
+    Longitude: -84.15574
+    !!python/unicode 'geocode_append': !!python/unicode 'GA'
+    !!python/unicode 'label': !!python/unicode 'Albany'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.84069
+    Longitude: -83.6324
+    !!python/unicode 'label': !!python/unicode 'Macon'

@@ -1,31 +1,104 @@
-nodes:
-  '0': {Latitude: 41.13998, Longitude: -104.82025}
-  '1': {Latitude: 33.749, Longitude: -84.38798}
-  '2': {Latitude: 40.01499, Longitude: -105.27055}
-  '3': {Latitude: 47.60621, Longitude: -122.33207}
-  '4': {Latitude: 37.9577, Longitude: -121.29078}
-  '5': {Latitude: 33.83529, Longitude: -117.9145}
-  '6': {Latitude: 32.72541, Longitude: -97.32085}
-  '7': {Latitude: 39.11417, Longitude: -94.62746}
-  '8': {Latitude: 41.85003, Longitude: -87.65005}
-  '9': {Latitude: 40.71427, Longitude: -74.00597}
-  '10': {Latitude: 38.89511, Longitude: -77.03637}
 edges:
-- ['0', '2']
-- ['0', '4']
-- ['0', '7']
-- ['1', '10']
-- ['1', '6']
-- ['3', '8']
-- ['3', '4']
-- ['4', '5']
-- ['4', '8']
-- ['4', '9']
-- ['4', '10']
-- ['5', '6']
-- ['6', '10']
-- ['6', '7']
-- ['7', '8']
-- ['7', '10']
-- ['8', '9']
-- ['9', '10']
+- - '0'
+  - '2'
+- - '0'
+  - '4'
+- - '0'
+  - '7'
+- - '1'
+  - '10'
+- - '1'
+  - '6'
+- - '3'
+  - '8'
+- - '3'
+  - '4'
+- - '4'
+  - '5'
+- - '4'
+  - '8'
+- - '4'
+  - '9'
+- - '4'
+  - '10'
+- - '5'
+  - '6'
+- - '6'
+  - '10'
+- - '6'
+  - '7'
+- - '7'
+  - '8'
+- - '7'
+  - '10'
+- - '8'
+  - '9'
+- - '9'
+  - '10'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.13998
+    Longitude: -104.82025
+    !!python/unicode 'label': !!python/unicode 'Cheyenne'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.749
+    Longitude: -84.38798
+    !!python/unicode 'label': !!python/unicode 'Atlanta'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 38.89511
+    Longitude: -77.03637
+    !!python/unicode 'label': !!python/unicode 'Washington, DC'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.01499
+    Longitude: -105.27055
+    !!python/unicode 'label': !!python/unicode 'Boulder'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.60621
+    Longitude: -122.33207
+    !!python/unicode 'label': !!python/unicode 'Seattle'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.9577
+    Longitude: -121.29078
+    !!python/unicode 'label': !!python/unicode 'Stockton'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.83529
+    Longitude: -117.9145
+    !!python/unicode 'label': !!python/unicode 'Anaheim'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.72541
+    Longitude: -97.32085
+    !!python/unicode 'label': !!python/unicode 'Fort Worth'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 39.11417
+    Longitude: -94.62746
+    !!python/unicode 'label': !!python/unicode 'Kansas City'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.85003
+    Longitude: -87.65005
+    !!python/unicode 'label': !!python/unicode 'Chicago'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.71427
+    Longitude: -74.00597
+    !!python/unicode 'label': !!python/unicode 'New York (Pennsauken)'

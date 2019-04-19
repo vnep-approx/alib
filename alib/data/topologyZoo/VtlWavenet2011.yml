@@ -1,190 +1,840 @@
-nodes:
-  '0': {Latitude: 46.75368, Longitude: 7.14609}
-  '1': {Latitude: 47.34999, Longitude: 7.90329}
-  '2': {Latitude: 48.18333, Longitude: 2.73333}
-  '3': {Latitude: 47.63343, Longitude: 2.7438}
-  '4': {Latitude: 46.98956, Longitude: 3.159}
-  '5': {Latitude: 46.62214, Longitude: 3.76953}
-  '6': {Latitude: 46.43333, Longitude: 4.28333}
-  '7': {Latitude: 46.1, Longitude: 4.75}
-  '8': {Latitude: 45.85, Longitude: 5.41667}
-  '9': {Latitude: 45.8, Longitude: 5.76667}
-  '10': {Latitude: 45.75, Longitude: 4.85}
-  '11': {Latitude: 45.9, Longitude: 5.005556666666666}
-  '12': {Latitude: 44.08333, Longitude: 4.75}
-  '13': {Latitude: 51.21667, Longitude: 4.41667}
-  '14': {Latitude: 43.60426, Longitude: 1.44367}
-  '15': {Latitude: 50.85045, Longitude: 4.34878}
-  '16': {Latitude: 43.29695, Longitude: 5.38107}
-  '17': {Latitude: 44.83333, Longitude: -0.56667}
-  '18': {Latitude: 47.05048, Longitude: 8.30635}
-  '19': {Latitude: 45.46427, Longitude: 9.18951}
-  '20': {Latitude: 49.00202, Longitude: 3.36786}
-  '21': {Latitude: 48.95, Longitude: 2.86667}
-  '22': {Latitude: 48.83333, Longitude: 4.98333}
-  '23': {Latitude: 49.05, Longitude: 4.18333}
-  '24': {Latitude: 50.68333, Longitude: 3.25}
-  '25': {Latitude: 50.56765, Longitude: 3.4492}
-  '26': {Latitude: 49.47591, Longitude: 2.8821}
-  '27': {Latitude: 50.45, Longitude: 2.93333}
-  '28': {Latitude: 51.05, Longitude: 3.71667}
-  '29': {Latitude: 51.21667, Longitude: 4.41667}
-  '30': {Latitude: 46.88333, Longitude: 8.65}
-  '31': {Latitude: 46.18649, Longitude: 8.99892}
-  '32': {Latitude: 46.94809, Longitude: 7.44744}
-  '33': {Latitude: 47.36667, Longitude: 8.55}
-  '34': {Latitude: 47.56667, Longitude: 7.6}
-  '35': {Latitude: 48.68333, Longitude: 6.2}
-  '36': {Latitude: 48.58333, Longitude: 7.75}
-  '37': {Latitude: 49.48833, Longitude: 8.46472}
-  '38': {Latitude: 50.11667, Longitude: 8.68333}
-  '39': {Latitude: 50.11667, Longitude: 8.68333}
-  '40': {Latitude: 48.85341, Longitude: 2.3488}
-  '41': {Latitude: 46.20222, Longitude: 6.14569}
-  '42': {Latitude: 51.41667, Longitude: -0.56667}
-  '43': {Latitude: 51.50853, Longitude: -0.12574}
-  '44': {Latitude: 52.48333, Longitude: 1.75}
-  '45': {Latitude: 52.37403, Longitude: 4.88969}
-  '46': {Latitude: 48.85341, Longitude: 2.3488}
-  '47': {Latitude: 49.91667, Longitude: 2.91667}
-  '48': {Latitude: 49.9, Longitude: 2.3}
-  '49': {Latitude: 51.11303, Longitude: -0.18312}
-  '50': {Latitude: 51.9225, Longitude: 4.47917}
-  '51': {Latitude: 50.85045, Longitude: 4.34878}
-  '52': {Latitude: 43.8292, Longitude: 1.29673}
-  '53': {Latitude: 44.18333, Longitude: 0.68333}
-  '54': {Latitude: 47.58333, Longitude: 1.33333}
-  '55': {Latitude: 47.91667, Longitude: 7.55}
-  '56': {Latitude: 46.58333, Longitude: 0.33333}
-  '57': {Latitude: 47.38333, Longitude: 0.68333}
-  '58': {Latitude: 45.63333, Longitude: 0.05}
-  '59': {Latitude: 46.05, Longitude: -0.43333}
-  '60': {Latitude: 44.51667, Longitude: 0.03333}
-  '61': {Latitude: 44.88333, Longitude: -0.1}
-  '62': {Latitude: 45.23333, Longitude: 4.8}
-  '63': {Latitude: 51.22172, Longitude: 6.77616}
-  '64': {Latitude: 43.69084, Longitude: 5.20709}
-  '65': {Latitude: 44.56667, Longitude: 4.75}
-  '66': {Latitude: 43.75, Longitude: 4.51667}
-  '67': {Latitude: 43.43774, Longitude: 4.94457}
-  '68': {Latitude: 43.31667, Longitude: 3.08333}
-  '69': {Latitude: 43.6, Longitude: 3.88333}
-  '70': {Latitude: 43.36667, Longitude: 1.8}
-  '71': {Latitude: 43.2, Longitude: 2.55}
-  '72': {Latitude: 47.91667, Longitude: 1.9}
-  '73': {Latitude: 48.43333, Longitude: 2.56667}
-  '74': {Latitude: 52.07861, Longitude: 0.58167}
-  '75': {Latitude: 52.27051, Longitude: 0.82103}
-  '76': {Latitude: 52.37487, Longitude: 4.53409}
-  '77': {Latitude: 51.46272, Longitude: 4.45393}
-  '78': {Latitude: 48.6, Longitude: 2.48333}
-  '79': {Latitude: 49.10744, Longitude: 2.22818}
-  '80': {Latitude: 50.182, Longitude: 1.494}
-  '81': {Latitude: 50.8, Longitude: 0.23333}
-  '82': {Latitude: 48.7, Longitude: 7.0}
-  '83': {Latitude: 48.7, Longitude: 5.7}
-  '84': {Latitude: 51.86667, Longitude: 6.15}
-  '85': {Latitude: 52.01167, Longitude: 5.42778}
-  '86': {Latitude: 51.56667, Longitude: 6.36667}
-  '87': {Latitude: 50.88333, Longitude: 7.05}
-  '88': {Latitude: 50.56667, Longitude: 7.28333}
-  '89': {Latitude: 50.55, Longitude: 7.6}
-  '90': {Latitude: 50.13333, Longitude: 8.3}
-  '91': {Latitude: 48.9, Longitude: 7.16667}
 edges:
-- ['0', '32']
-- ['0', '41']
-- ['1', '32']
-- ['1', '33']
-- ['2', '3']
-- ['2', '78']
-- ['3', '4']
-- ['4', '5']
-- ['5', '6']
-- ['6', '7']
-- ['7', '11']
-- ['8', '9']
-- ['8', '11']
-- ['9', '41']
-- ['10', '11']
-- ['10', '62']
-- ['12', '64']
-- ['12', '65']
-- ['13', '29']
-- ['13', '77']
-- ['14', '52']
-- ['14', '70']
-- ['15', '25']
-- ['15', '51']
-- ['16', '64']
-- ['16', '67']
-- ['17', '60']
-- ['17', '61']
-- ['18', '33']
-- ['18', '30']
-- ['19', '31']
-- ['20', '21']
-- ['20', '23']
-- ['21', '46']
-- ['22', '83']
-- ['22', '23']
-- ['24', '25']
-- ['24', '27']
-- ['24', '28']
-- ['26', '47']
-- ['26', '79']
-- ['27', '47']
-- ['28', '51']
-- ['29', '51']
-- ['30', '31']
-- ['33', '34']
-- ['34', '55']
-- ['35', '82']
-- ['35', '83']
-- ['36', '82']
-- ['36', '91']
-- ['36', '55']
-- ['37', '91']
-- ['37', '39']
-- ['38', '90']
-- ['38', '39']
-- ['40', '46']
-- ['40', '79']
-- ['42', '49']
-- ['42', '43']
-- ['43', '74']
-- ['44', '75']
-- ['44', '76']
-- ['45', '50']
-- ['45', '76']
-- ['45', '85']
-- ['46', '73']
-- ['46', '78']
-- ['47', '48']
-- ['48', '80']
-- ['49', '81']
-- ['50', '77']
-- ['52', '53']
-- ['53', '60']
-- ['54', '72']
-- ['54', '57']
-- ['56', '57']
-- ['56', '59']
-- ['58', '59']
-- ['58', '61']
-- ['62', '65']
-- ['63', '86']
-- ['63', '87']
-- ['66', '67']
-- ['66', '69']
-- ['68', '69']
-- ['68', '71']
-- ['70', '71']
-- ['72', '73']
-- ['74', '75']
-- ['80', '81']
-- ['84', '85']
-- ['84', '86']
-- ['87', '88']
-- ['88', '89']
-- ['89', '90']
+- - '0'
+  - '32'
+- - '0'
+  - '41'
+- - '1'
+  - '32'
+- - '1'
+  - '33'
+- - '2'
+  - '3'
+- - '2'
+  - '78'
+- - '3'
+  - '4'
+- - '4'
+  - '5'
+- - '5'
+  - '6'
+- - '6'
+  - '7'
+- - '7'
+  - '11'
+- - '8'
+  - '9'
+- - '8'
+  - '11'
+- - '9'
+  - '41'
+- - '10'
+  - '11'
+- - '10'
+  - '62'
+- - '12'
+  - '64'
+- - '12'
+  - '65'
+- - '13'
+  - '29'
+- - '13'
+  - '77'
+- - '14'
+  - '52'
+- - '14'
+  - '70'
+- - '15'
+  - '25'
+- - '15'
+  - '51'
+- - '16'
+  - '64'
+- - '16'
+  - '67'
+- - '17'
+  - '60'
+- - '17'
+  - '61'
+- - '18'
+  - '33'
+- - '18'
+  - '30'
+- - '19'
+  - '31'
+- - '20'
+  - '21'
+- - '20'
+  - '23'
+- - '21'
+  - '46'
+- - '22'
+  - '83'
+- - '22'
+  - '23'
+- - '24'
+  - '25'
+- - '24'
+  - '27'
+- - '24'
+  - '28'
+- - '26'
+  - '47'
+- - '26'
+  - '79'
+- - '27'
+  - '47'
+- - '28'
+  - '51'
+- - '29'
+  - '51'
+- - '30'
+  - '31'
+- - '33'
+  - '34'
+- - '34'
+  - '55'
+- - '35'
+  - '82'
+- - '35'
+  - '83'
+- - '36'
+  - '82'
+- - '36'
+  - '91'
+- - '36'
+  - '55'
+- - '37'
+  - '91'
+- - '37'
+  - '39'
+- - '38'
+  - '90'
+- - '38'
+  - '39'
+- - '40'
+  - '46'
+- - '40'
+  - '79'
+- - '42'
+  - '49'
+- - '42'
+  - '43'
+- - '43'
+  - '74'
+- - '44'
+  - '75'
+- - '44'
+  - '76'
+- - '45'
+  - '50'
+- - '45'
+  - '76'
+- - '45'
+  - '85'
+- - '46'
+  - '73'
+- - '46'
+  - '78'
+- - '47'
+  - '48'
+- - '48'
+  - '80'
+- - '49'
+  - '81'
+- - '50'
+  - '77'
+- - '52'
+  - '53'
+- - '53'
+  - '60'
+- - '54'
+  - '72'
+- - '54'
+  - '57'
+- - '56'
+  - '57'
+- - '56'
+  - '59'
+- - '58'
+  - '59'
+- - '58'
+  - '61'
+- - '62'
+  - '65'
+- - '63'
+  - '86'
+- - '63'
+  - '87'
+- - '66'
+  - '67'
+- - '66'
+  - '69'
+- - '68'
+  - '69'
+- - '68'
+  - '71'
+- - '70'
+  - '71'
+- - '72'
+  - '73'
+- - '74'
+  - '75'
+- - '80'
+  - '81'
+- - '84'
+  - '85'
+- - '84'
+  - '86'
+- - '87'
+  - '88'
+- - '88'
+  - '89'
+- - '89'
+  - '90'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Switzerland'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.75368
+    Longitude: 7.14609
+    !!python/unicode 'label': !!python/unicode 'Ependes'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Switzerland'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.34999
+    Longitude: 7.90329
+    !!python/unicode 'label': !!python/unicode 'Olten'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.75
+    Longitude: 4.85
+    !!python/unicode 'label': !!python/unicode 'Lyon'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '11':
+    !!python/unicode 'Internal': 1
+    Latitude: 45.9
+    Longitude: 5.005556666666666
+    !!python/unicode 'hyperedge': 1
+    !!python/unicode 'label': !!python/unicode 'None'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.08333
+    Longitude: 4.75
+    !!python/unicode 'geocode_append': !!python/unicode 'Arrondissement de Nimes'
+    !!python/unicode 'label': !!python/unicode 'Montfaucon'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Belgium'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.21667
+    Longitude: 4.41667
+    !!python/unicode 'label': !!python/unicode 'Antwerp (NMBS)'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.60426
+    Longitude: 1.44367
+    !!python/unicode 'label': !!python/unicode 'Toulouse'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Belgium'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.85045
+    Longitude: 4.34878
+    !!python/unicode 'label': !!python/unicode 'Brussels MIDI (NMBS)'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.29695
+    Longitude: 5.38107
+    !!python/unicode 'label': !!python/unicode 'Marseille'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.83333
+    Longitude: -0.56667
+    !!python/unicode 'label': !!python/unicode 'Bordeaux'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Switzerland'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.05048
+    Longitude: 8.30635
+    !!python/unicode 'label': !!python/unicode 'Luzern'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Italy'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.46427
+    Longitude: 9.18951
+    !!python/unicode 'label': !!python/unicode 'Milan'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.18333
+    Longitude: 2.73333
+    !!python/unicode 'label': !!python/unicode 'Souppes'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.00202
+    Longitude: 3.36786
+    !!python/unicode 'label': !!python/unicode 'Azy-sur-Marne'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.95
+    Longitude: 2.86667
+    !!python/unicode 'label': !!python/unicode 'Meaux'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.83333
+    Longitude: 4.98333
+    !!python/unicode 'label': !!python/unicode 'Revigny'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.05
+    Longitude: 4.18333
+    !!python/unicode 'label': !!python/unicode 'Conde-sur-Marne'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.68333
+    Longitude: 3.25
+    !!python/unicode 'label': !!python/unicode 'Leers-Nord Estampuis'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Belgium'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.56765
+    Longitude: 3.4492
+    !!python/unicode 'label': !!python/unicode 'Antoing (NMBS)'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.47591
+    Longitude: 2.8821
+    !!python/unicode 'label': !!python/unicode 'Thourotte'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.45
+    Longitude: 2.93333
+    !!python/unicode 'label': !!python/unicode 'Courrieres'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'Belgium'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.05
+    Longitude: 3.71667
+    !!python/unicode 'label': !!python/unicode 'Gent'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'Belgium'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.21667
+    Longitude: 4.41667
+    !!python/unicode 'label': !!python/unicode 'Antwerp'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.63343
+    Longitude: 2.7438
+    !!python/unicode 'label': !!python/unicode 'Briare'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '30':
+    !!python/unicode 'Country': !!python/unicode 'Switzerland'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.88333
+    Longitude: 8.65
+    !!python/unicode 'label': !!python/unicode 'Altdorf'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '31':
+    !!python/unicode 'Country': !!python/unicode 'Switzerland'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.18649
+    Longitude: 8.99892
+    !!python/unicode 'label': !!python/unicode 'Monte Carasso'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '32':
+    !!python/unicode 'Country': !!python/unicode 'Switzerland'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.94809
+    Longitude: 7.44744
+    !!python/unicode 'label': !!python/unicode 'Bern'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '33':
+    !!python/unicode 'Country': !!python/unicode 'Switzerland'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.36667
+    Longitude: 8.55
+    !!python/unicode 'label': !!python/unicode 'Zurich'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '34':
+    !!python/unicode 'Country': !!python/unicode 'Switzerland'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.56667
+    Longitude: 7.6
+    !!python/unicode 'label': !!python/unicode 'Basel'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '35':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.68333
+    Longitude: 6.2
+    !!python/unicode 'label': !!python/unicode 'Nancy'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '36':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.58333
+    Longitude: 7.75
+    !!python/unicode 'label': !!python/unicode 'Strasbourg'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '37':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.48833
+    Longitude: 8.46472
+    !!python/unicode 'label': !!python/unicode 'Mannheim'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '38':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.11667
+    Longitude: 8.68333
+    !!python/unicode 'label': !!python/unicode 'Frankfurt'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '39':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.11667
+    Longitude: 8.68333
+    !!python/unicode 'label': !!python/unicode 'Internexion'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.98956
+    Longitude: 3.159
+    !!python/unicode 'label': !!python/unicode 'Nevers'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '40':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.85341
+    Longitude: 2.3488
+    !!python/unicode 'label': !!python/unicode 'Paris La Defense'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '41':
+    !!python/unicode 'Country': !!python/unicode 'Switzerland'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.20222
+    Longitude: 6.14569
+    !!python/unicode 'label': !!python/unicode 'Geneva'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '42':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.41667
+    Longitude: -0.56667
+    !!python/unicode 'label': !!python/unicode 'Egham'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '43':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.50853
+    Longitude: -0.12574
+    !!python/unicode 'label': !!python/unicode 'London Telehouse North'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '44':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.48333
+    Longitude: 1.75
+    !!python/unicode 'label': !!python/unicode 'Lowestoft'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '45':
+    !!python/unicode 'Country': !!python/unicode 'Netherlands'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.37403
+    Longitude: 4.88969
+    !!python/unicode 'label': !!python/unicode 'Amsterdam (Schipluidlaan/Deflandlaan)'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '46':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.85341
+    Longitude: 2.3488
+    !!python/unicode 'label': !!python/unicode 'Paris (35Rdj)'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '47':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.91667
+    Longitude: 2.91667
+    !!python/unicode 'label': !!python/unicode 'Biaches'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '48':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.9
+    Longitude: 2.3
+    !!python/unicode 'label': !!python/unicode 'Amiens'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '49':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.11303
+    Longitude: -0.18312
+    !!python/unicode 'label': !!python/unicode 'Crawley'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.62214
+    Longitude: 3.76953
+    !!python/unicode 'label': !!python/unicode 'Bourbon'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '50':
+    !!python/unicode 'Country': !!python/unicode 'Netherlands'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.9225
+    Longitude: 4.47917
+    !!python/unicode 'label': !!python/unicode 'Rotterdam'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '51':
+    !!python/unicode 'Country': !!python/unicode 'Belgium'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.85045
+    Longitude: 4.34878
+    !!python/unicode 'label': !!python/unicode 'Brussels Tollaan'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '52':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.8292
+    Longitude: 1.29673
+    !!python/unicode 'label': !!python/unicode 'Grisolles'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '53':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.18333
+    Longitude: 0.68333
+    !!python/unicode 'label': !!python/unicode 'Bon-Encontre'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '54':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.58333
+    Longitude: 1.33333
+    !!python/unicode 'label': !!python/unicode 'Blois'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '55':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.91667
+    Longitude: 7.55
+    !!python/unicode 'label': !!python/unicode 'Nambsheim'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '56':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.58333
+    Longitude: 0.33333
+    !!python/unicode 'label': !!python/unicode 'Availles (Poiters)'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '57':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.38333
+    Longitude: 0.68333
+    !!python/unicode 'label': !!python/unicode 'Veretz (Tours)'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '58':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.63333
+    Longitude: 0.05
+    !!python/unicode 'label': !!python/unicode 'Nersac'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '59':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.05
+    Longitude: -0.43333
+    !!python/unicode 'label': !!python/unicode 'Blanzay'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.43333
+    Longitude: 4.28333
+    !!python/unicode 'label': !!python/unicode 'Charolles'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '60':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.51667
+    Longitude: 0.03333
+    !!python/unicode 'label': !!python/unicode 'Meilhan'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '61':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.88333
+    Longitude: -0.1
+    !!python/unicode 'label': !!python/unicode 'St-Christophe'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '62':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.23333
+    Longitude: 4.8
+    !!python/unicode 'label': !!python/unicode 'Andancette'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '63':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.22172
+    Longitude: 6.77616
+    !!python/unicode 'label': !!python/unicode 'Dusseldorf'
+    !!python/unicode 'type': !!python/unicode 'Point of Presence'
+  '64':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.69084
+    Longitude: 5.20709
+    !!python/unicode 'label': !!python/unicode 'Cazan'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '65':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.56667
+    Longitude: 4.75
+    !!python/unicode 'label': !!python/unicode 'Montelimar'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '66':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.75
+    Longitude: 4.51667
+    !!python/unicode 'label': !!python/unicode 'Pichegu'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '67':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.43774
+    Longitude: 4.94457
+    !!python/unicode 'label': !!python/unicode 'Fos'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '68':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.31667
+    Longitude: 3.08333
+    !!python/unicode 'label': !!python/unicode 'Poilhes'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '69':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.6
+    Longitude: 3.88333
+    !!python/unicode 'label': !!python/unicode 'Sete (Montpellier)'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.1
+    Longitude: 4.75
+    !!python/unicode 'label': !!python/unicode 'Belleville'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '70':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.36667
+    Longitude: 1.8
+    !!python/unicode 'label': !!python/unicode 'Avignonet'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '71':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.2
+    Longitude: 2.55
+    !!python/unicode 'label': !!python/unicode 'Marseillette'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '72':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.91667
+    Longitude: 1.9
+    !!python/unicode 'label': !!python/unicode 'Artenay (Orleans)'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '73':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.43333
+    Longitude: 2.56667
+    !!python/unicode 'geocode_append': !!python/unicode 'Saint-Martin-en-Biere'
+    !!python/unicode 'label': !!python/unicode 'St-Martin'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '74':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.07861
+    Longitude: 0.58167
+    !!python/unicode 'label': !!python/unicode 'Snow Hill'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '75':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.27051
+    Longitude: 0.82103
+    !!python/unicode 'label': !!python/unicode 'Pakenham'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '76':
+    !!python/unicode 'Country': !!python/unicode 'Netherlands'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.37487
+    Longitude: 4.53409
+    !!python/unicode 'label': !!python/unicode 'Zandvoort'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '77':
+    !!python/unicode 'Country': !!python/unicode 'Belgium'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.46272
+    Longitude: 4.45393
+    !!python/unicode 'geocode_append': !!python/unicode 'Belgium'
+    !!python/unicode 'label': !!python/unicode 'Essen'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '78':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.6
+    Longitude: 2.48333
+    !!python/unicode 'label': !!python/unicode 'Corbeil'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '79':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.10744
+    Longitude: 2.22818
+    !!python/unicode 'label': !!python/unicode 'L''Isle Adam'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.85
+    Longitude: 5.41667
+    !!python/unicode 'label': !!python/unicode 'Sault Brenaz'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '80':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.182
+    Longitude: 1.494
+    !!python/unicode 'label': !!python/unicode 'Cayeux-sur-Mer'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '81':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.8
+    Longitude: 0.23333
+    !!python/unicode 'label': !!python/unicode 'Polegate'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '82':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.7
+    Longitude: 7.0
+    !!python/unicode 'label': !!python/unicode 'Xouxange'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '83':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.7
+    Longitude: 5.7
+    !!python/unicode 'label': !!python/unicode 'Troussey'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '84':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.86667
+    Longitude: 6.15
+    !!python/unicode 'label': !!python/unicode 'Elten'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '85':
+    !!python/unicode 'Country': !!python/unicode 'Netherlands'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.01167
+    Longitude: 5.42778
+    !!python/unicode 'label': !!python/unicode 'Leersum/Doorn??'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '86':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.56667
+    Longitude: 6.36667
+    !!python/unicode 'label': !!python/unicode 'Kapella'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '87':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.88333
+    Longitude: 7.05
+    !!python/unicode 'label': !!python/unicode 'Porz'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '88':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.56667
+    Longitude: 7.28333
+    !!python/unicode 'label': !!python/unicode 'Linz'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '89':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.55
+    Longitude: 7.6
+    !!python/unicode 'label': !!python/unicode 'Dernbach'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.8
+    Longitude: 5.76667
+    !!python/unicode 'label': !!python/unicode 'Lavours'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '90':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.13333
+    Longitude: 8.3
+    !!python/unicode 'label': !!python/unicode 'Naurod'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'
+  '91':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.9
+    Longitude: 7.16667
+    !!python/unicode 'label': !!python/unicode 'Berg'
+    !!python/unicode 'type': !!python/unicode 'Transmission Site'

@@ -1,16 +1,58 @@
-nodes:
-  '0': {Latitude: -26.20227, Longitude: 28.04363}
-  '1': {Latitude: -25.74486, Longitude: 28.18783}
-  '2': {Latitude: -29.85, Longitude: 31.01667}
-  '3': {Latitude: -29.13333, Longitude: 26.2}
-  '4': {Latitude: -33.01529, Longitude: 27.91162}
-  '5': {Latitude: -33.96667, Longitude: 25.58333}
-  '6': {Latitude: -33.91667, Longitude: 18.41667}
 edges:
-- ['0', '1']
-- ['0', '3']
-- ['1', '2']
-- ['2', '4']
-- ['3', '6']
-- ['4', '5']
-- ['5', '6']
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '1'
+  - '2'
+- - '2'
+  - '4'
+- - '3'
+  - '6'
+- - '4'
+  - '5'
+- - '5'
+  - '6'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'South Africa'
+    !!python/unicode 'Internal': 1
+    Latitude: -26.20227
+    Longitude: 28.04363
+    !!python/unicode 'label': !!python/unicode 'Johannesburg'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'South Africa'
+    !!python/unicode 'Internal': 1
+    Latitude: -25.74486
+    Longitude: 28.18783
+    !!python/unicode 'label': !!python/unicode 'Pretoria'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'South Africa'
+    !!python/unicode 'Internal': 1
+    Latitude: -29.85
+    Longitude: 31.01667
+    !!python/unicode 'label': !!python/unicode 'Durban'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'South Africa'
+    !!python/unicode 'Internal': 1
+    Latitude: -29.13333
+    Longitude: 26.2
+    !!python/unicode 'label': !!python/unicode 'Bloemfontein'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'South Africa'
+    !!python/unicode 'Internal': 1
+    Latitude: -33.01529
+    Longitude: 27.91162
+    !!python/unicode 'label': !!python/unicode 'East London'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'South Africa'
+    !!python/unicode 'Internal': 1
+    Latitude: -33.96667
+    Longitude: 25.58333
+    !!python/unicode 'label': !!python/unicode 'Port Elizabeth'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'South Africa'
+    !!python/unicode 'Internal': 1
+    Latitude: -33.91667
+    Longitude: 18.41667
+    !!python/unicode 'label': !!python/unicode 'Cape Town'

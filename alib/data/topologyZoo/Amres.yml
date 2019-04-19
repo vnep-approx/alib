@@ -1,51 +1,218 @@
-nodes:
-  '0': {Latitude: 44.07833, Longitude: 22.09528}
-  '1': {Latitude: 44.80401, Longitude: 20.46513}
-  '2': {Latitude: 43.13667, Longitude: 20.51222}
-  '3': {Latitude: 43.58, Longitude: 21.33389}
-  '4': {Latitude: 42.55139, Longitude: 21.90028}
-  '5': {Latitude: 43.32472, Longitude: 21.90333}
-  '6': {Latitude: 43.15306, Longitude: 22.58611}
-  '7': {Latitude: 42.99806, Longitude: 21.94611}
-  '8': {Latitude: 44.01667, Longitude: 20.91667}
-  '9': {Latitude: 45.25167, Longitude: 19.83694}
-  '10': {Latitude: 44.74667, Longitude: 19.69}
-  '11': {Latitude: 46.1, Longitude: 19.66667}
-  '12': {Latitude: 44.80401, Longitude: 20.46513}
-  '13': {Latitude: 44.87083, Longitude: 20.64028}
-  '14': {Latitude: 44.80401, Longitude: 20.46513}
-  '15': {Latitude: 43.72583, Longitude: 20.68944}
-  '16': {Latitude: 43.28722, Longitude: 20.61528}
-  '17': {Latitude: 46.1, Longitude: 19.66667}
-  '18': {Latitude: 45.77417, Longitude: 19.11222}
-  '19': {Latitude: 45.38361, Longitude: 20.38194}
-  '20': {Latitude: 44.74667, Longitude: 19.69}
-  '21': {Latitude: 44.27513, Longitude: 19.89821}
-  '22': {Latitude: 43.85861, Longitude: 19.84878}
-  '23': {Latitude: 43.89139, Longitude: 20.34972}
-  '24': {Latitude: 44.33778, Longitude: 21.04556}
 edges:
-- ['0', '5']
-- ['1', '12']
-- ['2', '16']
-- ['3', '5']
-- ['3', '15']
-- ['4', '7']
-- ['5', '6']
-- ['5', '7']
-- ['8', '24']
-- ['8', '15']
-- ['9', '17']
-- ['9', '18']
-- ['9', '19']
-- ['9', '12']
-- ['10', '20']
-- ['11', '17']
-- ['12', '13']
-- ['12', '14']
-- ['12', '20']
-- ['12', '21']
-- ['12', '24']
-- ['15', '16']
-- ['21', '22']
-- ['22', '23']
+- - '0'
+  - '5'
+- - '1'
+  - '12'
+- - '2'
+  - '16'
+- - '3'
+  - '5'
+- - '3'
+  - '15'
+- - '4'
+  - '7'
+- - '5'
+  - '6'
+- - '5'
+  - '7'
+- - '8'
+  - '24'
+- - '8'
+  - '15'
+- - '9'
+  - '17'
+- - '9'
+  - '18'
+- - '9'
+  - '19'
+- - '9'
+  - '12'
+- - '10'
+  - '20'
+- - '11'
+  - '17'
+- - '12'
+  - '13'
+- - '12'
+  - '14'
+- - '12'
+  - '20'
+- - '12'
+  - '21'
+- - '12'
+  - '24'
+- - '15'
+  - '16'
+- - '21'
+  - '22'
+- - '22'
+  - '23'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.07833
+    Longitude: 22.09528
+    !!python/unicode 'label': !!python/unicode 'Bor'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '1':
+    !!python/unicode 'Internal': 1
+    Latitude: 44.80401
+    Longitude: 20.46513
+    !!python/unicode 'label': !!python/unicode 'Kosovska Mitrovica'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '10':
+    !!python/unicode 'Internal': 0
+    Latitude: 44.74667
+    Longitude: 19.69
+    !!python/unicode 'label': !!python/unicode 'Bosnia and Herzegovina'
+  '11':
+    !!python/unicode 'Internal': 0
+    Latitude: 46.1
+    Longitude: 19.66667
+    !!python/unicode 'label': !!python/unicode 'HUNGARNET'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.80401
+    Longitude: 20.46513
+    !!python/unicode 'label': !!python/unicode 'Beograd'
+    !!python/unicode 'type': !!python/unicode 'Large Node'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.87083
+    Longitude: 20.64028
+    !!python/unicode 'label': !!python/unicode 'Pancevo'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '14':
+    !!python/unicode 'Internal': 0
+    Latitude: 44.80401
+    Longitude: 20.46513
+    !!python/unicode 'label': !!python/unicode 'Telekom Serbia'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.72583
+    Longitude: 20.68944
+    !!python/unicode 'label': !!python/unicode 'Kraljevo'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.28722
+    Longitude: 20.61528
+    !!python/unicode 'label': !!python/unicode 'Raska'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 46.1
+    Longitude: 19.66667
+    !!python/unicode 'label': !!python/unicode 'Subotica'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.77417
+    Longitude: 19.11222
+    !!python/unicode 'label': !!python/unicode 'Sombor'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.38361
+    Longitude: 20.38194
+    !!python/unicode 'label': !!python/unicode 'Zrenjanin'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.13667
+    Longitude: 20.51222
+    !!python/unicode 'label': !!python/unicode 'Novi Pazar'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.74667
+    Longitude: 19.69
+    !!python/unicode 'label': !!python/unicode 'Sabac'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.27513
+    Longitude: 19.89821
+    !!python/unicode 'label': !!python/unicode 'Valjevo'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.85861
+    Longitude: 19.84878
+    !!python/unicode 'label': !!python/unicode 'Uzice'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.89139
+    Longitude: 20.34972
+    !!python/unicode 'label': !!python/unicode 'Cacak'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.33778
+    Longitude: 21.04556
+    !!python/unicode 'label': !!python/unicode 'Velika Plana'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.58
+    Longitude: 21.33389
+    !!python/unicode 'label': !!python/unicode 'Krustevac'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.55139
+    Longitude: 21.90028
+    !!python/unicode 'label': !!python/unicode 'Vranje'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.32472
+    Longitude: 21.90333
+    !!python/unicode 'label': !!python/unicode 'Nis'
+    !!python/unicode 'type': !!python/unicode 'Medium Node'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 43.15306
+    Longitude: 22.58611
+    !!python/unicode 'label': !!python/unicode 'Pirot'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.99806
+    Longitude: 21.94611
+    !!python/unicode 'label': !!python/unicode 'Leskovac'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 44.01667
+    Longitude: 20.91667
+    !!python/unicode 'label': !!python/unicode 'Kragujevac'
+    !!python/unicode 'type': !!python/unicode 'Medium Node'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Serbia'
+    !!python/unicode 'Internal': 1
+    Latitude: 45.25167
+    Longitude: 19.83694
+    !!python/unicode 'label': !!python/unicode 'Novi Sad'
+    !!python/unicode 'type': !!python/unicode 'Medium Node'

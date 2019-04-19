@@ -1,51 +1,205 @@
-nodes:
-  '0': {Latitude: 48.85341, Longitude: 2.3488}
-  '1': {Latitude: 33.749, Longitude: -84.38798}
-  '2': {Latitude: 50.85045, Longitude: 4.34878}
-  '3': {Latitude: 50.11667, Longitude: 8.68333}
-  '4': {Latitude: 33.44838, Longitude: -112.07404}
-  '5': {Latitude: 36.17497, Longitude: -115.13722}
-  '6': {Latitude: 25.77427, Longitude: -80.19366}
-  '7': {Latitude: 32.78306, Longitude: -96.80667}
-  '8': {Latitude: 34.05223, Longitude: -118.24368}
-  '9': {Latitude: 29.76328, Longitude: -95.36327}
-  '10': {Latitude: 39.95234, Longitude: -75.16379}
-  '11': {Latitude: 42.35843, Longitude: -71.05977}
-  '12': {Latitude: 51.50853, Longitude: -0.12574}
-  '13': {Latitude: 52.37403, Longitude: 4.88969}
-  '14': {Latitude: 37.33939, Longitude: -121.89496}
-  '15': {Latitude: 37.77493, Longitude: -122.41942}
-  '16': {Latitude: 47.60621, Longitude: -122.33207}
-  '17': {Latitude: 41.85003, Longitude: -87.65005}
-  '18': {Latitude: 40.46423, Longitude: -80.60091}
-  '19': {Latitude: 39.04372, Longitude: -77.48749}
-  '21': {Latitude: 40.71427, Longitude: -74.00597}
 edges:
-- ['0', '3']
-- ['0', '12']
-- ['1', '19']
-- ['1', '6']
-- ['2', '3']
-- ['2', '13']
-- ['4', '8']
-- ['4', '7']
-- ['5', '8']
-- ['5', '14']
-- ['6', '7']
-- ['7', '9']
-- ['7', '19']
-- ['7', '17']
-- ['8', '14']
-- ['10', '18']
-- ['10', '19']
-- ['11', '18']
-- ['11', '21']
-- ['12', '13']
-- ['12', '21']
-- ['13', '19']
-- ['14', '17']
-- ['14', '15']
-- ['15', '16']
-- ['16', '17']
-- ['17', '18']
-- ['17', '19']
+- - '0'
+  - '3'
+- - '0'
+  - '12'
+- - '1'
+  - '19'
+- - '1'
+  - '6'
+- - '2'
+  - '3'
+- - '2'
+  - '13'
+- - '4'
+  - '8'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '5'
+  - '14'
+- - '6'
+  - '7'
+- - '7'
+  - '9'
+- - '7'
+  - '19'
+- - '7'
+  - '17'
+- - '8'
+  - '14'
+- - '10'
+  - '18'
+- - '10'
+  - '19'
+- - '11'
+  - '18'
+- - '11'
+  - '21'
+- - '12'
+  - '13'
+- - '12'
+  - '21'
+- - '13'
+  - '19'
+- - '14'
+  - '17'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '16'
+  - '17'
+- - '17'
+  - '18'
+- - '17'
+  - '19'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'France'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.85341
+    Longitude: 2.3488
+    !!python/unicode 'label': !!python/unicode 'Paris'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.749
+    Longitude: -84.38798
+    !!python/unicode 'label': !!python/unicode 'Atlanta'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 39.95234
+    Longitude: -75.16379
+    !!python/unicode 'label': !!python/unicode 'Philadelphia'
+    !!python/unicode 'type': !!python/unicode 'Coming Soon'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 42.35843
+    Longitude: -71.05977
+    !!python/unicode 'label': !!python/unicode 'Boston'
+    !!python/unicode 'type': !!python/unicode 'Coming Soon'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'United Kingdom'
+    !!python/unicode 'Internal': 1
+    Latitude: 51.50853
+    Longitude: -0.12574
+    !!python/unicode 'label': !!python/unicode 'London'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Netherlands'
+    !!python/unicode 'Internal': 1
+    Latitude: 52.37403
+    Longitude: 4.88969
+    !!python/unicode 'label': !!python/unicode 'Amsterdam'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.33939
+    Longitude: -121.89496
+    !!python/unicode 'label': !!python/unicode 'San Jose'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 37.77493
+    Longitude: -122.41942
+    !!python/unicode 'label': !!python/unicode 'San Francisco'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.60621
+    Longitude: -122.33207
+    !!python/unicode 'label': !!python/unicode 'Seattle'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 41.85003
+    Longitude: -87.65005
+    !!python/unicode 'label': !!python/unicode 'Chicago'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.46423
+    Longitude: -80.60091
+    !!python/unicode 'label': !!python/unicode 'Toronto'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 39.04372
+    Longitude: -77.48749
+    !!python/unicode 'label': !!python/unicode 'Ashburn'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Belgium'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.85045
+    Longitude: 4.34878
+    !!python/unicode 'label': !!python/unicode 'Brussels'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 40.71427
+    Longitude: -74.00597
+    !!python/unicode 'label': !!python/unicode 'New York'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Germany'
+    !!python/unicode 'Internal': 1
+    Latitude: 50.11667
+    Longitude: 8.68333
+    !!python/unicode 'label': !!python/unicode 'Frankfurt'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 33.44838
+    Longitude: -112.07404
+    !!python/unicode 'label': !!python/unicode 'Phoenix'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 36.17497
+    Longitude: -115.13722
+    !!python/unicode 'label': !!python/unicode 'Las vegas'
+    !!python/unicode 'type': !!python/unicode 'Coming Soon'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 25.77427
+    Longitude: -80.19366
+    !!python/unicode 'label': !!python/unicode 'Miami'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 32.78306
+    Longitude: -96.80667
+    !!python/unicode 'label': !!python/unicode 'Dallas'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 34.05223
+    Longitude: -118.24368
+    !!python/unicode 'label': !!python/unicode 'Los Angeles'
+    !!python/unicode 'type': !!python/unicode 'BandCon Network Access Xchange (NAX)'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'United States'
+    !!python/unicode 'Internal': 1
+    Latitude: 29.76328
+    Longitude: -95.36327
+    !!python/unicode 'label': !!python/unicode 'Houston'
+    !!python/unicode 'type': !!python/unicode 'Coming Soon'

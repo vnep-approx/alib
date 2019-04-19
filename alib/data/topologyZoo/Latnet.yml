@@ -1,145 +1,631 @@
-nodes:
-  '0': {Latitude: 56.59861, Longitude: 24.20222}
-  '1': {Latitude: 56.55972, Longitude: 23.77194}
-  '2': {Latitude: 55.89514, Longitude: 27.16799}
-  '3': {Latitude: 56.70694, Longitude: 24.35194}
-  '4': {Latitude: 56.45981, Longitude: 22.90169}
-  '5': {Latitude: 56.7, Longitude: 22.53333}
-  '6': {Latitude: 56.53722, Longitude: 23.69639}
-  '7': {Latitude: 56.625, Longitude: 23.27861}
-  '8': {Latitude: 57.15861, Longitude: 24.70278}
-  '9': {Latitude: 57.60861, Longitude: 24.60722}
-  '10': {Latitude: 56.66363, Longitude: 22.48807}
-  '11': {Latitude: 56.59, Longitude: 21.13862}
-  '12': {Latitude: 56.34751, Longitude: 25.55514}
-  '13': {Latitude: 56.60477, Longitude: 25.25534}
-  '14': {Latitude: 56.55253, Longitude: 26.92449}
-  '15': {Latitude: 57.17767, Longitude: 26.75291}
-  '16': {Latitude: 57.89752, Longitude: 25.33155}
-  '17': {Latitude: 57.75361, Longitude: 24.35806}
-  '18': {Latitude: 57.76694, Longitude: 24.8825}
-  '19': {Latitude: 57.86329, Longitude: 25.05475}
-  '20': {Latitude: 57.62574, Longitude: 25.68535}
-  '21': {Latitude: 57.59639, Longitude: 24.85139}
-  '22': {Latitude: 57.51287, Longitude: 24.71941}
-  '23': {Latitude: 57.46389, Longitude: 24.46778}
-  '24': {Latitude: 56.645, Longitude: 25.12058}
-  '25': {Latitude: 57.54108, Longitude: 25.42751}
-  '26': {Latitude: 56.5, Longitude: 27.31667}
-  '27': {Latitude: 57.12944, Longitude: 24.27444}
-  '28': {Latitude: 56.6425, Longitude: 24.92056}
-  '29': {Latitude: 56.7451, Longitude: 24.72439}
-  '30': {Latitude: 56.946, Longitude: 24.10589}
-  '31': {Latitude: 55.88333, Longitude: 26.53333}
-  '32': {Latitude: 57.38944, Longitude: 21.56056}
-  '33': {Latitude: 56.53521, Longitude: 21.16782}
-  '34': {Latitude: 56.51667, Longitude: 21.01667}
-  '35': {Latitude: 56.94111, Longitude: 24.28972}
-  '36': {Latitude: 56.78528, Longitude: 23.93806}
-  '37': {Latitude: 56.72066, Longitude: 24.80743}
-  '38': {Latitude: 56.83333, Longitude: 24.5}
-  '39': {Latitude: 56.86014, Longitude: 24.36544}
-  '40': {Latitude: 56.4075, Longitude: 24.19056}
-  '41': {Latitude: 56.49903, Longitude: 25.85735}
-  '42': {Latitude: 56.65, Longitude: 23.71278}
-  '43': {Latitude: 56.83991, Longitude: 23.58902}
-  '44': {Latitude: 56.82662, Longitude: 24.23}
-  '45': {Latitude: 56.946, Longitude: 24.10589}
-  '46': {Latitude: 56.68833, Longitude: 23.5}
-  '47': {Latitude: 57.3224, Longitude: 24.74301}
-  '48': {Latitude: 57.15194, Longitude: 24.86472}
-  '49': {Latitude: 56.968, Longitude: 23.77038}
-  '50': {Latitude: 56.96694, Longitude: 23.15528}
-  '51': {Latitude: 57.24562, Longitude: 22.58137}
-  '52': {Latitude: 56.71667, Longitude: 21.6}
-  '53': {Latitude: 57.18074, Longitude: 24.70731}
-  '54': {Latitude: 57.09361, Longitude: 24.54861}
-  '55': {Latitude: 57.07583, Longitude: 24.32139}
-  '56': {Latitude: 56.68639, Longitude: 23.78778}
-  '57': {Latitude: 56.41588, Longitude: 23.68335}
-  '58': {Latitude: 56.8162, Longitude: 24.61401}
-  '59': {Latitude: 56.29444, Longitude: 26.72459}
-  '60': {Latitude: 56.35431, Longitude: 26.17579}
-  '61': {Latitude: 57.1313, Longitude: 27.26583}
-  '62': {Latitude: 56.78405, Longitude: 27.68829}
-  '63': {Latitude: 56.77535, Longitude: 27.71902}
-  '64': {Latitude: 56.63333, Longitude: 27.71667}
-  '65': {Latitude: 56.56667, Longitude: 27.66667}
-  '66': {Latitude: 56.55, Longitude: 27.71667}
-  '67': {Latitude: 56.55, Longitude: 27.88333}
-  '68': {Latitude: 56.38616, Longitude: 28.12165}
 edges:
-- ['0', '30']
-- ['1', '6']
-- ['2', '30']
-- ['3', '30']
-- ['4', '7']
-- ['5', '10']
-- ['6', '42']
-- ['6', '57']
-- ['7', '42']
-- ['8', '48']
-- ['9', '22']
-- ['10', '30']
-- ['11', '34']
-- ['12', '41']
-- ['12', '13']
-- ['13', '28']
-- ['14', '30']
-- ['15', '30']
-- ['16', '19']
-- ['16', '30']
-- ['17', '23']
-- ['18', '19']
-- ['18', '21']
-- ['18', '22']
-- ['20', '25']
-- ['22', '30']
-- ['22', '23']
-- ['23', '48']
-- ['24', '30']
-- ['25', '30']
-- ['26', '66']
-- ['26', '30']
-- ['26', '31']
-- ['27', '30']
-- ['27', '55']
-- ['28', '37']
-- ['29', '37']
-- ['29', '38']
-- ['30', '31']
-- ['30', '34']
-- ['30', '35']
-- ['30', '36']
-- ['30', '39']
-- ['30', '40']
-- ['30', '42']
-- ['30', '44']
-- ['30', '45']
-- ['30', '48']
-- ['30', '49']
-- ['30', '50']
-- ['30', '51']
-- ['30', '52']
-- ['30', '55']
-- ['30', '59']
-- ['30', '61']
-- ['30', '62']
-- ['31', '59']
-- ['32', '50']
-- ['33', '34']
-- ['36', '56']
-- ['38', '58']
-- ['38', '39']
-- ['41', '60']
-- ['42', '43']
-- ['42', '46']
-- ['42', '56']
-- ['47', '48']
-- ['48', '53']
-- ['48', '54']
-- ['62', '63']
-- ['63', '64']
-- ['65', '66']
-- ['66', '67']
-- ['66', '68']
+- - '0'
+  - '30'
+- - '1'
+  - '6'
+- - '2'
+  - '30'
+- - '3'
+  - '30'
+- - '4'
+  - '7'
+- - '5'
+  - '10'
+- - '6'
+  - '42'
+- - '6'
+  - '57'
+- - '7'
+  - '42'
+- - '8'
+  - '48'
+- - '9'
+  - '22'
+- - '10'
+  - '30'
+- - '11'
+  - '34'
+- - '12'
+  - '41'
+- - '12'
+  - '13'
+- - '13'
+  - '28'
+- - '14'
+  - '30'
+- - '15'
+  - '30'
+- - '16'
+  - '19'
+- - '16'
+  - '30'
+- - '17'
+  - '23'
+- - '18'
+  - '19'
+- - '18'
+  - '21'
+- - '18'
+  - '22'
+- - '20'
+  - '25'
+- - '22'
+  - '30'
+- - '22'
+  - '23'
+- - '23'
+  - '48'
+- - '24'
+  - '30'
+- - '25'
+  - '30'
+- - '26'
+  - '66'
+- - '26'
+  - '30'
+- - '26'
+  - '31'
+- - '27'
+  - '30'
+- - '27'
+  - '55'
+- - '28'
+  - '37'
+- - '29'
+  - '37'
+- - '29'
+  - '38'
+- - '30'
+  - '31'
+- - '30'
+  - '34'
+- - '30'
+  - '35'
+- - '30'
+  - '36'
+- - '30'
+  - '39'
+- - '30'
+  - '40'
+- - '30'
+  - '42'
+- - '30'
+  - '44'
+- - '30'
+  - '45'
+- - '30'
+  - '48'
+- - '30'
+  - '49'
+- - '30'
+  - '50'
+- - '30'
+  - '51'
+- - '30'
+  - '52'
+- - '30'
+  - '55'
+- - '30'
+  - '59'
+- - '30'
+  - '61'
+- - '30'
+  - '62'
+- - '31'
+  - '59'
+- - '32'
+  - '50'
+- - '33'
+  - '34'
+- - '36'
+  - '56'
+- - '38'
+  - '58'
+- - '38'
+  - '39'
+- - '41'
+  - '60'
+- - '42'
+  - '43'
+- - '42'
+  - '46'
+- - '42'
+  - '56'
+- - '47'
+  - '48'
+- - '48'
+  - '53'
+- - '48'
+  - '54'
+- - '62'
+  - '63'
+- - '63'
+  - '64'
+- - '65'
+  - '66'
+- - '66'
+  - '67'
+- - '66'
+  - '68'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.59861
+    Longitude: 24.20222
+    !!python/unicode 'label': !!python/unicode 'Iecava'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.55972
+    Longitude: 23.77194
+    !!python/unicode 'label': !!python/unicode 'Vircava'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.66363
+    Longitude: 22.48807
+    !!python/unicode 'label': !!python/unicode 'Saldus'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '11':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.59
+    Longitude: 21.13862
+    !!python/unicode 'label': !!python/unicode 'Kapsede'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '12':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.34751
+    Longitude: 25.55514
+    !!python/unicode 'label': !!python/unicode 'Viesite'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '13':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.60477
+    Longitude: 25.25534
+    !!python/unicode 'label': !!python/unicode 'Aizkroukle'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '14':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.55253
+    Longitude: 26.92449
+    !!python/unicode 'label': !!python/unicode 'Vilani'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.17767
+    Longitude: 26.75291
+    !!python/unicode 'label': !!python/unicode 'Gulbene'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.89752
+    Longitude: 25.33155
+    !!python/unicode 'label': !!python/unicode 'Rujiena'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.75361
+    Longitude: 24.35806
+    !!python/unicode 'label': !!python/unicode 'Salagriva'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.76694
+    Longitude: 24.8825
+    !!python/unicode 'label': !!python/unicode 'Aloja'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.86329
+    Longitude: 25.05475
+    !!python/unicode 'label': !!python/unicode 'Mazsalaca'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.89514
+    Longitude: 27.16799
+    !!python/unicode 'label': !!python/unicode 'Kraslava'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.62574
+    Longitude: 25.68535
+    !!python/unicode 'label': !!python/unicode 'Strenci'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '21':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.59639
+    Longitude: 24.85139
+    !!python/unicode 'label': !!python/unicode 'Pociems'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '22':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.51287
+    Longitude: 24.71941
+    !!python/unicode 'label': !!python/unicode 'Limbazi'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.46389
+    Longitude: 24.46778
+    !!python/unicode 'label': !!python/unicode 'Liepupe'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.645
+    Longitude: 25.12058
+    !!python/unicode 'label': !!python/unicode 'Skriveri'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.54108
+    Longitude: 25.42751
+    !!python/unicode 'label': !!python/unicode 'Valmiera'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.5
+    Longitude: 27.31667
+    !!python/unicode 'label': !!python/unicode 'Rezekne'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.12944
+    Longitude: 24.27444
+    !!python/unicode 'label': !!python/unicode 'Carnikava'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.6425
+    Longitude: 24.92056
+    !!python/unicode 'label': !!python/unicode 'Jumprava'
+    !!python/unicode 'type': !!python/unicode 'Small Red Node'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.7451
+    Longitude: 24.72439
+    !!python/unicode 'label': !!python/unicode 'Kegums'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.70694
+    Longitude: 24.35194
+    !!python/unicode 'label': !!python/unicode 'Baldone'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '30':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.946
+    Longitude: 24.10589
+    !!python/unicode 'label': !!python/unicode 'Riga'
+    !!python/unicode 'type': !!python/unicode 'GEANT2 PoP'
+  '31':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.88333
+    Longitude: 26.53333
+    !!python/unicode 'label': !!python/unicode 'Daugapils'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '32':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.38944
+    Longitude: 21.56056
+    !!python/unicode 'label': !!python/unicode 'Ventspits'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '33':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.53521
+    Longitude: 21.16782
+    !!python/unicode 'label': !!python/unicode 'Grobina'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '34':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.51667
+    Longitude: 21.01667
+    !!python/unicode 'label': !!python/unicode 'Liepaja'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '35':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.94111
+    Longitude: 24.28972
+    !!python/unicode 'label': !!python/unicode 'Ulbroka'
+    !!python/unicode 'type': !!python/unicode 'Small Red Node'
+  '36':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.78528
+    Longitude: 23.93806
+    !!python/unicode 'label': !!python/unicode 'Olaine'
+    !!python/unicode 'type': !!python/unicode 'Small Red Node'
+  '37':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.72066
+    Longitude: 24.80743
+    !!python/unicode 'label': !!python/unicode 'Lielvarde'
+    !!python/unicode 'type': !!python/unicode 'Small Red Node'
+  '38':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.83333
+    Longitude: 24.5
+    !!python/unicode 'label': !!python/unicode 'Ikskile'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '39':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.86014
+    Longitude: 24.36544
+    !!python/unicode 'label': !!python/unicode 'Salaspils'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.45981
+    Longitude: 22.90169
+    !!python/unicode 'label': !!python/unicode 'Auce'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '40':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.4075
+    Longitude: 24.19056
+    !!python/unicode 'label': !!python/unicode 'Bauska'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '41':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.49903
+    Longitude: 25.85735
+    !!python/unicode 'label': !!python/unicode 'Jekabpils'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '42':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.65
+    Longitude: 23.71278
+    !!python/unicode 'label': !!python/unicode 'Jelgava'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '43':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.83991
+    Longitude: 23.58902
+    !!python/unicode 'label': !!python/unicode 'Kalnciems'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '44':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.82662
+    Longitude: 24.23
+    !!python/unicode 'label': !!python/unicode 'Kekava'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '45':
+    !!python/unicode 'Internal': 0
+    Latitude: 56.946
+    Longitude: 24.10589
+    !!python/unicode 'label': !!python/unicode 'GEANT2'
+  '46':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.68833
+    Longitude: 23.5
+    !!python/unicode 'label': !!python/unicode 'Livberze'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '47':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.3224
+    Longitude: 24.74301
+    !!python/unicode 'label': !!python/unicode 'Ledurga'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '48':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.15194
+    Longitude: 24.86472
+    !!python/unicode 'label': !!python/unicode 'Sigulda'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '49':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.968
+    Longitude: 23.77038
+    !!python/unicode 'label': !!python/unicode 'Jurmala'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.7
+    Longitude: 22.53333
+    !!python/unicode 'label': !!python/unicode 'Broceni'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '50':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.96694
+    Longitude: 23.15528
+    !!python/unicode 'label': !!python/unicode 'Tukums'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '51':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.24562
+    Longitude: 22.58137
+    !!python/unicode 'label': !!python/unicode 'Talsi'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '52':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.71667
+    Longitude: 21.6
+    !!python/unicode 'label': !!python/unicode 'Aizpute'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '53':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.18074
+    Longitude: 24.70731
+    !!python/unicode 'label': !!python/unicode 'Ragona'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '54':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.09361
+    Longitude: 24.54861
+    !!python/unicode 'label': !!python/unicode 'Vangazi'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '55':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.07583
+    Longitude: 24.32139
+    !!python/unicode 'label': !!python/unicode 'Adazi'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '56':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.68639
+    Longitude: 23.78778
+    !!python/unicode 'label': !!python/unicode 'Ozolnieki'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '57':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.41588
+    Longitude: 23.68335
+    !!python/unicode 'label': !!python/unicode 'Eleja'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '58':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.8162
+    Longitude: 24.61401
+    !!python/unicode 'label': !!python/unicode 'Ogre'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '59':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.29444
+    Longitude: 26.72459
+    !!python/unicode 'label': !!python/unicode 'Preili'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.53722
+    Longitude: 23.69639
+    !!python/unicode 'label': !!python/unicode 'Platone'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '60':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.35431
+    Longitude: 26.17579
+    !!python/unicode 'label': !!python/unicode 'Livani'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '61':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.1313
+    Longitude: 27.26583
+    !!python/unicode 'label': !!python/unicode 'Balvi'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '62':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.78405
+    Longitude: 27.68829
+    !!python/unicode 'label': !!python/unicode 'Karsava'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '63':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.77535
+    Longitude: 27.71902
+    !!python/unicode 'label': !!python/unicode 'Malnava'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '64':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.63333
+    Longitude: 27.71667
+    !!python/unicode 'label': !!python/unicode 'Pusmucova'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '65':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.56667
+    Longitude: 27.66667
+    !!python/unicode 'label': !!python/unicode 'Zvigzdene'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '66':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.55
+    Longitude: 27.71667
+    !!python/unicode 'label': !!python/unicode 'Ludza'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '67':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.55
+    Longitude: 27.88333
+    !!python/unicode 'label': !!python/unicode 'Cibla'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '68':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.38616
+    Longitude: 28.12165
+    !!python/unicode 'label': !!python/unicode 'Zilupe'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 56.625
+    Longitude: 23.27861
+    !!python/unicode 'label': !!python/unicode 'Dobele'
+    !!python/unicode 'type': !!python/unicode 'Large Orange Node'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.15861
+    Longitude: 24.70278
+    !!python/unicode 'label': !!python/unicode 'Krimulda'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Latvia'
+    !!python/unicode 'Internal': 1
+    Latitude: 57.60861
+    Longitude: 24.60722
+    !!python/unicode 'label': !!python/unicode 'Vijkene'
+    !!python/unicode 'type': !!python/unicode 'Large Blue Node'

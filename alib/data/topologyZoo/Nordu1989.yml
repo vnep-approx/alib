@@ -1,15 +1,54 @@
-nodes:
-  '0': {Latitude: 63.43049, Longitude: 10.39506}
-  '1': {Latitude: 59.33258, Longitude: 18.0649}
-  '2': {Latitude: 60.16952, Longitude: 24.93545}
-  '3': {Latitude: 55.67594, Longitude: 12.56553}
-  '4': {Latitude: 64.13548, Longitude: -21.89541}
-  '5': {Latitude: 59.33258, Longitude: 18.0649}
-  '6': {Latitude: 59.33258, Longitude: 18.0649}
 edges:
-- ['0', '1']
-- ['1', '2']
-- ['1', '3']
-- ['1', '5']
-- ['1', '6']
-- ['3', '4']
+- - '0'
+  - '1'
+- - '1'
+  - '2'
+- - '1'
+  - '3'
+- - '1'
+  - '5'
+- - '1'
+  - '6'
+- - '3'
+  - '4'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Norway'
+    !!python/unicode 'Internal': 1
+    Latitude: 63.43049
+    Longitude: 10.39506
+    !!python/unicode 'label': !!python/unicode 'Trondheim'
+  '1':
+    !!python/unicode 'Country': !!python/unicode 'Sweden'
+    !!python/unicode 'Internal': 1
+    Latitude: 59.33258
+    Longitude: 18.0649
+    !!python/unicode 'label': !!python/unicode 'Stockholm'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Finland'
+    !!python/unicode 'Internal': 1
+    Latitude: 60.16952
+    Longitude: 24.93545
+    !!python/unicode 'label': !!python/unicode 'Helsinki'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Denmark'
+    !!python/unicode 'Internal': 1
+    Latitude: 55.67594
+    Longitude: 12.56553
+    !!python/unicode 'label': !!python/unicode 'Copenhagen'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Iceland'
+    !!python/unicode 'Internal': 1
+    Latitude: 64.13548
+    Longitude: -21.89541
+    !!python/unicode 'label': !!python/unicode 'Reykjavik'
+  '5':
+    !!python/unicode 'Internal': 0
+    Latitude: 59.33258
+    Longitude: 18.0649
+    !!python/unicode 'label': !!python/unicode 'EUROPE'
+  '6':
+    !!python/unicode 'Internal': 0
+    Latitude: 59.33258
+    Longitude: 18.0649
+    !!python/unicode 'label': !!python/unicode 'USA'

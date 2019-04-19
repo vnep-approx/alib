@@ -1,74 +1,310 @@
-nodes:
-  '0': {Latitude: 49.08333, Longitude: 19.31667}
-  '1': {Latitude: 48.73333, Longitude: 19.15}
-  '2': {Latitude: 49.06014, Longitude: 20.20695}
-  '3': {Latitude: 49.08061, Longitude: 19.62218}
-  '4': {Latitude: 48.56667, Longitude: 19.41667}
-  '5': {Latitude: 48.58333, Longitude: 19.13333}
-  '6': {Latitude: 49.22315, Longitude: 18.73941}
-  '7': {Latitude: 49.4, Longitude: 19.5}
-  '8': {Latitude: 48.38333, Longitude: 20.03333}
-  '9': {Latitude: 48.33333, Longitude: 19.66667}
-  '10': {Latitude: 47.76356, Longitude: 18.12263}
-  '11': {Latitude: 48.14816, Longitude: 17.10674}
-  '12': {Latitude: 48.14816, Longitude: 17.10674}
-  '13': {Latitude: 48.14816, Longitude: 17.10674}
-  '14': {Latitude: 48.14816, Longitude: 17.10674}
-  '15': {Latitude: 47.98544, Longitude: 18.16195}
-  '16': {Latitude: 48.30763, Longitude: 18.08453}
-  '17': {Latitude: 48.89452, Longitude: 18.04436}
-  '18': {Latitude: 48.56667, Longitude: 18.18333}
-  '19': {Latitude: 48.71667, Longitude: 18.55}
-  '20': {Latitude: 48.76667, Longitude: 18.63333}
-  '21': {Latitude: 48.14816, Longitude: 17.10674}
-  '22': {Latitude: 48.14816, Longitude: 17.10674}
-  '23': {Latitude: 48.6, Longitude: 17.83333}
-  '24': {Latitude: 48.75763, Longitude: 17.8309}
-  '25': {Latitude: 48.95, Longitude: 20.56667}
-  '26': {Latitude: 49.05, Longitude: 20.3}
-  '27': {Latitude: 48.73333, Longitude: 19.15}
-  '28': {Latitude: 48.14816, Longitude: 17.10674}
-  '29': {Latitude: 48.71667, Longitude: 21.25}
-  '30': {Latitude: 49.0, Longitude: 21.25}
-  '31': {Latitude: 49.28333, Longitude: 21.28333}
-  '32': {Latitude: 49.3, Longitude: 21.56667}
-  '33': {Latitude: 48.93333, Longitude: 21.91667}
-  '34': {Latitude: 48.75, Longitude: 21.93333}
 edges:
-- ['0', '27']
-- ['1', '27']
-- ['2', '29']
-- ['3', '27']
-- ['4', '8']
-- ['4', '27']
-- ['5', '27']
-- ['6', '17']
-- ['6', '26']
-- ['6', '27']
-- ['7', '27']
-- ['9', '27']
-- ['10', '28']
-- ['11', '28']
-- ['12', '28']
-- ['13', '28']
-- ['14', '28']
-- ['15', '28']
-- ['16', '28']
-- ['17', '28']
-- ['18', '28']
-- ['19', '27']
-- ['20', '27']
-- ['21', '28']
-- ['22', '28']
-- ['23', '28']
-- ['24', '28']
-- ['25', '26']
-- ['25', '29']
-- ['26', '30']
-- ['27', '28']
-- ['28', '29']
-- ['29', '32']
-- ['29', '33']
-- ['29', '34']
-- ['29', '30']
-- ['30', '31']
+- - '0'
+  - '27'
+- - '1'
+  - '27'
+- - '2'
+  - '29'
+- - '3'
+  - '27'
+- - '4'
+  - '8'
+- - '4'
+  - '27'
+- - '5'
+  - '27'
+- - '6'
+  - '17'
+- - '6'
+  - '26'
+- - '6'
+  - '27'
+- - '7'
+  - '27'
+- - '9'
+  - '27'
+- - '10'
+  - '28'
+- - '11'
+  - '28'
+- - '12'
+  - '28'
+- - '13'
+  - '28'
+- - '14'
+  - '28'
+- - '15'
+  - '28'
+- - '16'
+  - '28'
+- - '17'
+  - '28'
+- - '18'
+  - '28'
+- - '19'
+  - '27'
+- - '20'
+  - '27'
+- - '21'
+  - '28'
+- - '22'
+  - '28'
+- - '23'
+  - '28'
+- - '24'
+  - '28'
+- - '25'
+  - '26'
+- - '25'
+  - '29'
+- - '26'
+  - '30'
+- - '27'
+  - '28'
+- - '28'
+  - '29'
+- - '29'
+  - '32'
+- - '29'
+  - '33'
+- - '29'
+  - '34'
+- - '29'
+  - '30'
+- - '30'
+  - '31'
+nodes:
+  '0':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.08333
+    Longitude: 19.31667
+    !!python/unicode 'label': !!python/unicode 'Ruzombernk'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '1':
+    !!python/unicode 'Internal': 1
+    Latitude: 48.73333
+    Longitude: 19.15
+    !!python/unicode 'label': !!python/unicode 'None'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '10':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.76356
+    Longitude: 18.12263
+    !!python/unicode 'label': !!python/unicode 'Komarno'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '11':
+    !!python/unicode 'Internal': 0
+    Latitude: 48.14816
+    Longitude: 17.10674
+    !!python/unicode 'label': !!python/unicode 'Brno Warsaw'
+  '12':
+    !!python/unicode 'Internal': 0
+    Latitude: 48.14816
+    Longitude: 17.10674
+    !!python/unicode 'label': !!python/unicode 'Prague Frankfurt'
+  '13':
+    !!python/unicode 'Internal': 0
+    Latitude: 48.14816
+    Longitude: 17.10674
+    !!python/unicode 'label': !!python/unicode 'Vienna'
+  '14':
+    !!python/unicode 'Internal': 0
+    Latitude: 48.14816
+    Longitude: 17.10674
+    !!python/unicode 'label': !!python/unicode 'Gyor Budapest'
+  '15':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 47.98544
+    Longitude: 18.16195
+    !!python/unicode 'label': !!python/unicode 'Nove Zamky'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '16':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.30763
+    Longitude: 18.08453
+    !!python/unicode 'label': !!python/unicode 'Nitra'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '17':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.89452
+    Longitude: 18.04436
+    !!python/unicode 'label': !!python/unicode 'Trencin'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '18':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.56667
+    Longitude: 18.18333
+    !!python/unicode 'label': !!python/unicode 'Topolcany'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '19':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.71667
+    Longitude: 18.55
+    !!python/unicode 'label': !!python/unicode 'Novaky'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '2':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.06014
+    Longitude: 20.20695
+    !!python/unicode 'label': !!python/unicode 'Svit'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '20':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.76667
+    Longitude: 18.63333
+    !!python/unicode 'label': !!python/unicode 'Prievidza'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '21':
+    !!python/unicode 'Internal': 1
+    Latitude: 48.14816
+    Longitude: 17.10674
+    !!python/unicode 'label': !!python/unicode 'None'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '22':
+    !!python/unicode 'Internal': 1
+    Latitude: 48.14816
+    Longitude: 17.10674
+    !!python/unicode 'label': !!python/unicode 'None'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '23':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.6
+    Longitude: 17.83333
+    !!python/unicode 'label': !!python/unicode 'Piestany'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '24':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.75763
+    Longitude: 17.8309
+    !!python/unicode 'label': !!python/unicode 'Nove Mest nad Vahom'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '25':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.95
+    Longitude: 20.56667
+    !!python/unicode 'label': !!python/unicode 'Spisska'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '26':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.05
+    Longitude: 20.3
+    !!python/unicode 'label': !!python/unicode 'Poprad'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '27':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.73333
+    Longitude: 19.15
+    !!python/unicode 'label': !!python/unicode 'Banska Bystrica'
+    !!python/unicode 'type': !!python/unicode 'Large Node'
+  '28':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.14816
+    Longitude: 17.10674
+    !!python/unicode 'label': !!python/unicode 'Bratislava'
+    !!python/unicode 'type': !!python/unicode 'Large Node'
+  '29':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.71667
+    Longitude: 21.25
+    !!python/unicode 'label': !!python/unicode 'Kosice'
+    !!python/unicode 'type': !!python/unicode 'Large Node'
+  '3':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.08061
+    Longitude: 19.62218
+    !!python/unicode 'label': !!python/unicode 'Liptovdky Mikulas'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '30':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.0
+    Longitude: 21.25
+    !!python/unicode 'label': !!python/unicode 'Presov'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '31':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.28333
+    Longitude: 21.28333
+    !!python/unicode 'label': !!python/unicode 'Bardejov'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '32':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.3
+    Longitude: 21.56667
+    !!python/unicode 'label': !!python/unicode 'Svidnik'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '33':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.93333
+    Longitude: 21.91667
+    !!python/unicode 'label': !!python/unicode 'Humenne'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '34':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.75
+    Longitude: 21.93333
+    !!python/unicode 'label': !!python/unicode 'Michalovce'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '4':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.56667
+    Longitude: 19.41667
+    !!python/unicode 'label': !!python/unicode 'Detva'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '5':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.58333
+    Longitude: 19.13333
+    !!python/unicode 'label': !!python/unicode 'Zvolen'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '6':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.22315
+    Longitude: 18.73941
+    !!python/unicode 'label': !!python/unicode 'Zilina'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '7':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 49.4
+    Longitude: 19.5
+    !!python/unicode 'label': !!python/unicode 'Namestovo'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '8':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.38333
+    Longitude: 20.03333
+    !!python/unicode 'label': !!python/unicode 'Rimavska Sobota'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
+  '9':
+    !!python/unicode 'Country': !!python/unicode 'Slovakia'
+    !!python/unicode 'Internal': 1
+    Latitude: 48.33333
+    Longitude: 19.66667
+    !!python/unicode 'label': !!python/unicode 'Lucenec'
+    !!python/unicode 'type': !!python/unicode 'Small Node'
