@@ -257,6 +257,7 @@ Param_Method = "Method"
 Param_BarConvTol = "BarConvTol"
 Param_NumericFocus = "NumericFocus"
 Param_LogToConsole = "LogToConsole"
+Param_Crossover = "Crossover"
 
 
 def isFeasibleStatus(status):
@@ -377,6 +378,7 @@ class GurobiSettings(object):
                  method=None,
                  nodemethod=None,
                  numericfocus=None,
+                 crossover=None,
                  logtoconsole=0):
         util.check_positive(mipGap)
         self.MIPGap = mipGap
@@ -419,6 +421,9 @@ class GurobiSettings(object):
         util.check_int(numericfocus)
         self.NumericFocus = numericfocus
 
+        util.check_within_range(crossover, 0, 4)
+        self.Crossover = crossover
+
         util.check_within_range(logtoconsole,0,1)
         self.LogToConsole = logtoconsole
 
@@ -442,7 +447,7 @@ class AbstractModelCreator(object):
     _listOfUserVariableParameters = [Param_MIPGap, Param_IterationLimit, Param_NodeLimit, Param_Heuristics,
                                      Param_Threads, Param_TimeLimit, Param_Cuts, Param_MIPFocus, Param_RootCutPasses,
                                      Param_NodefileStart, Param_Method, Param_NodeMethod, Param_BarConvTol, Param_NumericFocus,
-                                     Param_LogToConsole]
+                                     Param_Crossover, Param_LogToConsole]
 
     def __init__(self,
                  gurobi_settings=None,
@@ -760,6 +765,11 @@ class AbstractModelCreator(object):
             self.set_gurobi_parameter(Param_NumericFocus, gurobiSettings.NumericFocus)
         else:
             self.reset_gurobi_parameter(Param_NumericFocus)
+
+        if gurobiSettings.Crossover is not None:
+            self.set_gurobi_parameter(Param_Crossover, gurobiSettings.Crossover)
+        else:
+            self.reset_gurobi_parameter(Param_Crossover)
 
         if gurobiSettings.LogToConsole is not None:
             self.set_gurobi_parameter(Param_LogToConsole, gurobiSettings.LogToConsole)
