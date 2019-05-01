@@ -140,9 +140,10 @@ class ExecutionParameters(object):
     def _expand_innermost_parameter_space(self, parameter_space):
         """
         :param self:
-        :param parameter_space: dictionar
+        :param parameter_space: dictionary
         :return:
         """
+
         all_parameters = sorted(parameter_space.keys())
         parameter_combinations = [
             product for product in
