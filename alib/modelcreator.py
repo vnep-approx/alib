@@ -544,6 +544,10 @@ class AbstractModelCreator(object):
 
         self.time_optimization = time.clock() - time_optimization_start
 
+        #the following shall not be counted to any runtime
+        if self.lp_output_file is not None:
+            self.model.write(self.lp_output_file)
+
         # do the postprocessing
         self._time_postprocess_start = time.clock()
         gurobi_status = self.model.getAttr("Status")
@@ -586,9 +590,6 @@ class AbstractModelCreator(object):
                                    integralSolution=True)
 
         self.logger.debug("Found solution with status {}".format(self.status))
-
-        if self.lp_output_file is not None:
-            self.model.write(self.lp_output_file)
 
         result = None
         if self.status.isFeasible():
