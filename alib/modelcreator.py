@@ -374,7 +374,7 @@ class GurobiSettings(object):
                  BarConvTol=None,
                  OptimalityTol=None,
                  Presolve=None,
-                 NodefileStart=None,
+                 nodefilestart=None,
                  method=None,
                  nodemethod=None,
                  numericfocus=None,
@@ -411,8 +411,8 @@ class GurobiSettings(object):
         self.OptimalityTol = OptimalityTol
         self.Presolve = Presolve
 
-        util.check_positive(NodefileStart)
-        self.NodefileStart = NodefileStart
+        util.check_positive(nodefilestart)
+        self.NodefileStart = nodefilestart
 
         self.Method = method
         self.NodeMethod = nodemethod
