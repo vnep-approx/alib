@@ -363,7 +363,7 @@ class GurobiSettings(object):
     '''
     def __init__(self,
                  mipGap=None,
-                 iterationLimit=None,
+                 iterationlimit=None,
                  nodeLimit=None,
                  heuristics=None,
                  threads=None,
@@ -383,8 +383,8 @@ class GurobiSettings(object):
         util.check_positive(mipGap)
         self.MIPGap = mipGap
 
-        util.check_positive(iterationLimit)
-        self.IterationLimit = iterationLimit
+        util.check_positive(iterationlimit)
+        self.IterationLimit = iterationlimit
 
         util.check_positive(nodeLimit)
         util.check_int(nodeLimit)
