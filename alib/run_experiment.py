@@ -22,6 +22,7 @@
 #
 
 import cPickle as pickle
+from collections import deque
 import itertools
 import multiprocessing as mp
 import os
@@ -214,7 +215,13 @@ class ExperimentExecution(object):
         self.sss = None
 
         self.sss = solutions.ScenarioSolutionStorage(self.scenario_container, self.execution_parameters)
-        self.pool = mp.Pool(self.concurrent_executions, maxtasksperchild=1)
+
+        self.process_indices = [i for i in range(concurrent)]
+        self.processes = {i : None for i in self.process_indices}
+        self.input_queues = {i : mp.Queue() for i in self.process_indices}
+        self.result_queue = mp.Queue()
+        self.unprocessed_tasks = deque()
+        self.currently_active_processes = 0
 
     def setup(self, execution_parameter_container, scenario_container):
         self.scenario_container = scenario_container
@@ -243,8 +250,10 @@ class ExperimentExecution(object):
                                                                                     self.max_scenario_index))
             for execution_id, parameters in enumerate(self.execution_parameters.algorithm_parameter_list):
                 args = (scenario_index, execution_id, parameters, scenario)
-                self.pool.apply_async(_execute, args, callback=self._process_result)
-                log.info("Submitted to task queue: Scenario {}, Alg {}, Execution {}:".format(
+
+                self.unprocessed_tasks.append(args)
+
+                log.info("Submitted unprocessed task into list: Scenario {}, Alg {}, Execution {}:".format(
                     scenario_index, parameters["ALG_ID"], execution_id)
                 )
                 for key, param_dict in parameters.iteritems():
@@ -253,23 +262,62 @@ class ExperimentExecution(object):
                     log.debug("    {}:".format(key))
                     for param, values in param_dict.iteritems():
                         log.debug("        {} -> {}".format(param, values))
-        self.pool.close()
-        self.pool.join()
+
+        self._spawn_processes()
+
+        self._keep_going()
+
+
         return self.sss
+
+    def _keep_going(self):
+        while self.currently_active_processes > 0:
+            result = self.result_queue.get()
+            scenario_id, execution_id, alg_result, process_index = result
+
+            self._process_result(result)
+
+            self.processes[process_index].join()
+            self.processes[process_index].terminate()
+            self.processes[process_index] = None
+            self.currently_active_processes -= 1
+            self._spawn_processes()
+
+
+
+
+    def _spawn_processes(self):
+        while self.currently_active_processes < self.concurrent_executions and len(self.unprocessed_tasks) > 0:
+            args = self.unprocessed_tasks.popleft()
+            self._spawn_process(args)
+
+    def _spawn_process(self, args):
+        scenario_index, execution_id, parameters, scenario = args
+
+        for process_id, process in self.processes.iteritems():
+            if process is None:
+                extended_args = scenario_index, execution_id, parameters, scenario, process_id, self.result_queue
+                self.processes[process_id] = mp.Process(target=_execute, args=extended_args)
+                log.info("Spawning process with index {}".format(process_id))
+                self.processes[process_id].start()
+                self.currently_active_processes += 1
+                break
+            else:
+                log.info("Process with index {} is currently still active".format(process_id))
 
     def _process_result(self, res):
         try:
-            (scenario_id, execution_id, alg_result) = res
+            scenario_id, execution_id, alg_result, process_index = res
             log.info("Processing solution for {}, {}: {}".format(scenario_id, execution_id, alg_result))
             alg_id = self.execution_parameters.algorithm_parameter_list[execution_id]["ALG_ID"]
-            with open("intermediate_result_{}_{}.pickle".format(scenario_id,alg_id), "wb") as f:
-                pickle.dump((scenario_id,execution_id,alg_result), f)
+            with open("intermediate_result_{}_{}.pickle".format(scenario_id, alg_id), "wb") as f:
+                pickle.dump((scenario_id, execution_id, alg_result), f)
             if alg_result is not None:
                 # original_scenario = self.scenario_container.scenario_list[scenario_id]
                 sp, original_scenario = self.scenario_container.scenario_triple[scenario_id]
                 alg_result.cleanup_references(original_scenario)
-                #while this might look a little bit weird, but we pickle the information again after the references have been cleaned up
-                #as the function that actually cleans up the references might fail...
+                # while this might look a little bit weird, but we pickle the information again after the references have been cleaned up
+                # as the function that actually cleans up the references might fail...
                 with open("intermediate_result_{}_{}.pickle".format(scenario_id, alg_id), "wb") as f:
                     pickle.dump((scenario_id, execution_id, alg_result), f)
             self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
@@ -290,7 +338,7 @@ def _initialize_algorithm(scenario, logger, parameters):
     return alg_instance
 
 
-def _execute(scenario_id, execution_id, parameters, scenario):
+def _execute(scenario_id, execution_id, parameters, scenario, process_index, result_queue):
     """
     This function is submitted to the processing pool
 
@@ -327,14 +375,15 @@ def _execute(scenario_id, execution_id, parameters, scenario):
 
         del algorithm_instance
 
-        execution_result = (scenario_id, execution_id, alg_solution)
+        execution_result = (scenario_id, execution_id, alg_solution, process_index)
 
         logger_filename_orig = util.get_logger_filename(logger_filename)
         logger_filename_finished = util.get_logger_filename("finished_" + logger_filename)
 
         os.rename(logger_filename_orig, logger_filename_finished)
 
-        return execution_result
+        result_queue.put(execution_result)
+
     except Exception as e:
         stacktrace = ("\nError in scenario {}, execution {}:\n".format(scenario_id, execution_id) +
                       traceback.format_exc(limit=100))
