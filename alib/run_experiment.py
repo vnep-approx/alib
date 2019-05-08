@@ -214,7 +214,7 @@ class ExperimentExecution(object):
         self.sss = None
 
         self.sss = solutions.ScenarioSolutionStorage(self.scenario_container, self.execution_parameters)
-        self.pool = mp.Pool(self.concurrent_executions, maxtaskperchild=1)
+        self.pool = mp.Pool(self.concurrent_executions, maxtasksperchild=1)
 
     def setup(self, execution_parameter_container, scenario_container):
         self.scenario_container = scenario_container
