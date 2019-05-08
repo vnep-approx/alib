@@ -28,6 +28,7 @@ import multiprocessing as mp
 import os
 import traceback
 import yaml
+from datetime import datetime
 
 from . import datamodel, mip, modelcreator, scenariogeneration, solutions, util
 
@@ -461,7 +462,9 @@ def _execute(scenario_id, execution_id, parameters, scenario, process_index, res
         execution_result = (scenario_id, execution_id, alg_solution, process_index)
 
         logger_filename_orig = util.get_logger_filename(logger_filename)
-        logger_filename_finished = util.get_logger_filename("finished_" + logger_filename)
+        current_time = datetime.now()
+
+        logger_filename_finished = util.get_logger_filename("finished" + current_time.strftime("_%Y_%m_%d_%H_%M_%S_") + logger_filename)
 
         os.rename(logger_filename_orig, logger_filename_finished)
 
