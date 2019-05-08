@@ -214,7 +214,7 @@ class ExperimentExecution(object):
         self.sss = None
 
         self.sss = solutions.ScenarioSolutionStorage(self.scenario_container, self.execution_parameters)
-        self.pool = mp.Pool(self.concurrent_executions)
+        self.pool = mp.Pool(self.concurrent_executions, maxtaskperchild=1)
 
     def setup(self, execution_parameter_container, scenario_container):
         self.scenario_container = scenario_container
@@ -299,7 +299,10 @@ def _execute(scenario_id, execution_id, parameters, scenario):
     :param algorithm_instance:
     :return:
     """
-    logger = util.get_logger("worker_{}".format(os.getpid()), propagate=False)
+
+    logger_filename = "worker_{}".format(os.getpid())
+
+    logger = util.get_logger(logger_filename, propagate=False)
 
     try:
         algorithm_instance = _initialize_algorithm(scenario, logger, parameters)
@@ -325,6 +328,11 @@ def _execute(scenario_id, execution_id, parameters, scenario):
         del algorithm_instance
 
         execution_result = (scenario_id, execution_id, alg_solution)
+
+        logger_filename_orig = util.get_logger_filename(logger_filename)
+        logger_filename_finished = util.get_logger_filename("finished_" + logger_filename)
+
+        os.rename(logger_filename_orig, logger_filename_finished)
 
         return execution_result
     except Exception as e:

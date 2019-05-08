@@ -398,12 +398,15 @@ def initialize_root_logger(filename, print_level=logging.INFO, file_level=loggin
     root_logger.info("Initialized Root Logger")
 
 
+def get_logger_filename(logger_name):
+    return os.path.join(ExperimentPathHandler.LOG_DIR, logger_name + ".log")
+
 def get_logger(logger_name, make_file=True, make_stream=False, print_level=logging.INFO, file_level=logging.DEBUG, propagate=True, allow_override=False):
     logger = logging.getLogger(logger_name)
 
     if len(logger.handlers) == 0:
         if make_file:
-            fname = os.path.join(ExperimentPathHandler.LOG_DIR, logger_name + ".log")
+            fname = get_logger_filename(logger_name)
             if not allow_override and os.path.exists(fname):
                 raise AlibPathError("Attempted to overwrite existing log file:  {}".format(fname))
             file_handler = logging.FileHandler(fname, mode="w")
