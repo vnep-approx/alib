@@ -47,6 +47,13 @@ ALGORITHMS = {
 def register_algorithm(alg_id, alg_class):
     ALGORITHMS[alg_id] = alg_class
 
+class CustomizedDataManager(mp.managers.SyncManager):
+    pass
+
+CustomizedDataManager.register('ScenarioParameterContainer', scenariogeneration.ScenarioParameterContainer)
+CustomizedDataManager.register('ScenarioSolutionStorage', solutions.ScenarioSolutionStorage)
+
+
 
 def run_experiment(experiment_yaml_file,
                    min_scenario_index, max_scenario_index,
@@ -68,12 +75,10 @@ def run_experiment(experiment_yaml_file,
     scenario_picklefile = os.path.abspath(os.path.join(
         util.ExperimentPathHandler.INPUT_DIR, exp_data["SCENARIO_INPUT_PICKLE"])
     )
-    with open(scenario_picklefile, "rb") as f:
-        scenario_container = pickle.load(f)
 
     run_parameters = exp_data["RUN_PARAMETERS"]
     execution_parameter_container = ExecutionParameters(run_parameters)
-    execution.setup(execution_parameter_container, scenario_container)
+    execution.setup(execution_parameter_container, scenario_picklefile)
 
     result = execution.start_experiment()
     solution_storage_file = exp_data["RESULT_OUTPUT_PICKLE"]
@@ -202,32 +207,44 @@ class ExperimentExecution(object):
     def __init__(self,
                  min_scenario_index,
                  max_scenario_index,
-                 concurrent=1):
-
-        self.scenario_container = None
+                 concurrent=1,
+                 overwrite_existing_intermediate_scenario_pickles=False,
+                 read_existing_intermediate_solutions_from_file=True):
 
         self.min_scenario_index = min_scenario_index
         self.max_scenario_index = max_scenario_index
         self.concurrent_executions = concurrent
+        self.overwrite_existing_intermediate_scenario_pickles = overwrite_existing_intermediate_scenario_pickles
+        self.read_existing_intermediate_solutions_from_file = read_existing_intermediate_solutions_from_file
 
         self.execution_parameters = None
 
-        self.sss = None
-
-        self.sss = solutions.ScenarioSolutionStorage(self.scenario_container, self.execution_parameters)
 
         self.process_indices = [i for i in range(concurrent)]
         self.processes = {i : None for i in self.process_indices}
+        self.process_args = {i : None for i in self.process_indices}
         self.input_queues = {i : mp.Queue() for i in self.process_indices}
         self.result_queue = mp.Queue()
         self.unprocessed_tasks = deque()
+        self.finished_tasks = deque()
         self.currently_active_processes = 0
 
-    def setup(self, execution_parameter_container, scenario_container):
-        self.scenario_container = scenario_container
+        self.sss = None
+
+    def _load_scenario_container(self):
+        scenario_container = None
+        with open(self.scenario_picklefile, "r") as f:
+            scenario_container = pickle.load(f)
+        return scenario_container
+
+    def setup(self, execution_parameter_container, scenario_picklefile):
+        self.scenario_picklefile = scenario_picklefile
         self.execution_parameters = execution_parameter_container
         self.execution_parameters.generate_parameter_combinations()
-        number_of_scenarios = len(self.scenario_container.scenario_list)
+
+        scenario_container = self._load_scenario_container()
+
+        number_of_scenarios = len(scenario_container.scenario_list)
         if self.max_scenario_index > number_of_scenarios:
             log.warn("There are only {new} scenarios, restricting max_scenario_index parameter from {old} to {new}".format(
                 old=self.max_scenario_index,
@@ -238,24 +255,37 @@ class ExperimentExecution(object):
         util.check_int(self.min_scenario_index, False)
         util.check_int(self.max_scenario_index, False)
 
-    def start_experiment(self):
-        self.sss = solutions.ScenarioSolutionStorage(self.scenario_container, self.execution_parameters)
         for scenario_index in xrange(self.min_scenario_index, self.max_scenario_index):
 
-            sp, scenario = self.scenario_container.scenario_triple[scenario_index]
+            sp, scenario = scenario_container.scenario_triple[scenario_index]
+
             scenario.objective = datamodel.Objective.MAX_PROFIT
-            self.sss.experiment_parameters = sp
+
             log.info("Scenario index {}  (Server Execution Range: {} -> {})".format(scenario_index,
                                                                                     self.min_scenario_index,
                                                                                     self.max_scenario_index))
+
+            scenario_filename = self._get_scenario_pickle_filename(scenario_index)
+            if not os.path.exists(scenario_filename) or not self.overwrite_existing_intermediate_scenario_pickles:
+                with open(scenario_filename, "w") as f:
+                    pickle.dump(scenario, f)
+
             for execution_id, parameters in enumerate(self.execution_parameters.algorithm_parameter_list):
-                args = (scenario_index, execution_id, parameters, scenario)
 
-                self.unprocessed_tasks.append(args)
+                args = (scenario_index, execution_id, parameters)
 
-                log.info("Submitted unprocessed task into list: Scenario {}, Alg {}, Execution {}:".format(
-                    scenario_index, parameters["ALG_ID"], execution_id)
-                )
+                intermediate_solution_filename = self._get_scenario_solution_filename(scenario_index, execution_id)
+
+                if not self.read_existing_intermediate_solutions_from_file or not os.path.exists(intermediate_solution_filename):
+                    self.unprocessed_tasks.append(args)
+
+                    log.info("Stored unprocessed task into list: Scenario {}, Alg {}, Execution {}:".format(
+                        scenario_index, parameters["ALG_ID"], execution_id))
+                else:
+                    log.info("Will not execute the following, as an intermediate solution file already exists.\n"
+                             "Scenario {}, Alg {}, Execution {}".format(scenario_index, parameters["ALG_ID"], execution_id))
+                    self.finished_tasks.append((scenario_index, execution_id))
+
                 for key, param_dict in parameters.iteritems():
                     if key == "ALG_ID":
                         continue
@@ -263,12 +293,37 @@ class ExperimentExecution(object):
                     for param, values in param_dict.iteritems():
                         log.debug("        {} -> {}".format(param, values))
 
+        del scenario_container
+
+
+    def _collect_results(self):
+        scenario_container = self._load_scenario_container()
+        self.sss = solutions.ScenarioSolutionStorage(scenario_container, self.execution_parameters)
+
+        for finished_scenario_id, finished_execution_id in self.finished_tasks:
+            alg_id = self.execution_parameters.algorithm_parameter_list[finished_execution_id]["ALG_ID"]
+            intermediate_solution_filename = self._get_scenario_solution_filename(finished_scenario_id, finished_execution_id)
+
+            log.info("Collecting result stored in file {}".format(intermediate_solution_filename))
+            scenario_solution = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
+            sp, scenario = scenario_container.scenario_triple[finished_scenario_id]
+            self.sss.experiment_parameters = sp
+
+            scenario_id, execution_id, alg_result = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
+
+            self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
+
+    def start_experiment(self):
+
         self._spawn_processes()
 
         self._keep_going()
 
+        self._collect_results()
 
         return self.sss
+
+
 
     def _keep_going(self):
         while self.currently_active_processes > 0:
@@ -276,6 +331,7 @@ class ExperimentExecution(object):
             scenario_id, execution_id, alg_result, process_index = result
 
             self._process_result(result)
+            self.finished_tasks.append((scenario_id, execution_id))
 
             self.processes[process_index].join()
             self.processes[process_index].terminate()
@@ -284,15 +340,15 @@ class ExperimentExecution(object):
             self._spawn_processes()
 
 
-
-
     def _spawn_processes(self):
         while self.currently_active_processes < self.concurrent_executions and len(self.unprocessed_tasks) > 0:
             args = self.unprocessed_tasks.popleft()
             self._spawn_process(args)
 
     def _spawn_process(self, args):
-        scenario_index, execution_id, parameters, scenario = args
+        scenario_index, execution_id, parameters = args
+
+        scenario = self._load_scenario(scenario_index)
 
         for process_id, process in self.processes.iteritems():
             if process is None:
@@ -302,31 +358,58 @@ class ExperimentExecution(object):
                 self.processes[process_id].start()
                 self.currently_active_processes += 1
                 break
-            else:
-                log.info("Process with index {} is currently still active".format(process_id))
+            # else:
+            #     log.info("Process with index {} is currently still active".format(process_id))
 
     def _process_result(self, res):
         try:
             scenario_id, execution_id, alg_result, process_index = res
             log.info("Processing solution for {}, {}: {}".format(scenario_id, execution_id, alg_result))
             alg_id = self.execution_parameters.algorithm_parameter_list[execution_id]["ALG_ID"]
-            with open("intermediate_result_{}_{}.pickle".format(scenario_id, alg_id), "wb") as f:
-                pickle.dump((scenario_id, execution_id, alg_result), f)
+
+            self._dump_scenario_solution(scenario_id, execution_id, (scenario_id, execution_id, alg_result))
+
             if alg_result is not None:
                 # original_scenario = self.scenario_container.scenario_list[scenario_id]
-                sp, original_scenario = self.scenario_container.scenario_triple[scenario_id]
+                original_scenario = self._load_scenario(scenario_id)
                 alg_result.cleanup_references(original_scenario)
                 # while this might look a little bit weird, but we pickle the information again after the references have been cleaned up
                 # as the function that actually cleans up the references might fail...
-                with open("intermediate_result_{}_{}.pickle".format(scenario_id, alg_id), "wb") as f:
-                    pickle.dump((scenario_id, execution_id, alg_result), f)
-            self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
+                self._dump_scenario_solution(scenario_id, execution_id, (scenario_id, execution_id, alg_result))
         except Exception as e:
             stacktrace = ("\nError in processing algorithm result {}:\n".format(res) +
                           traceback.format_exc(limit=100))
             for line in stacktrace.split("\n"):
                 log.error(line)
             raise e
+
+    def _get_scenario_pickle_filename(self, scenario_id):
+        return "temp_scenario_{}.pickle".format(scenario_id)
+
+    def _load_scenario(self, scenario_id):
+        scenario = None
+        with open(self._get_scenario_pickle_filename(scenario_id), "rb") as f:
+            scenario = pickle.load(f)
+        return scenario
+
+    def _dump_scenario(self, scenario_id, scenario):
+        with open(self._get_scenario_pickle_filename(scenario_id), "wb") as f:
+            pickle.dump(scenario, f)
+
+    def _get_scenario_solution_filename(self, scenario_id, execution_id):
+        return "intermediate_result_{}_{}.pickle".format(scenario_id, execution_id)
+
+    def _load_scenario_solution(self, scenario_id, execution_id):
+        scenario = None
+        with open(self._get_scenario_solution_filename(scenario_id, execution_id), "rb") as f:
+            scenario = pickle.load(f)
+        return scenario
+
+    def _dump_scenario_solution(self, scenario_id, execution_id, scenario_solution):
+        scenario = None
+        with open(self._get_scenario_solution_filename(scenario_id, execution_id), "wb") as f:
+            pickle.dump(scenario_solution, f)
+
 
 
 def _initialize_algorithm(scenario, logger, parameters):
