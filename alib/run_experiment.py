@@ -28,6 +28,7 @@ import multiprocessing as mp
 import os
 import traceback
 import yaml
+import random
 from datetime import datetime
 
 from . import datamodel, mip, modelcreator, scenariogeneration, solutions, util
@@ -57,20 +58,33 @@ CustomizedDataManager.register('ScenarioSolutionStorage', solutions.ScenarioSolu
 
 
 def run_experiment(experiment_yaml_file,
-                   min_scenario_index, max_scenario_index,
-                   concurrent):
+                   min_scenario_index,
+                   max_scenario_index,
+                   concurrent,
+                   shuffle_instances=True,
+                   overwrite_existing_temporary_scenarios=False,
+                   overwrite_existing_intermediate_solutions=False
+                   ):
     '''Entry point for running experiments.
 
     :param experiment_yaml_file: the yaml file detailing algorithm parameters / settings
     :param min_scenario_index:   the minimal scenario index that shall be included in the execution
     :param max_scenario_index:   the maximal scenario index that shall be included in the execution
     :param concurrent:           the number of processes (!= threads: each process may use multiple threads) to execute the experiments
+    :param shuffle_instances:    shall the instances be shuffled (deterministically) to better mix of hard and simple instances
+    :param overwrite_existing_intermediate_scenario_pickles:    shall existing scenario pickle files be replaced?
+    :param read_existing_intermediate_solutions_from_file:      shall existing intermediate solution files be used or shall instance solutions be recomputed?
+
     :return:
     '''
     log.info("PID: {}".format(os.getpid()))
     execution = ExperimentExecution(
-        min_scenario_index, max_scenario_index,
-        concurrent=concurrent
+        min_scenario_index,
+        max_scenario_index,
+        concurrent=concurrent,
+        shuffle_instances=shuffle_instances,
+        overwrite_existing_temporary_scenarios=overwrite_existing_temporary_scenarios,
+        overwrite_existing_intermediate_solutions=overwrite_existing_intermediate_solutions
     )
     exp_data = yaml.load(experiment_yaml_file)
     scenario_picklefile = os.path.abspath(os.path.join(
@@ -209,14 +223,17 @@ class ExperimentExecution(object):
                  min_scenario_index,
                  max_scenario_index,
                  concurrent=1,
-                 overwrite_existing_intermediate_scenario_pickles=False,
-                 read_existing_intermediate_solutions_from_file=True):
+                 shuffle_instances=True,
+                 overwrite_existing_temporary_scenarios=False,
+                 overwrite_existing_intermediate_solutions=False
+                 ):
 
         self.min_scenario_index = min_scenario_index
         self.max_scenario_index = max_scenario_index
         self.concurrent_executions = concurrent
-        self.overwrite_existing_intermediate_scenario_pickles = overwrite_existing_intermediate_scenario_pickles
-        self.read_existing_intermediate_solutions_from_file = read_existing_intermediate_solutions_from_file
+        self.shuffle_instances = shuffle_instances
+        self.overwrite_existing_temporary_scenarios = overwrite_existing_temporary_scenarios
+        self.overwrite_existing_intermediate_solutions = overwrite_existing_intermediate_solutions
 
         self.execution_parameters = None
 
@@ -267,7 +284,7 @@ class ExperimentExecution(object):
                                                                                     self.max_scenario_index))
 
             scenario_filename = self._get_scenario_pickle_filename(scenario_index)
-            if not os.path.exists(scenario_filename) or not self.overwrite_existing_intermediate_scenario_pickles:
+            if not os.path.exists(scenario_filename) or not self.overwrite_existing_temporary_scenarios:
                 with open(scenario_filename, "w") as f:
                     pickle.dump(scenario, f)
 
@@ -277,7 +294,7 @@ class ExperimentExecution(object):
 
                 intermediate_solution_filename = self._get_scenario_solution_filename(scenario_index, execution_id)
 
-                if not self.read_existing_intermediate_solutions_from_file or not os.path.exists(intermediate_solution_filename):
+                if self.overwrite_existing_intermediate_solutions or not os.path.exists(intermediate_solution_filename):
                     self.unprocessed_tasks.append(args)
 
                     log.info("Stored unprocessed task into list: Scenario {}, Alg {}, Execution {}:".format(
@@ -294,7 +311,13 @@ class ExperimentExecution(object):
                     for param, values in param_dict.iteritems():
                         log.debug("        {} -> {}".format(param, values))
 
+        if self.shuffle_instances:
+            random.seed(0)
+            random.shuffle(self.unprocessed_tasks)
+
         del scenario_container
+
+
 
 
     def _collect_results(self):
