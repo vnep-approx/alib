@@ -246,6 +246,7 @@ class ExperimentExecution(object):
         self.unprocessed_tasks = deque()
         self.finished_tasks = deque()
         self.currently_active_processes = 0
+        self.current_scenario = {i : None for i in self.process_indices}
 
         self.sss = None
 
@@ -361,6 +362,7 @@ class ExperimentExecution(object):
             self.processes[process_index].terminate()
             self.processes[process_index] = None
             self.currently_active_processes -= 1
+            self.current_scenario[process_index] = None
             self._spawn_processes()
 
 
@@ -381,6 +383,7 @@ class ExperimentExecution(object):
                 log.info("Spawning process with index {}".format(process_id))
                 self.processes[process_id].start()
                 self.currently_active_processes += 1
+                self.current_scenario[process_id] = scenario
                 break
             # else:
             #     log.info("Process with index {} is currently still active".format(process_id))
@@ -389,17 +392,17 @@ class ExperimentExecution(object):
         try:
             scenario_id, execution_id, alg_result, process_index = res
             log.info("Processing solution for {}, {}: {}".format(scenario_id, execution_id, alg_result))
-            alg_id = self.execution_parameters.algorithm_parameter_list[execution_id]["ALG_ID"]
 
             self._dump_scenario_solution(scenario_id, execution_id, (scenario_id, execution_id, alg_result))
 
             if alg_result is not None:
                 # original_scenario = self.scenario_container.scenario_list[scenario_id]
-                original_scenario = self._load_scenario(scenario_id)
+                original_scenario = self.current_scenario[process_index]
                 alg_result.cleanup_references(original_scenario)
                 # while this might look a little bit weird, but we pickle the information again after the references have been cleaned up
                 # as the function that actually cleans up the references might fail...
                 self._dump_scenario_solution(scenario_id, execution_id, (scenario_id, execution_id, alg_result))
+
         except Exception as e:
             stacktrace = ("\nError in processing algorithm result {}:\n".format(res) +
                           traceback.format_exc(limit=100))
