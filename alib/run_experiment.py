@@ -63,7 +63,9 @@ def run_experiment(experiment_yaml_file,
                    concurrent,
                    shuffle_instances=True,
                    overwrite_existing_temporary_scenarios=False,
-                   overwrite_existing_intermediate_solutions=False
+                   overwrite_existing_intermediate_solutions=False,
+                   remove_temporary_scenarios=False,
+                   remove_intermediate_solutions=False
                    ):
     '''Entry point for running experiments.
 
@@ -74,6 +76,8 @@ def run_experiment(experiment_yaml_file,
     :param shuffle_instances:    shall the instances be shuffled (deterministically) to better mix of hard and simple instances
     :param overwrite_existing_intermediate_scenario_pickles:    shall existing scenario pickle files be replaced?
     :param read_existing_intermediate_solutions_from_file:      shall existing intermediate solution files be used or shall instance solutions be recomputed?
+    :param remove_temporary_scenarios:          shall temporary scenario files be removed after execution?
+    :param remove_intermediate_solutions:       shall intermediate solution files be removed after execution?
 
     :return:
     '''
@@ -84,7 +88,9 @@ def run_experiment(experiment_yaml_file,
         concurrent=concurrent,
         shuffle_instances=shuffle_instances,
         overwrite_existing_temporary_scenarios=overwrite_existing_temporary_scenarios,
-        overwrite_existing_intermediate_solutions=overwrite_existing_intermediate_solutions
+        overwrite_existing_intermediate_solutions=overwrite_existing_intermediate_solutions,
+        remove_temporary_scenarios=remove_temporary_scenarios,
+        remove_intermediate_solutions=remove_intermediate_solutions
     )
     exp_data = yaml.load(experiment_yaml_file)
     scenario_picklefile = os.path.abspath(os.path.join(
@@ -101,6 +107,9 @@ def run_experiment(experiment_yaml_file,
     log.info("Writing results to {}".format(output_file))
     with open(output_file, "wb") as f:
         pickle.dump(result, f)
+    execution.clean_up()
+
+
 
 
 class ExecutionParameters(object):
@@ -225,7 +234,9 @@ class ExperimentExecution(object):
                  concurrent=1,
                  shuffle_instances=True,
                  overwrite_existing_temporary_scenarios=False,
-                 overwrite_existing_intermediate_solutions=False
+                 overwrite_existing_intermediate_solutions=False,
+                 remove_temporary_scenarios=False,
+                 remove_intermediate_solutions=False
                  ):
 
         self.min_scenario_index = min_scenario_index
@@ -234,8 +245,13 @@ class ExperimentExecution(object):
         self.shuffle_instances = shuffle_instances
         self.overwrite_existing_temporary_scenarios = overwrite_existing_temporary_scenarios
         self.overwrite_existing_intermediate_solutions = overwrite_existing_intermediate_solutions
+        self.remove_temporary_scenarios = remove_temporary_scenarios
+        self.remove_intermediate_solutions = remove_intermediate_solutions
 
         self.execution_parameters = None
+
+        self.created_temporary_scenario_files = []
+        self.created_intermediate_solution_files = []
 
 
         self.process_indices = [i for i in range(concurrent)]
@@ -288,6 +304,7 @@ class ExperimentExecution(object):
             if not os.path.exists(scenario_filename) or not self.overwrite_existing_temporary_scenarios:
                 with open(scenario_filename, "w") as f:
                     pickle.dump(scenario, f)
+            self.created_temporary_scenario_files.append(scenario_filename)
 
             for execution_id, parameters in enumerate(self.execution_parameters.algorithm_parameter_list):
 
@@ -297,6 +314,7 @@ class ExperimentExecution(object):
 
                 if self.overwrite_existing_intermediate_solutions or not os.path.exists(intermediate_solution_filename):
                     self.unprocessed_tasks.append(args)
+                    self.created_intermediate_solution_files.append(intermediate_solution_filename)
 
                     log.info("Stored unprocessed task into list: Scenario {}, Alg {}, Execution {}:".format(
                         scenario_index, parameters["ALG_ID"], execution_id))
@@ -347,6 +365,25 @@ class ExperimentExecution(object):
         self._collect_results()
 
         return self.sss
+
+    def clean_up(self):
+        log.info("Cleaning up..")
+        #remove created temporary scenario files and intermediate solution files if these were created
+        if self.remove_temporary_scenarios:
+            for temp_scenario_file in self.created_temporary_scenario_files:
+                if os.path.exists(temp_scenario_file):
+                    log.info("Removing {}..".format(temp_scenario_file))
+                    os.remove(temp_scenario_file)
+                else:
+                    log.warning("Wanted to remove {}, but file didn't exist".format(temp_scenario_file))
+        if self.remove_intermediate_solutions:
+            for intermediate_solution_file in self.created_intermediate_solution_files:
+                if os.path.exists(intermediate_solution_file):
+                    log.info("Removing {}..".format(intermediate_solution_file))
+                    os.remove(intermediate_solution_file)
+                else:
+                    log.warning("Wanted to remove {}, but file didn't exist".format(intermediate_solution_file))
+        log.info("\tdone.")
 
 
 
