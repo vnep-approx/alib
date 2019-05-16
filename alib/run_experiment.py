@@ -266,12 +266,6 @@ class ExperimentExecution(object):
 
         self.sss = None
 
-    def _load_scenario_container(self):
-        scenario_container = None
-        with open(self.scenario_picklefile, "r") as f:
-            scenario_container = pickle.load(f)
-        return scenario_container
-
     def setup(self, execution_parameter_container, scenario_picklefile):
         self.scenario_picklefile = scenario_picklefile
         self.execution_parameters = execution_parameter_container
@@ -337,71 +331,15 @@ class ExperimentExecution(object):
         del scenario_container
 
 
-
-
-    def _collect_results(self):
-        scenario_container = self._load_scenario_container()
-        self.sss = solutions.ScenarioSolutionStorage(scenario_container, self.execution_parameters)
-
-        for finished_scenario_id, finished_execution_id in self.finished_tasks:
-            alg_id = self.execution_parameters.algorithm_parameter_list[finished_execution_id]["ALG_ID"]
-            intermediate_solution_filename = self._get_scenario_solution_filename(finished_scenario_id, finished_execution_id)
-
-            log.info("Collecting result stored in file {}".format(intermediate_solution_filename))
-            scenario_solution = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
-            sp, scenario = scenario_container.scenario_triple[finished_scenario_id]
-            self.sss.experiment_parameters = sp
-
-            scenario_id, execution_id, alg_result = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
-
-            self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
-
     def start_experiment(self):
 
         self._spawn_processes()
 
-        self._keep_going()
+        self._retrieve_results_and_spawn_processes()
 
         self._collect_results()
 
         return self.sss
-
-    def clean_up(self):
-        log.info("Cleaning up..")
-        #remove created temporary scenario files and intermediate solution files if these were created
-        if self.remove_temporary_scenarios:
-            for temp_scenario_file in self.created_temporary_scenario_files:
-                if os.path.exists(temp_scenario_file):
-                    log.info("Removing {}..".format(temp_scenario_file))
-                    os.remove(temp_scenario_file)
-                else:
-                    log.warning("Wanted to remove {}, but file didn't exist".format(temp_scenario_file))
-        if self.remove_intermediate_solutions:
-            for intermediate_solution_file in self.created_intermediate_solution_files:
-                if os.path.exists(intermediate_solution_file):
-                    log.info("Removing {}..".format(intermediate_solution_file))
-                    os.remove(intermediate_solution_file)
-                else:
-                    log.warning("Wanted to remove {}, but file didn't exist".format(intermediate_solution_file))
-        log.info("\tdone.")
-
-
-
-    def _keep_going(self):
-        while self.currently_active_processes > 0:
-            result = self.result_queue.get()
-            scenario_id, execution_id, alg_result, process_index = result
-
-            self._process_result(result)
-            self.finished_tasks.append((scenario_id, execution_id))
-
-            self.processes[process_index].join()
-            self.processes[process_index].terminate()
-            self.processes[process_index] = None
-            self.currently_active_processes -= 1
-            self.current_scenario[process_index] = None
-            self._spawn_processes()
-
 
     def _spawn_processes(self):
         while self.currently_active_processes < self.concurrent_executions and len(self.unprocessed_tasks) > 0:
@@ -425,6 +363,22 @@ class ExperimentExecution(object):
             # else:
             #     log.info("Process with index {} is currently still active".format(process_id))
 
+    def _retrieve_results_and_spawn_processes(self):
+        while self.currently_active_processes > 0:
+            result = self.result_queue.get()
+            scenario_id, execution_id, alg_result, process_index = result
+
+            self._process_result(result)
+            self.finished_tasks.append((scenario_id, execution_id))
+
+            self.processes[process_index].join()
+            self.processes[process_index].terminate()
+            self.processes[process_index] = None
+            self.currently_active_processes -= 1
+            self.current_scenario[process_index] = None
+            self._spawn_processes()
+
+
     def _process_result(self, res):
         try:
             scenario_id, execution_id, alg_result, process_index = res
@@ -446,6 +400,55 @@ class ExperimentExecution(object):
             for line in stacktrace.split("\n"):
                 log.error(line)
             raise e
+
+    def _collect_results(self):
+        scenario_container = self._load_scenario_container()
+        self.sss = solutions.ScenarioSolutionStorage(scenario_container, self.execution_parameters)
+
+        for finished_scenario_id, finished_execution_id in self.finished_tasks:
+            alg_id = self.execution_parameters.algorithm_parameter_list[finished_execution_id]["ALG_ID"]
+            intermediate_solution_filename = self._get_scenario_solution_filename(finished_scenario_id, finished_execution_id)
+
+            log.info("Collecting result stored in file {}".format(intermediate_solution_filename))
+            scenario_solution = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
+            sp, scenario = scenario_container.scenario_triple[finished_scenario_id]
+            self.sss.experiment_parameters = sp
+
+            scenario_id, execution_id, alg_result = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
+            # IMPORTANT:    this cleanup is necessary as after loading the pickle the original scenario does not match
+            #               the pickled one!
+            alg_result.cleanup_references(scenario)
+
+
+            self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
+
+
+    def clean_up(self):
+        log.info("Cleaning up..")
+        #remove created temporary scenario files and intermediate solution files if these were created
+        if self.remove_temporary_scenarios:
+            for temp_scenario_file in self.created_temporary_scenario_files:
+                if os.path.exists(temp_scenario_file):
+                    log.info("Removing {}..".format(temp_scenario_file))
+                    os.remove(temp_scenario_file)
+                else:
+                    log.warning("Wanted to remove {}, but file didn't exist".format(temp_scenario_file))
+        if self.remove_intermediate_solutions:
+            for intermediate_solution_file in self.created_intermediate_solution_files:
+                if os.path.exists(intermediate_solution_file):
+                    log.info("Removing {}..".format(intermediate_solution_file))
+                    os.remove(intermediate_solution_file)
+                else:
+                    log.warning("Wanted to remove {}, but file didn't exist".format(intermediate_solution_file))
+        log.info("\tdone.")
+
+
+    def _load_scenario_container(self):
+        scenario_container = None
+        with open(self.scenario_picklefile, "r") as f:
+            scenario_container = pickle.load(f)
+        return scenario_container
+
 
     def _get_scenario_pickle_filename(self, scenario_id):
         return "temp_scenario_{}.pickle".format(scenario_id)

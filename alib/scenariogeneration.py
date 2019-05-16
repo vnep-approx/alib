@@ -943,7 +943,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         self._substrate = None
         self._node_demand_by_type = None
         self._edge_demand = None
-        self._generation_attemps = None
+        self._generation_attempts = None
         self._advanced_inspection_information = None
 
     def generate_request(self,
@@ -957,12 +957,12 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             self._calculate_average_resource_demands()
         req = None
         is_feasible = False
-        self._generation_attemps = 0
+        self._generation_attempts = 0
         while not is_feasible:
             req = self._generate_request_graph(name)
             is_feasible = self.verify_substrate_has_sufficient_capacity(req, substrate)
-            self._generation_attemps += 1
-            if self._generation_attemps > 10**7:
+            self._generation_attempts += 1
+            if self._generation_attempts > 10**7:
                 self._abort()
         self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
         return req
@@ -991,8 +991,8 @@ class CactusRequestGenerator(AbstractRequestGenerator):
 
     def _generate_tree_with_correct_size(self, name):
         has_correct_size = False
-        if self._generation_attemps is None:
-            self._generation_attemps = 0
+        if self._generation_attempts is None:
+            self._generation_attempts = 0
         req = None
         while not has_correct_size:
             req = self._generate_tree(name)
@@ -1001,8 +1001,8 @@ class CactusRequestGenerator(AbstractRequestGenerator):
                 self._advanced_inspection_information.generation_tries_overall += 1
                 if not has_correct_size:
                     self._advanced_inspection_information.generation_tries_failed += 1
-            self._generation_attemps += 1
-            if self._generation_attemps > 10**7:
+            self._generation_attempts += 1
+            if self._generation_attempts > 10**7:
                 self._abort()
         return req
 
@@ -1251,7 +1251,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
 
     def _abort(self):
         raise RequestGenerationError(
-            "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attemps, self._raw_parameters)
+            "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attempts, self._raw_parameters)
         )
 
 
@@ -1298,19 +1298,30 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
         self._min_number_nodes = int(self._raw_parameters["min_number_of_nodes"])
         self._max_number_nodes = int(self._raw_parameters["max_number_of_nodes"])
         self._number_of_nodes = None
+
+        self._generation_attempts = 0
+
         if self._treewidth > 1:
             graph_storage, graph_storage_lock = self._data_manager_dict["UndirectedGraphStorage"]
             self._undirected_graph_storage = graph_storage
             self._undirected_graph_storage_lock = graph_storage_lock
+            if self._average_edge_numbers_of_treewidth is None:
+                self._average_edge_numbers_of_treewidth = {}
+            if self._treewidth not in self._average_edge_numbers_of_treewidth.keys():
+                with self._undirected_graph_storage_lock:
+                    self._average_edge_numbers_of_treewidth[
+                        self._treewidth] = self._undirected_graph_storage.get_average_number_of_edges_for_parameter(
+                        self._treewidth)
         self._calculate_average_resource_demands()
         req = None
         is_feasible = False
-        self._generation_attemps = 0
+
+
         while not is_feasible:
             req = self._generate_request_graph(name)
             is_feasible = self.verify_substrate_has_sufficient_capacity(req, substrate)
-            self._generation_attemps += 1
-            if self._generation_attemps > 10**7:
+            self._generation_attempts += 1
+            if self._generation_attempts > 10**7:
                 self._abort()
         self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
         return req
@@ -1329,9 +1340,16 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
                     self._average_edge_numbers_of_treewidth[self._treewidth] = self._undirected_graph_storage.get_average_number_of_edges_for_parameter(self._treewidth)
             self._expected_number_of_request_edges = 0
 
+            number_of_nodes_count = 0
             for number_of_nodes in range(self._min_number_nodes, self._max_number_nodes + 1):
-                self._expected_number_of_request_edges += self._average_edge_numbers_of_treewidth[self._treewidth][number_of_nodes]
-            self._expected_number_of_request_edges = float(self._number_of_requests) * float(self._expected_number_of_request_edges) / (self._max_number_nodes - self._min_number_nodes + 1)
+                if number_of_nodes in self._average_edge_numbers_of_treewidth[self._treewidth]:
+                    self._expected_number_of_request_edges += self._average_edge_numbers_of_treewidth[self._treewidth][number_of_nodes]
+                    number_of_nodes_count += 1
+                else:
+                    self.logger.warning(
+                        "The undirected graph storage does not contain graphs for treewidth {} having exactly {} nodes.".format(
+                            self._treewidth, number_of_nodes))
+            self._expected_number_of_request_edges = float(self._number_of_requests) * float(self._expected_number_of_request_edges) / (float(number_of_nodes_count))
 
         node_res = self._raw_parameters["node_resource_factor"]
         edge_res_factor = self._raw_parameters["edge_resource_factor"]
@@ -1350,7 +1368,13 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
                                                self.average_request_node_resources_per_type[ntype]
 
     def _select_number_of_nodes(self):
-        self._number_of_nodes = random.randint(self._min_number_nodes, self._max_number_nodes)
+        while True:
+            # round as long as there exists a graph with this number of nodes
+            self._number_of_nodes = random.randint(self._min_number_nodes, self._max_number_nodes)
+            if self._treewidth == 1 or self._number_of_nodes in self._average_edge_numbers_of_treewidth[self._treewidth].keys():
+                break
+            else:
+                self.logger.warning("The undirected graph storage does not contain graphs for treewidth {} having exactly {} nodes.".format(self._treewidth, self._number_of_nodes))
 
     def _generate_edge_list_representation(self):
         if self._treewidth == 1:
@@ -1445,7 +1469,7 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
 
     def _abort(self):
         raise RequestGenerationError(
-            "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attemps, self._raw_parameters)
+            "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attempts, self._raw_parameters)
         )
 
 
