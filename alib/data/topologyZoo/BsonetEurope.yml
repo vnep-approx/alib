@@ -1,0 +1,154 @@
+edges:
+- - '0'
+  - '1'
+- - '1'
+  - '9'
+- - '1'
+  - '6'
+- - '1'
+  - '17'
+- - '2'
+  - '9'
+- - '2'
+  - '3'
+- - '3'
+  - '11'
+- - '4'
+  - '14'
+- - '5'
+  - '17'
+- - '6'
+  - '7'
+- - '6'
+  - '17'
+- - '7'
+  - '17'
+- - '8'
+  - '9'
+- - '8'
+  - '17'
+- - '9'
+  - '11'
+- - '9'
+  - '14'
+- - '10'
+  - '11'
+- - '10'
+  - '11'
+- - '10'
+  - '12'
+- - '11'
+  - '13'
+- - '13'
+  - '14'
+- - '14'
+  - '15'
+- - '14'
+  - '17'
+- - '16'
+  - '17'
+nodes:
+  '0':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.08804
+    Longitude: 14.42076
+    label: Prague
+  '1':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.11667
+    Longitude: 8.68333
+    label: Frankfurt
+  '10':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.16952
+    Longitude: 24.93545
+    label: Helsinki
+  '11':
+    Country: Sweden
+    Internal: '1'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: Stockholm
+  '12':
+    Internal: '0'
+    Latitude: 60.16952
+    Longitude: 24.93545
+    label: Hong Kong
+  '13':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.91273
+    Longitude: 10.74609
+    label: Oslo
+  '14':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: London
+  '15':
+    Internal: '0'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: New York
+  '16':
+    Internal: '0'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: New York
+  '17':
+    Country: France
+    Internal: '1'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: Paris
+  '2':
+    Country: Germany
+    Internal: '1'
+    Latitude: 53.55
+    Longitude: 10.0
+    label: Hamburg
+  '3':
+    Country: Denmark
+    Internal: '1'
+    Latitude: 55.67594
+    Longitude: 12.56553
+    label: Copenhagen
+  '4':
+    Internal: '0'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: Dubai
+  '5':
+    Country: Spain
+    Internal: '1'
+    Latitude: 40.4165
+    Longitude: -3.70256
+    label: Madrid
+  '6':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 46.20222
+    Longitude: 6.14569
+    label: Geneva
+  '7':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: Milan
+  '8':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Brussels
+  '9':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.37403
+    Longitude: 4.88969
+    label: Amsterdam

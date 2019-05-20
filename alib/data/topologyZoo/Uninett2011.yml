@@ -1,0 +1,675 @@
+edges:
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '0'
+  - '68'
+- - '0'
+  - '49'
+- - '0'
+  - '54'
+- - '0'
+  - '23'
+- - '1'
+  - '32'
+- - '1'
+  - '3'
+- - '1'
+  - '6'
+- - '1'
+  - '48'
+- - '1'
+  - '58'
+- - '1'
+  - '62'
+- - '2'
+  - '3'
+- - '2'
+  - '60'
+- - '3'
+  - '5'
+- - '3'
+  - '45'
+- - '3'
+  - '46'
+- - '3'
+  - '22'
+- - '3'
+  - '61'
+- - '4'
+  - '5'
+- - '4'
+  - '7'
+- - '5'
+  - '10'
+- - '5'
+  - '54'
+- - '6'
+  - '51'
+- - '7'
+  - '51'
+- - '8'
+  - '65'
+- - '8'
+  - '36'
+- - '8'
+  - '37'
+- - '8'
+  - '9'
+- - '8'
+  - '29'
+- - '8'
+  - '62'
+- - '9'
+  - '26'
+- - '10'
+  - '50'
+- - '10'
+  - '11'
+- - '12'
+  - '32'
+- - '12'
+  - '61'
+- - '12'
+  - '13'
+- - '12'
+  - '29'
+- - '12'
+  - '15'
+- - '13'
+  - '40'
+- - '13'
+  - '43'
+- - '13'
+  - '43'
+- - '13'
+  - '29'
+- - '14'
+  - '30'
+- - '14'
+  - '31'
+- - '15'
+  - '42'
+- - '15'
+  - '43'
+- - '16'
+  - '17'
+- - '16'
+  - '61'
+- - '16'
+  - '22'
+- - '16'
+  - '39'
+- - '17'
+  - '25'
+- - '18'
+  - '19'
+- - '18'
+  - '20'
+- - '18'
+  - '46'
+- - '18'
+  - '23'
+- - '20'
+  - '21'
+- - '21'
+  - '22'
+- - '22'
+  - '23'
+- - '22'
+  - '24'
+- - '22'
+  - '61'
+- - '24'
+  - '25'
+- - '25'
+  - '38'
+- - '26'
+  - '61'
+- - '26'
+  - '29'
+- - '27'
+  - '35'
+- - '27'
+  - '36'
+- - '27'
+  - '61'
+- - '28'
+  - '32'
+- - '30'
+  - '56'
+- - '31'
+  - '44'
+- - '33'
+  - '40'
+- - '34'
+  - '35'
+- - '34'
+  - '62'
+- - '39'
+  - '41'
+- - '41'
+  - '63'
+- - '42'
+  - '56'
+- - '42'
+  - '44'
+- - '43'
+  - '56'
+- - '43'
+  - '62'
+- - '46'
+  - '47'
+- - '47'
+  - '53'
+- - '48'
+  - '50'
+- - '49'
+  - '50'
+- - '52'
+  - '54'
+- - '53'
+  - '54'
+- - '54'
+  - '55'
+- - '57'
+  - '64'
+- - '57'
+  - '66'
+- - '59'
+  - '67'
+- - '59'
+  - '60'
+- - '61'
+  - '62'
+- - '61'
+  - '63'
+- - '62'
+  - '63'
+- - '62'
+  - '63'
+- - '63'
+  - '64'
+- - '66'
+  - '67'
+- - '67'
+  - '68'
+nodes:
+  '0':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.91273
+    Longitude: 10.74609
+    label: UiO
+    type: Large Circle as part of major POP
+  '1':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.91273
+    Longitude: 10.74609
+    label: UiO
+    type: Large Circle as part of major POP
+  '10':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.41111
+    Longitude: 10.43
+    label: HVE Borre
+    type: Small Circle
+  '11':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.05328
+    Longitude: 10.03517
+    label: HVE Larvik
+    type: Small circle with dashed border
+  '12':
+    Country: Norway
+    Internal: '1'
+    Latitude: 68.43838
+    Longitude: 17.4272
+    label: HiN Narvik
+    type: Small Circle
+  '13':
+    Country: Norway
+    Internal: '1'
+    Latitude: 68.79833
+    Longitude: 16.54165
+    label: HiH Harstad
+    type: Small Circle
+  '14':
+    Country: Norway
+    Internal: '1'
+    Latitude: 69.47187
+    Longitude: 25.51122
+    label: UiTo Karasjok
+    type: Small Circle
+  '15':
+    Country: Norway
+    Internal: '1'
+    Latitude: 69.6489
+    Longitude: 18.95508
+    label: UiTo
+    type: Large Circle as part of major POP
+  '16':
+    Country: Norway
+    Internal: '1'
+    Latitude: 62.47225
+    Longitude: 6.15492
+    label: HiA Alesund
+    type: Small Circle
+  '17':
+    Country: Norway
+    Internal: '1'
+    Latitude: 62.14762
+    Longitude: 6.07408
+    label: HVO Volda
+    type: Small Circle
+  '18':
+    Country: Norway
+    Internal: '1'
+    Latitude: 58.97005
+    Longitude: 5.73332
+    label: UiS Stavanger
+    type: Small Circle
+  '19':
+    Country: Norway
+    Internal: '1'
+    Latitude: 58.85244
+    Longitude: 5.73521
+    label: VetHS Sandnes
+    type: Small Circle
+  '2':
+    Country: Norway
+    Internal: '1'
+    Latitude: 60.79574
+    Longitude: 10.69155
+    label: HiG Gjovik
+    type: Small Circle
+  '20':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.41378
+    Longitude: 5.268
+    label: HSH Haugesund
+    type: Small Circle
+  '21':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.75
+    Longitude: 5.48333
+    label: HSH Stord
+    type: Small Circle
+  '22':
+    Country: Norway
+    Internal: '1'
+    Latitude: 60.39299
+    Longitude: 5.32415
+    label: UiB Hoyteklogibygget
+    type: Large Circle as part of major POP
+  '23':
+    Country: Norway
+    Internal: '1'
+    Latitude: 60.39299
+    Longitude: 5.32415
+    label: UiB BT
+    type: Large Circle as part of major POP
+  '24':
+    Country: Norway
+    Internal: '1'
+    Latitude: 61.22829
+    Longitude: 7.10026
+    label: HSF Songdal
+    type: Small Circle
+  '25':
+    Country: Norway
+    Internal: '1'
+    Latitude: 61.45217
+    Longitude: 5.85717
+    label: HSF Forde
+    type: Small Circle
+  '26':
+    Country: Norway
+    Internal: '1'
+    Latitude: 66.02166
+    Longitude: 12.63158
+    label: HiNe Sandnesjoen
+    type: Small Circle
+  '27':
+    Country: Norway
+    Internal: '1'
+    Latitude: 64.01487
+    Longitude: 11.49537
+    label: HiNT Steinkjer
+    type: Small Circle
+  '28':
+    Internal: '0'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: NORDUnet Stockholm
+  '29':
+    Country: Norway
+    Internal: '1'
+    Latitude: 67.28
+    Longitude: 14.40501
+    label: HBO Bodo
+    type: Small Circle
+  '3':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.91273
+    Longitude: 10.74609
+    label: UiO St Olavsplass 5
+    type: Large Circle as part of major POP
+  '30':
+    Country: Norway
+    Internal: '1'
+    Latitude: 69.01247
+    Longitude: 23.04116
+    label: SA/SH Kautokeino
+    type: Small Circle
+  '31':
+    Country: Norway
+    Internal: '1'
+    Latitude: 69.72706
+    Longitude: 30.04578
+    label: HiF Kirkenes
+    type: Small Circle
+  '32':
+    Country: Sweden
+    Internal: '1'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: Stockholm
+    type: Small Circle
+  '33':
+    Country: Svalbard and Jan Mayen
+    Internal: '1'
+    Latitude: 70.9221
+    Longitude: -8.7187
+    label: NyAlesund
+    type: Small Circle
+  '34':
+    Country: Norway
+    Internal: '1'
+    Latitude: 63.41667
+    Longitude: 10.95
+    label: Hing Stjordal
+    type: Small Circle
+  '35':
+    Country: Norway
+    Internal: '1'
+    Latitude: 63.6
+    Longitude: 10.96667
+    label: HiNT Levanger
+    type: Small Circle
+  '36':
+    Country: Norway
+    Internal: '1'
+    Latitude: 64.46624
+    Longitude: 11.49572
+    label: HiNT Namsos
+    type: Small Circle
+  '37':
+    Country: Norway
+    Internal: '1'
+    Latitude: 66.31278
+    Longitude: 14.14278
+    label: HiNe Mo i Rana
+    type: Small Circle
+  '38':
+    Country: Norway
+    Internal: '1'
+    Latitude: 61.77277
+    Longitude: 6.21496
+    label: HSF Sandane
+    type: Small Circle
+  '39':
+    Country: Norway
+    Internal: '1'
+    Latitude: 62.73752
+    Longitude: 7.15912
+    label: HSM Molde
+    type: Small Circle
+  '4':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.66858
+    Longitude: 9.65017
+    label: HiBU Kongsberg
+    type: Small Circle
+  '40':
+    Country: Svalbard and Jan Mayen
+    Internal: '1'
+    Latitude: 70.9221
+    Longitude: -8.7187
+    label: UNIS Svalbard
+    type: Small Circle
+  '41':
+    Country: Norway
+    Internal: '1'
+    Latitude: 63.11045
+    Longitude: 7.72795
+    label: HSM Kristiansun
+    type: Small Circle
+  '42':
+    Country: Norway
+    Internal: '1'
+    Latitude: 70.66336
+    Longitude: 23.68209
+    label: HiF Hammerfest
+    type: Small Circle
+  '43':
+    Country: Norway
+    Internal: '1'
+    Latitude: 69.6489
+    Longitude: 18.95508
+    label: UiTo
+    type: Large Circle as part of major POP
+  '44':
+    Country: Norway
+    Internal: '1'
+    Latitude: 70.07436
+    Longitude: 29.74872
+    label: HiF Vadso
+    type: Small circle with dashed border
+  '45':
+    Internal: '0'
+    Latitude: 59.91273
+    Longitude: 10.74609
+    label: NORDUnet Kobenhavn
+  '46':
+    Country: Norway
+    Internal: '1'
+    Latitude: 58.14671
+    Longitude: 7.9956
+    label: UiA Kristiansand
+    type: Small Circle
+  '47':
+    Country: Norway
+    Internal: '1'
+    Latitude: 58.3405
+    Longitude: 8.59343
+    label: UiA Grimstad
+    type: Small Circle
+  '48':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.12478
+    Longitude: 11.38754
+    label: HiO Halden
+    type: Small Circle
+  '49':
+    Country: Norway
+    Internal: '1'
+    Latitude: 63.96667
+    Longitude: 10.2
+    label: UMB As
+    type: Small Circle
+  '5':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.74389
+    Longitude: 10.20449
+    label: HiBU Drammen
+    type: Small Circle
+  '50':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.2181
+    Longitude: 10.9298
+    label: HiO Fredrikstad
+    type: Small Circle
+  '51':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.98333
+    Longitude: 11.03333
+    label: HiAK Kjeller
+    type: Small Circle
+  '52':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.73333
+    Longitude: 8.0
+    label: Hit Rauland
+    type: Small Circle
+  '53':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.14054
+    Longitude: 9.6561
+    label: HiT Porsgrunn
+    type: Small Circle
+  '54':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.43333
+    Longitude: 9.06667
+    label: HiT Bo
+    type: Small Circle
+  '55':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.55936
+    Longitude: 9.25853
+    label: HiT Notodden
+    type: Small Circle
+  '56':
+    Country: Norway
+    Internal: '1'
+    Latitude: 69.96887
+    Longitude: 23.27165
+    label: HiF Alta
+    type: Small Circle
+  '57':
+    Country: Norway
+    Internal: '1'
+    Latitude: 64.86667
+    Longitude: 11.11667
+    label: HH Evenstad
+    type: Small Circle
+  '58':
+    Internal: '0'
+    Latitude: 59.91273
+    Longitude: 10.74609
+    label: NORDUnet Stockholm
+  '59':
+    Country: Norway
+    Internal: '1'
+    Latitude: 60.7945
+    Longitude: 11.06798
+    label: HH Hamar
+    type: Small Circle
+  '6':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.98333
+    Longitude: 11.03333
+    label: UNIK Kjeller
+    type: Small Circle
+  '60':
+    Country: Norway
+    Internal: '1'
+    Latitude: 61.11514
+    Longitude: 10.46628
+    label: HiL Lillehammer
+    type: Small Circle
+  '61':
+    Country: Norway
+    Internal: '1'
+    Latitude: 63.43049
+    Longitude: 10.39506
+    label: NTNU Hovedbygget
+    type: Large Circle as part of major POP
+  '62':
+    Country: Norway
+    Internal: '1'
+    Latitude: 63.43049
+    Longitude: 10.39506
+    label: NTNU Realfagbygget
+    type: Large Circle as part of major POP
+  '63':
+    Country: Norway
+    Internal: '1'
+    Latitude: 63.43049
+    Longitude: 10.39506
+    label: UNINETT Teknobyen
+    type: Small Circle
+  '64':
+    Country: Norway
+    Internal: '1'
+    Latitude: 62.27594
+    Longitude: 10.78241
+    label: HH Tynset
+    type: Small Circle
+  '65':
+    Country: Norway
+    Internal: '1'
+    Latitude: 66.31278
+    Longitude: 14.14278
+    label: HBO Mo i Rana
+    type: Small Circle
+  '66':
+    Country: Norway
+    Internal: '1'
+    Latitude: 61.13484
+    Longitude: 11.36409
+    label: HH Rena
+    type: Small Circle
+  '67':
+    Country: Norway
+    Internal: '1'
+    Latitude: 60.88191
+    Longitude: 11.56231
+    label: HH Elverum
+    type: Small Circle
+  '68':
+    Country: Norway
+    Internal: '1'
+    Latitude: 60.19049
+    Longitude: 11.99772
+    label: HH Kongsvinger
+    type: Small Circle
+  '7':
+    Country: Norway
+    Internal: '1'
+    Latitude: 60.16804
+    Longitude: 10.25647
+    label: HiBu Honefoss
+    type: Small Circle
+  '8':
+    Country: Norway
+    Internal: '1'
+    Latitude: 66.31278
+    Longitude: 14.14278
+    label: NB Mo i Rana
+    type: Small Circle
+  '9':
+    Country: Norway
+    Internal: '1'
+    Latitude: 66.19672
+    Longitude: 13.02133
+    label: HiNe Nesna
+    type: Small Circle

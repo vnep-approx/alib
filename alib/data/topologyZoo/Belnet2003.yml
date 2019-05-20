@@ -1,0 +1,220 @@
+edges:
+- - '0'
+  - '4'
+- - '0'
+  - '6'
+- - '1'
+  - '4'
+- - '1'
+  - '6'
+- - '2'
+  - '4'
+- - '2'
+  - '6'
+- - '3'
+  - '4'
+- - '3'
+  - '6'
+- - '4'
+  - '6'
+- - '4'
+  - '7'
+- - '4'
+  - '13'
+- - '4'
+  - '14'
+- - '4'
+  - '15'
+- - '4'
+  - '16'
+- - '4'
+  - '17'
+- - '4'
+  - '18'
+- - '4'
+  - '19'
+- - '4'
+  - '20'
+- - '4'
+  - '21'
+- - '4'
+  - '22'
+- - '5'
+  - '7'
+- - '6'
+  - '7'
+- - '6'
+  - '13'
+- - '6'
+  - '14'
+- - '6'
+  - '15'
+- - '6'
+  - '16'
+- - '6'
+  - '17'
+- - '6'
+  - '18'
+- - '6'
+  - '19'
+- - '6'
+  - '20'
+- - '6'
+  - '21'
+- - '6'
+  - '22'
+- - '7'
+  - '8'
+- - '7'
+  - '9'
+- - '7'
+  - '10'
+- - '7'
+  - '10'
+- - '7'
+  - '12'
+- - '7'
+  - '14'
+- - '10'
+  - '14'
+- - '10'
+  - '14'
+- - '10'
+  - '14'
+- - '11'
+  - '14'
+- - '11'
+  - '14'
+nodes:
+  '0':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.16667
+    Longitude: 5.0
+    label: Geel
+  '1':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.21667
+    Longitude: 4.41667
+    label: Antwerpen
+  '10':
+    Internal: '0'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Global Internet
+  '11':
+    Internal: '0'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: BNIX
+  '12':
+    Internal: '0'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Geant2
+  '13':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.64119
+    Longitude: 5.57178
+    label: Liege
+  '14':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Brussel I A
+  '15':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.20892
+    Longitude: 3.22424
+    label: Brugge
+  '16':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.05
+    Longitude: 3.71667
+    label: Gent
+  '17':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.82803
+    Longitude: 3.26487
+    label: Korthijk
+  '18':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.45413
+    Longitude: 3.95229
+    label: Mons
+  '19':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.41667
+    Longitude: 4.43333
+    label: Charleroi
+  '2':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.87959
+    Longitude: 4.70093
+    label: Leuven
+  '20':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.66829
+    Longitude: 4.61443
+    label: Louvain-la-Neuve
+  '21':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.46992
+    Longitude: 4.82577
+    label: Namur
+  '22':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 49.68333
+    Longitude: 5.81667
+    label: Arlon
+  '3':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.93333
+    Longitude: 5.33333
+    label: Hasselt
+  '4':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Brussel II B
+  '5':
+    Internal: '0'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: SFINX
+  '6':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Brussel I B
+  '7':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Brussel II A
+  '8':
+    Internal: '0'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: AMS-IX
+  '9':
+    Internal: '0'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: LINX

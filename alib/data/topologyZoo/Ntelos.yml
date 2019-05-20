@@ -1,107 +1,453 @@
-nodes:
-  '0': {Latitude: 38.01903, Longitude: -78.49279}
-  '1': {Latitude: 38.51679, Longitude: -78.02083}
-  '2': {Latitude: 38.06847, Longitude: -78.88947}
-  '3': {Latitude: 38.38041, Longitude: -78.2575}
-  '4': {Latitude: 37.3021, Longitude: -78.39194}
-  '5': {Latitude: 37.4032, Longitude: -79.17808}
-  '6': {Latitude: 38.71345, Longitude: -77.79527}
-  '7': {Latitude: 37.55376, Longitude: -77.46026}
-  '8': {Latitude: 37.41819, Longitude: -79.87476}
-  '9': {Latitude: 37.81624, Longitude: -79.82449}
-  '10': {Latitude: 37.29347, Longitude: -80.05476}
-  '11': {Latitude: 37.2418, Longitude: -80.01559}
-  '12': {Latitude: 36.59511, Longitude: -82.18874}
-  '13': {Latitude: 36.70983, Longitude: -81.97735}
-  '14': {Latitude: 37.24734, Longitude: -81.30343}
-  '15': {Latitude: 37.26984, Longitude: -81.22232}
-  '16': {Latitude: 36.94845, Longitude: -81.08481}
-  '17': {Latitude: 37.13179, Longitude: -80.57645}
-  '18': {Latitude: 37.22957, Longitude: -80.41394}
-  '19': {Latitude: 37.12985, Longitude: -80.40894}
-  '20': {Latitude: 36.69153, Longitude: -79.87254}
-  '21': {Latitude: 36.99764, Longitude: -79.89198}
-  '22': {Latitude: 36.58597, Longitude: -79.39502}
-  '23': {Latitude: 36.07264, Longitude: -79.79198}
-  '24': {Latitude: 37.78902, Longitude: -79.45726}
-  '25': {Latitude: 36.69875, Longitude: -78.9014}
-  '27': {Latitude: 38.18038, Longitude: -81.32845}
-  '28': {Latitude: 36.54843, Longitude: -82.56182}
-  '29': {Latitude: 36.31344, Longitude: -82.35347}
-  '30': {Latitude: 38.28122, Longitude: -80.8526}
-  '31': {Latitude: 37.80179, Longitude: -80.44563}
-  '32': {Latitude: 37.79651, Longitude: -80.29757}
-  '33': {Latitude: 37.79346, Longitude: -79.99395}
-  '34': {Latitude: 37.77817, Longitude: -81.18816}
-  '35': {Latitude: 38.47841, Longitude: -82.63794}
-  '36': {Latitude: 38.41925, Longitude: -82.44515}
-  '37': {Latitude: 38.34982, Longitude: -81.63262}
-  '38': {Latitude: 38.44957, Longitude: -78.86892}
-  '39': {Latitude: 38.14596, Longitude: -79.07725}
-  '40': {Latitude: 39.96118, Longitude: -82.99879}
-  '41': {Latitude: 39.62953, Longitude: -79.9559}
-  '42': {Latitude: 39.28065, Longitude: -80.34453}
-  '43': {Latitude: 38.66454, Longitude: -80.70982}
-  '44': {Latitude: 38.94814, Longitude: -81.76096}
-  '45': {Latitude: 40.44062, Longitude: -79.99589}
-  '46': {Latitude: 39.04372, Longitude: -77.48749}
-  '47': {Latitude: 39.18566, Longitude: -78.16333}
 edges:
-- ['0', '2']
-- ['0', '3']
-- ['0', '5']
-- ['0', '7']
-- ['1', '3']
-- ['1', '6']
-- ['2', '38']
-- ['2', '39']
-- ['4', '25']
-- ['4', '5']
-- ['4', '7']
-- ['5', '11']
-- ['5', '22']
-- ['6', '46']
-- ['7', '46']
-- ['8', '24']
-- ['8', '9']
-- ['8', '10']
-- ['9', '33']
-- ['9', '39']
-- ['10', '11']
-- ['10', '18']
-- ['10', '19']
-- ['11', '21']
-- ['12', '28']
-- ['12', '13']
-- ['13', '16']
-- ['13', '14']
-- ['14', '15']
-- ['15', '16']
-- ['16', '17']
-- ['17', '18']
-- ['17', '19']
-- ['20', '21']
-- ['20', '22']
-- ['22', '25']
-- ['22', '23']
-- ['24', '39']
-- ['27', '34']
-- ['27', '37']
-- ['28', '29']
-- ['30', '43']
-- ['31', '32']
-- ['31', '34']
-- ['32', '33']
-- ['34', '37']
-- ['35', '36']
-- ['36', '37']
-- ['37', '44']
-- ['38', '39']
-- ['38', '47']
-- ['40', '44']
-- ['41', '42']
-- ['41', '45']
-- ['42', '43']
-- ['42', '44']
-- ['45', '46']
-- ['46', '47']
+- - '0'
+  - '2'
+- - '0'
+  - '3'
+- - '0'
+  - '5'
+- - '0'
+  - '7'
+- - '1'
+  - '3'
+- - '1'
+  - '6'
+- - '2'
+  - '38'
+- - '2'
+  - '39'
+- - '4'
+  - '25'
+- - '4'
+  - '5'
+- - '4'
+  - '7'
+- - '5'
+  - '11'
+- - '5'
+  - '22'
+- - '6'
+  - '46'
+- - '7'
+  - '46'
+- - '8'
+  - '24'
+- - '8'
+  - '9'
+- - '8'
+  - '10'
+- - '9'
+  - '33'
+- - '9'
+  - '33'
+- - '9'
+  - '39'
+- - '10'
+  - '11'
+- - '10'
+  - '18'
+- - '10'
+  - '19'
+- - '11'
+  - '21'
+- - '12'
+  - '28'
+- - '12'
+  - '13'
+- - '13'
+  - '16'
+- - '13'
+  - '14'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '16'
+  - '17'
+- - '17'
+  - '18'
+- - '17'
+  - '19'
+- - '20'
+  - '21'
+- - '20'
+  - '22'
+- - '22'
+  - '25'
+- - '22'
+  - '23'
+- - '24'
+  - '39'
+- - '27'
+  - '34'
+- - '27'
+  - '37'
+- - '28'
+  - '29'
+- - '30'
+  - '43'
+- - '31'
+  - '32'
+- - '31'
+  - '34'
+- - '32'
+  - '33'
+- - '34'
+  - '37'
+- - '35'
+  - '36'
+- - '35'
+  - '36'
+- - '36'
+  - '37'
+- - '36'
+  - '37'
+- - '37'
+  - '44'
+- - '38'
+  - '39'
+- - '38'
+  - '47'
+- - '40'
+  - '44'
+- - '41'
+  - '42'
+- - '41'
+  - '45'
+- - '42'
+  - '43'
+- - '42'
+  - '44'
+- - '45'
+  - '46'
+- - '46'
+  - '47'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.01903
+    Longitude: -78.49279
+    label: Charlottesville
+    type: POP Location
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.51679
+    Longitude: -78.02083
+    label: Culpeper
+    type: POP Location
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.29347
+    Longitude: -80.05476
+    label: Salem
+    type: POP Location
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.2418
+    Longitude: -80.01559
+    label: Roanoke
+    type: POP Location
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.59511
+    Longitude: -82.18874
+    label: Bristol
+    type: Node
+  '13':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.70983
+    Longitude: -81.97735
+    label: Abingdon
+    type: POP Location
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.24734
+    Longitude: -81.30343
+    label: Tazewell
+    type: Node
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.26984
+    Longitude: -81.22232
+    label: Bluefield
+    type: POP Location
+  '16':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.94845
+    Longitude: -81.08481
+    label: Wytheville
+    type: POP Location
+  '17':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.13179
+    Longitude: -80.57645
+    label: Radford
+    type: POP Location
+  '18':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.22957
+    Longitude: -80.41394
+    label: Blacksburg
+    type: POP Location
+  '19':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.12985
+    Longitude: -80.40894
+    label: Christiansburg
+    type: POP Location
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.06847
+    Longitude: -78.88947
+    label: Waynesboro
+    type: POP Location
+  '20':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.69153
+    Longitude: -79.87254
+    label: Martinsville
+    type: POP Location
+  '21':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.99764
+    Longitude: -79.89198
+    label: Rocky Mount
+    type: POP Location
+  '22':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.58597
+    Longitude: -79.39502
+    label: Danville
+    type: POP Location
+  '23':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.07264
+    Longitude: -79.79198
+    label: Greensboro
+    type: POP Location
+  '24':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.78902
+    Longitude: -79.45726
+    label: Lexington
+    type: POP Location
+  '25':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.69875
+    Longitude: -78.9014
+    label: South Boston
+    type: POP Location
+  '27':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.18038
+    Longitude: -81.32845
+    label: Montgomery
+    type: Node
+  '28':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.54843
+    Longitude: -82.56182
+    label: Kingsport
+    type: Node
+  '29':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.31344
+    Longitude: -82.35347
+    label: Johnson City
+    type: Node
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.38041
+    Longitude: -78.2575
+    label: Madison
+    type: POP Location
+  '30':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.28122
+    Longitude: -80.8526
+    label: Summersville
+    type: Node
+  '31':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.80179
+    Longitude: -80.44563
+    label: Lewisburg
+    type: POP Location
+  '32':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.79651
+    Longitude: -80.29757
+    label: White Sulphur Springs
+    type: POP Location
+  '33':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.79346
+    Longitude: -79.99395
+    label: Covington
+    type: POP Location
+  '34':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.77817
+    Longitude: -81.18816
+    label: Beckley
+    type: POP Location
+  '35':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.47841
+    Longitude: -82.63794
+    label: Ashland
+    type: POP Location
+  '36':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.41925
+    Longitude: -82.44515
+    label: Huntington
+    type: POP Location
+  '37':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.34982
+    Longitude: -81.63262
+    label: Charleston
+    type: POP Location
+  '38':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.44957
+    Longitude: -78.86892
+    label: Harrisonburg
+    type: POP Location
+  '39':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.14596
+    Longitude: -79.07725
+    label: Staunton
+    type: POP Location
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.3021
+    Longitude: -78.39194
+    label: Farmville
+    type: POP Location
+  '40':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.96118
+    Longitude: -82.99879
+    label: Columbus
+    type: Node
+  '41':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.62953
+    Longitude: -79.9559
+    label: Morgantown
+    type: POP Location
+  '42':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.28065
+    Longitude: -80.34453
+    label: Clarksburg
+    type: POP Location
+  '43':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.66454
+    Longitude: -80.70982
+    label: Sutton
+    type: Node
+  '44':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.94814
+    Longitude: -81.76096
+    label: Ravenswood
+    type: Node
+  '45':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.44062
+    Longitude: -79.99589
+    label: Pittsburgh
+    type: Node
+  '46':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.04372
+    Longitude: -77.48749
+    label: Ashburn
+    type: Node
+  '47':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.18566
+    Longitude: -78.16333
+    label: Winchester
+    type: POP Location
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.4032
+    Longitude: -79.17808
+    label: Lynchburg
+    type: POP Location
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.71345
+    Longitude: -77.79527
+    label: Warrenton
+    type: POP Location
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.55376
+    Longitude: -77.46026
+    label: Richmond
+    type: Node
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.41819
+    Longitude: -79.87476
+    label: Troutville
+    type: POP Location
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.81624
+    Longitude: -79.82449
+    label: Clifton Forge
+    type: POP Location

@@ -1,38 +1,138 @@
-nodes:
-  '0': {Latitude: 39.04372, Longitude: -77.48749}
-  '1': {Latitude: 25.77427, Longitude: -80.19366}
-  '2': {Latitude: 45.50884, Longitude: -73.58781}
-  '3': {Latitude: 40.71427, Longitude: -74.00597}
-  '4': {Latitude: 51.50853, Longitude: -0.12574}
-  '5': {Latitude: 52.37403, Longitude: 4.88969}
-  '6': {Latitude: 41.85003, Longitude: -87.65005}
-  '7': {Latitude: 43.70011, Longitude: -79.4163}
-  '8': {Latitude: 49.24966, Longitude: -123.11934}
-  '9': {Latitude: 47.60621, Longitude: -122.33207}
-  '10': {Latitude: 37.54827, Longitude: -121.98857}
-  '11': {Latitude: 9.93333, Longitude: -84.08333}
-  '12': {Latitude: 34.05223, Longitude: -118.24368}
-  '13': {Latitude: 32.78306, Longitude: -96.80667}
-  '14': {Latitude: 29.42412, Longitude: -98.49363}
-  '15': {Latitude: 33.749, Longitude: -84.38798}
 edges:
-- ['0', '3']
-- ['0', '15']
-- ['1', '15']
-- ['2', '3']
-- ['2', '7']
-- ['3', '4']
-- ['3', '6']
-- ['3', '7']
-- ['4', '5']
-- ['6', '9']
-- ['6', '13']
-- ['6', '7']
-- ['7', '8']
-- ['8', '9']
-- ['9', '10']
-- ['10', '11']
-- ['11', '12']
-- ['12', '13']
-- ['13', '14']
-- ['13', '15']
+- - '0'
+  - '3'
+- - '0'
+  - '15'
+- - '1'
+  - '15'
+- - '2'
+  - '3'
+- - '2'
+  - '7'
+- - '3'
+  - '4'
+- - '3'
+  - '6'
+- - '3'
+  - '7'
+- - '4'
+  - '5'
+- - '6'
+  - '9'
+- - '6'
+  - '13'
+- - '6'
+  - '7'
+- - '7'
+  - '8'
+- - '8'
+  - '9'
+- - '9'
+  - '10'
+- - '10'
+  - '11'
+- - '11'
+  - '12'
+- - '12'
+  - '13'
+- - '13'
+  - '14'
+- - '13'
+  - '15'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.04372
+    Longitude: -77.48749
+    label: Herndon/Ashburn
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.54827
+    Longitude: -121.98857
+    label: Fremont
+  '11':
+    Country: Costa Rica
+    Internal: '1'
+    Latitude: 9.93333
+    Longitude: -84.08333
+    label: San Jose
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+  '13':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.42412
+    Longitude: -98.49363
+    label: San Antonio
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta
+  '2':
+    Country: Canada
+    Internal: '1'
+    Latitude: 45.50884
+    Longitude: -73.58781
+    label: Montreal
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+  '4':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: London
+  '5':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.37403
+    Longitude: 4.88969
+    label: Amsterdam
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+  '7':
+    Country: Canada
+    Internal: '1'
+    Latitude: 43.70011
+    Longitude: -79.4163
+    label: Toronto
+  '8':
+    Country: Canada
+    Internal: '1'
+    Latitude: 49.24966
+    Longitude: -123.11934
+    label: Vancouver
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle

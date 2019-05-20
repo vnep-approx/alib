@@ -1,0 +1,714 @@
+edges:
+- - '0'
+  - '43'
+- - '0'
+  - '44'
+- - '1'
+  - '44'
+- - '1'
+  - '45'
+- - '1'
+  - '71'
+- - '2'
+  - '56'
+- - '2'
+  - '3'
+- - '3'
+  - '53'
+- - '4'
+  - '65'
+- - '4'
+  - '10'
+- - '5'
+  - '65'
+- - '5'
+  - '27'
+- - '5'
+  - '52'
+- - '5'
+  - '25'
+- - '6'
+  - '54'
+- - '6'
+  - '71'
+- - '7'
+  - '29'
+- - '7'
+  - '30'
+- - '8'
+  - '9'
+- - '8'
+  - '75'
+- - '9'
+  - '10'
+- - '10'
+  - '55'
+- - '10'
+  - '55'
+- - '11'
+  - '60'
+- - '11'
+  - '60'
+- - '11'
+  - '55'
+- - '11'
+  - '55'
+- - '12'
+  - '66'
+- - '12'
+  - '59'
+- - '13'
+  - '75'
+- - '13'
+  - '36'
+- - '13'
+  - '55'
+- - '14'
+  - '58'
+- - '14'
+  - '19'
+- - '15'
+  - '58'
+- - '15'
+  - '58'
+- - '15'
+  - '19'
+- - '15'
+  - '19'
+- - '16'
+  - '18'
+- - '16'
+  - '63'
+- - '17'
+  - '49'
+- - '17'
+  - '78'
+- - '18'
+  - '21'
+- - '18'
+  - '22'
+- - '18'
+  - '31'
+- - '18'
+  - '31'
+- - '19'
+  - '32'
+- - '19'
+  - '32'
+- - '19'
+  - '33'
+- - '19'
+  - '38'
+- - '19'
+  - '59'
+- - '19'
+  - '59'
+- - '20'
+  - '48'
+- - '20'
+  - '22'
+- - '21'
+  - '61'
+- - '23'
+  - '25'
+- - '23'
+  - '31'
+- - '24'
+  - '28'
+- - '24'
+  - '31'
+- - '26'
+  - '27'
+- - '26'
+  - '28'
+- - '29'
+  - '75'
+- - '30'
+  - '45'
+- - '33'
+  - '60'
+- - '34'
+  - '81'
+- - '34'
+  - '82'
+- - '34'
+  - '79'
+- - '35'
+  - '40'
+- - '35'
+  - '53'
+- - '36'
+  - '80'
+- - '37'
+  - '60'
+- - '37'
+  - '38'
+- - '38'
+  - '59'
+- - '39'
+  - '40'
+- - '40'
+  - '41'
+- - '41'
+  - '42'
+- - '41'
+  - '43'
+- - '46'
+  - '69'
+- - '46'
+  - '47'
+- - '47'
+  - '78'
+- - '48'
+  - '54'
+- - '49'
+  - '72'
+- - '50'
+  - '62'
+- - '50'
+  - '70'
+- - '51'
+  - '72'
+- - '51'
+  - '67'
+- - '52'
+  - '60'
+- - '55'
+  - '66'
+- - '56'
+  - '83'
+- - '57'
+  - '64'
+- - '57'
+  - '58'
+- - '61'
+  - '69'
+- - '62'
+  - '63'
+- - '67'
+  - '68'
+- - '68'
+  - '69'
+- - '68'
+  - '70'
+- - '73'
+  - '74'
+- - '74'
+  - '78'
+- - '76'
+  - '77'
+- - '77'
+  - '78'
+- - '77'
+  - '79'
+nodes:
+  '0':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 24.79944
+    Longitude: -107.38972
+    label: Culiacan
+  '1':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 23.21667
+    Longitude: -106.41667
+    label: Mazatlan
+  '10':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 21.11667
+    Longitude: -101.66667
+    label: Leon
+  '11':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.51667
+    Longitude: -100.81667
+    label: Celaya
+  '12':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.95278
+    Longitude: -99.53472
+    label: Jilotepec
+  '13':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.33333
+    Longitude: -102.3
+    label: Yurecuaro
+  '14':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.73472
+    Longitude: -98.59028
+    label: Irolo
+  '15':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.35
+    Longitude: -98.66667
+    label: Rio Fro
+  '16':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.8
+    Longitude: -99.16667
+    label: Gral Bravo
+  '17':
+    Internal: '1'
+    Latitude: 28.94303
+    Longitude: -98.521405
+    label: San Miguel
+  '18':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.66667
+    Longitude: -100.31667
+    label: Monterrey
+  '19':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.42847
+    Longitude: -99.12766
+    label: Mexico
+  '2':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 29.06667
+    Longitude: -110.96667
+    label: Hermosillo
+  '20':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.71667
+    Longitude: -102.4
+    label: Talia
+  '21':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 26.83333
+    Longitude: -100.66667
+    label: Candela
+  '22':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.83333
+    Longitude: -101.3
+    geocode_id: '3983363'
+    label: La Sauceda
+  '23':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 24.3
+    Longitude: -100.86667
+    label: El Salado
+  '24':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.23333
+    Longitude: -99.71667
+    label: San Rafael
+  '25':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 23.28333
+    Longitude: -100.95
+    geocode_id: '4002098'
+    label: Laguna Seca
+  '26':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 23.65
+    Longitude: -100.65
+    label: Matehlala
+  '27':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 22.93333
+    Longitude: -100.46667
+    label: El Huizache
+  '28':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 24.4
+    Longitude: -100.36667
+    label: Jesus M Aguirre
+  '29':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 21.03333
+    Longitude: -104.3
+    geocode_id: '3986227'
+    label: SN Jose De Gracia
+  '3':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 27.93333
+    Longitude: -110.9
+    label: Guaymas
+  '30':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 21.95
+    Longitude: -105.15
+    geocode_append: Nayarit
+    label: Ruiz
+  '31':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.41667
+    Longitude: -101.0
+    label: Saltillo
+  '32':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 18.91667
+    Longitude: -99.25
+    label: Cuernavaca
+  '33':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.25
+    Longitude: -99.65
+    geocode_append: Hidalgo
+    label: Nopala
+  '34':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 32.53333
+    Longitude: -117.01667
+    label: Tijuana
+  '35':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 27.1
+    Longitude: -109.43333
+    label: Navojoa
+  '36':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.18333
+    Longitude: -102.4
+    label: Ixtlan
+  '37':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.38333
+    Longitude: -100.0
+    label: S Juan Del Rio
+  '38':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.95278
+    Longitude: -99.53472
+    label: Jilotepec
+  '39':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.76667
+    Longitude: -108.96667
+    label: Los Mochis
+  '4':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 21.88333
+    Longitude: -102.3
+    label: Aguascalientes
+  '40':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 26.08333
+    Longitude: -108.76667
+    geocode_append: Sinaloa
+    label: San Blas
+  '41':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.73333
+    Longitude: -108.35
+    label: Leon Fonseca
+  '42':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.56667
+    Longitude: -108.45
+    label: Guasave
+  '43':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.46667
+    Longitude: -108.1
+    label: Guamuchil
+  '44':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 23.91667
+    Longitude: -106.9
+    label: La Cruz De Elota
+  '45':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 22.85
+    Longitude: -105.8
+    label: Escuinapa
+  '46':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.28
+    Longitude: -99.28448
+    label: Artesia Wells
+  '47':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.05524
+    Longitude: -99.01031
+    label: Moore
+  '48':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 25.55
+    Longitude: -103.43333
+    label: Torreon
+  '49':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.46194
+    Longitude: -98.54918
+    label: Tilden
+  '5':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 22.15
+    Longitude: -100.98333
+    label: San Luis Potosi
+  '50':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.71672
+    Longitude: -98.4539
+    label: San Isidro
+  '51':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.30671
+    Longitude: -98.67835
+    label: Hebbronville
+  '52':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 21.46667
+    Longitude: -100.86667
+    label: San Diego Del Union
+  '53':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 27.48333
+    Longitude: -109.93333
+    label: CD Obregon
+  '54':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 24.73778
+    Longitude: -103.84306
+    label: Yerbanis
+  '55':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.68333
+    Longitude: -101.35
+    label: Irapuato
+  '56':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 30.16667
+    Longitude: -111.1
+    label: Benjamin Hill
+  '57':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.53333
+    Longitude: -96.91667
+    label: Jalapa
+  '58':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.05
+    Longitude: -98.2
+    label: Puebla
+  '59':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.28833
+    Longitude: -99.66722
+    label: Toluca
+  '6':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 24.03333
+    Longitude: -104.66667
+    label: Durango
+  '60':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.6
+    Longitude: -100.38333
+    label: Queretaro
+  '61':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 27.5
+    Longitude: -99.51667
+    label: Nuevo Laredo
+  '62':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.20341
+    Longitude: -98.23001
+    label: Hidalgo
+  '63':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 26.08333
+    Longitude: -98.28333
+    label: Reynosa
+  '64':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.2
+    Longitude: -96.13333
+    label: Veracruz
+  '65':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 22.63333
+    Longitude: -101.71667
+    label: Saljnas
+  '66':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.21667
+    Longitude: -100.88333
+    label: Salvatierra
+  '67':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.43975
+    Longitude: -99.00114
+    label: MA
+  '68':
+    Internal: '1'
+    Latitude: 27.459833333333336
+    Longitude: -99.17298333333333
+    hyperedge: '1'
+    label: None
+  '69':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 27.5
+    Longitude: -99.51667
+    label: Laredo
+  '7':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 21.5
+    Longitude: -104.9
+    label: Tepic
+  '70':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.43975
+    Longitude: -99.00114
+    label: Mirando City
+  '71':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 23.73333
+    Longitude: -105.51667
+    geocode_id: '4000373'
+    label: Las Adjuntas
+  '72':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.75225
+    Longitude: -98.06972
+    label: Alice
+  '73':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 31.73333
+    Longitude: -106.48333
+    label: CD Juarez
+  '74':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 31.73333
+    Longitude: -106.48333
+    label: El Paso
+  '75':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.66667
+    Longitude: -103.33333
+    label: Guadalajara
+  '76':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas
+  '77':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.42412
+    Longitude: -98.49363
+    label: San Antonio Taylor
+  '78':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.42412
+    Longitude: -98.49363
+    label: San Antonio Rotary
+  '79':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.71533
+    Longitude: -117.15726
+    label: San Diego
+  '8':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 20.81667
+    Longitude: -102.73333
+    label: Tepatitlan
+  '80':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 19.98333
+    Longitude: -102.26667
+    label: Zamora
+  '81':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 31.86667
+    Longitude: -116.61667
+    label: Ensenada
+  '82':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 32.65194
+    Longitude: -115.46833
+    label: Mexicali
+  '83':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 31.33333
+    Longitude: -110.93333
+    label: Nogales
+  '9':
+    Country: Mexico
+    Internal: '1'
+    Latitude: 21.01667
+    Longitude: -102.35
+    label: San Miguel El Alto

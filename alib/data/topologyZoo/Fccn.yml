@@ -1,50 +1,217 @@
-nodes:
-  '0': {Latitude: 39.29379, Longitude: -7.43122}
-  '1': {Latitude: 38.56667, Longitude: -7.9}
-  '2': {Latitude: 40.53333, Longitude: -7.26667}
-  '3': {Latitude: 39.81667, Longitude: -7.5}
-  '4': {Latitude: 39.6, Longitude: -8.41667}
-  '5': {Latitude: 39.74362, Longitude: -8.80705}
-  '6': {Latitude: 38.71667, Longitude: -9.13333}
-  '7': {Latitude: 39.23333, Longitude: -8.68333}
-  '8': {Latitude: 38.5244, Longitude: -8.8882}
-  '9': {Latitude: 37.73333, Longitude: -25.66667}
-  '10': {Latitude: 38.01667, Longitude: -7.86667}
-  '11': {Latitude: 37.01667, Longitude: -7.93333}
-  '12': {Latitude: 32.63333, Longitude: -16.9}
-  '13': {Latitude: 40.65, Longitude: -7.91667}
-  '14': {Latitude: 40.28333, Longitude: -7.5}
-  '15': {Latitude: 41.84668, Longitude: -8.41905}
-  '16': {Latitude: 41.53333, Longitude: -8.61667}
-  '17': {Latitude: 41.55, Longitude: -8.43333}
-  '18': {Latitude: 41.3, Longitude: -7.75}
-  '19': {Latitude: 41.81667, Longitude: -6.75}
-  '20': {Latitude: 41.15, Longitude: -8.61667}
-  '21': {Latitude: 40.63333, Longitude: -8.65}
-  '22': {Latitude: 40.2, Longitude: -8.41667}
 edges:
-- ['0', '6']
-- ['1', '6']
-- ['2', '20']
-- ['3', '6']
-- ['4', '6']
-- ['5', '6']
-- ['5', '22']
-- ['6', '7']
-- ['6', '8']
-- ['6', '9']
-- ['6', '12']
-- ['6', '13']
-- ['6', '22']
-- ['7', '22']
-- ['8', '10']
-- ['8', '11']
-- ['14', '20']
-- ['15', '20']
-- ['16', '20']
-- ['17', '20']
-- ['18', '20']
-- ['19', '20']
-- ['20', '21']
-- ['20', '22']
-- ['21', '22']
+- - '0'
+  - '6'
+- - '0'
+  - '6'
+- - '1'
+  - '6'
+- - '2'
+  - '20'
+- - '3'
+  - '6'
+- - '4'
+  - '6'
+- - '5'
+  - '6'
+- - '5'
+  - '22'
+- - '6'
+  - '7'
+- - '6'
+  - '8'
+- - '6'
+  - '9'
+- - '6'
+  - '12'
+- - '6'
+  - '13'
+- - '6'
+  - '22'
+- - '6'
+  - '22'
+- - '7'
+  - '22'
+- - '8'
+  - '10'
+- - '8'
+  - '11'
+- - '14'
+  - '20'
+- - '15'
+  - '20'
+- - '16'
+  - '20'
+- - '17'
+  - '20'
+- - '18'
+  - '20'
+- - '19'
+  - '20'
+- - '20'
+  - '21'
+- - '20'
+  - '22'
+- - '21'
+  - '22'
+nodes:
+  '0':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 39.29379
+    Longitude: -7.43122
+    label: Portalegre
+    type: Node
+  '1':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 38.56667
+    Longitude: -7.9
+    label: Evora
+    type: Node
+  '10':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 38.01667
+    Longitude: -7.86667
+    label: Beja
+    type: Node
+  '11':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 37.01667
+    Longitude: -7.93333
+    label: Faro
+    type: Node
+  '12':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 32.63333
+    Longitude: -16.9
+    label: Funchal
+    type: Node
+  '13':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 40.65
+    Longitude: -7.91667
+    label: Viseu
+    type: Node
+  '14':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 40.28333
+    Longitude: -7.5
+    label: Covilha
+    type: Node
+  '15':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 41.84668
+    Longitude: -8.41905
+    label: Viana de Castelo
+    type: Node
+  '16':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 41.53333
+    Longitude: -8.61667
+    label: Barcelos
+    type: Node
+  '17':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 41.55
+    Longitude: -8.43333
+    label: Braga
+    type: Node
+  '18':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 41.3
+    Longitude: -7.75
+    label: Villa Real
+    type: Node
+  '19':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 41.81667
+    Longitude: -6.75
+    label: Bragancia
+    type: Node
+  '2':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 40.53333
+    Longitude: -7.26667
+    label: Guarda
+    type: Node
+  '20':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 41.15
+    Longitude: -8.61667
+    label: Porto
+    type: Node with subnodes
+  '21':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 40.63333
+    Longitude: -8.65
+    label: Aveiro
+    type: Node
+  '22':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 40.2
+    Longitude: -8.41667
+    label: Coimbra
+    type: Node with subnodes
+  '3':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 39.81667
+    Longitude: -7.5
+    label: Castelo Branco
+    type: Node
+  '4':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 39.6
+    Longitude: -8.41667
+    label: Tomar
+    type: Node
+  '5':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 39.74362
+    Longitude: -8.80705
+    label: Leiria
+    type: Node
+  '6':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 38.71667
+    Longitude: -9.13333
+    label: Lisboa
+    type: Node with subnodes
+  '7':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 39.23333
+    Longitude: -8.68333
+    label: Samtarem
+    type: Node
+  '8':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 38.5244
+    Longitude: -8.8882
+    label: Setubal
+    type: Node
+  '9':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 37.73333
+    Longitude: -25.66667
+    label: Ponta Delgada
+    type: Node

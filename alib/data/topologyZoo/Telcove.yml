@@ -1,143 +1,642 @@
-nodes:
-  '0': {Latitude: 27.33643, Longitude: -82.53065}
-  '1': {Latitude: 26.62168, Longitude: -81.84059}
-  '2': {Latitude: 27.94752, Longitude: -82.45843}
-  '3': {Latitude: 27.96585, Longitude: -82.8001}
-  '4': {Latitude: 26.71534, Longitude: -80.05337}
-  '5': {Latitude: 28.08363, Longitude: -80.60811}
-  '6': {Latitude: 26.12231, Longitude: -80.14338}
-  '7': {Latitude: 25.77427, Longitude: -80.19366}
-  '8': {Latitude: 36.84681, Longitude: -76.28522}
-  '9': {Latitude: 37.41375, Longitude: -79.14225}
-  '10': {Latitude: 28.61222, Longitude: -80.80755}
-  '11': {Latitude: 28.53834, Longitude: -81.37924}
-  '12': {Latitude: 38.44957, Longitude: -78.86892}
-  '13': {Latitude: 38.02931, Longitude: -78.47668}
-  '14': {Latitude: 39.18566, Longitude: -78.16333}
-  '15': {Latitude: 38.30318, Longitude: -77.46054}
-  '16': {Latitude: 40.73566, Longitude: -74.17237}
-  '17': {Latitude: 39.65984, Longitude: -75.51464}
-  '18': {Latitude: 42.33143, Longitude: -83.04575}
-  '19': {Latitude: 42.12922, Longitude: -80.08506}
-  '20': {Latitude: 42.88645, Longitude: -78.87837}
-  '21': {Latitude: 43.04812, Longitude: -76.14742}
-  '22': {Latitude: 43.1009, Longitude: -75.23266}
-  '23': {Latitude: 44.47588, Longitude: -73.21207}
-  '24': {Latitude: 42.65258, Longitude: -73.75623}
-  '25': {Latitude: 40.71427, Longitude: -74.00597}
-  '26': {Latitude: 38.89511, Longitude: -77.03637}
-  '27': {Latitude: 29.21081, Longitude: -81.02283}
-  '28': {Latitude: 41.77479, Longitude: -78.02056}
-  '29': {Latitude: 37.27097, Longitude: -79.94143}
-  '30': {Latitude: 36.58597, Longitude: -79.39502}
-  '31': {Latitude: 38.14958, Longitude: -79.0717}
-  '32': {Latitude: 38.34982, Longitude: -81.63262}
-  '33': {Latitude: 39.29038, Longitude: -76.61219}
-  '34': {Latitude: 35.05266, Longitude: -78.87836}
-  '35': {Latitude: 35.22709, Longitude: -80.84313}
-  '36': {Latitude: 36.51736, Longitude: -82.35489}
-  '38': {Latitude: 36.09986, Longitude: -80.24422}
-  '39': {Latitude: 36.07264, Longitude: -79.79198}
-  '40': {Latitude: 39.95234, Longitude: -75.16379}
-  '41': {Latitude: 40.60843, Longitude: -75.49018}
-  '42': {Latitude: 40.2737, Longitude: -76.88442}
-  '43': {Latitude: 40.03788, Longitude: -76.30551}
-  '44': {Latitude: 41.40897, Longitude: -75.66241}
-  '45': {Latitude: 40.7934, Longitude: -77.86}
-  '46': {Latitude: 39.41427, Longitude: -77.41054}
-  '47': {Latitude: 34.00071, Longitude: -81.03481}
-  '48': {Latitude: 37.55376, Longitude: -77.46026}
-  '49': {Latitude: 40.44062, Longitude: -79.99589}
-  '50': {Latitude: 39.96118, Longitude: -82.99879}
-  '51': {Latitude: 34.85262, Longitude: -82.39401}
-  '52': {Latitude: 33.47097, Longitude: -81.97484}
-  '53': {Latitude: 32.08354, Longitude: -81.09983}
-  '54': {Latitude: 30.33218, Longitude: -81.65565}
-  '55': {Latitude: 34.94957, Longitude: -81.93205}
-  '56': {Latitude: 37.98869, Longitude: -84.47772}
-  '57': {Latitude: 38.25424, Longitude: -85.75941}
-  '58': {Latitude: 36.16589, Longitude: -86.78444}
-  '59': {Latitude: 33.749, Longitude: -84.38798}
-  '60': {Latitude: 40.71427, Longitude: -74.00597}
-  '61': {Latitude: 35.7721, Longitude: -78.63861}
-  '63': {Latitude: 30.42131, Longitude: -87.21691}
-  '64': {Latitude: 30.43826, Longitude: -84.28073}
-  '65': {Latitude: 37.69224, Longitude: -97.33754}
-  '66': {Latitude: 39.11417, Longitude: -94.62746}
-  '67': {Latitude: 34.74648, Longitude: -92.28959}
-  '68': {Latitude: 29.76328, Longitude: -95.36327}
-  '69': {Latitude: 29.95465, Longitude: -90.07507}
-  '70': {Latitude: 30.45075, Longitude: -91.15455}
-  '71': {Latitude: 32.29876, Longitude: -90.18481}
-  '72': {Latitude: 30.69436, Longitude: -88.04305}
 edges:
-- ['0', '2']
-- ['1', '59']
-- ['2', '59']
-- ['3', '59']
-- ['3', '6']
-- ['4', '6']
-- ['5', '6']
-- ['6', '7']
-- ['8', '14']
-- ['9', '13']
-- ['10', '11']
-- ['11', '59']
-- ['12', '13']
-- ['13', '14']
-- ['13', '29']
-- ['13', '30']
-- ['13', '31']
-- ['14', '49']
-- ['15', '49']
-- ['16', '17']
-- ['17', '49']
-- ['18', '49']
-- ['19', '49']
-- ['20', '49']
-- ['21', '24']
-- ['21', '49']
-- ['21', '22']
-- ['23', '49']
-- ['25', '49']
-- ['26', '49']
-- ['27', '54']
-- ['28', '49']
-- ['32', '35']
-- ['33', '49']
-- ['33', '46']
-- ['34', '35']
-- ['35', '38']
-- ['35', '39']
-- ['35', '51']
-- ['35', '52']
-- ['35', '53']
-- ['35', '55']
-- ['35', '59']
-- ['36', '59']
-- ['40', '41']
-- ['40', '49']
-- ['42', '49']
-- ['42', '43']
-- ['42', '60']
-- ['44', '49']
-- ['45', '49']
-- ['47', '59']
-- ['48', '49']
-- ['49', '50']
-- ['49', '56']
-- ['49', '57']
-- ['49', '59']
-- ['49', '61']
-- ['54', '59']
-- ['58', '59']
-- ['59', '64']
-- ['59', '70']
-- ['59', '65']
-- ['59', '72']
-- ['59', '67']
-- ['59', '68']
-- ['59', '71']
-- ['63', '72']
-- ['65', '66']
-- ['68', '69']
+- - '0'
+  - '2'
+- - '1'
+  - '59'
+- - '2'
+  - '59'
+- - '3'
+  - '59'
+- - '3'
+  - '6'
+- - '4'
+  - '6'
+- - '5'
+  - '6'
+- - '6'
+  - '7'
+- - '8'
+  - '14'
+- - '9'
+  - '13'
+- - '10'
+  - '11'
+- - '11'
+  - '59'
+- - '12'
+  - '13'
+- - '13'
+  - '14'
+- - '13'
+  - '29'
+- - '13'
+  - '30'
+- - '13'
+  - '31'
+- - '14'
+  - '49'
+- - '15'
+  - '49'
+- - '16'
+  - '17'
+- - '17'
+  - '49'
+- - '18'
+  - '49'
+- - '19'
+  - '49'
+- - '20'
+  - '49'
+- - '21'
+  - '24'
+- - '21'
+  - '49'
+- - '21'
+  - '22'
+- - '23'
+  - '49'
+- - '25'
+  - '49'
+- - '26'
+  - '49'
+- - '27'
+  - '54'
+- - '28'
+  - '49'
+- - '32'
+  - '35'
+- - '33'
+  - '49'
+- - '33'
+  - '46'
+- - '34'
+  - '35'
+- - '35'
+  - '38'
+- - '35'
+  - '39'
+- - '35'
+  - '51'
+- - '35'
+  - '52'
+- - '35'
+  - '53'
+- - '35'
+  - '55'
+- - '35'
+  - '59'
+- - '36'
+  - '59'
+- - '40'
+  - '41'
+- - '40'
+  - '49'
+- - '42'
+  - '49'
+- - '42'
+  - '43'
+- - '42'
+  - '60'
+- - '44'
+  - '49'
+- - '45'
+  - '49'
+- - '47'
+  - '59'
+- - '48'
+  - '49'
+- - '49'
+  - '50'
+- - '49'
+  - '56'
+- - '49'
+  - '57'
+- - '49'
+  - '59'
+- - '49'
+  - '61'
+- - '54'
+  - '59'
+- - '58'
+  - '59'
+- - '59'
+  - '64'
+- - '59'
+  - '70'
+- - '59'
+  - '65'
+- - '59'
+  - '72'
+- - '59'
+  - '71'
+- - '59'
+  - '67'
+- - '59'
+  - '68'
+- - '63'
+  - '72'
+- - '65'
+  - '66'
+- - '68'
+  - '69'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.33643
+    Longitude: -82.53065
+    label: Sarasota
+    type: Telcove Markets Served
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.62168
+    Longitude: -81.84059
+    label: Fort Myers
+    type: Telcove Markets Served
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.61222
+    Longitude: -80.80755
+    label: Titusville
+    type: Telcove Markets Served
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.53834
+    Longitude: -81.37924
+    label: Orlando
+    type: Telcove Markets Served
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.44957
+    Longitude: -78.86892
+    label: Harrisonburg
+    type: Telcove Markets Served
+  '13':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.02931
+    Longitude: -78.47668
+    label: Charlottesville
+    type: Telcove Markets Served
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.18566
+    Longitude: -78.16333
+    label: Winchester
+    type: Telcove Markets Served
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.30318
+    Longitude: -77.46054
+    label: Fredericksburg
+    type: Telcove Markets Served
+  '16':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.73566
+    Longitude: -74.17237
+    label: Newark
+    type: Telcove Markets Served
+  '17':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.65984
+    Longitude: -75.51464
+    label: Central New Jersey
+    type: Telcove Markets Served
+  '18':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.33143
+    Longitude: -83.04575
+    label: Detroit
+    type: Telcove Markets Served
+  '19':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.12922
+    Longitude: -80.08506
+    label: Erie
+    type: Telcove Markets Served
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.94752
+    Longitude: -82.45843
+    label: Tampa
+    type: Telcove Markets Served
+  '20':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.88645
+    Longitude: -78.87837
+    label: Buffalo
+    type: Telcove Markets Served
+  '21':
+    Country: United States
+    Internal: '1'
+    Latitude: 43.04812
+    Longitude: -76.14742
+    label: Syracuse
+    type: Telcove Markets Served
+  '22':
+    Country: United States
+    Internal: '1'
+    Latitude: 43.1009
+    Longitude: -75.23266
+    label: Rome-Utica
+    type: Telcove Markets Served
+  '23':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.47588
+    Longitude: -73.21207
+    label: Burlington
+    type: Telcove Markets Served
+  '24':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.65258
+    Longitude: -73.75623
+    label: Albany
+    type: Telcove Markets Served
+  '25':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York City
+    type: Telcove Markets Served
+  '26':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.89511
+    Longitude: -77.03637
+    label: Washington, DC
+    type: Telcove Markets Served
+  '27':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.21081
+    Longitude: -81.02283
+    label: Daytona Beach
+    type: Telcove Markets Served
+  '28':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.77479
+    Longitude: -78.02056
+    label: Coudersport
+    type: Network Management Centre
+  '29':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.27097
+    Longitude: -79.94143
+    label: Roanoke
+    type: Telcove Markets Served
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.96585
+    Longitude: -82.8001
+    label: Clearwater
+    type: Telcove Markets Served
+  '30':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.58597
+    Longitude: -79.39502
+    label: Danville
+    type: Telcove Markets Served
+  '31':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.14958
+    Longitude: -79.0717
+    label: Staunton
+    type: Telcove Markets Served
+  '32':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.34982
+    Longitude: -81.63262
+    label: Charleston
+    type: Telcove Markets Served
+  '33':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: Baltimore
+    type: Telcove Markets Served
+  '34':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.05266
+    Longitude: -78.87836
+    label: Fayetteville
+    type: Telcove Markets Served
+  '35':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.22709
+    Longitude: -80.84313
+    label: Charlotte
+    type: Telcove Markets Served
+  '36':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.51736
+    Longitude: -82.35489
+    geocode_append: Tennessee
+    label: Tri-Cities
+    type: Telcove Markets Served
+  '38':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.09986
+    Longitude: -80.24422
+    label: Winston-Salem
+    type: Telcove Markets Served
+  '39':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.07264
+    Longitude: -79.79198
+    label: Greensboro
+    type: Telcove Markets Served
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.71534
+    Longitude: -80.05337
+    label: West Palm Beach
+    type: Telcove Markets Served
+  '40':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.95234
+    Longitude: -75.16379
+    label: Philadelphia
+    type: Telcove Markets Served
+  '41':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.60843
+    Longitude: -75.49018
+    label: Allentown
+    type: Telcove Markets Served
+  '42':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.2737
+    Longitude: -76.88442
+    label: Harrisburg
+    type: Telcove Markets Served
+  '43':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.03788
+    Longitude: -76.30551
+    geocode_append: Pennsylvania
+    label: Lancaster
+    type: Telcove Markets Served
+  '44':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.40897
+    Longitude: -75.66241
+    label: Scranton
+    type: Telcove Markets Served
+  '45':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.7934
+    Longitude: -77.86
+    label: State College
+    type: Telcove Markets Served
+  '46':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.41427
+    Longitude: -77.41054
+    label: Frederick
+    type: Telcove Markets Served
+  '47':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.00071
+    Longitude: -81.03481
+    label: Columbia
+    type: Telcove Markets Served
+  '48':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.55376
+    Longitude: -77.46026
+    label: Richmond
+    type: Telcove Markets Served
+  '49':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.44062
+    Longitude: -79.99589
+    label: Pittsburgh
+    type: Core Router/PoP
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.08363
+    Longitude: -80.60811
+    label: Melbourne
+    type: Telcove Markets Served
+  '50':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.96118
+    Longitude: -82.99879
+    label: Columbus
+    type: Telcove Markets Served
+  '51':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.85262
+    Longitude: -82.39401
+    label: Greenville
+    type: Telcove Markets Served
+  '52':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.47097
+    Longitude: -81.97484
+    geocode_append: Georgia
+    label: Augusta
+    type: Telcove Markets Served
+  '53':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.08354
+    Longitude: -81.09983
+    label: Savannah
+    type: Telcove Markets Served
+  '54':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.33218
+    Longitude: -81.65565
+    label: Jacksonville
+    type: Telcove Markets Served
+  '55':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.94957
+    Longitude: -81.93205
+    label: Spartanburg
+    type: Telcove Markets Served
+  '56':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.98869
+    Longitude: -84.47772
+    label: Lexington
+    type: Telcove Markets Served
+  '57':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.25424
+    Longitude: -85.75941
+    label: Louisville
+    type: Telcove Markets Served
+  '58':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.16589
+    Longitude: -86.78444
+    label: Nashville
+    type: Telcove Markets Served
+  '59':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta
+    type: Core Router/PoP
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.12231
+    Longitude: -80.14338
+    label: Fort Lauderdale
+    type: Telcove Markets Served
+  '60':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: York
+    type: Telcove Markets Served
+  '61':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.7721
+    Longitude: -78.63861
+    label: Raleigh
+    type: Telcove Markets Served
+  '63':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.42131
+    Longitude: -87.21691
+    label: Pensacola
+    type: Telcove Markets Served
+  '64':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.43826
+    Longitude: -84.28073
+    label: Tallahassee
+    type: Telcove Markets Served
+  '65':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.69224
+    Longitude: -97.33754
+    label: Wichita
+    type: Telcove Markets Served
+  '66':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.11417
+    Longitude: -94.62746
+    label: Kansas City
+    type: Telcove Markets Served
+  '67':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.74648
+    Longitude: -92.28959
+    label: Little Rock
+    type: Telcove Markets Served
+  '68':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.76328
+    Longitude: -95.36327
+    label: Houston
+    type: Telcove Markets Served
+  '69':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.95465
+    Longitude: -90.07507
+    label: New Orleans
+    type: Telcove Markets Served
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami
+    type: Telcove Markets Served
+  '70':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.45075
+    Longitude: -91.15455
+    label: Baton Rouge
+    type: Telcove Markets Served
+  '71':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.29876
+    Longitude: -90.18481
+    label: Jackson
+    type: Telcove Markets Served
+  '72':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.69436
+    Longitude: -88.04305
+    label: Mobile
+    type: Telcove Markets Served
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.84681
+    Longitude: -76.28522
+    label: Norfolk
+    type: Telcove Markets Served
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.41375
+    Longitude: -79.14225
+    label: Lynchburg
+    type: Telcove Markets Served

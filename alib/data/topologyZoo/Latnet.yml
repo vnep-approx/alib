@@ -1,145 +1,631 @@
-nodes:
-  '0': {Latitude: 56.59861, Longitude: 24.20222}
-  '1': {Latitude: 56.55972, Longitude: 23.77194}
-  '2': {Latitude: 55.89514, Longitude: 27.16799}
-  '3': {Latitude: 56.70694, Longitude: 24.35194}
-  '4': {Latitude: 56.45981, Longitude: 22.90169}
-  '5': {Latitude: 56.7, Longitude: 22.53333}
-  '6': {Latitude: 56.53722, Longitude: 23.69639}
-  '7': {Latitude: 56.625, Longitude: 23.27861}
-  '8': {Latitude: 57.15861, Longitude: 24.70278}
-  '9': {Latitude: 57.60861, Longitude: 24.60722}
-  '10': {Latitude: 56.66363, Longitude: 22.48807}
-  '11': {Latitude: 56.59, Longitude: 21.13862}
-  '12': {Latitude: 56.34751, Longitude: 25.55514}
-  '13': {Latitude: 56.60477, Longitude: 25.25534}
-  '14': {Latitude: 56.55253, Longitude: 26.92449}
-  '15': {Latitude: 57.17767, Longitude: 26.75291}
-  '16': {Latitude: 57.89752, Longitude: 25.33155}
-  '17': {Latitude: 57.75361, Longitude: 24.35806}
-  '18': {Latitude: 57.76694, Longitude: 24.8825}
-  '19': {Latitude: 57.86329, Longitude: 25.05475}
-  '20': {Latitude: 57.62574, Longitude: 25.68535}
-  '21': {Latitude: 57.59639, Longitude: 24.85139}
-  '22': {Latitude: 57.51287, Longitude: 24.71941}
-  '23': {Latitude: 57.46389, Longitude: 24.46778}
-  '24': {Latitude: 56.645, Longitude: 25.12058}
-  '25': {Latitude: 57.54108, Longitude: 25.42751}
-  '26': {Latitude: 56.5, Longitude: 27.31667}
-  '27': {Latitude: 57.12944, Longitude: 24.27444}
-  '28': {Latitude: 56.6425, Longitude: 24.92056}
-  '29': {Latitude: 56.7451, Longitude: 24.72439}
-  '30': {Latitude: 56.946, Longitude: 24.10589}
-  '31': {Latitude: 55.88333, Longitude: 26.53333}
-  '32': {Latitude: 57.38944, Longitude: 21.56056}
-  '33': {Latitude: 56.53521, Longitude: 21.16782}
-  '34': {Latitude: 56.51667, Longitude: 21.01667}
-  '35': {Latitude: 56.94111, Longitude: 24.28972}
-  '36': {Latitude: 56.78528, Longitude: 23.93806}
-  '37': {Latitude: 56.72066, Longitude: 24.80743}
-  '38': {Latitude: 56.83333, Longitude: 24.5}
-  '39': {Latitude: 56.86014, Longitude: 24.36544}
-  '40': {Latitude: 56.4075, Longitude: 24.19056}
-  '41': {Latitude: 56.49903, Longitude: 25.85735}
-  '42': {Latitude: 56.65, Longitude: 23.71278}
-  '43': {Latitude: 56.83991, Longitude: 23.58902}
-  '44': {Latitude: 56.82662, Longitude: 24.23}
-  '45': {Latitude: 56.946, Longitude: 24.10589}
-  '46': {Latitude: 56.68833, Longitude: 23.5}
-  '47': {Latitude: 57.3224, Longitude: 24.74301}
-  '48': {Latitude: 57.15194, Longitude: 24.86472}
-  '49': {Latitude: 56.968, Longitude: 23.77038}
-  '50': {Latitude: 56.96694, Longitude: 23.15528}
-  '51': {Latitude: 57.24562, Longitude: 22.58137}
-  '52': {Latitude: 56.71667, Longitude: 21.6}
-  '53': {Latitude: 57.18074, Longitude: 24.70731}
-  '54': {Latitude: 57.09361, Longitude: 24.54861}
-  '55': {Latitude: 57.07583, Longitude: 24.32139}
-  '56': {Latitude: 56.68639, Longitude: 23.78778}
-  '57': {Latitude: 56.41588, Longitude: 23.68335}
-  '58': {Latitude: 56.8162, Longitude: 24.61401}
-  '59': {Latitude: 56.29444, Longitude: 26.72459}
-  '60': {Latitude: 56.35431, Longitude: 26.17579}
-  '61': {Latitude: 57.1313, Longitude: 27.26583}
-  '62': {Latitude: 56.78405, Longitude: 27.68829}
-  '63': {Latitude: 56.77535, Longitude: 27.71902}
-  '64': {Latitude: 56.63333, Longitude: 27.71667}
-  '65': {Latitude: 56.56667, Longitude: 27.66667}
-  '66': {Latitude: 56.55, Longitude: 27.71667}
-  '67': {Latitude: 56.55, Longitude: 27.88333}
-  '68': {Latitude: 56.38616, Longitude: 28.12165}
 edges:
-- ['0', '30']
-- ['1', '6']
-- ['2', '30']
-- ['3', '30']
-- ['4', '7']
-- ['5', '10']
-- ['6', '42']
-- ['6', '57']
-- ['7', '42']
-- ['8', '48']
-- ['9', '22']
-- ['10', '30']
-- ['11', '34']
-- ['12', '41']
-- ['12', '13']
-- ['13', '28']
-- ['14', '30']
-- ['15', '30']
-- ['16', '19']
-- ['16', '30']
-- ['17', '23']
-- ['18', '19']
-- ['18', '21']
-- ['18', '22']
-- ['20', '25']
-- ['22', '30']
-- ['22', '23']
-- ['23', '48']
-- ['24', '30']
-- ['25', '30']
-- ['26', '66']
-- ['26', '30']
-- ['26', '31']
-- ['27', '30']
-- ['27', '55']
-- ['28', '37']
-- ['29', '37']
-- ['29', '38']
-- ['30', '31']
-- ['30', '34']
-- ['30', '35']
-- ['30', '36']
-- ['30', '39']
-- ['30', '40']
-- ['30', '42']
-- ['30', '44']
-- ['30', '45']
-- ['30', '48']
-- ['30', '49']
-- ['30', '50']
-- ['30', '51']
-- ['30', '52']
-- ['30', '55']
-- ['30', '59']
-- ['30', '61']
-- ['30', '62']
-- ['31', '59']
-- ['32', '50']
-- ['33', '34']
-- ['36', '56']
-- ['38', '58']
-- ['38', '39']
-- ['41', '60']
-- ['42', '43']
-- ['42', '46']
-- ['42', '56']
-- ['47', '48']
-- ['48', '53']
-- ['48', '54']
-- ['62', '63']
-- ['63', '64']
-- ['65', '66']
-- ['66', '67']
-- ['66', '68']
+- - '0'
+  - '30'
+- - '1'
+  - '6'
+- - '2'
+  - '30'
+- - '3'
+  - '30'
+- - '4'
+  - '7'
+- - '5'
+  - '10'
+- - '6'
+  - '42'
+- - '6'
+  - '57'
+- - '7'
+  - '42'
+- - '8'
+  - '48'
+- - '9'
+  - '22'
+- - '10'
+  - '30'
+- - '11'
+  - '34'
+- - '12'
+  - '41'
+- - '12'
+  - '13'
+- - '13'
+  - '28'
+- - '14'
+  - '30'
+- - '15'
+  - '30'
+- - '16'
+  - '19'
+- - '16'
+  - '30'
+- - '17'
+  - '23'
+- - '18'
+  - '19'
+- - '18'
+  - '21'
+- - '18'
+  - '22'
+- - '20'
+  - '25'
+- - '22'
+  - '30'
+- - '22'
+  - '23'
+- - '23'
+  - '48'
+- - '24'
+  - '30'
+- - '25'
+  - '30'
+- - '26'
+  - '66'
+- - '26'
+  - '30'
+- - '26'
+  - '31'
+- - '27'
+  - '30'
+- - '27'
+  - '55'
+- - '28'
+  - '37'
+- - '29'
+  - '37'
+- - '29'
+  - '38'
+- - '30'
+  - '31'
+- - '30'
+  - '34'
+- - '30'
+  - '35'
+- - '30'
+  - '36'
+- - '30'
+  - '39'
+- - '30'
+  - '40'
+- - '30'
+  - '42'
+- - '30'
+  - '44'
+- - '30'
+  - '45'
+- - '30'
+  - '48'
+- - '30'
+  - '49'
+- - '30'
+  - '50'
+- - '30'
+  - '51'
+- - '30'
+  - '52'
+- - '30'
+  - '55'
+- - '30'
+  - '59'
+- - '30'
+  - '61'
+- - '30'
+  - '62'
+- - '31'
+  - '59'
+- - '32'
+  - '50'
+- - '33'
+  - '34'
+- - '36'
+  - '56'
+- - '38'
+  - '58'
+- - '38'
+  - '39'
+- - '41'
+  - '60'
+- - '42'
+  - '43'
+- - '42'
+  - '46'
+- - '42'
+  - '56'
+- - '47'
+  - '48'
+- - '48'
+  - '53'
+- - '48'
+  - '54'
+- - '62'
+  - '63'
+- - '63'
+  - '64'
+- - '65'
+  - '66'
+- - '66'
+  - '67'
+- - '66'
+  - '68'
+nodes:
+  '0':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.59861
+    Longitude: 24.20222
+    label: Iecava
+    type: Large Orange Node
+  '1':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.55972
+    Longitude: 23.77194
+    label: Vircava
+    type: Large Orange Node
+  '10':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.66363
+    Longitude: 22.48807
+    label: Saldus
+    type: Large Orange Node
+  '11':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.59
+    Longitude: 21.13862
+    label: Kapsede
+    type: Large Orange Node
+  '12':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.34751
+    Longitude: 25.55514
+    label: Viesite
+    type: Large Blue Node
+  '13':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.60477
+    Longitude: 25.25534
+    label: Aizkroukle
+    type: Large Blue Node
+  '14':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.55253
+    Longitude: 26.92449
+    label: Vilani
+    type: Large Blue Node
+  '15':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.17767
+    Longitude: 26.75291
+    label: Gulbene
+    type: Large Blue Node
+  '16':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.89752
+    Longitude: 25.33155
+    label: Rujiena
+    type: Large Blue Node
+  '17':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.75361
+    Longitude: 24.35806
+    label: Salagriva
+    type: Large Blue Node
+  '18':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.76694
+    Longitude: 24.8825
+    label: Aloja
+    type: Large Orange Node
+  '19':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.86329
+    Longitude: 25.05475
+    label: Mazsalaca
+    type: Large Orange Node
+  '2':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 55.89514
+    Longitude: 27.16799
+    label: Kraslava
+    type: Large Orange Node
+  '20':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.62574
+    Longitude: 25.68535
+    label: Strenci
+    type: Large Orange Node
+  '21':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.59639
+    Longitude: 24.85139
+    label: Pociems
+    type: Large Orange Node
+  '22':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.51287
+    Longitude: 24.71941
+    label: Limbazi
+    type: Large Orange Node
+  '23':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.46389
+    Longitude: 24.46778
+    label: Liepupe
+    type: Large Orange Node
+  '24':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.645
+    Longitude: 25.12058
+    label: Skriveri
+    type: Large Blue Node
+  '25':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.54108
+    Longitude: 25.42751
+    label: Valmiera
+    type: Large Blue Node
+  '26':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.5
+    Longitude: 27.31667
+    label: Rezekne
+    type: Large Blue Node
+  '27':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.12944
+    Longitude: 24.27444
+    label: Carnikava
+    type: Large Blue Node
+  '28':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.6425
+    Longitude: 24.92056
+    label: Jumprava
+    type: Small Red Node
+  '29':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.7451
+    Longitude: 24.72439
+    label: Kegums
+    type: Large Blue Node
+  '3':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.70694
+    Longitude: 24.35194
+    label: Baldone
+    type: Large Orange Node
+  '30':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.946
+    Longitude: 24.10589
+    label: Riga
+    type: GEANT2 PoP
+  '31':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 55.88333
+    Longitude: 26.53333
+    label: Daugapils
+    type: Large Blue Node
+  '32':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.38944
+    Longitude: 21.56056
+    label: Ventspits
+    type: Large Blue Node
+  '33':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.53521
+    Longitude: 21.16782
+    label: Grobina
+    type: Large Blue Node
+  '34':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.51667
+    Longitude: 21.01667
+    label: Liepaja
+    type: Large Blue Node
+  '35':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.94111
+    Longitude: 24.28972
+    label: Ulbroka
+    type: Small Red Node
+  '36':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.78528
+    Longitude: 23.93806
+    label: Olaine
+    type: Small Red Node
+  '37':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.72066
+    Longitude: 24.80743
+    label: Lielvarde
+    type: Small Red Node
+  '38':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.83333
+    Longitude: 24.5
+    label: Ikskile
+    type: Large Blue Node
+  '39':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.86014
+    Longitude: 24.36544
+    label: Salaspils
+    type: Large Blue Node
+  '4':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.45981
+    Longitude: 22.90169
+    label: Auce
+    type: Large Orange Node
+  '40':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.4075
+    Longitude: 24.19056
+    label: Bauska
+    type: Large Blue Node
+  '41':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.49903
+    Longitude: 25.85735
+    label: Jekabpils
+    type: Large Blue Node
+  '42':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.65
+    Longitude: 23.71278
+    label: Jelgava
+    type: Large Blue Node
+  '43':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.83991
+    Longitude: 23.58902
+    label: Kalnciems
+    type: Large Blue Node
+  '44':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.82662
+    Longitude: 24.23
+    label: Kekava
+    type: Large Blue Node
+  '45':
+    Internal: '0'
+    Latitude: 56.946
+    Longitude: 24.10589
+    label: GEANT2
+  '46':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.68833
+    Longitude: 23.5
+    label: Livberze
+    type: Large Blue Node
+  '47':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.3224
+    Longitude: 24.74301
+    label: Ledurga
+    type: Large Orange Node
+  '48':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.15194
+    Longitude: 24.86472
+    label: Sigulda
+    type: Large Orange Node
+  '49':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.968
+    Longitude: 23.77038
+    label: Jurmala
+    type: Large Orange Node
+  '5':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.7
+    Longitude: 22.53333
+    label: Broceni
+    type: Large Orange Node
+  '50':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.96694
+    Longitude: 23.15528
+    label: Tukums
+    type: Large Orange Node
+  '51':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.24562
+    Longitude: 22.58137
+    label: Talsi
+    type: Large Orange Node
+  '52':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.71667
+    Longitude: 21.6
+    label: Aizpute
+    type: Large Orange Node
+  '53':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.18074
+    Longitude: 24.70731
+    label: Ragona
+    type: Large Orange Node
+  '54':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.09361
+    Longitude: 24.54861
+    label: Vangazi
+    type: Large Orange Node
+  '55':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.07583
+    Longitude: 24.32139
+    label: Adazi
+    type: Large Orange Node
+  '56':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.68639
+    Longitude: 23.78778
+    label: Ozolnieki
+    type: Large Orange Node
+  '57':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.41588
+    Longitude: 23.68335
+    label: Eleja
+    type: Large Blue Node
+  '58':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.8162
+    Longitude: 24.61401
+    label: Ogre
+    type: Large Orange Node
+  '59':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.29444
+    Longitude: 26.72459
+    label: Preili
+    type: Large Orange Node
+  '6':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.53722
+    Longitude: 23.69639
+    label: Platone
+    type: Large Orange Node
+  '60':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.35431
+    Longitude: 26.17579
+    label: Livani
+    type: Large Orange Node
+  '61':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.1313
+    Longitude: 27.26583
+    label: Balvi
+    type: Large Orange Node
+  '62':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.78405
+    Longitude: 27.68829
+    label: Karsava
+    type: Large Orange Node
+  '63':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.77535
+    Longitude: 27.71902
+    label: Malnava
+    type: Large Orange Node
+  '64':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.63333
+    Longitude: 27.71667
+    label: Pusmucova
+    type: Large Orange Node
+  '65':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.56667
+    Longitude: 27.66667
+    label: Zvigzdene
+    type: Large Orange Node
+  '66':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.55
+    Longitude: 27.71667
+    label: Ludza
+    type: Large Orange Node
+  '67':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.55
+    Longitude: 27.88333
+    label: Cibla
+    type: Large Orange Node
+  '68':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.38616
+    Longitude: 28.12165
+    label: Zilupe
+    type: Large Orange Node
+  '7':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.625
+    Longitude: 23.27861
+    label: Dobele
+    type: Large Orange Node
+  '8':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.15861
+    Longitude: 24.70278
+    label: Krimulda
+    type: Large Blue Node
+  '9':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 57.60861
+    Longitude: 24.60722
+    label: Vijkene
+    type: Large Blue Node

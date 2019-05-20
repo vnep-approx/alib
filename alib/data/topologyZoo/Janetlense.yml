@@ -1,0 +1,220 @@
+edges:
+- - '0'
+  - '13'
+- - '0'
+  - '13'
+- - '0'
+  - '14'
+- - '1'
+  - '13'
+- - '1'
+  - '13'
+- - '1'
+  - '14'
+- - '2'
+  - '13'
+- - '2'
+  - '14'
+- - '3'
+  - '13'
+- - '3'
+  - '14'
+- - '4'
+  - '13'
+- - '4'
+  - '14'
+- - '5'
+  - '7'
+- - '6'
+  - '13'
+- - '6'
+  - '14'
+- - '7'
+  - '14'
+- - '7'
+  - '13'
+- - '8'
+  - '10'
+- - '9'
+  - '15'
+- - '10'
+  - '13'
+- - '10'
+  - '14'
+- - '11'
+  - '13'
+- - '11'
+  - '14'
+- - '12'
+  - '13'
+- - '12'
+  - '14'
+- - '13'
+  - '14'
+- - '13'
+  - '15'
+- - '13'
+  - '16'
+- - '13'
+  - '17'
+- - '13'
+  - '18'
+- - '13'
+  - '19'
+- - '14'
+  - '15'
+- - '14'
+  - '15'
+- - '14'
+  - '16'
+- - '14'
+  - '16'
+- - '14'
+  - '17'
+- - '14'
+  - '18'
+- - '14'
+  - '18'
+- - '14'
+  - '19'
+- - '14'
+  - '19'
+nodes:
+  '0':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.9
+    Longitude: -1.4
+    label: Southampton Aggregation
+    type: PoP
+  '1':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.9
+    Longitude: -1.4
+    label: Southampton
+    type: PoP
+  '10':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.85164
+    Longitude: -1.07404
+    label: Wymering
+    type: PoP
+  '11':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.83673
+    Longitude: -0.78003
+    label: Chichester
+    type: PoP
+  '12':
+    Internal: '0'
+    Latitude: 51.075
+    Longitude: -1.083335
+    label: Janet SJ5
+  '13':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.9
+    Longitude: -1.4
+    label: Southampton Core
+    type: Core PoP
+  '14':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.25
+    Longitude: -0.76667
+    label: Aldershot Core
+    type: Core PoP
+  '15':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.82838
+    Longitude: -0.13947
+    label: Brighton Aggregation
+    type: PoP
+  '16':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.82838
+    Longitude: -0.13947
+    label: Brighton
+    type: PoP
+  '17':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.76871
+    Longitude: 0.28453
+    label: Sussex
+    type: PoP
+  '18':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.31903
+    Longitude: -0.55893
+    label: Surrey
+    type: PoP
+  '19':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.25
+    Longitude: -0.76667
+    label: Aldershot Aggregation
+    type: PoP
+  '2':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.06513
+    Longitude: -1.3187
+    label: Winchester
+    type: PoP
+  '3':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.80908
+    Longitude: -1.07142
+    label: Portsmouth
+    type: PoP
+  '4':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.71667
+    Longitude: -1.88333
+    label: Bournemouth
+    type: PoP
+  '5':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.68333
+    Longitude: -2.11667
+    label: Bere Regis Colocation
+    type: Colocation
+  '6':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.9
+    Longitude: -1.4
+    label: Solent
+    type: PoP
+  '7':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.71667
+    Longitude: -1.88333
+    label: Bournemouth Aggregation
+    type: PoP
+  '8':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.66667
+    Longitude: -1.33333
+    label: Isle of Wight Colocation
+    type: Colocation
+  '9':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.76871
+    Longitude: 0.28453
+    label: Hampton Park Colocation
+    type: Colocation

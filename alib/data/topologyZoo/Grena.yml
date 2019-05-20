@@ -1,33 +1,141 @@
-nodes:
-  '0': {Latitude: 42.1537, Longitude: 42.33517}
-  '1': {Latitude: 41.64159, Longitude: 41.63593}
-  '2': {Latitude: 42.24961, Longitude: 42.69974}
-  '3': {Latitude: 42.24961, Longitude: 42.69974}
-  '4': {Latitude: 42.14616, Longitude: 41.67197}
-  '5': {Latitude: 42.5088, Longitude: 41.87088}
-  '6': {Latitude: 41.99414, Longitude: 43.59994}
-  '7': {Latitude: 42.24961, Longitude: 42.69974}
-  '8': {Latitude: 41.69411, Longitude: 44.83368}
-  '9': {Latitude: 41.54949, Longitude: 44.99323}
-  '10': {Latitude: 41.54949, Longitude: 44.99323}
-  '11': {Latitude: 41.91978, Longitude: 45.47315}
-  '12': {Latitude: 41.54949, Longitude: 44.99323}
-  '13': {Latitude: 41.54949, Longitude: 44.99323}
-  '14': {Latitude: 41.98422, Longitude: 44.11578}
-  '15': {Latitude: 42.24961, Longitude: 42.69974}
 edges:
-- ['0', '4']
-- ['0', '15']
-- ['1', '4']
-- ['2', '3']
-- ['3', '15']
-- ['3', '7']
-- ['4', '5']
-- ['6', '14']
-- ['6', '15']
-- ['8', '11']
-- ['8', '13']
-- ['8', '14']
-- ['9', '10']
-- ['10', '13']
-- ['12', '13']
+- - '0'
+  - '4'
+- - '0'
+  - '15'
+- - '1'
+  - '4'
+- - '2'
+  - '3'
+- - '3'
+  - '15'
+- - '3'
+  - '7'
+- - '4'
+  - '5'
+- - '6'
+  - '14'
+- - '6'
+  - '15'
+- - '8'
+  - '11'
+- - '8'
+  - '13'
+- - '8'
+  - '14'
+- - '9'
+  - '10'
+- - '10'
+  - '13'
+- - '12'
+  - '13'
+nodes:
+  '0':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 42.1537
+    Longitude: 42.33517
+    label: Cisco 3640 Samtredia
+    type: Router
+  '1':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 41.64159
+    Longitude: 41.63593
+    label: Cisco 2621 Batumi
+    type: Router
+  '10':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 41.54949
+    Longitude: 44.99323
+    label: Rustavi CO14
+    type: Router
+  '11':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 41.91978
+    Longitude: 45.47315
+    label: Cisco 3640 Telavi
+    type: Router
+  '12':
+    Internal: '1'
+    Latitude: 41.54949
+    Longitude: 44.99323
+    label: Corecess DX6524
+    type: Router
+  '13':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 41.54949
+    Longitude: 44.99323
+    label: Rustavi CO15
+    type: Router
+  '14':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 41.98422
+    Longitude: 44.11578
+    label: Cisco 3640 Gori
+    type: Router
+  '15':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 42.24961
+    Longitude: 42.69974
+    label: Cisco 3640 Kutaisi C07
+    type: Router
+  '2':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 42.24961
+    Longitude: 42.69974
+    label: Cisco 2511 Kutaisi
+    type: Router
+  '3':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 42.24961
+    Longitude: 42.69974
+    label: Cisco 3640 Kutaisi C04
+    type: Router
+  '4':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 42.14616
+    Longitude: 41.67197
+    label: Cisco 3640 Poti
+    type: Router
+  '5':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 42.5088
+    Longitude: 41.87088
+    label: Cisco 3640 Zugididi
+    type: Router
+  '6':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 41.99414
+    Longitude: 43.59994
+    label: Cisco 3640 Khashuri
+    type: Router
+  '7':
+    Internal: '1'
+    Latitude: 42.24961
+    Longitude: 42.69974
+    label: Corecess DX6524
+    type: Router
+  '8':
+    Country: Georgia
+    Internal: '1'
+    Latitude: 41.69411
+    Longitude: 44.83368
+    label: Tbilisi GRENA Network
+    type: MAN
+  '9':
+    Internal: '1'
+    Latitude: 41.54949
+    Longitude: 44.99323
+    label: Corecess DX6524
+    type: Router

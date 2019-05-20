@@ -1,48 +1,174 @@
-nodes:
-  '0': {Latitude: 43.07176, Longitude: -70.76255}
-  '1': {Latitude: 43.19786, Longitude: -70.87367}
-  '2': {Latitude: 43.49258, Longitude: -70.45338}
-  '3': {Latitude: 43.43925, Longitude: -70.77422}
-  '4': {Latitude: 42.35843, Longitude: -71.05977}
-  '5': {Latitude: 42.27926, Longitude: -71.41617}
-  '6': {Latitude: 42.99564, Longitude: -71.45479}
-  '7': {Latitude: 42.93369, Longitude: -72.27814}
-  '8': {Latitude: 42.26259, Longitude: -71.80229}
-  '9': {Latitude: 42.10148, Longitude: -72.58981}
-  '10': {Latitude: 44.80118, Longitude: -68.77781}
-  '11': {Latitude: 43.66147, Longitude: -70.25533}
-  '12': {Latitude: 44.25646, Longitude: -70.25617}
-  '13': {Latitude: 44.40423, Longitude: -70.79062}
-  '14': {Latitude: 44.21396, Longitude: -70.54478}
-  '15': {Latitude: 43.73591, Longitude: -70.552}
-  '16': {Latitude: 44.28951, Longitude: -70.36534}
-  '17': {Latitude: 44.31062, Longitude: -69.77949}
-  '18': {Latitude: 44.10035, Longitude: -70.21478}
-  '19': {Latitude: 44.31062, Longitude: -69.77949}
 edges:
-- ['0', '3']
-- ['0', '11']
-- ['0', '6']
-- ['1', '11']
-- ['1', '7']
-- ['2', '3']
-- ['2', '11']
-- ['4', '5']
-- ['4', '6']
-- ['5', '8']
-- ['7', '9']
-- ['8', '9']
-- ['10', '18']
-- ['10', '19']
-- ['11', '18']
-- ['11', '15']
-- ['12', '17']
-- ['12', '13']
-- ['13', '14']
-- ['14', '16']
-- ['14', '15']
-- ['15', '16']
-- ['16', '17']
-- ['17', '18']
-- ['17', '19']
-- ['18', '19']
+- - '0'
+  - '3'
+- - '0'
+  - '11'
+- - '0'
+  - '6'
+- - '1'
+  - '11'
+- - '1'
+  - '7'
+- - '2'
+  - '3'
+- - '2'
+  - '11'
+- - '4'
+  - '5'
+- - '4'
+  - '6'
+- - '5'
+  - '8'
+- - '7'
+  - '9'
+- - '8'
+  - '9'
+- - '10'
+  - '18'
+- - '10'
+  - '19'
+- - '11'
+  - '18'
+- - '11'
+  - '15'
+- - '12'
+  - '17'
+- - '12'
+  - '13'
+- - '13'
+  - '14'
+- - '14'
+  - '16'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '16'
+  - '17'
+- - '17'
+  - '18'
+- - '17'
+  - '19'
+- - '18'
+  - '19'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 43.07176
+    Longitude: -70.76255
+    label: Portsmouth
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 43.19786
+    Longitude: -70.87367
+    label: Dover
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.80118
+    Longitude: -68.77781
+    label: Bangor
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 43.66147
+    Longitude: -70.25533
+    label: Portland
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.25646
+    Longitude: -70.25617
+    label: Turner
+  '13':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.40423
+    Longitude: -70.79062
+    label: Bethel
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.21396
+    Longitude: -70.54478
+    label: Norway
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 43.73591
+    Longitude: -70.552
+    label: Standish
+  '16':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.28951
+    Longitude: -70.36534
+    label: Buckfield
+  '17':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.31062
+    Longitude: -69.77949
+    label: Augusta
+  '18':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.10035
+    Longitude: -70.21478
+    label: Lewiston
+  '19':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.31062
+    Longitude: -69.77949
+    label: Augusta
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 43.49258
+    Longitude: -70.45338
+    label: Biddeford
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 43.43925
+    Longitude: -70.77422
+    label: Sanford
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.35843
+    Longitude: -71.05977
+    label: Boston
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.27926
+    Longitude: -71.41617
+    label: Framingham
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.99564
+    Longitude: -71.45479
+    label: Manchester
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.93369
+    Longitude: -72.27814
+    label: Keene
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.26259
+    Longitude: -71.80229
+    label: Worcester
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.10148
+    Longitude: -72.58981
+    label: Springfield

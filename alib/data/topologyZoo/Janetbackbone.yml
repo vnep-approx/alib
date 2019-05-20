@@ -1,76 +1,296 @@
-nodes:
-  '0': {Latitude: 51.46117, Longitude: -0.93083}
-  '1': {Latitude: 51.37795, Longitude: -2.35907}
-  '2': {Latitude: 52.5, Longitude: -1.96667}
-  '3': {Latitude: 51.48, Longitude: -3.18}
-  '4': {Latitude: 51.50853, Longitude: -0.12574}
-  '5': {Latitude: 52.2, Longitude: 0.11667}
-  '6': {Latitude: 50.90395, Longitude: -1.40428}
-  '7': {Latitude: 51.38914, Longitude: 0.54863}
-  '8': {Latitude: 52.83111, Longitude: -1.32806}
-  '9': {Latitude: 53.94627, Longitude: -4.54012}
-  '10': {Latitude: 55.95, Longitude: -3.2}
-  '11': {Latitude: 51.45625, Longitude: -0.97113}
-  '12': {Latitude: 53.79648, Longitude: -1.54785}
-  '13': {Latitude: 53.39254, Longitude: -2.58024}
-  '14': {Latitude: 55.86515, Longitude: -4.25763}
-  '15': {Latitude: 51.50853, Longitude: -0.12574}
-  '16': {Latitude: 51.50853, Longitude: -0.12574}
-  '17': {Latitude: 51.50853, Longitude: -0.12574}
-  '18': {Latitude: 51.45, Longitude: -2.58333}
-  '19': {Latitude: 54.58333, Longitude: -2.83333}
-  '20': {Latitude: 54.5, Longitude: -6.5}
-  '21': {Latitude: 57.12, Longitude: -4.71}
-  '22': {Latitude: 57.14369, Longitude: -2.09814}
-  '23': {Latitude: 56.33871, Longitude: -2.79902}
-  '24': {Latitude: 55.95, Longitude: -3.2}
-  '25': {Latitude: 55.86515, Longitude: -4.25763}
-  '26': {Latitude: 54.97328, Longitude: -1.61396}
-  '27': {Latitude: 54.27966, Longitude: -0.40443}
-  '28': {Latitude: 53.48095, Longitude: -2.23743}
 edges:
-- ['0', '11']
-- ['0', '4']
-- ['1', '18']
-- ['1', '3']
-- ['2', '12']
-- ['2', '13']
-- ['3', '11']
-- ['4', '17']
-- ['5', '17']
-- ['5', '12']
-- ['6', '17']
-- ['6', '18']
-- ['7', '17']
-- ['7', '11']
-- ['8', '17']
-- ['8', '12']
-- ['9', '20']
-- ['9', '13']
-- ['10', '12']
-- ['10', '14']
-- ['11', '13']
-- ['11', '16']
-- ['11', '18']
-- ['12', '13']
-- ['12', '17']
-- ['12', '23']
-- ['12', '24']
-- ['12', '26']
-- ['12', '27']
-- ['13', '14']
-- ['13', '19']
-- ['13', '28']
-- ['14', '19']
-- ['14', '20']
-- ['14', '21']
-- ['14', '25']
-- ['14', '26']
-- ['14', '28']
-- ['15', '16']
-- ['15', '17']
-- ['17', '18']
-- ['21', '22']
-- ['22', '23']
-- ['24', '25']
-- ['27', '28']
+- - '0'
+  - '11'
+- - '0'
+  - '4'
+- - '1'
+  - '18'
+- - '1'
+  - '3'
+- - '2'
+  - '12'
+- - '2'
+  - '13'
+- - '3'
+  - '11'
+- - '4'
+  - '17'
+- - '5'
+  - '17'
+- - '5'
+  - '12'
+- - '6'
+  - '17'
+- - '6'
+  - '18'
+- - '7'
+  - '17'
+- - '7'
+  - '11'
+- - '8'
+  - '17'
+- - '8'
+  - '12'
+- - '9'
+  - '20'
+- - '9'
+  - '13'
+- - '10'
+  - '12'
+- - '10'
+  - '14'
+- - '11'
+  - '13'
+- - '11'
+  - '16'
+- - '11'
+  - '18'
+- - '12'
+  - '13'
+- - '12'
+  - '17'
+- - '12'
+  - '23'
+- - '12'
+  - '24'
+- - '12'
+  - '26'
+- - '12'
+  - '27'
+- - '13'
+  - '14'
+- - '13'
+  - '19'
+- - '13'
+  - '28'
+- - '14'
+  - '19'
+- - '14'
+  - '20'
+- - '14'
+  - '21'
+- - '14'
+  - '25'
+- - '14'
+  - '26'
+- - '14'
+  - '28'
+- - '15'
+  - '16'
+- - '15'
+  - '17'
+- - '17'
+  - '18'
+- - '21'
+  - '22'
+- - '22'
+  - '23'
+- - '24'
+  - '25'
+- - '27'
+  - '28'
+nodes:
+  '0':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.46117
+    Longitude: -0.93083
+    label: TVN
+    type: Node
+  '1':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.37795
+    Longitude: -2.35907
+    label: SWERN
+    type: Node
+  '10':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 55.95
+    Longitude: -3.2
+    label: Sco-locate
+    type: Blue Square
+  '11':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.45625
+    Longitude: -0.97113
+    label: Reading
+    type: Core Node
+  '12':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.79648
+    Longitude: -1.54785
+    label: Leeds
+    type: Core Node
+  '13':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.39254
+    Longitude: -2.58024
+    label: Warrington
+    type: Core Node
+  '14':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 55.86515
+    Longitude: -4.25763
+    label: Glasgow
+    type: Core Node
+  '15':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: Telehouse
+    type: Core Node
+  '16':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: Telecity
+    type: Core Node
+  '17':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: London
+    type: Core Node
+  '18':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.45
+    Longitude: -2.58333
+    label: Bristol
+    type: Core Node
+  '19':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 54.58333
+    Longitude: -2.83333
+    geocode_id: '2651712'
+    label: C&NLMAN
+    type: Node
+  '2':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 52.5
+    Longitude: -1.96667
+    label: MidMAN
+    type: Node
+  '20':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 54.5
+    Longitude: -6.5
+    geocode_id: '2641364'
+    label: NIRAN
+    type: Node
+  '21':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 57.12
+    Longitude: -4.71
+    label: UHIMI
+    type: Node
+  '22':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 57.14369
+    Longitude: -2.09814
+    label: AbMAN
+    type: Node
+  '23':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 56.33871
+    Longitude: -2.79902
+    label: FaTMAN
+    type: Node
+  '24':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 55.95
+    Longitude: -3.2
+    label: EaStMAN
+    type: Node
+  '25':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 55.86515
+    Longitude: -4.25763
+    label: Clydenet
+    type: Node
+  '26':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 54.97328
+    Longitude: -1.61396
+    label: NorMAN
+    type: Node
+  '27':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 54.27966
+    Longitude: -0.40443
+    label: YHMAN
+    type: Node
+  '28':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.48095
+    Longitude: -2.23743
+    label: NNW
+    type: Node
+  '3':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.48
+    Longitude: -3.18
+    label: WREN
+    type: Node
+  '4':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: LMN
+    type: Node
+  '5':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 52.2
+    Longitude: 0.11667
+    label: EastNet
+    type: Node
+  '6':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 50.90395
+    Longitude: -1.40428
+    label: LeNSE
+    type: Node
+  '7':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.38914
+    Longitude: 0.54863
+    label: Kentish MAN
+    type: Node
+  '8':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 52.83111
+    Longitude: -1.32806
+    label: EMMAN
+    type: Node
+  '9':
+    Internal: '1'
+    Latitude: 53.94627
+    Longitude: -4.54012
+    label: Dublin
+    type: Blue Square

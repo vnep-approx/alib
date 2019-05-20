@@ -1,31 +1,122 @@
-nodes:
-  '0': {Latitude: 32.06667, Longitude: 34.76667}
-  '1': {Latitude: 32.06667, Longitude: 34.76667}
-  '2': {Latitude: 32.09174, Longitude: 34.88503}
-  '3': {Latitude: 32.09174, Longitude: 34.88503}
-  '4': {Latitude: 32.09174, Longitude: 34.88503}
-  '5': {Latitude: 32.09174, Longitude: 34.88503}
-  '6': {Latitude: 32.18333, Longitude: 34.86667}
-  '7': {Latitude: 32.81556, Longitude: 34.98917}
-  '8': {Latitude: 32.81556, Longitude: 34.98917}
-  '9': {Latitude: 32.08056, Longitude: 34.81417}
-  '10': {Latitude: 31.77902, Longitude: 35.2253}
-  '11': {Latitude: 29.56111, Longitude: 34.95167}
-  '12': {Latitude: 31.89694, Longitude: 34.81861}
-  '13': {Latitude: 32.06667, Longitude: 34.76667}
 edges:
-- ['0', '1']
-- ['0', '7']
-- ['0', '8']
-- ['0', '9']
-- ['0', '10']
-- ['0', '11']
-- ['0', '12']
-- ['0', '13']
-- ['2', '3']
-- ['3', '4']
-- ['3', '5']
-- ['3', '6']
-- ['3', '7']
-- ['3', '9']
-- ['3', '13']
+- - '0'
+  - '1'
+- - '0'
+  - '7'
+- - '0'
+  - '8'
+- - '0'
+  - '9'
+- - '0'
+  - '10'
+- - '0'
+  - '11'
+- - '0'
+  - '12'
+- - '0'
+  - '13'
+- - '2'
+  - '3'
+- - '3'
+  - '4'
+- - '3'
+  - '5'
+- - '3'
+  - '6'
+- - '3'
+  - '7'
+- - '3'
+  - '9'
+- - '3'
+  - '13'
+nodes:
+  '0':
+    Country: Israel
+    Internal: '1'
+    Latitude: 32.06667
+    Longitude: 34.76667
+    label: Tel Aviv GigaPoP
+    type: Orange Node
+  '1':
+    Internal: '0'
+    Latitude: 32.06667
+    Longitude: 34.76667
+    label: 'Int''l backup '
+  '10':
+    Country: Israel
+    Internal: '1'
+    Latitude: 31.77902
+    Longitude: 35.2253
+    label: Hebrew University
+    type: Purple Node
+  '11':
+    Country: Israel
+    Internal: '1'
+    Latitude: 29.56111
+    Longitude: 34.95167
+    label: Ben Gurion University
+    type: Purple Node
+  '12':
+    Country: Israel
+    Internal: '1'
+    Latitude: 31.89694
+    Longitude: 34.81861
+    label: Weizmann Institute
+    type: Purple Node
+  '13':
+    Country: Israel
+    Internal: '1'
+    Latitude: 32.06667
+    Longitude: 34.76667
+    label: Tel Aviv University
+    type: Purple Node
+  '2':
+    Internal: '0'
+    Latitude: 32.09174
+    Longitude: 34.88503
+    label: IIX
+  '3':
+    Country: Israel
+    Internal: '1'
+    Latitude: 32.09174
+    Longitude: 34.88503
+    label: Petach Tikva GigaPoP
+    type: Orange Node
+  '4':
+    Internal: '0'
+    Latitude: 32.09174
+    Longitude: 34.88503
+    label: External Users
+  '5':
+    Internal: '0'
+    Latitude: 32.09174
+    Longitude: 34.88503
+    label: GEANT 2 Germany
+  '6':
+    Country: Israel
+    Internal: '1'
+    Latitude: 32.18333
+    Longitude: 34.86667
+    label: Open University
+    type: Purple Node
+  '7':
+    Country: Israel
+    Internal: '1'
+    Latitude: 32.81556
+    Longitude: 34.98917
+    label: Haifa University
+    type: Purple Node
+  '8':
+    Country: Israel
+    Internal: '1'
+    Latitude: 32.81556
+    Longitude: 34.98917
+    label: Technion
+    type: Purple Node
+  '9':
+    Country: Israel
+    Internal: '1'
+    Latitude: 32.08056
+    Longitude: 34.81417
+    label: Bar Ilan University
+    type: Purple Node

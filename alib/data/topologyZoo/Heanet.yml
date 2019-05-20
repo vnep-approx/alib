@@ -1,20 +1,84 @@
-nodes:
-  '0': {Latitude: 53.27194, Longitude: -9.04889}
-  '1': {Latitude: 52.66472, Longitude: -8.62306}
-  '2': {Latitude: 51.89861, Longitude: -8.49583}
-  '3': {Latitude: 53.34399, Longitude: -6.26719}
-  '4': {Latitude: 53.34399, Longitude: -6.26719}
-  '5': {Latitude: 53.34399, Longitude: -6.26719}
-  '6': {Latitude: 53.34399, Longitude: -6.26719}
 edges:
-- ['0', '3']
-- ['0', '6']
-- ['1', '2']
-- ['1', '3']
-- ['1', '6']
-- ['2', '3']
-- ['3', '4']
-- ['3', '5']
-- ['3', '6']
-- ['4', '6']
-- ['5', '6']
+- - '0'
+  - '3'
+- - '0'
+  - '6'
+- - '1'
+  - '2'
+- - '1'
+  - '3'
+- - '1'
+  - '6'
+- - '2'
+  - '3'
+- - '3'
+  - '4'
+- - '3'
+  - '5'
+- - '3'
+  - '5'
+- - '3'
+  - '6'
+- - '3'
+  - '6'
+- - '4'
+  - '6'
+- - '5'
+  - '6'
+nodes:
+  '0':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.27194
+    Longitude: -9.04889
+    label: Galway
+    x: '119.0'
+    y: '104.0'
+  '1':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 52.66472
+    Longitude: -8.62306
+    label: Limerick
+    x: '100.0'
+    y: '149.0'
+  '2':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 51.89861
+    Longitude: -8.49583
+    label: Cork
+    x: '90.0'
+    y: '273.0'
+  '3':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.34399
+    Longitude: -6.26719
+    label: CityWest
+    x: '275.0'
+    y: '85.0'
+  '4':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.34399
+    Longitude: -6.26719
+    label: DCU (Dublin City University
+    x: '372.0'
+    y: '114.0'
+  '5':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.34399
+    Longitude: -6.26719
+    label: TDC (Trinity College Dublin)
+    x: '403.0'
+    y: '270.0'
+  '6':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.34399
+    Longitude: -6.26719
+    label: Kilcarbery
+    x: '270.0'
+    y: '269.0'

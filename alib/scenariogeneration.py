@@ -25,15 +25,20 @@ import pkg_resources
 
 import cPickle as pickle
 import copy
+import networkx as nx
 import itertools
+import glob
 import math
 import multiprocessing as mp
+from multiprocessing.managers import BaseManager, SyncManager
 import os
+from unidecode import unidecode
 
 import time
 import yaml
 from collections import deque, namedtuple
 from random import Random
+from vnep_approx import treewidth_model
 
 import numpy.random
 
@@ -168,6 +173,7 @@ class ScenarioParameterContainer(object):
     '''Represents a set of scenarios accessible via its parameters according to which the scenarios (instances) were generated.
 
     '''
+
     def __init__(self, scenario_parameter_room, scenario_index_offset=0):
         self.scenarioparameter_room = scenario_parameter_room
         self.scenario_index_offset = scenario_index_offset
@@ -288,6 +294,12 @@ class ScenarioParameterContainer(object):
         for i, (sp, scenario) in other.scenario_triple.items():
             self.fill_reverselookup_dict(sp, i)
 
+        if not isinstance(self.scenarioparameter_room, list):
+            self.scenarioparameter_room = [self.scenarioparameter_room]
+        if not isinstance(other.scenarioparameter_room, list):
+            other.scenarioparameter_room = [other.scenarioparameter_room]
+        self.scenarioparameter_room += other.scenarioparameter_room
+
     def init_reverselookup_dict(self):
         for task in SCENARIO_GENERATION_TASKS:
             self.scenario_parameter_dict.setdefault(task, dict())
@@ -312,18 +324,45 @@ class ScenarioParameterContainer(object):
                         spd[task][strat][class_name][key][val].add(currentindex)
 
 
+class CustomizedDataManager(SyncManager):
+    pass
+
+
+CustomizedDataManager.register('UndirectedGraphStorage', datamodel.UndirectedGraphStorage)
+
+
 class ScenarioGenerator(object):
     '''Class to generate scenarios according to a specific parameter space.
 
     '''
+
     def __init__(self, threads=1):
         self.scenario_parameter_container = None
         self.threads = threads
         self.repetition = 1
+        self.main_data_manager = None
+        self.actual_data_managers = {}
 
     def generate_scenarios(self, scenario_parameter_space, repetition=1, scenario_index_offset=0):
         self.repetition = repetition
         global_logger.info("Generating scenarios...")
+
+        if "data_managers" in scenario_parameter_space:
+            self.main_data_manager = CustomizedDataManager()
+            self.main_data_manager.start()
+            for key, value in scenario_parameter_space["data_managers"].iteritems():
+                if key == "UndirectedGraphStorage":
+                    global_logger.info("Starting UndirectedGraphStorage Manager")
+                    graph_storage_manager = self.main_data_manager.UndirectedGraphStorage(parameter_name=None)
+                    graph_storage_lock = self.main_data_manager.Lock()
+                    global_logger.info("\tLoading UndirectedGraphStorage data")
+                    graph_storage_manager.load_from_pickle(value)
+                    global_logger.info("\tDone.")
+                    self.actual_data_managers[key] = (graph_storage_manager, graph_storage_lock)
+                else:
+                    raise ValueError("Data Manager {} is unknown.".format(key))
+            del scenario_parameter_space['data_managers']
+
         self.scenario_parameter_container = ScenarioParameterContainer(scenario_parameter_space, scenario_index_offset=scenario_index_offset)
         self.scenario_parameter_container.generate_all_scenario_parameter_combinations(repetition)
         scenario_parameter_combination_list = self.scenario_parameter_container.scenario_parameter_combination_list
@@ -340,17 +379,19 @@ class ScenarioGenerator(object):
 
     def _singleprocessed(self, scenario_parameter_combination_list, scenario_index_offset=0):
         for i, sp in enumerate(scenario_parameter_combination_list, scenario_index_offset):
-            yield build_scenario((i, sp))
+            yield build_scenario((i, sp, self.actual_data_managers))
 
     def _multiprocessed(self, scenario_parameter_combination_list, scenario_index_offset=0):
         proc_pool = mp.Pool(processes=self.threads, maxtasksperchild=100)
-        for out in proc_pool.map(build_scenario, list(enumerate(scenario_parameter_combination_list, scenario_index_offset))):
+        task_list = [(i + scenario_index_offset, scenario_parameter_combination_list[i], self.actual_data_managers) for i in range(len(scenario_parameter_combination_list))]
+
+        for out in proc_pool.map(build_scenario, task_list):
             yield out
         proc_pool.close()
         proc_pool.join()
 
 
-def build_scenario(i_sp_tup, maxrep=1):
+def build_scenario(i_sp_tup):
     """
     Build a single scenario based on the scenario parameters.
 
@@ -372,28 +413,44 @@ def build_scenario(i_sp_tup, maxrep=1):
     :return:
     """
 
-    i, sp = i_sp_tup
-    logger = util.get_logger("sg_worker_{}".format(os.getpid()), make_file=False, propagate=False)
-    logger.info("Generating scenario {}  with {}".format(i, sp))
-    scenario = datamodel.Scenario(name="scenario_{}_rep_{}".format(i / sp['maxrepetition'], sp['repetition']),
-                                  substrate=None,
-                                  requests=None,
-                                  objective=datamodel.Objective.MIN_COST)
-    top_zoo_reader = TopologyZooReader()
-    top_zoo_reader.apply(sp, scenario)
-    class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
-    global_name_space = globals()
-    rg = global_name_space[class_name_request_generator]()
-    rg.apply(sp, scenario)
-    if NODE_PLACEMENT_TASK in sp:
-        class_name_npr = sp[NODE_PLACEMENT_TASK].values()[0].keys()[0]
-        npr = global_name_space[class_name_npr]()
-        npr.apply(sp, scenario)
-    if PROFIT_CALCULATION_TASK in sp:
-        class_name_profit_calc = sp[PROFIT_CALCULATION_TASK].values()[0].keys()[0]
-        pc = global_name_space[class_name_profit_calc]()
-        pc.apply(sp, scenario)
-        scenario.objective = datamodel.Objective.MAX_PROFIT
+    try:
+
+        i, sp, datamanager_dict = None, None, None
+
+        if len(i_sp_tup) == 2:
+            i, sp = i_sp_tup
+        elif len(i_sp_tup) == 3:
+            i, sp, datamanager_dict = i_sp_tup
+        else:
+            raise ValueError("Don't know how to handle {} many arguments.".format(len(i_sp_tup)))
+
+        logger = util.get_logger("sg_worker_{}".format(os.getpid()), make_file=True, propagate=False)
+        logger.info("Generating scenario {}  with {}".format(i, sp))
+        scenario = datamodel.Scenario(name="scenario_{}_rep_{}".format(i / sp['maxrepetition'], sp['repetition']),
+                                      substrate=None,
+                                      requests=None,
+                                      objective=datamodel.Objective.MIN_COST)
+        top_zoo_reader = TopologyZooReader(logger=logger)
+        top_zoo_reader.apply(sp, scenario)
+        class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
+        global_name_space = globals()
+        rg = global_name_space[class_name_request_generator](logger=logger)
+        if datamanager_dict is not None:
+            rg.register_data_manager_dict(datamanager_dict)
+        rg.apply(sp, scenario)
+        if NODE_PLACEMENT_TASK in sp:
+            class_name_npr = sp[NODE_PLACEMENT_TASK].values()[0].keys()[0]
+            npr = global_name_space[class_name_npr](logger=logger)
+            npr.apply(sp, scenario)
+        if PROFIT_CALCULATION_TASK in sp:
+            class_name_profit_calc = sp[PROFIT_CALCULATION_TASK].values()[0].keys()[0]
+            pc = global_name_space[class_name_profit_calc](logger=logger)
+            pc.apply(sp, scenario)
+            scenario.objective = datamodel.Objective.MAX_PROFIT
+    except Exception as e:
+        with open("log/{}_error.log".format(os.getpid()), "w") as f:
+            import traceback
+            traceback.print_exc(file=f)
     return i, scenario, sp
 
 
@@ -432,6 +489,10 @@ class AbstractRequestGenerator(ScenariogenerationTask):
         self._raw_parameters = None
         self._scenario_parameters_have_changed = True  # to avoid redundant calculations on the same scenario
         self._node_types = None
+        self._data_manager_dict = None
+
+    def register_data_manager_dict(self, data_manager_dict):
+        self._data_manager_dict = data_manager_dict
 
     def apply(self, scenario_parameters, scenario):
         class_raw_parameters_dict = scenario_parameters[REQUEST_GENERATION_TASK].values()[0]
@@ -884,7 +945,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
         self._substrate = None
         self._node_demand_by_type = None
         self._edge_demand = None
-        self._generation_attemps = None
+        self._generation_attempts = None
         self._advanced_inspection_information = None
 
     def generate_request(self,
@@ -898,12 +959,12 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             self._calculate_average_resource_demands()
         req = None
         is_feasible = False
-        self._generation_attemps = 0
+        self._generation_attempts = 0
         while not is_feasible:
             req = self._generate_request_graph(name)
             is_feasible = self.verify_substrate_has_sufficient_capacity(req, substrate)
-            self._generation_attemps += 1
-            if self._generation_attemps > 10**7:
+            self._generation_attempts += 1
+            if self._generation_attempts > 10**7:
                 self._abort()
         self.logger.debug("Generated cactus request {} with sufficient capacities at the substrate".format(name))
         self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
@@ -933,8 +994,8 @@ class CactusRequestGenerator(AbstractRequestGenerator):
 
     def _generate_tree_with_correct_size(self, name):
         has_correct_size = False
-        if self._generation_attemps is None:
-            self._generation_attemps = 0
+        if self._generation_attempts is None:
+            self._generation_attempts = 0
         req = None
         while not has_correct_size:
             req = self._generate_tree(name)
@@ -943,8 +1004,8 @@ class CactusRequestGenerator(AbstractRequestGenerator):
                 self._advanced_inspection_information.generation_tries_overall += 1
                 if not has_correct_size:
                     self._advanced_inspection_information.generation_tries_failed += 1
-            self._generation_attemps += 1
-            if self._generation_attemps > 10**7:
+            self._generation_attempts += 1
+            if self._generation_attempts > 10**7:
                 self._abort()
         return req
 
@@ -1193,7 +1254,225 @@ class CactusRequestGenerator(AbstractRequestGenerator):
 
     def _abort(self):
         raise RequestGenerationError(
-            "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attemps, self._raw_parameters)
+            "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attempts, self._raw_parameters)
+        )
+
+
+class TreewidthRequestGenerator(AbstractRequestGenerator):
+    """
+    Generate request topologies of bounded treewidth using a mandatory UndirectedGraphStorage.
+    Specifically, for graphs of treewidth 1 simple trees are generated while for higher treewidths the
+    graphs from the UndirectedGraphStorage are used.
+
+    To specify an UndirectedGraphStorage, a pickle has to be given in the yaml-file as a data manager like
+    data_managers:
+      UndirectedGraphStorage: <location_of_pickle>
+
+    """
+    EXPECTED_PARAMETERS = [
+        "number_of_requests",
+        "treewidth",
+        "min_number_of_nodes",
+        "max_number_of_nodes",
+        "node_resource_factor",
+        "edge_resource_factor",
+        "normalize"
+    ]
+
+    def __init__(self, logger=None):
+        super(TreewidthRequestGenerator, self).__init__(logger)
+        self._raw_parameters = None
+        self._substrate = None
+        self._node_demand_by_type = None
+        self._edge_demand = None
+        self.DEBUG_MODE = True
+
+    def generate_request(self,
+                         name,
+                         raw_parameters,
+                         substrate):
+        self._node_types = list(substrate.types)
+        self._raw_parameters = raw_parameters
+        self._substrate = substrate
+        self._treewidth = self._raw_parameters["treewidth"]
+        self._average_edge_numbers_of_treewidth = None
+        self._undirected_graph_storage = None
+        self._number_of_requests = self._raw_parameters["number_of_requests"]
+        self._min_number_nodes = int(self._raw_parameters["min_number_of_nodes"])
+        self._max_number_nodes = int(self._raw_parameters["max_number_of_nodes"])
+        self._number_of_nodes = None
+
+        self._generation_attempts = 0
+
+        if self._treewidth > 1:
+            graph_storage, graph_storage_lock = self._data_manager_dict["UndirectedGraphStorage"]
+            self._undirected_graph_storage = graph_storage
+            self._undirected_graph_storage_lock = graph_storage_lock
+            if self._average_edge_numbers_of_treewidth is None:
+                self._average_edge_numbers_of_treewidth = {}
+            if self._treewidth not in self._average_edge_numbers_of_treewidth.keys():
+                with self._undirected_graph_storage_lock:
+                    self._average_edge_numbers_of_treewidth[
+                        self._treewidth] = self._undirected_graph_storage.get_average_number_of_edges_for_parameter(
+                        self._treewidth)
+        self._calculate_average_resource_demands()
+        req = None
+        is_feasible = False
+
+
+        while not is_feasible:
+            req = self._generate_request_graph(name)
+            is_feasible = self.verify_substrate_has_sufficient_capacity(req, substrate)
+            self._generation_attempts += 1
+            if self._generation_attempts > 10**7:
+                self._abort()
+        self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
+        return req
+
+    def _calculate_average_resource_demands(self):
+
+        self._expected_number_of_request_nodes_per_type = float(self._number_of_requests * (self._min_number_nodes + self._max_number_nodes) / 2.0) / len(self._node_types)
+        self._expected_number_of_request_edges = None
+        if self._treewidth == 1:
+            self._expected_number_of_request_edges = (self._expected_number_of_request_nodes_per_type * len(self._node_types)) - 1
+        else:
+            if self._average_edge_numbers_of_treewidth is None:
+                self._average_edge_numbers_of_treewidth = {}
+            if self._treewidth not in self._average_edge_numbers_of_treewidth.keys():
+                with self._undirected_graph_storage_lock:
+                    self._average_edge_numbers_of_treewidth[self._treewidth] = self._undirected_graph_storage.get_average_number_of_edges_for_parameter(self._treewidth)
+            self._expected_number_of_request_edges = 0
+
+            number_of_nodes_count = 0
+            for number_of_nodes in range(self._min_number_nodes, self._max_number_nodes + 1):
+                if number_of_nodes in self._average_edge_numbers_of_treewidth[self._treewidth]:
+                    self._expected_number_of_request_edges += self._average_edge_numbers_of_treewidth[self._treewidth][number_of_nodes]
+                    number_of_nodes_count += 1
+                else:
+                    self.logger.warning(
+                        "The undirected graph storage does not contain graphs for treewidth {} having exactly {} nodes.".format(
+                            self._treewidth, number_of_nodes))
+            self._expected_number_of_request_edges = float(self._number_of_requests) * float(self._expected_number_of_request_edges) / (float(number_of_nodes_count))
+
+        node_res = self._raw_parameters["node_resource_factor"]
+        edge_res_factor = self._raw_parameters["edge_resource_factor"]
+        self.average_request_edge_resources = (
+                                                      1.0 / edge_res_factor) * self._substrate.get_total_edge_resources() / self._expected_number_of_request_edges
+        self.average_request_node_resources_per_type = {}
+        for ntype in self._node_types:
+            self.average_request_node_resources_per_type[ntype] = node_res * (self._substrate.get_total_node_resources(
+                ntype) / self._expected_number_of_request_nodes_per_type)
+
+    def _select_node_edge_resources(self):
+        self._edge_demand = numpy.random.exponential(self.average_request_edge_resources)
+        self._node_demand_by_type = {}
+        for ntype in self._node_types:
+            self._node_demand_by_type[ntype] = self._edge_demand / self.average_request_edge_resources * \
+                                               self.average_request_node_resources_per_type[ntype]
+
+    def _select_number_of_nodes(self):
+        while True:
+            # round as long as there exists a graph with this number of nodes
+            self._number_of_nodes = random.randint(self._min_number_nodes, self._max_number_nodes)
+            if self._treewidth == 1 or self._number_of_nodes in self._average_edge_numbers_of_treewidth[self._treewidth].keys():
+                break
+            else:
+                self.logger.warning("The undirected graph storage does not contain graphs for treewidth {} having exactly {} nodes.".format(self._treewidth, self._number_of_nodes))
+
+    def _generate_edge_list_representation(self):
+        if self._treewidth == 1:
+            return self._generate_edge_representation_of_tree(self._number_of_nodes)
+        else:
+            result = None
+            with self._undirected_graph_storage_lock:
+                result = self._undirected_graph_storage.get_random_graph_as_edge_list_representation(self._treewidth, self._number_of_nodes)
+            return result
+
+    def _generate_edge_representation_of_tree(self, number_of_nodes):
+        # first generate all potential edges
+        all_edges = [(str(i), str(j)) for i in range(1, number_of_nodes + 1) for j in range(i + 1, number_of_nodes + 1)]
+        # shuffle them
+        random.shuffle(all_edges)
+        # use edges as long as these do not close cycles; to achieve that we use again the concept of connected components
+        # initially each node only reaches itself, while an edge connecting two nodes leads to the merging of
+        # the respective two connected components
+
+        node_to_connected_component_id = {str(i): i for i in range(1, number_of_nodes + 1)}
+        connected_component_id_to_nodes = {i: [str(i)] for i in range(1, number_of_nodes + 1)}
+        result = []
+        current_edge_index = 0
+        while len(connected_component_id_to_nodes.keys()) > 1:
+            # check if adding edge would violate tree property
+            i, j = all_edges[current_edge_index]
+            component_i = node_to_connected_component_id[i]
+            component_j = node_to_connected_component_id[j]
+            if component_i == component_j:
+                # do not add edge
+                pass
+            else:
+                # add edge
+                result.append((i, j))
+                # merge
+                connected_component_id_to_nodes[component_i].extend(connected_component_id_to_nodes[component_j])
+                for node in connected_component_id_to_nodes[component_j]:
+                    node_to_connected_component_id[node] = component_i
+                del connected_component_id_to_nodes[component_j]
+            # consider next edge
+            current_edge_index += 1
+        return result
+
+    def _generate_request_graph(self, name):
+
+        def _get_node_name(node):
+            return name + "_" + node
+
+        self._select_number_of_nodes()
+
+        self._select_node_edge_resources()
+        req_edge_representation = self._generate_edge_list_representation()
+        nodes = datamodel.get_nodes_of_edge_list_representation(req_edge_representation)
+
+        req = datamodel.Request(name)
+
+        for node in nodes:
+            # select node type:
+            ntype = self._next_node_type()
+            allowed_nodes = self._substrate.get_nodes_by_type(ntype)
+
+            req.add_node(_get_node_name(node),
+                         self._node_demand_by_type[ntype],
+                         ntype,
+                         allowed_nodes)
+
+        for edge in req_edge_representation:
+            i, j = edge
+            # draw random orientation of edge:
+            actual_edge = (_get_node_name(i), _get_node_name(j))
+            if random.random() <= 0.5:
+                actual_edge = (_get_node_name(j), _get_node_name(i))
+            i, j = actual_edge
+            req.add_edge(i, j, self._edge_demand)
+
+        if self.DEBUG_MODE:
+            # check connectdness of request graph
+            tmp_edges = list(req.edges)
+            tmp_undir_req_graph = datamodel.get_undirected_graph_from_edge_representation(tmp_edges)
+            assert tmp_undir_req_graph.check_connectedness()
+            td_comp = treewidth_model.TreeDecompositionComputation(tmp_undir_req_graph)
+            tree_decomp = td_comp.compute_tree_decomposition()
+            assert tree_decomp.width == self._treewidth
+            td_comp = treewidth_model.TreeDecompositionComputation(req)
+            tree_decomp = td_comp.compute_tree_decomposition()
+            assert tree_decomp.width == self._treewidth
+            sntd = treewidth_model.SmallSemiNiceTDArb(tree_decomp, req)
+            self.logger.info("SUCCESSFULLY PASSED TESTS [DEBUG_MODE=TRUE]")
+            assert len(req.nodes) == self._number_of_nodes
+
+        return req
+
+    def _abort(self):
+        raise RequestGenerationError(
+            "Could not generate a Cactus request after {} attempts!\n{}".format(self._generation_attempts, self._raw_parameters)
         )
 
 
@@ -1330,12 +1609,11 @@ class OptimalEmbeddingProfitCalculator(AbstractProfitCalculator):
         scenario_copy.objective = datamodel.Objective.MIN_COST
 
         gurobi_settings = modelcreator.GurobiSettings(mipGap=0.001,
-                                                      iterationLimit=10**99,
                                                       nodeLimit=None,
                                                       heuristics=None,
                                                       threads=1,
                                                       timelimit=self._raw_parameters["timelimit"])
-        mc = mip.ClassicMCFModel(scenario_copy)
+        mc = mip.ClassicMCFModel(scenario_copy, logger=self.logger)
 
         mc.init_model_creator()
         mc.model.setParam("OutputFlag", 0)
@@ -1571,3 +1849,201 @@ def haversine(lon1, lat1, lon2, lat2):
     km = 6367 * c
     latency = km / 200000
     return latency
+
+
+def convert_topology_zoo_gml_to_yml(gml_path, yml_path, consider_disconnected):
+    network_files = glob.glob(gml_path  + "/*.gml")
+
+    for net_file in network_files:
+        # Extract name of network from file path
+        path, filename = os.path.split(net_file)
+        network_name = os.path.splitext(filename)[0]
+
+
+        try:
+            print "reading file {}".format(net_file)
+            try:
+                graph = nx.read_gml(net_file, label="id")
+            except Exception as ex:
+                if "duplicated" in str(ex) and "multigraph 1" in str(ex):
+                    print "Multigraph detected; fixing the problem"
+                    with open(net_file, "r") as f:
+                        graph_source = f.read()
+                    graph_source = graph_source.replace("graph [", "graph [\n  multigraph 1")
+                    graph = nx.parse_gml(graph_source, label="id")
+                    print "tried to fix it.."
+
+
+
+            largest_cc = max(nx.connected_components(graph), key=len)
+
+            if len(largest_cc) < graph.number_of_nodes():
+                if consider_disconnected:
+                    print "Graph is not connected, considering only the largest connected component with {} nodes".format(len(largest_cc))
+                else:
+                    print "Graph is not connected, discarding it!"
+                    continue
+
+
+            nodes = largest_cc
+
+            yml_contents = {"nodes": {}, "edges": []}
+            for node in nodes:
+                data = graph.node[node]
+                print node, data
+                longitude = 0
+                latitude = 0
+                if "Longitude" in data:
+                    longitude = data["Longitude"]
+                else:
+                    for neighbor in graph.neighbors(node):
+                        if "Longitude" in graph.node[neighbor]:
+                            longitude += graph.node[neighbor]["Longitude"]
+                        else:
+                            print "Could NOT estimate longitude for node {} based on neighbors. Aborting conversion.".format(node)
+                            raise RuntimeError("Could not approximate longitude")
+                    print "Successfully estimated longitude for node {} based on neighbors".format(node)
+                    longitude /= float(len(list(graph.neighbors(node))))
+
+
+                if "Latitude" in data:
+                    latitude = data["Latitude"]
+                else:
+                    for neighbor in graph.neighbors(node):
+                        if "Latitude" in graph.node[neighbor]:
+                            latitude += graph.node[neighbor]["Latitude"]
+                        else:
+                            print "Could NOT estimate latitude for node {} based on neighbors. Aborting conversion.".format(node)
+                            raise RuntimeError("Could not approximate latitude")
+                    print "Successfully estimated latitude for node {} based on neighbors".format(node)
+                    latitude /= float(len(list(graph.neighbors(node))))
+
+                yml_contents["nodes"][str(node)] = {'Longitude': longitude, "Latitude": latitude}
+                for data_key, data_value in data.iteritems():
+                    if data_key == "Longitude" or data_key == "Latitude":
+                        continue
+                    else:
+                        yml_contents["nodes"][str(node)][unidecode(str(data_key))] = unidecode(str(data_value))
+
+
+            for u,v, data in graph.edges(data=True):
+                if u not in nodes:
+                    print("Node {} not contained in graph; edge {} not considered. This should be due to the graph not being connected.".format(u, (u,v)))
+                    continue
+                if v not in nodes:
+                    print(
+                        "Node {} not contained in graph; edge {} not considered. This should be due to the graph not being connected.".format(
+                            v, (u, v)))
+                    continue
+                if (str(u), str(v)) in yml_contents["edges"]:
+                    print "Edge {} already known (MultiGraph), discarding it".format((str(u), str(v)))
+                    continue
+                else:
+                    yml_contents["edges"].append([str(u),str(v)])
+
+            output_filename = os.path.join(yml_path, network_name + ".yml")
+            print "writing {}".format(output_filename)
+            with open(output_filename, "w") as output:
+                yaml.dump(yml_contents, output)
+            print "file {} sucessfully converted to yml file {}! \n\n\n".format(net_file, output_filename)
+
+        except Exception as ex:
+            import traceback
+            print "conversion of file {} to yml was NOT sucessful! \n\n\n".format(net_file)
+            print "non successfull! {}\n\n\n".format(str(ex))
+            traceback.print_exc()
+
+
+
+def summarize_topology_zoo_graphs(min_number_nodes=20, max_number_nodes=100):
+    network_files = glob.glob(os.path.join(DATA_PATH, "topologyZoo/") + "*.yml")
+    #network_files = glob.glob(os.path.join(DATA_PATH, "topologyZoo/") + "DeutscheTelekom.yml")
+
+    networks_by_name = {}
+
+    multiple_occuring_networks = {}
+
+    reader = TopologyZooReader()
+
+    print "network_files", network_files
+
+    raw_parameters = {"topology": "UNDEFINED",
+                      "node_types": ["universal"],
+                      "node_capacity": 100.0,
+                      "edge_capacity": 100.0,
+                      "node_type_distribution": 1.0}
+
+    for net_file in network_files:
+        # Extract name of network from file path
+        path, filename = os.path.split(net_file)
+        network_name = os.path.splitext(filename)[0]
+
+        raw_parameters["topology"] = network_name
+
+        print "trying to parse {} ".format(network_name)
+        graph = reader.read_from_yaml(raw_parameters)
+
+        if not graph.check_connectivity():
+            print("graph {} is NOT connected!".format(network_name))
+            continue
+
+        networks_by_name[network_name] = graph
+
+        nameWithoutDate = ''.join([i for i in network_name if not i.isdigit()])
+        dateInformation = ''.join([i for i in network_name if i.isdigit()])
+
+        if nameWithoutDate != network_name and len(dateInformation) >= 4:
+            # there is some sort of year inormation included
+            if nameWithoutDate not in multiple_occuring_networks:
+                multiple_occuring_networks[nameWithoutDate] = []
+
+            multiple_occuring_networks[nameWithoutDate].append((network_name, dateInformation))
+
+    # select only the most current graphs
+    for mNetwork in multiple_occuring_networks.keys():
+        listOfNetworks = multiple_occuring_networks[mNetwork]
+        bestName = None
+        bestDate = None
+        for network_name, dateInformation in listOfNetworks:
+            if len(dateInformation) < 6:
+                dateInformation = dateInformation + "0" * (6 - len(dateInformation))
+            if bestDate is None or int(dateInformation) > int(bestDate):
+                bestDate = dateInformation
+                bestName = network_name
+
+        for network_name, dateInformation in listOfNetworks:
+            if network_name != bestName:
+                print("deleting {} as it is superseded by {}".format(network_name, bestName))
+                del networks_by_name[network_name]
+
+    print networks_by_name
+    print multiple_occuring_networks
+
+    # order networks according to increasing complexity
+    orderedDictOfNetworks = {}
+    for network, graph in networks_by_name.items():
+        n = graph.get_number_of_nodes()
+        if n < min_number_nodes or n > max_number_nodes:
+            print "not considering graph ", network
+            continue
+        if n not in orderedDictOfNetworks.keys():
+            orderedDictOfNetworks[n] = []
+        orderedDictOfNetworks[n].append((network, graph))
+
+
+
+
+    numberOfgraphs = 0
+    for numberOfNodes in sorted(orderedDictOfNetworks.keys()):
+        print("n = {}: {}\n\t{}".format(numberOfNodes, len(orderedDictOfNetworks[numberOfNodes]),[(x,y.get_number_of_edges()) for (x,y) in orderedDictOfNetworks[numberOfNodes]]))
+        numberOfgraphs += len(orderedDictOfNetworks[numberOfNodes])
+
+    print("\n" + "-" * 40)
+    print("Selected {} graphs.".format(numberOfgraphs))
+
+    print("\nsaving list of selected topologies..\n")
+
+
+
+
+

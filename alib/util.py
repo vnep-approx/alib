@@ -134,22 +134,24 @@ class ExperimentPathHandler(object):
         else:
             log.info("ALIB_EXPERIMENT_HOME environment variable not found")
             potential_exp_dir = os.getcwd()
-            parent = os.path.split(potential_exp_dir)[0]
+            print "current dir: {}".format(potential_exp_dir)
+            parent = None
             iterations = 0
             while potential_exp_dir and potential_exp_dir != parent:
-                potential_exp_dir = parent
                 parent = os.path.split(potential_exp_dir)[0]
-                if ({"log", "input", "output",} == set(os.listdir(potential_exp_dir)) or
-                            {"log", "input", "output"} == set(os.listdir(potential_exp_dir))):
+                print "current dir: {}, parent: {}".format(potential_exp_dir, parent)
+                print "{}".format(set(os.listdir(potential_exp_dir)))
+                if ({"log", "input", "output"}.issubset(set(os.listdir(potential_exp_dir)))):
                     log.info("Setting alib path according to first parent containing only input, log, output and sca folders")
-                    alib_dir = parent
+                    alib_dir = potential_exp_dir
                     break
                 iterations += 1
+                potential_exp_dir = parent
 
-            if iterations >= 100:
-                raise AlibPathError("Exceeded iterations")
+                if iterations >= 100:
+                    raise AlibPathError("Exceeded iterations {}".format(iterations))
 
-        if not os.path.isdir(alib_dir):
+        if alib_dir is None or not os.path.isdir(alib_dir):
             raise AlibPathError("Invalid alib root path: {}".format(alib_dir))
 
         log.info("Alib root dir:       {}".format(alib_dir))
@@ -157,25 +159,8 @@ class ExperimentPathHandler(object):
 
     @staticmethod
     def _get_experiment_dir():
-        if os.getenv("ALIB_EXPERIMENT_HOME") is not None:
-            log.info("Setting experiment according to ALIB_EXPERIMENT_HOME")
-            exp_dir = os.getenv("ALIB_EXPERIMENT_HOME")
-            return os.path.abspath(exp_dir)
-        else:
-            parent, child = os.path.split(os.getcwd())
-            iterations = 0
-            while parent != ExperimentPathHandler.ALIB_DIR and iterations < 100:
-                parent, child = os.path.split(parent)
-                iterations += 1
-            if iterations >= 100:
-                raise AlibPathError("Exceeded iterations")
-            exp_dir = os.path.abspath(os.path.join(parent, child))
-
-            log.info("Experiment root dir: {}".format(exp_dir))
-
-            if not os.path.isdir(exp_dir):
-                raise AlibPathError("Invalid experiment path: {}".format(exp_dir))
-            return os.path.abspath(exp_dir)
+        #for legacy purposes
+        return ExperimentPathHandler._get_alib_dir()
 
 
 class PrintLogger(object):
@@ -217,7 +202,7 @@ class PrettyPrinter(object):
         self.base_indent_offset = indent_offset
         self.indent_step = indent_step
         if whitelist is None:
-            whitelist = ["request", "substrate", "scenario", "graph", "scenariosolution", "request_generator", "linearrequest"]
+            whitelist = ["request", "substrate", "scenario", "graph", "scenariosolution", "request_generator", "linearrequest", "treewidth_model_experiments"]
         self.whitelist = whitelist
         self.max_depth = max_depth
 
@@ -364,7 +349,9 @@ class PrettyPrinter(object):
         return header
 
     def _matches_whitelist(self, value):
+
         mod_class = self._get_module_and_class(value)
+        print "match?\n{}\n{}".format(value, mod_class)
         # print "matches...", mod_class, self.whitelist, mod_class.split(".")
         return any(allowed_module in mod_class.split(".") for allowed_module in self.whitelist)
 
@@ -411,12 +398,15 @@ def initialize_root_logger(filename, print_level=logging.INFO, file_level=loggin
     root_logger.info("Initialized Root Logger")
 
 
+def get_logger_filename(logger_name):
+    return os.path.join(ExperimentPathHandler.LOG_DIR, logger_name + ".log")
+
 def get_logger(logger_name, make_file=True, make_stream=False, print_level=logging.INFO, file_level=logging.DEBUG, propagate=True, allow_override=False):
     logger = logging.getLogger(logger_name)
 
     if len(logger.handlers) == 0:
         if make_file:
-            fname = os.path.join(ExperimentPathHandler.LOG_DIR, logger_name + ".log")
+            fname = get_logger_filename(logger_name)
             if not allow_override and os.path.exists(fname):
                 raise AlibPathError("Attempted to overwrite existing log file:  {}".format(fname))
             file_handler = logging.FileHandler(fname, mode="w")

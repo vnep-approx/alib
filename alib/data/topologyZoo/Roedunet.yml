@@ -1,0 +1,393 @@
+edges:
+- - '0'
+  - '1'
+- - '0'
+  - '2'
+- - '0'
+  - '3'
+- - '0'
+  - '4'
+- - '0'
+  - '4'
+- - '0'
+  - '33'
+- - '0'
+  - '40'
+- - '4'
+  - '36'
+- - '4'
+  - '5'
+- - '4'
+  - '6'
+- - '4'
+  - '7'
+- - '4'
+  - '8'
+- - '4'
+  - '9'
+- - '4'
+  - '13'
+- - '4'
+  - '14'
+- - '4'
+  - '15'
+- - '4'
+  - '16'
+- - '4'
+  - '40'
+- - '4'
+  - '20'
+- - '4'
+  - '20'
+- - '4'
+  - '22'
+- - '4'
+  - '22'
+- - '4'
+  - '25'
+- - '4'
+  - '31'
+- - '4'
+  - '31'
+- - '10'
+  - '22'
+- - '11'
+  - '22'
+- - '12'
+  - '36'
+- - '17'
+  - '25'
+- - '18'
+  - '31'
+- - '19'
+  - '22'
+- - '21'
+  - '31'
+- - '22'
+  - '36'
+- - '22'
+  - '31'
+- - '23'
+  - '36'
+- - '24'
+  - '31'
+- - '25'
+  - '26'
+- - '25'
+  - '27'
+- - '25'
+  - '31'
+- - '28'
+  - '31'
+- - '29'
+  - '31'
+- - '30'
+  - '31'
+- - '32'
+  - '40'
+- - '34'
+  - '36'
+- - '35'
+  - '36'
+- - '36'
+  - '37'
+- - '36'
+  - '40'
+- - '38'
+  - '40'
+- - '39'
+  - '40'
+- - '40'
+  - '41'
+nodes:
+  '0':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.31667
+    Longitude: 23.8
+    label: Dolj
+    type: NOC
+  '1':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.43333
+    Longitude: 24.36667
+    label: Olt
+    type: PoP
+  '10':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.85
+    Longitude: 26.18333
+    label: Covasna
+    type: PoP
+  '11':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.8
+    Longitude: 24.15
+    label: Sibiu
+    type: PoP
+  '12':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.06667
+    Longitude: 23.58333
+    label: Alba
+    type: PoP
+  '13':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.85
+    Longitude: 24.86667
+    label: Arges
+    type: PoP
+  '14':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.93333
+    Longitude: 25.45
+    label: Dambovita
+    type: PoP
+  '15':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.95
+    Longitude: 26.01667
+    label: Prahova
+    type: PoP
+  '16':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.15
+    Longitude: 26.83333
+    label: Buzau
+    type: PoP
+  '17':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.7
+    Longitude: 27.18333
+    label: Vrancea
+    type: PoP
+  '18':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.56667
+    Longitude: 26.9
+    label: Bacau
+    type: PoP
+  '19':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.3
+    Longitude: 25.3
+    label: Harghita
+    type: PoP
+  '2':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.05
+    Longitude: 23.28333
+    label: Gorj
+    type: PoP
+  '20':
+    Internal: '0'
+    Latitude: 44.43225
+    Longitude: 26.10626
+    label: GEANT
+  '21':
+    Internal: '0'
+    Latitude: 47.16667
+    Longitude: 27.6
+    label: Chisinau RENAM
+  '22':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.54245
+    Longitude: 24.55747
+    label: Mures
+    type: NOC
+  '23':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.13316
+    Longitude: 24.50011
+    label: Bistrita-Nasaud
+    type: PoP
+  '24':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.63333
+    Longitude: 27.73333
+    label: Vaslui
+    type: PoP
+  '25':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.45
+    Longitude: 28.05
+    label: Galati
+    type: NOC
+  '26':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.16667
+    Longitude: 28.8
+    label: Tulcea
+    type: PoP
+  '27':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.26667
+    Longitude: 27.98333
+    label: Braila
+    type: PoP
+  '28':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.91667
+    Longitude: 26.33333
+    label: Neamt
+    type: PoP
+  '29':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.63333
+    Longitude: 26.25
+    label: Suceava
+    type: PoP
+  '3':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.1
+    Longitude: 24.36667
+    label: Valcea
+    type: PoP
+  '30':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.75
+    Longitude: 26.66667
+    label: Botosani
+    type: PoP
+  '31':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.16667
+    Longitude: 27.6
+    label: Iasi
+    type: NOC
+  '32':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.30083
+    Longitude: 21.88917
+    label: Caras-Severin
+    type: PoP
+  '33':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.63194
+    Longitude: 22.65611
+    label: Mehedinti
+    type: PoP
+  '34':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.8
+    Longitude: 22.88333
+    label: Satu Mare
+    type: PoP
+  '35':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.65729
+    Longitude: 23.56808
+    label: Maramures
+    type: PoP
+  '36':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.76667
+    Longitude: 23.6
+    label: Cluj
+    type: NOC
+  '37':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.2
+    Longitude: 23.05
+    label: Salaj
+    type: PoP
+  '38':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.06667
+    Longitude: 21.93333
+    label: Bihor
+    type: PoP
+  '39':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.18333
+    Longitude: 21.31667
+    label: Arad
+    type: PoP
+  '4':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.43225
+    Longitude: 26.10626
+    label: Bucaresti
+    type: NOC
+  '40':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.74944
+    Longitude: 21.22722
+    label: Timis
+    type: NOC
+  '41':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.75
+    Longitude: 22.9
+    label: Hunedora
+    type: PoP
+  '5':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.71667
+    Longitude: 26.63333
+    label: Ialomita
+    type: PoP
+  '6':
+    Country: Romania
+    Internal: '1'
+    Latitude: 43.98333
+    Longitude: 25.33333
+    label: Teleorman
+    type: PoP
+  '7':
+    Country: Romania
+    Internal: '1'
+    Latitude: 43.88333
+    Longitude: 25.96667
+    label: Giurgiu
+    type: PoP
+  '8':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.2
+    Longitude: 27.33333
+    geocode_id: '683022'
+    label: Calarasi
+    type: PoP
+  '9':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.18333
+    Longitude: 28.65
+    label: Constanta
+    type: PoP

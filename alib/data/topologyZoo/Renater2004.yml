@@ -1,68 +1,272 @@
-nodes:
-  '0': {Latitude: 44.83333, Longitude: -0.56667}
-  '1': {Latitude: 43.60426, Longitude: 1.44367}
-  '2': {Latitude: 47.91667, Longitude: 1.9}
-  '3': {Latitude: 45.83153, Longitude: 1.2578}
-  '4': {Latitude: 47.31667, Longitude: 5.01667}
-  '5': {Latitude: 47.25, Longitude: 6.03333}
-  '6': {Latitude: 43.6, Longitude: 3.88333}
-  '7': {Latitude: 45.78333, Longitude: 3.08333}
-  '8': {Latitude: 45.16667, Longitude: 5.71667}
-  '9': {Latitude: 43.70313, Longitude: 7.26608}
-  '10': {Latitude: 48.85341, Longitude: 2.3488}
-  '11': {Latitude: 48.85341, Longitude: 2.3488}
-  '12': {Latitude: 45.75, Longitude: 4.85}
-  '13': {Latitude: 48.85341, Longitude: 2.3488}
-  '14': {Latitude: 42.3, Longitude: 9.15}
-  '15': {Latitude: 43.3, Longitude: 5.4}
-  '16': {Latitude: 48.85341, Longitude: 2.3488}
-  '17': {Latitude: 48.85341, Longitude: 2.3488}
-  '18': {Latitude: 48.85341, Longitude: 2.3488}
-  '19': {Latitude: 47.301705, Longitude: 3.5994}
-  '20': {Latitude: 47.21725, Longitude: -1.55336}
-  '21': {Latitude: 46.58333, Longitude: 0.33333}
-  '22': {Latitude: 48.58333, Longitude: 7.75}
-  '23': {Latitude: 48.68333, Longitude: 6.2}
-  '24': {Latitude: 49.25, Longitude: 4.03333}
-  '25': {Latitude: 49.41794, Longitude: 2.82606}
-  '26': {Latitude: 50.63333, Longitude: 3.06667}
-  '27': {Latitude: 49.44313, Longitude: 1.09932}
-  '28': {Latitude: 49.18585, Longitude: -0.35912}
-  '29': {Latitude: 48.08333, Longitude: -1.68333}
 edges:
-- ['0', '1']
-- ['0', '21']
-- ['1', '6']
-- ['2', '13']
-- ['3', '21']
-- ['3', '7']
-- ['4', '13']
-- ['5', '12']
-- ['5', '22']
-- ['6', '12']
-- ['6', '15']
-- ['7', '12']
-- ['8', '9']
-- ['8', '12']
-- ['9', '14']
-- ['9', '15']
-- ['10', '13']
-- ['11', '13']
-- ['12', '13']
-- ['12', '15']
-- ['12', '19']
-- ['13', '16']
-- ['13', '17']
-- ['13', '18']
-- ['13', '19']
-- ['13', '21']
-- ['13', '23']
-- ['13', '24']
-- ['13', '25']
-- ['13', '26']
-- ['13', '27']
-- ['20', '21']
-- ['20', '29']
-- ['22', '23']
-- ['27', '28']
-- ['28', '29']
+- - '0'
+  - '1'
+- - '0'
+  - '21'
+- - '1'
+  - '6'
+- - '2'
+  - '13'
+- - '3'
+  - '21'
+- - '3'
+  - '7'
+- - '4'
+  - '13'
+- - '5'
+  - '12'
+- - '5'
+  - '22'
+- - '6'
+  - '12'
+- - '6'
+  - '15'
+- - '7'
+  - '12'
+- - '8'
+  - '9'
+- - '8'
+  - '12'
+- - '9'
+  - '14'
+- - '9'
+  - '15'
+- - '10'
+  - '13'
+- - '11'
+  - '13'
+- - '12'
+  - '13'
+- - '12'
+  - '15'
+- - '12'
+  - '19'
+- - '13'
+  - '16'
+- - '13'
+  - '17'
+- - '13'
+  - '18'
+- - '13'
+  - '19'
+- - '13'
+  - '21'
+- - '13'
+  - '23'
+- - '13'
+  - '24'
+- - '13'
+  - '25'
+- - '13'
+  - '26'
+- - '13'
+  - '27'
+- - '20'
+  - '21'
+- - '20'
+  - '29'
+- - '22'
+  - '23'
+- - '27'
+  - '28'
+- - '28'
+  - '29'
+nodes:
+  '0':
+    Country: France
+    Internal: '1'
+    Latitude: 44.83333
+    Longitude: -0.56667
+    label: Bordeaux
+    type: NR
+  '1':
+    Country: France
+    Internal: '1'
+    Latitude: 43.60426
+    Longitude: 1.44367
+    label: Toulouse
+    type: NR
+  '10':
+    Internal: '0'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: Connexion vers le Star Tap
+  '11':
+    Internal: '0'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: Connexion Asie Pacifique
+  '12':
+    Country: France
+    Internal: '1'
+    Latitude: 45.75
+    Longitude: 4.85
+    label: Lyon
+    type: NRI
+  '13':
+    Country: France
+    Internal: '1'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: Paris
+    type: NRI
+  '14':
+    Country: France
+    Internal: '1'
+    Latitude: 42.3
+    Longitude: 9.15
+    label: Corte
+    type: NR
+  '15':
+    Country: France
+    Internal: '1'
+    Latitude: 43.3
+    Longitude: 5.4
+    label: Marseille
+    type: NR
+  '16':
+    Internal: '0'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: Geant2
+  '17':
+    Internal: '0'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: SFINX
+  '18':
+    Internal: '0'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: Martinique, Guadeloupe, Guyane, La Reunion, Nouvelle Caledonie, Tahiti
+  '19':
+    Internal: '0'
+    Latitude: 47.301705
+    Longitude: 3.5994
+    label: Internet mondial
+  '2':
+    Country: France
+    Internal: '1'
+    Latitude: 47.91667
+    Longitude: 1.9
+    label: Orleans
+    type: NR
+  '20':
+    Country: France
+    Internal: '1'
+    Latitude: 47.21725
+    Longitude: -1.55336
+    label: Nantes
+    type: NR
+  '21':
+    Country: France
+    Internal: '1'
+    Latitude: 46.58333
+    Longitude: 0.33333
+    label: Poiters
+    type: NR
+  '22':
+    Country: France
+    Internal: '1'
+    Latitude: 48.58333
+    Longitude: 7.75
+    label: Strasbourg
+    type: NR
+  '23':
+    Country: France
+    Internal: '1'
+    Latitude: 48.68333
+    Longitude: 6.2
+    label: Nancy
+    type: NR
+  '24':
+    Country: France
+    Internal: '1'
+    Latitude: 49.25
+    Longitude: 4.03333
+    label: Reims
+    type: NR
+  '25':
+    Country: France
+    Internal: '1'
+    Latitude: 49.41794
+    Longitude: 2.82606
+    label: Compiegne
+    type: NR
+  '26':
+    Country: France
+    Internal: '1'
+    Latitude: 50.63333
+    Longitude: 3.06667
+    label: Lille
+    type: NR
+  '27':
+    Country: France
+    Internal: '1'
+    Latitude: 49.44313
+    Longitude: 1.09932
+    label: Rouen
+    type: NR
+  '28':
+    Country: France
+    Internal: '1'
+    Latitude: 49.18585
+    Longitude: -0.35912
+    label: Caen
+    type: NR
+  '29':
+    Country: France
+    Internal: '1'
+    Latitude: 48.08333
+    Longitude: -1.68333
+    label: Rennes
+    type: NR
+  '3':
+    Country: France
+    Internal: '1'
+    Latitude: 45.83153
+    Longitude: 1.2578
+    label: Limoges
+    type: NR
+  '4':
+    Country: France
+    Internal: '1'
+    Latitude: 47.31667
+    Longitude: 5.01667
+    label: Dijon
+    type: NR
+  '5':
+    Country: France
+    Internal: '1'
+    Latitude: 47.25
+    Longitude: 6.03333
+    label: Besancon
+    type: NR
+  '6':
+    Country: France
+    Internal: '1'
+    Latitude: 43.6
+    Longitude: 3.88333
+    label: Montpellier
+    type: NR
+  '7':
+    Country: France
+    Internal: '1'
+    Latitude: 45.78333
+    Longitude: 3.08333
+    label: Clermont-Ferrand
+    type: NR
+  '8':
+    Country: France
+    Internal: '1'
+    Latitude: 45.16667
+    Longitude: 5.71667
+    label: Grenoble
+    type: NR
+  '9':
+    Country: France
+    Internal: '1'
+    Latitude: 43.70313
+    Longitude: 7.26608
+    label: Nice
+    type: NR

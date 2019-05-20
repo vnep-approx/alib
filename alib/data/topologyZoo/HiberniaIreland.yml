@@ -1,18 +1,70 @@
-nodes:
-  '0': {Latitude: 53.34399, Longitude: -6.26719}
-  '1': {Latitude: 53.27194, Longitude: -9.04889}
-  '2': {Latitude: 52.66472, Longitude: -8.62306}
-  '3': {Latitude: 51.89861, Longitude: -8.49583}
-  '4': {Latitude: 52.25833, Longitude: -7.11194}
-  '5': {Latitude: 53.03441, Longitude: -7.29979}
-  '6': {Latitude: 53.34399, Longitude: -6.26719}
-  '7': {Latitude: 53.34399, Longitude: -6.26719}
 edges:
-- ['0', '4']
-- ['0', '5']
-- ['0', '6']
-- ['0', '7']
-- ['1', '2']
-- ['2', '3']
-- ['2', '5']
-- ['3', '4']
+- - '0'
+  - '4'
+- - '0'
+  - '5'
+- - '0'
+  - '6'
+- - '0'
+  - '7'
+- - '1'
+  - '2'
+- - '2'
+  - '3'
+- - '2'
+  - '5'
+- - '3'
+  - '4'
+nodes:
+  '0':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.34399
+    Longitude: -6.26719
+    label: Dublin
+    type: Large Node
+  '1':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.27194
+    Longitude: -9.04889
+    label: Galway
+    type: Small Node
+  '2':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 52.66472
+    Longitude: -8.62306
+    label: Limerick
+    type: Small Node
+  '3':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 51.89861
+    Longitude: -8.49583
+    label: Cork
+    type: Small Node
+  '4':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 52.25833
+    Longitude: -7.11194
+    label: Waterford
+    type: Small Node
+  '5':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.03441
+    Longitude: -7.29979
+    label: Portlaioise
+    type: Small Node
+  '6':
+    Internal: '0'
+    Latitude: 53.34399
+    Longitude: -6.26719
+    label: None
+  '7':
+    Internal: '0'
+    Latitude: 53.34399
+    Longitude: -6.26719
+    label: None

@@ -1,15 +1,56 @@
-nodes:
-  '3': {Latitude: 4.3238, Longitude: 100.9299}
-  '7': {Latitude: 4.3238, Longitude: 100.9299}
-  '10': {Latitude: 4.3238, Longitude: 100.9299}
-  '11': {Latitude: 4.3238, Longitude: 100.9299}
-  '12': {Latitude: 4.3238, Longitude: 100.9299}
-  '13': {Latitude: 4.3238, Longitude: 100.9299}
-  '14': {Latitude: 4.3238, Longitude: 100.9299}
 edges:
-- ['3', '11']
-- ['7', '11']
-- ['10', '11']
-- ['11', '12']
-- ['11', '13']
-- ['11', '14']
+- - '3'
+  - '11'
+- - '7'
+  - '11'
+- - '10'
+  - '11'
+- - '11'
+  - '12'
+- - '11'
+  - '13'
+- - '11'
+  - '14'
+nodes:
+  '10':
+    Internal: '1'
+    Latitude: 4.3238
+    Longitude: 100.9299
+    label: BZU
+    type: University
+  '11':
+    Country: Malaysia
+    Internal: '1'
+    Latitude: 4.3238
+    Longitude: 100.9299
+    label: PADI2
+    type: University
+  '12':
+    Internal: '1'
+    Latitude: 4.3238
+    Longitude: 100.9299
+    label: QOU
+    type: University
+  '13':
+    Internal: '1'
+    Latitude: 4.3238
+    Longitude: 100.9299
+    label: AQU
+    type: University
+  '14':
+    Internal: '1'
+    Latitude: 4.3238
+    Longitude: 100.9299
+    label: BU
+    type: University
+  '3':
+    Internal: '1'
+    Latitude: 4.3238
+    Longitude: 100.9299
+    label: PPU
+    type: University
+  '7':
+    Internal: '0'
+    Latitude: 4.3238
+    Longitude: 100.9299
+    label: GEANT

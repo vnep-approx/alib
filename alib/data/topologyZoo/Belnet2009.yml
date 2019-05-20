@@ -1,47 +1,211 @@
-nodes:
-  '0': {Latitude: 50.66829, Longitude: 4.61443}
-  '1': {Latitude: 50.41667, Longitude: 4.43333}
-  '2': {Latitude: 49.68333, Longitude: 5.81667}
-  '3': {Latitude: 50.46992, Longitude: 4.82577}
-  '4': {Latitude: 51.21667, Longitude: 4.41667}
-  '5': {Latitude: 51.21667, Longitude: 4.41667}
-  '6': {Latitude: 50.45413, Longitude: 3.95229}
-  '7': {Latitude: 50.82803, Longitude: 3.26487}
-  '8': {Latitude: 51.05, Longitude: 3.71667}
-  '9': {Latitude: 51.05, Longitude: 3.71667}
-  '10': {Latitude: 50.53474, Longitude: 5.27734}
-  '11': {Latitude: 50.64119, Longitude: 5.57178}
-  '12': {Latitude: 51.20892, Longitude: 3.22424}
-  '13': {Latitude: 51.16667, Longitude: 5.0}
-  '14': {Latitude: 50.93333, Longitude: 5.33333}
-  '15': {Latitude: 50.87959, Longitude: 4.70093}
-  '16': {Latitude: 50.87959, Longitude: 4.70093}
-  '17': {Latitude: 50.91823, Longitude: 4.40731}
-  '18': {Latitude: 50.86667, Longitude: 4.4}
-  '19': {Latitude: 50.85045, Longitude: 4.34878}
-  '20': {Latitude: 50.85045, Longitude: 4.34878}
 edges:
-- ['0', '1']
-- ['0', '3']
-- ['1', '6']
-- ['2', '11']
-- ['2', '3']
-- ['4', '18']
-- ['4', '5']
-- ['5', '8']
-- ['6', '17']
-- ['7', '17']
-- ['7', '12']
-- ['8', '9']
-- ['9', '12']
-- ['10', '18']
-- ['10', '11']
-- ['13', '17']
-- ['13', '14']
-- ['14', '15']
-- ['15', '16']
-- ['16', '18']
-- ['17', '18']
-- ['17', '20']
-- ['18', '19']
-- ['19', '20']
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '1'
+  - '6'
+- - '2'
+  - '11'
+- - '2'
+  - '3'
+- - '4'
+  - '18'
+- - '4'
+  - '5'
+- - '4'
+  - '5'
+- - '5'
+  - '8'
+- - '6'
+  - '17'
+- - '7'
+  - '17'
+- - '7'
+  - '12'
+- - '8'
+  - '9'
+- - '8'
+  - '9'
+- - '9'
+  - '12'
+- - '10'
+  - '18'
+- - '10'
+  - '11'
+- - '10'
+  - '11'
+- - '13'
+  - '17'
+- - '13'
+  - '14'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '15'
+  - '16'
+- - '16'
+  - '18'
+- - '17'
+  - '18'
+- - '17'
+  - '18'
+- - '17'
+  - '18'
+- - '17'
+  - '18'
+- - '17'
+  - '20'
+- - '18'
+  - '19'
+- - '19'
+  - '20'
+nodes:
+  '0':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.66829
+    Longitude: 4.61443
+    label: Louvain-la-Neuve
+    type: Small Node
+  '1':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.41667
+    Longitude: 4.43333
+    label: Charleroi
+    type: Small Node
+  '10':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.53474
+    Longitude: 5.27734
+    label: 'Liege 1 '
+    type: One of two small nodes in same city
+  '11':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.64119
+    Longitude: 5.57178
+    label: Liege 2
+    type: One of two small nodes in same city
+  '12':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.20892
+    Longitude: 3.22424
+    label: Brugge
+    type: Small Node
+  '13':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.16667
+    Longitude: 5.0
+    label: Geel
+    type: Small Node
+  '14':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.93333
+    Longitude: 5.33333
+    label: Hasselt
+    type: Small Node
+  '15':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.87959
+    Longitude: 4.70093
+    label: Leuven2
+    type: One of two small nodes in same city
+  '16':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.87959
+    Longitude: 4.70093
+    label: Leuven1
+    type: One of two small nodes in same city
+  '17':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.91823
+    Longitude: 4.40731
+    label: Vilvoorde
+    type: Large Node
+  '18':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.86667
+    Longitude: 4.4
+    label: Evere
+    type: Large Node
+  '19':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Brussels Science
+    type: Small Node
+  '2':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 49.68333
+    Longitude: 5.81667
+    label: Arlon
+    type: Small Node
+  '20':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Brussels Campus
+    type: Small Node
+  '3':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.46992
+    Longitude: 4.82577
+    label: Namur
+    type: Small Node
+  '4':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.21667
+    Longitude: 4.41667
+    label: Antwerpen 2
+    type: One of two small nodes in same city
+  '5':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.21667
+    Longitude: 4.41667
+    label: Antwerpen1
+    type: One of two small nodes in same city
+  '6':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.45413
+    Longitude: 3.95229
+    label: Mons
+    type: Small Node
+  '7':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.82803
+    Longitude: 3.26487
+    label: Korthijk
+    type: Small Node
+  '8':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.05
+    Longitude: 3.71667
+    label: Gent2
+    type: One of two small nodes in same city
+  '9':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.05
+    Longitude: 3.71667
+    label: Gent1
+    type: One of two small nodes in same city

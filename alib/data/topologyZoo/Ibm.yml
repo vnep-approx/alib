@@ -1,44 +1,158 @@
-nodes:
-  '0': {Latitude: 46.428, Longitude: -90.24601}
-  '1': {Latitude: 41.03399, Longitude: -73.76291}
-  '2': {Latitude: 42.33143, Longitude: -83.04575}
-  '3': {Latitude: 40.46423, Longitude: -80.60091}
-  '4': {Latitude: 39.96118, Longitude: -82.99879}
-  '5': {Latitude: 38.98067, Longitude: -77.10026}
-  '6': {Latitude: 40.71427, Longitude: -74.00597}
-  '7': {Latitude: 39.95234, Longitude: -75.16379}
-  '8': {Latitude: 42.03336, Longitude: -88.08341}
-  '9': {Latitude: 38.62727, Longitude: -90.19789}
-  '10': {Latitude: 45.63873, Longitude: -122.66149}
-  '11': {Latitude: 37.77493, Longitude: -122.41942}
-  '12': {Latitude: 34.05223, Longitude: -118.24368}
-  '13': {Latitude: 33.44838, Longitude: -112.07404}
-  '14': {Latitude: 32.78306, Longitude: -96.80667}
-  '15': {Latitude: 33.749, Longitude: -84.38798}
-  '16': {Latitude: 27.94752, Longitude: -82.45843}
-  '17': {Latitude: 41.85003, Longitude: -87.65005}
 edges:
-- ['0', '3']
-- ['0', '7']
-- ['1', '17']
-- ['1', '5']
-- ['1', '6']
-- ['2', '9']
-- ['2', '3']
-- ['2', '4']
-- ['4', '8']
-- ['4', '5']
-- ['4', '6']
-- ['5', '15']
-- ['6', '16']
-- ['6', '7']
-- ['8', '12']
-- ['9', '17']
-- ['10', '11']
-- ['11', '17']
-- ['11', '12']
-- ['12', '13']
-- ['13', '14']
-- ['14', '17']
-- ['14', '15']
-- ['15', '16']
+- - '0'
+  - '3'
+- - '0'
+  - '7'
+- - '1'
+  - '17'
+- - '1'
+  - '5'
+- - '1'
+  - '6'
+- - '2'
+  - '9'
+- - '2'
+  - '3'
+- - '2'
+  - '4'
+- - '4'
+  - '8'
+- - '4'
+  - '5'
+- - '4'
+  - '6'
+- - '5'
+  - '15'
+- - '6'
+  - '16'
+- - '6'
+  - '7'
+- - '8'
+  - '12'
+- - '9'
+  - '17'
+- - '10'
+  - '11'
+- - '11'
+  - '17'
+- - '11'
+  - '12'
+- - '12'
+  - '13'
+- - '13'
+  - '14'
+- - '14'
+  - '17'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 46.428
+    Longitude: -90.24601
+    label: Montreal
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.03399
+    Longitude: -73.76291
+    label: White Plains
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 45.63873
+    Longitude: -122.66149
+    label: Vancouver
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: San Francisco
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+  '13':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.44838
+    Longitude: -112.07404
+    label: Phoenix
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta
+  '16':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.94752
+    Longitude: -82.45843
+    label: Tampa
+  '17':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.33143
+    Longitude: -83.04575
+    label: Detroit
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.46423
+    Longitude: -80.60091
+    label: Toronto
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.96118
+    Longitude: -82.99879
+    label: Columbus
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.98067
+    Longitude: -77.10026
+    label: Bethesda
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.95234
+    Longitude: -75.16379
+    label: Philadelphia
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.03336
+    Longitude: -88.08341
+    label: Schaumburg
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.62727
+    Longitude: -90.19789
+    label: St Louis

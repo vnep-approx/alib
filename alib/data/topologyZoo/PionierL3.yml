@@ -1,0 +1,323 @@
+edges:
+- - '0'
+  - '1'
+- - '0'
+  - '1'
+- - '0'
+  - '1'
+- - '0'
+  - '34'
+- - '0'
+  - '3'
+- - '0'
+  - '3'
+- - '0'
+  - '6'
+- - '1'
+  - '9'
+- - '1'
+  - '9'
+- - '1'
+  - '7'
+- - '1'
+  - '7'
+- - '2'
+  - '3'
+- - '3'
+  - '11'
+- - '4'
+  - '19'
+- - '4'
+  - '7'
+- - '4'
+  - '7'
+- - '5'
+  - '19'
+- - '6'
+  - '20'
+- - '6'
+  - '34'
+- - '6'
+  - '12'
+- - '8'
+  - '19'
+- - '8'
+  - '23'
+- - '9'
+  - '23'
+- - '9'
+  - '23'
+- - '10'
+  - '28'
+- - '10'
+  - '37'
+- - '10'
+  - '30'
+- - '11'
+  - '28'
+- - '11'
+  - '29'
+- - '12'
+  - '34'
+- - '13'
+  - '32'
+- - '13'
+  - '34'
+- - '13'
+  - '15'
+- - '14'
+  - '34'
+- - '15'
+  - '32'
+- - '15'
+  - '33'
+- - '16'
+  - '34'
+- - '17'
+  - '34'
+- - '18'
+  - '27'
+- - '18'
+  - '21'
+- - '18'
+  - '22'
+- - '18'
+  - '23'
+- - '20'
+  - '27'
+- - '24'
+  - '34'
+- - '25'
+  - '33'
+- - '25'
+  - '26'
+- - '26'
+  - '27'
+- - '30'
+  - '36'
+- - '30'
+  - '31'
+- - '31'
+  - '32'
+- - '34'
+  - '35'
+- - '35'
+  - '36'
+nodes:
+  '0':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.22977
+    Longitude: 21.01178
+    label: Warszawa
+  '1':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.40253
+    Longitude: 21.14714
+    label: Radom
+  '10':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.1522
+    Longitude: 19.40884
+    label: Elblag
+  '11':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.11175
+    Longitude: 22.93087
+    label: Suwalki
+  '12':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.22944
+    Longitude: 20.23838
+    label: Sochaczew
+  '13':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.73679
+    Longitude: 15.22878
+    label: Gorzow Wlkp
+  '14':
+    Internal: '0'
+    Latitude: 52.41667
+    Longitude: 16.96667
+    label: SURFnet/NORDUnet
+  '15':
+    Internal: '0'
+    Latitude: 52.70040333333333
+    Longitude: 15.096076666666667
+    label: DFN
+  '16':
+    Internal: '0'
+    Latitude: 52.41667
+    Longitude: 16.96667
+    label: GEANT3
+  '17':
+    Internal: '0'
+    Latitude: 52.41667
+    Longitude: 16.96667
+    label: Internet
+  '18':
+    Country: Poland
+    Internal: '1'
+    Latitude: 49.82245
+    Longitude: 19.04686
+    label: Bielsko-Biala
+  '19':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.72314
+    Longitude: 23.25196
+    label: Zamosc
+  '2':
+    Internal: '0'
+    Latitude: 53.13333
+    Longitude: 23.15
+    label: Belarus
+  '20':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.79646
+    Longitude: 19.12409
+    label: Czechtochowa
+  '21':
+    Internal: '0'
+    Latitude: 49.82245
+    Longitude: 19.04686
+    label: CESNET
+  '22':
+    Internal: '0'
+    Latitude: 49.82245
+    Longitude: 19.04686
+    label: SANET
+  '23':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.08333
+    Longitude: 19.91667
+    label: Krakow
+  '24':
+    Internal: '0'
+    Latitude: 52.41667
+    Longitude: 16.96667
+    label: Geant2/Internet
+  '25':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.1
+    Longitude: 17.03333
+    label: Wroclaw
+  '26':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.66667
+    Longitude: 17.95
+    label: Opole
+  '27':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.28333
+    Longitude: 18.66667
+    label: Gliwice
+  '28':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.78333
+    Longitude: 20.48333
+    label: Olsztyn
+  '29':
+    Internal: '0'
+    Latitude: 54.11175
+    Longitude: 22.93087
+    label: Lithuania
+  '3':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.13333
+    Longitude: 23.15
+    label: Bialystok
+  '30':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.35205
+    Longitude: 18.64637
+    label: Gdansk
+  '31':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.19438
+    Longitude: 16.17222
+    label: Koszalin
+  '32':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.42894
+    Longitude: 14.55302
+    label: Szczecin
+  '33':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.93548
+    Longitude: 15.50643
+    label: Zielona gora
+  '34':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.41667
+    Longitude: 16.96667
+    label: Poznan
+  '35':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.1235
+    Longitude: 18.00762
+    label: Bydgoszcz
+  '36':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.01375
+    Longitude: 18.59814
+    label: Torun
+  '37':
+    Internal: '0'
+    Latitude: 54.1522
+    Longitude: 19.40884
+    label: Russia
+  '4':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.25
+    Longitude: 22.56667
+    label: Lublin
+  '5':
+    Internal: '0'
+    Latitude: 50.72314
+    Longitude: 23.25196
+    label: Ukraine
+  '6':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.75
+    Longitude: 19.46667
+    label: Lodz
+  '7':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.41655
+    Longitude: 21.96939
+    label: Pulawy
+  '8':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.04132
+    Longitude: 21.99901
+    label: Rzeszow
+  '9':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.87033
+    Longitude: 20.62752
+    label: Kielce

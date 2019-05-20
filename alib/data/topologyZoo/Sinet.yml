@@ -1,152 +1,645 @@
-nodes:
-  '0': {Latitude: 33.60639, Longitude: 130.41806}
-  '1': {Latitude: 33.23806, Longitude: 131.6125}
-  '2': {Latitude: 33.0, Longitude: 131.0}
-  '3': {Latitude: 33.60639, Longitude: 130.41806}
-  '4': {Latitude: 34.39627, Longitude: 132.45937}
-  '5': {Latitude: 34.39627, Longitude: 132.45937}
-  '6': {Latitude: 33.83916, Longitude: 132.76574}
-  '7': {Latitude: 34.18583, Longitude: 131.47139}
-  '8': {Latitude: 35.61488, Longitude: 139.5813}
-  '9': {Latitude: 35.61488, Longitude: 139.5813}
-  '10': {Latitude: 33.83916, Longitude: 132.76574}
-  '11': {Latitude: 34.34028, Longitude: 134.04333}
-  '12': {Latitude: 35.18147, Longitude: 136.90641}
-  '13': {Latitude: 35.60472, Longitude: 140.12333}
-  '14': {Latitude: 35.16667, Longitude: 133.56667}
-  '15': {Latitude: 35.18147, Longitude: 136.90641}
-  '16': {Latitude: 36.59444, Longitude: 136.62556}
-  '17': {Latitude: 36.59444, Longitude: 136.62556}
-  '18': {Latitude: 34.80559, Longitude: 135.77841}
-  '19': {Latitude: 35.02107, Longitude: 135.75385}
-  '20': {Latitude: 35.18147, Longitude: 136.90641}
-  '21': {Latitude: 35.18147, Longitude: 136.90641}
-  '22': {Latitude: 34.97694, Longitude: 138.38306}
-  '23': {Latitude: 35.18147, Longitude: 136.90641}
-  '24': {Latitude: 36.59444, Longitude: 136.62556}
-  '25': {Latitude: 36.69528, Longitude: 137.21139}
-  '26': {Latitude: 35.66389, Longitude: 138.56833}
-  '27': {Latitude: 34.06583, Longitude: 134.55944}
-  '28': {Latitude: 35.61488, Longitude: 139.5813}
-  '29': {Latitude: 35.61488, Longitude: 139.5813}
-  '30': {Latitude: 35.61488, Longitude: 139.5813}
-  '31': {Latitude: 35.61488, Longitude: 139.5813}
-  '32': {Latitude: 35.61488, Longitude: 139.5813}
-  '33': {Latitude: 35.61488, Longitude: 139.5813}
-  '34': {Latitude: 35.61488, Longitude: 139.5813}
-  '35': {Latitude: 35.61488, Longitude: 139.5813}
-  '36': {Latitude: 35.61488, Longitude: 139.5813}
-  '37': {Latitude: 35.61488, Longitude: 139.5813}
-  '38': {Latitude: 35.62522, Longitude: 139.42416}
-  '39': {Latitude: 35.61488, Longitude: 139.5813}
-  '40': {Latitude: 37.90222, Longitude: 139.02361}
-  '41': {Latitude: 36.06443, Longitude: 136.22257}
-  '42': {Latitude: 36.2, Longitude: 140.1}
-  '43': {Latitude: 36.2, Longitude: 140.1}
-  '44': {Latitude: 36.2, Longitude: 140.1}
-  '45': {Latitude: 36.2, Longitude: 140.1}
-  '46': {Latitude: 36.39111, Longitude: 139.06083}
-  '47': {Latitude: 35.61488, Longitude: 139.5813}
-  '48': {Latitude: 35.61488, Longitude: 139.5813}
-  '49': {Latitude: 35.02107, Longitude: 135.75385}
-  '50': {Latitude: 35.02107, Longitude: 135.75385}
-  '51': {Latitude: 38.3, Longitude: 139.55}
-  '52': {Latitude: 34.27339, Longitude: 136.5065}
-  '53': {Latitude: 34.69374, Longitude: 135.50218}
-  '54': {Latitude: 34.6913, Longitude: 135.183}
-  '55': {Latitude: 35.61488, Longitude: 139.5813}
-  '56': {Latitude: 34.69374, Longitude: 135.50218}
-  '57': {Latitude: 35.5, Longitude: 134.23333}
-  '58': {Latitude: 34.66167, Longitude: 133.935}
-  '59': {Latitude: 34.69374, Longitude: 135.50218}
-  '60': {Latitude: 35.61488, Longitude: 139.5813}
-  '61': {Latitude: 35.90807, Longitude: 139.65657}
-  '62': {Latitude: 35.61488, Longitude: 139.5813}
-  '63': {Latitude: 35.61488, Longitude: 139.5813}
-  '64': {Latitude: 32.74472, Longitude: 129.87361}
-  '65': {Latitude: 33.60639, Longitude: 130.41806}
-  '66': {Latitude: 43.06417, Longitude: 141.34694}
-  '67': {Latitude: 43.06417, Longitude: 141.34694}
-  '68': {Latitude: 43.06417, Longitude: 141.34694}
-  '69': {Latitude: 40.59306, Longitude: 140.4725}
-  '70': {Latitude: 38.26889, Longitude: 140.87194}
-  '71': {Latitude: 32.76667, Longitude: 131.36667}
-  '72': {Latitude: 33.60639, Longitude: 130.41806}
-  '73': {Latitude: 31.56018, Longitude: 130.55814}
 edges:
-- ['0', '64']
-- ['0', '1']
-- ['0', '2']
-- ['0', '3']
-- ['0', '5']
-- ['0', '65']
-- ['0', '72']
-- ['0', '73']
-- ['0', '10']
-- ['4', '5']
-- ['5', '7']
-- ['5', '49']
-- ['5', '57']
-- ['5', '58']
-- ['6', '10']
-- ['8', '34']
-- ['9', '34']
-- ['10', '11']
-- ['10', '27']
-- ['10', '59']
-- ['12', '20']
-- ['13', '35']
-- ['14', '35']
-- ['15', '20']
-- ['16', '24']
-- ['17', '24']
-- ['18', '49']
-- ['19', '49']
-- ['20', '34']
-- ['20', '21']
-- ['20', '22']
-- ['20', '23']
-- ['20', '59']
-- ['24', '66']
-- ['24', '35']
-- ['24', '40']
-- ['24', '41']
-- ['24', '49']
-- ['24', '25']
-- ['26', '35']
-- ['28', '35']
-- ['29', '34']
-- ['30', '34']
-- ['31', '34']
-- ['32', '35']
-- ['33', '34']
-- ['34', '35']
-- ['34', '36']
-- ['34', '37']
-- ['34', '38']
-- ['34', '39']
-- ['34', '44']
-- ['34', '48']
-- ['34', '51']
-- ['34', '60']
-- ['34', '62']
-- ['35', '46']
-- ['35', '47']
-- ['35', '55']
-- ['35', '61']
-- ['35', '63']
-- ['42', '44']
-- ['43', '44']
-- ['44', '70']
-- ['44', '45']
-- ['49', '50']
-- ['49', '59']
-- ['52', '59']
-- ['53', '59']
-- ['54', '59']
-- ['56', '59']
-- ['66', '67']
-- ['66', '70']
-- ['67', '68']
-- ['69', '70']
-- ['70', '71']
+- - '0'
+  - '64'
+- - '0'
+  - '1'
+- - '0'
+  - '2'
+- - '0'
+  - '3'
+- - '0'
+  - '5'
+- - '0'
+  - '65'
+- - '0'
+  - '72'
+- - '0'
+  - '73'
+- - '0'
+  - '10'
+- - '4'
+  - '5'
+- - '5'
+  - '7'
+- - '5'
+  - '49'
+- - '5'
+  - '57'
+- - '5'
+  - '58'
+- - '6'
+  - '10'
+- - '8'
+  - '34'
+- - '9'
+  - '34'
+- - '10'
+  - '11'
+- - '10'
+  - '27'
+- - '10'
+  - '59'
+- - '12'
+  - '20'
+- - '13'
+  - '35'
+- - '14'
+  - '35'
+- - '15'
+  - '20'
+- - '16'
+  - '24'
+- - '17'
+  - '24'
+- - '18'
+  - '49'
+- - '19'
+  - '49'
+- - '20'
+  - '34'
+- - '20'
+  - '21'
+- - '20'
+  - '22'
+- - '20'
+  - '23'
+- - '20'
+  - '59'
+- - '24'
+  - '66'
+- - '24'
+  - '35'
+- - '24'
+  - '49'
+- - '24'
+  - '40'
+- - '24'
+  - '41'
+- - '24'
+  - '25'
+- - '26'
+  - '35'
+- - '28'
+  - '35'
+- - '29'
+  - '34'
+- - '30'
+  - '34'
+- - '31'
+  - '34'
+- - '32'
+  - '35'
+- - '33'
+  - '34'
+- - '34'
+  - '35'
+- - '34'
+  - '36'
+- - '34'
+  - '37'
+- - '34'
+  - '38'
+- - '34'
+  - '39'
+- - '34'
+  - '44'
+- - '34'
+  - '48'
+- - '34'
+  - '51'
+- - '34'
+  - '62'
+- - '34'
+  - '60'
+- - '35'
+  - '47'
+- - '35'
+  - '46'
+- - '35'
+  - '55'
+- - '35'
+  - '61'
+- - '35'
+  - '63'
+- - '42'
+  - '44'
+- - '43'
+  - '44'
+- - '44'
+  - '70'
+- - '44'
+  - '45'
+- - '49'
+  - '50'
+- - '49'
+  - '59'
+- - '52'
+  - '59'
+- - '53'
+  - '59'
+- - '54'
+  - '59'
+- - '56'
+  - '59'
+- - '66'
+  - '67'
+- - '66'
+  - '70'
+- - '67'
+  - '68'
+- - '69'
+  - '70'
+- - '70'
+  - '71'
+nodes:
+  '0':
+    Country: Japan
+    Internal: '1'
+    Latitude: 33.60639
+    Longitude: 130.41806
+    label: Fukuoka DC
+    type: Core Node
+  '1':
+    Country: Japan
+    Internal: '1'
+    Latitude: 33.23806
+    Longitude: 131.6125
+    label: Oita U
+    type: Edge Node
+  '10':
+    Country: Japan
+    Internal: '1'
+    Latitude: 33.83916
+    Longitude: 132.76574
+    label: Matsuyama DC
+    type: Core Node
+  '11':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.34028
+    Longitude: 134.04333
+    label: Kagawa U
+    type: Edge Node
+  '12':
+    Internal: '1'
+    Latitude: 35.18147
+    Longitude: 136.90641
+    label: Kamioka Obs, ICRR, U Tokyo
+    type: Edge Node
+  '13':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.60472
+    Longitude: 140.12333
+    label: Chiba U
+    type: Edge Node
+  '14':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.16667
+    Longitude: 133.56667
+    label: Shinshu U
+    type: Edge Node
+  '15':
+    Internal: '1'
+    Latitude: 35.18147
+    Longitude: 136.90641
+    label: NIFS
+    type: Edge Node
+  '16':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.59444
+    Longitude: 136.62556
+    label: Kanazawa U
+    type: Edge Node
+  '17':
+    Internal: '1'
+    Latitude: 36.59444
+    Longitude: 136.62556
+    label: JAIST
+    type: Edge Node
+  '18':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.80559
+    Longitude: 135.77841
+    label: Doshisha U
+    type: Edge Node
+  '19':
+    Internal: '1'
+    Latitude: 35.02107
+    Longitude: 135.75385
+    label: ICR, Kyoto U
+    type: Edge Node
+  '2':
+    Country: Japan
+    Internal: '1'
+    Latitude: 33.0
+    Longitude: 131.0
+    label: Kyushu U
+    type: Edge Node
+  '20':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.18147
+    Longitude: 136.90641
+    label: Nagoya DC
+    type: Core Node
+  '21':
+    Internal: '1'
+    Latitude: 35.18147
+    Longitude: 136.90641
+    label: NINS-Okazaki
+    type: Edge Node
+  '22':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.97694
+    Longitude: 138.38306
+    label: Shizuoka U
+    type: Edge Node
+  '23':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.18147
+    Longitude: 136.90641
+    label: Nagoya U
+    type: Edge Node
+  '24':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.59444
+    Longitude: 136.62556
+    label: Kanazawa DC
+    type: Core Node
+  '25':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.69528
+    Longitude: 137.21139
+    label: Toyama U
+    type: Edge Node
+  '26':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.66389
+    Longitude: 138.56833
+    label: Yamanashi U
+    type: Edge Node
+  '27':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.06583
+    Longitude: 134.55944
+    label: U Tokushima
+    type: Edge Node
+  '28':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: Tokyo DC3
+    type: Core Node
+  '29':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: NII
+    type: Edge Node
+  '3':
+    Internal: '1'
+    Latitude: 33.60639
+    Longitude: 130.41806
+    label: Kyushu IT
+    type: Edge Node
+  '30':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: NII-CHiba
+    type: Edge Node
+  '31':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: GSIST, U Tokyo
+    type: Edge Node
+  '32':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: U Electro-Communications
+    type: Edge Node
+  '33':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: RIKEN
+    type: Edge Node
+  '34':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: Tokyo DC1
+    type: Core Node
+  '35':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: Tokyo DC2
+    type: Core Node
+  '36':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: JAXA-ISAS
+    type: Edge Node
+  '37':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: Yokohama National U
+    type: Edge Node
+  '38':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.62522
+    Longitude: 139.42416
+    label: Keio U
+    type: Edge Node
+  '39':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: Tokyo IT
+    type: Edge Node
+  '4':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.39627
+    Longitude: 132.45937
+    label: Hiroshima U
+    type: Edge Node
+  '40':
+    Country: Japan
+    Internal: '1'
+    Latitude: 37.90222
+    Longitude: 139.02361
+    label: Niigata U
+    type: Edge Node
+  '41':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.06443
+    Longitude: 136.22257
+    label: Fukui U
+    type: Edge Node
+  '42':
+    Internal: '1'
+    Latitude: 36.2
+    Longitude: 140.1
+    label: KEK
+    type: Edge Node
+  '43':
+    Internal: '1'
+    Latitude: 36.2
+    Longitude: 140.1
+    label: JAEA
+    type: Edge Node
+  '44':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.2
+    Longitude: 140.1
+    label: Tsukuba DC
+    type: Core Node
+  '45':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.2
+    Longitude: 140.1
+    label: U Tsukuba
+    type: Edge Node
+  '46':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.39111
+    Longitude: 139.06083
+    label: Gunma U
+    type: Edge Node
+  '47':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: ISM
+    type: Edge Node
+  '48':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: U Tokyo
+    type: Edge Node
+  '49':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.02107
+    Longitude: 135.75385
+    label: Kyoto DC
+    type: Core Node
+  '5':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.39627
+    Longitude: 132.45937
+    label: Hiroshima DC
+    type: Core Node
+  '50':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.02107
+    Longitude: 135.75385
+    label: Kyoto U
+    type: Edge Node
+  '51':
+    Country: Japan
+    Internal: '1'
+    Latitude: 38.3
+    Longitude: 139.55
+    label: Waseda U
+    type: Edge Node
+  '52':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.27339
+    Longitude: 136.5065
+    label: Kansai U
+    type: Edge Node
+  '53':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.69374
+    Longitude: 135.50218
+    label: Osaka U
+    type: Edge Node
+  '54':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.6913
+    Longitude: 135.183
+    label: Kobe U
+    type: Edge Node
+  '55':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: JAMSTEC
+    type: Edge Node
+  '56':
+    Internal: '1'
+    Latitude: 34.69374
+    Longitude: 135.50218
+    label: JASRI
+    type: Edge Node
+  '57':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.5
+    Longitude: 134.23333
+    label: Tottori U
+    type: Edge Node
+  '58':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.66167
+    Longitude: 133.935
+    label: Okayama U
+    type: Edge Node
+  '59':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.69374
+    Longitude: 135.50218
+    label: Osaka DC
+    type: Core Node
+  '6':
+    Country: Japan
+    Internal: '1'
+    Latitude: 33.83916
+    Longitude: 132.76574
+    label: Ehime U
+    type: Edge Node
+  '60':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: NAOJ
+    type: Edge Node
+  '61':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.90807
+    Longitude: 139.65657
+    label: Saitama U
+    type: Edge Node
+  '62':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: JAXA-IAT
+    type: Edge Node
+  '63':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: Tokyo U Ag and Tech
+    type: Edge Node
+  '64':
+    Country: Japan
+    Internal: '1'
+    Latitude: 32.74472
+    Longitude: 129.87361
+    label: Nagasaki U
+    type: Edge Node
+  '65':
+    Internal: '1'
+    Latitude: 33.60639
+    Longitude: 130.41806
+    label: Kurnamoto U
+    type: Edge Node
+  '66':
+    Country: Japan
+    Internal: '1'
+    Latitude: 43.06417
+    Longitude: 141.34694
+    label: Sapporo DC
+    type: Core Node
+  '67':
+    Country: Japan
+    Internal: '1'
+    Latitude: 43.06417
+    Longitude: 141.34694
+    label: Hokkaido U
+    type: Edge Node
+  '68':
+    Internal: '1'
+    Latitude: 43.06417
+    Longitude: 141.34694
+    label: Kitami IT
+    type: Edge Node
+  '69':
+    Country: Japan
+    Internal: '1'
+    Latitude: 40.59306
+    Longitude: 140.4725
+    label: Hirosaki U
+    type: Edge Node
+  '7':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.18583
+    Longitude: 131.47139
+    label: Yamaguchi U
+    type: Edge Node
+  '70':
+    Country: Japan
+    Internal: '1'
+    Latitude: 38.26889
+    Longitude: 140.87194
+    label: Sendai DC
+    type: Core Node
+  '71':
+    Country: Japan
+    Internal: '1'
+    Latitude: 32.76667
+    Longitude: 131.36667
+    label: Tohoku U
+    type: Edge Node
+  '72':
+    Internal: '1'
+    Latitude: 33.60639
+    Longitude: 130.41806
+    label: U of the Ryukyus
+    type: Edge Node
+  '73':
+    Country: Japan
+    Internal: '1'
+    Latitude: 31.56018
+    Longitude: 130.55814
+    label: Kagoshima U
+    type: Edge Node
+  '8':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: IMS, U Tokyo
+    type: Edge Node
+  '9':
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: ISSP, U Tokyo
+    type: Edge Node

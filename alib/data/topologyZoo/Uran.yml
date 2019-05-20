@@ -1,50 +1,189 @@
-nodes:
-  '0': {Latitude: 46.63333, Longitude: 32.6}
-  '1': {Latitude: 46.96667, Longitude: 32.0}
-  '2': {Latitude: 44.58883, Longitude: 33.5224}
-  '3': {Latitude: 44.95844, Longitude: 34.10558}
-  '4': {Latitude: 49.23333, Longitude: 28.48333}
-  '5': {Latitude: 49.41667, Longitude: 27.0}
-  '6': {Latitude: 46.47747, Longitude: 30.73262}
-  '7': {Latitude: 48.66667, Longitude: 26.56667}
-  '8': {Latitude: 50.45466, Longitude: 30.5238}
-  '9': {Latitude: 49.83826, Longitude: 24.02324}
-  '10': {Latitude: 49.43333, Longitude: 32.06667}
-  '11': {Latitude: 46.47747, Longitude: 30.73262}
-  '12': {Latitude: 50.0, Longitude: 36.25}
-  '13': {Latitude: 50.45466, Longitude: 30.5238}
-  '14': {Latitude: 47.81667, Longitude: 35.18333}
-  '15': {Latitude: 48.45, Longitude: 34.98333}
-  '16': {Latitude: 49.83826, Longitude: 24.02324}
-  '17': {Latitude: 50.75, Longitude: 25.33333}
-  '18': {Latitude: 50.25, Longitude: 28.66667}
-  '19': {Latitude: 50.45466, Longitude: 30.5238}
-  '20': {Latitude: 50.08333, Longitude: 31.46667}
-  '21': {Latitude: 49.58333, Longitude: 34.56667}
-  '22': {Latitude: 50.0, Longitude: 36.25}
-  '23': {Latitude: 48.0, Longitude: 37.8}
 edges:
-- ['0', '1']
-- ['0', '3']
-- ['1', '10']
-- ['1', '6']
-- ['2', '3']
-- ['4', '19']
-- ['4', '5']
-- ['5', '16']
-- ['6', '11']
-- ['7', '19']
-- ['8', '19']
-- ['9', '16']
-- ['10', '19']
-- ['12', '22']
-- ['13', '19']
-- ['14', '15']
-- ['15', '21']
-- ['15', '23']
-- ['16', '19']
-- ['17', '18']
-- ['18', '19']
-- ['19', '20']
-- ['19', '21']
-- ['21', '22']
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '1'
+  - '10'
+- - '1'
+  - '6'
+- - '2'
+  - '3'
+- - '4'
+  - '19'
+- - '4'
+  - '5'
+- - '5'
+  - '16'
+- - '6'
+  - '11'
+- - '7'
+  - '19'
+- - '8'
+  - '19'
+- - '9'
+  - '16'
+- - '10'
+  - '19'
+- - '12'
+  - '22'
+- - '13'
+  - '19'
+- - '14'
+  - '15'
+- - '15'
+  - '21'
+- - '15'
+  - '23'
+- - '16'
+  - '19'
+- - '17'
+  - '18'
+- - '18'
+  - '19'
+- - '19'
+  - '20'
+- - '19'
+  - '21'
+- - '21'
+  - '22'
+nodes:
+  '0':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 46.63333
+    Longitude: 32.6
+    label: Kherson
+  '1':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 46.96667
+    Longitude: 32.0
+    label: Mykolaiv
+  '10':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 49.43333
+    Longitude: 32.06667
+    label: Cherkassy
+  '11':
+    Internal: '0'
+    Latitude: 46.47747
+    Longitude: 30.73262
+    label: Odessa-IX
+  '12':
+    Internal: '0'
+    Latitude: 50.0
+    Longitude: 36.25
+    label: Kharkiv-IX
+  '13':
+    Internal: '0'
+    Latitude: 50.45466
+    Longitude: 30.5238
+    label: UA-IX
+  '14':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 47.81667
+    Longitude: 35.18333
+    label: Zaporizhia
+  '15':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 48.45
+    Longitude: 34.98333
+    label: Dnipropetrovsk
+  '16':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 49.83826
+    Longitude: 24.02324
+    label: Lviv
+  '17':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 50.75
+    Longitude: 25.33333
+    label: Lutsk
+  '18':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 50.25
+    Longitude: 28.66667
+    label: Zhitomir
+  '19':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 50.45466
+    Longitude: 30.5238
+    label: Kiev
+  '2':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 44.58883
+    Longitude: 33.5224
+    label: Sevastopol
+  '20':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 50.08333
+    Longitude: 31.46667
+    label: Pereyaslav
+  '21':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 49.58333
+    Longitude: 34.56667
+    label: Poltava
+  '22':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 50.0
+    Longitude: 36.25
+    label: Kharkiv
+  '23':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 48.0
+    Longitude: 37.8
+    label: Donetsk
+  '3':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 44.95844
+    Longitude: 34.10558
+    label: Simferopol
+  '4':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 49.23333
+    Longitude: 28.48333
+    label: Vinnitsa
+  '5':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 49.41667
+    Longitude: 27.0
+    label: Khmelnitsky
+  '6':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 46.47747
+    Longitude: 30.73262
+    label: Odessa
+  '7':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 48.66667
+    Longitude: 26.56667
+    label: Kamianets-Podilsky
+  '8':
+    Internal: '0'
+    Latitude: 50.45466
+    Longitude: 30.5238
+    label: Frankfurt (Internet)
+  '9':
+    Internal: '0'
+    Latitude: 49.83826
+    Longitude: 24.02324
+    label: Poznan (GEANT & Internet)

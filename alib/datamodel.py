@@ -21,6 +21,16 @@
 # SOFTWARE.
 #
 
+from collections import defaultdict
+import random
+import numpy as np
+
+try:
+    import cPickle as pickle
+except ImportError:
+    import pickle
+
+
 class SubstrateError(Exception): pass
 
 
@@ -64,6 +74,268 @@ class Scenario(object):
         return True
 
 
+class UndirectedGraph(object):
+    """ Simple representation of an unidrected graph (without any further attributes as weights, costs etc.)
+    """
+    def __init__(self, name):
+        self.name = name
+        self.nodes = set()
+        self.edges = set()
+
+        self.neighbors = {}
+        self.incident_edges = {}
+
+    def add_node(self, node):
+        self.nodes.add(node)
+        self.neighbors[node] = set()
+        self.incident_edges[node] = set()
+
+    def add_edge(self, i, j):
+        if i not in self.nodes or j not in self.nodes:
+            raise ValueError("Nodes not in graph!")
+        new_edge = frozenset([i, j])
+        if new_edge in self.edges:
+            raise ValueError("Duplicate edge {new_edge}!")
+        if len(new_edge) == 1:
+            raise ValueError("Loop edges are not allowed ({i})")
+
+        self.neighbors[i].add(j)
+        self.neighbors[j].add(i)
+        self.incident_edges[i].add(new_edge)
+        self.incident_edges[j].add(new_edge)
+        self.edges.add(new_edge)
+        return new_edge
+
+    def remove_node(self, node):
+        if node not in self.nodes:
+            raise ValueError("Node not in graph.")
+
+        edges_to_remove = list(self.incident_edges[node])
+
+        for incident_edge in edges_to_remove:
+            edge_as_list = list(incident_edge)
+            self.remove_edge(edge_as_list[0], edge_as_list[1])
+
+        del self.incident_edges[node]
+        del self.neighbors[node]
+        self.nodes.remove(node)
+
+    def remove_edge(self, i, j):
+        old_edge = frozenset([i, j])
+        if i not in self.nodes or j not in self.nodes:
+            raise ValueError("Nodes not in graph!")
+        if old_edge not in self.edges:
+            raise ValueError("Edge not in graph!")
+
+        self.neighbors[i].remove(j)
+        self.neighbors[j].remove(i)
+
+        self.incident_edges[i].remove(old_edge)
+        self.incident_edges[j].remove(old_edge)
+
+        self.edges.remove(old_edge)
+
+    def get_incident_edges(self, node):
+        return self.incident_edges[node]
+
+    def get_neighbors(self, node):
+        return self.neighbors[node]
+
+    def get_edge_representation(self):
+        return [list(edge) for edge in self.edges]
+
+    def check_connectedness(self):
+        if len(self.nodes) == 0:
+            return True
+        root = next(iter(self.nodes))
+        unvisited = set(self.nodes)
+        to_process = [root]
+        while len(to_process) > 0:
+            current_node = to_process.pop(0)
+            if not current_node in unvisited:
+                continue
+            for neighbor in self.neighbors[current_node]:
+                if neighbor in unvisited:
+                    to_process.append(neighbor)
+            unvisited.remove(current_node)
+        return len(unvisited) == 0
+
+
+
+
+
+    def __str__(self):
+        return "{} {} with following attributes: \n\t\tNodes{}\n\t\tEdges{}".format(type(self).__name__, self.name,
+                                                                                    self.nodes, self.edges)
+
+def get_undirected_graph_from_edge_representation(edge_list, name=""):
+    ''' returns an undirected graph given a list of edges
+    '''
+
+    graph = UndirectedGraph(name=name)
+
+    for i,j in edge_list:
+        if i not in graph.nodes:
+            graph.add_node(i)
+        if j not in graph.nodes:
+            graph.add_node(j)
+        graph.add_edge(i,j)
+    
+    return graph
+
+def is_connected_undirected_edge_representation(edge_list):
+    ''' Given a list of edges, returns whether the result undirected graph is connected
+    '''
+    #each node is assigned the connected component id
+    node_to_connected_component_id = {}
+    # holds the nodes for each connected component ids
+    connected_component_id_to_nodes = defaultdict(list)
+
+    new_connected_component_id = 0
+
+    for i,j in edge_list:
+
+        if i in node_to_connected_component_id.keys() and j in node_to_connected_component_id.keys():
+            #both nodes are already known
+            connected_component_i = node_to_connected_component_id[i]
+            connected_component_j = node_to_connected_component_id[j]
+
+            if connected_component_i != connected_component_j:
+                #merge connected components, removing the connected component of node j
+
+                for k in connected_component_id_to_nodes[connected_component_j]:
+                    node_to_connected_component_id[k] = connected_component_i
+
+                connected_component_id_to_nodes[connected_component_i].extend(connected_component_id_to_nodes[connected_component_j])
+                del connected_component_id_to_nodes[connected_component_j]
+
+        elif i in node_to_connected_component_id.keys() and j not in node_to_connected_component_id.keys():
+            #add j to connected component of i
+            connected_component_i = node_to_connected_component_id[i]
+            node_to_connected_component_id[j] = connected_component_i
+            connected_component_id_to_nodes[connected_component_i].append(j)
+
+        elif i not in node_to_connected_component_id.keys() and j in node_to_connected_component_id.keys():
+            # add i to connected component of j
+            connected_component_j = node_to_connected_component_id[j]
+            node_to_connected_component_id[i] = connected_component_j
+            connected_component_id_to_nodes[connected_component_j].append(i)
+
+        else:
+            # create new connected component and add both nodes
+            new_connected_component_id += 1
+            node_to_connected_component_id[i] = new_connected_component_id
+            node_to_connected_component_id[j] = new_connected_component_id
+            connected_component_id_to_nodes[new_connected_component_id].extend([i,j])
+
+    if len(connected_component_id_to_nodes.keys()) == 1:
+        return True
+    else:
+        return False
+
+
+def get_nodes_of_edge_list_representation(undirected_graph_edge_representation):
+    nodes = set()
+    for i, j in undirected_graph_edge_representation:
+        nodes.add(i)
+        nodes.add(j)
+    return list(nodes)
+
+def get_number_of_nodes_edge_list_representation(undirected_graph_edge_representation):
+    return len(get_nodes_of_edge_list_representation(undirected_graph_edge_representation))
+
+
+
+class UndirectedGraphStorage(object):
+
+    def __init__(self, parameter_name, random_instance=None):
+        self.parameter_name = parameter_name
+        self.undirected_edge_representation_storage = {}
+        if random_instance is None:
+            random_instance = random.Random()
+        self.random_instance = random_instance
+        self._average_number_of_edges_dict = {}
+
+    def add_graph_as_edge_representation(self, parameter, edge_representation):
+        if parameter not in self.undirected_edge_representation_storage:
+            self.undirected_edge_representation_storage[parameter] = {}
+        number_of_nodes = get_number_of_nodes_edge_list_representation(edge_representation)
+        if number_of_nodes not in self.undirected_edge_representation_storage[parameter]:
+            self.undirected_edge_representation_storage[parameter][number_of_nodes] = []
+
+        self.undirected_edge_representation_storage[parameter][number_of_nodes].append(edge_representation)
+
+    def load_from_pickle(self, pickle_path):
+        other_undirected_graph_storage = None
+        with open(pickle_path, "r") as f:
+            other_undirected_graph_storage = pickle.load(f)
+
+        self.parameter_name = other_undirected_graph_storage.parameter_name
+        self.undirected_edge_representation_storage = other_undirected_graph_storage.undirected_edge_representation_storage
+
+    def add_graph(self, parameter, graph):
+        self.add_graph_as_edge_representation(parameter, graph.get_edge_representation())
+
+
+    def get_random_graph(self, parameter, number_of_nodes, name=""):
+        edge_graph_representation = self.get_random_graph_as_edge_list_representation(parameter, number_of_nodes)
+        return get_undirected_graph_from_edge_representation(edge_graph_representation, name)
+
+    def get_random_graph_as_edge_list_representation(self, parameter, number_of_nodes):
+        if parameter not in self.undirected_edge_representation_storage:
+            raise ValueError("No graphs are stored for parameter {}".format(parameter))
+        if number_of_nodes not in self.undirected_edge_representation_storage[parameter]:
+            raise ValueError("No graphs are stored for parameter {} and number of nodes {}".format(parameter, number_of_nodes))
+
+        number_of_potential_graphs = len(self.undirected_edge_representation_storage[parameter][number_of_nodes])
+        selected_index = self.random_instance.randint(0, number_of_potential_graphs-1)
+        return self.undirected_edge_representation_storage[parameter][number_of_nodes][selected_index]
+
+    def _get_edge_distribution_information(self, parameter_value, number_of_nodes):
+        number_of_graphs = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes])
+        edge_counts = np.zeros(number_of_graphs)
+        for i in range(number_of_graphs):
+            edge_counts[i] = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes][i])
+        sorted_edge_counts = np.sort(edge_counts)
+        interesting_indices = [0] + [int(number_of_graphs*i/100.0) for i in [5,25,50,75,95]] + [number_of_graphs-1]
+        percentiles = [sorted_edge_counts[index] for index in interesting_indices]
+        return "min: {:>2}, max: {:>2}, median: {:>2};   5, 25, 75, 95 percentiles: {:>2} {:>2} {:>2} {:>2}".format(percentiles[0],
+                                                                                                                    percentiles[6],
+                                                                                                                    percentiles[3],
+                                                                                                                    percentiles[1],
+                                                                                                                    percentiles[2],
+                                                                                                                    percentiles[4],
+                                                                                                                    percentiles[5])
+
+    def get_average_number_of_edges_for_parameter(self, parameter_value):
+        if parameter_value in self._average_number_of_edges_dict.keys():
+            return self._average_number_of_edges_dict[parameter_value]
+        else:
+            self._average_number_of_edges_dict[parameter_value] = {}
+            for foolaa in self.undirected_edge_representation_storage[parameter_value].keys():
+                number_of_graphs = len(self.undirected_edge_representation_storage[parameter_value][foolaa])
+                edge_counts = np.zeros(number_of_graphs)
+                for i in range(number_of_graphs):
+                    edge_counts[i] = len(
+                        self.undirected_edge_representation_storage[parameter_value][foolaa][i])
+                self._average_number_of_edges_dict[parameter_value][foolaa] = np.average(edge_counts)
+            return self._average_number_of_edges_dict[parameter_value]
+
+
+    def get_information(self):
+        result = ""
+        for parameter_value in self.undirected_edge_representation_storage.keys():
+            total = 0
+            result += "========================\nPARAMETER {} = {}\n========================\n".format(self.parameter_name, parameter_value)
+            for number_of_nodes in self.undirected_edge_representation_storage[parameter_value].keys():
+                number_of_graphs = len(self.undirected_edge_representation_storage[parameter_value][number_of_nodes])
+                edge_info = self._get_edge_distribution_information(parameter_value, number_of_nodes)
+                result += "\tnodes: {:>3} --> {:>5} graphs with edge distribution {}\n".format(number_of_nodes, number_of_graphs, edge_info)
+                total += number_of_graphs
+            result += "========================\nTOTAL: {} graphs\n========================\n".format(total)
+        return result
+
+
 class Graph(object):
     """ Representing a directed graph ( G = ( V , E) ).
 
@@ -81,10 +353,11 @@ class Graph(object):
         self.in_edges = {}
         self.node = {}
         self.edge = {}
-        self.shortest_paths_costs = {}
+        self.shortest_paths_costs = None
         self._shortest_paths_attribute_identifier = "cost"
 
     def add_node(self, node, **kwargs):
+
         self.nodes.add(node)
         self.out_neighbors[node] = []
         self.in_neighbors[node] = []
@@ -93,6 +366,7 @@ class Graph(object):
         self.node[node] = {}
         for key, value in kwargs.items():
             self.node[node][key] = value
+        #print "added node: {}, now there are {} nodes".format(node, len(self.nodes))
 
     def add_edge(self, tail, head, bidirected=False, **kwargs):
         if (tail not in self.nodes) or (head not in self.nodes):
@@ -159,6 +433,8 @@ class Graph(object):
     def initialize_shortest_paths_costs(self):
         # this can only be used if costs are defined as such for each edge
 
+        self.shortest_paths_costs = {}
+
         for edge in self.edges:
             if self._shortest_paths_attribute_identifier not in self.edge[edge]:
                 raise Exception("cost not defined for edge {}".format(edge))
@@ -188,7 +464,9 @@ class Graph(object):
         for u in self.nodes:
             for v in self.nodes:
                 if self.shortest_paths_costs[u][v] is None:
+                    print "node {} cannot reach node {}".format(u, v)
                     return False
+
 
         return True
 
@@ -224,8 +502,7 @@ class Request(Graph):
         self.types.add(ntype)
 
     def add_edge(self, tail, head, demand, allowed_edges=None):
-        if tail in self.nodes and head in self.nodes:
-            super(Request, self).add_edge(tail, head, demand=demand, allowed_edges=allowed_edges)
+        super(Request, self).add_edge(tail, head, demand=demand, allowed_edges=allowed_edges)
 
     def set_allowed_nodes(self, i, allowed_nodes):
         if i in self.nodes:
@@ -421,6 +698,7 @@ class SubstrateX(object):
             for snode in self.substrate.get_nodes_by_type(ntype):
                 self.substrate_node_resources.append((ntype, snode))
                 self.substrate_resources.append((ntype, snode))
+                #print self.substrate.node[snode]
                 self.substrate_resource_capacities[(ntype, snode)] = self.substrate.node[snode]['capacity'][ntype]
 
         self.substrate_node_resources = sorted(

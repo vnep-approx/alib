@@ -1,42 +1,152 @@
-nodes:
-  '0': {Latitude: 49.65833, Longitude: 6.13722}
-  '1': {Latitude: 49.61167, Longitude: 6.13}
-  '2': {Latitude: 49.8475, Longitude: 6.10417}
-  '3': {Latitude: 49.86778, Longitude: 6.15583}
-  '4': {Latitude: 49.62389, Longitude: 6.14944}
-  '5': {Latitude: 49.62389, Longitude: 6.14944}
-  '6': {Latitude: 49.62389, Longitude: 6.14944}
-  '7': {Latitude: 49.49583, Longitude: 5.98056}
-  '8': {Latitude: 49.62389, Longitude: 6.14944}
-  '9': {Latitude: 49.62389, Longitude: 6.14944}
-  '10': {Latitude: 49.62389, Longitude: 6.14944}
-  '11': {Latitude: 49.62389, Longitude: 6.14944}
-  '12': {Latitude: 49.62083, Longitude: 6.12167}
-  '13': {Latitude: 49.62278, Longitude: 6.10778}
-  '14': {Latitude: 49.6025, Longitude: 6.12417}
-  '15': {Latitude: 49.49583, Longitude: 5.98056}
-  '16': {Latitude: 49.51861, Longitude: 6.10278}
-  '17': {Latitude: 49.61167, Longitude: 6.13}
-  '18': {Latitude: 49.62083, Longitude: 6.12167}
 edges:
-- ['0', '9']
-- ['1', '9']
-- ['2', '10']
-- ['2', '3']
-- ['3', '9']
-- ['4', '10']
-- ['5', '10']
-- ['6', '9']
-- ['7', '15']
-- ['8', '10']
-- ['9', '10']
-- ['9', '16']
-- ['9', '17']
-- ['10', '11']
-- ['10', '18']
-- ['12', '18']
-- ['12', '14']
-- ['13', '14']
-- ['14', '17']
-- ['14', '15']
-- ['15', '16']
+- - '0'
+  - '9'
+- - '1'
+  - '9'
+- - '2'
+  - '10'
+- - '2'
+  - '3'
+- - '3'
+  - '9'
+- - '4'
+  - '10'
+- - '5'
+  - '10'
+- - '6'
+  - '9'
+- - '7'
+  - '15'
+- - '8'
+  - '10'
+- - '9'
+  - '10'
+- - '9'
+  - '16'
+- - '9'
+  - '17'
+- - '10'
+  - '11'
+- - '10'
+  - '18'
+- - '12'
+  - '18'
+- - '12'
+  - '14'
+- - '13'
+  - '14'
+- - '14'
+  - '17'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+nodes:
+  '0':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.65833
+    Longitude: 6.13722
+    label: Walferdange
+  '1':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.61167
+    Longitude: 6.13
+    label: CCRN
+  '10':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.62389
+    Longitude: 6.14944
+    label: BCE
+  '11':
+    Internal: '1'
+    Latitude: 49.62389
+    Longitude: 6.14944
+    label: ADSL (via Tango)
+  '12':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.62083
+    Longitude: 6.12167
+    label: UNI.iu
+  '13':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.62278
+    Longitude: 6.10778
+    label: Rollingergrund
+  '14':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.6025
+    Longitude: 6.12417
+    label: Campus Geesseknaeppchen
+  '15':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.49583
+    Longitude: 5.98056
+    label: Esch-sur-Alzette
+  '16':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.51861
+    Longitude: 6.10278
+    label: Bettembourg
+  '17':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.61167
+    Longitude: 6.13
+    label: Luxembourg
+  '18':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.62083
+    Longitude: 6.12167
+    label: Limpertsberg
+  '2':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.8475
+    Longitude: 6.10417
+    label: Ettelbruck
+  '3':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.86778
+    Longitude: 6.15583
+    label: Diekirch
+  '4':
+    Internal: '0'
+    Latitude: 49.62389
+    Longitude: 6.14944
+    label: GEANT Paris (FR)
+  '5':
+    Internal: '0'
+    Latitude: 49.62389
+    Longitude: 6.14944
+    label: Internet via Bruxelles (BE)
+  '6':
+    Internal: '1'
+    Latitude: 49.62389
+    Longitude: 6.14944
+    label: ADSL (via EPT)
+  '7':
+    Internal: '0'
+    Latitude: 49.49583
+    Longitude: 5.98056
+    label: France
+  '8':
+    Internal: '0'
+    Latitude: 49.62389
+    Longitude: 6.14944
+    label: GEANT Frankfurt (DE)
+  '9':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.62389
+    Longitude: 6.14944
+    label: RESTENA

@@ -1,89 +1,390 @@
-nodes:
-  '0': {Latitude: 45.14861, Longitude: 17.24667}
-  '1': {Latitude: 45.475, Longitude: 16.78194}
-  '2': {Latitude: 45.16028, Longitude: 18.01556}
-  '3': {Latitude: 45.34028, Longitude: 17.68528}
-  '4': {Latitude: 45.7125, Longitude: 16.07556}
-  '5': {Latitude: 45.48722, Longitude: 15.54778}
-  '6': {Latitude: 45.46611, Longitude: 16.37833}
-  '7': {Latitude: 45.4375, Longitude: 16.29}
-  '8': {Latitude: 45.66833, Longitude: 15.64861}
-  '9': {Latitude: 45.81444, Longitude: 15.97798}
-  '10': {Latitude: 43.1725, Longitude: 16.44278}
-  '11': {Latitude: 42.64807, Longitude: 18.09216}
-  '12': {Latitude: 45.08, Longitude: 13.64}
-  '13': {Latitude: 45.27639, Longitude: 13.72083}
-  '14': {Latitude: 45.33917, Longitude: 14.30833}
-  '15': {Latitude: 45.22583, Longitude: 13.59389}
-  '16': {Latitude: 45.41, Longitude: 13.66194}
-  '17': {Latitude: 44.11972, Longitude: 15.24222}
-  '18': {Latitude: 44.10667, Longitude: 15.38056}
-  '19': {Latitude: 44.04389, Longitude: 16.2}
-  '20': {Latitude: 43.5125, Longitude: 16.25167}
-  '21': {Latitude: 43.34778, Longitude: 16.73389}
-  '22': {Latitude: 43.55, Longitude: 16.5}
-  '23': {Latitude: 43.72722, Longitude: 15.90583}
-  '24': {Latitude: 44.86833, Longitude: 13.84806}
-  '25': {Latitude: 44.53056, Longitude: 14.46861}
-  '26': {Latitude: 45.34306, Longitude: 14.40917}
-  '27': {Latitude: 43.50891, Longitude: 16.43915}
-  '28': {Latitude: 46.38444, Longitude: 16.43389}
-  '29': {Latitude: 45.81444, Longitude: 15.97798}
-  '30': {Latitude: 44.54611, Longitude: 15.37472}
-  '31': {Latitude: 44.86944, Longitude: 15.2375}
-  '32': {Latitude: 45.28833, Longitude: 18.80472}
-  '33': {Latitude: 45.81444, Longitude: 15.97798}
-  '34': {Latitude: 45.34333, Longitude: 18.99972}
-  '35': {Latitude: 45.30833, Longitude: 18.41056}
-  '36': {Latitude: 45.81444, Longitude: 15.97798}
-  '37': {Latitude: 45.85639, Longitude: 15.80778}
-  '38': {Latitude: 45.80306, Longitude: 15.71806}
-  '39': {Latitude: 46.30444, Longitude: 16.33778}
-  '40': {Latitude: 46.02194, Longitude: 16.5425}
-  '41': {Latitude: 45.89861, Longitude: 16.84889}
-  '42': {Latitude: 45.83194, Longitude: 17.38389}
-  '43': {Latitude: 45.55111, Longitude: 18.69389}
 edges:
-- ['0', '36']
-- ['1', '36']
-- ['2', '43']
-- ['3', '43']
-- ['4', '36']
-- ['5', '36']
-- ['6', '36']
-- ['6', '7']
-- ['8', '36']
-- ['9', '36']
-- ['10', '27']
-- ['11', '27']
-- ['12', '24']
-- ['13', '26']
-- ['14', '26']
-- ['15', '26']
-- ['16', '26']
-- ['17', '18']
-- ['17', '27']
-- ['19', '27']
-- ['20', '27']
-- ['21', '27']
-- ['22', '27']
-- ['23', '27']
-- ['24', '26']
-- ['25', '26']
-- ['26', '36']
-- ['26', '30']
-- ['26', '31']
-- ['27', '36']
-- ['28', '39']
-- ['29', '36']
-- ['32', '34']
-- ['33', '36']
-- ['34', '43']
-- ['35', '43']
-- ['36', '42']
-- ['36', '43']
-- ['36', '40']
-- ['36', '41']
-- ['36', '39']
-- ['36', '38']
-- ['36', '37']
+- - '0'
+  - '36'
+- - '1'
+  - '36'
+- - '2'
+  - '43'
+- - '3'
+  - '43'
+- - '4'
+  - '36'
+- - '5'
+  - '36'
+- - '6'
+  - '36'
+- - '6'
+  - '7'
+- - '8'
+  - '36'
+- - '9'
+  - '36'
+- - '10'
+  - '27'
+- - '11'
+  - '27'
+- - '12'
+  - '24'
+- - '13'
+  - '26'
+- - '14'
+  - '26'
+- - '15'
+  - '26'
+- - '16'
+  - '26'
+- - '17'
+  - '18'
+- - '17'
+  - '27'
+- - '19'
+  - '27'
+- - '20'
+  - '27'
+- - '21'
+  - '27'
+- - '22'
+  - '27'
+- - '23'
+  - '27'
+- - '24'
+  - '26'
+- - '25'
+  - '26'
+- - '26'
+  - '36'
+- - '26'
+  - '30'
+- - '26'
+  - '31'
+- - '27'
+  - '36'
+- - '28'
+  - '39'
+- - '29'
+  - '36'
+- - '32'
+  - '34'
+- - '33'
+  - '36'
+- - '34'
+  - '43'
+- - '35'
+  - '43'
+- - '36'
+  - '42'
+- - '36'
+  - '43'
+- - '36'
+  - '38'
+- - '36'
+  - '40'
+- - '36'
+  - '41'
+- - '36'
+  - '39'
+- - '36'
+  - '37'
+nodes:
+  '0':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.14861
+    Longitude: 17.24667
+    label: Stara Gradnifska
+    type: Smaller Centre
+  '1':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.475
+    Longitude: 16.78194
+    label: Kutina
+    type: Smaller Centre
+  '10':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 43.1725
+    Longitude: 16.44278
+    label: Hvar
+    type: Smaller Centre
+  '11':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 42.64807
+    Longitude: 18.09216
+    label: Dubrovnik
+    type: Larger University Centre
+  '12':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.08
+    Longitude: 13.64
+    label: Rovinj
+    type: Smaller Centre
+  '13':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.27639
+    Longitude: 13.72083
+    label: Visnjan
+    type: Smaller Centre
+  '14':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.33917
+    Longitude: 14.30833
+    label: Opatija
+    type: Smaller Centre
+  '15':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.22583
+    Longitude: 13.59389
+    label: Porec
+    type: Smaller Centre
+  '16':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.41
+    Longitude: 13.66194
+    label: Buje
+    type: Smaller Centre
+  '17':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 44.11972
+    Longitude: 15.24222
+    label: Zadar
+    type: Larger University Centre
+  '18':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 44.10667
+    Longitude: 15.38056
+    label: Zenumik D
+    type: Smaller Centre
+  '19':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 44.04389
+    Longitude: 16.2
+    label: Knin
+    type: Smaller Centre
+  '2':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.16028
+    Longitude: 18.01556
+    label: Slavonski
+    type: Smaller Centre
+  '20':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 43.5125
+    Longitude: 16.25167
+    label: Trogic
+    type: Smaller Centre
+  '21':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 43.34778
+    Longitude: 16.73389
+    label: Pucisca
+    type: Smaller Centre
+  '22':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 43.55
+    Longitude: 16.5
+    label: Solin
+    type: Smaller Centre
+  '23':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 43.72722
+    Longitude: 15.90583
+    label: Sibenik
+    type: Smaller Centre
+  '24':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 44.86833
+    Longitude: 13.84806
+    label: Pula
+    type: Larger University Centre
+  '25':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 44.53056
+    Longitude: 14.46861
+    label: M. Losinj
+    type: Smaller Centre
+  '26':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.34306
+    Longitude: 14.40917
+    label: Rijeka
+    type: Larger University Centre
+  '27':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 43.50891
+    Longitude: 16.43915
+    label: Split
+    type: Larger University Centre
+  '28':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 46.38444
+    Longitude: 16.43389
+    label: Cakovec
+    type: Smaller Centre
+  '29':
+    Internal: '0'
+    Latitude: 45.81444
+    Longitude: 15.97798
+    label: GEANT
+  '3':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.34028
+    Longitude: 17.68528
+    label: Pozega
+    type: Smaller Centre
+  '30':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 44.54611
+    Longitude: 15.37472
+    label: Gospic
+    type: Smaller Centre
+  '31':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 44.86944
+    Longitude: 15.2375
+    label: Otocac
+    type: Smaller Centre
+  '32':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.28833
+    Longitude: 18.80472
+    label: Vinkovci
+    type: Smaller Centre
+  '33':
+    Internal: '0'
+    Latitude: 45.81444
+    Longitude: 15.97798
+    label: BIHarnet
+  '34':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.34333
+    Longitude: 18.99972
+    label: Vukovar
+    type: Smaller Centre
+  '35':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.30833
+    Longitude: 18.41056
+    label: Dakovo
+    type: Smaller Centre
+  '36':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.81444
+    Longitude: 15.97798
+    label: Zagreb
+    type: Larger University Centre
+  '37':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.85639
+    Longitude: 15.80778
+    label: Zabresic
+    type: Smaller Centre
+  '38':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.80306
+    Longitude: 15.71806
+    label: Samobor
+    type: Smaller Centre
+  '39':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 46.30444
+    Longitude: 16.33778
+    label: Varazdin
+    type: Smaller Centre
+  '4':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.7125
+    Longitude: 16.07556
+    label: Gorica
+    type: Smaller Centre
+  '40':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 46.02194
+    Longitude: 16.5425
+    label: Krizevci
+    type: Smaller Centre
+  '41':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.89861
+    Longitude: 16.84889
+    label: Bjelovar
+    type: Smaller Centre
+  '42':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.83194
+    Longitude: 17.38389
+    label: Virovitica
+    type: Smaller Centre
+  '43':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.55111
+    Longitude: 18.69389
+    label: Osijek
+    type: Larger University Centre
+  '5':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.48722
+    Longitude: 15.54778
+    label: Karlovac
+    type: Smaller Centre
+  '6':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.46611
+    Longitude: 16.37833
+    label: Sisak
+    type: Smaller Centre
+  '7':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.4375
+    Longitude: 16.29
+    label: Petrinja
+    type: Smaller Centre
+  '8':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.66833
+    Longitude: 15.64861
+    label: Jastrebarsko
+    type: Smaller Centre
+  '9':
+    Internal: '0'
+    Latitude: 45.81444
+    Longitude: 15.97798
+    label: GEANT

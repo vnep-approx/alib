@@ -1,120 +1,445 @@
-nodes:
-  '0': {Latitude: 42.35843, Longitude: -71.05977}
-  '1': {Latitude: 42.33143, Longitude: -83.04575}
-  '2': {Latitude: 39.95234, Longitude: -75.16379}
-  '3': {Latitude: 40.71427, Longitude: -74.00597}
-  '4': {Latitude: 38.58157, Longitude: -121.4944}
-  '5': {Latitude: 37.33939, Longitude: -121.89496}
-  '6': {Latitude: 47.60621, Longitude: -122.33207}
-  '7': {Latitude: 45.52345, Longitude: -122.67621}
-  '8': {Latitude: 37.36883, Longitude: -122.03635}
-  '9': {Latitude: 34.05223, Longitude: -118.24368}
-  '10': {Latitude: 47.60621, Longitude: -122.33207}
-  '11': {Latitude: 34.05223, Longitude: -118.24368}
-  '12': {Latitude: 37.33939, Longitude: -121.89496}
-  '13': {Latitude: 40.71427, Longitude: -74.00597}
-  '14': {Latitude: 47.60621, Longitude: -122.33207}
-  '15': {Latitude: 38.90122, Longitude: -77.26526}
-  '16': {Latitude: 32.78306, Longitude: -96.80667}
-  '17': {Latitude: 33.749, Longitude: -84.38798}
-  '18': {Latitude: 25.77427, Longitude: -80.19366}
-  '19': {Latitude: 37.33939, Longitude: -121.89496}
-  '20': {Latitude: 37.33939, Longitude: -121.89496}
-  '21': {Latitude: 40.71427, Longitude: -74.00597}
-  '22': {Latitude: 40.71427, Longitude: -74.00597}
-  '23': {Latitude: 39.04372, Longitude: -77.48749}
-  '24': {Latitude: 25.77427, Longitude: -80.19366}
-  '25': {Latitude: 40.44062, Longitude: -79.99589}
-  '26': {Latitude: 47.60621, Longitude: -122.33207}
-  '27': {Latitude: 34.05223, Longitude: -118.24368}
-  '28': {Latitude: 34.05223, Longitude: -118.24368}
-  '29': {Latitude: 33.749, Longitude: -84.38798}
-  '30': {Latitude: 41.85003, Longitude: -87.65005}
-  '31': {Latitude: 40.71427, Longitude: -74.00597}
-  '32': {Latitude: 32.78306, Longitude: -96.80667}
-  '33': {Latitude: 40.71427, Longitude: -74.00597}
-  '34': {Latitude: 41.85003, Longitude: -87.65005}
-  '35': {Latitude: 32.78306, Longitude: -96.80667}
-  '36': {Latitude: 29.42412, Longitude: -98.49363}
-  '37': {Latitude: 33.44838, Longitude: -112.07404}
-  '38': {Latitude: 32.71533, Longitude: -117.15726}
-  '39': {Latitude: 27.94752, Longitude: -82.45843}
-  '40': {Latitude: 25.77427, Longitude: -80.19366}
-  '41': {Latitude: 29.95465, Longitude: -90.07507}
-  '42': {Latitude: 29.76328, Longitude: -95.36327}
-  '43': {Latitude: 38.89511, Longitude: -77.03637}
-  '44': {Latitude: 39.29038, Longitude: -76.61219}
-  '45': {Latitude: 39.73915, Longitude: -104.9847}
-  '46': {Latitude: 44.97997, Longitude: -93.26384}
-  '47': {Latitude: 41.85003, Longitude: -87.65005}
-  '48': {Latitude: 39.11417, Longitude: -94.62746}
-  '49': {Latitude: 33.749, Longitude: -84.38798}
-  '50': {Latitude: 35.7721, Longitude: -78.63861}
-  '51': {Latitude: 39.04372, Longitude: -77.48749}
-  '52': {Latitude: 38.90122, Longitude: -77.26526}
 edges:
-- ['0', '1']
-- ['0', '3']
-- ['1', '47']
-- ['2', '25']
-- ['2', '3']
-- ['2', '44']
-- ['2', '51']
-- ['3', '33']
-- ['3', '13']
-- ['3', '47']
-- ['3', '21']
-- ['3', '22']
-- ['3', '31']
-- ['4', '5']
-- ['4', '7']
-- ['5', '8']
-- ['5', '12']
-- ['5', '45']
-- ['5', '19']
-- ['5', '20']
-- ['6', '26']
-- ['6', '7']
-- ['6', '10']
-- ['6', '14']
-- ['6', '47']
-- ['8', '9']
-- ['9', '35']
-- ['9', '37']
-- ['9', '38']
-- ['9', '11']
-- ['9', '27']
-- ['9', '28']
-- ['15', '52']
-- ['16', '35']
-- ['17', '49']
-- ['18', '40']
-- ['23', '51']
-- ['24', '40']
-- ['25', '43']
-- ['25', '47']
-- ['29', '49']
-- ['30', '47']
-- ['32', '35']
-- ['34', '47']
-- ['35', '36']
-- ['35', '42']
-- ['35', '48']
-- ['35', '49']
-- ['35', '41']
-- ['36', '42']
-- ['36', '37']
-- ['37', '38']
-- ['39', '40']
-- ['39', '41']
-- ['40', '49']
-- ['41', '42']
-- ['43', '50']
-- ['43', '44']
-- ['43', '52']
-- ['45', '47']
-- ['46', '47']
-- ['47', '48']
-- ['49', '50']
-- ['49', '51']
-- ['51', '52']
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '1'
+  - '47'
+- - '2'
+  - '25'
+- - '2'
+  - '3'
+- - '2'
+  - '44'
+- - '2'
+  - '51'
+- - '3'
+  - '33'
+- - '3'
+  - '13'
+- - '3'
+  - '47'
+- - '3'
+  - '21'
+- - '3'
+  - '22'
+- - '3'
+  - '31'
+- - '4'
+  - '5'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '5'
+  - '12'
+- - '5'
+  - '45'
+- - '5'
+  - '19'
+- - '5'
+  - '20'
+- - '6'
+  - '26'
+- - '6'
+  - '7'
+- - '6'
+  - '10'
+- - '6'
+  - '14'
+- - '6'
+  - '47'
+- - '8'
+  - '9'
+- - '9'
+  - '35'
+- - '9'
+  - '37'
+- - '9'
+  - '38'
+- - '9'
+  - '11'
+- - '9'
+  - '27'
+- - '9'
+  - '28'
+- - '15'
+  - '52'
+- - '16'
+  - '35'
+- - '17'
+  - '49'
+- - '18'
+  - '40'
+- - '23'
+  - '51'
+- - '24'
+  - '40'
+- - '25'
+  - '43'
+- - '25'
+  - '47'
+- - '29'
+  - '49'
+- - '30'
+  - '47'
+- - '32'
+  - '35'
+- - '34'
+  - '47'
+- - '35'
+  - '48'
+- - '35'
+  - '36'
+- - '35'
+  - '42'
+- - '35'
+  - '49'
+- - '35'
+  - '41'
+- - '36'
+  - '42'
+- - '36'
+  - '37'
+- - '37'
+  - '38'
+- - '39'
+  - '40'
+- - '39'
+  - '41'
+- - '40'
+  - '49'
+- - '41'
+  - '42'
+- - '43'
+  - '50'
+- - '43'
+  - '44'
+- - '43'
+  - '52'
+- - '45'
+  - '47'
+- - '46'
+  - '47'
+- - '47'
+  - '48'
+- - '49'
+  - '50'
+- - '49'
+  - '51'
+- - '51'
+  - '52'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.35843
+    Longitude: -71.05977
+    label: Boston
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.33143
+    Longitude: -83.04575
+    label: Detroit
+  '10':
+    Internal: '0'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle
+    type: Private Peering Point
+  '11':
+    Internal: '0'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+    type: Private Peering Point
+  '12':
+    Internal: '0'
+    Latitude: 37.33939
+    Longitude: -121.89496
+    label: San Jose
+    type: Private Peering Point
+  '13':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: BtN London POP
+  '14':
+    Internal: '0'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: SIX
+    type: NAP Connection
+  '15':
+    Internal: '0'
+    Latitude: 38.90122
+    Longitude: -77.26526
+    label: MAE East
+    type: NAP Connection
+  '16':
+    Internal: '0'
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: MAE Central
+    type: NAP Connection
+  '17':
+    Internal: '0'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: PAIX
+    type: NAP Connection
+  '18':
+    Internal: '0'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: PAIX
+    type: NAP Connection
+  '19':
+    Internal: '0'
+    Latitude: 37.33939
+    Longitude: -121.89496
+    label: PAIX
+    type: NAP Connection
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.95234
+    Longitude: -75.16379
+    label: Philadelphia
+  '20':
+    Internal: '0'
+    Latitude: 37.33939
+    Longitude: -121.89496
+    label: MAE West
+    type: NAP Connection
+  '21':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: BtN Frankfurt POP
+  '22':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: BtN London POP
+  '23':
+    Internal: '0'
+    Latitude: 39.04372
+    Longitude: -77.48749
+    label: AShburn
+    type: Private Peering Point
+  '24':
+    Internal: '0'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami
+    type: Private Peering Point
+  '25':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.44062
+    Longitude: -79.99589
+    label: Pittsburgh
+  '26':
+    Internal: '0'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: PAIX
+    type: NAP Connection
+  '27':
+    Internal: '0'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: BtN Hong Kong POP
+  '28':
+    Internal: '0'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: BtN Hong Kong POP
+  '29':
+    Internal: '0'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta
+    type: Private Peering Point
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+  '30':
+    Internal: '0'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+    type: Private Peering Point
+  '31':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+    type: Private Peering Point
+  '32':
+    Internal: '0'
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas
+    type: Private Peering Point
+  '33':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: NY-IIX
+    type: NAP Connection
+  '34':
+    Internal: '0'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Ameritech AADS
+    type: NAP Connection
+  '35':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas
+  '36':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.42412
+    Longitude: -98.49363
+    label: San Antonio
+  '37':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.44838
+    Longitude: -112.07404
+    label: Phoenix
+  '38':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.71533
+    Longitude: -117.15726
+    label: San Diego
+  '39':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.94752
+    Longitude: -82.45843
+    label: Tampa
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.58157
+    Longitude: -121.4944
+    label: Sacramento
+  '40':
+    Country: United States
+    Internal: '1'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami
+  '41':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.95465
+    Longitude: -90.07507
+    label: New Orleans
+  '42':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.76328
+    Longitude: -95.36327
+    label: Houston
+  '43':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.89511
+    Longitude: -77.03637
+    label: Washington
+  '44':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: Baltimore
+  '45':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.73915
+    Longitude: -104.9847
+    label: Denver
+  '46':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.97997
+    Longitude: -93.26384
+    label: Minneapolis
+  '47':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+  '48':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.11417
+    Longitude: -94.62746
+    label: Kansas City
+  '49':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.33939
+    Longitude: -121.89496
+    label: San Jose
+  '50':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.7721
+    Longitude: -78.63861
+    label: Raleigh
+  '51':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.04372
+    Longitude: -77.48749
+    label: Ashburn
+  '52':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.90122
+    Longitude: -77.26526
+    label: Vienna
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 45.52345
+    Longitude: -122.67621
+    label: Portland
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.36883
+    Longitude: -122.03635
+    label: Sunnyvale
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles

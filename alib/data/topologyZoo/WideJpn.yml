@@ -1,65 +1,237 @@
-nodes:
-  '0': {Latitude: 35.68333, Longitude: 139.76667}
-  '1': {Latitude: 35.71732, Longitude: 139.76575}
-  '2': {Latitude: 32.76667, Longitude: 129.95}
-  '3': {Latitude: 35.55159, Longitude: 139.6716}
-  '4': {Latitude: 35.65583, Longitude: 139.32389}
-  '5': {Latitude: 13.75, Longitude: 100.51667}
-  '6': {Latitude: 35.68333, Longitude: 139.76667}
-  '7': {Latitude: 36.2, Longitude: 140.1}
-  '8': {Latitude: 34.68333, Longitude: 135.48333}
-  '9': {Latitude: 34.68333, Longitude: 135.48333}
-  '10': {Latitude: 34.68333, Longitude: 135.48333}
-  '11': {Latitude: 37.77493, Longitude: -122.41942}
-  '12': {Latitude: 35.68333, Longitude: 139.76667}
-  '13': {Latitude: 35.68333, Longitude: 139.76667}
-  '14': {Latitude: 35.68333, Longitude: 139.76667}
-  '15': {Latitude: 35.34194, Longitude: 139.47}
-  '16': {Latitude: 34.05223, Longitude: -118.24368}
-  '17': {Latitude: 35.68333, Longitude: 139.76667}
-  '18': {Latitude: 35.68333, Longitude: 139.76667}
-  '19': {Latitude: 35.68333, Longitude: 139.76667}
-  '20': {Latitude: 34.05223, Longitude: -118.24368}
-  '21': {Latitude: 35.34194, Longitude: 139.47}
-  '22': {Latitude: 34.68505, Longitude: 135.80485}
-  '23': {Latitude: 33.60639, Longitude: 130.41806}
-  '24': {Latitude: 34.39627, Longitude: 132.45937}
-  '25': {Latitude: 34.58333, Longitude: 133.76667}
-  '26': {Latitude: 33.78333, Longitude: 129.8}
-  '27': {Latitude: 36.40263, Longitude: 136.45088}
-  '28': {Latitude: 38.26889, Longitude: 140.87194}
-  '29': {Latitude: 37.77493, Longitude: -122.41942}
 edges:
-- ['0', '1']
-- ['0', '4']
-- ['0', '6']
-- ['0', '12']
-- ['0', '17']
-- ['0', '18']
-- ['0', '19']
-- ['0', '20']
-- ['1', '2']
-- ['1', '28']
-- ['2', '3']
-- ['2', '21']
-- ['5', '6']
-- ['6', '7']
-- ['6', '10']
-- ['6', '13']
-- ['6', '14']
-- ['6', '27']
-- ['8', '10']
-- ['9', '10']
-- ['10', '22']
-- ['10', '23']
-- ['10', '24']
-- ['10', '25']
-- ['10', '26']
-- ['11', '29']
-- ['15', '21']
-- ['16', '20']
-- ['20', '29']
-- ['21', '22']
-- ['22', '26']
-- ['23', '24']
-- ['23', '25']
+- - '0'
+  - '1'
+- - '0'
+  - '4'
+- - '0'
+  - '6'
+- - '0'
+  - '12'
+- - '0'
+  - '17'
+- - '0'
+  - '18'
+- - '0'
+  - '19'
+- - '0'
+  - '20'
+- - '1'
+  - '2'
+- - '1'
+  - '28'
+- - '2'
+  - '3'
+- - '2'
+  - '21'
+- - '5'
+  - '6'
+- - '6'
+  - '7'
+- - '6'
+  - '10'
+- - '6'
+  - '13'
+- - '6'
+  - '14'
+- - '6'
+  - '27'
+- - '8'
+  - '10'
+- - '9'
+  - '10'
+- - '10'
+  - '22'
+- - '10'
+  - '23'
+- - '10'
+  - '24'
+- - '10'
+  - '25'
+- - '10'
+  - '26'
+- - '11'
+  - '29'
+- - '15'
+  - '21'
+- - '16'
+  - '20'
+- - '20'
+  - '29'
+- - '21'
+  - '22'
+- - '22'
+  - '26'
+- - '23'
+  - '24'
+- - '23'
+  - '25'
+nodes:
+  '0':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.68333
+    Longitude: 139.76667
+    label: KDDI Otemachi
+  '1':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.71732
+    Longitude: 139.76575
+    label: Nezu
+  '10':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.68333
+    Longitude: 135.48333
+    label: Dojima
+  '11':
+    Internal: '0'
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: PAIX
+  '12':
+    Internal: '0'
+    Latitude: 35.68333
+    Longitude: 139.76667
+    label: TITECH
+  '13':
+    Internal: '0'
+    Latitude: 35.68333
+    Longitude: 139.76667
+    label: T-Lex
+  '14':
+    Internal: '0'
+    Latitude: 35.68333
+    Longitude: 139.76667
+    label: JGN2Plus
+  '15':
+    Internal: '0'
+    Latitude: 35.34194
+    Longitude: 139.47
+    label: AI3
+  '16':
+    Internal: '0'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: LAIIX
+  '17':
+    Internal: '0'
+    Latitude: 35.68333
+    Longitude: 139.76667
+    label: DIX-IE
+  '18':
+    Internal: '0'
+    Latitude: 35.68333
+    Longitude: 139.76667
+    label: KDDI
+  '19':
+    Internal: '0'
+    Latitude: 35.68333
+    Longitude: 139.76667
+    label: APAN
+  '2':
+    Country: Japan
+    Internal: '1'
+    Latitude: 32.76667
+    Longitude: 129.95
+    label: Yagami
+  '20':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+  '21':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.34194
+    Longitude: 139.47
+    label: Fujisawa
+  '22':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.68505
+    Longitude: 135.80485
+    label: Nara
+  '23':
+    Country: Japan
+    Internal: '1'
+    Latitude: 33.60639
+    Longitude: 130.41806
+    label: Fukuoka
+  '24':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.39627
+    Longitude: 132.45937
+    label: Hiroshima
+  '25':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.58333
+    Longitude: 133.76667
+    label: Kurashiki
+  '26':
+    Country: Japan
+    Internal: '1'
+    Latitude: 33.78333
+    Longitude: 129.8
+    label: Sakyo
+  '27':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.40263
+    Longitude: 136.45088
+    label: Komatsu
+  '28':
+    Country: Japan
+    Internal: '1'
+    Latitude: 38.26889
+    Longitude: 140.87194
+    label: Sendai
+  '29':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: San Francisco
+  '3':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.55159
+    Longitude: 139.6716
+    label: ShinKawasaki
+  '4':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.65583
+    Longitude: 139.32389
+    label: Hachioji
+  '5':
+    Country: Thailand
+    Internal: '1'
+    Latitude: 13.75
+    Longitude: 100.51667
+    label: Bangkok
+  '6':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.68333
+    Longitude: 139.76667
+    label: NTT Otemachi
+  '7':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.2
+    Longitude: 140.1
+    label: Tsukuba
+  '8':
+    Internal: '0'
+    Latitude: 34.68333
+    Longitude: 135.48333
+    label: NSPIXP-3
+  '9':
+    Internal: '0'
+    Latitude: 34.68333
+    Longitude: 135.48333
+    label: JGN2Plus

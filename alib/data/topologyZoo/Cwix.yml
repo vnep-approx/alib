@@ -1,79 +1,288 @@
-nodes:
-  '0': {Latitude: 39.95234, Longitude: -75.16379}
-  '1': {Latitude: 40.44062, Longitude: -79.99589}
-  '2': {Latitude: 37.55376, Longitude: -77.46026}
-  '3': {Latitude: 39.29038, Longitude: -76.61219}
-  '4': {Latitude: 42.35843, Longitude: -71.05977}
-  '5': {Latitude: 32.78306, Longitude: -96.80667}
-  '6': {Latitude: 40.71427, Longitude: -74.00597}
-  '7': {Latitude: 41.76371, Longitude: -72.68509}
-  '8': {Latitude: 29.76328, Longitude: -95.36327}
-  '9': {Latitude: 33.749, Longitude: -84.38798}
-  '10': {Latitude: 39.29038, Longitude: -76.61219}
-  '11': {Latitude: 39.29038, Longitude: -76.61219}
-  '12': {Latitude: 39.29038, Longitude: -76.61219}
-  '13': {Latitude: 39.29038, Longitude: -76.61219}
-  '14': {Latitude: 39.29038, Longitude: -76.61219}
-  '15': {Latitude: 39.29038, Longitude: -76.61219}
-  '16': {Latitude: 40.71427, Longitude: -74.00597}
-  '17': {Latitude: 40.71427, Longitude: -74.00597}
-  '18': {Latitude: 26.12231, Longitude: -80.14338}
-  '19': {Latitude: 28.53834, Longitude: -81.37924}
-  '20': {Latitude: 30.33218, Longitude: -81.65565}
-  '21': {Latitude: 35.7721, Longitude: -78.63861}
-  '22': {Latitude: 40.71427, Longitude: -74.00597}
-  '23': {Latitude: 40.71427, Longitude: -74.00597}
-  '24': {Latitude: 27.94752, Longitude: -82.45843}
-  '25': {Latitude: 25.77427, Longitude: -80.19366}
-  '26': {Latitude: 41.08144, Longitude: -81.51901}
-  '27': {Latitude: 40.44062, Longitude: -79.99589}
-  '28': {Latitude: 37.77493, Longitude: -122.41942}
-  '29': {Latitude: 37.77493, Longitude: -122.41942}
-  '30': {Latitude: 37.77493, Longitude: -122.41942}
-  '31': {Latitude: 34.05223, Longitude: -118.24368}
-  '32': {Latitude: 39.73915, Longitude: -104.9847}
-  '33': {Latitude: 39.11417, Longitude: -94.62746}
-  '34': {Latitude: 41.85003, Longitude: -87.65005}
-  '35': {Latitude: 41.4995, Longitude: -81.69541}
 edges:
-- ['0', '1']
-- ['0', '3']
-- ['1', '6']
-- ['2', '3']
-- ['2', '21']
-- ['3', '9']
-- ['3', '10']
-- ['3', '11']
-- ['3', '12']
-- ['3', '13']
-- ['3', '14']
-- ['3', '15']
-- ['3', '27']
-- ['4', '6']
-- ['4', '7']
-- ['5', '8']
-- ['5', '9']
-- ['5', '31']
-- ['5', '33']
-- ['6', '34']
-- ['6', '7']
-- ['6', '16']
-- ['6', '17']
-- ['6', '22']
-- ['6', '23']
-- ['6', '30']
-- ['9', '24']
-- ['18', '24']
-- ['18', '25']
-- ['18', '19']
-- ['19', '20']
-- ['20', '21']
-- ['26', '35']
-- ['26', '34']
-- ['26', '27']
-- ['28', '30']
-- ['29', '30']
-- ['30', '32']
-- ['30', '31']
-- ['32', '33']
-- ['33', '34']
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '1'
+  - '6'
+- - '2'
+  - '3'
+- - '2'
+  - '21'
+- - '3'
+  - '9'
+- - '3'
+  - '10'
+- - '3'
+  - '11'
+- - '3'
+  - '12'
+- - '3'
+  - '13'
+- - '3'
+  - '14'
+- - '3'
+  - '15'
+- - '3'
+  - '27'
+- - '4'
+  - '6'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '5'
+  - '9'
+- - '5'
+  - '31'
+- - '5'
+  - '33'
+- - '6'
+  - '34'
+- - '6'
+  - '7'
+- - '6'
+  - '16'
+- - '6'
+  - '17'
+- - '6'
+  - '22'
+- - '6'
+  - '23'
+- - '6'
+  - '30'
+- - '9'
+  - '24'
+- - '18'
+  - '24'
+- - '18'
+  - '25'
+- - '18'
+  - '19'
+- - '19'
+  - '20'
+- - '20'
+  - '21'
+- - '26'
+  - '35'
+- - '26'
+  - '34'
+- - '26'
+  - '27'
+- - '28'
+  - '30'
+- - '29'
+  - '30'
+- - '30'
+  - '32'
+- - '30'
+  - '31'
+- - '32'
+  - '33'
+- - '33'
+  - '34'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.95234
+    Longitude: -75.16379
+    label: Philadelphia
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.44062
+    Longitude: -79.99589
+    label: Pittsburgh
+  '10':
+    Internal: '0'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: Hong Kong
+  '11':
+    Internal: '0'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: Barbados
+  '12':
+    Internal: '0'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: Vienna
+  '13':
+    Internal: '0'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: London
+  '14':
+    Internal: '0'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: Sydney
+  '15':
+    Internal: '0'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: Paris
+  '16':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: London
+  '17':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: Bahrain
+  '18':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.12231
+    Longitude: -80.14338
+    label: Fort Lauderdale
+  '19':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.53834
+    Longitude: -81.37924
+    label: Orlando
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.55376
+    Longitude: -77.46026
+    label: Richmond
+  '20':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.33218
+    Longitude: -81.65565
+    label: Jacksonville
+  '21':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.7721
+    Longitude: -78.63861
+    label: Raleigh
+  '22':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: Barbados
+  '23':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: Frankfurt
+  '24':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.94752
+    Longitude: -82.45843
+    label: Tampa
+  '25':
+    Country: United States
+    Internal: '1'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami
+  '26':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.08144
+    Longitude: -81.51901
+    label: Akron
+  '27':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.44062
+    Longitude: -79.99589
+    label: Pittsburgh
+  '28':
+    Internal: '0'
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: Hong Kong
+  '29':
+    Internal: '0'
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: Tokyo
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: Baltimore
+  '30':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: San Francisco
+  '31':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+  '32':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.73915
+    Longitude: -104.9847
+    label: Denver
+  '33':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.11417
+    Longitude: -94.62746
+    label: Kansas City
+  '34':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+  '35':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.4995
+    Longitude: -81.69541
+    label: Cleveland
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.35843
+    Longitude: -71.05977
+    label: Boston
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.76371
+    Longitude: -72.68509
+    label: Hartford
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.76328
+    Longitude: -95.36327
+    label: Houston
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta

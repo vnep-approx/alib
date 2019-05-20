@@ -1,32 +1,133 @@
-nodes:
-  '0': {Latitude: 51.50853, Longitude: -0.12574}
-  '1': {Latitude: 53.64779, Longitude: -3.00648}
-  '2': {Latitude: 51.45625, Longitude: -0.97113}
-  '3': {Latitude: 51.50853, Longitude: -0.12574}
-  '4': {Latitude: 53.48095, Longitude: -2.23743}
-  '5': {Latitude: 52.57364, Longitude: -0.24777}
-  '6': {Latitude: 52.2, Longitude: 0.11667}
-  '7': {Latitude: 53.38297, Longitude: -1.4659}
-  '8': {Latitude: 52.63333, Longitude: -1.13333}
-  '9': {Latitude: 53.93225, Longitude: -2.20958}
-  '10': {Latitude: 53.79648, Longitude: -1.54785}
-  '11': {Latitude: 52.46667, Longitude: -1.91667}
-  '12': {Latitude: 53.41058, Longitude: -2.97794}
-  '13': {Latitude: 51.45625, Longitude: -0.97113}
-  '14': {Latitude: 51.45, Longitude: -2.58333}
 edges:
-- ['0', '3']
-- ['0', '13']
-- ['0', '6']
-- ['1', '9']
-- ['1', '12']
-- ['2', '13']
-- ['4', '11']
-- ['4', '12']
-- ['5', '8']
-- ['5', '6']
-- ['7', '8']
-- ['7', '10']
-- ['9', '10']
-- ['11', '14']
-- ['13', '14']
+- - '0'
+  - '3'
+- - '0'
+  - '13'
+- - '0'
+  - '6'
+- - '1'
+  - '9'
+- - '1'
+  - '12'
+- - '2'
+  - '13'
+- - '4'
+  - '11'
+- - '4'
+  - '12'
+- - '5'
+  - '8'
+- - '5'
+  - '6'
+- - '7'
+  - '8'
+- - '7'
+  - '10'
+- - '9'
+  - '10'
+- - '11'
+  - '14'
+- - '13'
+  - '14'
+nodes:
+  '0':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: London
+    type: Large Node
+  '1':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.64779
+    Longitude: -3.00648
+    label: Southport
+    type: Large Node
+  '10':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.79648
+    Longitude: -1.54785
+    label: Leeds
+    type: Small Node
+  '11':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 52.46667
+    Longitude: -1.91667
+    label: Birmingham
+    type: Small Node
+  '12':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.41058
+    Longitude: -2.97794
+    label: Liverpool
+    type: Small Node
+  '13':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.45625
+    Longitude: -0.97113
+    label: Reading
+    type: Small Node
+  '14':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.45
+    Longitude: -2.58333
+    label: Bristol
+    type: Small Node
+  '2':
+    Internal: '0'
+    Latitude: 51.45625
+    Longitude: -0.97113
+    label: None
+  '3':
+    Internal: '0'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: None
+  '4':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.48095
+    Longitude: -2.23743
+    label: Manchester
+    type: Large Node
+  '5':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 52.57364
+    Longitude: -0.24777
+    label: Peterborough
+    type: Small Node
+  '6':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 52.2
+    Longitude: 0.11667
+    label: Cambridge
+    type: Small Node
+  '7':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.38297
+    Longitude: -1.4659
+    label: Sheffield
+    type: Small Node
+  '8':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 52.63333
+    Longitude: -1.13333
+    label: Leicester
+    type: Small Node
+  '9':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.93225
+    Longitude: -2.20958
+    label: Bracewell
+    type: Small Node

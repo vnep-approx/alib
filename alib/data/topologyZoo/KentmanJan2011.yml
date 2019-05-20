@@ -1,0 +1,334 @@
+edges:
+- - '0'
+  - '35'
+- - '1'
+  - '5'
+- - '2'
+  - '5'
+- - '3'
+  - '35'
+- - '4'
+  - '34'
+- - '5'
+  - '32'
+- - '5'
+  - '35'
+- - '5'
+  - '33'
+- - '5'
+  - '9'
+- - '5'
+  - '12'
+- - '5'
+  - '13'
+- - '5'
+  - '21'
+- - '5'
+  - '22'
+- - '5'
+  - '26'
+- - '5'
+  - '27'
+- - '5'
+  - '29'
+- - '6'
+  - '18'
+- - '7'
+  - '34'
+- - '8'
+  - '12'
+- - '10'
+  - '18'
+- - '11'
+  - '18'
+- - '12'
+  - '33'
+- - '12'
+  - '20'
+- - '14'
+  - '18'
+- - '15'
+  - '33'
+- - '16'
+  - '30'
+- - '17'
+  - '35'
+- - '18'
+  - '33'
+- - '18'
+  - '19'
+- - '18'
+  - '28'
+- - '18'
+  - '30'
+- - '18'
+  - '31'
+- - '23'
+  - '30'
+- - '24'
+  - '33'
+- - '25'
+  - '34'
+- - '25'
+  - '34'
+- - '30'
+  - '37'
+- - '33'
+  - '34'
+- - '34'
+  - '36'
+nodes:
+  '0':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.36106
+    Longitude: 1.43006
+    label: Hilderstone College
+    type: Connected Site
+  '1':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.13959
+    Longitude: 0.86101
+    label: K College- Ashford
+    type: Connected Site
+  '10':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.39021
+    Longitude: 0.51919
+    label: WEA
+    type: Connected Site
+  '11':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.38906
+    Longitude: 0.52492
+    label: Medway Council
+    type: Connected Site
+  '12':
+    Internal: '0'
+    Latitude: 51.194379999999995
+    Longitude: 0.9237075
+    label: KPSN
+  '13':
+    Internal: '0'
+    Latitude: 51.29762
+    Longitude: 1.06121
+    label: janet
+  '14':
+    Internal: '0'
+    Latitude: 51.37891
+    Longitude: 0.52786
+    label: janet
+  '15':
+    Internal: '0'
+    Latitude: 51.25665
+    Longitude: 0.54953
+    label: orbitalnet
+  '16':
+    Internal: '1'
+    Latitude: 51.44628
+    Longitude: 0.07703
+    label: UCA-Epsom
+    type: Connected Site
+  '17':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.38132
+    Longitude: 1.38617
+    label: Pilgrims-Margate
+    type: Connected Site
+  '18':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.37891
+    Longitude: 0.52786
+    label: Chatham
+    type: PoP Site
+  '19':
+    Internal: '1'
+    Latitude: 51.37891
+    Longitude: 0.52786
+    label: UCA - Chatham
+    type: Connected Site
+  '2':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27402
+    Longitude: 1.08782
+    label: Canterbury College
+    type: Connected Site
+  '20':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.14172
+    Longitude: 0.90191
+    label: Pilgrim - Ashford
+    type: Connected Site
+  '21':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.28367
+    Longitude: 1.07077
+    label: Pilgrim-Canterbury
+    type: Connected Site
+  '22':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.29762
+    Longitude: 1.06121
+    label: University of Kent
+    type: Connected Site
+  '23':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.44224
+    Longitude: 0.02978
+    label: Hadlow College Mottingham
+    type: Connected Site
+  '24':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27115
+    Longitude: 0.49799
+    label: UCA - Maidstone
+    type: Connected Site
+  '25':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.19282
+    Longitude: 0.2702
+    label: UoK - Tonbridge
+    type: Connected Site
+  '26':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27537
+    Longitude: 1.09078
+    label: UCA - Canterbury
+    type: Connected Site
+  '27':
+    Internal: '1'
+    Latitude: 51.29762
+    Longitude: 1.06121
+    label: SOAS - Wye
+    type: Connected Site
+  '28':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.39485
+    Longitude: 0.54608
+    label: Mid Kent College
+    type: Connected Site
+  '29':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27537
+    Longitude: 1.09078
+    label: UCCA-C
+    type: Connected Site
+  '3':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.35426
+    Longitude: 1.43483
+    label: Thanet College
+    type: Connected Site
+  '30':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.44628
+    Longitude: 0.07703
+    label: UoG-AH
+    type: PoP Site
+  '31':
+    Internal: '1'
+    Latitude: 51.37891
+    Longitude: 0.52786
+    label: Universities at Medway
+    type: Connected Site
+  '32':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27589
+    Longitude: 1.09578
+    label: Hadlow College Canterbury
+    type: Connected Site
+  '33':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.25665
+    Longitude: 0.54953
+    label: EIS-Maidstone
+    type: PoP Site
+  '34':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.15222
+    Longitude: 0.24307
+    label: CCCU-S
+    type: PoP Site
+  '35':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.35895
+    Longitude: 1.40616
+    label: CCCU-T
+    type: PoP Site
+  '36':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.28554
+    Longitude: 0.21928
+    label: Dorton College
+    type: Connected Site
+  '37':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.45
+    Longitude: 0.21667
+    label: NW Kent College - Dartford
+    type: Connected Site
+  '4':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.18787
+    Longitude: 0.2647
+    label: West Kent College
+    type: Connected Site
+  '5':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.29762
+    Longitude: 1.06121
+    label: UoK-C
+    type: PoP Site
+  '6':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.37992
+    Longitude: 0.51438
+    label: UCA - Rochester
+    type: Connected Site
+  '7':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.21667
+    Longitude: 0.33333
+    label: Hadlow College
+    type: Connected Site
+  '8':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.08153
+    Longitude: 1.18218
+    label: University College Folkestone
+    type: Connected Site
+  '9':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27766
+    Longitude: 1.08382
+    label: IFS School of Finance
+    type: Connected Site

@@ -1,0 +1,349 @@
+edges:
+- - '0'
+  - '2'
+- - '1'
+  - '2'
+- - '2'
+  - '3'
+- - '2'
+  - '20'
+- - '2'
+  - '30'
+- - '4'
+  - '27'
+- - '4'
+  - '5'
+- - '5'
+  - '8'
+- - '6'
+  - '28'
+- - '6'
+  - '7'
+- - '8'
+  - '9'
+- - '8'
+  - '34'
+- - '8'
+  - '20'
+- - '8'
+  - '15'
+- - '8'
+  - '15'
+- - '9'
+  - '22'
+- - '9'
+  - '22'
+- - '10'
+  - '24'
+- - '11'
+  - '20'
+- - '12'
+  - '20'
+- - '13'
+  - '20'
+- - '14'
+  - '20'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '15'
+  - '20'
+- - '15'
+  - '20'
+- - '15'
+  - '21'
+- - '17'
+  - '18'
+- - '18'
+  - '24'
+- - '19'
+  - '20'
+- - '20'
+  - '24'
+- - '20'
+  - '24'
+- - '20'
+  - '26'
+- - '20'
+  - '30'
+- - '21'
+  - '22'
+- - '23'
+  - '26'
+- - '24'
+  - '25'
+- - '24'
+  - '25'
+- - '24'
+  - '28'
+- - '28'
+  - '30'
+- - '29'
+  - '30'
+- - '30'
+  - '34'
+- - '30'
+  - '31'
+- - '31'
+  - '32'
+- - '33'
+  - '34'
+- - '34'
+  - '35'
+- - '35'
+  - '36'
+nodes:
+  '0':
+    Country: Greece
+    Internal: '1'
+    Latitude: 39.36556
+    Longitude: 21.92167
+    label: Karditsa
+    type: PoP
+  '1':
+    Country: Greece
+    Internal: '1'
+    Latitude: 39.36667
+    Longitude: 22.94583
+    label: Volos
+    type: PoP
+  '10':
+    Country: Greece
+    Internal: '1'
+    Latitude: 38.37019
+    Longitude: 21.42952
+    label: Mesologgi
+    type: PoP
+  '11':
+    Internal: '0'
+    Latitude: 37.97945
+    Longitude: 23.71622
+    label: AMSIX
+  '12':
+    Internal: '0'
+    Latitude: 37.97945
+    Longitude: 23.71622
+    label: GRIX
+  '13':
+    Internal: '0'
+    Latitude: 37.97945
+    Longitude: 23.71622
+    label: GEANT
+  '14':
+    Country: Greece
+    Internal: '1'
+    Latitude: 35.51222
+    Longitude: 24.01556
+    label: Chania
+    type: PoP
+  '15':
+    Country: Greece
+    Internal: '1'
+    Latitude: 35.32787
+    Longitude: 25.14341
+    label: Heraklio
+    type: IP Backbone Node
+  '16':
+    Country: Greece
+    Internal: '1'
+    Latitude: 35.36472
+    Longitude: 24.47139
+    label: Rethymno
+    type: PoP
+  '17':
+    Country: Greece
+    Internal: '1'
+    Latitude: 36.91344
+    Longitude: 21.69639
+    label: Pylos
+    type: PoP
+  '18':
+    Country: Greece
+    Internal: '1'
+    Latitude: 37.03889
+    Longitude: 22.11417
+    label: Kalamata
+    type: PoP
+  '19':
+    Country: Greece
+    Internal: '1'
+    Latitude: 38.46361
+    Longitude: 23.59944
+    label: Halkida
+    type: PoP
+  '2':
+    Country: Greece
+    Internal: '1'
+    Latitude: 39.63722
+    Longitude: 22.42028
+    label: Larissa
+    type: PoP
+  '20':
+    Country: Greece
+    Internal: '1'
+    Latitude: 37.97945
+    Longitude: 23.71622
+    label: Athens
+    type: IP Backbone Node
+  '21':
+    Country: Greece
+    Internal: '1'
+    Latitude: 36.44083
+    Longitude: 28.2225
+    label: Rhodos
+    type: PoP
+  '22':
+    Country: Greece
+    Internal: '1'
+    Latitude: 37.79028
+    Longitude: 26.70444
+    label: Karlovassi
+    type: PoP
+  '23':
+    Country: Greece
+    Internal: '1'
+    Latitude: 37.50889
+    Longitude: 22.37944
+    label: Tripoli
+    type: PoP
+  '24':
+    Country: Greece
+    Internal: '1'
+    Latitude: 38.24444
+    Longitude: 21.73444
+    label: Patra
+    type: IP Backbone Node
+  '25':
+    Country: Greece
+    Internal: '1'
+    Latitude: 38.03222
+    Longitude: 22.1125
+    label: Kalavrita
+    type: PoP
+  '26':
+    Country: Greece
+    Internal: '1'
+    Latitude: 37.91667
+    Longitude: 22.88333
+    label: Korinthos
+    type: PoP
+  '27':
+    Country: Greece
+    Internal: '1'
+    Latitude: 38.47333
+    Longitude: 25.91222
+    label: Limnos
+    type: PoP
+  '28':
+    Country: Greece
+    Internal: '1'
+    Latitude: 39.6675
+    Longitude: 20.85083
+    label: Ioannina
+    type: IP Backbone Node
+  '29':
+    Country: Greece
+    Internal: '1'
+    Latitude: 41.08556
+    Longitude: 23.54972
+    label: Serres
+    type: PoP
+  '3':
+    Country: Greece
+    Internal: '1'
+    Latitude: 39.55528
+    Longitude: 21.7675
+    label: Trikala
+    type: PoP
+  '30':
+    Country: Greece
+    Internal: '1'
+    Latitude: 40.64028
+    Longitude: 22.94389
+    label: Thessaloniki
+    type: IP Backbone Node
+  '31':
+    Country: Greece
+    Internal: '1'
+    Latitude: 40.80056
+    Longitude: 22.04722
+    label: Edessa
+    type: PoP
+  '32':
+    Country: Greece
+    Internal: '1'
+    Latitude: 40.51667
+    Longitude: 21.26667
+    label: Kastoria
+    type: PoP
+  '33':
+    Country: Greece
+    Internal: '1'
+    Latitude: 40.93972
+    Longitude: 24.40194
+    label: Kavala
+    type: PoP
+  '34':
+    Country: Greece
+    Internal: '1'
+    Latitude: 41.14139
+    Longitude: 24.88361
+    label: Xanthi
+    type: IP Backbone Node
+  '35':
+    Country: Greece
+    Internal: '1'
+    Latitude: 41.12278
+    Longitude: 25.39639
+    label: Komotini
+    type: PoP
+  '36':
+    Country: Greece
+    Internal: '1'
+    Latitude: 40.8475
+    Longitude: 25.87444
+    label: Alexandroupoli
+    type: PoP
+  '4':
+    Country: Greece
+    Internal: '1'
+    Latitude: 39.11
+    Longitude: 26.55472
+    label: Mytilini
+    type: PoP
+  '5':
+    Country: Greece
+    Internal: '1'
+    Latitude: 38.36778
+    Longitude: 26.13583
+    label: Chios
+    type: PoP
+  '6':
+    Country: Greece
+    Internal: '1'
+    Latitude: 39.50389
+    Longitude: 20.26556
+    label: Igoumenitsa
+    type: PoP
+  '7':
+    Country: Greece
+    Internal: '1'
+    Latitude: 39.62
+    Longitude: 19.91972
+    label: Kerkira
+    type: PoP
+  '8':
+    Country: Greece
+    Internal: '1'
+    Latitude: 37.44227
+    Longitude: 24.94248
+    label: Ermoupoli
+    type: IP Backbone Node
+  '9':
+    Country: Greece
+    Internal: '1'
+    Latitude: 37.44529
+    Longitude: 25.32872
+    label: Mykonos
+    type: PoP

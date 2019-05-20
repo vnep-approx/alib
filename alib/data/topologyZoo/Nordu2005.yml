@@ -1,0 +1,73 @@
+edges:
+- - '0'
+  - '1'
+- - '1'
+  - '2'
+- - '1'
+  - '2'
+- - '1'
+  - '3'
+- - '1'
+  - '5'
+- - '1'
+  - '6'
+- - '1'
+  - '7'
+- - '1'
+  - '8'
+- - '3'
+  - '8'
+- - '3'
+  - '4'
+nodes:
+  '0':
+    Internal: '0'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: NETNOD
+  '1':
+    Country: Sweden
+    Internal: '1'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: Stockholm
+  '2':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.16952
+    Longitude: 24.93545
+    label: Helsinki
+  '3':
+    Country: Denmark
+    Internal: '1'
+    Latitude: 55.67594
+    Longitude: 12.56553
+    label: Copenhagen
+  '4':
+    Country: Iceland
+    Internal: '1'
+    Latitude: 64.13548
+    Longitude: -21.89541
+    label: Reykjavik
+  '5':
+    Internal: '0'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: GEANT
+  '6':
+    Internal: '0'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: General Internet
+  '7':
+    Country: Russia
+    Internal: '1'
+    Latitude: 59.89444
+    Longitude: 30.26417
+    label: St Petersburg
+  '8':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.91273
+    Longitude: 10.74609
+    label: Oslo

@@ -1,0 +1,533 @@
+edges:
+- - '0'
+  - '35'
+- - '1'
+  - '4'
+- - '2'
+  - '35'
+- - '3'
+  - '37'
+- - '4'
+  - '10'
+- - '4'
+  - '55'
+- - '4'
+  - '7'
+- - '4'
+  - '7'
+- - '5'
+  - '55'
+- - '6'
+  - '45'
+- - '6'
+  - '55'
+- - '6'
+  - '55'
+- - '8'
+  - '22'
+- - '9'
+  - '58'
+- - '9'
+  - '58'
+- - '10'
+  - '44'
+- - '10'
+  - '21'
+- - '10'
+  - '45'
+- - '10'
+  - '55'
+- - '10'
+  - '55'
+- - '11'
+  - '55'
+- - '12'
+  - '20'
+- - '13'
+  - '29'
+- - '14'
+  - '34'
+- - '14'
+  - '35'
+- - '14'
+  - '35'
+- - '14'
+  - '35'
+- - '14'
+  - '46'
+- - '14'
+  - '49'
+- - '14'
+  - '55'
+- - '14'
+  - '57'
+- - '14'
+  - '57'
+- - '14'
+  - '26'
+- - '14'
+  - '29'
+- - '15'
+  - '35'
+- - '15'
+  - '53'
+- - '15'
+  - '37'
+- - '16'
+  - '34'
+- - '17'
+  - '56'
+- - '17'
+  - '34'
+- - '18'
+  - '41'
+- - '18'
+  - '41'
+- - '18'
+  - '43'
+- - '18'
+  - '43'
+- - '18'
+  - '21'
+- - '18'
+  - '55'
+- - '18'
+  - '49'
+- - '19'
+  - '21'
+- - '20'
+  - '21'
+- - '21'
+  - '22'
+- - '21'
+  - '23'
+- - '24'
+  - '37'
+- - '25'
+  - '37'
+- - '27'
+  - '55'
+- - '28'
+  - '55'
+- - '29'
+  - '30'
+- - '29'
+  - '59'
+- - '31'
+  - '33'
+- - '31'
+  - '33'
+- - '31'
+  - '34'
+- - '31'
+  - '34'
+- - '31'
+  - '34'
+- - '32'
+  - '49'
+- - '32'
+  - '49'
+- - '34'
+  - '35'
+- - '34'
+  - '36'
+- - '35'
+  - '37'
+- - '35'
+  - '52'
+- - '35'
+  - '56'
+- - '36'
+  - '37'
+- - '37'
+  - '51'
+- - '37'
+  - '38'
+- - '37'
+  - '39'
+- - '37'
+  - '40'
+- - '37'
+  - '56'
+- - '37'
+  - '55'
+- - '37'
+  - '58'
+- - '37'
+  - '58'
+- - '38'
+  - '56'
+- - '39'
+  - '59'
+- - '40'
+  - '59'
+- - '40'
+  - '54'
+- - '42'
+  - '49'
+- - '44'
+  - '55'
+- - '46'
+  - '60'
+- - '47'
+  - '49'
+- - '48'
+  - '49'
+- - '49'
+  - '50'
+- - '55'
+  - '59'
+nodes:
+  '0':
+    Internal: '0'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: Svizzera
+  '1':
+    Country: Italy
+    Internal: '1'
+    Latitude: 39.20738
+    Longitude: 9.13462
+    label: CA
+  '10':
+    Country: Italy
+    Internal: '1'
+    Latitude: 41.89474
+    Longitude: 12.4839
+    label: RM-1
+  '11':
+    Country: Italy
+    Internal: '1'
+    Latitude: 43.09674
+    Longitude: 12.38286
+    label: PG
+  '12':
+    Country: Italy
+    Internal: '1'
+    Latitude: 38.89079
+    Longitude: 16.5987
+    label: CZ
+  '13':
+    Internal: '0'
+    Latitude: 43.76667
+    Longitude: 11.25
+    label: TIX
+  '14':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.49381
+    Longitude: 11.33875
+    label: BO
+  '15':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: MI-3
+  '16':
+    Internal: '0'
+    Latitude: 45.41519
+    Longitude: 11.88181
+    label: VSIX
+  '17':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.64861
+    Longitude: 13.78
+    label: TS-1
+  '18':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.83333
+    Longitude: 14.25
+    label: NA
+  '19':
+    Country: Italy
+    Internal: '1'
+    Latitude: 38.19327
+    Longitude: 15.54969
+    label: ME
+  '2':
+    Internal: '0'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: Global Crossing
+  '20':
+    Country: Italy
+    Internal: '1'
+    Latitude: 39.30999
+    Longitude: 16.25019
+    label: CS
+  '21':
+    Country: Italy
+    Internal: '1'
+    Latitude: 37.50213
+    Longitude: 15.08719
+    label: CT
+  '22':
+    Country: Italy
+    Internal: '1'
+    Latitude: 38.11582
+    Longitude: 13.35976
+    label: PA
+  '23':
+    Internal: '0'
+    Latitude: 37.50213
+    Longitude: 15.08719
+    label: EUMED CONNECT
+  '24':
+    Internal: '0'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: MIX
+  '25':
+    Internal: '0'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: Level 3
+  '26':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.49381
+    Longitude: 11.33875
+    label: BO-3
+  '27':
+    Internal: '0'
+    Latitude: 41.89474
+    Longitude: 12.4839
+    label: Cogent
+  '28':
+    Country: Italy
+    Internal: '1'
+    Latitude: 42.04023
+    Longitude: 13.4388
+    label: FUC
+  '29':
+    Country: Italy
+    Internal: '1'
+    Latitude: 43.76667
+    Longitude: 11.25
+    label: FI
+  '3':
+    Internal: '0'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: GEANT
+  '30':
+    Country: Italy
+    Internal: '1'
+    Latitude: 43.76667
+    Longitude: 11.25
+    label: Fi
+  '31':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.41519
+    Longitude: 11.88181
+    label: PD-2
+  '32':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.62773
+    Longitude: 17.93682
+    label: BR
+  '33':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.43861
+    Longitude: 12.32667
+    label: VE
+  '34':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.41519
+    Longitude: 11.88181
+    label: PD
+  '35':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: MI-1
+  '36':
+    Country: Italy
+    Internal: '1'
+    Latitude: 46.06787
+    Longitude: 11.12108
+    label: TN
+  '37':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: MI-2
+  '38':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: MI-4
+  '39':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.40632
+    Longitude: 8.93386
+    label: GE
+  '4':
+    Country: Italy
+    Internal: '1'
+    Latitude: 39.20738
+    Longitude: 9.13462
+    label: CA-1
+  '40':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.07049
+    Longitude: 7.68682
+    label: TO
+  '41':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.67797
+    Longitude: 14.76599
+    label: SA
+  '42':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.64432
+    Longitude: 15.80857
+    label: PZ
+  '43':
+    Country: Italy
+    Internal: '1'
+    Latitude: 41.56003
+    Longitude: 14.66753
+    label: CB
+  '44':
+    Country: Italy
+    Internal: '1'
+    Latitude: 41.81632
+    Longitude: 12.66868
+    label: FRA
+  '45':
+    Country: Italy
+    Internal: '1'
+    Latitude: 42.35055
+    Longitude: 13.39954
+    label: AQ
+  '46':
+    Country: Italy
+    Internal: '1'
+    Latitude: 43.59816
+    Longitude: 13.51008
+    label: AN
+  '47':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.66852
+    Longitude: 16.60158
+    label: MT
+  '48':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.35703
+    Longitude: 18.17202
+    label: LE
+  '49':
+    Country: Italy
+    Internal: '1'
+    Latitude: 41.11773
+    Longitude: 16.85118
+    label: BA
+  '5':
+    Internal: '0'
+    Latitude: 41.89474
+    Longitude: 12.4839
+    label: NAMEX
+  '50':
+    Country: Italy
+    Internal: '1'
+    Latitude: 41.46093
+    Longitude: 15.54925
+    label: FG
+  '51':
+    Internal: '0'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: Google
+  '52':
+    Internal: '0'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: GEANT
+  '53':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.52478
+    Longitude: 10.22727
+    label: BS
+  '54':
+    Internal: '0'
+    Latitude: 45.07049
+    Longitude: 7.68682
+    label: TO-PIX
+  '55':
+    Country: Italy
+    Internal: '1'
+    Latitude: 41.89474
+    Longitude: 12.4839
+    label: RM-2
+  '56':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: CO
+  '57':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.82678
+    Longitude: 11.62071
+    label: Fe
+  '58':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.18446
+    Longitude: 9.16145
+    label: Pv
+  '59':
+    Country: Italy
+    Internal: '1'
+    Latitude: 43.71553
+    Longitude: 10.39659
+    label: PI
+  '6':
+    Country: Italy
+    Internal: '1'
+    Latitude: 42.35055
+    Longitude: 13.39954
+    label: AQ-1
+  '60':
+    Country: Italy
+    Internal: '1'
+    Latitude: 43.72621
+    Longitude: 12.63633
+    label: Ur
+  '7':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.72722
+    Longitude: 8.56028
+    label: SS
+  '8':
+    Country: Italy
+    Internal: '1'
+    Latitude: 38.11582
+    Longitude: 13.35976
+    label: PA-2
+  '9':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.18446
+    Longitude: 9.16145
+    label: Pv-1

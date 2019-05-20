@@ -1,40 +1,149 @@
-nodes:
-  '0': {Latitude: 56.11667, Longitude: -3.16667}
-  '1': {Latitude: 56.11667, Longitude: -3.16667}
-  '2': {Latitude: 56.11667, Longitude: -3.16667}
-  '3': {Latitude: 56.11667, Longitude: -3.16667}
-  '4': {Latitude: 55.86515, Longitude: -4.25763}
-  '5': {Latitude: 56.37222333333333, Longitude: -3.033336666666667}
-  '6': {Latitude: 53.79648, Longitude: -1.54785}
-  '7': {Latitude: 56.5, Longitude: -2.96667}
-  '8': {Latitude: 56.5, Longitude: -2.96667}
-  '9': {Latitude: 55.86515, Longitude: -4.25763}
-  '10': {Latitude: 53.79648, Longitude: -1.54785}
-  '11': {Latitude: 56.5, Longitude: -2.96667}
-  '12': {Latitude: 56.5, Longitude: -2.96667}
-  '13': {Latitude: 56.5, Longitude: -2.96667}
-  '14': {Latitude: 56.5, Longitude: -2.96667}
-  '15': {Latitude: 56.5, Longitude: -2.96667}
-  '16': {Latitude: 56.5, Longitude: -2.96667}
 edges:
-- ['0', '2']
-- ['1', '2']
-- ['2', '3']
-- ['2', '5']
-- ['4', '9']
-- ['5', '11']
-- ['5', '12']
-- ['6', '10']
-- ['7', '11']
-- ['8', '11']
-- ['9', '10']
-- ['9', '12']
-- ['10', '11']
-- ['11', '12']
-- ['11', '13']
-- ['11', '14']
-- ['11', '15']
-- ['11', '16']
-- ['12', '13']
-- ['12', '14']
-- ['12', '15']
+- - '0'
+  - '2'
+- - '1'
+  - '2'
+- - '2'
+  - '3'
+- - '2'
+  - '5'
+- - '4'
+  - '9'
+- - '5'
+  - '11'
+- - '5'
+  - '12'
+- - '6'
+  - '10'
+- - '7'
+  - '11'
+- - '8'
+  - '11'
+- - '9'
+  - '12'
+- - '9'
+  - '10'
+- - '10'
+  - '11'
+- - '11'
+  - '12'
+- - '11'
+  - '13'
+- - '11'
+  - '14'
+- - '11'
+  - '15'
+- - '11'
+  - '16'
+- - '12'
+  - '13'
+- - '12'
+  - '14'
+- - '12'
+  - '15'
+nodes:
+  '0':
+    Internal: '1'
+    Latitude: 56.11667
+    Longitude: -3.16667
+    label: Carnegie College
+    type: Green Node
+  '1':
+    Internal: '1'
+    Latitude: 56.11667
+    Longitude: -3.16667
+    label: Adam Smith College
+    type: Green Node
+  '10':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.79648
+    Longitude: -1.54785
+    label: Leeds
+    type: Orange Node
+  '11':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 56.5
+    Longitude: -2.96667
+    label: RNEP1
+    type: Purple Node
+  '12':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 56.5
+    Longitude: -2.96667
+    label: RNEP2
+    type: Purple Node
+  '13':
+    Internal: '1'
+    Latitude: 56.5
+    Longitude: -2.96667
+    label: University of Abertay Dundee
+    type: Blue Node
+  '14':
+    Internal: '1'
+    Latitude: 56.5
+    Longitude: -2.96667
+    label: University of Dundee
+    type: Blue Node
+  '15':
+    Internal: '1'
+    Latitude: 56.5
+    Longitude: -2.96667
+    label: University of St Andrews
+    type: Blue Node
+  '16':
+    Internal: '1'
+    Latitude: 56.5
+    Longitude: -2.96667
+    label: Elmwood College
+    type: Green Node
+  '2':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 56.11667
+    Longitude: -3.16667
+    label: Kirkcaldy
+    type: Purple Node
+  '3':
+    Internal: '1'
+    Latitude: 56.11667
+    Longitude: -3.16667
+    label: UoD Fife Campus
+    type: Blue Node
+  '4':
+    Internal: '0'
+    Latitude: 55.86515
+    Longitude: -4.25763
+    label: Janet and Internet
+  '5':
+    Internal: '1'
+    Latitude: 56.37222333333333
+    Longitude: -3.033336666666667
+    hyperedge: '1'
+    label: None
+  '6':
+    Internal: '0'
+    Latitude: 53.79648
+    Longitude: -1.54785
+    label: Janet and Internet
+  '7':
+    Internal: '1'
+    Latitude: 56.5
+    Longitude: -2.96667
+    label: Dundee College
+    type: Green Node
+  '8':
+    Internal: '1'
+    Latitude: 56.5
+    Longitude: -2.96667
+    label: Angus College
+    type: Green Node
+  '9':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 55.86515
+    Longitude: -4.25763
+    label: Glasgow
+    type: Orange Node

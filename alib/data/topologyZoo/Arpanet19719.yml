@@ -1,42 +1,157 @@
-nodes:
-  '0': {Latitude: 41.5045, Longitude: -81.59707}
-  '1': {Latitude: 39.80172, Longitude: -89.64371}
-  '2': {Latitude: 42.37843, Longitude: -71.11644}
-  '3': {Latitude: 40.44118, Longitude: -79.94283}
-  '4': {Latitude: 41.63622, Longitude: -70.9342}
-  '5': {Latitude: 37.38605, Longitude: -122.08385}
-  '6': {Latitude: 42.3751, Longitude: -71.10561}
-  '7': {Latitude: 42.3751, Longitude: -71.10561}
-  '8': {Latitude: 42.35954, Longitude: -71.09172}
-  '9': {Latitude: 42.3751, Longitude: -71.10561}
-  '10': {Latitude: 37.45383, Longitude: -122.18219}
-  '11': {Latitude: 34.42083, Longitude: -119.69819}
-  '12': {Latitude: 34.05223, Longitude: -118.24368}
-  '13': {Latitude: 37.44188, Longitude: -122.14302}
-  '14': {Latitude: 34.01945, Longitude: -118.49119}
-  '15': {Latitude: 34.01945, Longitude: -118.49119}
-  '16': {Latitude: 40.76078, Longitude: -111.89105}
-  '17': {Latitude: 42.44732, Longitude: -71.2245}
 edges:
-- ['0', '17']
-- ['0', '3']
-- ['1', '8']
-- ['1', '16']
-- ['2', '9']
-- ['2', '6']
-- ['3', '4']
-- ['4', '6']
-- ['5', '10']
-- ['5', '13']
-- ['7', '8']
-- ['7', '9']
-- ['8', '17']
-- ['9', '14']
-- ['10', '16']
-- ['10', '11']
-- ['10', '12']
-- ['11', '12']
-- ['12', '13']
-- ['12', '14']
-- ['14', '15']
-- ['15', '16']
+- - '0'
+  - '17'
+- - '0'
+  - '3'
+- - '1'
+  - '8'
+- - '1'
+  - '16'
+- - '2'
+  - '9'
+- - '2'
+  - '6'
+- - '3'
+  - '4'
+- - '4'
+  - '6'
+- - '5'
+  - '10'
+- - '5'
+  - '13'
+- - '7'
+  - '8'
+- - '7'
+  - '9'
+- - '8'
+  - '17'
+- - '9'
+  - '14'
+- - '10'
+  - '16'
+- - '10'
+  - '11'
+- - '10'
+  - '12'
+- - '11'
+  - '12'
+- - '12'
+  - '13'
+- - '12'
+  - '14'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.5045
+    Longitude: -81.59707
+    label: CASE
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.80172
+    Longitude: -89.64371
+    label: ILLINOIS
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.45383
+    Longitude: -122.18219
+    label: SRI
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.42083
+    Longitude: -119.69819
+    label: UCSB
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: UCLA
+  '13':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.44188
+    Longitude: -122.14302
+    label: Stanford
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.01945
+    Longitude: -118.49119
+    label: RAND
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.01945
+    Longitude: -118.49119
+    label: SDC
+  '16':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.76078
+    Longitude: -111.89105
+    label: UTAH
+  '17':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.44732
+    Longitude: -71.2245
+    label: Lincoln
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.37843
+    Longitude: -71.11644
+    label: HARVARD
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.44118
+    Longitude: -79.94283
+    label: CARNEGIE
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.63622
+    Longitude: -70.9342
+    label: MITRE
+    type: '"T" Node'
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.38605
+    Longitude: -122.08385
+    label: AMES
+    type: '"T" Node'
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.3751
+    Longitude: -71.10561
+    label: BURROUGHS
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.3751
+    Longitude: -71.10561
+    label: BBN
+    type: '"T" Node'
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.35954
+    Longitude: -71.09172
+    label: MIT
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.3751
+    Longitude: -71.10561
+    label: BBN

@@ -1,0 +1,165 @@
+edges:
+- - '0'
+  - '1'
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '0'
+  - '13'
+- - '0'
+  - '14'
+- - '0'
+  - '14'
+- - '0'
+  - '7'
+- - '0'
+  - '7'
+- - '0'
+  - '7'
+- - '1'
+  - '7'
+- - '1'
+  - '7'
+- - '1'
+  - '7'
+- - '1'
+  - '8'
+- - '1'
+  - '9'
+- - '1'
+  - '10'
+- - '1'
+  - '11'
+- - '1'
+  - '13'
+- - '1'
+  - '14'
+- - '1'
+  - '14'
+- - '2'
+  - '7'
+- - '4'
+  - '9'
+- - '5'
+  - '8'
+- - '6'
+  - '14'
+- - '7'
+  - '8'
+- - '7'
+  - '8'
+- - '7'
+  - '8'
+- - '7'
+  - '9'
+- - '7'
+  - '9'
+- - '7'
+  - '11'
+- - '7'
+  - '14'
+- - '8'
+  - '9'
+- - '8'
+  - '9'
+- - '8'
+  - '11'
+- - '8'
+  - '14'
+- - '12'
+  - '13'
+- - '13'
+  - '14'
+- - '14'
+  - '15'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+  '1':
+    Country: India
+    Internal: '1'
+    Latitude: 13.08784
+    Longitude: 80.27847
+    label: Chennai
+  '10':
+    Country: Italy
+    Internal: '1'
+    Latitude: 38.11582
+    Longitude: 13.35976
+    label: Palermo
+  '11':
+    Country: France
+    Internal: '1'
+    Latitude: 43.3
+    Longitude: 5.4
+    label: Marseille
+  '12':
+    Internal: '0'
+    Latitude: 22.28552
+    Longitude: 114.15769
+    label: HKIX
+  '13':
+    Country: Hong Kong
+    Internal: '1'
+    Latitude: 22.28552
+    Longitude: 114.15769
+    label: Hong Kong
+  '14':
+    Country: Singapore
+    Internal: '1'
+    Latitude: 1.28967
+    Longitude: 103.85007
+    label: Singapore
+  '15':
+    Internal: '0'
+    Latitude: 1.28967
+    Longitude: 103.85007
+    label: STIX
+  '2':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: NYIX
+  '3':
+    Internal: '0'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: LAIX
+  '4':
+    Internal: '0'
+    Latitude: 19.01441
+    Longitude: 72.84794
+    label: NiXI
+  '5':
+    Internal: '0'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: LINX
+  '6':
+    Internal: '0'
+    Latitude: 1.28967
+    Longitude: 103.85007
+    label: EQUINOX IX
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+  '8':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: London
+  '9':
+    Country: India
+    Internal: '1'
+    Latitude: 19.01441
+    Longitude: 72.84794
+    label: Mumbai

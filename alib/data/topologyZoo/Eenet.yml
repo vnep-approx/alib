@@ -1,0 +1,123 @@
+edges:
+- - '0'
+  - '5'
+- - '1'
+  - '5'
+- - '2'
+  - '5'
+- - '3'
+  - '5'
+- - '4'
+  - '5'
+- - '5'
+  - '6'
+- - '5'
+  - '7'
+- - '5'
+  - '7'
+- - '5'
+  - '9'
+- - '7'
+  - '8'
+- - '7'
+  - '9'
+- - '7'
+  - '10'
+- - '7'
+  - '10'
+- - '10'
+  - '11'
+- - '10'
+  - '11'
+- - '11'
+  - '12'
+nodes:
+  '0':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 58.38588
+    Longitude: 24.49711
+    label: Parnu
+    type: Small Node
+  '1':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 58.94306
+    Longitude: 23.54139
+    label: Haapsald
+    type: Small Node
+  '10':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 58.74667
+    Longitude: 26.39389
+    label: Jogeva
+    type: Small Node
+  '11':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 58.38062
+    Longitude: 26.72509
+    label: Tartu
+    type: Medium Sized Node
+  '12':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 57.83389
+    Longitude: 27.01944
+    label: Voru
+    type: Small Node
+  '2':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 58.24806
+    Longitude: 22.50389
+    label: Kuressaare
+    type: Small Node
+  '3':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 59.34639
+    Longitude: 26.35583
+    label: Rakvere
+    type: Small Node
+  '4':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 59.37722
+    Longitude: 28.19028
+    label: Narva
+    type: Small Node
+  '5':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 59.43696
+    Longitude: 24.75353
+    label: Tallinn
+    type: Large Node
+  '6':
+    Internal: '0'
+    Latitude: 59.43696
+    Longitude: 24.75353
+    label: GEANT2
+  '7':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 58.88556
+    Longitude: 25.55722
+    label: Paide
+    type: Small Node
+  '8':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 58.80861
+    Longitude: 25.4325
+    label: Turi
+    type: Small Node
+  '9':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 58.36389
+    Longitude: 25.59
+    label: Viljandi
+    type: Small Node

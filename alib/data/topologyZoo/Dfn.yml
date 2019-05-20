@@ -1,147 +1,517 @@
-nodes:
-  '0': {Latitude: 50.83333, Longitude: 12.91667}
-  '1': {Latitude: 51.33962, Longitude: 12.37129}
-  '2': {Latitude: 52.52437, Longitude: 13.41053}
-  '3': {Latitude: 51.05089, Longitude: 13.73832}
-  '4': {Latitude: 49.87056, Longitude: 8.64944}
-  '5': {Latitude: 49.40768, Longitude: 8.69079}
-  '6': {Latitude: 50.93333, Longitude: 11.58333}
-  '7': {Latitude: 50.68333, Longitude: 10.9}
-  '8': {Latitude: 50.11667, Longitude: 8.68333}
-  '9': {Latitude: 50.11667, Longitude: 8.68333}
-  '10': {Latitude: 49.00472, Longitude: 8.38583}
-  '11': {Latitude: 48.78232, Longitude: 9.17702}
-  '12': {Latitude: 52.39886, Longitude: 13.06566}
-  '13': {Latitude: 52.39886, Longitude: 13.06566}
-  '14': {Latitude: 52.03333, Longitude: 8.53333}
-  '15': {Latitude: 51.33962, Longitude: 12.37129}
-  '16': {Latitude: 51.53333, Longitude: 9.93333}
-  '17': {Latitude: 53.07516, Longitude: 8.80777}
-  '18': {Latitude: 51.26667, Longitude: 7.18333}
-  '19': {Latitude: 50.93333, Longitude: 6.95}
-  '20': {Latitude: 50.73333, Longitude: 7.1}
-  '21': {Latitude: 50.81667, Longitude: 8.76667}
-  '22': {Latitude: 50.58333, Longitude: 8.65}
-  '23': {Latitude: 51.31667, Longitude: 9.5}
-  '24': {Latitude: 51.71905, Longitude: 8.75439}
-  '25': {Latitude: 53.16667, Longitude: 8.2}
-  '26': {Latitude: 52.37052, Longitude: 9.73322}
-  '27': {Latitude: 51.96236, Longitude: 7.62571}
-  '28': {Latitude: 49.23333, Longitude: 7.0}
-  '29': {Latitude: 50.11667, Longitude: 8.68333}
-  '30': {Latitude: 53.55, Longitude: 10.0}
-  '31': {Latitude: 53.55, Longitude: 10.0}
-  '32': {Latitude: 54.32133, Longitude: 10.13489}
-  '33': {Latitude: 54.0887, Longitude: 12.14049}
-  '34': {Latitude: 52.16667, Longitude: 11.66667}
-  '35': {Latitude: 52.26667, Longitude: 10.53333}
-  '36': {Latitude: 49.45, Longitude: 7.75}
-  '37': {Latitude: 54.1, Longitude: 13.38333}
-  '38': {Latitude: 51.51667, Longitude: 7.45}
-  '39': {Latitude: 51.48333, Longitude: 7.21667}
-  '40': {Latitude: 48.13743, Longitude: 11.57549}
-  '41': {Latitude: 49.015, Longitude: 12.09556}
-  '42': {Latitude: 48.36667, Longitude: 10.88333}
-  '43': {Latitude: 48.25, Longitude: 11.65}
-  '44': {Latitude: 51.45, Longitude: 7.01667}
-  '45': {Latitude: 50.93333, Longitude: 6.36667}
-  '46': {Latitude: 50.77664, Longitude: 6.08342}
-  '47': {Latitude: 49.78778, Longitude: 9.93611}
-  '48': {Latitude: 52.52437, Longitude: 13.41053}
-  '49': {Latitude: 52.52437, Longitude: 13.41053}
-  '50': {Latitude: 52.37052, Longitude: 9.73322}
-  '51': {Latitude: 50.11667, Longitude: 8.68333}
-  '52': {Latitude: 52.39886, Longitude: 13.06566}
-  '53': {Latitude: 49.58972, Longitude: 11.00389}
-  '54': {Latitude: 49.94806, Longitude: 11.57833}
-  '55': {Latitude: 52.34714, Longitude: 14.55062}
-  '56': {Latitude: 52.52437, Longitude: 13.41053}
-  '57': {Latitude: 52.36667, Longitude: 13.61667}
 edges:
-- ['0', '1']
-- ['0', '3']
-- ['1', '53']
-- ['1', '6']
-- ['1', '15']
-- ['2', '56']
-- ['2', '49']
-- ['3', '52']
-- ['3', '53']
-- ['4', '51']
-- ['4', '5']
-- ['5', '10']
-- ['6', '7']
-- ['7', '53']
-- ['8', '51']
-- ['9', '51']
-- ['10', '11']
-- ['10', '51']
-- ['10', '36']
-- ['11', '43']
-- ['12', '52']
-- ['13', '52']
-- ['14', '24']
-- ['14', '50']
-- ['14', '27']
-- ['16', '50']
-- ['16', '23']
-- ['17', '25']
-- ['17', '50']
-- ['17', '31']
-- ['18', '19']
-- ['18', '38']
-- ['19', '51']
-- ['19', '20']
-- ['20', '46']
-- ['21', '22']
-- ['21', '23']
-- ['22', '51']
-- ['23', '24']
-- ['25', '27']
-- ['26', '50']
-- ['27', '44']
-- ['28', '51']
-- ['28', '36']
-- ['29', '51']
-- ['30', '48']
-- ['30', '31']
-- ['32', '33']
-- ['32', '50']
-- ['33', '50']
-- ['33', '37']
-- ['34', '35']
-- ['34', '52']
-- ['35', '50']
-- ['36', '51']
-- ['37', '52']
-- ['38', '39']
-- ['39', '44']
-- ['40', '41']
-- ['40', '43']
-- ['41', '53']
-- ['42', '43']
-- ['42', '53']
-- ['43', '51']
-- ['44', '50']
-- ['44', '45']
-- ['45', '46']
-- ['46', '51']
-- ['47', '51']
-- ['47', '53']
-- ['48', '56']
-- ['48', '49']
-- ['48', '52']
-- ['48', '57']
-- ['50', '51']
-- ['50', '52']
-- ['50', '53']
-- ['50', '55']
-- ['51', '52']
-- ['51', '53']
-- ['52', '53']
-- ['52', '54']
-- ['52', '55']
-- ['52', '56']
-- ['53', '54']
-- ['55', '56']
-- ['56', '57']
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '1'
+  - '53'
+- - '1'
+  - '6'
+- - '1'
+  - '15'
+- - '2'
+  - '56'
+- - '2'
+  - '49'
+- - '3'
+  - '52'
+- - '3'
+  - '53'
+- - '4'
+  - '51'
+- - '4'
+  - '5'
+- - '5'
+  - '10'
+- - '6'
+  - '7'
+- - '7'
+  - '53'
+- - '8'
+  - '51'
+- - '9'
+  - '51'
+- - '10'
+  - '11'
+- - '10'
+  - '51'
+- - '10'
+  - '36'
+- - '11'
+  - '43'
+- - '12'
+  - '52'
+- - '13'
+  - '52'
+- - '14'
+  - '24'
+- - '14'
+  - '50'
+- - '14'
+  - '27'
+- - '16'
+  - '50'
+- - '16'
+  - '23'
+- - '17'
+  - '25'
+- - '17'
+  - '50'
+- - '17'
+  - '31'
+- - '18'
+  - '19'
+- - '18'
+  - '38'
+- - '19'
+  - '51'
+- - '19'
+  - '20'
+- - '20'
+  - '46'
+- - '21'
+  - '22'
+- - '21'
+  - '23'
+- - '22'
+  - '51'
+- - '23'
+  - '24'
+- - '25'
+  - '27'
+- - '26'
+  - '50'
+- - '27'
+  - '44'
+- - '28'
+  - '51'
+- - '28'
+  - '36'
+- - '29'
+  - '51'
+- - '30'
+  - '48'
+- - '30'
+  - '31'
+- - '32'
+  - '33'
+- - '32'
+  - '50'
+- - '33'
+  - '50'
+- - '33'
+  - '37'
+- - '34'
+  - '35'
+- - '34'
+  - '52'
+- - '35'
+  - '50'
+- - '36'
+  - '51'
+- - '37'
+  - '52'
+- - '38'
+  - '39'
+- - '39'
+  - '44'
+- - '40'
+  - '41'
+- - '40'
+  - '43'
+- - '41'
+  - '53'
+- - '42'
+  - '43'
+- - '42'
+  - '53'
+- - '43'
+  - '51'
+- - '44'
+  - '50'
+- - '44'
+  - '45'
+- - '45'
+  - '46'
+- - '46'
+  - '51'
+- - '47'
+  - '51'
+- - '47'
+  - '53'
+- - '48'
+  - '56'
+- - '48'
+  - '49'
+- - '48'
+  - '52'
+- - '48'
+  - '57'
+- - '50'
+  - '51'
+- - '50'
+  - '52'
+- - '50'
+  - '53'
+- - '50'
+  - '55'
+- - '51'
+  - '52'
+- - '51'
+  - '53'
+- - '52'
+  - '53'
+- - '52'
+  - '54'
+- - '52'
+  - '55'
+- - '52'
+  - '56'
+- - '53'
+  - '54'
+- - '55'
+  - '56'
+- - '56'
+  - '57'
+nodes:
+  '0':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.83333
+    Longitude: 12.91667
+    label: CHE
+  '1':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.33962
+    Longitude: 12.37129
+    label: LEI
+  '10':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.00472
+    Longitude: 8.38583
+    label: FZK
+  '11':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.78232
+    Longitude: 9.17702
+    label: STU
+  '12':
+    Internal: '0'
+    Latitude: 52.39886
+    Longitude: 13.06566
+    label: DeCix
+  '13':
+    Internal: '0'
+    Latitude: 52.39886
+    Longitude: 13.06566
+    label: Telia
+  '14':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.03333
+    Longitude: 8.53333
+    label: BIE
+  '15':
+    Internal: '0'
+    Latitude: 51.33962
+    Longitude: 12.37129
+    label: Telekom
+  '16':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.53333
+    Longitude: 9.93333
+    label: GOE
+  '17':
+    Country: Germany
+    Internal: '1'
+    Latitude: 53.07516
+    Longitude: 8.80777
+    label: BRE
+  '18':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.26667
+    Longitude: 7.18333
+    label: WUP
+  '19':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.93333
+    Longitude: 6.95
+    label: BIR
+  '2':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.52437
+    Longitude: 13.41053
+    label: ADH
+  '20':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.73333
+    Longitude: 7.1
+    label: BON
+  '21':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.81667
+    Longitude: 8.76667
+    label: MAR
+  '22':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.58333
+    Longitude: 8.65
+    label: GIE
+  '23':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.31667
+    Longitude: 9.5
+    label: KAS
+  '24':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.71905
+    Longitude: 8.75439
+    label: PAD
+  '25':
+    Country: Germany
+    Internal: '1'
+    Latitude: 53.16667
+    Longitude: 8.2
+    label: EWE
+  '26':
+    Internal: '0'
+    Latitude: 52.37052
+    Longitude: 9.73322
+    label: Telekom
+  '27':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.96236
+    Longitude: 7.62571
+    label: MUE
+  '28':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.23333
+    Longitude: 7.0
+    label: SAA
+  '29':
+    Internal: '0'
+    Latitude: 50.11667
+    Longitude: 8.68333
+    label: GC
+  '3':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.05089
+    Longitude: 13.73832
+    label: DRE
+  '30':
+    Country: Germany
+    Internal: '1'
+    Latitude: 53.55
+    Longitude: 10.0
+    label: DES
+  '31':
+    Country: Germany
+    Internal: '1'
+    Latitude: 53.55
+    Longitude: 10.0
+    label: HAM
+  '32':
+    Country: Germany
+    Internal: '1'
+    Latitude: 54.32133
+    Longitude: 10.13489
+    label: KIE
+  '33':
+    Country: Germany
+    Internal: '1'
+    Latitude: 54.0887
+    Longitude: 12.14049
+    label: ROS
+  '34':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.16667
+    Longitude: 11.66667
+    label: MAG
+  '35':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.26667
+    Longitude: 10.53333
+    label: BRA
+  '36':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.45
+    Longitude: 7.75
+    label: KAI
+  '37':
+    Country: Germany
+    Internal: '1'
+    Latitude: 54.1
+    Longitude: 13.38333
+    label: GRE
+  '38':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.51667
+    Longitude: 7.45
+    label: DOR
+  '39':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.48333
+    Longitude: 7.21667
+    label: BOC
+  '4':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.87056
+    Longitude: 8.64944
+    label: GSI
+  '40':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.13743
+    Longitude: 11.57549
+    label: FHM
+  '41':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.015
+    Longitude: 12.09556
+    label: REG
+  '42':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.36667
+    Longitude: 10.88333
+    label: AUG
+  '43':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.25
+    Longitude: 11.65
+    label: GAR
+  '44':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.45
+    Longitude: 7.01667
+    label: DUI
+  '45':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.93333
+    Longitude: 6.36667
+    label: FZJ
+  '46':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.77664
+    Longitude: 6.08342
+    label: AAC
+  '47':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.78778
+    Longitude: 9.93611
+    label: WUE
+  '48':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.52437
+    Longitude: 13.41053
+    label: TUB
+  '49':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.52437
+    Longitude: 13.41053
+    label: HUB
+  '5':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.40768
+    Longitude: 8.69079
+    label: HEI
+  '50':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.37052
+    Longitude: 9.73322
+    label: HAN
+  '51':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.11667
+    Longitude: 8.68333
+    label: FRA
+  '52':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.39886
+    Longitude: 13.06566
+    label: POT
+  '53':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.58972
+    Longitude: 11.00389
+    label: ERL
+  '54':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.94806
+    Longitude: 11.57833
+    label: BAY
+  '55':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.34714
+    Longitude: 14.55062
+    label: FFO
+  '56':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.52437
+    Longitude: 13.41053
+    label: ZIB
+  '57':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.36667
+    Longitude: 13.61667
+    label: ZEU
+  '6':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.93333
+    Longitude: 11.58333
+    label: JEN
+  '7':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.68333
+    Longitude: 10.9
+    label: ILM
+  '8':
+    Internal: '0'
+    Latitude: 50.11667
+    Longitude: 8.68333
+    label: DeCix
+  '9':
+    Internal: '0'
+    Latitude: 50.11667
+    Longitude: 8.68333
+    label: Geant

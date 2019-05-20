@@ -1,45 +1,164 @@
-nodes:
-  '0': {Latitude: -33.86785, Longitude: 151.20732}
-  '1': {Latitude: -27.46794, Longitude: 153.02809}
-  '2': {Latitude: -35.28346, Longitude: 149.12807}
-  '3': {Latitude: -33.86785, Longitude: 151.20732}
-  '4': {Latitude: -19.25, Longitude: 146.8}
-  '5': {Latitude: -16.91667, Longitude: 145.76667}
-  '6': {Latitude: -27.46794, Longitude: 153.02809}
-  '7': {Latitude: -23.38333, Longitude: 150.5}
-  '8': {Latitude: -30.51667, Longitude: 151.65}
-  '9': {Latitude: -42.87936, Longitude: 147.32941}
-  '10': {Latitude: -35.28346, Longitude: 149.12807}
-  '11': {Latitude: -31.93333, Longitude: 115.83333}
-  '12': {Latitude: -31.93333, Longitude: 115.83333}
-  '13': {Latitude: -34.93333, Longitude: 138.6}
-  '14': {Latitude: -34.93333, Longitude: 138.6}
-  '15': {Latitude: -37.814, Longitude: 144.96332}
-  '16': {Latitude: -37.814, Longitude: 144.96332}
-  '17': {Latitude: -23.7, Longitude: 133.88333}
-  '18': {Latitude: -12.46113, Longitude: 130.84185}
 edges:
-- ['0', '10']
-- ['0', '3']
-- ['0', '6']
-- ['1', '3']
-- ['1', '6']
-- ['2', '10']
-- ['2', '15']
-- ['3', '8']
-- ['3', '16']
-- ['4', '5']
-- ['4', '7']
-- ['6', '7']
-- ['9', '16']
-- ['9', '15']
-- ['11', '12']
-- ['11', '13']
-- ['12', '14']
-- ['13', '18']
-- ['13', '14']
-- ['13', '15']
-- ['14', '16']
-- ['14', '17']
-- ['15', '16']
-- ['17', '18']
+- - '0'
+  - '10'
+- - '0'
+  - '3'
+- - '0'
+  - '6'
+- - '1'
+  - '3'
+- - '1'
+  - '6'
+- - '2'
+  - '10'
+- - '2'
+  - '15'
+- - '3'
+  - '8'
+- - '3'
+  - '16'
+- - '4'
+  - '5'
+- - '4'
+  - '7'
+- - '6'
+  - '7'
+- - '9'
+  - '16'
+- - '9'
+  - '15'
+- - '11'
+  - '12'
+- - '11'
+  - '13'
+- - '12'
+  - '14'
+- - '13'
+  - '18'
+- - '13'
+  - '14'
+- - '13'
+  - '15'
+- - '14'
+  - '16'
+- - '14'
+  - '17'
+- - '15'
+  - '16'
+- - '17'
+  - '18'
+nodes:
+  '0':
+    Country: Australia
+    Internal: '1'
+    Latitude: -33.86785
+    Longitude: 151.20732
+    label: Sydney1
+  '1':
+    Country: Australia
+    Internal: '1'
+    Latitude: -27.46794
+    Longitude: 153.02809
+    label: Brisbane2
+  '10':
+    Country: Australia
+    Internal: '1'
+    Latitude: -35.28346
+    Longitude: 149.12807
+    label: Canberra2
+  '11':
+    Country: Australia
+    Internal: '1'
+    Latitude: -31.93333
+    Longitude: 115.83333
+    label: Perth1
+  '12':
+    Country: Australia
+    Internal: '1'
+    Latitude: -31.93333
+    Longitude: 115.83333
+    label: Perth2
+  '13':
+    Country: Australia
+    Internal: '1'
+    Latitude: -34.93333
+    Longitude: 138.6
+    label: Adelaide1
+  '14':
+    Country: Australia
+    Internal: '1'
+    Latitude: -34.93333
+    Longitude: 138.6
+    label: Adelaide2
+  '15':
+    Country: Australia
+    Internal: '1'
+    Latitude: -37.814
+    Longitude: 144.96332
+    label: Melbourne1
+  '16':
+    Country: Australia
+    Internal: '1'
+    Latitude: -37.814
+    Longitude: 144.96332
+    label: Melbourne2
+  '17':
+    Country: Australia
+    Internal: '1'
+    Latitude: -23.7
+    Longitude: 133.88333
+    label: Alice Springs
+  '18':
+    Country: Australia
+    Internal: '1'
+    Latitude: -12.46113
+    Longitude: 130.84185
+    label: Darwin
+  '2':
+    Country: Australia
+    Internal: '1'
+    Latitude: -35.28346
+    Longitude: 149.12807
+    label: Canberra1
+  '3':
+    Country: Australia
+    Internal: '1'
+    Latitude: -33.86785
+    Longitude: 151.20732
+    label: Sydney2
+  '4':
+    Country: Australia
+    Internal: '1'
+    Latitude: -19.25
+    Longitude: 146.8
+    label: Townsville
+  '5':
+    Country: Australia
+    Internal: '1'
+    Latitude: -16.91667
+    Longitude: 145.76667
+    label: Cairns
+  '6':
+    Country: Australia
+    Internal: '1'
+    Latitude: -27.46794
+    Longitude: 153.02809
+    label: Brisbane1
+  '7':
+    Country: Australia
+    Internal: '1'
+    Latitude: -23.38333
+    Longitude: 150.5
+    label: Rockhampton
+  '8':
+    Country: Australia
+    Internal: '1'
+    Latitude: -30.51667
+    Longitude: 151.65
+    label: Armidale
+  '9':
+    Country: Australia
+    Internal: '1'
+    Latitude: -42.87936
+    Longitude: 147.32941
+    label: Hobart

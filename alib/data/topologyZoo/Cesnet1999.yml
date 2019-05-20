@@ -1,27 +1,102 @@
-nodes:
-  '0': {Latitude: 50.08804, Longitude: 14.42076}
-  '1': {Latitude: 49.21667, Longitude: 17.66667}
-  '2': {Latitude: 49.83465, Longitude: 18.28204}
-  '3': {Latitude: 49.59552, Longitude: 17.25175}
-  '4': {Latitude: 49.19522, Longitude: 16.60796}
-  '5': {Latitude: 49.74747, Longitude: 13.37759}
-  '6': {Latitude: 50.6607, Longitude: 14.03227}
-  '7': {Latitude: 50.08804, Longitude: 14.42076}
-  '8': {Latitude: 50.76711, Longitude: 15.05619}
-  '9': {Latitude: 48.97447, Longitude: 14.47434}
-  '10': {Latitude: 50.08804, Longitude: 14.42076}
-  '11': {Latitude: 50.04075, Longitude: 15.77659}
-  '12': {Latitude: 50.20923, Longitude: 15.83277}
 edges:
-- ['0', '7']
-- ['1', '4']
-- ['2', '4']
-- ['3', '4']
-- ['4', '7']
-- ['5', '7']
-- ['6', '7']
-- ['7', '8']
-- ['7', '9']
-- ['7', '10']
-- ['7', '11']
-- ['7', '12']
+- - '0'
+  - '7'
+- - '1'
+  - '4'
+- - '2'
+  - '4'
+- - '3'
+  - '4'
+- - '4'
+  - '7'
+- - '5'
+  - '7'
+- - '6'
+  - '7'
+- - '7'
+  - '8'
+- - '7'
+  - '9'
+- - '7'
+  - '10'
+- - '7'
+  - '11'
+- - '7'
+  - '12'
+nodes:
+  '0':
+    Internal: '0'
+    Latitude: 50.08804
+    Longitude: 14.42076
+    label: TEN-155
+  '1':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.21667
+    Longitude: 17.66667
+    label: Zlin
+  '10':
+    Internal: '0'
+    Latitude: 50.08804
+    Longitude: 14.42076
+    label: NIX
+  '11':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.04075
+    Longitude: 15.77659
+    label: Pardubice
+  '12':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.20923
+    Longitude: 15.83277
+    label: Hradec Kralove
+  '2':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.83465
+    Longitude: 18.28204
+    label: Ostrava
+  '3':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.59552
+    Longitude: 17.25175
+    label: Olomouc
+  '4':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.19522
+    Longitude: 16.60796
+    label: Brno
+  '5':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.74747
+    Longitude: 13.37759
+    label: Plzen
+  '6':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.6607
+    Longitude: 14.03227
+    label: Usti nad Labem
+  '7':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.08804
+    Longitude: 14.42076
+    label: Praha
+  '8':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.76711
+    Longitude: 15.05619
+    label: Liberec
+  '9':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 48.97447
+    Longitude: 14.47434
+    label: Ceske Budejovice

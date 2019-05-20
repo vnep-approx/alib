@@ -1,32 +1,113 @@
-nodes:
-  '0': {Latitude: 53.55, Longitude: 10.0}
-  '1': {Latitude: 55.67594, Longitude: 12.56553}
-  '2': {Latitude: 55.67594, Longitude: 12.56553}
-  '3': {Latitude: 53.55, Longitude: 10.0}
-  '4': {Latitude: 64.13548, Longitude: -21.89541}
-  '5': {Latitude: 64.13548, Longitude: -21.89541}
-  '7': {Latitude: 59.33258, Longitude: 18.0649}
-  '8': {Latitude: 55.67594, Longitude: 12.56553}
-  '9': {Latitude: 55.67594, Longitude: 12.56553}
-  '10': {Latitude: 64.13548, Longitude: -21.89541}
-  '11': {Latitude: 59.91273, Longitude: 10.74609}
-  '12': {Latitude: 59.33258, Longitude: 18.0649}
-  '14': {Latitude: 60.16952, Longitude: 24.93545}
-  '16': {Latitude: 55.67594, Longitude: 12.56553}
-  '17': {Latitude: 53.55, Longitude: 10.0}
 edges:
-- ['0', '17']
-- ['1', '16']
-- ['2', '16']
-- ['3', '17']
-- ['4', '10']
-- ['5', '10']
-- ['7', '12']
-- ['8', '16']
-- ['9', '16']
-- ['10', '16']
-- ['11', '16']
-- ['11', '12']
-- ['12', '16']
-- ['12', '14']
-- ['16', '17']
+- - '0'
+  - '17'
+- - '1'
+  - '16'
+- - '2'
+  - '16'
+- - '3'
+  - '17'
+- - '4'
+  - '10'
+- - '5'
+  - '10'
+- - '7'
+  - '12'
+- - '8'
+  - '16'
+- - '9'
+  - '16'
+- - '10'
+  - '16'
+- - '11'
+  - '16'
+- - '11'
+  - '12'
+- - '12'
+  - '16'
+- - '12'
+  - '14'
+- - '16'
+  - '17'
+nodes:
+  '0':
+    Internal: '0'
+    Latitude: 53.55
+    Longitude: 10.0
+    label: Poznan
+  '1':
+    Internal: '0'
+    Latitude: 55.67594
+    Longitude: 12.56553
+    label: GEANT
+  '10':
+    Country: Iceland
+    Internal: '1'
+    Latitude: 64.13548
+    Longitude: -21.89541
+    label: Reyjavik
+  '11':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.91273
+    Longitude: 10.74609
+    label: Oslo
+  '12':
+    Country: Sweden
+    Internal: '1'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: Stockholm
+  '14':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.16952
+    Longitude: 24.93545
+    label: Helsinki
+  '16':
+    Country: Denmark
+    Internal: '1'
+    Latitude: 55.67594
+    Longitude: 12.56553
+    label: Copenhagen
+  '17':
+    Country: Germany
+    Internal: '1'
+    Latitude: 53.55
+    Longitude: 10.0
+    label: Hamburg
+  '2':
+    Internal: '0'
+    Latitude: 55.67594
+    Longitude: 12.56553
+    label: London
+  '3':
+    Internal: '0'
+    Latitude: 53.55
+    Longitude: 10.0
+    label: Amsterdam GLORIAD
+  '4':
+    Internal: '0'
+    Latitude: 64.13548
+    Longitude: -21.89541
+    label: 'ICELINK: Greenland, Canada, USA'
+  '5':
+    Internal: '0'
+    Latitude: 64.13548
+    Longitude: -21.89541
+    label: London
+  '7':
+    Internal: '0'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: INTERNET
+  '8':
+    Internal: '0'
+    Latitude: 55.67594
+    Longitude: 12.56553
+    label: INTERNET
+  '9':
+    Internal: '0'
+    Latitude: 55.67594
+    Longitude: 12.56553
+    label: New York

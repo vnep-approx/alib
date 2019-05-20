@@ -1,0 +1,399 @@
+edges:
+- - '0'
+  - '6'
+- - '0'
+  - '7'
+- - '1'
+  - '32'
+- - '1'
+  - '3'
+- - '2'
+  - '24'
+- - '2'
+  - '32'
+- - '3'
+  - '32'
+- - '4'
+  - '8'
+- - '4'
+  - '7'
+- - '5'
+  - '21'
+- - '6'
+  - '7'
+- - '7'
+  - '8'
+- - '7'
+  - '9'
+- - '7'
+  - '24'
+- - '7'
+  - '25'
+- - '7'
+  - '29'
+- - '9'
+  - '26'
+- - '10'
+  - '21'
+- - '11'
+  - '21'
+- - '12'
+  - '27'
+- - '12'
+  - '28'
+- - '12'
+  - '13'
+- - '13'
+  - '21'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '15'
+  - '17'
+- - '15'
+  - '21'
+- - '15'
+  - '29'
+- - '18'
+  - '21'
+- - '19'
+  - '21'
+- - '20'
+  - '24'
+- - '20'
+  - '28'
+- - '21'
+  - '34'
+- - '21'
+  - '39'
+- - '21'
+  - '40'
+- - '21'
+  - '22'
+- - '21'
+  - '23'
+- - '21'
+  - '24'
+- - '21'
+  - '31'
+- - '21'
+  - '28'
+- - '21'
+  - '37'
+- - '21'
+  - '37'
+- - '23'
+  - '29'
+- - '24'
+  - '32'
+- - '24'
+  - '25'
+- - '24'
+  - '28'
+- - '24'
+  - '31'
+- - '26'
+  - '29'
+- - '27'
+  - '28'
+- - '28'
+  - '29'
+- - '29'
+  - '30'
+- - '32'
+  - '37'
+- - '33'
+  - '37'
+- - '33'
+  - '38'
+- - '35'
+  - '36'
+- - '35'
+  - '37'
+- - '36'
+  - '37'
+- - '37'
+  - '38'
+- - '39'
+  - '40'
+nodes:
+  '0':
+    Country: China
+    Internal: '1'
+    Latitude: 25.28194
+    Longitude: 110.28639
+    label: Gullin
+    type: small
+  '1':
+    Country: China
+    Internal: '1'
+    Latitude: 25.03889
+    Longitude: 102.71833
+    label: Kunming
+    type: small
+  '10':
+    Internal: '0'
+    Latitude: 39.9075
+    Longitude: 116.39723
+    label: Japan
+  '11':
+    Internal: '0'
+    Latitude: 39.9075
+    Longitude: 116.39723
+    label: Europe
+  '12':
+    Country: China
+    Internal: '1'
+    Latitude: 38.04139
+    Longitude: 114.47861
+    label: Shijiazhuang
+    type: small
+  '13':
+    Country: China
+    Internal: '1'
+    Latitude: 39.14222
+    Longitude: 117.17667
+    label: Tianjing
+    type: small
+  '14':
+    Country: China
+    Internal: '1'
+    Latitude: 38.91222
+    Longitude: 121.60222
+    label: Dalian
+    type: small
+  '15':
+    Country: China
+    Internal: '1'
+    Latitude: 41.79222
+    Longitude: 123.43278
+    label: Shenyang
+    type: large
+  '16':
+    Country: China
+    Internal: '1'
+    Latitude: 45.75
+    Longitude: 126.65
+    label: Harbin
+    type: small
+  '17':
+    Country: China
+    Internal: '1'
+    Latitude: 43.88
+    Longitude: 125.32278
+    label: Chanchun
+    type: small
+  '18':
+    Internal: '0'
+    Latitude: 39.9075
+    Longitude: 116.39723
+    label: N.A
+  '19':
+    Internal: '0'
+    Latitude: 39.9075
+    Longitude: 116.39723
+    label: Korea
+  '2':
+    Country: China
+    Internal: '1'
+    Latitude: 29.56278
+    Longitude: 106.55278
+    label: Chongqing
+    type: small
+  '20':
+    Country: China
+    Internal: '1'
+    Latitude: 31.86389
+    Longitude: 117.28083
+    label: Hefei
+    type: small
+  '21':
+    Country: China
+    Internal: '1'
+    Latitude: 39.9075
+    Longitude: 116.39723
+    label: Beijing
+    type: large
+  '22':
+    Country: China
+    Internal: '1'
+    Latitude: 38.04139
+    Longitude: 114.47861
+    label: Shijiazhuang
+    type: small
+  '23':
+    Country: China
+    Internal: '1'
+    Latitude: 28.68333
+    Longitude: 115.88333
+    label: Nanchang
+    type: small
+  '24':
+    Country: China
+    Internal: '1'
+    Latitude: 30.58333
+    Longitude: 114.26667
+    label: Wuhan
+    type: large
+  '25':
+    Country: China
+    Internal: '1'
+    Latitude: 28.2
+    Longitude: 112.96667
+    label: Changsha
+    type: small
+  '26':
+    Country: China
+    Internal: '1'
+    Latitude: 26.06139
+    Longitude: 119.30611
+    label: Fuzhou
+    type: small
+  '27':
+    Country: China
+    Internal: '1'
+    Latitude: 36.09861
+    Longitude: 120.37194
+    label: Qingdao
+    type: small
+  '28':
+    Country: China
+    Internal: '1'
+    Latitude: 32.06167
+    Longitude: 118.77778
+    label: Nanjing
+    type: large
+  '29':
+    Country: China
+    Internal: '1'
+    Latitude: 31.22222
+    Longitude: 121.45806
+    label: Shanghai
+    type: large
+  '3':
+    Country: China
+    Internal: '1'
+    Latitude: 26.58333
+    Longitude: 106.71667
+    label: Guiyang
+    type: small
+  '30':
+    Country: China
+    Internal: '1'
+    Latitude: 30.25528
+    Longitude: 120.16889
+    label: Hangzhou
+    type: small
+  '31':
+    Country: China
+    Internal: '1'
+    Latitude: 34.75778
+    Longitude: 113.64861
+    label: Zhengzhou
+    type: small
+  '32':
+    Country: China
+    Internal: '1'
+    Latitude: 25.71056
+    Longitude: 116.97865
+    label: Chengdou
+    type: large
+  '33':
+    Country: China
+    Internal: '1'
+    Latitude: 43.8
+    Longitude: 87.58333
+    label: Urumchi
+    type: small
+  '34':
+    Country: China
+    Internal: '1'
+    Latitude: 29.65
+    Longitude: 91.1
+    label: Lasa
+    type: small
+  '35':
+    Country: China
+    Internal: '1'
+    Latitude: 36.61667
+    Longitude: 101.76667
+    label: Xining
+    type: small
+  '36':
+    Country: China
+    Internal: '1'
+    Latitude: 36.05639
+    Longitude: 103.79222
+    label: Lanzhou
+    type: small
+  '37':
+    Country: China
+    Internal: '1'
+    Latitude: 34.25833
+    Longitude: 108.92861
+    label: Xi'an
+    type: large
+  '38':
+    Country: China
+    Internal: '1'
+    Latitude: 38.46806
+    Longitude: 106.27306
+    label: Yinchuan
+    type: small
+  '39':
+    Country: China
+    Internal: '1'
+    Latitude: 40.81056
+    Longitude: 111.65222
+    label: Hohhot
+    type: small
+  '4':
+    Country: China
+    Internal: '1'
+    Latitude: 20.04583
+    Longitude: 110.34167
+    label: Haikou
+    type: small
+  '40':
+    Country: China
+    Internal: '1'
+    Latitude: 37.86944
+    Longitude: 112.56028
+    label: Taiyuan
+    type: small
+  '5':
+    Country: China
+    Internal: '1'
+    Latitude: 23.38861
+    Longitude: 112.82111
+    label: Xianggang
+    type: small
+  '6':
+    Country: China
+    Internal: '1'
+    Latitude: 22.81667
+    Longitude: 108.31667
+    label: Nanning
+    type: small
+  '7':
+    Country: China
+    Internal: '1'
+    Latitude: 23.11667
+    Longitude: 113.25
+    label: Guangzhou
+    type: large
+  '8':
+    Country: China
+    Internal: '1'
+    Latitude: 22.54554
+    Longitude: 114.0683
+    label: Shenzhen
+    type: small
+  '9':
+    Country: China
+    Internal: '1'
+    Latitude: 24.47979
+    Longitude: 118.08187
+    label: Xiemen
+    type: small

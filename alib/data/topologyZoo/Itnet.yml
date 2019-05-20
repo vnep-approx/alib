@@ -1,23 +1,88 @@
-nodes:
-  '0': {Latitude: 52.66472, Longitude: -8.62306}
-  '1': {Latitude: 51.89861, Longitude: -8.49583}
-  '2': {Latitude: 52.27042, Longitude: -9.70264}
-  '3': {Latitude: 53.27194, Longitude: -9.04889}
-  '4': {Latitude: 54.26969, Longitude: -8.46943}
-  '5': {Latitude: 54.95, Longitude: -7.73333}
-  '6': {Latitude: 53.42278, Longitude: -7.93722}
-  '7': {Latitude: 54.0, Longitude: -6.41667}
-  '8': {Latitude: 53.38806, Longitude: -6.37556}
-  '9': {Latitude: 52.80028, Longitude: -6.73694}
-  '10': {Latitude: 52.25833, Longitude: -7.11194}
 edges:
-- ['0', '8']
-- ['1', '8']
-- ['2', '8']
-- ['3', '8']
-- ['4', '8']
-- ['5', '8']
-- ['6', '8']
-- ['7', '8']
-- ['8', '9']
-- ['8', '10']
+- - '0'
+  - '8'
+- - '1'
+  - '8'
+- - '2'
+  - '8'
+- - '3'
+  - '8'
+- - '4'
+  - '8'
+- - '5'
+  - '8'
+- - '6'
+  - '8'
+- - '7'
+  - '8'
+- - '8'
+  - '9'
+- - '8'
+  - '10'
+nodes:
+  '0':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 52.66472
+    Longitude: -8.62306
+    label: Limerick
+  '1':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 51.89861
+    Longitude: -8.49583
+    label: Cork
+  '10':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 52.25833
+    Longitude: -7.11194
+    label: Waterford
+  '2':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 52.27042
+    Longitude: -9.70264
+    label: Tralee
+  '3':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.27194
+    Longitude: -9.04889
+    label: Galway
+  '4':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 54.26969
+    Longitude: -8.46943
+    label: Sligo
+  '5':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 54.95
+    Longitude: -7.73333
+    label: Letterkenny
+  '6':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.42278
+    Longitude: -7.93722
+    label: Athlone
+  '7':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 54.0
+    Longitude: -6.41667
+    label: Dundalk
+  '8':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.38806
+    Longitude: -6.37556
+    label: Blanchardstown, Dun Laoghaire, Tallaght
+  '9':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 52.80028
+    Longitude: -6.73694
+    label: Carlow

@@ -1,37 +1,144 @@
-nodes:
-  '0': {Latitude: 27.44671, Longitude: -80.32561}
-  '1': {Latitude: 28.08363, Longitude: -80.60811}
-  '2': {Latitude: 28.09196, Longitude: -81.72341}
-  '3': {Latitude: 28.53834, Longitude: -81.37924}
-  '4': {Latitude: 26.71534, Longitude: -80.05337}
-  '5': {Latitude: 27.94752, Longitude: -82.45843}
-  '6': {Latitude: 25.77427, Longitude: -80.19366}
-  '7': {Latitude: 26.12231, Longitude: -80.14338}
-  '8': {Latitude: 33.25373, Longitude: -83.89852}
-  '9': {Latitude: 33.749, Longitude: -84.38798}
-  '10': {Latitude: 32.31879, Longitude: -82.5593}
-  '11': {Latitude: 32.88209, Longitude: -83.33238}
-  '12': {Latitude: 30.94162, Longitude: -82.02206}
-  '13': {Latitude: 31.72381, Longitude: -82.1979}
-  '14': {Latitude: 29.89469, Longitude: -81.31452}
-  '15': {Latitude: 30.33218, Longitude: -81.65565}
-  '16': {Latitude: 28.61222, Longitude: -80.80755}
-  '17': {Latitude: 29.21081, Longitude: -81.02283}
 edges:
-- ['0', '1']
-- ['0', '4']
-- ['1', '16']
-- ['2', '3']
-- ['2', '5']
-- ['3', '17']
-- ['4', '7']
-- ['6', '7']
-- ['8', '9']
-- ['8', '11']
-- ['10', '11']
-- ['10', '13']
-- ['12', '13']
-- ['12', '15']
-- ['14', '17']
-- ['14', '15']
-- ['16', '17']
+- - '0'
+  - '1'
+- - '0'
+  - '4'
+- - '1'
+  - '16'
+- - '2'
+  - '3'
+- - '2'
+  - '5'
+- - '3'
+  - '17'
+- - '4'
+  - '7'
+- - '6'
+  - '7'
+- - '8'
+  - '9'
+- - '8'
+  - '11'
+- - '10'
+  - '11'
+- - '10'
+  - '13'
+- - '12'
+  - '13'
+- - '12'
+  - '15'
+- - '14'
+  - '17'
+- - '14'
+  - '15'
+- - '16'
+  - '17'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.44671
+    Longitude: -80.32561
+    label: Ft. Pierce
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.08363
+    Longitude: -80.60811
+    label: Melbourne
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.31879
+    Longitude: -82.5593
+    label: Tarrytown
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.88209
+    Longitude: -83.33238
+    label: Gordon
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.94162
+    Longitude: -82.02206
+    label: Newell
+  '13':
+    Country: United States
+    Internal: '1'
+    Latitude: 31.72381
+    Longitude: -82.1979
+    label: Surrency
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.89469
+    Longitude: -81.31452
+    label: St. Augustine
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.33218
+    Longitude: -81.65565
+    label: Jacksonville
+  '16':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.61222
+    Longitude: -80.80755
+    label: Titusville
+  '17':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.21081
+    Longitude: -81.02283
+    label: Daytona Beach
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.09196
+    Longitude: -81.72341
+    label: Lake Alfred
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.53834
+    Longitude: -81.37924
+    label: Orlando
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.71534
+    Longitude: -80.05337
+    label: West Palm Beach
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.94752
+    Longitude: -82.45843
+    label: Tampa
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.12231
+    Longitude: -80.14338
+    label: Ft. Lauderdale
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.25373
+    Longitude: -83.89852
+    label: Flovilla
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta

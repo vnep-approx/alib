@@ -1,49 +1,173 @@
-nodes:
-  '0': {Latitude: 41.74583, Longitude: 22.19583}
-  '1': {Latitude: 42.0, Longitude: 21.43333}
-  '2': {Latitude: 42.0, Longitude: 21.43333}
-  '3': {Latitude: 42.0, Longitude: 21.43333}
-  '4': {Latitude: 42.0, Longitude: 21.43333}
-  '5': {Latitude: 42.0, Longitude: 21.43333}
-  '6': {Latitude: 42.0, Longitude: 21.43333}
-  '7': {Latitude: 42.0, Longitude: 21.43333}
-  '8': {Latitude: 42.0, Longitude: 21.43333}
-  '9': {Latitude: 42.0, Longitude: 21.43333}
-  '10': {Latitude: 42.0, Longitude: 21.43333}
-  '11': {Latitude: 42.0, Longitude: 21.43333}
-  '12': {Latitude: 42.0, Longitude: 21.43333}
-  '13': {Latitude: 42.0, Longitude: 21.43333}
-  '14': {Latitude: 41.03111, Longitude: 21.34028}
-  '15': {Latitude: 42.0, Longitude: 21.43333}
-  '16': {Latitude: 42.0, Longitude: 21.43333}
-  '17': {Latitude: 42.0, Longitude: 21.43333}
-  '18': {Latitude: 42.0, Longitude: 21.43333}
-  '19': {Latitude: 42.0, Longitude: 21.43333}
 edges:
-- ['0', '2']
-- ['1', '4']
-- ['2', '3']
-- ['2', '4']
-- ['2', '5']
-- ['2', '6']
-- ['2', '7']
-- ['2', '9']
-- ['2', '10']
-- ['2', '11']
-- ['2', '12']
-- ['2', '13']
-- ['2', '14']
-- ['2', '15']
-- ['2', '16']
-- ['2', '17']
-- ['2', '18']
-- ['2', '19']
-- ['4', '7']
-- ['4', '10']
-- ['4', '11']
-- ['4', '16']
-- ['4', '17']
-- ['4', '18']
-- ['4', '19']
-- ['5', '17']
-- ['8', '17']
+- - '0'
+  - '2'
+- - '1'
+  - '4'
+- - '2'
+  - '3'
+- - '2'
+  - '4'
+- - '2'
+  - '5'
+- - '2'
+  - '6'
+- - '2'
+  - '7'
+- - '2'
+  - '9'
+- - '2'
+  - '10'
+- - '2'
+  - '11'
+- - '2'
+  - '12'
+- - '2'
+  - '13'
+- - '2'
+  - '14'
+- - '2'
+  - '15'
+- - '2'
+  - '16'
+- - '2'
+  - '17'
+- - '2'
+  - '18'
+- - '2'
+  - '19'
+- - '4'
+  - '7'
+- - '4'
+  - '10'
+- - '4'
+  - '11'
+- - '4'
+  - '16'
+- - '4'
+  - '17'
+- - '4'
+  - '18'
+- - '4'
+  - '19'
+- - '5'
+  - '17'
+- - '8'
+  - '17'
+nodes:
+  '0':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 41.74583
+    Longitude: 22.19583
+    label: F. of Mining and Geology Stip
+  '1':
+    Internal: '0'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: ONnet NEOTEL SONET
+  '10':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: National and Univ Library
+  '11':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: I. of Earthquake Engineering
+  '12':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: I. of National History
+  '13':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: I. of Macedonian Literature
+  '14':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 41.03111
+    Longitude: 21.34028
+    label: St Clement of Ohrid University in Bitola
+  '15':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: Several Ministries of the Government
+  '16':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: Campus Arch and Civil Eng
+  '17':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: CampusTechnical
+  '18':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: Campus Medicine
+  '19':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: CampusBiotech. Sciences
+  '2':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: NOC and CampusSocial Sciences
+  '3':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: I. of Economy
+  '4':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: NationalBroadcastingcompany Comm. Tower
+  '5':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: I of Political and Juridical Res
+  '6':
+    Internal: '0'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: GEANT SEEREN
+  '7':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: Campus Natural Sciences and Mathematics
+  '8':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: F. of Pedagogy
+  '9':
+    Internal: '0'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: MOL

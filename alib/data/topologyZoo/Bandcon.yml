@@ -1,51 +1,205 @@
-nodes:
-  '0': {Latitude: 48.85341, Longitude: 2.3488}
-  '1': {Latitude: 33.749, Longitude: -84.38798}
-  '2': {Latitude: 50.85045, Longitude: 4.34878}
-  '3': {Latitude: 50.11667, Longitude: 8.68333}
-  '4': {Latitude: 33.44838, Longitude: -112.07404}
-  '5': {Latitude: 36.17497, Longitude: -115.13722}
-  '6': {Latitude: 25.77427, Longitude: -80.19366}
-  '7': {Latitude: 32.78306, Longitude: -96.80667}
-  '8': {Latitude: 34.05223, Longitude: -118.24368}
-  '9': {Latitude: 29.76328, Longitude: -95.36327}
-  '10': {Latitude: 39.95234, Longitude: -75.16379}
-  '11': {Latitude: 42.35843, Longitude: -71.05977}
-  '12': {Latitude: 51.50853, Longitude: -0.12574}
-  '13': {Latitude: 52.37403, Longitude: 4.88969}
-  '14': {Latitude: 37.33939, Longitude: -121.89496}
-  '15': {Latitude: 37.77493, Longitude: -122.41942}
-  '16': {Latitude: 47.60621, Longitude: -122.33207}
-  '17': {Latitude: 41.85003, Longitude: -87.65005}
-  '18': {Latitude: 40.46423, Longitude: -80.60091}
-  '19': {Latitude: 39.04372, Longitude: -77.48749}
-  '21': {Latitude: 40.71427, Longitude: -74.00597}
 edges:
-- ['0', '3']
-- ['0', '12']
-- ['1', '19']
-- ['1', '6']
-- ['2', '3']
-- ['2', '13']
-- ['4', '8']
-- ['4', '7']
-- ['5', '8']
-- ['5', '14']
-- ['6', '7']
-- ['7', '9']
-- ['7', '19']
-- ['7', '17']
-- ['8', '14']
-- ['10', '18']
-- ['10', '19']
-- ['11', '18']
-- ['11', '21']
-- ['12', '13']
-- ['12', '21']
-- ['13', '19']
-- ['14', '17']
-- ['14', '15']
-- ['15', '16']
-- ['16', '17']
-- ['17', '18']
-- ['17', '19']
+- - '0'
+  - '3'
+- - '0'
+  - '12'
+- - '1'
+  - '19'
+- - '1'
+  - '6'
+- - '2'
+  - '3'
+- - '2'
+  - '13'
+- - '4'
+  - '8'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '5'
+  - '14'
+- - '6'
+  - '7'
+- - '7'
+  - '9'
+- - '7'
+  - '19'
+- - '7'
+  - '17'
+- - '8'
+  - '14'
+- - '10'
+  - '18'
+- - '10'
+  - '19'
+- - '11'
+  - '18'
+- - '11'
+  - '21'
+- - '12'
+  - '13'
+- - '12'
+  - '21'
+- - '13'
+  - '19'
+- - '14'
+  - '17'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '16'
+  - '17'
+- - '17'
+  - '18'
+- - '17'
+  - '19'
+nodes:
+  '0':
+    Country: France
+    Internal: '1'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: Paris
+    type: BandCon Network Access Xchange (NAX)
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta
+    type: BandCon Network Access Xchange (NAX)
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.95234
+    Longitude: -75.16379
+    label: Philadelphia
+    type: Coming Soon
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.35843
+    Longitude: -71.05977
+    label: Boston
+    type: Coming Soon
+  '12':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: London
+    type: BandCon Network Access Xchange (NAX)
+  '13':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.37403
+    Longitude: 4.88969
+    label: Amsterdam
+    type: BandCon Network Access Xchange (NAX)
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.33939
+    Longitude: -121.89496
+    label: San Jose
+    type: BandCon Network Access Xchange (NAX)
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: San Francisco
+    type: BandCon Network Access Xchange (NAX)
+  '16':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle
+    type: BandCon Network Access Xchange (NAX)
+  '17':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+    type: BandCon Network Access Xchange (NAX)
+  '18':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.46423
+    Longitude: -80.60091
+    label: Toronto
+    type: BandCon Network Access Xchange (NAX)
+  '19':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.04372
+    Longitude: -77.48749
+    label: Ashburn
+    type: BandCon Network Access Xchange (NAX)
+  '2':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Brussels
+    type: BandCon Network Access Xchange (NAX)
+  '21':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+    type: BandCon Network Access Xchange (NAX)
+  '3':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.11667
+    Longitude: 8.68333
+    label: Frankfurt
+    type: BandCon Network Access Xchange (NAX)
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.44838
+    Longitude: -112.07404
+    label: Phoenix
+    type: BandCon Network Access Xchange (NAX)
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.17497
+    Longitude: -115.13722
+    label: Las vegas
+    type: Coming Soon
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami
+    type: BandCon Network Access Xchange (NAX)
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas
+    type: BandCon Network Access Xchange (NAX)
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+    type: BandCon Network Access Xchange (NAX)
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.76328
+    Longitude: -95.36327
+    label: Houston
+    type: Coming Soon

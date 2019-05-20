@@ -1,10 +1,34 @@
-nodes:
-  '0': {Latitude: 37.45383, Longitude: -122.18219}
-  '1': {Latitude: 34.42083, Longitude: -119.69819}
-  '2': {Latitude: 34.05223, Longitude: -118.24368}
-  '3': {Latitude: 40.76078, Longitude: -111.89105}
 edges:
-- ['0', '1']
-- ['0', '2']
-- ['0', '3']
-- ['1', '2']
+- - '0'
+  - '1'
+- - '0'
+  - '2'
+- - '0'
+  - '3'
+- - '1'
+  - '2'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.45383
+    Longitude: -122.18219
+    label: SRI
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.42083
+    Longitude: -119.69819
+    label: USCB
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: UCLA
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.76078
+    Longitude: -111.89105
+    label: UTAH

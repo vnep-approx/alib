@@ -1,344 +1,1424 @@
-nodes:
-  '0': {Latitude: 52.73679, Longitude: 15.22878}
-  '1': {Latitude: 51.93548, Longitude: 15.50643}
-  '2': {Latitude: 55.67594, Longitude: 12.56553}
-  '3': {Latitude: 53.55, Longitude: 10.0}
-  '4': {Latitude: 54.35205, Longitude: 18.64637}
-  '5': {Latitude: 54.51889, Longitude: 18.53188}
-  '6': {Latitude: 54.46405, Longitude: 17.02872}
-  '7': {Latitude: 54.19438, Longitude: 16.17222}
-  '8': {Latitude: 54.17565, Longitude: 15.58342}
-  '9': {Latitude: 53.42894, Longitude: 14.55302}
-  '10': {Latitude: 54.37971, Longitude: 19.81959}
-  '11': {Latitude: 53.62983333333333, Longitude: 19.286446666666667}
-  '12': {Latitude: 43.21667, Longitude: 27.91667}
-  '13': {Latitude: 39.91987, Longitude: 32.85427}
-  '14': {Latitude: 52.860800000000005, Longitude: 15.582823333333332}
-  '15': {Latitude: 49.16258, Longitude: 12.527705000000001}
-  '16': {Latitude: 54.27472666666667, Longitude: 19.081276666666668}
-  '17': {Latitude: 52.29217333333333, Longitude: 15.294543333333332}
-  '18': {Latitude: 52.10714, Longitude: 19.94525}
-  '19': {Latitude: 44.48667, Longitude: 25.78028}
-  '20': {Latitude: 44.80401, Longitude: 20.46513}
-  '21': {Latitude: 44.7975, Longitude: 22.68028}
-  '22': {Latitude: 43.98333, Longitude: 25.33333}
-  '23': {Latitude: 44.31667, Longitude: 23.8}
-  '24': {Latitude: 46.18333, Longitude: 21.31667}
-  '25': {Latitude: 47.06667, Longitude: 21.93333}
-  '26': {Latitude: 45.41667, Longitude: 22.21667}
-  '27': {Latitude: 45.74944, Longitude: 21.22722}
-  '28': {Latitude: 44.95, Longitude: 26.01667}
-  '29': {Latitude: 43.88333, Longitude: 25.96667}
-  '30': {Latitude: 55.75222, Longitude: 37.61556}
-  '31': {Latitude: 47.23088, Longitude: 16.62155}
-  '32': {Latitude: 47.18995, Longitude: 18.41034}
-  '33': {Latitude: 47.56667, Longitude: 18.41667}
-  '34': {Latitude: 46.76667, Longitude: 17.25}
-  '35': {Latitude: 47.09327, Longitude: 17.91149}
-  '36': {Latitude: 49.66817, Longitude: 12.55188}
-  '37': {Latitude: 50.23271, Longitude: 12.87117}
-  '38': {Latitude: 50.76711, Longitude: 15.05619}
-  '39': {Latitude: 49.74747, Longitude: 13.37759}
-  '40': {Latitude: 50.40169, Longitude: 30.4497}
-  '41': {Latitude: 52.22977, Longitude: 21.01178}
-  '42': {Latitude: 41.3275, Longitude: 19.81889}
-  '43': {Latitude: 37.97945, Longitude: 23.71622}
-  '44': {Latitude: 54.68916, Longitude: 25.2798}
-  '45': {Latitude: 59.43696, Longitude: 24.75353}
-  '46': {Latitude: 54.71, Longitude: 20.5}
-  '47': {Latitude: 53.9, Longitude: 27.56667}
-  '48': {Latitude: 56.946, Longitude: 24.10589}
-  '49': {Latitude: 60.16952, Longitude: 24.93545}
-  '50': {Latitude: 46.91667, Longitude: 22.9}
-  '51': {Latitude: 42.68583, Longitude: 26.32917}
-  '52': {Latitude: 47.16667, Longitude: 27.6}
-  '53': {Latitude: 45.45, Longitude: 28.05}
-  '54': {Latitude: 45.64861, Longitude: 25.60613}
-  '55': {Latitude: 46.56667, Longitude: 26.9}
-  '56': {Latitude: 46.16667, Longitude: 24.35}
-  '57': {Latitude: 46.76667, Longitude: 23.6}
-  '58': {Latitude: 44.18333, Longitude: 28.65}
-  '59': {Latitude: 45.76667, Longitude: 25.43333}
-  '60': {Latitude: 47.76356, Longitude: 18.12263}
-  '61': {Latitude: 47.68333, Longitude: 17.63512}
-  '62': {Latitude: 47.68333, Longitude: 16.6}
-  '63': {Latitude: 46.47747, Longitude: 30.73262}
-  '64': {Latitude: 50.0, Longitude: 36.25}
-  '65': {Latitude: 48.45, Longitude: 34.98333}
-  '66': {Latitude: 49.83826, Longitude: 24.02324}
-  '67': {Latitude: 50.01381, Longitude: 20.98698}
-  '68': {Latitude: 48.73333, Longitude: 19.15}
-  '69': {Latitude: 47.98544, Longitude: 18.16195}
-  '70': {Latitude: 50.08804, Longitude: 14.42076}
-  '71': {Latitude: 47.18333, Longitude: 20.2}
-  '72': {Latitude: 46.84, Longitude: 16.84389}
-  '73': {Latitude: 46.88333, Longitude: 17.43333}
-  '74': {Latitude: 40.97801, Longitude: 27.50852}
-  '75': {Latitude: 50.07963, Longitude: 12.37392}
-  '76': {Latitude: 50.6607, Longitude: 14.03227}
-  '77': {Latitude: 50.20923, Longitude: 15.83277}
-  '78': {Latitude: 46.98333, Longitude: 18.93333}
-  '79': {Latitude: 46.43139, Longitude: 19.4875}
-  '80': {Latitude: 46.21778, Longitude: 19.54222}
-  '81': {Latitude: 46.253, Longitude: 20.14824}
-  '82': {Latitude: 46.65, Longitude: 20.26667}
-  '83': {Latitude: 49.22315, Longitude: 18.73941}
-  '84': {Latitude: 48.71667, Longitude: 21.25}
-  '85': {Latitude: 46.90618, Longitude: 19.69128}
-  '86': {Latitude: 46.63333, Longitude: 18.86667}
-  '87': {Latitude: 42.50606, Longitude: 27.46781}
-  '88': {Latitude: 47.53333, Longitude: 21.63333}
-  '89': {Latitude: 47.11667, Longitude: 21.81667}
-  '90': {Latitude: 41.94028, Longitude: 25.56944}
-  '91': {Latitude: 51.1, Longitude: 17.03333}
-  '92': {Latitude: 51.84034, Longitude: 16.57494}
-  '93': {Latitude: 52.79886, Longitude: 18.26388}
-  '94': {Latitude: 52.41667, Longitude: 16.96667}
-  '95': {Latitude: 54.09242, Longitude: 18.77787}
-  '96': {Latitude: 53.1235, Longitude: 18.00762}
-  '97': {Latitude: 52.64817, Longitude: 19.0678}
-  '98': {Latitude: 53.78333, Longitude: 20.48333}
-  '99': {Latitude: 52.22338, Longitude: 18.25121}
-  '100': {Latitude: 53.01375, Longitude: 18.59814}
-  '101': {Latitude: 51.25, Longitude: 22.56667}
-  '102': {Latitude: 50.04132, Longitude: 21.99901}
-  '103': {Latitude: 52.23064, Longitude: 19.36409}
-  '104': {Latitude: 53.13333, Longitude: 23.15}
-  '105': {Latitude: 51.40253, Longitude: 21.14714}
-  '106': {Latitude: 51.75, Longitude: 19.46667}
-  '107': {Latitude: 50.08333, Longitude: 19.91667}
-  '108': {Latitude: 50.87033, Longitude: 20.62752}
-  '109': {Latitude: 50.66667, Longitude: 17.95}
-  '110': {Latitude: 50.26667, Longitude: 19.01667}
-  '111': {Latitude: 41.76667, Longitude: 26.2}
-  '112': {Latitude: 41.67719, Longitude: 26.55597}
-  '113': {Latitude: 49.59552, Longitude: 17.25175}
-  '114': {Latitude: 48.84893, Longitude: 17.13244}
-  '115': {Latitude: 49.21667, Longitude: 17.66667}
-  '116': {Latitude: 49.83465, Longitude: 18.28204}
-  '117': {Latitude: 43.21667, Longitude: 27.91667}
-  '118': {Latitude: 48.97447, Longitude: 14.47434}
-  '119': {Latitude: 49.3961, Longitude: 15.59124}
-  '120': {Latitude: 49.19522, Longitude: 16.60796}
-  '121': {Latitude: 49.81667, Longitude: 19.03333}
-  '122': {Latitude: 50.50301, Longitude: 13.63617}
-  '123': {Latitude: 46.05108, Longitude: 14.50513}
-  '124': {Latitude: 45.81444, Longitude: 15.97798}
-  '125': {Latitude: 50.11667, Longitude: 8.68333}
-  '126': {Latitude: 55.75222, Longitude: 37.61556}
-  '127': {Latitude: 59.89444, Longitude: 30.26417}
-  '128': {Latitude: 59.33258, Longitude: 18.0649}
-  '129': {Latitude: 47.49801, Longitude: 19.03991}
-  '130': {Latitude: 48.14816, Longitude: 17.10674}
-  '131': {Latitude: 48.20849, Longitude: 16.37208}
-  '132': {Latitude: 52.52437, Longitude: 13.41053}
-  '133': {Latitude: 42.67272, Longitude: 21.16688}
-  '134': {Latitude: 42.44111, Longitude: 19.26361}
-  '135': {Latitude: 39.64917, Longitude: 27.88611}
-  '136': {Latitude: 38.41273, Longitude: 27.13838}
-  '137': {Latitude: 40.64028, Longitude: 22.94389}
-  '138': {Latitude: 41.4, Longitude: 23.21667}
-  '139': {Latitude: 43.41667, Longitude: 24.61667}
-  '140': {Latitude: 42.15, Longitude: 24.75}
-  '141': {Latitude: 43.84864, Longitude: 18.35644}
-  '142': {Latitude: 44.43225, Longitude: 26.10626}
-  '143': {Latitude: 47.00556, Longitude: 28.8575}
-  '144': {Latitude: 42.69751, Longitude: 23.32415}
-  '145': {Latitude: 41.01384, Longitude: 28.94966}
-  '146': {Latitude: 41.01384, Longitude: 28.94966}
-  '147': {Latitude: 39.91987, Longitude: 32.85427}
-  '148': {Latitude: 42.0, Longitude: 21.43333}
 edges:
-- ['0', '14']
-- ['1', '17']
-- ['2', '128']
-- ['2', '3']
-- ['3', '125']
-- ['4', '16']
-- ['4', '5']
-- ['5', '6']
-- ['6', '7']
-- ['7', '8']
-- ['8', '9']
-- ['9', '14']
-- ['10', '16']
-- ['10', '46']
-- ['11', '98']
-- ['11', '100']
-- ['11', '95']
-- ['12', '117']
-- ['13', '147']
-- ['14', '94']
-- ['15', '131']
-- ['15', '125']
-- ['16', '95']
-- ['17', '132']
-- ['17', '94']
-- ['18', '41']
-- ['18', '103']
-- ['19', '59']
-- ['19', '142']
-- ['20', '144']
-- ['20', '133']
-- ['20', '134']
-- ['20', '141']
-- ['20', '80']
-- ['20', '81']
-- ['21', '26']
-- ['21', '23']
-- ['22', '142']
-- ['22', '23']
-- ['24', '81']
-- ['24', '27']
-- ['24', '25']
-- ['25', '89']
-- ['25', '50']
-- ['26', '27']
-- ['27', '144']
-- ['28', '54']
-- ['28', '142']
-- ['29', '51']
-- ['29', '139']
-- ['29', '142']
-- ['30', '126']
-- ['31', '72']
-- ['31', '62']
-- ['32', '129']
-- ['32', '35']
-- ['33', '129']
-- ['33', '61']
-- ['34', '72']
-- ['34', '73']
-- ['35', '73']
-- ['36', '75']
-- ['36', '39']
-- ['37', '122']
-- ['37', '75']
-- ['38', '76']
-- ['38', '77']
-- ['39', '70']
-- ['40', '64']
-- ['40', '65']
-- ['40', '66']
-- ['40', '63']
-- ['41', '98']
-- ['41', '101']
-- ['41', '104']
-- ['41', '105']
-- ['41', '106']
-- ['41', '44']
-- ['41', '47']
-- ['42', '43']
-- ['42', '148']
-- ['43', '137']
-- ['44', '48']
-- ['44', '45']
-- ['45', '48']
-- ['45', '128']
-- ['49', '128']
-- ['49', '127']
-- ['50', '57']
-- ['51', '87']
-- ['51', '140']
-- ['51', '117']
-- ['52', '55']
-- ['52', '53']
-- ['52', '143']
-- ['53', '58']
-- ['54', '55']
-- ['56', '57']
-- ['56', '59']
-- ['58', '142']
-- ['58', '117']
-- ['60', '130']
-- ['61', '130']
-- ['61', '62']
-- ['62', '131']
-- ['64', '65']
-- ['64', '126']
-- ['66', '102']
-- ['67', '107']
-- ['67', '102']
-- ['68', '130']
-- ['68', '83']
-- ['69', '130']
-- ['70', '120']
-- ['70', '125']
-- ['70', '118']
-- ['70', '77']
-- ['71', '88']
-- ['71', '129']
-- ['72', '123']
-- ['74', '112']
-- ['74', '145']
-- ['76', '122']
-- ['77', '116']
-- ['78', '129']
-- ['78', '85']
-- ['79', '80']
-- ['79', '81']
-- ['79', '86']
-- ['81', '82']
-- ['82', '85']
-- ['83', '130']
-- ['83', '84']
-- ['84', '130']
-- ['86', '129']
-- ['87', '112']
-- ['87', '145']
-- ['87', '117']
-- ['88', '89']
-- ['90', '140']
-- ['90', '111']
-- ['91', '92']
-- ['91', '109']
-- ['92', '94']
-- ['93', '96']
-- ['93', '100']
-- ['93', '94']
-- ['94', '99']
-- ['95', '96']
-- ['97', '100']
-- ['97', '103']
-- ['99', '103']
-- ['101', '102']
-- ['103', '106']
-- ['105', '108']
-- ['107', '108']
-- ['107', '110']
-- ['109', '110']
-- ['110', '121']
-- ['111', '112']
-- ['112', '145']
-- ['112', '135']
-- ['113', '120']
-- ['113', '116']
-- ['114', '120']
-- ['114', '130']
-- ['114', '115']
-- ['115', '116']
-- ['116', '121']
-- ['118', '119']
-- ['119', '120']
-- ['120', '130']
-- ['123', '131']
-- ['123', '124']
-- ['124', '131']
-- ['124', '141']
-- ['125', '132']
-- ['125', '131']
-- ['126', '127']
-- ['130', '131']
-- ['133', '148']
-- ['133', '141']
-- ['134', '141']
-- ['135', '136']
-- ['135', '146']
-- ['136', '147']
-- ['137', '138']
-- ['138', '140']
-- ['139', '144']
-- ['140', '144']
-- ['144', '148']
-- ['145', '146']
-- ['146', '147']
+- - '0'
+  - '14'
+- - '1'
+  - '17'
+- - '2'
+  - '128'
+- - '2'
+  - '3'
+- - '3'
+  - '125'
+- - '4'
+  - '16'
+- - '4'
+  - '5'
+- - '5'
+  - '6'
+- - '6'
+  - '7'
+- - '7'
+  - '8'
+- - '8'
+  - '9'
+- - '9'
+  - '14'
+- - '10'
+  - '16'
+- - '10'
+  - '46'
+- - '11'
+  - '98'
+- - '11'
+  - '100'
+- - '11'
+  - '95'
+- - '12'
+  - '117'
+- - '13'
+  - '147'
+- - '14'
+  - '94'
+- - '15'
+  - '131'
+- - '15'
+  - '125'
+- - '16'
+  - '95'
+- - '17'
+  - '132'
+- - '17'
+  - '94'
+- - '18'
+  - '41'
+- - '18'
+  - '103'
+- - '19'
+  - '59'
+- - '19'
+  - '142'
+- - '20'
+  - '144'
+- - '20'
+  - '133'
+- - '20'
+  - '134'
+- - '20'
+  - '141'
+- - '20'
+  - '80'
+- - '20'
+  - '81'
+- - '21'
+  - '26'
+- - '21'
+  - '23'
+- - '22'
+  - '142'
+- - '22'
+  - '23'
+- - '24'
+  - '81'
+- - '24'
+  - '27'
+- - '24'
+  - '25'
+- - '25'
+  - '89'
+- - '25'
+  - '50'
+- - '26'
+  - '27'
+- - '27'
+  - '144'
+- - '28'
+  - '54'
+- - '28'
+  - '142'
+- - '29'
+  - '51'
+- - '29'
+  - '139'
+- - '29'
+  - '142'
+- - '30'
+  - '126'
+- - '31'
+  - '72'
+- - '31'
+  - '62'
+- - '32'
+  - '129'
+- - '32'
+  - '35'
+- - '33'
+  - '129'
+- - '33'
+  - '61'
+- - '34'
+  - '72'
+- - '34'
+  - '73'
+- - '35'
+  - '73'
+- - '36'
+  - '75'
+- - '36'
+  - '39'
+- - '37'
+  - '122'
+- - '37'
+  - '75'
+- - '38'
+  - '76'
+- - '38'
+  - '77'
+- - '39'
+  - '70'
+- - '40'
+  - '64'
+- - '40'
+  - '65'
+- - '40'
+  - '66'
+- - '40'
+  - '63'
+- - '41'
+  - '98'
+- - '41'
+  - '101'
+- - '41'
+  - '104'
+- - '41'
+  - '105'
+- - '41'
+  - '106'
+- - '41'
+  - '44'
+- - '41'
+  - '47'
+- - '42'
+  - '43'
+- - '42'
+  - '148'
+- - '43'
+  - '137'
+- - '44'
+  - '48'
+- - '44'
+  - '45'
+- - '45'
+  - '48'
+- - '45'
+  - '128'
+- - '49'
+  - '128'
+- - '49'
+  - '127'
+- - '50'
+  - '57'
+- - '51'
+  - '87'
+- - '51'
+  - '140'
+- - '51'
+  - '117'
+- - '52'
+  - '55'
+- - '52'
+  - '53'
+- - '52'
+  - '143'
+- - '53'
+  - '58'
+- - '54'
+  - '55'
+- - '56'
+  - '57'
+- - '56'
+  - '59'
+- - '58'
+  - '142'
+- - '58'
+  - '117'
+- - '60'
+  - '130'
+- - '61'
+  - '130'
+- - '61'
+  - '62'
+- - '62'
+  - '131'
+- - '64'
+  - '65'
+- - '64'
+  - '126'
+- - '66'
+  - '102'
+- - '67'
+  - '107'
+- - '67'
+  - '102'
+- - '68'
+  - '130'
+- - '68'
+  - '83'
+- - '69'
+  - '130'
+- - '70'
+  - '120'
+- - '70'
+  - '77'
+- - '70'
+  - '125'
+- - '70'
+  - '118'
+- - '71'
+  - '88'
+- - '71'
+  - '129'
+- - '72'
+  - '123'
+- - '74'
+  - '112'
+- - '74'
+  - '145'
+- - '76'
+  - '122'
+- - '77'
+  - '116'
+- - '78'
+  - '129'
+- - '78'
+  - '85'
+- - '79'
+  - '80'
+- - '79'
+  - '81'
+- - '79'
+  - '86'
+- - '81'
+  - '82'
+- - '82'
+  - '85'
+- - '83'
+  - '84'
+- - '83'
+  - '130'
+- - '84'
+  - '130'
+- - '86'
+  - '129'
+- - '87'
+  - '112'
+- - '87'
+  - '145'
+- - '87'
+  - '117'
+- - '88'
+  - '89'
+- - '90'
+  - '140'
+- - '90'
+  - '111'
+- - '91'
+  - '92'
+- - '91'
+  - '109'
+- - '92'
+  - '94'
+- - '93'
+  - '96'
+- - '93'
+  - '100'
+- - '93'
+  - '94'
+- - '94'
+  - '99'
+- - '95'
+  - '96'
+- - '97'
+  - '100'
+- - '97'
+  - '103'
+- - '99'
+  - '103'
+- - '101'
+  - '102'
+- - '103'
+  - '106'
+- - '105'
+  - '108'
+- - '107'
+  - '108'
+- - '107'
+  - '110'
+- - '109'
+  - '110'
+- - '110'
+  - '121'
+- - '111'
+  - '112'
+- - '112'
+  - '145'
+- - '112'
+  - '135'
+- - '113'
+  - '120'
+- - '113'
+  - '116'
+- - '114'
+  - '120'
+- - '114'
+  - '130'
+- - '114'
+  - '115'
+- - '115'
+  - '116'
+- - '116'
+  - '121'
+- - '118'
+  - '119'
+- - '119'
+  - '120'
+- - '120'
+  - '130'
+- - '123'
+  - '131'
+- - '123'
+  - '124'
+- - '124'
+  - '131'
+- - '124'
+  - '141'
+- - '125'
+  - '132'
+- - '125'
+  - '131'
+- - '126'
+  - '127'
+- - '130'
+  - '131'
+- - '133'
+  - '148'
+- - '133'
+  - '141'
+- - '134'
+  - '141'
+- - '135'
+  - '136'
+- - '135'
+  - '146'
+- - '136'
+  - '147'
+- - '137'
+  - '138'
+- - '138'
+  - '140'
+- - '139'
+  - '144'
+- - '140'
+  - '144'
+- - '144'
+  - '148'
+- - '145'
+  - '146'
+- - '146'
+  - '147'
+nodes:
+  '0':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.73679
+    Longitude: 15.22878
+    label: Gorzow
+    type: GTS major Pops
+  '1':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.93548
+    Longitude: 15.50643
+    label: Zeilona Gora
+    type: GTS major Pops
+  '10':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.37971
+    Longitude: 19.81959
+    label: Braniewo
+    type: GTS major Pops
+  '100':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.01375
+    Longitude: 18.59814
+    label: Torun
+    type: GTS major Pops
+  '101':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.25
+    Longitude: 22.56667
+    label: Lublin
+    type: GTS major Pops
+  '102':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.04132
+    Longitude: 21.99901
+    label: Rzeszow
+    type: GTS major Pops
+  '103':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.23064
+    Longitude: 19.36409
+    label: Kutno
+    type: GTS major Pops
+  '104':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.13333
+    Longitude: 23.15
+    label: Bialystok
+    type: GTS major Pops
+  '105':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.40253
+    Longitude: 21.14714
+    label: Radom
+    type: GTS major Pops
+  '106':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.75
+    Longitude: 19.46667
+    label: Lodz
+    type: GTS major Pops
+  '107':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.08333
+    Longitude: 19.91667
+    label: Krakow
+    type: GTS major Pops
+  '108':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.87033
+    Longitude: 20.62752
+    label: Kielce
+    type: GTS major Pops
+  '109':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.66667
+    Longitude: 17.95
+    label: Opole
+    type: GTS major Pops
+  '11':
+    Internal: '1'
+    Latitude: 53.62983333333333
+    Longitude: 19.286446666666667
+    hyperedge: '1'
+    label: None
+  '110':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.26667
+    Longitude: 19.01667
+    label: Katowice
+    type: GTS major Pops
+  '111':
+    Country: Bulgaria
+    Internal: '1'
+    Latitude: 41.76667
+    Longitude: 26.2
+    label: Svilengrad
+    type: GTS major Pops
+  '112':
+    Country: Turkey
+    Internal: '1'
+    Latitude: 41.67719
+    Longitude: 26.55597
+    label: Edirne
+    type: GTS major Pops
+  '113':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.59552
+    Longitude: 17.25175
+    label: Olomouc
+    type: GTS major Pops
+  '114':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 48.84893
+    Longitude: 17.13244
+    label: Hodonin
+    type: GTS major Pops
+  '115':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.21667
+    Longitude: 17.66667
+    label: Zlin
+    type: GTS major Pops
+  '116':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.83465
+    Longitude: 18.28204
+    label: Ostrava
+    type: GTS major Pops
+  '117':
+    Country: Bulgaria
+    Internal: '1'
+    Latitude: 43.21667
+    Longitude: 27.91667
+    label: Varna
+    type: GTS major Pops
+  '118':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 48.97447
+    Longitude: 14.47434
+    label: Ceske Budejovice
+    type: GTS major Pops
+  '119':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.3961
+    Longitude: 15.59124
+    label: Jihlava
+    type: GTS major Pops
+  '12':
+    Internal: '0'
+    Latitude: 43.21667
+    Longitude: 27.91667
+    label: Poti, Georgia
+  '120':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.19522
+    Longitude: 16.60796
+    label: Brno
+    type: GTS major Pops
+  '121':
+    Country: Poland
+    Internal: '1'
+    Latitude: 49.81667
+    Longitude: 19.03333
+    label: Bielsko
+    type: GTS major Pops
+  '122':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.50301
+    Longitude: 13.63617
+    label: Most
+    type: GTS major Pops
+  '123':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.05108
+    Longitude: 14.50513
+    label: Ljubljana
+    type: GTS major Hubs and Colocation Centers
+  '124':
+    Country: Croatia
+    Internal: '1'
+    Latitude: 45.81444
+    Longitude: 15.97798
+    label: Zagreb
+    type: GTS major Hubs and Colocation Centers
+  '125':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.11667
+    Longitude: 8.68333
+    label: Frankfurt am Main
+    type: GTS major Hubs and Colocation Centers
+  '126':
+    Country: Russia
+    Internal: '1'
+    Latitude: 55.75222
+    Longitude: 37.61556
+    label: Moskva
+    type: Partnet Hubs
+  '127':
+    Country: Russia
+    Internal: '1'
+    Latitude: 59.89444
+    Longitude: 30.26417
+    label: Sankt Peterburg
+    type: Partnet Hubs
+  '128':
+    Country: Sweden
+    Internal: '1'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: Stockholm
+    type: Partnet Hubs
+  '129':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.49801
+    Longitude: 19.03991
+    label: Budapest
+    type: GTS major Hubs and Colocation Centers
+  '13':
+    Internal: '0'
+    Latitude: 39.91987
+    Longitude: 32.85427
+    label: Georgia, Armenia, Iran, Iraq, Syria
+  '130':
+    Country: Slovakia
+    Internal: '1'
+    Latitude: 48.14816
+    Longitude: 17.10674
+    label: Bratislava
+    type: GTS major Hubs and Colocation Centers
+  '131':
+    Country: Austria
+    Internal: '1'
+    Latitude: 48.20849
+    Longitude: 16.37208
+    label: Wien
+    type: GTS major Hubs and Colocation Centers
+  '132':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.52437
+    Longitude: 13.41053
+    label: Berlin
+    type: GTS major Hubs and Colocation Centers
+  '133':
+    Country: Kosovo
+    Internal: '1'
+    Latitude: 42.67272
+    Longitude: 21.16688
+    label: Pristina
+    type: Partnet Hubs
+  '134':
+    Country: Montenegro
+    Internal: '1'
+    Latitude: 42.44111
+    Longitude: 19.26361
+    label: Podgorica
+    type: Partnet Hubs
+  '135':
+    Country: Turkey
+    Internal: '1'
+    Latitude: 39.64917
+    Longitude: 27.88611
+    label: Balikesir
+    type: GTS major Pops
+  '136':
+    Country: Turkey
+    Internal: '1'
+    Latitude: 38.41273
+    Longitude: 27.13838
+    label: Izmir
+    type: GTS major Pops
+  '137':
+    Country: Greece
+    Internal: '1'
+    Latitude: 40.64028
+    Longitude: 22.94389
+    label: Thessaloniki
+    type: GTS major Pops
+  '138':
+    Country: Bulgaria
+    Internal: '1'
+    Latitude: 41.4
+    Longitude: 23.21667
+    label: Petrich
+    type: GTS major Pops
+  '139':
+    Country: Bulgaria
+    Internal: '1'
+    Latitude: 43.41667
+    Longitude: 24.61667
+    label: Pleven
+    type: GTS major Pops
+  '14':
+    Internal: '1'
+    Latitude: 52.860800000000005
+    Longitude: 15.582823333333332
+    hyperedge: '1'
+    label: None
+  '140':
+    Country: Bulgaria
+    Internal: '1'
+    Latitude: 42.15
+    Longitude: 24.75
+    label: Plovdiv
+    type: GTS major Pops
+  '141':
+    Country: Bosnia and Herzegovina
+    Internal: '1'
+    Latitude: 43.84864
+    Longitude: 18.35644
+    label: Sarajevo
+    type: Partnet Hubs
+  '142':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.43225
+    Longitude: 26.10626
+    label: Bucuresti
+    type: GTS major Hubs and Colocation Centers
+  '143':
+    Country: Moldova
+    Internal: '1'
+    Latitude: 47.00556
+    Longitude: 28.8575
+    label: Chisinau
+    type: GTS major Hubs and Colocation Centers
+  '144':
+    Country: Bulgaria
+    Internal: '1'
+    Latitude: 42.69751
+    Longitude: 23.32415
+    label: Sofia
+    type: GTS major Hubs and Colocation Centers
+  '145':
+    Country: Turkey
+    Internal: '1'
+    Latitude: 41.01384
+    Longitude: 28.94966
+    label: Istanbul
+    type: GTS major Hubs and Colocation Centers
+  '146':
+    Country: Turkey
+    Internal: '1'
+    Latitude: 41.01384
+    Longitude: 28.94966
+    label: Istanbul
+    type: GTS major Pops
+  '147':
+    Country: Turkey
+    Internal: '1'
+    Latitude: 39.91987
+    Longitude: 32.85427
+    label: Ankara
+    type: Partnet Hubs
+  '148':
+    Country: Macedonia
+    Internal: '1'
+    Latitude: 42.0
+    Longitude: 21.43333
+    label: Skopje
+    type: Partnet Hubs
+  '15':
+    Internal: '0'
+    Latitude: 49.16258
+    Longitude: 12.527705000000001
+    label: Amsterdam, London
+  '16':
+    Internal: '1'
+    Latitude: 54.27472666666667
+    Longitude: 19.081276666666668
+    hyperedge: '1'
+    label: None
+  '17':
+    Internal: '1'
+    Latitude: 52.29217333333333
+    Longitude: 15.294543333333332
+    hyperedge: '1'
+    label: None
+  '18':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.10714
+    Longitude: 19.94525
+    label: Lowicz
+    type: GTS major Pops
+  '19':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.48667
+    Longitude: 25.78028
+    geocode_id: '664295'
+    label: Ulmi
+    type: GTS major Pops
+  '2':
+    Country: Denmark
+    Internal: '1'
+    Latitude: 55.67594
+    Longitude: 12.56553
+    label: Kobenhavn
+    type: Partnet Hubs
+  '20':
+    Country: Serbia
+    Internal: '1'
+    Latitude: 44.80401
+    Longitude: 20.46513
+    label: Beograd
+    type: GTS major Hubs and Colocation Centers
+  '21':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.7975
+    Longitude: 22.68028
+    label: Balvanesti
+    type: GTS major Pops
+  '22':
+    Country: Romania
+    Internal: '1'
+    Latitude: 43.98333
+    Longitude: 25.33333
+    label: Alexandria
+    type: GTS major Pops
+  '23':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.31667
+    Longitude: 23.8
+    label: Craiova
+    type: GTS major Pops
+  '24':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.18333
+    Longitude: 21.31667
+    label: Arad
+    type: GTS major Pops
+  '25':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.06667
+    Longitude: 21.93333
+    label: Oradea
+    type: GTS major Pops
+  '26':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.41667
+    Longitude: 22.21667
+    label: Caransebes
+    type: GTS major Pops
+  '27':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.74944
+    Longitude: 21.22722
+    label: Timisoara
+    type: GTS major Pops
+  '28':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.95
+    Longitude: 26.01667
+    label: Ploiesti
+    type: GTS major Pops
+  '29':
+    Country: Romania
+    Internal: '1'
+    Latitude: 43.88333
+    Longitude: 25.96667
+    label: Giurgiu
+    type: GTS major Pops
+  '3':
+    Country: Germany
+    Internal: '1'
+    Latitude: 53.55
+    Longitude: 10.0
+    label: Hamburg
+    type: Partnet Hubs
+  '30':
+    Internal: '0'
+    Latitude: 55.75222
+    Longitude: 37.61556
+    label: Kazakhstan
+  '31':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.23088
+    Longitude: 16.62155
+    label: Szombathely
+    type: GTS major Pops
+  '32':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.18995
+    Longitude: 18.41034
+    label: Szekesfehervar
+    type: GTS major Pops
+  '33':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.56667
+    Longitude: 18.41667
+    label: Tatabanya
+    type: GTS major Pops
+  '34':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.76667
+    Longitude: 17.25
+    label: Keszthely
+    type: GTS major Pops
+  '35':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.09327
+    Longitude: 17.91149
+    label: Veszprem
+    type: GTS major Pops
+  '36':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.66817
+    Longitude: 12.55188
+    geocode_append: Czech Republic
+    label: Rozvadov
+    type: GTS major Pops
+  '37':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.23271
+    Longitude: 12.87117
+    label: Karlovy Vary
+    type: GTS major Pops
+  '38':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.76711
+    Longitude: 15.05619
+    label: Liberec
+    type: GTS major Pops
+  '39':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 49.74747
+    Longitude: 13.37759
+    label: Plzen
+    type: GTS major Pops
+  '4':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.35205
+    Longitude: 18.64637
+    label: Gdansk
+    type: GTS major Pops
+  '40':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 50.40169
+    Longitude: 30.4497
+    label: Kyiv
+    type: GTS major Hubs and Colocation Centers
+  '41':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.22977
+    Longitude: 21.01178
+    label: Warszawa
+    type: GTS major Hubs and Colocation Centers
+  '42':
+    Country: Albania
+    Internal: '1'
+    Latitude: 41.3275
+    Longitude: 19.81889
+    label: Tirane
+    type: Partnet Hubs
+  '43':
+    Country: Greece
+    Internal: '1'
+    Latitude: 37.97945
+    Longitude: 23.71622
+    label: Athina
+    type: Partnet Hubs
+  '44':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.68916
+    Longitude: 25.2798
+    label: Vilnius
+    type: Partnet Hubs
+  '45':
+    Country: Estonia
+    Internal: '1'
+    Latitude: 59.43696
+    Longitude: 24.75353
+    label: Tallinn
+    type: Partnet Hubs
+  '46':
+    Country: Russia
+    Internal: '1'
+    Latitude: 54.71
+    Longitude: 20.5
+    label: Kaliningrad
+    type: Partnet Hubs
+  '47':
+    Country: Belarus
+    Internal: '1'
+    Latitude: 53.9
+    Longitude: 27.56667
+    label: Minsk
+    type: Partnet Hubs
+  '48':
+    Country: Latvia
+    Internal: '1'
+    Latitude: 56.946
+    Longitude: 24.10589
+    label: Riga
+    type: Partnet Hubs
+  '49':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.16952
+    Longitude: 24.93545
+    label: Helsinki
+    type: Partnet Hubs
+  '5':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.51889
+    Longitude: 18.53188
+    label: Gdynia
+    type: GTS major Pops
+  '50':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.91667
+    Longitude: 22.9
+    geocode_id: '670213'
+    label: Poieni
+    type: GTS major Pops
+  '51':
+    Country: Bulgaria
+    Internal: '1'
+    Latitude: 42.68583
+    Longitude: 26.32917
+    label: Sliven
+    type: GTS major Pops
+  '52':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.16667
+    Longitude: 27.6
+    label: Iasi
+    type: GTS major Pops
+  '53':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.45
+    Longitude: 28.05
+    label: Galati
+    type: GTS major Pops
+  '54':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.64861
+    Longitude: 25.60613
+    label: Brasov
+    type: GTS major Pops
+  '55':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.56667
+    Longitude: 26.9
+    label: Bacau
+    type: GTS major Pops
+  '56':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.16667
+    Longitude: 24.35
+    label: Medias
+    type: GTS major Pops
+  '57':
+    Country: Romania
+    Internal: '1'
+    Latitude: 46.76667
+    Longitude: 23.6
+    label: Cluj
+    type: GTS major Pops
+  '58':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.18333
+    Longitude: 28.65
+    label: Constanta
+    type: GTS major Pops
+  '59':
+    Country: Romania
+    Internal: '1'
+    Latitude: 45.76667
+    Longitude: 25.43333
+    geocode_id: '678689'
+    label: Dumbravita
+    type: GTS major Pops
+  '6':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.46405
+    Longitude: 17.02872
+    label: Slupsk
+    type: GTS major Pops
+  '60':
+    Country: Slovakia
+    Internal: '1'
+    Latitude: 47.76356
+    Longitude: 18.12263
+    label: Komarno
+    type: GTS major Pops
+  '61':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.68333
+    Longitude: 17.63512
+    label: Gyor
+    type: GTS major Pops
+  '62':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.68333
+    Longitude: 16.6
+    label: Sopron
+    type: GTS major Pops
+  '63':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 46.47747
+    Longitude: 30.73262
+    label: Odesa
+    type: GTS major Pops
+  '64':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 50.0
+    Longitude: 36.25
+    label: Kharkiv
+    type: GTS major Pops
+  '65':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 48.45
+    Longitude: 34.98333
+    label: Dnipropetrovsk
+    type: GTS major Pops
+  '66':
+    Country: Ukraine
+    Internal: '1'
+    Latitude: 49.83826
+    Longitude: 24.02324
+    label: Lviv
+    type: GTS major Pops
+  '67':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.01381
+    Longitude: 20.98698
+    label: Tarnow
+    type: GTS major Pops
+  '68':
+    Country: Slovakia
+    Internal: '1'
+    Latitude: 48.73333
+    Longitude: 19.15
+    label: Banska Bystrica
+    type: GTS major Pops
+  '69':
+    Country: Slovakia
+    Internal: '1'
+    Latitude: 47.98544
+    Longitude: 18.16195
+    label: Nove Zamky
+    type: GTS major Pops
+  '7':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.19438
+    Longitude: 16.17222
+    label: Koszalin
+    type: GTS major Pops
+  '70':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.08804
+    Longitude: 14.42076
+    label: Praha
+    type: GTS major Hubs and Colocation Centers
+  '71':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.18333
+    Longitude: 20.2
+    label: Szolnok
+    type: GTS major Pops
+  '72':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.84
+    Longitude: 16.84389
+    label: Zalaegerszeg
+    type: GTS major Pops
+  '73':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.88333
+    Longitude: 17.43333
+    label: Tapolca
+    type: GTS major Pops
+  '74':
+    Country: Turkey
+    Internal: '1'
+    Latitude: 40.97801
+    Longitude: 27.50852
+    label: Tekirdag
+    type: GTS major Pops
+  '75':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.07963
+    Longitude: 12.37392
+    label: Cheb
+    type: GTS major Pops
+  '76':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.6607
+    Longitude: 14.03227
+    label: Usti nad Labem
+    type: GTS major Pops
+  '77':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.20923
+    Longitude: 15.83277
+    label: Hradec Kralove
+    type: GTS major Pops
+  '78':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.98333
+    Longitude: 18.93333
+    label: Dunaujvaros
+    type: GTS major Pops
+  '79':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.43139
+    Longitude: 19.4875
+    label: Kiskunhalas
+    type: GTS major Pops
+  '8':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.17565
+    Longitude: 15.58342
+    label: Kolobrzeg
+    type: GTS major Pops
+  '80':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.21778
+    Longitude: 19.54222
+    geocode_append: Hungary
+    label: Tompa
+    type: GTS major Pops
+  '81':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.253
+    Longitude: 20.14824
+    label: Szeged
+    type: GTS major Pops
+  '82':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.65
+    Longitude: 20.26667
+    label: Szentes
+    type: GTS major Pops
+  '83':
+    Country: Slovakia
+    Internal: '1'
+    Latitude: 49.22315
+    Longitude: 18.73941
+    label: Zilina
+    type: GTS major Pops
+  '84':
+    Country: Slovakia
+    Internal: '1'
+    Latitude: 48.71667
+    Longitude: 21.25
+    label: Kosice
+    type: GTS major Pops
+  '85':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.90618
+    Longitude: 19.69128
+    label: Kecskemet
+    type: GTS major Pops
+  '86':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.63333
+    Longitude: 18.86667
+    label: Paks
+    type: GTS major Pops
+  '87':
+    Country: Bulgaria
+    Internal: '1'
+    Latitude: 42.50606
+    Longitude: 27.46781
+    label: Burgas
+    type: GTS major Pops
+  '88':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.53333
+    Longitude: 21.63333
+    label: Debrecen
+    type: GTS major Pops
+  '89':
+    Country: Romania
+    Internal: '1'
+    Latitude: 47.11667
+    Longitude: 21.81667
+    label: Bors
+    type: GTS major Pops
+  '9':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.42894
+    Longitude: 14.55302
+    label: Szczecin
+    type: GTS major Pops
+  '90':
+    Country: Bulgaria
+    Internal: '1'
+    Latitude: 41.94028
+    Longitude: 25.56944
+    label: Haskovo
+    type: GTS major Pops
+  '91':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.1
+    Longitude: 17.03333
+    label: Wroclaw
+    type: GTS major Pops
+  '92':
+    Country: Poland
+    Internal: '1'
+    Latitude: 51.84034
+    Longitude: 16.57494
+    label: Leszno
+    type: GTS major Pops
+  '93':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.79886
+    Longitude: 18.26388
+    label: Inowroclaw
+    type: GTS major Pops
+  '94':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.41667
+    Longitude: 16.96667
+    label: Poznan
+    type: GTS major Pops
+  '95':
+    Country: Poland
+    Internal: '1'
+    Latitude: 54.09242
+    Longitude: 18.77787
+    label: Tczew
+    type: GTS major Pops
+  '96':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.1235
+    Longitude: 18.00762
+    label: Bydgoszcz
+    type: GTS major Pops
+  '97':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.64817
+    Longitude: 19.0678
+    label: Wloclawek
+    type: GTS major Pops
+  '98':
+    Country: Poland
+    Internal: '1'
+    Latitude: 53.78333
+    Longitude: 20.48333
+    label: Olsztyn
+    type: GTS major Pops
+  '99':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.22338
+    Longitude: 18.25121
+    label: Konin
+    type: GTS major Pops

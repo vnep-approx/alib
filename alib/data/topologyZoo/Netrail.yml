@@ -1,19 +1,64 @@
-nodes:
-  '0': {Latitude: 37.44188, Longitude: -122.14302}
-  '1': {Latitude: 41.85003, Longitude: -87.65005}
-  '2': {Latitude: 40.71427, Longitude: -74.00597}
-  '3': {Latitude: 39.29038, Longitude: -76.61219}
-  '4': {Latitude: 38.89511, Longitude: -77.03637}
-  '5': {Latitude: 25.77427, Longitude: -80.19366}
-  '6': {Latitude: 33.749, Longitude: -84.38798}
 edges:
-- ['0', '4']
-- ['0', '6']
-- ['1', '2']
-- ['1', '6']
-- ['2', '3']
-- ['2', '4']
-- ['3', '4']
-- ['4', '5']
-- ['4', '6']
-- ['5', '6']
+- - '0'
+  - '4'
+- - '0'
+  - '6'
+- - '1'
+  - '2'
+- - '1'
+  - '6'
+- - '2'
+  - '3'
+- - '2'
+  - '4'
+- - '3'
+  - '4'
+- - '4'
+  - '5'
+- - '4'
+  - '6'
+- - '5'
+  - '6'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.44188
+    Longitude: -122.14302
+    label: Palo Alto
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.29038
+    Longitude: -76.61219
+    label: Baltimore
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.89511
+    Longitude: -77.03637
+    label: Washington, DC
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta

@@ -1,58 +1,249 @@
-nodes:
-  '0': {Latitude: 51.27537, Longitude: 1.09078}
-  '1': {Latitude: 51.27402, Longitude: 1.08782}
-  '3': {Latitude: 51.39485, Longitude: 0.54608}
-  '4': {Latitude: 51.13959, Longitude: 0.86101}
-  '5': {Latitude: 51.27115, Longitude: 0.49799}
-  '6': {Latitude: 51.35426, Longitude: 1.43483}
-  '7': {Latitude: 51.36106, Longitude: 1.43006}
-  '8': {Latitude: 51.27631, Longitude: 0.52191}
-  '9': {Latitude: 51.21667, Longitude: 0.33333}
-  '10': {Latitude: 51.18249, Longitude: 0.93678}
-  '11': {Latitude: 51.08333, Longitude: 0.53333}
-  '12': {Latitude: 51.18333, Longitude: 0.28333}
-  '13': {Latitude: 51.18787, Longitude: 0.2647}
-  '14': {Latitude: 51.29762, Longitude: 1.06121}
-  '15': {Latitude: 51.33265, Longitude: 0.5046}
-  '16': {Latitude: 51.4, Longitude: 0.43333}
-  '17': {Latitude: 51.29169, Longitude: 0.97929}
-  '18': {Latitude: 51.45, Longitude: 0.21667}
-  '19': {Latitude: 51.37992, Longitude: 0.51438}
-  '20': {Latitude: 51.44628, Longitude: 0.07703}
-  '21': {Latitude: 51.44628, Longitude: 0.07703}
-  '22': {Latitude: 51.27934, Longitude: 1.08936}
-  '23': {Latitude: 51.18249, Longitude: 0.93678}
-  '24': {Latitude: 51.25665, Longitude: 0.54953}
-  '25': {Latitude: 51.15222, Longitude: 0.24307}
-  '26': {Latitude: 51.35895, Longitude: 1.40616}
-  '27': {Latitude: 51.28554, Longitude: 0.21928}
 edges:
-- ['0', '14']
-- ['1', '14']
-- ['3', '21']
-- ['4', '23']
-- ['5', '15']
-- ['6', '26']
-- ['7', '14']
-- ['8', '21']
-- ['9', '12']
-- ['10', '11']
-- ['10', '23']
-- ['11', '15']
-- ['12', '25']
-- ['13', '25']
-- ['14', '17']
-- ['14', '21']
-- ['14', '26']
-- ['15', '16']
-- ['15', '25']
-- ['15', '21']
-- ['16', '17']
-- ['16', '19']
-- ['16', '21']
-- ['18', '20']
-- ['20', '21']
-- ['21', '24']
-- ['21', '25']
-- ['21', '27']
-- ['22', '23']
+- - '0'
+  - '14'
+- - '1'
+  - '14'
+- - '3'
+  - '21'
+- - '4'
+  - '23'
+- - '5'
+  - '15'
+- - '6'
+  - '26'
+- - '7'
+  - '14'
+- - '8'
+  - '21'
+- - '9'
+  - '12'
+- - '10'
+  - '11'
+- - '10'
+  - '23'
+- - '11'
+  - '15'
+- - '12'
+  - '25'
+- - '13'
+  - '25'
+- - '14'
+  - '17'
+- - '14'
+  - '21'
+- - '14'
+  - '26'
+- - '15'
+  - '16'
+- - '15'
+  - '25'
+- - '15'
+  - '21'
+- - '16'
+  - '17'
+- - '16'
+  - '19'
+- - '16'
+  - '21'
+- - '18'
+  - '20'
+- - '20'
+  - '21'
+- - '21'
+  - '24'
+- - '21'
+  - '25'
+- - '21'
+  - '27'
+- - '22'
+  - '23'
+nodes:
+  '0':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27537
+    Longitude: 1.09078
+    label: KIAD-C
+    type: Connected Site
+  '1':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27402
+    Longitude: 1.08782
+    label: Canterbury College
+    type: Connected Site
+  '10':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.18249
+    Longitude: 0.93678
+    label: NTL-Wye
+    type: Radio Mast
+  '11':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.08333
+    Longitude: 0.53333
+    label: Cranbrook
+  '12':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.18333
+    Longitude: 0.28333
+    label: Tonbridge
+    type: Radio Mast
+  '13':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.18787
+    Longitude: 0.2647
+    label: West Kent College
+    type: Connected Site
+  '14':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.29762
+    Longitude: 1.06121
+    label: UoK-C
+    type: PoP Site
+  '15':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.33265
+    Longitude: 0.5046
+    label: Blue Bell Hill
+    type: Radio Mast
+  '16':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.4
+    Longitude: 0.43333
+    label: Beacon Hill
+    type: Radio Mast
+  '17':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.29169
+    Longitude: 0.97929
+    label: Dunkirk
+    type: Radio Mast
+  '18':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.45
+    Longitude: 0.21667
+    label: NW Kent College - Dartford
+    type: Connected Site
+  '19':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.37992
+    Longitude: 0.51438
+    label: KIAD-R
+    type: Connected Site
+  '20':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.44628
+    Longitude: 0.07703
+    label: UoG-AH
+    type: PoP Site
+  '21':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.44628
+    Longitude: 0.07703
+    geocode_append: Medway
+    label: University of Greenwich
+    type: PoP Site
+  '22':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27934
+    Longitude: 1.08936
+    label: CCCU-C
+    type: PoP Site
+  '23':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.18249
+    Longitude: 0.93678
+    label: IC-Wye
+    type: PoP Site
+  '24':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.25665
+    Longitude: 0.54953
+    label: EIS-Maidstone
+    type: PoP Site
+  '25':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.15222
+    Longitude: 0.24307
+    label: CCCU-S
+    type: PoP Site
+  '26':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.35895
+    Longitude: 1.40616
+    label: CCCU-T
+    type: PoP Site
+  '27':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.28554
+    Longitude: 0.21928
+    label: Dorton College
+    type: Connected Site
+  '3':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.39485
+    Longitude: 0.54608
+    label: Mid Kent College
+    type: Connected Site
+  '4':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.13959
+    Longitude: 0.86101
+    label: South Kent College - Ashford
+    type: Connected Site
+  '5':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27115
+    Longitude: 0.49799
+    label: KIAD-O
+    type: Connected Site
+  '6':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.35426
+    Longitude: 1.43483
+    label: Thanet College
+    type: Connected Site
+  '7':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.36106
+    Longitude: 1.43006
+    label: Hilderstone College
+    type: Connected Site
+  '8':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27631
+    Longitude: 0.52191
+    label: Kent ACL
+    type: Connected Site
+  '9':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.21667
+    Longitude: 0.33333
+    label: Hadlow College
+    type: Connected Site

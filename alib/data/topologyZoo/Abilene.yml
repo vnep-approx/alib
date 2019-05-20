@@ -1,27 +1,96 @@
-nodes:
-  '0': {Latitude: 40.71427, Longitude: -74.00597}
-  '1': {Latitude: 41.85003, Longitude: -87.65005}
-  '2': {Latitude: 38.89511, Longitude: -77.03637}
-  '3': {Latitude: 47.60621, Longitude: -122.33207}
-  '4': {Latitude: 37.36883, Longitude: -122.03635}
-  '5': {Latitude: 34.05223, Longitude: -118.24368}
-  '6': {Latitude: 39.73915, Longitude: -104.9847}
-  '7': {Latitude: 39.11417, Longitude: -94.62746}
-  '8': {Latitude: 29.76328, Longitude: -95.36327}
-  '9': {Latitude: 33.749, Longitude: -84.38798}
-  '10': {Latitude: 39.76838, Longitude: -86.15804}
 edges:
-- ['0', '1']
-- ['0', '2']
-- ['1', '10']
-- ['2', '9']
-- ['3', '4']
-- ['3', '6']
-- ['4', '5']
-- ['4', '6']
-- ['5', '8']
-- ['6', '7']
-- ['7', '8']
-- ['7', '10']
-- ['8', '9']
-- ['9', '10']
+- - '0'
+  - '1'
+- - '0'
+  - '2'
+- - '1'
+  - '10'
+- - '2'
+  - '9'
+- - '3'
+  - '4'
+- - '3'
+  - '6'
+- - '4'
+  - '5'
+- - '4'
+  - '6'
+- - '5'
+  - '8'
+- - '6'
+  - '7'
+- - '7'
+  - '8'
+- - '7'
+  - '10'
+- - '8'
+  - '9'
+- - '9'
+  - '10'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.76838
+    Longitude: -86.15804
+    label: Indianapolis
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.89511
+    Longitude: -77.03637
+    label: Washington DC
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.36883
+    Longitude: -122.03635
+    label: Sunnyvale
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.73915
+    Longitude: -104.9847
+    label: Denver
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.11417
+    Longitude: -94.62746
+    label: Kansas City
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.76328
+    Longitude: -95.36327
+    label: Houston
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta

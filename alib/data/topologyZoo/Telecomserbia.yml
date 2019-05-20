@@ -1,14 +1,56 @@
-nodes:
-  '0': {Latitude: 45.25167, Longitude: 19.83694}
-  '1': {Latitude: 44.80401, Longitude: 20.46513}
-  '2': {Latitude: 44.01667, Longitude: 20.91667}
-  '3': {Latitude: 43.32472, Longitude: 21.90333}
-  '4': {Latitude: 43.58, Longitude: 21.33389}
-  '5': {Latitude: 42.44111, Longitude: 19.26361}
 edges:
-- ['0', '1']
-- ['0', '5']
-- ['1', '2']
-- ['2', '3']
-- ['3', '4']
-- ['4', '5']
+- - '0'
+  - '1'
+- - '0'
+  - '5'
+- - '1'
+  - '2'
+- - '2'
+  - '3'
+- - '3'
+  - '4'
+- - '4'
+  - '5'
+nodes:
+  '0':
+    Country: Serbia
+    Internal: '1'
+    Latitude: 45.25167
+    Longitude: 19.83694
+    label: Novi Sad
+    type: GSR12410
+  '1':
+    Country: Serbia
+    Internal: '1'
+    Latitude: 44.80401
+    Longitude: 20.46513
+    label: Belgrade
+    type: GSR12410
+  '2':
+    Country: Serbia
+    Internal: '1'
+    Latitude: 44.01667
+    Longitude: 20.91667
+    label: Kragujevac
+    type: GSR12410
+  '3':
+    Country: Serbia
+    Internal: '1'
+    Latitude: 43.32472
+    Longitude: 21.90333
+    label: Nis
+    type: GSR12410
+  '4':
+    Country: Serbia
+    Internal: '1'
+    Latitude: 43.58
+    Longitude: 21.33389
+    label: Krusevac
+    type: GSR12410
+  '5':
+    Country: Montenegro
+    Internal: '1'
+    Latitude: 42.44111
+    Longitude: 19.26361
+    label: Podgorica
+    type: GSR12410

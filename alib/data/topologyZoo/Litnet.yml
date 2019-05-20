@@ -1,88 +1,384 @@
-nodes:
-  '0': {Latitude: 55.73333, Longitude: 26.25}
-  '1': {Latitude: 55.73333, Longitude: 24.35}
-  '2': {Latitude: 55.96667, Longitude: 25.58333}
-  '3': {Latitude: 55.83333, Longitude: 24.96667}
-  '4': {Latitude: 55.63389, Longitude: 22.93417}
-  '5': {Latitude: 55.71722, Longitude: 21.1175}
-  '6': {Latitude: 55.81667, Longitude: 23.53333}
-  '7': {Latitude: 55.91139, Longitude: 21.84417}
-  '8': {Latitude: 55.25222, Longitude: 22.28972}
-  '9': {Latitude: 55.35917, Longitude: 21.70222}
-  '10': {Latitude: 54.63333, Longitude: 23.95}
-  '11': {Latitude: 54.63333, Longitude: 24.93333}
-  '12': {Latitude: 55.35, Longitude: 26.16667}
-  '13': {Latitude: 55.25, Longitude: 24.75}
-  '14': {Latitude: 55.05, Longitude: 24.95}
-  '15': {Latitude: 55.07778, Longitude: 22.76639}
-  '16': {Latitude: 54.95472, Longitude: 23.03583}
-  '17': {Latitude: 54.65167, Longitude: 23.03222}
-  '18': {Latitude: 54.56667, Longitude: 23.35}
-  '19': {Latitude: 54.4, Longitude: 24.05}
-  '20': {Latitude: 54.01667, Longitude: 23.96667}
-  '21': {Latitude: 54.3, Longitude: 25.38333}
-  '22': {Latitude: 54.9, Longitude: 23.9}
-  '23': {Latitude: 55.23333, Longitude: 25.41667}
-  '24': {Latitude: 55.6, Longitude: 26.41667}
-  '25': {Latitude: 56.05944, Longitude: 24.40361}
-  '26': {Latitude: 54.9, Longitude: 23.9}
-  '27': {Latitude: 55.28833, Longitude: 23.97472}
-  '28': {Latitude: 55.37361, Longitude: 23.12167}
-  '29': {Latitude: 55.5, Longitude: 25.6}
-  '30': {Latitude: 55.52557, Longitude: 25.10264}
-  '31': {Latitude: 55.08333, Longitude: 24.28333}
-  '32': {Latitude: 54.68916, Longitude: 25.2798}
-  '33': {Latitude: 55.71722, Longitude: 21.1175}
-  '34': {Latitude: 55.98139, Longitude: 22.24722}
-  '35': {Latitude: 56.31667, Longitude: 22.33333}
-  '36': {Latitude: 55.93333, Longitude: 23.31667}
-  '37': {Latitude: 56.24028, Longitude: 23.61528}
-  '38': {Latitude: 56.2, Longitude: 24.75}
-  '39': {Latitude: 55.93333, Longitude: 23.31667}
-  '40': {Latitude: 54.68916, Longitude: 25.2798}
-  '41': {Latitude: 55.9175, Longitude: 21.06861}
-  '42': {Latitude: 55.87583, Longitude: 21.25083}
 edges:
-- ['0', '1']
-- ['1', '32']
-- ['1', '38']
-- ['1', '39']
-- ['1', '24']
-- ['1', '30']
-- ['2', '39']
-- ['3', '39']
-- ['4', '39']
-- ['5', '33']
-- ['6', '39']
-- ['7', '39']
-- ['8', '33']
-- ['9', '33']
-- ['10', '26']
-- ['11', '32']
-- ['12', '32']
-- ['13', '32']
-- ['14', '32']
-- ['15', '26']
-- ['16', '26']
-- ['17', '26']
-- ['18', '26']
-- ['19', '26']
-- ['20', '32']
-- ['21', '26']
-- ['22', '26']
-- ['23', '32']
-- ['25', '32']
-- ['26', '32']
-- ['26', '33']
-- ['26', '27']
-- ['26', '28']
-- ['26', '31']
-- ['29', '32']
-- ['32', '40']
-- ['33', '34']
-- ['33', '39']
-- ['33', '42']
-- ['33', '41']
-- ['35', '39']
-- ['36', '39']
-- ['37', '39']
+- - '0'
+  - '1'
+- - '1'
+  - '32'
+- - '1'
+  - '38'
+- - '1'
+  - '39'
+- - '1'
+  - '24'
+- - '1'
+  - '30'
+- - '2'
+  - '39'
+- - '3'
+  - '39'
+- - '4'
+  - '39'
+- - '5'
+  - '33'
+- - '6'
+  - '39'
+- - '7'
+  - '39'
+- - '8'
+  - '33'
+- - '9'
+  - '33'
+- - '10'
+  - '26'
+- - '11'
+  - '32'
+- - '12'
+  - '32'
+- - '13'
+  - '32'
+- - '14'
+  - '32'
+- - '15'
+  - '26'
+- - '16'
+  - '26'
+- - '17'
+  - '26'
+- - '18'
+  - '26'
+- - '19'
+  - '26'
+- - '20'
+  - '32'
+- - '21'
+  - '26'
+- - '22'
+  - '26'
+- - '23'
+  - '32'
+- - '25'
+  - '32'
+- - '26'
+  - '32'
+- - '26'
+  - '33'
+- - '26'
+  - '27'
+- - '26'
+  - '28'
+- - '26'
+  - '31'
+- - '29'
+  - '32'
+- - '32'
+  - '40'
+- - '33'
+  - '34'
+- - '33'
+  - '39'
+- - '33'
+  - '42'
+- - '33'
+  - '41'
+- - '35'
+  - '39'
+- - '36'
+  - '39'
+- - '37'
+  - '39'
+nodes:
+  '0':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.73333
+    Longitude: 26.25
+    label: Zarasai
+    type: PoP
+  '1':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.73333
+    Longitude: 24.35
+    label: Panevezys
+    type: Major City PoP
+  '10':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.63333
+    Longitude: 23.95
+    label: Prienai
+    type: PoP
+  '11':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.63333
+    Longitude: 24.93333
+    label: Trakar
+    type: PoP
+  '12':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.35
+    Longitude: 26.16667
+    label: Ignalina
+    type: PoP
+  '13':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.25
+    Longitude: 24.75
+    label: Ukmerge
+    type: PoP
+  '14':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.05
+    Longitude: 24.95
+    label: Sirvintos
+    type: PoP
+  '15':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.07778
+    Longitude: 22.76639
+    label: Jurbarkas
+    type: PoP
+  '16':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.95472
+    Longitude: 23.03583
+    label: Sakiai
+    type: PoP
+  '17':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.65167
+    Longitude: 23.03222
+    label: Vilkaviskis
+    type: PoP
+  '18':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.56667
+    Longitude: 23.35
+    label: Marijampole
+    type: PoP
+  '19':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.4
+    Longitude: 24.05
+    label: Alytus
+    type: PoP
+  '2':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.96667
+    Longitude: 25.58333
+    label: Rokiskis
+    type: PoP
+  '20':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.01667
+    Longitude: 23.96667
+    label: Druskininkai
+    type: PoP
+  '21':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.3
+    Longitude: 25.38333
+    label: Salcininkai
+    type: PoP
+  '22':
+    Internal: '0'
+    Latitude: 54.9
+    Longitude: 23.9
+    label: GEANT
+  '23':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.23333
+    Longitude: 25.41667
+    label: Moletai
+    type: PoP
+  '24':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.6
+    Longitude: 26.41667
+    label: Visaginas
+    type: PoP
+  '25':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 56.05944
+    Longitude: 24.40361
+    label: Pasvalys
+    type: PoP
+  '26':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.9
+    Longitude: 23.9
+    label: Kaunas
+    type: Major City PoP
+  '27':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.28833
+    Longitude: 23.97472
+    label: Kedainiai
+    type: PoP
+  '28':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.37361
+    Longitude: 23.12167
+    label: Raseiniai
+    type: PoP
+  '29':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.5
+    Longitude: 25.6
+    label: Utena
+    type: PoP
+  '3':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.83333
+    Longitude: 24.96667
+    label: Kupiskis
+    type: PoP
+  '30':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.52557
+    Longitude: 25.10264
+    label: Anyksciai
+    type: PoP
+  '31':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.08333
+    Longitude: 24.28333
+    label: Jonava
+    type: PoP
+  '32':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 54.68916
+    Longitude: 25.2798
+    label: Vilnius
+    type: Major City PoP
+  '33':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.71722
+    Longitude: 21.1175
+    label: Klaipeda
+    type: Major City PoP
+  '34':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.98139
+    Longitude: 22.24722
+    label: Telsiai
+    type: PoP
+  '35':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 56.31667
+    Longitude: 22.33333
+    label: Mazeikiai
+    type: PoP
+  '36':
+    Internal: '1'
+    Latitude: 55.93333
+    Longitude: 23.31667
+    label: N.Akmene
+    type: PoP
+  '37':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 56.24028
+    Longitude: 23.61528
+    label: Joniskis
+    type: PoP
+  '38':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 56.2
+    Longitude: 24.75
+    label: Birzai
+    type: PoP
+  '39':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.93333
+    Longitude: 23.31667
+    label: Siauliai
+    type: Major City PoP
+  '4':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.63389
+    Longitude: 22.93417
+    label: Kelme
+    type: PoP
+  '40':
+    Internal: '1'
+    Latitude: 54.68916
+    Longitude: 25.2798
+    label: Skoudas
+    type: PoP
+  '41':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.9175
+    Longitude: 21.06861
+    label: Palanga
+    type: PoP
+  '42':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.87583
+    Longitude: 21.25083
+    label: Kretinga
+    type: PoP
+  '5':
+    Internal: '1'
+    Latitude: 55.71722
+    Longitude: 21.1175
+    label: Siale
+    type: PoP
+  '6':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.81667
+    Longitude: 23.53333
+    label: Radviliskis
+    type: PoP
+  '7':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.91139
+    Longitude: 21.84417
+    label: Plunge
+    type: PoP
+  '8':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.25222
+    Longitude: 22.28972
+    label: Taurage
+    type: PoP
+  '9':
+    Country: Lithuania
+    Internal: '1'
+    Latitude: 55.35917
+    Longitude: 21.70222
+    label: Zemaiciu Naumiestis
+    type: PoP

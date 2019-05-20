@@ -1,0 +1,239 @@
+edges:
+- - '0'
+  - '12'
+- - '1'
+  - '12'
+- - '2'
+  - '19'
+- - '3'
+  - '19'
+- - '4'
+  - '21'
+- - '5'
+  - '22'
+- - '6'
+  - '24'
+- - '7'
+  - '24'
+- - '8'
+  - '19'
+- - '9'
+  - '23'
+- - '10'
+  - '21'
+- - '11'
+  - '12'
+- - '11'
+  - '22'
+- - '12'
+  - '15'
+- - '12'
+  - '19'
+- - '12'
+  - '20'
+- - '12'
+  - '21'
+- - '12'
+  - '24'
+- - '12'
+  - '24'
+- - '13'
+  - '23'
+- - '14'
+  - '18'
+- - '16'
+  - '18'
+- - '17'
+  - '19'
+- - '18'
+  - '19'
+- - '19'
+  - '22'
+- - '19'
+  - '25'
+- - '21'
+  - '22'
+- - '22'
+  - '23'
+nodes:
+  '0':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27537
+    Longitude: 1.09078
+    label: UCCA-C
+    type: Connected Site
+  '1':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27402
+    Longitude: 1.08782
+    label: Canterbury College
+    type: Connected Site
+  '10':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.08153
+    Longitude: 1.18218
+    label: University College Folkestone
+    type: Connected Site
+  '11':
+    Internal: '0'
+    Latitude: 51.277135
+    Longitude: 0.8053699999999999
+    label: Kent Community Network (Schools, etc)
+  '12':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.29762
+    Longitude: 1.06121
+    label: UoK-C
+    type: PoP Site
+  '13':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.18787
+    Longitude: 0.2647
+    label: West Kent College
+    type: Connected Site
+  '14':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.44224
+    Longitude: 0.02978
+    label: Hadlow College Mottingham
+    type: Connected Site
+  '15':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27766
+    Longitude: 1.08382
+    label: IFS School of Finance
+    type: Connected Site
+  '16':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.45
+    Longitude: 0.21667
+    label: NW Kent College - Dartford
+    type: Connected Site
+  '17':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.37992
+    Longitude: 0.51438
+    label: KIAD-R
+    type: Connected Site
+  '18':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.44628
+    Longitude: 0.07703
+    label: UoG-AH
+    type: PoP Site
+  '19':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.44628
+    Longitude: 0.07703
+    geocode_append: Medway
+    label: University of Greenwich
+    type: PoP Site
+  '2':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.38633
+    Longitude: 0.54627
+    label: Medway ACL
+    type: Connected Site
+  '20':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27934
+    Longitude: 1.08936
+    label: CCCU-C
+    type: PoP Site
+  '21':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.18249
+    Longitude: 0.93678
+    label: IC-Wye
+    type: PoP Site
+  '22':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.25665
+    Longitude: 0.54953
+    label: EIS-Maidstone
+    type: PoP Site
+  '23':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.15222
+    Longitude: 0.24307
+    label: CCCU-S
+    type: PoP Site
+  '24':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.35895
+    Longitude: 1.40616
+    label: CCCU-T
+    type: PoP Site
+  '25':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.28554
+    Longitude: 0.21928
+    label: Dorton College
+    type: Connected Site
+  '3':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.39485
+    Longitude: 0.54608
+    label: Mid Kent College
+    type: Connected Site
+  '4':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.13959
+    Longitude: 0.86101
+    label: South Kent College - Ashford
+    type: Connected Site
+  '5':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27115
+    Longitude: 0.49799
+    label: KIAD-O
+    type: Connected Site
+  '6':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.35426
+    Longitude: 1.43483
+    label: Thanet College
+    type: Connected Site
+  '7':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.36106
+    Longitude: 1.43006
+    label: Hilderstone College
+    type: Connected Site
+  '8':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.27631
+    Longitude: 0.52191
+    label: Kent ACL
+    type: Connected Site
+  '9':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.21667
+    Longitude: 0.33333
+    label: Hadlow College
+    type: Connected Site

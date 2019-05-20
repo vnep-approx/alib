@@ -1,0 +1,242 @@
+edges:
+- - '0'
+  - '1'
+- - '0'
+  - '10'
+- - '0'
+  - '2'
+- - '0'
+  - '17'
+- - '1'
+  - '11'
+- - '2'
+  - '25'
+- - '2'
+  - '3'
+- - '3'
+  - '6'
+- - '4'
+  - '24'
+- - '4'
+  - '5'
+- - '5'
+  - '8'
+- - '6'
+  - '7'
+- - '7'
+  - '12'
+- - '8'
+  - '9'
+- - '9'
+  - '13'
+- - '11'
+  - '12'
+- - '11'
+  - '12'
+- - '11'
+  - '15'
+- - '12'
+  - '15'
+- - '12'
+  - '13'
+- - '12'
+  - '14'
+- - '16'
+  - '17'
+- - '16'
+  - '25'
+- - '18'
+  - '19'
+- - '18'
+  - '22'
+- - '18'
+  - '23'
+- - '19'
+  - '20'
+- - '20'
+  - '21'
+- - '20'
+  - '22'
+- - '22'
+  - '25'
+- - '23'
+  - '24'
+nodes:
+  '0':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.86667
+    Longitude: 26.7
+    label: Kouvola
+    type: Fiber network connection sites
+  '1':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.98267
+    Longitude: 25.66151
+    label: Lahti
+    type: Fiber network connection sites
+  '10':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.46667
+    Longitude: 26.91667
+    label: Kotka
+    type: Fiber network connection sites
+  '11':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.16952
+    Longitude: 24.93545
+    label: Helsinki
+    type: IP and fiber network connection sites
+  '12':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.2052
+    Longitude: 24.6522
+    label: Espoo
+    type: IP and fiber network connection sites
+  '13':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.38333
+    Longitude: 23.13333
+    label: Salo
+    type: Fiber network connection sites
+  '14':
+    Internal: '0'
+    Latitude: 60.2052
+    Longitude: 24.6522
+    label: NORDU
+  '15':
+    Internal: '0'
+    Latitude: 60.18736
+    Longitude: 24.793825
+    label: NORDU
+  '16':
+    Country: Finland
+    Internal: '1'
+    Latitude: 62.6
+    Longitude: 29.76667
+    label: Joensuu
+    type: IP and fiber network connection sites
+  '17':
+    Country: Finland
+    Internal: '1'
+    Latitude: 61.05871
+    Longitude: 28.18871
+    label: Lappeenranta
+    type: IP and fiber network connection sites
+  '18':
+    Country: Finland
+    Internal: '1'
+    Latitude: 65.01236
+    Longitude: 25.46816
+    label: Oulu
+    type: IP and fiber network connection sites
+  '19':
+    Country: Finland
+    Internal: '1'
+    Latitude: 65.17654
+    Longitude: 25.35233
+    label: Haukipudas
+    type: Fiber network connection sites
+  '2':
+    Country: Finland
+    Internal: '1'
+    Latitude: 61.68857
+    Longitude: 27.27227
+    label: Mikkeli
+    type: Fiber network connection sites
+  '20':
+    Country: Finland
+    Internal: '1'
+    Latitude: 66.5
+    Longitude: 25.71667
+    label: Rovaniemi
+    type: IP and fiber network connection sites
+  '21':
+    Country: Finland
+    Internal: '1'
+    Latitude: 67.41667
+    Longitude: 26.6
+    label: Sodankyla
+    type: Fiber network connection sites
+  '22':
+    Country: Finland
+    Internal: '1'
+    Latitude: 64.5
+    Longitude: 28.21667
+    label: Ristijavi
+    type: Fiber network connection sites
+  '23':
+    Country: Finland
+    Internal: '1'
+    Latitude: 63.83847
+    Longitude: 23.13066
+    label: Kokkola
+    type: Fiber network connection sites
+  '24':
+    Country: Finland
+    Internal: '1'
+    Latitude: 63.096
+    Longitude: 21.61577
+    label: Vaasa
+    type: IP and fiber network connection sites
+  '25':
+    Country: Finland
+    Internal: '1'
+    Latitude: 62.89238
+    Longitude: 27.67703
+    label: Koupio
+    type: IP and fiber network connection sites
+  '3':
+    Country: Finland
+    Internal: '1'
+    Latitude: 62.23333
+    Longitude: 25.73333
+    label: Jyvaskyla
+    type: Fiber network connection sites
+  '4':
+    Country: Finland
+    Internal: '1'
+    Latitude: 62.8
+    Longitude: 22.83333
+    label: Seinajoki
+    type: Fiber network connection sites
+  '5':
+    Country: Finland
+    Internal: '1'
+    Latitude: 61.48333
+    Longitude: 21.78333
+    label: Pori
+    type: Fiber network connection sites
+  '6':
+    Country: Finland
+    Internal: '1'
+    Latitude: 61.49911
+    Longitude: 23.78712
+    label: Tampere
+    type: Fiber network connection sites
+  '7':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.99596
+    Longitude: 24.46434
+    label: Hameenlinna
+    type: Fiber network connection sites
+  '8':
+    Country: Finland
+    Internal: '1'
+    Latitude: 61.12724
+    Longitude: 21.51127
+    label: Rauma
+    type: Fiber network connection sites
+  '9':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.45148
+    Longitude: 22.26869
+    label: Turku
+    type: IP and fiber network connection sites

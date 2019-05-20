@@ -1,119 +1,444 @@
-nodes:
-  '0': {Latitude: 28.32001, Longitude: -80.60755}
-  '1': {Latitude: 29.21081, Longitude: -81.02283}
-  '2': {Latitude: 26.71534, Longitude: -80.05337}
-  '3': {Latitude: 27.19755, Longitude: -80.25283}
-  '4': {Latitude: 30.33218, Longitude: -81.65565}
-  '5': {Latitude: 32.08354, Longitude: -81.09983}
-  '6': {Latitude: 30.15881, Longitude: -85.66021}
-  '7': {Latitude: 29.65163, Longitude: -82.32483}
-  '8': {Latitude: 31.57851, Longitude: -84.15574}
-  '9': {Latitude: 32.84069, Longitude: -83.6324}
-  '10': {Latitude: 33.80816, Longitude: -84.1702}
-  '11': {Latitude: 36.16589, Longitude: -86.78444}
-  '12': {Latitude: 35.96064, Longitude: -83.92074}
-  '13': {Latitude: 29.95465, Longitude: -90.07507}
-  '14': {Latitude: 30.22409, Longitude: -92.01984}
-  '15': {Latitude: 30.45075, Longitude: -91.15455}
-  '16': {Latitude: 32.52515, Longitude: -93.75018}
-  '17': {Latitude: 32.29876, Longitude: -90.18481}
-  '18': {Latitude: 35.14953, Longitude: -90.04898}
-  '19': {Latitude: 37.77422, Longitude: -87.11333}
-  '20': {Latitude: 38.25424, Longitude: -85.75941}
-  '21': {Latitude: 38.2098, Longitude: -84.55883}
-  '22': {Latitude: 32.590869999999995, Longitude: -85.4591}
-  '23': {Latitude: 36.07264, Longitude: -79.79198}
-  '24': {Latitude: 35.46623, Longitude: -82.51651}
-  '25': {Latitude: 35.22709, Longitude: -80.84313}
-  '26': {Latitude: 36.09986, Longitude: -80.24422}
-  '27': {Latitude: 34.00071, Longitude: -81.03481}
-  '28': {Latitude: 33.47097, Longitude: -81.97484}
-  '29': {Latitude: 34.19543, Longitude: -79.76256}
-  '30': {Latitude: 32.77657, Longitude: -79.93092}
-  '31': {Latitude: 29.95465, Longitude: -90.07507}
-  '32': {Latitude: 30.27519, Longitude: -89.78117}
-  '33': {Latitude: 34.73037, Longitude: -86.5861}
-  '34': {Latitude: 35.04563, Longitude: -85.30968}
-  '35': {Latitude: 33.749, Longitude: -84.38798}
-  '36': {Latitude: 33.96095, Longitude: -83.37794}
-  '37': {Latitude: 30.39603, Longitude: -88.88531}
-  '38': {Latitude: 30.42131, Longitude: -87.21691}
-  '39': {Latitude: 32.36681, Longitude: -86.29997}
-  '40': {Latitude: 33.52066, Longitude: -86.80249}
-  '41': {Latitude: 26.12231, Longitude: -80.14338}
-  '42': {Latitude: 26.35869, Longitude: -80.0831}
-  '43': {Latitude: 30.69436, Longitude: -88.04305}
-  '44': {Latitude: 34.85262, Longitude: -82.39401}
-  '45': {Latitude: 34.94957, Longitude: -81.93205}
-  '46': {Latitude: 33.80816, Longitude: -84.1702}
-  '47': {Latitude: 34.22573, Longitude: -77.94471}
-  '48': {Latitude: 28.53834, Longitude: -81.37924}
-  '49': {Latitude: 25.77427, Longitude: -80.19366}
-  '50': {Latitude: 25.77427, Longitude: -80.19366}
 edges:
-- ['0', '48']
-- ['1', '4']
-- ['2', '42']
-- ['3', '50']
-- ['4', '35']
-- ['4', '49']
-- ['5', '46']
-- ['6', '26']
-- ['6', '31']
-- ['7', '48']
-- ['8', '46']
-- ['9', '46']
-- ['10', '39']
-- ['10', '35']
-- ['10', '46']
-- ['10', '15']
-- ['11', '35']
-- ['11', '31']
-- ['12', '35']
-- ['12', '31']
-- ['13', '15']
-- ['14', '15']
-- ['15', '16']
-- ['17', '35']
-- ['17', '31']
-- ['18', '31']
-- ['19', '20']
-- ['20', '35']
-- ['20', '21']
-- ['20', '31']
-- ['22', '25']
-- ['22', '31']
-- ['23', '26']
-- ['24', '26']
-- ['25', '35']
-- ['25', '31']
-- ['26', '35']
-- ['26', '47']
-- ['27', '35']
-- ['27', '28']
-- ['27', '29']
-- ['27', '30']
-- ['27', '31']
-- ['31', '32']
-- ['31', '34']
-- ['31', '37']
-- ['31', '39']
-- ['31', '40']
-- ['31', '43']
-- ['31', '35']
-- ['31', '49']
-- ['31', '38']
-- ['33', '40']
-- ['34', '35']
-- ['35', '40']
-- ['35', '43']
-- ['35', '44']
-- ['35', '48']
-- ['35', '49']
-- ['36', '46']
-- ['38', '44']
-- ['41', '50']
-- ['42', '50']
-- ['44', '45']
-- ['48', '49']
-- ['49', '50']
+- - '0'
+  - '48'
+- - '1'
+  - '4'
+- - '2'
+  - '42'
+- - '3'
+  - '50'
+- - '4'
+  - '35'
+- - '4'
+  - '49'
+- - '5'
+  - '46'
+- - '6'
+  - '26'
+- - '6'
+  - '31'
+- - '7'
+  - '48'
+- - '8'
+  - '46'
+- - '9'
+  - '46'
+- - '10'
+  - '39'
+- - '10'
+  - '35'
+- - '10'
+  - '46'
+- - '10'
+  - '15'
+- - '11'
+  - '35'
+- - '11'
+  - '31'
+- - '12'
+  - '35'
+- - '12'
+  - '31'
+- - '13'
+  - '15'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '17'
+  - '35'
+- - '17'
+  - '31'
+- - '18'
+  - '31'
+- - '19'
+  - '20'
+- - '20'
+  - '35'
+- - '20'
+  - '21'
+- - '20'
+  - '31'
+- - '22'
+  - '25'
+- - '22'
+  - '31'
+- - '23'
+  - '26'
+- - '24'
+  - '26'
+- - '25'
+  - '35'
+- - '25'
+  - '31'
+- - '26'
+  - '47'
+- - '26'
+  - '35'
+- - '27'
+  - '35'
+- - '27'
+  - '28'
+- - '27'
+  - '29'
+- - '27'
+  - '30'
+- - '27'
+  - '31'
+- - '31'
+  - '32'
+- - '31'
+  - '34'
+- - '31'
+  - '43'
+- - '31'
+  - '37'
+- - '31'
+  - '39'
+- - '31'
+  - '40'
+- - '31'
+  - '38'
+- - '31'
+  - '35'
+- - '31'
+  - '49'
+- - '33'
+  - '40'
+- - '34'
+  - '35'
+- - '35'
+  - '43'
+- - '35'
+  - '49'
+- - '35'
+  - '40'
+- - '35'
+  - '44'
+- - '35'
+  - '48'
+- - '36'
+  - '46'
+- - '38'
+  - '44'
+- - '41'
+  - '50'
+- - '42'
+  - '50'
+- - '44'
+  - '45'
+- - '48'
+  - '49'
+- - '49'
+  - '50'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.32001
+    Longitude: -80.60755
+    label: Cocoa Beach
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.21081
+    Longitude: -81.02283
+    label: Daytona Beach
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.80816
+    Longitude: -84.1702
+    label: Stone Mt?
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.16589
+    Longitude: -86.78444
+    label: Nashville
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.96064
+    Longitude: -83.92074
+    label: Knoxville
+  '13':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.95465
+    Longitude: -90.07507
+    label: New Orleans?
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.22409
+    Longitude: -92.01984
+    label: Lafayette
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.45075
+    Longitude: -91.15455
+    label: Baton Rouge
+  '16':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.52515
+    Longitude: -93.75018
+    label: Shreveport
+  '17':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.29876
+    Longitude: -90.18481
+    label: Jackson
+  '18':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.14953
+    Longitude: -90.04898
+    label: Memphis
+  '19':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.77422
+    Longitude: -87.11333
+    label: Owensboro
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.71534
+    Longitude: -80.05337
+    label: West Palm Beach
+  '20':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.25424
+    Longitude: -85.75941
+    label: Louisville
+  '21':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.2098
+    Longitude: -84.55883
+    geocode_append: KY
+    label: Georgetown
+  '22':
+    Internal: '1'
+    Latitude: 32.590869999999995
+    Longitude: -85.4591
+    label: '?'
+  '23':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.07264
+    Longitude: -79.79198
+    label: Greensboro
+  '24':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.46623
+    Longitude: -82.51651
+    geocode_append: NC
+    label: Arden
+  '25':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.22709
+    Longitude: -80.84313
+    label: Charlotte
+  '26':
+    Country: United States
+    Internal: '1'
+    Latitude: 36.09986
+    Longitude: -80.24422
+    label: Winston
+  '27':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.00071
+    Longitude: -81.03481
+    label: Columbia
+  '28':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.47097
+    Longitude: -81.97484
+    geocode_append: GA
+    label: Augusta
+  '29':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.19543
+    Longitude: -79.76256
+    label: Florence
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 27.19755
+    Longitude: -80.25283
+    label: Stuart
+  '30':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.77657
+    Longitude: -79.93092
+    geocode_append: SC
+    label: Charleston
+  '31':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.95465
+    Longitude: -90.07507
+    label: New Orleans
+  '32':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.27519
+    Longitude: -89.78117
+    label: Slidell
+  '33':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.73037
+    Longitude: -86.5861
+    label: Huntsville
+  '34':
+    Country: United States
+    Internal: '1'
+    Latitude: 35.04563
+    Longitude: -85.30968
+    label: Chatanooga
+  '35':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: Atlanta
+  '36':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.96095
+    Longitude: -83.37794
+    label: Athens
+  '37':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.39603
+    Longitude: -88.88531
+    label: Biloxi
+  '38':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.42131
+    Longitude: -87.21691
+    label: Pensacola
+  '39':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.36681
+    Longitude: -86.29997
+    label: Montgomery
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.33218
+    Longitude: -81.65565
+    label: Jacksonville
+  '40':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.52066
+    Longitude: -86.80249
+    label: Birmingham
+  '41':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.12231
+    Longitude: -80.14338
+    label: Ft Lauderdale
+  '42':
+    Country: United States
+    Internal: '1'
+    Latitude: 26.35869
+    Longitude: -80.0831
+    label: Boca Raton
+  '43':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.69436
+    Longitude: -88.04305
+    label: Mobile
+  '44':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.85262
+    Longitude: -82.39401
+    label: Greenville
+  '45':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.94957
+    Longitude: -81.93205
+    label: Spartanburg
+  '46':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.80816
+    Longitude: -84.1702
+    label: Stone Mt?
+  '47':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.22573
+    Longitude: -77.94471
+    label: Wilmington
+  '48':
+    Country: United States
+    Internal: '1'
+    Latitude: 28.53834
+    Longitude: -81.37924
+    label: Orlando
+  '49':
+    Country: United States
+    Internal: '1'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.08354
+    Longitude: -81.09983
+    label: Savannah
+  '50':
+    Country: United States
+    Internal: '1'
+    Latitude: 25.77427
+    Longitude: -80.19366
+    label: Miami?
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.15881
+    Longitude: -85.66021
+    label: Panama City
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.65163
+    Longitude: -82.32483
+    label: Gainesville
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 31.57851
+    Longitude: -84.15574
+    geocode_append: GA
+    label: Albany
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.84069
+    Longitude: -83.6324
+    label: Macon

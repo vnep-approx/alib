@@ -1,46 +1,166 @@
-nodes:
-  '0': {Latitude: 47.65878, Longitude: -117.42605}
-  '1': {Latitude: 47.67768, Longitude: -116.78047}
-  '2': {Latitude: 47.42346, Longitude: -120.31035}
-  '3': {Latitude: 46.82597, Longitude: -119.17529}
-  '4': {Latitude: 46.06458, Longitude: -118.34302}
-  '5': {Latitude: 46.23958, Longitude: -119.10057}
-  '6': {Latitude: 46.73127, Longitude: -117.17962}
-  '7': {Latitude: 46.41655, Longitude: -117.01766}
-  '8': {Latitude: 46.21125, Longitude: -119.13723}
-  '9': {Latitude: 46.60207, Longitude: -120.5059}
-  '10': {Latitude: 46.99651, Longitude: -120.54785}
-  '11': {Latitude: 49.24966, Longitude: -123.11934}
-  '12': {Latitude: 48.75955, Longitude: -122.48822}
-  '13': {Latitude: 48.42122, Longitude: -122.33405}
-  '14': {Latitude: 47.97898, Longitude: -122.20208}
-  '15': {Latitude: 47.6129, Longitude: -122.3377}
-  '16': {Latitude: 47.25288, Longitude: -122.44429}
-  '17': {Latitude: 47.03787, Longitude: -122.9007}
-  '18': {Latitude: 45.52345, Longitude: -122.67621}
 edges:
-- ['0', '1']
-- ['0', '2']
-- ['0', '3']
-- ['0', '6']
-- ['2', '10']
-- ['2', '15']
-- ['3', '9']
-- ['4', '8']
-- ['4', '5']
-- ['5', '8']
-- ['5', '9']
-- ['6', '7']
-- ['8', '9']
-- ['8', '18']
-- ['9', '10']
-- ['9', '15']
-- ['11', '12']
-- ['11', '15']
-- ['12', '13']
-- ['13', '14']
-- ['14', '15']
-- ['15', '16']
-- ['15', '18']
-- ['16', '17']
-- ['17', '18']
+- - '0'
+  - '1'
+- - '0'
+  - '2'
+- - '0'
+  - '3'
+- - '0'
+  - '6'
+- - '2'
+  - '10'
+- - '2'
+  - '15'
+- - '3'
+  - '9'
+- - '4'
+  - '8'
+- - '4'
+  - '5'
+- - '5'
+  - '8'
+- - '5'
+  - '9'
+- - '6'
+  - '7'
+- - '8'
+  - '9'
+- - '8'
+  - '18'
+- - '9'
+  - '10'
+- - '9'
+  - '15'
+- - '11'
+  - '12'
+- - '11'
+  - '15'
+- - '12'
+  - '13'
+- - '13'
+  - '14'
+- - '14'
+  - '15'
+- - '15'
+  - '16'
+- - '15'
+  - '18'
+- - '16'
+  - '17'
+- - '17'
+  - '18'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.65878
+    Longitude: -117.42605
+    label: Spokane
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.67768
+    Longitude: -116.78047
+    label: Coeur d'Alene
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 46.99651
+    Longitude: -120.54785
+    label: Ellensburg
+  '11':
+    Country: Canada
+    Internal: '1'
+    Latitude: 49.24966
+    Longitude: -123.11934
+    label: Vancouver
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 48.75955
+    Longitude: -122.48822
+    label: Bellingham
+  '13':
+    Country: United States
+    Internal: '1'
+    Latitude: 48.42122
+    Longitude: -122.33405
+    label: Mt Vernon
+  '14':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.97898
+    Longitude: -122.20208
+    label: Everett
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.6129
+    Longitude: -122.3377
+    label: Westin - Seattle
+  '16':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.25288
+    Longitude: -122.44429
+    label: Tacoma
+  '17':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.03787
+    Longitude: -122.9007
+    label: Olympia
+  '18':
+    Country: United States
+    Internal: '1'
+    Latitude: 45.52345
+    Longitude: -122.67621
+    label: Portland
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.42346
+    Longitude: -120.31035
+    label: Wenatchee
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 46.82597
+    Longitude: -119.17529
+    label: Othello
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 46.06458
+    Longitude: -118.34302
+    label: Walla Walla
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 46.23958
+    Longitude: -119.10057
+    label: Pasco
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 46.73127
+    Longitude: -117.17962
+    label: Pullman
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 46.41655
+    Longitude: -117.01766
+    label: Lewiston
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 46.21125
+    Longitude: -119.13723
+    label: Kennewick
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 46.60207
+    Longitude: -120.5059
+    label: Yakima

@@ -1,0 +1,143 @@
+edges:
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '1'
+  - '14'
+- - '2'
+  - '8'
+- - '2'
+  - '3'
+- - '2'
+  - '13'
+- - '4'
+  - '11'
+- - '4'
+  - '13'
+- - '5'
+  - '12'
+- - '5'
+  - '6'
+- - '6'
+  - '14'
+- - '7'
+  - '10'
+- - '7'
+  - '10'
+- - '7'
+  - '11'
+- - '8'
+  - '11'
+- - '9'
+  - '10'
+- - '9'
+  - '15'
+- - '10'
+  - '16'
+- - '12'
+  - '13'
+- - '15'
+  - '16'
+nodes:
+  '0':
+    Country: Australia
+    Internal: '1'
+    Latitude: -32.25
+    Longitude: 148.61667
+    label: Dubbo
+  '1':
+    Country: Australia
+    Internal: '1'
+    Latitude: -29.46667
+    Longitude: 149.85
+    label: Moree
+  '10':
+    Country: Australia
+    Internal: '1'
+    Latitude: -34.93333
+    Longitude: 138.6
+    label: Adelaide
+  '11':
+    Country: Australia
+    Internal: '1'
+    Latitude: -37.814
+    Longitude: 144.96332
+    label: Melbourne
+  '12':
+    Country: Australia
+    Internal: '1'
+    Latitude: -33.86785
+    Longitude: 151.20732
+    label: Sydney
+  '13':
+    Country: Australia
+    Internal: '1'
+    Latitude: -35.28346
+    Longitude: 149.12807
+    label: Canberra
+  '14':
+    Country: Australia
+    Internal: '1'
+    Latitude: -27.46794
+    Longitude: 153.02809
+    label: Brisbane
+  '15':
+    Country: Australia
+    Internal: '1'
+    Latitude: -30.75
+    Longitude: 121.46667
+    label: Kalgoorlie
+  '16':
+    Country: Australia
+    Internal: '1'
+    Latitude: -32.5
+    Longitude: 137.76667
+    label: Port Augusta
+  '2':
+    Internal: '1'
+    Latitude: -34.93337333333333
+    Longitude: 147.57046666666668
+    label: None
+  '3':
+    Country: Australia
+    Internal: '1'
+    Latitude: -33.13333
+    Longitude: 148.18333
+    label: Parkes
+  '4':
+    Country: Australia
+    Internal: '1'
+    Latitude: -36.08333
+    Longitude: 146.91667
+    label: Albury
+  '5':
+    Country: Australia
+    Internal: '1'
+    Latitude: -32.92715
+    Longitude: 151.77647
+    label: Newcastle
+  '6':
+    Country: Australia
+    Internal: '1'
+    Latitude: -30.3
+    Longitude: 153.13333
+    label: Coff's Harbour
+  '7':
+    Country: Australia
+    Internal: '1'
+    Latitude: -38.14711
+    Longitude: 144.36069
+    label: Geelong
+  '8':
+    Country: Australia
+    Internal: '1'
+    Latitude: -36.38333
+    Longitude: 145.4
+    label: Shepparton
+  '9':
+    Country: Australia
+    Internal: '1'
+    Latitude: -31.93333
+    Longitude: 115.83333
+    label: Perth

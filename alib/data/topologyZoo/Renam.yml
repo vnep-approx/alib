@@ -1,11 +1,38 @@
-nodes:
-  '0': {Latitude: 47.00556, Longitude: 28.8575}
-  '1': {Latitude: 47.76167, Longitude: 27.92889}
-  '2': {Latitude: 45.9075, Longitude: 28.19444}
-  '3': {Latitude: 47.00556, Longitude: 28.8575}
-  '4': {Latitude: 47.00556, Longitude: 28.8575}
 edges:
-- ['0', '1']
-- ['0', '2']
-- ['0', '3']
-- ['0', '4']
+- - '0'
+  - '1'
+- - '0'
+  - '2'
+- - '0'
+  - '3'
+- - '0'
+  - '4'
+nodes:
+  '0':
+    Country: Moldova
+    Internal: '1'
+    Latitude: 47.00556
+    Longitude: 28.8575
+    label: Chisinau
+  '1':
+    Country: Moldova
+    Internal: '1'
+    Latitude: 47.76167
+    Longitude: 27.92889
+    label: Balti
+  '2':
+    Country: Moldova
+    Internal: '1'
+    Latitude: 45.9075
+    Longitude: 28.19444
+    label: '       Cahul'
+  '3':
+    Internal: '0'
+    Latitude: 47.00556
+    Longitude: 28.8575
+    label: StarNet ISP
+  '4':
+    Internal: '0'
+    Latitude: 47.00556
+    Longitude: 28.8575
+    label: RoEduNet

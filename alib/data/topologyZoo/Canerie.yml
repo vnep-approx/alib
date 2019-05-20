@@ -1,75 +1,268 @@
-nodes:
-  '0': {Latitude: 48.4001, Longitude: -89.31683}
-  '1': {Latitude: 41.85003, Longitude: -87.65005}
-  '2': {Latitude: 50.45008, Longitude: -104.6178}
-  '3': {Latitude: 49.8844, Longitude: -97.14704}
-  '4': {Latitude: 45.41117, Longitude: -75.69812}
-  '5': {Latitude: 45.50884, Longitude: -73.58781}
-  '6': {Latitude: 42.33143, Longitude: -83.04575}
-  '7': {Latitude: 43.70011, Longitude: -79.4163}
-  '8': {Latitude: 45.94541, Longitude: -66.66558}
-  '9': {Latitude: 46.23525, Longitude: -63.12671}
-  '10': {Latitude: 47.60621, Longitude: -122.33207}
-  '11': {Latitude: 42.35843, Longitude: -71.05977}
-  '12': {Latitude: 47.60621, Longitude: -122.33207}
-  '13': {Latitude: 41.85003, Longitude: -87.65005}
-  '14': {Latitude: 47.56494, Longitude: -52.70931}
-  '15': {Latitude: 40.71427, Longitude: -74.00597}
-  '16': {Latitude: 47.56494, Longitude: -52.70931}
-  '17': {Latitude: 44.646, Longitude: -63.57333}
-  '18': {Latitude: 41.85003, Longitude: -87.65005}
-  '19': {Latitude: 41.85003, Longitude: -87.65005}
-  '20': {Latitude: 40.71427, Longitude: -74.00597}
-  '21': {Latitude: 40.71427, Longitude: -74.00597}
-  '22': {Latitude: 51.05011, Longitude: -114.08529}
-  '23': {Latitude: 52.11679, Longitude: -106.63452}
-  '24': {Latitude: 60.71611, Longitude: -135.05375}
-  '25': {Latitude: 62.456, Longitude: -114.35255}
-  '26': {Latitude: 53.55014, Longitude: -113.46871}
-  '27': {Latitude: 50.66648, Longitude: -120.3192}
-  '28': {Latitude: 49.88307, Longitude: -119.48568}
-  '29': {Latitude: 49.24966, Longitude: -123.11934}
-  '30': {Latitude: 48.43294, Longitude: -123.3693}
-  '31': {Latitude: 47.60621, Longitude: -122.33207}
 edges:
-- ['0', '3']
-- ['0', '7']
-- ['1', '3']
-- ['1', '6']
-- ['1', '13']
-- ['1', '18']
-- ['1', '19']
-- ['1', '22']
-- ['1', '31']
-- ['2', '3']
-- ['2', '22']
-- ['3', '7']
-- ['3', '22']
-- ['3', '23']
-- ['4', '5']
-- ['4', '7']
-- ['5', '8']
-- ['5', '17']
-- ['5', '11']
-- ['6', '7']
-- ['7', '15']
-- ['8', '9']
-- ['9', '17']
-- ['10', '31']
-- ['11', '15']
-- ['12', '31']
-- ['14', '16']
-- ['15', '17']
-- ['15', '20']
-- ['15', '21']
-- ['16', '17']
-- ['22', '27']
-- ['22', '26']
-- ['23', '26']
-- ['24', '26']
-- ['25', '26']
-- ['27', '28']
-- ['27', '29']
-- ['29', '30']
-- ['29', '31']
-- ['30', '31']
+- - '0'
+  - '3'
+- - '0'
+  - '7'
+- - '1'
+  - '3'
+- - '1'
+  - '6'
+- - '1'
+  - '13'
+- - '1'
+  - '18'
+- - '1'
+  - '19'
+- - '1'
+  - '22'
+- - '1'
+  - '31'
+- - '2'
+  - '3'
+- - '2'
+  - '22'
+- - '3'
+  - '7'
+- - '3'
+  - '22'
+- - '3'
+  - '23'
+- - '4'
+  - '5'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '5'
+  - '17'
+- - '5'
+  - '11'
+- - '6'
+  - '7'
+- - '7'
+  - '15'
+- - '8'
+  - '9'
+- - '9'
+  - '17'
+- - '10'
+  - '31'
+- - '11'
+  - '15'
+- - '12'
+  - '31'
+- - '14'
+  - '16'
+- - '15'
+  - '17'
+- - '15'
+  - '20'
+- - '15'
+  - '21'
+- - '16'
+  - '17'
+- - '22'
+  - '27'
+- - '22'
+  - '26'
+- - '23'
+  - '26'
+- - '24'
+  - '26'
+- - '25'
+  - '26'
+- - '27'
+  - '28'
+- - '27'
+  - '29'
+- - '29'
+  - '30'
+- - '29'
+  - '31'
+- - '30'
+  - '31'
+nodes:
+  '0':
+    Country: Canada
+    Internal: '1'
+    Latitude: 48.4001
+    Longitude: -89.31683
+    label: Thunder Bay
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+  '10':
+    Internal: '0'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Asie-Pacifique
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.35843
+    Longitude: -71.05977
+    label: Boston
+  '12':
+    Internal: '0'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Asia-Pacific
+  '13':
+    Internal: '0'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Amerique du Nord et Amerique du Sud
+  '14':
+    Internal: '0'
+    Latitude: 47.56494
+    Longitude: -52.70931
+    label: Europe
+  '15':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York
+  '16':
+    Country: Canada
+    Internal: '1'
+    Latitude: 47.56494
+    Longitude: -52.70931
+    label: St John's
+  '17':
+    Country: Canada
+    Internal: '1'
+    Latitude: 44.646
+    Longitude: -63.57333
+    label: Halifax
+  '18':
+    Internal: '0'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: North and South America
+  '19':
+    Internal: '0'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Europe and other countries
+  '2':
+    Country: Canada
+    Internal: '1'
+    Latitude: 50.45008
+    Longitude: -104.6178
+    label: Regina
+  '20':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: Europe et autres pays
+  '21':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: Europe and other countries
+  '22':
+    Country: Canada
+    Internal: '1'
+    Latitude: 51.05011
+    Longitude: -114.08529
+    label: Calgary
+  '23':
+    Country: Canada
+    Internal: '1'
+    Latitude: 52.11679
+    Longitude: -106.63452
+    label: Saskatoon
+  '24':
+    Country: Canada
+    Internal: '1'
+    Latitude: 60.71611
+    Longitude: -135.05375
+    label: Whitehorse
+  '25':
+    Country: Canada
+    Internal: '1'
+    Latitude: 62.456
+    Longitude: -114.35255
+    label: Yellowknife
+  '26':
+    Country: Canada
+    Internal: '1'
+    Latitude: 53.55014
+    Longitude: -113.46871
+    label: Edmonton
+  '27':
+    Country: Canada
+    Internal: '1'
+    Latitude: 50.66648
+    Longitude: -120.3192
+    label: Kamloops
+  '28':
+    Country: Canada
+    Internal: '1'
+    Latitude: 49.88307
+    Longitude: -119.48568
+    label: Kelowna
+  '29':
+    Country: Canada
+    Internal: '1'
+    Latitude: 49.24966
+    Longitude: -123.11934
+    label: Vancouver
+  '3':
+    Country: Canada
+    Internal: '1'
+    Latitude: 49.8844
+    Longitude: -97.14704
+    label: Winnipeg
+  '30':
+    Country: Canada
+    Internal: '1'
+    Latitude: 48.43294
+    Longitude: -123.3693
+    label: Victoria
+  '31':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle
+  '4':
+    Country: Canada
+    Internal: '1'
+    Latitude: 45.41117
+    Longitude: -75.69812
+    label: Ottawa
+  '5':
+    Country: Canada
+    Internal: '1'
+    Latitude: 45.50884
+    Longitude: -73.58781
+    label: Montreal
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.33143
+    Longitude: -83.04575
+    label: Windsor/Detroit
+  '7':
+    Country: Canada
+    Internal: '1'
+    Latitude: 43.70011
+    Longitude: -79.4163
+    label: Toronto
+  '8':
+    Country: Canada
+    Internal: '1'
+    Latitude: 45.94541
+    Longitude: -66.66558
+    label: Fredericton
+  '9':
+    Country: Canada
+    Internal: '1'
+    Latitude: 46.23525
+    Longitude: -63.12671
+    label: Charlottetown

@@ -1,63 +1,265 @@
-nodes:
-  '0': {Latitude: 47.49801, Longitude: 19.03991}
-  '1': {Latitude: 48.1, Longitude: 20.78333}
-  '2': {Latitude: 48.09872, Longitude: 19.80303}
-  '3': {Latitude: 47.6, Longitude: 19.36667}
-  '4': {Latitude: 47.18333, Longitude: 20.2}
-  '5': {Latitude: 46.98333, Longitude: 18.93333}
-  '6': {Latitude: 47.95539, Longitude: 21.71671}
-  '7': {Latitude: 47.53333, Longitude: 21.63333}
-  '8': {Latitude: 46.90618, Longitude: 19.69128}
-  '9': {Latitude: 46.18333, Longitude: 18.96667}
-  '10': {Latitude: 46.08333, Longitude: 18.23333}
-  '11': {Latitude: 46.253, Longitude: 20.14824}
-  '12': {Latitude: 46.253, Longitude: 20.14824}
-  '13': {Latitude: 46.9, Longitude: 18.05}
-  '14': {Latitude: 46.36667, Longitude: 17.8}
-  '15': {Latitude: 46.35, Longitude: 18.71667}
-  '16': {Latitude: 47.49801, Longitude: 19.03991}
-  '17': {Latitude: 47.68333, Longitude: 16.6}
-  '18': {Latitude: 47.68333, Longitude: 17.63512}
-  '19': {Latitude: 46.68333, Longitude: 21.1}
-  '20': {Latitude: 47.49801, Longitude: 19.03991}
-  '21': {Latitude: 47.78333, Longitude: 19.13333}
-  '22': {Latitude: 47.68333, Longitude: 16.6}
-  '23': {Latitude: 47.23088, Longitude: 16.62155}
-  '24': {Latitude: 46.84, Longitude: 16.84389}
-  '25': {Latitude: 46.45347, Longitude: 16.99104}
-  '26': {Latitude: 47.18995, Longitude: 18.41034}
-  '27': {Latitude: 47.09327, Longitude: 17.91149}
-  '28': {Latitude: 47.68333, Longitude: 17.63512}
-  '29': {Latitude: 47.56667, Longitude: 18.41667}
 edges:
-- ['0', '20']
-- ['1', '20']
-- ['2', '20']
-- ['3', '20']
-- ['4', '20']
-- ['4', '7']
-- ['5', '8']
-- ['5', '20']
-- ['6', '20']
-- ['7', '12']
-- ['8', '12']
-- ['9', '20']
-- ['10', '20']
-- ['11', '12']
-- ['12', '19']
-- ['13', '20']
-- ['14', '20']
-- ['15', '20']
-- ['16', '20']
-- ['17', '22']
-- ['18', '28']
-- ['20', '21']
-- ['20', '25']
-- ['20', '26']
-- ['20', '29']
-- ['22', '28']
-- ['22', '23']
-- ['23', '24']
-- ['24', '27']
-- ['26', '27']
-- ['28', '29']
+- - '0'
+  - '20'
+- - '1'
+  - '20'
+- - '2'
+  - '20'
+- - '3'
+  - '20'
+- - '4'
+  - '20'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '5'
+  - '20'
+- - '6'
+  - '20'
+- - '7'
+  - '12'
+- - '8'
+  - '12'
+- - '9'
+  - '20'
+- - '10'
+  - '20'
+- - '11'
+  - '12'
+- - '12'
+  - '19'
+- - '13'
+  - '20'
+- - '14'
+  - '20'
+- - '15'
+  - '20'
+- - '16'
+  - '20'
+- - '17'
+  - '22'
+- - '18'
+  - '28'
+- - '20'
+  - '21'
+- - '20'
+  - '25'
+- - '20'
+  - '26'
+- - '20'
+  - '29'
+- - '22'
+  - '28'
+- - '22'
+  - '23'
+- - '23'
+  - '24'
+- - '24'
+  - '27'
+- - '26'
+  - '27'
+- - '28'
+  - '29'
+nodes:
+  '0':
+    Internal: '1'
+    Latitude: 47.49801
+    Longitude: 19.03991
+    label: None
+    type: Small Node
+  '1':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 48.1
+    Longitude: 20.78333
+    label: Miskolc
+    type: Small Node
+  '10':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.08333
+    Longitude: 18.23333
+    label: Pecs
+    type: Small Node
+  '11':
+    Internal: '0'
+    Latitude: 46.253
+    Longitude: 20.14824
+    label: None
+  '12':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.253
+    Longitude: 20.14824
+    label: Szeged
+    type: Small Node
+  '13':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.9
+    Longitude: 18.05
+    label: Siofok
+    type: Small Node
+  '14':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.36667
+    Longitude: 17.8
+    label: Kaposvar
+    type: Small Node
+  '15':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.35
+    Longitude: 18.71667
+    label: Szekszard
+    type: Small Node
+  '16':
+    Internal: '0'
+    Latitude: 47.49801
+    Longitude: 19.03991
+    label: None
+  '17':
+    Internal: '0'
+    Latitude: 47.68333
+    Longitude: 16.6
+    label: Vienna
+  '18':
+    Internal: '0'
+    Latitude: 47.68333
+    Longitude: 17.63512
+    label: Bratislava
+  '19':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.68333
+    Longitude: 21.1
+    label: Bekescsaba
+    type: Small Node
+  '2':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 48.09872
+    Longitude: 19.80303
+    label: Salgotarjan
+    type: Small Node
+  '20':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.49801
+    Longitude: 19.03991
+    label: Budapest
+    type: Large Node
+  '21':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.78333
+    Longitude: 19.13333
+    label: Vac
+    type: Small Node
+  '22':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.68333
+    Longitude: 16.6
+    label: Sopron
+    type: Small Node
+  '23':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.23088
+    Longitude: 16.62155
+    label: Szombathely
+    type: Small Node
+  '24':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.84
+    Longitude: 16.84389
+    label: Zalaegerszeg
+    type: Small Node
+  '25':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.45347
+    Longitude: 16.99104
+    label: Nagykanizsa
+    type: Small Node
+  '26':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.18995
+    Longitude: 18.41034
+    label: Szekesfehervar
+    type: Small Node
+  '27':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.09327
+    Longitude: 17.91149
+    label: Veszprem
+    type: Small Node
+  '28':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.68333
+    Longitude: 17.63512
+    label: Gyor
+    type: Small Node
+  '29':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.56667
+    Longitude: 18.41667
+    label: Tatabanya
+    type: Small Node
+  '3':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.6
+    Longitude: 19.36667
+    label: Godollo
+    type: Small Node
+  '4':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.18333
+    Longitude: 20.2
+    label: Szolnok
+    type: Small Node
+  '5':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.98333
+    Longitude: 18.93333
+    label: Dunaujvaros
+    type: Small Node
+  '6':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.95539
+    Longitude: 21.71671
+    label: Nyiregyhaza
+    type: Small Node
+  '7':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.53333
+    Longitude: 21.63333
+    label: Debrecen
+    type: Small Node
+  '8':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.90618
+    Longitude: 19.69128
+    label: Kecskemet
+    type: Small Node
+  '9':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 46.18333
+    Longitude: 18.96667
+    label: Baja
+    type: Small Node

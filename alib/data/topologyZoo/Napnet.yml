@@ -1,15 +1,52 @@
-nodes:
-  '0': {Latitude: 47.60621, Longitude: -122.33207}
-  '1': {Latitude: 37.33939, Longitude: -121.89496}
-  '2': {Latitude: 44.97997, Longitude: -93.26384}
-  '3': {Latitude: 41.85003, Longitude: -87.65005}
-  '4': {Latitude: 38.90122, Longitude: -77.26526}
-  '5': {Latitude: 32.78306, Longitude: -96.80667}
 edges:
-- ['0', '1']
-- ['0', '3']
-- ['1', '3']
-- ['1', '4']
-- ['2', '3']
-- ['3', '4']
-- ['3', '5']
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '1'
+  - '3'
+- - '1'
+  - '4'
+- - '2'
+  - '3'
+- - '3'
+  - '4'
+- - '3'
+  - '5'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.33939
+    Longitude: -121.89496
+    label: San Jose
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 44.97997
+    Longitude: -93.26384
+    label: Minneapolis
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.90122
+    Longitude: -77.26526
+    label: Vienna
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.78306
+    Longitude: -96.80667
+    label: Dallas

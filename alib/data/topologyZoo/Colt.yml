@@ -1,0 +1,1451 @@
+edges:
+- - '0'
+  - '1'
+- - '0'
+  - '10'
+- - '0'
+  - '99'
+- - '0'
+  - '99'
+- - '2'
+  - '144'
+- - '2'
+  - '51'
+- - '3'
+  - '144'
+- - '3'
+  - '144'
+- - '4'
+  - '8'
+- - '4'
+  - '5'
+- - '5'
+  - '144'
+- - '5'
+  - '11'
+- - '6'
+  - '11'
+- - '6'
+  - '7'
+- - '7'
+  - '144'
+- - '8'
+  - '13'
+- - '9'
+  - '13'
+- - '9'
+  - '13'
+- - '10'
+  - '97'
+- - '10'
+  - '97'
+- - '10'
+  - '98'
+- - '10'
+  - '98'
+- - '10'
+  - '101'
+- - '10'
+  - '11'
+- - '10'
+  - '13'
+- - '12'
+  - '141'
+- - '12'
+  - '30'
+- - '13'
+  - '119'
+- - '14'
+  - '17'
+- - '14'
+  - '141'
+- - '15'
+  - '18'
+- - '15'
+  - '19'
+- - '15'
+  - '132'
+- - '16'
+  - '51'
+- - '16'
+  - '60'
+- - '17'
+  - '136'
+- - '17'
+  - '143'
+- - '17'
+  - '134'
+- - '17'
+  - '133'
+- - '17'
+  - '133'
+- - '18'
+  - '142'
+- - '19'
+  - '49'
+- - '20'
+  - '23'
+- - '21'
+  - '81'
+- - '22'
+  - '23'
+- - '23'
+  - '151'
+- - '23'
+  - '151'
+- - '24'
+  - '81'
+- - '25'
+  - '81'
+- - '26'
+  - '81'
+- - '27'
+  - '81'
+- - '28'
+  - '140'
+- - '28'
+  - '29'
+- - '30'
+  - '118'
+- - '30'
+  - '119'
+- - '31'
+  - '119'
+- - '31'
+  - '119'
+- - '32'
+  - '33'
+- - '32'
+  - '35'
+- - '33'
+  - '74'
+- - '33'
+  - '38'
+- - '34'
+  - '119'
+- - '34'
+  - '119'
+- - '35'
+  - '74'
+- - '36'
+  - '73'
+- - '36'
+  - '39'
+- - '37'
+  - '73'
+- - '38'
+  - '74'
+- - '39'
+  - '124'
+- - '40'
+  - '142'
+- - '41'
+  - '142'
+- - '42'
+  - '142'
+- - '43'
+  - '142'
+- - '44'
+  - '142'
+- - '45'
+  - '49'
+- - '46'
+  - '142'
+- - '47'
+  - '142'
+- - '48'
+  - '49'
+- - '49'
+  - '129'
+- - '50'
+  - '56'
+- - '50'
+  - '58'
+- - '50'
+  - '51'
+- - '50'
+  - '52'
+- - '50'
+  - '53'
+- - '51'
+  - '136'
+- - '51'
+  - '53'
+- - '51'
+  - '92'
+- - '51'
+  - '127'
+- - '51'
+  - '127'
+- - '53'
+  - '92'
+- - '54'
+  - '139'
+- - '54'
+  - '140'
+- - '54'
+  - '55'
+- - '55'
+  - '140'
+- - '56'
+  - '57'
+- - '56'
+  - '57'
+- - '56'
+  - '59'
+- - '58'
+  - '59'
+- - '60'
+  - '128'
+- - '60'
+  - '144'
+- - '61'
+  - '81'
+- - '62'
+  - '115'
+- - '62'
+  - '140'
+- - '62'
+  - '94'
+- - '63'
+  - '125'
+- - '63'
+  - '126'
+- - '64'
+  - '72'
+- - '64'
+  - '126'
+- - '65'
+  - '152'
+- - '66'
+  - '152'
+- - '66'
+  - '68'
+- - '67'
+  - '152'
+- - '68'
+  - '81'
+- - '68'
+  - '108'
+- - '69'
+  - '152'
+- - '70'
+  - '152'
+- - '71'
+  - '152'
+- - '72'
+  - '152'
+- - '73'
+  - '120'
+- - '73'
+  - '117'
+- - '74'
+  - '117'
+- - '74'
+  - '125'
+- - '75'
+  - '140'
+- - '75'
+  - '150'
+- - '76'
+  - '140'
+- - '76'
+  - '77'
+- - '77'
+  - '150'
+- - '78'
+  - '115'
+- - '78'
+  - '142'
+- - '78'
+  - '94'
+- - '79'
+  - '137'
+- - '79'
+  - '122'
+- - '79'
+  - '84'
+- - '80'
+  - '137'
+- - '80'
+  - '151'
+- - '81'
+  - '107'
+- - '81'
+  - '93'
+- - '82'
+  - '83'
+- - '82'
+  - '138'
+- - '82'
+  - '123'
+- - '82'
+  - '84'
+- - '85'
+  - '123'
+- - '86'
+  - '121'
+- - '86'
+  - '122'
+- - '86'
+  - '151'
+- - '87'
+  - '152'
+- - '88'
+  - '152'
+- - '89'
+  - '152'
+- - '90'
+  - '138'
+- - '91'
+  - '140'
+- - '91'
+  - '150'
+- - '95'
+  - '107'
+- - '96'
+  - '152'
+- - '97'
+  - '100'
+- - '97'
+  - '100'
+- - '98'
+  - '101'
+- - '99'
+  - '102'
+- - '99'
+  - '102'
+- - '101'
+  - '104'
+- - '101'
+  - '104'
+- - '103'
+  - '152'
+- - '105'
+  - '106'
+- - '105'
+  - '108'
+- - '106'
+  - '152'
+- - '107'
+  - '111'
+- - '109'
+  - '112'
+- - '109'
+  - '152'
+- - '110'
+  - '152'
+- - '111'
+  - '112'
+- - '113'
+  - '152'
+- - '114'
+  - '152'
+- - '115'
+  - '139'
+- - '116'
+  - '142'
+- - '117'
+  - '118'
+- - '118'
+  - '139'
+- - '121'
+  - '148'
+- - '123'
+  - '145'
+- - '123'
+  - '139'
+- - '123'
+  - '124'
+- - '129'
+  - '131'
+- - '130'
+  - '143'
+- - '131'
+  - '143'
+- - '132'
+  - '143'
+- - '134'
+  - '135'
+- - '135'
+  - '136'
+- - '138'
+  - '152'
+- - '139'
+  - '146'
+- - '139'
+  - '149'
+- - '140'
+  - '142'
+- - '146'
+  - '147'
+- - '148'
+  - '149'
+nodes:
+  '0':
+    Country: Austria
+    Internal: '1'
+    Latitude: 48.30639
+    Longitude: 14.28611
+    label: Linz
+    type: Colt connected City
+  '1':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.42391
+    Longitude: 9.37477
+    label: St Pollen
+    type: Colt connected City
+  '10':
+    Country: Austria
+    Internal: '1'
+    Latitude: 48.20849
+    Longitude: 16.37208
+    label: Vienna
+    type: MAN
+  '100':
+    Country: Austria
+    Internal: '1'
+    Latitude: 46.62472
+    Longitude: 14.30528
+    label: Klagenfurt
+    type: Colt connected City
+  '101':
+    Country: Hungary
+    Internal: '1'
+    Latitude: 47.49801
+    Longitude: 19.03991
+    label: Budapest
+    type: Colt connected City
+  '102':
+    Country: Austria
+    Internal: '1'
+    Latitude: 47.26266
+    Longitude: 11.39454
+    label: Innsbruck
+    type: Colt connected City
+  '103':
+    Country: Italy
+    Internal: '1'
+    Latitude: 46.06787
+    Longitude: 11.12108
+    label: Trento
+    type: Colt connected City
+  '104':
+    Country: Romania
+    Internal: '1'
+    Latitude: 44.43225
+    Longitude: 26.10626
+    label: Bucharest
+    type: Colt connected City
+  '105':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.64783
+    Longitude: 10.92539
+    label: Modena
+    type: Colt connected City
+  '106':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.69825
+    Longitude: 10.63125
+    label: Reggio Emilia
+    type: Colt connected City
+  '107':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.41519
+    Longitude: 11.88181
+    label: Padova
+    type: Colt connected City
+  '108':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.49381
+    Longitude: 11.33875
+    label: Bologna
+    type: Colt connected City
+  '109':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.69798
+    Longitude: 9.66895
+    label: Bergamo
+    type: Colt connected City
+  '11':
+    Country: Czech Republic
+    Internal: '1'
+    Latitude: 50.08804
+    Longitude: 14.42076
+    label: Prague
+    type: MAN
+  '110':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.58248
+    Longitude: 9.27485
+    label: Monza
+    type: Colt connected City
+  '111':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.43419
+    Longitude: 10.99779
+    label: Verona
+    type: Colt connected City
+  '112':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.52478
+    Longitude: 10.22727
+    label: Brescia
+    type: Colt connected City
+  '113':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.64861
+    Longitude: 13.78
+    label: Trieste
+    type: Colt connected City
+  '114':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.55729
+    Longitude: 11.5409
+    label: Vicenza
+    type: Colt connected City
+  '115':
+    Country: France
+    Internal: '1'
+    Latitude: 50.63333
+    Longitude: 3.06667
+    label: Lille
+    type: Colt connected City
+  '116':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.82803
+    Longitude: 3.26487
+    label: Kortnijk
+    type: Colt connected City
+  '117':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.56667
+    Longitude: 7.6
+    label: Basel
+    type: MAN
+  '118':
+    Country: France
+    Internal: '1'
+    Latitude: 48.58333
+    Longitude: 7.75
+    label: Strasbourg
+    type: MAN
+  '119':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.78232
+    Longitude: 9.17702
+    label: Stuttgart
+    type: MAN
+  '12':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.48833
+    Longitude: 8.46472
+    label: Mannheim
+    type: Colt connected City
+  '120':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 46.94809
+    Longitude: 7.44744
+    label: Bern
+    type: MAN
+  '121':
+    Country: France
+    Internal: '1'
+    Latitude: 47.21725
+    Longitude: -1.55336
+    label: Nantes
+    type: MAN
+  '122':
+    Country: France
+    Internal: '1'
+    Latitude: 43.60426
+    Longitude: 1.44367
+    label: Toulouse
+    type: MAN
+  '123':
+    Country: France
+    Internal: '1'
+    Latitude: 45.75
+    Longitude: 4.85
+    label: Lyon
+    type: MAN
+  '124':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 46.20222
+    Longitude: 6.14569
+    label: Geneve
+    type: MAN
+  '125':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.16667
+    Longitude: 8.51667
+    label: Zug
+    type: MAN
+  '126':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 46.01008
+    Longitude: 8.96004
+    label: Lugano
+    type: MAN
+  '127':
+    Country: Germany
+    Internal: '1'
+    Latitude: 53.07516
+    Longitude: 8.80777
+    label: Bremen
+    type: Colt connected City
+  '128':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.16667
+    Longitude: 11.66667
+    label: Magdemburg
+    type: Colt connected City
+  '129':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.09083
+    Longitude: 5.12222
+    label: Utrecht
+    type: Colt connected City
+  '13':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.13743
+    Longitude: 11.57549
+    label: Munich
+    type: MAN
+  '130':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.37025
+    Longitude: 5.21413
+    label: Almere
+    type: Colt connected City
+  '131':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.22333
+    Longitude: 5.17639
+    label: Hilversum
+    type: Colt connected City
+  '132':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.3025
+    Longitude: 4.68889
+    label: Hoofddorp
+    type: Colt connected City
+  '133':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.2
+    Longitude: 6.68333
+    label: Neuss
+    type: Colt connected City
+  '134':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.26667
+    Longitude: 7.18333
+    label: Wuppertal
+    type: Colt connected City
+  '135':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.51667
+    Longitude: 7.45
+    label: Dortmund
+    type: Colt connected City
+  '136':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.45
+    Longitude: 7.01667
+    label: Essen
+    type: Colt connected City
+  '137':
+    Country: Spain
+    Internal: '1'
+    Latitude: 41.38879
+    Longitude: 2.15899
+    label: Barcelona
+    type: Data Centre and MAN
+  '138':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.07049
+    Longitude: 7.68682
+    label: Turin
+    type: Data Centre and MAN
+  '139':
+    Country: France
+    Internal: '1'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: Paris
+    type: Data Centre and MAN
+  '14':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.93333
+    Longitude: 6.95
+    label: Cologne
+    type: MAN
+  '140':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: London
+    type: Data Centre and MAN
+  '141':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.11667
+    Longitude: 8.68333
+    label: Frankfurt
+    type: Data Centre and MAN
+  '142':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.85045
+    Longitude: 4.34878
+    label: Brussels
+    type: Data Centre and MAN
+  '143':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.37403
+    Longitude: 4.88969
+    label: Amsterdam
+    type: Data Centre and MAN
+  '144':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.52437
+    Longitude: 13.41053
+    label: Berlin
+    type: Data Centre and MAN
+  '145':
+    Country: France
+    Internal: '1'
+    Latitude: 47.31667
+    Longitude: 5.01667
+    label: Dijon
+    type: Colt connected City
+  '146':
+    Country: France
+    Internal: '1'
+    Latitude: 47.38333
+    Longitude: 0.68333
+    label: Tours
+    type: Colt connected City
+  '147':
+    Country: France
+    Internal: '1'
+    Latitude: 46.58333
+    Longitude: 0.33333
+    label: Poitiers
+    type: Colt connected City
+  '148':
+    Country: France
+    Internal: '1'
+    Latitude: 48.08333
+    Longitude: -1.68333
+    label: Rennes
+    type: Colt connected City
+  '149':
+    Country: France
+    Internal: '1'
+    Latitude: 49.44313
+    Longitude: 1.09932
+    label: Rouen
+    type: Colt connected City
+  '15':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.07667
+    Longitude: 4.29861
+    label: The Hague
+    type: MAN
+  '150':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.45
+    Longitude: -2.58333
+    label: Bristol
+    type: Colt connected City
+  '151':
+    Country: Spain
+    Internal: '1'
+    Latitude: 40.4165
+    Longitude: -3.70256
+    label: Madrid
+    type: Data Centre and MAN
+  '152':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.46427
+    Longitude: 9.18951
+    label: Milan
+    type: Data Centre and MAN
+  '16':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.37052
+    Longitude: 9.73322
+    label: Hannover
+    type: MAN
+  '17':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.22172
+    Longitude: 6.77616
+    label: Dusseldorf
+    type: MAN
+  '18':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.21667
+    Longitude: 4.41667
+    label: Antwerp
+    type: MAN
+  '19':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 51.9225
+    Longitude: 4.47917
+    label: Rotterdam
+    type: MAN
+  '2':
+    Country: Germany
+    Internal: '1'
+    Latitude: 54.0887
+    Longitude: 12.14049
+    label: Rostock
+    type: Colt connected City
+  '20':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 38.80097
+    Longitude: -9.37826
+    label: Sintra
+    type: Colt connected City
+  '21':
+    Country: Italy
+    Internal: '1'
+    Latitude: 37.50213
+    Longitude: 15.08719
+    label: Catania
+    type: Colt connected City
+  '22':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 41.15
+    Longitude: -8.61667
+    label: Porto
+    type: MAN
+  '23':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 38.71667
+    Longitude: -9.13333
+    label: Lisbon
+    type: Data Centre and MAN
+  '24':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.72722
+    Longitude: 8.56028
+    label: Sassari
+    type: Colt connected City
+  '25':
+    Country: Italy
+    Internal: '1'
+    Latitude: 41.11773
+    Longitude: 16.85118
+    label: Bari
+    type: Colt connected City
+  '26':
+    Country: Italy
+    Internal: '1'
+    Latitude: 38.11582
+    Longitude: 13.35976
+    label: Palermo
+    type: Colt connected City
+  '27':
+    Country: Italy
+    Internal: '1'
+    Latitude: 39.20738
+    Longitude: 9.13462
+    label: Cagliari
+    type: Colt connected City
+  '28':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 52.98333
+    Longitude: -0.01667
+    label: Boston
+    type: Colt connected City
+  '29':
+    Country: Sweden
+    Internal: '1'
+    Latitude: 59.38333
+    Longitude: 16.43333
+    label: Chicago
+    type: Colt connected City
+  '3':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.39886
+    Longitude: 13.06566
+    label: Potsdam
+    type: Colt connected City
+  '30':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.00472
+    Longitude: 8.38583
+    label: Karlsruhe
+    type: Colt connected City
+  '31':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.68333
+    Longitude: 9.01667
+    label: Boblingen
+    type: Colt connected City
+  '32':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.36453
+    Longitude: 8.79202
+    label: Pfaffikon
+    type: Colt connected City
+  '33':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.42971
+    Longitude: 9.37614
+    label: St Gallen
+    type: Colt connected City
+  '34':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.73961
+    Longitude: 9.30473
+    label: Esslingen
+    type: Colt connected City
+  '35':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.5
+    Longitude: 8.75
+    label: Winterthur
+    type: Colt connected City
+  '36':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 46.516
+    Longitude: 6.63282
+    label: Lausanne
+    type: Colt connected City
+  '37':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.1324
+    Longitude: 7.24411
+    label: Biel/Bienne
+    type: Colt connected City
+  '38':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.7
+    Longitude: 8.63333
+    label: Schaffhausen
+    type: Colt connected City
+  '39':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 46.38318
+    Longitude: 6.23955
+    label: Nyon
+    type: Colt connected City
+  '4':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.33962
+    Longitude: 12.37129
+    label: Leipzig
+    type: Colt connected City
+  '40':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.41667
+    Longitude: 4.43333
+    label: Charleroi
+    type: Colt connected City
+  '41':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.64119
+    Longitude: 5.57178
+    label: Liege
+    type: Colt connected City
+  '42':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.83619
+    Longitude: 4.31454
+    label: Anderlecht
+    type: Colt connected City
+  '43':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.45413
+    Longitude: 3.95229
+    label: Mons
+    type: Colt connected City
+  '44':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.87959
+    Longitude: 4.70093
+    label: Leuven
+    type: Colt connected City
+  '45':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 51.44083
+    Longitude: 5.47778
+    label: Eindhoven
+    type: Colt connected City
+  '46':
+    Country: Luxembourg
+    Internal: '1'
+    Latitude: 49.61167
+    Longitude: 6.13
+    label: Luxembourg
+    type: Colt connected City
+  '47':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 50.86667
+    Longitude: 4.4
+    label: Evere
+    type: Colt connected City
+  '48':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 51.58656
+    Longitude: 4.77596
+    label: Breda
+    type: Colt connected City
+  '49':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 51.69917
+    Longitude: 5.30417
+    label: Den Bosch
+    type: Colt connected City
+  '5':
+    Country: Germany
+    Internal: '1'
+    Latitude: 51.05089
+    Longitude: 13.73832
+    label: Dresden
+    type: Colt connected City
+  '50':
+    Country: Denmark
+    Internal: '1'
+    Latitude: 55.67594
+    Longitude: 12.56553
+    label: Copenhagen
+    type: Data Centre and MAN
+  '51':
+    Country: Germany
+    Internal: '1'
+    Latitude: 53.55
+    Longitude: 10.0
+    label: Hamburg
+    type: Data Centre and MAN
+  '52':
+    Country: Sweden
+    Internal: '1'
+    Latitude: 55.60587
+    Longitude: 13.00073
+    label: Malmo
+    type: Colt connected City
+  '53':
+    Country: Denmark
+    Internal: '1'
+    Latitude: 56.15674
+    Longitude: 10.21076
+    label: Aarhus
+    type: Colt connected City
+  '54':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.06667
+    Longitude: -0.81667
+    label: Newark
+    type: Colt connected City
+  '55':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.07897
+    Longitude: -0.14008
+    label: New York
+    type: Colt connected City
+  '56':
+    Country: Sweden
+    Internal: '1'
+    Latitude: 59.33258
+    Longitude: 18.0649
+    label: Stockholm
+    type: MAN
+  '57':
+    Country: Finland
+    Internal: '1'
+    Latitude: 60.16952
+    Longitude: 24.93545
+    label: Helsinki
+    type: Colt connected City
+  '58':
+    Country: Sweden
+    Internal: '1'
+    Latitude: 57.70716
+    Longitude: 11.96679
+    label: Gothenburg
+    type: Colt connected City
+  '59':
+    Country: Norway
+    Internal: '1'
+    Latitude: 59.91273
+    Longitude: 10.74609
+    label: Oslo
+    type: Colt connected City
+  '6':
+    Country: Poland
+    Internal: '1'
+    Latitude: 50.08333
+    Longitude: 19.91667
+    label: Krakov
+    type: Colt connected City
+  '60':
+    Internal: '1'
+    Latitude: 52.35385333333334
+    Longitude: 11.603473333333334
+    hyperedge: '1'
+    label: None
+  '61':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.62773
+    Longitude: 17.93682
+    label: Brindisi
+    type: Colt connected City
+  '62':
+    Internal: '1'
+    Latitude: 51.12175
+    Longitude: 1.9509266666666665
+    hyperedge: '1'
+    label: None
+  '63':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.05048
+    Longitude: 8.30635
+    label: Lucerne
+    type: Colt connected City
+  '64':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 45.83333
+    Longitude: 9.03333
+    label: Chiasso
+    type: Colt connected City
+  '65':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.04676
+    Longitude: 9.69937
+    label: Piacenza
+    type: Colt connected City
+  '66':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.40632
+    Longitude: 8.93386
+    label: Genova
+    type: Colt connected City
+  '67':
+    Country: Italy
+    Internal: '1'
+    Latitude: 43.54264
+    Longitude: 10.316
+    label: Livorno
+    type: Colt connected City
+  '68':
+    Country: Italy
+    Internal: '1'
+    Latitude: 43.76667
+    Longitude: 11.25
+    label: Firenze
+    type: Colt connected City
+  '69':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.06333
+    Longitude: 12.58083
+    label: Rimini
+    type: Colt connected City
+  '7':
+    Country: Poland
+    Internal: '1'
+    Latitude: 52.22977
+    Longitude: 21.01178
+    label: Warsaw
+    type: Colt connected City
+  '70':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.80266
+    Longitude: 10.32898
+    label: Parma
+    type: Colt connected City
+  '71':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.82908
+    Longitude: 8.82193
+    label: Varese
+    type: Colt connected City
+  '72':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.80998
+    Longitude: 9.08744
+    label: Como
+    type: Colt connected City
+  '73':
+    Internal: '1'
+    Latitude: 47.04079
+    Longitude: 7.231092499999999
+    hyperedge: '1'
+    label: None
+  '74':
+    Country: Switzerland
+    Internal: '1'
+    Latitude: 47.36667
+    Longitude: 8.55
+    label: Zurich
+    type: Data Centre and MAN
+  '75':
+    Country: Ireland
+    Internal: '1'
+    Latitude: 53.34399
+    Longitude: -6.26719
+    label: Dublin
+    type: MAN
+  '76':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.48095
+    Longitude: -2.23743
+    label: Manchester
+    type: MAN
+  '77':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 52.46667
+    Longitude: -1.91667
+    label: Birmingham
+    type: MAN
+  '78':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.05
+    Longitude: 3.71667
+    label: Ghent
+    type: MAN
+  '79':
+    Internal: '1'
+    Latitude: 42.86435
+    Longitude: 2.49533
+    hyperedge: '1'
+    label: None
+  '8':
+    Country: Germany
+    Internal: '1'
+    Latitude: 49.44778
+    Longitude: 11.06833
+    label: Nuremberg
+    type: Colt connected City
+  '80':
+    Country: Spain
+    Internal: '1'
+    Latitude: 39.46975
+    Longitude: -0.37739
+    label: Valencia
+    type: MAN
+  '81':
+    Country: Italy
+    Internal: '1'
+    Latitude: 41.89474
+    Longitude: 12.4839
+    label: Rome
+    type: MAN
+  '82':
+    Country: France
+    Internal: '1'
+    Latitude: 43.29695
+    Longitude: 5.38107
+    label: Marseille
+    type: MAN
+  '83':
+    Country: France
+    Internal: '1'
+    Latitude: 43.70313
+    Longitude: 7.26608
+    label: Nice
+    type: Colt connected City
+  '84':
+    Country: France
+    Internal: '1'
+    Latitude: 43.6
+    Longitude: 3.88333
+    label: Montpellier
+    type: Colt connected City
+  '85':
+    Country: France
+    Internal: '1'
+    Latitude: 45.16667
+    Longitude: 5.71667
+    label: Grenoble
+    type: Colt connected City
+  '86':
+    Country: France
+    Internal: '1'
+    Latitude: 44.83333
+    Longitude: -0.56667
+    label: Bordeaux
+    type: Colt connected City
+  '87':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.70237
+    Longitude: 8.45813
+    label: Borgomanero
+    type: Colt connected City
+  '88':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.44056
+    Longitude: 8.61684
+    label: Novara
+    type: Colt connected City
+  '89':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.55986
+    Longitude: 8.05002
+    label: Biella
+    type: Colt connected City
+  '9':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.30603
+    Longitude: 11.90686
+    label: Erding
+    type: Colt connected City
+  '90':
+    Country: Italy
+    Internal: '1'
+    Latitude: 44.39733
+    Longitude: 7.54453
+    label: Cuneo
+    type: Colt connected City
+  '91':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.45625
+    Longitude: -0.97113
+    label: Reading
+    type: Colt connected City
+  '92':
+    Country: Denmark
+    Internal: '1'
+    Latitude: 55.4904
+    Longitude: 9.47216
+    label: Kolding
+    type: Colt connected City
+  '93':
+    Country: Italy
+    Internal: '1'
+    Latitude: 40.83333
+    Longitude: 14.25
+    label: Napoli
+    type: Colt connected City
+  '94':
+    Country: Belgium
+    Internal: '1'
+    Latitude: 51.22339
+    Longitude: 2.91185
+    label: Ostend
+    type: Colt connected City
+  '95':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.43861
+    Longitude: 12.32667
+    label: Venezia
+    type: Colt connected City
+  '96':
+    Country: Italy
+    Internal: '1'
+    Latitude: 45.66667
+    Longitude: 12.245
+    label: Treviso
+    type: Colt connected City
+  '97':
+    Country: Austria
+    Internal: '1'
+    Latitude: 47.06667
+    Longitude: 15.45
+    label: Graz
+    type: Colt connected City
+  '98':
+    Country: Slovakia
+    Internal: '1'
+    Latitude: 48.14816
+    Longitude: 17.10674
+    label: Bratislava
+    type: Colt connected City
+  '99':
+    Country: Austria
+    Internal: '1'
+    Latitude: 47.79941
+    Longitude: 13.04399
+    label: Salzburg
+    type: Colt connected City

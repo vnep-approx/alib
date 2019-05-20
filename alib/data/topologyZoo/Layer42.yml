@@ -1,15 +1,52 @@
-nodes:
-  '0': {Latitude: 47.60621, Longitude: -122.33207}
-  '1': {Latitude: 37.77493, Longitude: -122.41942}
-  '2': {Latitude: 34.05223, Longitude: -118.24368}
-  '3': {Latitude: 41.85003, Longitude: -87.65005}
-  '4': {Latitude: 40.71427, Longitude: -74.00597}
-  '5': {Latitude: 38.89511, Longitude: -77.03637}
 edges:
-- ['0', '1']
-- ['1', '2']
-- ['1', '3']
-- ['1', '5']
-- ['3', '4']
-- ['3', '5']
-- ['4', '5']
+- - '0'
+  - '1'
+- - '1'
+  - '2'
+- - '1'
+  - '3'
+- - '1'
+  - '5'
+- - '3'
+  - '4'
+- - '3'
+  - '5'
+- - '4'
+  - '5'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: Seattle
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.77493
+    Longitude: -122.41942
+    label: San Francisco
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 34.05223
+    Longitude: -118.24368
+    label: Los Angeles
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 41.85003
+    Longitude: -87.65005
+    label: Chicago
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: New York City
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 38.89511
+    Longitude: -77.03637
+    label: Washington DC

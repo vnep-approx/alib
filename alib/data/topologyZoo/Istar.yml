@@ -1,48 +1,182 @@
-nodes:
-  '0': {Latitude: 45.50884, Longitude: -73.58781}
-  '1': {Latitude: 46.81228, Longitude: -71.21454}
-  '2': {Latitude: 42.98339, Longitude: -81.23304}
-  '3': {Latitude: 43.70011, Longitude: -79.4163}
-  '4': {Latitude: 46.11594, Longitude: -64.80186}
-  '5': {Latitude: 44.646, Longitude: -63.57333}
-  '6': {Latitude: 45.40008, Longitude: -71.89908}
-  '7': {Latitude: 45.27271, Longitude: -66.06766}
-  '8': {Latitude: 46.1351, Longitude: -60.1831}
-  '9': {Latitude: 43.83345, Longitude: -66.11557}
-  '10': {Latitude: 43.70011, Longitude: -79.4163}
-  '11': {Latitude: 49.24966, Longitude: -123.11934}
-  '12': {Latitude: 48.43294, Longitude: -123.3693}
-  '13': {Latitude: 43.70011, Longitude: -79.4163}
-  '14': {Latitude: 43.23341, Longitude: -79.94964}
-  '15': {Latitude: 49.24966, Longitude: -123.11934}
-  '16': {Latitude: 49.24966, Longitude: -123.11934}
-  '17': {Latitude: 51.05011, Longitude: -114.08529}
-  '18': {Latitude: 53.55014, Longitude: -113.46871}
-  '19': {Latitude: 49.69999, Longitude: -112.81856}
-  '20': {Latitude: 49.8844, Longitude: -97.14704}
-  '21': {Latitude: 45.41117, Longitude: -75.69812}
-  '22': {Latitude: 43.4501, Longitude: -80.48299}
 edges:
-- ['0', '1']
-- ['0', '4']
-- ['0', '13']
-- ['0', '6']
-- ['0', '21']
-- ['2', '13']
-- ['3', '13']
-- ['4', '5']
-- ['4', '7']
-- ['5', '8']
-- ['5', '9']
-- ['10', '13']
-- ['11', '15']
-- ['12', '15']
-- ['13', '14']
-- ['13', '21']
-- ['13', '22']
-- ['15', '16']
-- ['15', '17']
-- ['15', '21']
-- ['17', '18']
-- ['17', '19']
-- ['20', '21']
+- - '0'
+  - '1'
+- - '0'
+  - '4'
+- - '0'
+  - '13'
+- - '0'
+  - '6'
+- - '0'
+  - '21'
+- - '2'
+  - '13'
+- - '3'
+  - '13'
+- - '4'
+  - '5'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '5'
+  - '9'
+- - '10'
+  - '13'
+- - '11'
+  - '15'
+- - '12'
+  - '15'
+- - '13'
+  - '14'
+- - '13'
+  - '21'
+- - '13'
+  - '22'
+- - '15'
+  - '16'
+- - '15'
+  - '17'
+- - '15'
+  - '21'
+- - '17'
+  - '18'
+- - '17'
+  - '19'
+- - '20'
+  - '21'
+nodes:
+  '0':
+    Country: Canada
+    Internal: '1'
+    Latitude: 45.50884
+    Longitude: -73.58781
+    label: Montreal
+  '1':
+    Country: Canada
+    Internal: '1'
+    Latitude: 46.81228
+    Longitude: -71.21454
+    label: Quebec
+  '10':
+    Internal: '0'
+    Latitude: 43.70011
+    Longitude: -79.4163
+    label: ANS CO+RE T1
+  '11':
+    Internal: '0'
+    Latitude: 49.24966
+    Longitude: -123.11934
+    label: internetMCI T3
+  '12':
+    Country: Canada
+    Internal: '1'
+    Latitude: 48.43294
+    Longitude: -123.3693
+    label: Victoria
+  '13':
+    Country: Canada
+    Internal: '1'
+    Latitude: 43.70011
+    Longitude: -79.4163
+    label: Toronto
+  '14':
+    Country: Canada
+    Internal: '1'
+    Latitude: 43.23341
+    Longitude: -79.94964
+    label: Hamilton
+  '15':
+    Country: Canada
+    Internal: '1'
+    Latitude: 49.24966
+    Longitude: -123.11934
+    label: Vancouver
+  '16':
+    Internal: '0'
+    Latitude: 49.24966
+    Longitude: -123.11934
+    label: ANS CO+RE T1
+  '17':
+    Country: Canada
+    Internal: '1'
+    Latitude: 51.05011
+    Longitude: -114.08529
+    label: Calgary
+  '18':
+    Country: Canada
+    Internal: '1'
+    Latitude: 53.55014
+    Longitude: -113.46871
+    label: Edmonton
+  '19':
+    Country: Canada
+    Internal: '1'
+    Latitude: 49.69999
+    Longitude: -112.81856
+    label: Lethbridge
+  '2':
+    Country: Canada
+    Internal: '1'
+    Latitude: 42.98339
+    Longitude: -81.23304
+    label: London
+  '20':
+    Country: Canada
+    Internal: '1'
+    Latitude: 49.8844
+    Longitude: -97.14704
+    label: Winnipeg
+  '21':
+    Country: Canada
+    Internal: '1'
+    Latitude: 45.41117
+    Longitude: -75.69812
+    label: Ottawa
+  '22':
+    Country: Canada
+    Internal: '1'
+    Latitude: 43.4501
+    Longitude: -80.48299
+    label: Kitchener
+  '3':
+    Internal: '0'
+    Latitude: 43.70011
+    Longitude: -79.4163
+    label: internetMCI T3
+  '4':
+    Country: Canada
+    Internal: '1'
+    Latitude: 46.11594
+    Longitude: -64.80186
+    label: Moncton
+  '5':
+    Country: Canada
+    Internal: '1'
+    Latitude: 44.646
+    Longitude: -63.57333
+    label: Halifax
+  '6':
+    Country: Canada
+    Internal: '1'
+    Latitude: 45.40008
+    Longitude: -71.89908
+    label: Sherbrooke
+  '7':
+    Country: Canada
+    Internal: '1'
+    Latitude: 45.27271
+    Longitude: -66.06766
+    label: Saint John
+  '8':
+    Country: Canada
+    Internal: '1'
+    Latitude: 46.1351
+    Longitude: -60.1831
+    label: Sydney
+  '9':
+    Country: Canada
+    Internal: '1'
+    Latitude: 43.83345
+    Longitude: -66.11557
+    label: Yarmouth

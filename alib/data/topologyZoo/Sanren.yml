@@ -1,16 +1,58 @@
-nodes:
-  '0': {Latitude: -26.20227, Longitude: 28.04363}
-  '1': {Latitude: -25.74486, Longitude: 28.18783}
-  '2': {Latitude: -29.85, Longitude: 31.01667}
-  '3': {Latitude: -29.13333, Longitude: 26.2}
-  '4': {Latitude: -33.01529, Longitude: 27.91162}
-  '5': {Latitude: -33.96667, Longitude: 25.58333}
-  '6': {Latitude: -33.91667, Longitude: 18.41667}
 edges:
-- ['0', '1']
-- ['0', '3']
-- ['1', '2']
-- ['2', '4']
-- ['3', '6']
-- ['4', '5']
-- ['5', '6']
+- - '0'
+  - '1'
+- - '0'
+  - '3'
+- - '1'
+  - '2'
+- - '2'
+  - '4'
+- - '3'
+  - '6'
+- - '4'
+  - '5'
+- - '5'
+  - '6'
+nodes:
+  '0':
+    Country: South Africa
+    Internal: '1'
+    Latitude: -26.20227
+    Longitude: 28.04363
+    label: Johannesburg
+  '1':
+    Country: South Africa
+    Internal: '1'
+    Latitude: -25.74486
+    Longitude: 28.18783
+    label: Pretoria
+  '2':
+    Country: South Africa
+    Internal: '1'
+    Latitude: -29.85
+    Longitude: 31.01667
+    label: Durban
+  '3':
+    Country: South Africa
+    Internal: '1'
+    Latitude: -29.13333
+    Longitude: 26.2
+    label: Bloemfontein
+  '4':
+    Country: South Africa
+    Internal: '1'
+    Latitude: -33.01529
+    Longitude: 27.91162
+    label: East London
+  '5':
+    Country: South Africa
+    Internal: '1'
+    Latitude: -33.96667
+    Longitude: 25.58333
+    label: Port Elizabeth
+  '6':
+    Country: South Africa
+    Internal: '1'
+    Latitude: -33.91667
+    Longitude: 18.41667
+    label: Cape Town

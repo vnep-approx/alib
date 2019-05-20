@@ -1,0 +1,210 @@
+edges:
+- - '0'
+  - '1'
+- - '0'
+  - '2'
+- - '0'
+  - '3'
+- - '0'
+  - '5'
+- - '0'
+  - '9'
+- - '1'
+  - '4'
+- - '1'
+  - '6'
+- - '1'
+  - '6'
+- - '1'
+  - '7'
+- - '2'
+  - '20'
+- - '2'
+  - '14'
+- - '3'
+  - '24'
+- - '3'
+  - '12'
+- - '3'
+  - '13'
+- - '3'
+  - '14'
+- - '4'
+  - '5'
+- - '5'
+  - '8'
+- - '5'
+  - '9'
+- - '10'
+  - '24'
+- - '11'
+  - '24'
+- - '14'
+  - '21'
+- - '15'
+  - '16'
+- - '15'
+  - '24'
+- - '15'
+  - '24'
+- - '17'
+  - '24'
+- - '18'
+  - '22'
+- - '19'
+  - '21'
+- - '21'
+  - '22'
+- - '22'
+  - '23'
+- - '23'
+  - '24'
+nodes:
+  '0':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -41.28664
+    Longitude: 174.77557
+    label: WLG
+  '1':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -45.87416
+    Longitude: 170.50361
+    label: DUD
+  '10':
+    Internal: '0'
+    Latitude: -36.86667
+    Longitude: 174.76667
+    label: Syd
+  '11':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -36.8782
+    Longitude: 174.72019
+    label: MTA
+  '12':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -39.06667
+    Longitude: 174.08333
+    label: NPL
+  '13':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -39.93333
+    Longitude: 175.05
+    label: WAG
+  '14':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -40.35
+    Longitude: 175.61667
+    label: MUP
+  '15':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -36.8
+    Longitude: 174.75
+    label: NSH
+  '16':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -36.4
+    Longitude: 174.66667
+    label: WRK
+  '17':
+    Internal: '0'
+    Latitude: -36.86667
+    Longitude: 174.76667
+    label: LAX
+  '18':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -37.68611
+    Longitude: 176.16667
+    label: TAU
+  '19':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -38.65333
+    Longitude: 178.00417
+    label: GIS
+  '2':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -41.19827
+    Longitude: 174.92019
+    label: AVL
+  '20':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -41.13333
+    Longitude: 174.85
+    label: POR
+  '21':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -39.48333
+    Longitude: 176.91667
+    label: NAP
+  '22':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -38.13874
+    Longitude: 176.24516
+    label: ROT
+  '23':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -37.78333
+    Longitude: 175.28333
+    label: HLT
+  '24':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -36.86667
+    Longitude: 174.76667
+    label: AKL
+  '3':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -40.35
+    Longitude: 175.61667
+    label: PNR
+  '4':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -43.65
+    Longitude: 172.48333
+    label: LCN
+  '5':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -43.53333
+    Longitude: 172.63333
+    label: CHC
+  '6':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -45.84838
+    Longitude: 170.3801
+    label: IVM
+  '7':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -46.4
+    Longitude: 168.35
+    label: INV
+  '8':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -44.01667
+    Longitude: 170.5
+    label: TPO
+  '9':
+    Country: New Zealand
+    Internal: '1'
+    Latitude: -41.28333
+    Longitude: 173.28333
+    label: NLS

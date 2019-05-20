@@ -36,6 +36,7 @@ class IntegralScenarioSolution(object):
     ''' Represents an integral solution to a scenario, i.e. it indicates for a subset (or all) requests integral mappings.
 
     '''
+
     def __init__(self, name, scenario):
         self.name = name
         self.scenario = scenario
@@ -51,7 +52,7 @@ class IntegralScenarioSolution(object):
         if (not self.scenario.validate_types()):
             return False
         for request in self.scenario.requests:
-            if (request in self.request_mapping):
+            if (request in self.request_mapping and self.request_mapping[request] is not None):
                 mapping = self.request_mapping[request]
                 substrate = self.scenario.substrate
                 rules = [self.type_check(request, mapping, substrate),
@@ -61,12 +62,15 @@ class IntegralScenarioSolution(object):
         return True
 
     def validate_solution_fulfills_capacity(self):
+        result = True
         substrate = self.scenario.substrate
         substrate_resources = {uv: substrate.edge[uv]["capacity"] for uv in substrate.edges}
         for u in substrate.nodes:
             for ntype in substrate.node[u]["supported_types"]:
                 substrate_resources[ntype, u] = substrate.node[u]["capacity"][ntype]
         for req, mapping in self.request_mapping.items():
+            if mapping is None:
+                continue
             for i, u in mapping.mapping_nodes.items():
                 t = req.get_type(i)
                 demand = req.get_node_demand(i)
@@ -77,7 +81,9 @@ class IntegralScenarioSolution(object):
                     substrate_resources[uv] -= demand
         for res, remaining_cap in substrate_resources.items():
             if remaining_cap < 0:
-                print res, "violated capacity by ", -remaining_cap
+                log.error("resource {} violated capacity by {}".format(res, -remaining_cap))
+                result = False
+        return result
 
     def type_check(self, request, mapping, substrate):
         """ checks if requested types are in supported types from substrate
@@ -125,6 +131,7 @@ class FractionalScenarioSolution(object):
     ''' Scenario solution in which for each request convex combinations of mappings are allowed.
 
     '''
+
     def __init__(self, name, scenario):
         self.name = name
         self.scenario = scenario
@@ -207,6 +214,7 @@ class Mapping(object):
 
         Initially, the mapping is empty and needs to be populated by the map_node and map_edge functions.
     '''
+
     def __init__(self, name, request, substrate, is_embedded):
         self.name = name
         self.request = request
@@ -284,6 +292,7 @@ class ScenarioSolutionStorage(object):
         In general, this storage mirrors the ScenarioParametersContainer: for each scenario of the container, one
         solution (should be) is contained in the solution storage.
     '''
+
     def __init__(self, scenario_parameter_container, execution_parameter_container):
         # stores solutions for each algorithm and each scenario; dict --> dict --> dict
         self.algorithm_scenario_solution_dictionary = {}
@@ -323,3 +332,24 @@ class ScenarioSolutionStorage(object):
             if index in parameter_solution_dict:
                 result[alg_id] = parameter_solution_dict[index]
         return result
+
+    def merge_with_other_sss(self, other_sss):
+        if not isinstance(other_sss, ScenarioSolutionStorage):
+            raise ValueError("Can only merge with other ScenarioSolutionStorage, received {}.".format(other_sss))
+        if self.execution_parameter_container.execution_parameter_space != other_sss.execution_parameter_container.execution_parameter_space:
+            raise ValueError("Other ScenarioSolutionStorage has incompatible execution parameters.")
+
+        self.scenario_parameter_container.merge_with_other_scenario_parameter_container(
+            other_sss.scenario_parameter_container
+        )
+
+        alg_sol_dict = other_sss.algorithm_scenario_solution_dictionary
+        for algorithm_id, scenario_execution_solution_dict in alg_sol_dict.iteritems():
+            for scenario_id, execution_solution_dict in scenario_execution_solution_dict.iteritems():
+                for execution_id, solution in execution_solution_dict.iteritems():
+                    self.add_solution(
+                        algorithm_id=algorithm_id,
+                        scenario_id=scenario_id,
+                        execution_id=execution_id,
+                        solution=solution,
+                    )

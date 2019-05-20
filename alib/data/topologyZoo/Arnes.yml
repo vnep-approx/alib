@@ -1,82 +1,334 @@
-nodes:
-  '0': {Latitude: 46.155, Longitude: 15.05333}
-  '1': {Latitude: 45.95915, Longitude: 15.49167}
-  '2': {Latitude: 46.23092, Longitude: 15.26044}
-  '3': {Latitude: 46.15463, Longitude: 15.23555}
-  '4': {Latitude: 46.23887, Longitude: 14.35561}
-  '5': {Latitude: 46.36917, Longitude: 14.11361}
-  '6': {Latitude: 45.80397, Longitude: 15.16886}
-  '7': {Latitude: 46.05108, Longitude: 14.50513}
-  '8': {Latitude: 46.18304, Longitude: 13.73321}
-  '9': {Latitude: 45.95604, Longitude: 13.64837}
-  '10': {Latitude: 45.51429, Longitude: 13.59206}
-  '11': {Latitude: 46.67333, Longitude: 15.99222}
-  '12': {Latitude: 46.64201, Longitude: 16.03781}
-  '13': {Latitude: 46.2375, Longitude: 15.63972}
-  '14': {Latitude: 45.72111, Longitude: 14.04111}
-  '15': {Latitude: 46.43056, Longitude: 14.06694}
-  '16': {Latitude: 45.70924, Longitude: 13.87333}
-  '17': {Latitude: 45.68472, Longitude: 13.97028}
-  '18': {Latitude: 45.77694, Longitude: 14.21667}
-  '19': {Latitude: 45.88601, Longitude: 13.90946}
-  '20': {Latitude: 45.64333, Longitude: 14.86333}
-  '21': {Latitude: 46.22587, Longitude: 14.61207}
-  '22': {Latitude: 45.53694, Longitude: 13.66194}
-  '23': {Latitude: 45.54694, Longitude: 13.72944}
-  '24': {Latitude: 46.51028, Longitude: 15.08056}
-  '25': {Latitude: 46.35917, Longitude: 15.11028}
-  '26': {Latitude: 46.6625, Longitude: 16.16639}
-  '27': {Latitude: 46.52083, Longitude: 16.1975}
-  '28': {Latitude: 46.41139, Longitude: 16.15444}
-  '29': {Latitude: 46.42005, Longitude: 15.87018}
-  '30': {Latitude: 46.55472, Longitude: 15.64667}
-  '31': {Latitude: 46.39278, Longitude: 15.57444}
-  '32': {Latitude: 46.58806, Longitude: 15.01917}
-  '33': {Latitude: 46.54306, Longitude: 14.96917}
 edges:
-- ['0', '3']
-- ['0', '7']
-- ['1', '13']
-- ['1', '6']
-- ['2', '25']
-- ['2', '3']
-- ['2', '21']
-- ['2', '31']
-- ['3', '30']
-- ['3', '7']
-- ['4', '15']
-- ['4', '23']
-- ['4', '5']
-- ['4', '7']
-- ['5', '8']
-- ['6', '20']
-- ['7', '9']
-- ['7', '18']
-- ['7', '20']
-- ['7', '21']
-- ['7', '23']
-- ['7', '30']
-- ['8', '9']
-- ['9', '19']
-- ['10', '17']
-- ['10', '22']
-- ['11', '12']
-- ['11', '30']
-- ['12', '26']
-- ['13', '29']
-- ['14', '16']
-- ['14', '17']
-- ['14', '18']
-- ['17', '19']
-- ['17', '23']
-- ['22', '23']
-- ['24', '32']
-- ['24', '25']
-- ['25', '32']
-- ['26', '27']
-- ['27', '28']
-- ['28', '29']
-- ['29', '30']
-- ['30', '32']
-- ['30', '31']
-- ['32', '33']
+- - '0'
+  - '3'
+- - '0'
+  - '7'
+- - '1'
+  - '13'
+- - '1'
+  - '6'
+- - '2'
+  - '25'
+- - '2'
+  - '3'
+- - '2'
+  - '21'
+- - '2'
+  - '31'
+- - '3'
+  - '30'
+- - '3'
+  - '7'
+- - '4'
+  - '15'
+- - '4'
+  - '23'
+- - '4'
+  - '5'
+- - '4'
+  - '7'
+- - '4'
+  - '7'
+- - '5'
+  - '8'
+- - '6'
+  - '20'
+- - '7'
+  - '9'
+- - '7'
+  - '18'
+- - '7'
+  - '20'
+- - '7'
+  - '21'
+- - '7'
+  - '23'
+- - '7'
+  - '30'
+- - '8'
+  - '9'
+- - '9'
+  - '19'
+- - '10'
+  - '17'
+- - '10'
+  - '22'
+- - '11'
+  - '12'
+- - '11'
+  - '30'
+- - '12'
+  - '26'
+- - '13'
+  - '29'
+- - '14'
+  - '16'
+- - '14'
+  - '17'
+- - '14'
+  - '18'
+- - '17'
+  - '19'
+- - '17'
+  - '23'
+- - '22'
+  - '23'
+- - '24'
+  - '32'
+- - '24'
+  - '25'
+- - '25'
+  - '32'
+- - '26'
+  - '27'
+- - '27'
+  - '28'
+- - '28'
+  - '29'
+- - '29'
+  - '30'
+- - '30'
+  - '32'
+- - '30'
+  - '31'
+- - '32'
+  - '33'
+nodes:
+  '0':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.155
+    Longitude: 15.05333
+    label: Trbovlje
+    type: Small Node
+  '1':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.95915
+    Longitude: 15.49167
+    label: Krsko
+    type: Small Node
+  '10':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.51429
+    Longitude: 13.59206
+    label: Portoroz
+    type: Small Node
+  '11':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.67333
+    Longitude: 15.99222
+    label: Gornja Radgona
+    type: Small Node
+  '12':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.64201
+    Longitude: 16.03781
+    label: Radenci
+    type: Small Node
+  '13':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.2375
+    Longitude: 15.63972
+    label: Rogasja Slatina
+    type: Small Node
+  '14':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.72111
+    Longitude: 14.04111
+    label: Senozece
+    type: Small Node
+  '15':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.43056
+    Longitude: 14.06694
+    label: Jesenice
+    type: Small Node
+  '16':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.70924
+    Longitude: 13.87333
+    label: Sezana
+    type: Small Node
+  '17':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.68472
+    Longitude: 13.97028
+    label: Divaca
+    type: Small Node
+  '18':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.77694
+    Longitude: 14.21667
+    label: Postojna
+    type: Small Node
+  '19':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.88601
+    Longitude: 13.90946
+    label: Ajdovscina
+    type: Small Node
+  '2':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.23092
+    Longitude: 15.26044
+    label: Celje
+    type: Small Node
+  '20':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.64333
+    Longitude: 14.86333
+    label: Kovevje
+    type: Small Node
+  '21':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.22587
+    Longitude: 14.61207
+    label: Kamnik
+    type: Small Node
+  '22':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.53694
+    Longitude: 13.66194
+    label: Izola
+    type: Small Node
+  '23':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.54694
+    Longitude: 13.72944
+    label: Koper
+    type: Small Node
+  '24':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.51028
+    Longitude: 15.08056
+    label: Slovenj Gradec
+    type: Small Node
+  '25':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.35917
+    Longitude: 15.11028
+    label: Velenje
+    type: Small Node
+  '26':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.6625
+    Longitude: 16.16639
+    label: Murska Sobota
+    type: Small Node
+  '27':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.52083
+    Longitude: 16.1975
+    label: Ljutomer
+    type: Small Node
+  '28':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.41139
+    Longitude: 16.15444
+    label: Ormoz
+    type: Small Node
+  '29':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.42005
+    Longitude: 15.87018
+    label: Ptuj
+    type: Small Node
+  '3':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.15463
+    Longitude: 15.23555
+    label: Lasko
+    type: Small Node
+  '30':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.55472
+    Longitude: 15.64667
+    label: Maribor
+    type: Large Node
+  '31':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.39278
+    Longitude: 15.57444
+    label: Slovenska Bistrica
+    type: Small Node
+  '32':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.58806
+    Longitude: 15.01917
+    label: Dravograd
+    type: Small Node
+  '33':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.54306
+    Longitude: 14.96917
+    label: Ravne na Koroskem
+    type: Small Node
+  '4':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.23887
+    Longitude: 14.35561
+    label: Kranj
+    type: Small Node
+  '5':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.36917
+    Longitude: 14.11361
+    label: Bled
+    type: Small Node
+  '6':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.80397
+    Longitude: 15.16886
+    label: Novo Mesto
+    type: Small Node
+  '7':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.05108
+    Longitude: 14.50513
+    label: Ljubljana
+    type: Large Node
+  '8':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 46.18304
+    Longitude: 13.73321
+    label: Tolmin
+    type: Small Node
+  '9':
+    Country: Slovenia
+    Internal: '1'
+    Latitude: 45.95604
+    Longitude: 13.64837
+    label: Nova Gorica
+    type: Small Node

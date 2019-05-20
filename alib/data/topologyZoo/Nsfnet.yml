@@ -1,30 +1,110 @@
-nodes:
-  '0': {Latitude: 29.76328, Longitude: -95.36327}
-  '1': {Latitude: 40.34872, Longitude: -74.65905}
-  '2': {Latitude: 33.749, Longitude: -84.38798}
-  '3': {Latitude: 40.44062, Longitude: -79.99589}
-  '4': {Latitude: 42.44063, Longitude: -76.49661}
-  '5': {Latitude: 47.60621, Longitude: -122.33207}
-  '6': {Latitude: 37.44188, Longitude: -122.14302}
-  '7': {Latitude: 32.71533, Longitude: -117.15726}
-  '8': {Latitude: 40.76078, Longitude: -111.89105}
-  '9': {Latitude: 40.01499, Longitude: -105.27055}
-  '10': {Latitude: 40.8, Longitude: -96.66696}
-  '11': {Latitude: 40.11642, Longitude: -88.24338}
-  '12': {Latitude: 42.27756, Longitude: -83.74088}
 edges:
-- ['0', '2']
-- ['0', '11']
-- ['0', '7']
-- ['1', '2']
-- ['1', '4']
-- ['3', '12']
-- ['4', '12']
-- ['5', '9']
-- ['5', '6']
-- ['6', '12']
-- ['6', '7']
-- ['8', '9']
-- ['9', '11']
-- ['10', '11']
-- ['11', '12']
+- - '0'
+  - '2'
+- - '0'
+  - '11'
+- - '0'
+  - '7'
+- - '1'
+  - '2'
+- - '1'
+  - '4'
+- - '3'
+  - '12'
+- - '4'
+  - '12'
+- - '5'
+  - '9'
+- - '5'
+  - '6'
+- - '6'
+  - '12'
+- - '6'
+  - '7'
+- - '8'
+  - '9'
+- - '9'
+  - '11'
+- - '10'
+  - '11'
+- - '11'
+  - '12'
+nodes:
+  '0':
+    Country: United States
+    Internal: '1'
+    Latitude: 29.76328
+    Longitude: -95.36327
+    label: SEQSUINET, Rice University, Houston
+  '1':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.34872
+    Longitude: -74.65905
+    label: Jon Von Neumann Center, Princeton, NJ
+  '10':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.8
+    Longitude: -96.66696
+    label: MIDnet, Lincoln, NE
+  '11':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.11642
+    Longitude: -88.24338
+    label: NCSA, University of Illinois, Champaign
+  '12':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.27756
+    Longitude: -83.74088
+    label: Merit Univ of Michigan, Ann Arbor
+  '2':
+    Country: United States
+    Internal: '1'
+    Latitude: 33.749
+    Longitude: -84.38798
+    label: SURANET, Georgia Tech, Atlanta
+  '3':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.44062
+    Longitude: -79.99589
+    label: Pittsburgh Supercomputer Center
+  '4':
+    Country: United States
+    Internal: '1'
+    Latitude: 42.44063
+    Longitude: -76.49661
+    label: Cornell Theory Center, Ithaca NY
+  '5':
+    Country: United States
+    Internal: '1'
+    Latitude: 47.60621
+    Longitude: -122.33207
+    label: NorthWestNet, Seattle
+  '6':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.44188
+    Longitude: -122.14302
+    label: BARRnet, Palo Alto
+  '7':
+    Country: United States
+    Internal: '1'
+    Latitude: 32.71533
+    Longitude: -117.15726
+    label: San Diego Supercomputer Center
+  '8':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.76078
+    Longitude: -111.89105
+    label: Westnet, Salt Lake City
+  '9':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.01499
+    Longitude: -105.27055
+    label: NCAR, Boulder

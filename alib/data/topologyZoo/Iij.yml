@@ -1,0 +1,347 @@
+edges:
+- - '0'
+  - '30'
+- - '0'
+  - '6'
+- - '1'
+  - '30'
+- - '1'
+  - '6'
+- - '2'
+  - '30'
+- - '2'
+  - '6'
+- - '3'
+  - '30'
+- - '3'
+  - '6'
+- - '4'
+  - '6'
+- - '5'
+  - '30'
+- - '5'
+  - '6'
+- - '6'
+  - '7'
+- - '6'
+  - '8'
+- - '6'
+  - '9'
+- - '6'
+  - '34'
+- - '6'
+  - '21'
+- - '6'
+  - '24'
+- - '6'
+  - '28'
+- - '6'
+  - '29'
+- - '6'
+  - '30'
+- - '6'
+  - '30'
+- - '7'
+  - '34'
+- - '7'
+  - '30'
+- - '7'
+  - '13'
+- - '8'
+  - '30'
+- - '9'
+  - '33'
+- - '9'
+  - '34'
+- - '9'
+  - '30'
+- - '10'
+  - '30'
+- - '11'
+  - '34'
+- - '12'
+  - '34'
+- - '14'
+  - '19'
+- - '15'
+  - '19'
+- - '16'
+  - '24'
+- - '17'
+  - '30'
+- - '18'
+  - '24'
+- - '18'
+  - '25'
+- - '18'
+  - '23'
+- - '19'
+  - '24'
+- - '19'
+  - '25'
+- - '19'
+  - '23'
+- - '20'
+  - '34'
+- - '20'
+  - '27'
+- - '20'
+  - '21'
+- - '21'
+  - '32'
+- - '21'
+  - '34'
+- - '21'
+  - '35'
+- - '21'
+  - '36'
+- - '21'
+  - '22'
+- - '21'
+  - '30'
+- - '22'
+  - '34'
+- - '23'
+  - '24'
+- - '23'
+  - '25'
+- - '24'
+  - '34'
+- - '24'
+  - '25'
+- - '24'
+  - '26'
+- - '25'
+  - '26'
+- - '25'
+  - '30'
+- - '28'
+  - '30'
+- - '29'
+  - '30'
+- - '30'
+  - '34'
+- - '30'
+  - '33'
+- - '30'
+  - '31'
+- - '31'
+  - '32'
+- - '34'
+  - '35'
+- - '34'
+  - '36'
+nodes:
+  '0':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: Tokyo DC1
+  '1':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: Tokyo DC2
+  '10':
+    Internal: '0'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: JPNAP Tokyo 1
+  '11':
+    Internal: '0'
+    Latitude: 34.69374
+    Longitude: 135.50218
+    label: China
+  '12':
+    Internal: '0'
+    Latitude: 34.69374
+    Longitude: 135.50218
+    label: JPNAP Osaka
+  '13':
+    Internal: '0'
+    Latitude: 35.73023
+    Longitude: 139.7115
+    label: JPNAP Tokyo 2
+  '14':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: NYIIX
+  '15':
+    Internal: '0'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: PAIX
+  '16':
+    Internal: '0'
+    Latitude: 30.45075
+    Longitude: -91.15455
+    label: LAIIX
+  '17':
+    Internal: '0'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: dix-ie
+  '18':
+    Internal: '0'
+    Latitude: 35.61128666666667
+    Longitude: -96.84566666666666
+    label: Equinix exchange
+  '19':
+    Country: United States
+    Internal: '1'
+    Latitude: 40.71427
+    Longitude: -74.00597
+    label: Newyork DC
+  '2':
+    Country: Japan
+    Internal: '1'
+    Latitude: 31.81667
+    Longitude: 130.3
+    label: Sendai DC
+  '20':
+    Country: Japan
+    Internal: '1'
+    Latitude: 33.60639
+    Longitude: 130.41806
+    label: Fukuoka DC
+  '21':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.67511
+    Longitude: 135.50031
+    label: Shinsaibashi DC
+  '22':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.02107
+    Longitude: 135.75385
+    label: Kyoto DC
+  '23':
+    Country: United States
+    Internal: '1'
+    Latitude: 39.04372
+    Longitude: -77.48749
+    label: Ashburn DC
+  '24':
+    Country: United States
+    Internal: '1'
+    Latitude: 30.45075
+    Longitude: -91.15455
+    label: LA DC
+  '25':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.33939
+    Longitude: -121.89496
+    label: San Jose DC
+  '26':
+    Country: United States
+    Internal: '1'
+    Latitude: 37.44188
+    Longitude: -122.14302
+    label: PaloAlto DC
+  '27':
+    Country: Japan
+    Internal: '1'
+    Latitude: 26.33583
+    Longitude: 127.80139
+    label: Okinawa
+  '28':
+    Country: Japan
+    Internal: '1'
+    Latitude: 43.06417
+    Longitude: 141.34694
+    label: Sappora DC
+  '29':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.60472
+    Longitude: 140.12333
+    label: Chiba
+  '3':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.90807
+    Longitude: 139.65657
+    label: Saitama DC
+  '30':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.61488
+    Longitude: 139.5813
+    label: Tokyo
+  '31':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.69528
+    Longitude: 137.21139
+    label: Toyama
+  '32':
+    Country: Japan
+    Internal: '1'
+    Latitude: 36.59444
+    Longitude: 136.62556
+    label: Kanazawa
+  '33':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.7
+    Longitude: 137.73333
+    label: Hamamatsu
+  '34':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.69374
+    Longitude: 135.50218
+    label: Osaka
+  '35':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.66167
+    Longitude: 133.935
+    label: Okayama
+  '36':
+    Country: Japan
+    Internal: '1'
+    Latitude: 34.39627
+    Longitude: 132.45937
+    label: Hiroshima
+  '4':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.73333
+    Longitude: 139.65
+    label: Nerima DC
+  '5':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.44778
+    Longitude: 139.6425
+    label: Yokohama DC1
+  '6':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.65758
+    Longitude: 139.7049
+    label: Shibuya DC
+  '7':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.73023
+    Longitude: 139.7115
+    label: Ikebukuro DC
+  '8':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.44778
+    Longitude: 139.6425
+    label: Yokohama DC2
+  '9':
+    Country: Japan
+    Internal: '1'
+    Latitude: 35.18147
+    Longitude: 136.90641
+    label: Nagoya DC

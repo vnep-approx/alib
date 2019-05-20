@@ -1,35 +1,128 @@
-nodes:
-  '0': {Latitude: 37.01667, Longitude: -7.93333}
-  '1': {Latitude: 40.4165, Longitude: -3.70256}
-  '2': {Latitude: 41.15, Longitude: -8.61667}
-  '3': {Latitude: 38.71667, Longitude: -9.13333}
-  '4': {Latitude: 41.38879, Longitude: 2.15899}
-  '5': {Latitude: 53.48095, Longitude: -2.23743}
-  '6': {Latitude: 53.07897, Longitude: -0.14008}
-  '7': {Latitude: 52.37403, Longitude: 4.88969}
-  '8': {Latitude: 51.44083, Longitude: 5.47778}
-  '9': {Latitude: 52.52437, Longitude: 13.41053}
-  '10': {Latitude: 50.11667, Longitude: 8.68333}
-  '11': {Latitude: 48.13743, Longitude: 11.57549}
-  '12': {Latitude: 48.85341, Longitude: 2.3488}
-  '13': {Latitude: 48.08333, Longitude: -1.68333}
-  '14': {Latitude: 51.50853, Longitude: -0.12574}
 edges:
-- ['0', '3']
-- ['1', '3']
-- ['1', '4']
-- ['2', '3']
-- ['3', '14']
-- ['4', '12']
-- ['5', '14']
-- ['6', '14']
-- ['7', '8']
-- ['7', '10']
-- ['7', '14']
-- ['9', '10']
-- ['9', '11']
-- ['10', '11']
-- ['10', '12']
-- ['10', '14']
-- ['12', '13']
-- ['12', '14']
+- - '0'
+  - '3'
+- - '1'
+  - '3'
+- - '1'
+  - '4'
+- - '2'
+  - '3'
+- - '3'
+  - '14'
+- - '4'
+  - '12'
+- - '5'
+  - '14'
+- - '6'
+  - '14'
+- - '7'
+  - '8'
+- - '7'
+  - '10'
+- - '7'
+  - '14'
+- - '9'
+  - '10'
+- - '9'
+  - '11'
+- - '10'
+  - '11'
+- - '10'
+  - '12'
+- - '10'
+  - '14'
+- - '12'
+  - '13'
+- - '12'
+  - '14'
+nodes:
+  '0':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 37.01667
+    Longitude: -7.93333
+    label: Faro
+  '1':
+    Country: Spain
+    Internal: '1'
+    Latitude: 40.4165
+    Longitude: -3.70256
+    label: Madrid
+  '10':
+    Country: Germany
+    Internal: '1'
+    Latitude: 50.11667
+    Longitude: 8.68333
+    label: Frankfurt
+  '11':
+    Country: Germany
+    Internal: '1'
+    Latitude: 48.13743
+    Longitude: 11.57549
+    label: Munich
+  '12':
+    Country: France
+    Internal: '1'
+    Latitude: 48.85341
+    Longitude: 2.3488
+    label: Paris
+  '13':
+    Country: France
+    Internal: '1'
+    Latitude: 48.08333
+    Longitude: -1.68333
+    label: Rennes
+  '14':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 51.50853
+    Longitude: -0.12574
+    label: London
+  '2':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 41.15
+    Longitude: -8.61667
+    label: Porto
+  '3':
+    Country: Portugal
+    Internal: '1'
+    Latitude: 38.71667
+    Longitude: -9.13333
+    label: Lisbon
+  '4':
+    Country: Spain
+    Internal: '1'
+    Latitude: 41.38879
+    Longitude: 2.15899
+    label: Barcelona
+  '5':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.48095
+    Longitude: -2.23743
+    label: Manchester
+  '6':
+    Country: United Kingdom
+    Internal: '1'
+    Latitude: 53.07897
+    Longitude: -0.14008
+    label: New York
+  '7':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 52.37403
+    Longitude: 4.88969
+    label: Amsterdam
+  '8':
+    Country: Netherlands
+    Internal: '1'
+    Latitude: 51.44083
+    Longitude: 5.47778
+    label: Eindhoven
+  '9':
+    Country: Germany
+    Internal: '1'
+    Latitude: 52.52437
+    Longitude: 13.41053
+    label: Berlin
