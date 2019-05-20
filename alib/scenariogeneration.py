@@ -448,9 +448,9 @@ def build_scenario(i_sp_tup):
             pc.apply(sp, scenario)
             scenario.objective = datamodel.Objective.MAX_PROFIT
     except Exception as e:
-        with open("log/{}_error.log".format(os.getpid()), "w") as f:
-            import traceback
-            traceback.print_exc(file=f)
+        import traceback
+        logger.error("Error during scenario generation at worker {pid}: \n {exp}".format(pid=os.getpid(), exp=traceback.format_exc()))
+
     return i, scenario, sp
 
 
