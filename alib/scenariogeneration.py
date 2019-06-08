@@ -1814,7 +1814,10 @@ class TopologyZooReader(ScenariogenerationTask):
         for (tail, head), dist in dists.items():
             cost = dist
             capacity = raw_parameters["edge_capacity"]
-            substrate.add_edge(tail, head, capacity=capacity, cost=cost)
+            if raw_parameters.get("include_latencies", False):
+                substrate.add_edge(tail, head, capacity=capacity, cost=math.sqrt(dist), latency=dist)
+            else:
+                substrate.add_edge(tail, head, capacity=capacity, cost=cost)
         return substrate
 
     def _assign_node_types(self, nodes, raw_parameters):
