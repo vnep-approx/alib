@@ -614,12 +614,12 @@ class Substrate(Graph):
                 raise SubstrateError("Type {} is also a node in the substrate.".format(node_type))
             self.types.add(node_type)
 
-    def add_edge(self, tail, head, capacity=1.0, cost=1.0, bidirected=True):
+    def add_edge(self, tail, head, capacity=1.0, cost=1.0, bidirected=True, **kwargs):
         if tail in self.nodes and head in self.nodes:
             # is always bidirected
             super(Substrate, self).add_edge(tail, head, bidirected=bidirected,
                                             capacity=capacity,
-                                            cost=cost)
+                                            cost=cost, **kwargs)
         else:
             raise SubstrateError("Nodes {} and/or {} are not in the substrate:\n{}".format(tail, head, self.nodes))
 
