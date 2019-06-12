@@ -23,6 +23,8 @@
 
 from . import util
 
+import cPickle as pickle
+
 log = util.get_logger(__name__, make_file=False, propagate=True)
 
 
@@ -255,7 +257,15 @@ class Mapping(object):
         if ij not in self.request.edges:
             raise MappingError("Request edge {} does not exist!".format(ij))
         if not set(mapped_path) <= self.substrate.edges:
-            raise MappingError("Mapping for {} contains edges not in the substrate!".format(ij, set(mapped_path) - self.substrate.edges))
+            # with open('pickles/sub.p', 'wb') as handle:
+            #     pickle.dump(self.substrate, handle, protocol=pickle.HIGHEST_PROTOCOL)
+            #
+            # with open('pickles/req.p', 'wb') as handle:
+            #     pickle.dump(self.request, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+            print mapped_path, ij
+
+            raise MappingError("Mapping for {} contains edges not in the substrate: \n {}".format(ij, set(mapped_path) - self.substrate.edges))
 
         # empty path direct mapping
         if not mapped_path:
