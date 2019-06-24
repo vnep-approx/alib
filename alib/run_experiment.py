@@ -288,7 +288,10 @@ class ExperimentExecution(object):
 
             sp, scenario = scenario_container.scenario_triple[scenario_index]
 
-            scenario.objective = datamodel.Objective.MAX_PROFIT
+            # According to comments at scenariogeneration.build_scenario, if a profit calculation task is missing, the objective should
+            # be minimization. This might not be needed at all.
+            if scenariogeneration.PROFIT_CALCULATION_TASK in sp:
+                scenario.objective = datamodel.Objective.MAX_PROFIT
 
             log.info("Scenario index {}  (Server Execution Range: {} -> {})".format(scenario_index,
                                                                                     self.min_scenario_index,
