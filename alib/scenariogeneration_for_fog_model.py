@@ -21,8 +21,10 @@
 # SOFTWARE.
 #
 
-from . import scenariogeneration as sg, datamodel
 import networkx as nx
+import math
+
+from . import scenariogeneration as sg, datamodel
 
 
 class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
@@ -94,8 +96,15 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
             req.add_node(base_node, demand=demand, ntype=self.universal_node_type)
         req.add_edge("F", "H", demand=192)
         req.add_edge("G", "H", demand=192)
-        # NOTE: with 'sample' we assume all actuator - sensor pairs are on different infrastucture nodes
-        nodes_for_actuators_sensors = sg.random.sample(substrate.nodes(), self.sensor_actuator_loop_count)
+        # TODO: might be implemented nicer (but more difficultly with placement resctriction generation
+        # we assume all actuator - sensor pairs are on different infrastucture nodes
+        # The location bound nodes are the highest sensor_actuator_loop_count number of nodes.
+        nodes_for_actuators_sensors = [i for i in xrange(substrate.get_number_of_nodes() - self.sensor_actuator_loop_count,
+                                                         substrate.get_number_of_nodes())]
+        # NOTE: checking if the substrate node is chosen from the right set, in our scenario, only these can have a capacity of 2.26.
+        for node_id in nodes_for_actuators_sensors:
+            if substrate.node[node_id]['capacity'][self.universal_node_type] != 2.26:
+                raise Exception("Wrong substrate node would be chosen for location bound node, based on capacity convention!")
         for index in xrange(1, self.sensor_actuator_loop_count + 1):
             nodeE, nodeD, nodeT = self._add_single_preprocessing_block(req, index, nodes_for_actuators_sensors[index - 1])
 
@@ -134,9 +143,6 @@ class CactusGraphGenerator(object):
             self.random = random
         self.G = datamodel.Graph("cactus")
         self.n = n
-        self.cycle_tree_ratio = cycle_tree_ratio
-        self.cycle_count_ratio = cycle_count_ratio
-        self.tree_count_ratio = tree_count_ratio
         cycle_N = int(n * cycle_tree_ratio)
         self.cycle_node_count = max(int(cycle_N * cycle_count_ratio), 3)
         self.tree_node_count = max(int((n - cycle_N) * tree_count_ratio), 2)
@@ -245,11 +251,20 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
     EXPECTED_PARAMETERS = [
         # NOTE: framework does not allow communication of these parameter between request an substrate
         'sensor_actuator_loop_count' # If not even, one lower number is used
+        'cycle_tree_ratio',                 # cactus generation param       = 0.6
+        'cycle_count_ratio',                # cactus generation param       = 0.2
+        'tree_count_ratio',                 # cactus generation param       = 0.2
+        'q_capacity_ratio',                 # fog network spare capacity factor after allocation = 2
+        'fog_device_utilization_discount'   # background utilization        = 0.5 (50%)
+        'pseudo_random_seed'                # used for all randomization actions
     ]
 
     def __init__(self, logger=None):
         super(ABBUseCaseFogNetworkGenerator).__init__(logger=logger)
         self.sensor_actuator_loop_count = None
+        self.random = sg.random
+        self.universal_node_type = 'universal'
+        self.unbounded_link_resource_capacity = 1e20
 
     def _read_raw_parameters(self, raw_parameters):
         """
@@ -262,10 +277,51 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
             self.sensor_actuator_loop_count = int(raw_parameters['sensor_actuator_loop_count'])
             if self.sensor_actuator_loop_count % 2 == 1:
                 self.sensor_actuator_loop_count -= 1
+            self.cycle_tree_ratio = float(raw_parameters['cycle_tree_ratio'])
+            self.cycle_count_ratio = float(raw_parameters['cycle_count_ratio'])
+            self.tree_count_ratio = float(raw_parameters['tree_count_ratio'])
+            self.q_capacity_ratio = float(raw_parameters['q_capacity_ratio'])
+            self.fog_device_utilization_discount = float(raw_parameters['fog_device_utilization_discount'])
+            if 'pseudo_random_seed' in raw_parameters:
+                self.random.seed(int(raw_parameters['pseudo_random_seed']))
         except KeyError as e:
             raise sg.ExperimentSpecificationError("Parameter not found in request specification: {keyerror}".format(keyerror=e))
 
+    def calculate_cactus_order(self):
+        """
+        Creates the fog network size according to the constants of the Fog application. See details in Suther's thesis.
+
+        :return:
+        """
+        return math.ceil((84.9 * self.sensor_actuator_loop_count + 56.25) /
+                         (1725.0 / self.fog_device_utilization_discount) *
+                      self.q_capacity_ratio)
+
+    def get_fog_node_capacity(self):
+        """
+        Reproduces the resource distribution of the fog network, as described in the ABB Use Case.
+
+        :return:
+        """
+        P = self.random.random()
+        if P < 0.6:
+            # small IoT devices
+            return self.random.uniform(50, 200)
+        elif P < 0.8:
+            # medium devices
+            return self.random.uniform(500, 2000)
+        else:
+            # large devices
+            return self.random.uniform(4000, 10000)
+
     def apply(self, scenario_parameters, scenario):
+        """
+        Framework interface to implement. Extends the scenario with the substrate network.
+
+        :param scenario_parameters:
+        :param scenario:
+        :return:
+        """
         class_raw_parameters_dict = scenario_parameters[sg.SUBSTRATE_GENERATION_TASK].values()[0]
         class_name = self.__class__.__name__
         if class_name not in class_raw_parameters_dict:
@@ -274,4 +330,33 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         self._read_raw_parameters(raw_parameters)
         substrate = datamodel.Substrate("ABB_fog_net")
 
+        # instantiate the class and calculate the cactus right away
+        cactus_graph = CactusGraphGenerator(n=self.calculate_cactus_order(),
+                                            cycle_tree_ratio=self.cycle_tree_ratio,
+                                            cycle_count_ratio=self.cycle_count_ratio,
+                                            tree_count_ratio=self.tree_count_ratio,
+                                            random=self.random).\
+                        generate_cactus()
+        # copy the cactus structure
+        for n in cactus_graph.nodes:
+            fog_node_capacity = self.get_fog_node_capacity()
+            # 0 cost for node resources, as described in the fog allocation paper
+            substrate.add_node(n, types=[self.universal_node_type], capacity=fog_node_capacity, cost=0.0)
+        for i,j in cactus_graph.edges:
+            # TODO: get capacity values from Yvonne-Anne!
+            # links are bidirectional by default!!
+            # unit cost gives the minimization for hopcount as in the fog allocation paper
+            substrate.add_edge(i, j, capacity=self.unbounded_link_resource_capacity, cost=1.0)
+        # + self.sensor_actuator_loop_count number of nodes for the location bounds.
+        non_location_nodes = list(substrate.nodes)
+        first_location_node_id = substrate.get_number_of_nodes()
+        for n in range(first_location_node_id,
+                       first_location_node_id + self.sensor_actuator_loop_count):
+            # capacity only for the sensor and actuator
+            substrate.add_node(n, types=[self.universal_node_type], capacity=2.26, cost=0.0)
+            connecting_node = self.random.choice(non_location_nodes)
+            # add undirected connection to location
+            substrate.add_edge(connecting_node, n, capacity=self.unbounded_link_resource_capacity, cost=1.0)
+
+        # bind the substrate to the scenario
         scenario.substrate = substrate
