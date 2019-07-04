@@ -24,7 +24,7 @@
 import networkx as nx
 import math
 
-from . import scenariogeneration as sg, datamodel
+from . import scenariogeneration as sg, datamodel, util
 
 
 class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
@@ -79,6 +79,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         req.add_edge("B"+index_str, "C"+index_str, demand=448)
         req.add_edge("C"+index_str, "D"+index_str, demand=256)
         req.add_edge("C"+index_str, "E"+index_str, demand=128)
+        self.logger.debug("Added preprocessing block # {} to be allocated on substrate {}".format(index, substrate_node))
 
         return "E" + index_str, "D" + index_str, "T" + index_str
 
@@ -95,6 +96,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         req = datamodel.Request("ABB_" + name)
         for base_node, demand in zip(["F", "G", "H"], [20.875, 20,875, 14.5]):
             req.add_node(base_node, demand=demand, ntype=self.universal_node_type)
+            self.logger.debug("Added F, G, H nodes")
         req.add_edge("F", "H", demand=192)
         req.add_edge("G", "H", demand=192)
         # TODO: might be implemented nicer (but more difficultly with placement resctriction generation
@@ -106,6 +108,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         for node_id in nodes_for_actuators_sensors:
             if substrate.node[node_id]['capacity'][self.universal_node_type] != 2.26:
                 raise Exception("Wrong substrate node would be chosen for location bound node, based on capacity convention!")
+        self.logger.debug("Using substrate nodes {} as sensor - actuar locations".format(nodes_for_actuators_sensors))
         for index in xrange(1, self.sensor_actuator_loop_count + 1):
             nodeE, nodeD, nodeT = self._add_single_preprocessing_block(req, index, nodes_for_actuators_sensors[index - 1])
 
@@ -115,6 +118,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
             else:
                 node_for_aggregation = "G"
 
+            self.logger.debug("Connecting preprocessing block to node {}".format(node_for_aggregation))
             # connect upward edges
             req.add_edge(nodeE, node_for_aggregation, demand=96)
             req.add_edge(nodeD, node_for_aggregation, demand=160)
@@ -129,7 +133,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
 
 class CactusGraphGenerator(object):
 
-    def __init__(self, n, cycle_tree_ratio, cycle_count_ratio, tree_count_ratio, random=None):
+    def __init__(self, n, cycle_tree_ratio, cycle_count_ratio, tree_count_ratio, random=None, logger=None):
         """
         Creates a datamodel.Graph, without setting any parameters of resource or a request.
 
@@ -147,6 +151,10 @@ class CactusGraphGenerator(object):
         cycle_N = int(n * cycle_tree_ratio)
         self.cycle_node_count = max(int(cycle_N * cycle_count_ratio), 3)
         self.tree_node_count = max(int((n - cycle_N) * tree_count_ratio), 2)
+        if logger is None:
+            self.logger = util.get_logger("CactusGraphGenerator")
+        else:
+            self.logger = logger
 
     def _get_node_seq(self, current_edges, remaining_nodes, length):
         """
@@ -186,7 +194,7 @@ class CactusGraphGenerator(object):
             head = node_seq[j]
             self.G.add_edge(tail, head)
             new_edges.append((tail, head))
-
+        self.logger.debug("Added tree edges: {}".format(new_edges))
         return new_edges
 
     def _add_cycle_to_req(self, current_edges, remaining_nodes):
@@ -206,7 +214,7 @@ class CactusGraphGenerator(object):
             # the last edge
             self.G.add_edge(node_seq[0], node_seq[-1])
             new_edges.append((node_seq[0], node_seq[-1]))
-
+        self.logger.debug("Added cycles edges: {}".format(new_edges))
         return new_edges
 
     def generate_cactus(self):
@@ -215,6 +223,7 @@ class CactusGraphGenerator(object):
 
         :return:
         """
+        self.logger.info("Generating cactus graph of size: {}".format(self.n))
         for i in range(0, self.n):
             self.G.add_node(i)
         remaining_nodes = set(self.G.nodes)
@@ -334,8 +343,9 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
                                             cycle_tree_ratio=self.cycle_tree_ratio,
                                             cycle_count_ratio=self.cycle_count_ratio,
                                             tree_count_ratio=self.tree_count_ratio,
-                                            random=self.random).\
+                                            random=self.random, logger=self.logger).\
                         generate_cactus()
+        self.logger.info("Using generated cactus to construct fog network")
         # copy the cactus structure
         for n in cactus_graph.nodes:
             fog_node_capacity = self._get_fog_node_capacity()
@@ -356,6 +366,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
             connecting_node = self.random.choice(non_location_nodes)
             # add undirected connection to location
             substrate.add_edge(connecting_node, n, capacity=self.unbounded_link_resource_capacity, cost=1.0)
+            self.logger.debug("Connecting sensor - actuator substrate node {} to cactus node {}".format(n, connecting_node))
 
         # bind the substrate to the scenario
         scenario.substrate = substrate
