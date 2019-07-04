@@ -391,6 +391,17 @@ class ScenarioGenerator(object):
         proc_pool.join()
 
 
+def instantiate_class_from_name_space_dicts(class_name, class_kwargs_dict, names_space_dicts):
+    class_instance = None
+    for ns in names_space_dicts:
+        if class_name in ns:
+            class_instance = ns[class_name](**class_kwargs_dict)
+    if class_instance is None:
+        raise ScenarioGeneratorError("Class {} cannot be instantiated from any of the given namespaces: {}".
+                                     format(class_name, names_space_dicts))
+    return class_instance
+
+
 def build_scenario(i_sp_tup):
     """
     Build a single scenario based on the scenario parameters.
@@ -430,22 +441,25 @@ def build_scenario(i_sp_tup):
                                       substrate=None,
                                       requests=None,
                                       objective=datamodel.Objective.MIN_COST)
-        global_name_space = globals()
+        # NOTE: not a nice way due to many reasons, but follows previous design, and keeps separation of newly implemented generators
+        import scenariogeneration_for_fog_model as sg_fog_model
+        all_name_spaces = [globals(), vars(sg_fog_model)]
         class_name_substrate_generator = sp[SUBSTRATE_GENERATION_TASK].values()[0].keys()[0]
-        subsr_gen = global_name_space[class_name_substrate_generator](logger=logger)
+        task_class_kwargs = {'logger': logger}
+        subsr_gen = instantiate_class_from_name_space_dicts(class_name_substrate_generator, task_class_kwargs, all_name_spaces)
         subsr_gen.apply(sp, scenario)
         class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
-        req_gen = global_name_space[class_name_request_generator](logger=logger)
+        req_gen = instantiate_class_from_name_space_dicts(class_name_request_generator, task_class_kwargs, all_name_spaces)
         if datamanager_dict is not None:
             req_gen.register_data_manager_dict(datamanager_dict)
         req_gen.apply(sp, scenario)
         if NODE_PLACEMENT_TASK in sp:
             class_name_npr = sp[NODE_PLACEMENT_TASK].values()[0].keys()[0]
-            npr = global_name_space[class_name_npr](logger=logger)
+            npr = instantiate_class_from_name_space_dicts(class_name_npr, task_class_kwargs, all_name_spaces)
             npr.apply(sp, scenario)
         if PROFIT_CALCULATION_TASK in sp:
             class_name_profit_calc = sp[PROFIT_CALCULATION_TASK].values()[0].keys()[0]
-            pc = global_name_space[class_name_profit_calc](logger=logger)
+            pc = instantiate_class_from_name_space_dicts(class_name_profit_calc, task_class_kwargs, all_name_spaces)
             pc.apply(sp, scenario)
             scenario.objective = datamodel.Objective.MAX_PROFIT
     except Exception as e:
