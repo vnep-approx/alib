@@ -266,7 +266,8 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         'tree_count_ratio',                 # cactus generation param       = 0.2
         'q_capacity_ratio',                 # fog network spare capacity factor after allocation = 2
         'fog_device_utilization_discount'   # background utilization        = 0.5 (50%)
-        'pseudo_random_seed'                # used for all randomization actions
+        'pseudo_random_seed',               # used for all randomization actions
+        'have_at_least_one_large'           # add at least one computation node with 'Large' capacity
     ]
 
     def __init__(self, logger=None):
@@ -275,6 +276,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         self.random = sg.random
         self.universal_node_type = 'universal'
         self.unbounded_link_resource_capacity = 1e20
+        self.large_capacity_node_added = False
 
     def _read_raw_parameters(self, raw_parameters):
         """
@@ -290,6 +292,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
             self.tree_count_ratio = float(raw_parameters['tree_count_ratio'])
             self.q_capacity_ratio = float(raw_parameters['q_capacity_ratio'])
             self.fog_device_utilization_discount = float(raw_parameters['fog_device_utilization_discount'])
+            self.have_at_least_one_large = bool(raw_parameters['have_at_least_one_large'])
             if 'pseudo_random_seed' in raw_parameters:
                 self.random.seed(int(raw_parameters['pseudo_random_seed']))
         except KeyError as e:
@@ -311,6 +314,8 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
 
         :return:
         """
+        # TODO: with the randomization, and even with the 'have_at_least_one_large' set to True
+        return 100000
         P = self.random.random()
         if P < 0.6:
             # small IoT devices
@@ -320,6 +325,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
             return self.random.uniform(500, 2000)
         else:
             # large devices
+            self.large_capacity_node_added = True
             return self.random.uniform(4000, 10000)
 
     def apply(self, scenario_parameters, scenario):
@@ -350,7 +356,12 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         for n in cactus_graph.nodes:
             fog_node_capacity = self._get_fog_node_capacity()
             # 0 cost for node resources, as described in the fog allocation paper
-            substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: fog_node_capacity}, cost=0.0)
+            substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: fog_node_capacity},
+                               cost={self.universal_node_type: 0.0})
+        if self.have_at_least_one_large and not self.large_capacity_node_added:
+            # 'n' will always have some value, the cactus graph cannot have 0 nodes
+            self.logger.info("Setting the last substrate node's {} capacity to be large, because none was added!")
+            substrate.node[n]['capacity'][self.universal_node_type] = self.random.uniform(4000, 10000)
         for i,j in cactus_graph.edges:
             # TODO: get capacity values from Yvonne-Anne!
             # links are bidirectional by default!!
@@ -362,7 +373,8 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         for n in range(first_location_node_id,
                        first_location_node_id + self.sensor_actuator_loop_count):
             # capacity only for the sensor and actuator
-            substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: 2.26}, cost=0.0)
+            substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: 2.26},
+                               cost={self.universal_node_type: 0.0})
             connecting_node = self.random.choice(non_location_nodes)
             # add undirected connection to location
             substrate.add_edge(connecting_node, n, capacity=self.unbounded_link_resource_capacity, cost=1.0)
