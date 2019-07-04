@@ -35,11 +35,14 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
     """
 
     EXPECTED_PARAMETERS = [
-        'sensor_actuator_loop_count' # If not even, one lower number is used
+        'sensor_actuator_loop_count', # referred to as 'N' in the article
+        'normalize',                  # used by the base class during apply. Should be set to False, because we have absolute values in
+                                      # the use case
+        'number_of_requests'          # used by the base class during apply.
     ]
 
     def __init__(self, logger=None):
-        super(ABBUseCaseRequestGenerator).__init__(logger=logger)
+        super(ABBUseCaseRequestGenerator, self).__init__(logger=logger)
         # All parameters of the request generator are inicialized here and the same names are expected in 'raw_parameters'
         self.sensor_actuator_loop_count = None
         self.universal_node_type = 'universal'
@@ -53,8 +56,6 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         """
         try:
             self.sensor_actuator_loop_count = int(raw_parameters['sensor_actuator_loop_count'])
-            if self.sensor_actuator_loop_count % 2 == 1:
-                self.sensor_actuator_loop_count -= 1
         except KeyError as e:
             raise sg.ExperimentSpecificationError("Parameter not found in request specification: {keyerror}".format(keyerror=e))
 
@@ -91,7 +92,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         :return:
         """
         self._read_raw_parameters(raw_parameters)
-        req = datamodel.Request("ABB_fog_app")
+        req = datamodel.Request("ABB_" + name)
         for base_node, demand in zip(["F", "G", "H"], [20.875, 20,875, 14.5]):
             req.add_node(base_node, demand=demand, ntype=self.universal_node_type)
         req.add_edge("F", "H", demand=192)
@@ -250,7 +251,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
 
     EXPECTED_PARAMETERS = [
         # NOTE: framework does not allow communication of these parameter between request an substrate
-        'sensor_actuator_loop_count' # If not even, one lower number is used
+        'sensor_actuator_loop_count'        # Referred to as 'N'. Should be the same as in the request
         'cycle_tree_ratio',                 # cactus generation param       = 0.6
         'cycle_count_ratio',                # cactus generation param       = 0.2
         'tree_count_ratio',                 # cactus generation param       = 0.2
@@ -260,7 +261,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
     ]
 
     def __init__(self, logger=None):
-        super(ABBUseCaseFogNetworkGenerator).__init__(logger=logger)
+        super(ABBUseCaseFogNetworkGenerator, self).__init__(logger)
         self.sensor_actuator_loop_count = None
         self.random = sg.random
         self.universal_node_type = 'universal'
@@ -275,8 +276,6 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         """
         try:
             self.sensor_actuator_loop_count = int(raw_parameters['sensor_actuator_loop_count'])
-            if self.sensor_actuator_loop_count % 2 == 1:
-                self.sensor_actuator_loop_count -= 1
             self.cycle_tree_ratio = float(raw_parameters['cycle_tree_ratio'])
             self.cycle_count_ratio = float(raw_parameters['cycle_count_ratio'])
             self.tree_count_ratio = float(raw_parameters['tree_count_ratio'])
@@ -287,17 +286,17 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         except KeyError as e:
             raise sg.ExperimentSpecificationError("Parameter not found in request specification: {keyerror}".format(keyerror=e))
 
-    def calculate_cactus_order(self):
+    def _calculate_cactus_order(self):
         """
         Creates the fog network size according to the constants of the Fog application. See details in Suther's thesis.
 
         :return:
         """
-        return math.ceil((84.9 * self.sensor_actuator_loop_count + 56.25) /
-                         (1725.0 / self.fog_device_utilization_discount) *
-                      self.q_capacity_ratio)
+        return int(math.ceil((84.9 * self.sensor_actuator_loop_count + 56.25) /
+                         (1725.0 * self.fog_device_utilization_discount) *
+                          self.q_capacity_ratio))
 
-    def get_fog_node_capacity(self):
+    def _get_fog_node_capacity(self):
         """
         Reproduces the resource distribution of the fog network, as described in the ABB Use Case.
 
@@ -331,7 +330,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         substrate = datamodel.Substrate("ABB_fog_net")
 
         # instantiate the class and calculate the cactus right away
-        cactus_graph = CactusGraphGenerator(n=self.calculate_cactus_order(),
+        cactus_graph = CactusGraphGenerator(n=self._calculate_cactus_order(),
                                             cycle_tree_ratio=self.cycle_tree_ratio,
                                             cycle_count_ratio=self.cycle_count_ratio,
                                             tree_count_ratio=self.tree_count_ratio,
@@ -339,9 +338,9 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
                         generate_cactus()
         # copy the cactus structure
         for n in cactus_graph.nodes:
-            fog_node_capacity = self.get_fog_node_capacity()
+            fog_node_capacity = self._get_fog_node_capacity()
             # 0 cost for node resources, as described in the fog allocation paper
-            substrate.add_node(n, types=[self.universal_node_type], capacity=fog_node_capacity, cost=0.0)
+            substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: fog_node_capacity}, cost=0.0)
         for i,j in cactus_graph.edges:
             # TODO: get capacity values from Yvonne-Anne!
             # links are bidirectional by default!!
@@ -353,7 +352,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         for n in range(first_location_node_id,
                        first_location_node_id + self.sensor_actuator_loop_count):
             # capacity only for the sensor and actuator
-            substrate.add_node(n, types=[self.universal_node_type], capacity=2.26, cost=0.0)
+            substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: 2.26}, cost=0.0)
             connecting_node = self.random.choice(non_location_nodes)
             # add undirected connection to location
             substrate.add_edge(connecting_node, n, capacity=self.unbounded_link_resource_capacity, cost=1.0)
