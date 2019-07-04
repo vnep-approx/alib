@@ -35,7 +35,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
     """
 
     EXPECTED_PARAMETERS = [
-        'sensor_actuator_loop_count', # referred to as 'N' in the article
+        # 'sensor_actuator_loop_count'  # referred to as 'N' in the article. Must be given for the substrate
         'normalize',                  # used by the base class during apply. Should be set to False, because we have absolute values in
                                       # the use case
         'number_of_requests'          # used by the base class during apply.
@@ -47,7 +47,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         self.sensor_actuator_loop_count = None
         self.universal_node_type = 'universal'
 
-    def _read_raw_parameters(self, raw_parameters):
+    def _read_raw_parameters(self, raw_parameters, substrate):
         """
         Reads all expected parameters
 
@@ -55,8 +55,10 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         :return:
         """
         try:
-            self.sensor_actuator_loop_count = int(raw_parameters['sensor_actuator_loop_count'])
-        except KeyError as e:
+
+            # The framework does not allow such communication between the request and the substrate by the config files
+            self.sensor_actuator_loop_count = getattr(substrate, 'sensor_actuator_loop_count')
+        except Exception as e:
             raise sg.ExperimentSpecificationError("Parameter not found in request specification: {keyerror}".format(keyerror=e))
 
     def _add_single_preprocessing_block(self, req, index, substrate_node):
@@ -92,7 +94,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         :param substrate:
         :return:
         """
-        self._read_raw_parameters(raw_parameters)
+        self._read_raw_parameters(raw_parameters, substrate)
         req = datamodel.Request("ABB_" + name)
         for base_node, demand in zip(["F", "G", "H"], [20.875, 20,875, 14.5]):
             req.add_node(base_node, demand=demand, ntype=self.universal_node_type)
@@ -360,7 +362,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
                                cost={self.universal_node_type: 0.0})
         if self.have_at_least_one_large and not self.large_capacity_node_added:
             # 'n' will always have some value, the cactus graph cannot have 0 nodes
-            self.logger.info("Setting the last substrate node's {} capacity to be large, because none was added!")
+            self.logger.info("Setting the last substrate node's {} capacity to be large, because none was added!".format(n))
             substrate.node[n]['capacity'][self.universal_node_type] = self.random.uniform(4000, 10000)
         for i,j in cactus_graph.edges:
             # TODO: get capacity values from Yvonne-Anne!
@@ -379,6 +381,9 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
             # add undirected connection to location
             substrate.add_edge(connecting_node, n, capacity=self.unbounded_link_resource_capacity, cost=1.0)
             self.logger.debug("Connecting sensor - actuator substrate node {} to cactus node {}".format(n, connecting_node))
+
+        # NOTE: this is ugly but we have no other choice to communicate between the request and the substrate the same number of sensor_actuator_loop_count
+        setattr(substrate, 'sensor_actuator_loop_count', self.sensor_actuator_loop_count)
 
         # bind the substrate to the scenario
         scenario.substrate = substrate
