@@ -430,14 +430,15 @@ def build_scenario(i_sp_tup):
                                       substrate=None,
                                       requests=None,
                                       objective=datamodel.Objective.MIN_COST)
-        top_zoo_reader = TopologyZooReader(logger=logger)
-        top_zoo_reader.apply(sp, scenario)
-        class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
         global_name_space = globals()
-        rg = global_name_space[class_name_request_generator](logger=logger)
+        class_name_substrate_generator = sp[SUBSTRATE_GENERATION_TASK].values()[0].keys()[0]
+        subsr_gen = global_name_space[class_name_substrate_generator](logger=logger)
+        subsr_gen.apply(sp, scenario)
+        class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
+        req_gen = global_name_space[class_name_request_generator](logger=logger)
         if datamanager_dict is not None:
-            rg.register_data_manager_dict(datamanager_dict)
-        rg.apply(sp, scenario)
+            req_gen.register_data_manager_dict(datamanager_dict)
+        req_gen.apply(sp, scenario)
         if NODE_PLACEMENT_TASK in sp:
             class_name_npr = sp[NODE_PLACEMENT_TASK].values()[0].keys()[0]
             npr = global_name_space[class_name_npr](logger=logger)
