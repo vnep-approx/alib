@@ -154,7 +154,7 @@ class CactusGraphGenerator(object):
         self.cycle_node_count = max(int(cycle_N * cycle_count_ratio), 3)
         self.tree_node_count = max(int((n - cycle_N) * tree_count_ratio), 2)
         if logger is None:
-            self.logger = util.get_logger("CactusGraphGenerator")
+            self.logger = util.get_logger("CactusGraphGenerator", make_file=False)
         else:
             self.logger = logger
 
@@ -316,8 +316,8 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
 
         :return:
         """
-        # TODO: with the randomization, and even with the 'have_at_least_one_large' set to True
-        return 100000
+        # TODO: with the randomization, and even with the 'have_at_least_one_large' set to True there is a small ratio of feasibility
+        # return 100000
         P = self.random.random()
         if P < 0.6:
             # small IoT devices
@@ -366,7 +366,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
             substrate.node[n]['capacity'][self.universal_node_type] = self.random.uniform(4000, 10000)
         for i,j in cactus_graph.edges:
             # TODO: get capacity values from Yvonne-Anne!
-            # links are bidirectional by default!!
+            # Substrate links are bidirectional by default!!
             # unit cost gives the minimization for hopcount as in the fog allocation paper
             substrate.add_edge(i, j, capacity=self.unbounded_link_resource_capacity, cost=1.0)
         # + self.sensor_actuator_loop_count number of nodes for the location bounds.
@@ -387,3 +387,228 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
 
         # bind the substrate to the scenario
         scenario.substrate = substrate
+
+
+class SyntheticCactusSubstrateGenerator(sg.ScenariogenerationTask):
+    """
+    Generates a synthetic fog network described in
+    Suter, Eidenbenz, Pignolet, Singla -- Fog Application Allocation for Automation Systems
+    """
+
+    EXPECTED_PARAMETERS = [
+        'node_count',                   # graph order of the cactus
+        'cycle_tree_ratio',             # cactus generation param       = 0.6
+        'cycle_count_ratio',            # cactus generation param       = 0.2
+        'tree_count_ratio',             # cactus generation param       = 0.2
+        'capacity_interval',            # interval of uniform distribution of node capacity = [0, 1]
+        'pseudo_random_seed'
+    ]
+
+    def __init__(self, logger=None):
+        super(SyntheticCactusSubstrateGenerator, self).__init__(logger)
+        self.random = sg.random
+        self.universal_node_type = 'universal'
+        self.unbounded_link_resource_capacity = 1e20
+
+    def _read_raw_parameters(self, raw_parameters):
+        """
+        Reads all expected parameters
+
+        :param raw_parameters:
+        :return:
+        """
+        try:
+            self.node_count = int(raw_parameters['node_count'])
+            self.cycle_tree_ratio = float(raw_parameters['cycle_tree_ratio'])
+            self.cycle_count_ratio = float(raw_parameters['cycle_count_ratio'])
+            self.tree_count_ratio = float(raw_parameters['tree_count_ratio'])
+            capacity_interval = list(raw_parameters['capacity_interval'])
+            self.min_capacity = float(capacity_interval[0])
+            self.max_capacity = float(capacity_interval[1])
+            if 'pseudo_random_seed' in raw_parameters:
+                self.random.seed(int(raw_parameters['pseudo_random_seed']))
+        except KeyError as e:
+            raise sg.ExperimentSpecificationError("Parameter not found in request specification: {keyerror}".format(keyerror=e))
+
+    def apply(self, scenario_parameters, scenario):
+        """
+        Framework interface to implement. Extends the scenario with the substrate network.
+
+        :param scenario_parameters:
+        :param scenario:
+        :return:
+        """
+        class_raw_parameters_dict = scenario_parameters[sg.SUBSTRATE_GENERATION_TASK].values()[0]
+        class_name = self.__class__.__name__
+        if class_name not in class_raw_parameters_dict:
+            raise sg.ScenarioGeneratorError("No class name found in config file.")
+        raw_parameters = class_raw_parameters_dict[class_name]
+        self._read_raw_parameters(raw_parameters)
+        substrate = datamodel.Substrate("fog_net")
+
+        # instantiate the class and calculate the cactus right away
+        cactus_graph = CactusGraphGenerator(n=self.node_count,
+                                            cycle_tree_ratio=self.cycle_tree_ratio,
+                                            cycle_count_ratio=self.cycle_count_ratio,
+                                            tree_count_ratio=self.tree_count_ratio,
+                                            random=self.random, logger=self.logger).\
+                        generate_cactus()
+        self.logger.info("Using generated cactus to construct fog network")
+        # copy the cactus structure
+        for n in cactus_graph.nodes:
+            fog_node_capacity = self.random.uniform(self.min_capacity, self.max_capacity)
+            # 0 cost for node resources, as described in the fog allocation paper
+            substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: fog_node_capacity},
+                               cost={self.universal_node_type: 0.0})
+        for i,j in cactus_graph.edges:
+            # TODO: get capacity values from Yvonne-Anne!
+            # links are bidirectional by default!!
+            # unit cost gives the minimization for hopcount as in the fog allocation paper
+            substrate.add_edge(i, j, capacity=self.unbounded_link_resource_capacity, cost=1.0)
+
+        # bind the substrate to the scenario
+        scenario.substrate = substrate
+
+
+class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGenerator):
+    """
+    Generates a synthetic fog application described in
+    Suter, Eidenbenz, Pignolet, Singla -- Fog Application Allocation for Automation Systems,
+    Parameters are made more accurate from Suter's MSc thesis at ETH Zuric.
+    """
+
+    EXPECTED_PARAMETERS = [
+        'request_substrate_node_count_ratio',               # factor of how much more app nodes than substrate nodes        = 2
+        'node_demand_interval'                              # interval of uniform distribution of node demand           = [0, 1/3]
+        'link_demand_interval'                              # interval of uniform distribution of link resource demand           = [0, 1/2]
+        'parallel_serial_ratio'                             # ratio of parallel and serial decompositions                                    = 0.5
+        'range_splitter'                                    # ratio of recursive split of node numbers for subgraphs to be composed         = 0.5
+        'location_bound_mapping_ratio'                      # ratio of location bound app nodes to total number of app nodes                = 0.1 
+        'normalize',                                        # used by the base class during apply. Should be set to False, because we have absolute values in
+                                                            # the use case
+        'number_of_requests'                                # used by the base class during apply.
+        'pseudo_random_seed'
+    ]
+
+    def __init__(self, logger=None):
+        super(SyntheticSeriesParallelDecomposableRequestGenerator, self).__init__(logger=logger)
+        # All parameters of the request generator are inicialized here and the same names are expected in 'raw_parameters'
+        self.universal_node_type = 'universal'
+        self.random = sg.random
+        self.current_node_id = 0
+        self.range_splitter = None
+        self.parallel_serial_ratio = None
+        self.substrate_nodes_with_bounded_app_node = set()
+
+    def _read_raw_parameters(self, raw_parameters, substrate):
+        """
+        Reads all expected parameters
+
+        :param raw_parameters:
+        :return:
+        """
+        try:
+            self.request_substrate_node_count_ratio = float(raw_parameters['request_substrate_node_count_ratio'])
+            self.node_count = int(substrate.get_number_of_nodes() * self.request_substrate_node_count_ratio)
+            node_demand_interval = list(raw_parameters['node_demand_interval'])
+            self.min_node_demand = float(node_demand_interval[0])
+            self.max_node_demand = float(node_demand_interval[1])
+            link_demand_interval = list(raw_parameters['link_demand_interval'])
+            self.min_link_demand = float(link_demand_interval[0])
+            self.max_link_demand = float(link_demand_interval[1])
+            self.parallel_serial_ratio = float(raw_parameters['parallel_serial_ratio'])
+            self.range_splitter = float(raw_parameters['range_splitter'])
+            if self.range_splitter != 0.5:
+                self.logger.warn("Series parallel decomposable graph generation is not guaranteed to terminate by the used definition "
+                                 "with other 'range_splitter' value than 0.5!")
+            self.location_bound_mapping_ratio = float(raw_parameters['location_bound_mapping_ratio'])
+            if 'pseudo_random_seed' in raw_parameters:
+                self.random.seed(int(raw_parameters['pseudo_random_seed']))
+        except Exception as e:
+            raise sg.ExperimentSpecificationError("Parameter not found in request specification: {keyerror}".format(keyerror=e))
+
+    def series_parallel_generator(self, n):
+        """
+        Generates a series parallel decomposable graph by the definition of
+        Eidenbenz, Locher -- Task Allocation for Distributed Stream Processing (Extended Version)
+
+        :param n:
+        :return:
+        """
+        if n == 0:
+            return nx.DiGraph()
+        elif n == 1:
+            G = nx.DiGraph()
+            # all nodes are unique
+            G.add_node(self.current_node_id)
+            self.current_node_id += 1
+            return G
+        else:
+            n1 = int(math.floor(n * self.range_splitter))
+            n2 = n - n1
+            G1 = self.series_parallel_generator(n1)
+            G2 = self.series_parallel_generator(n2)
+            if self.parallel_serial_ratio < self.random.random():
+                # parallel composition, creates a new graph without adding edges
+                return nx.compose(G1, G2)
+            else:
+                # series composition
+                G = nx.DiGraph()
+                sources_of_G2 = []
+                for n, d in G2.in_degree:
+                    if d == 0:
+                        sources_of_G2.append(n)
+                # iterate on the sinks of G1
+                for n, d in G1.out_degree:
+                    if d == 0:
+                        for source in sources_of_G2:
+                            G.add_edge(n, source)
+                return nx.compose(nx.compose(G, G1), G2)
+
+    def _allowed_substrate_node(self, demand, substrate):
+        """
+        Choses a substrate node which has enough resources.
+
+        :param demand:
+        :param substrate:
+        :return: list of a single node id
+        """
+        for substrate_node_id, d in substrate.node.iteritems():
+            if d['capacity'][self.universal_node_type] > demand and \
+                    substrate_node_id not in self.substrate_nodes_with_bounded_app_node:
+                self.substrate_nodes_with_bounded_app_node.add(substrate_node_id)
+                return [substrate_node_id]
+        # this has a quite low probablility due to the high node capacity / demand ration
+        self.logger.warn("Capacity demand {} cannot be found on any non-already app node location bound substrate nodes, scenario cannot "
+                         "be feasible!".format(demand))
+        return None
+
+    def generate_request(self, name, raw_parameters, substrate):
+        """
+        Realizes the generator function to fit to the framework.
+
+        :param name:
+        :param raw_parameters:
+        :param substrate:
+        :return:
+        """
+        self._read_raw_parameters(raw_parameters, substrate)
+        req = datamodel.Request("fog_app_" + name)
+
+        G_nx_spd = self.series_parallel_generator(self.node_count)
+
+        location_bound_node_ids = self.random.sample(list(G_nx_spd.nodes),
+                                                     int(self.node_count * self.location_bound_mapping_ratio))
+        for node_id in G_nx_spd.nodes:
+            capacity_demand = self.random.uniform(self.min_node_demand, self.max_node_demand)
+            allowed_node_list = None
+            if node_id in location_bound_node_ids:
+                allowed_node_list = self._allowed_substrate_node(capacity_demand, substrate)
+            req.add_node(node_id, demand=capacity_demand, ntype=self.universal_node_type,
+                         allowed_nodes=allowed_node_list)
+        for tail, head in G_nx_spd.edges:
+            capacity_demand = self.random.uniform(self.min_link_demand, self.max_link_demand)
+            # undirected by default as needed
+            req.add_edge(tail, head, demand=capacity_demand)
+
+        return req

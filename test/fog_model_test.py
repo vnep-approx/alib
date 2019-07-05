@@ -22,7 +22,7 @@
 #
 
 
-from alib.scenariogeneration_for_fog_model import CactusGraphGenerator
+from alib.scenariogeneration_for_fog_model import CactusGraphGenerator, SyntheticSeriesParallelDecomposableRequestGenerator
 
 import networkx as nx
 import random
@@ -81,8 +81,7 @@ def find_all_cycles(G, source=None, cycle_length_limit=None):
     return [list(i) for i in output_cycles]
 
 
-# TODO: add it to pytest, like the rest of the framework
-if __name__ == "__main__":
+def test_cactus_generation():
     for n in xrange(5, 30):
         for ctr in xrange(2, 9):
             ctr = ctr / 10.0
@@ -107,3 +106,28 @@ if __name__ == "__main__":
                                 else:
                                     cycle_edges.add((i,j))
                         print "OK: n:{}, ctr: {}, ccr: {}, tcr: {}, seed: {}\n".format(n, ctr, ccr, tcr, seed)
+
+
+def test_spd_generation():
+    for n in xrange(2, 20):
+            # different r might not terminate... But this is how range splitter is implemented...
+            r = 0.5
+            for sp in xrange(1, 9):
+                sp = sp / 10.0
+                sspdrg = SyntheticSeriesParallelDecomposableRequestGenerator()
+                sspdrg.range_splitter = r
+                sspdrg.parallel_serial_ratio = sp
+                G = sspdrg.series_parallel_generator(n)
+                print "OK: n: {}, r: {}, sp: {}, edge_count: {}, node_count: {}\n".\
+                                format(n, r, sp, G.number_of_edges(), G.number_of_nodes())
+                # NOTE: connected_components is not implemented for directed type
+                # cycles = find_all_cycles(G)
+                # if len(cycles) > 0:
+                #     raise Exception("SPD cannot have cycles: {}".format(cycles))
+
+
+# TODO: add it to pytest, like the rest of the framework
+if __name__ == "__main__":
+    test_spd_generation()
+    test_cactus_generation()
+
