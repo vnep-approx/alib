@@ -418,12 +418,16 @@ class ExperimentExecution(object):
             self.sss.experiment_parameters = sp
 
             scenario_id, execution_id, alg_result = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
-            # IMPORTANT:    this cleanup is necessary as after loading the pickle the original scenario does not match
-            #               the pickled one!
-            alg_result.cleanup_references(scenario)
+            # FIXME: if a result was not found we have nothing to do here
+            if alg_result is not None:
+                # IMPORTANT:    this cleanup is necessary as after loading the pickle the original scenario does not match
+                #               the pickled one!
+                alg_result.cleanup_references(scenario)
 
 
-            self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
+                self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
+            else:
+                log.info("Skipping scenario reference cleanup and solution addition, because no solution was found.")
 
 
     def clean_up(self):
