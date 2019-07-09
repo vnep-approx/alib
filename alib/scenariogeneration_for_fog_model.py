@@ -150,7 +150,7 @@ class CactusGraphGenerator(object):
             self.random = random
         self.G = datamodel.Graph("cactus")
         self.n = n
-        cycle_N = int(n * cycle_tree_ratio)
+        cycle_N = n * cycle_tree_ratio
         self.cycle_node_count = max(int(cycle_N * cycle_count_ratio), 3)
         self.tree_node_count = max(int((n - cycle_N) * tree_count_ratio), 2)
         if logger is None:
@@ -277,7 +277,6 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         self.sensor_actuator_loop_count = None
         self.random = sg.random
         self.universal_node_type = 'universal'
-        self.unbounded_link_resource_capacity = 1e20
         self.large_capacity_node_added = False
 
     def _read_raw_parameters(self, raw_parameters):
@@ -365,10 +364,10 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
             self.logger.info("Setting the last substrate node's {} capacity to be large, because none was added!".format(n))
             substrate.node[n]['capacity'][self.universal_node_type] = self.random.uniform(4000, 10000)
         for i,j in cactus_graph.edges:
-            # TODO: get capacity values from Yvonne-Anne!
             # Substrate links are bidirectional by default!!
             # unit cost gives the minimization for hopcount as in the fog allocation paper
-            substrate.add_edge(i, j, capacity=self.unbounded_link_resource_capacity, cost=1.0)
+            # link capacity of 10 000 is a new addition to the ABB use case since the Fog allocation paper.
+            substrate.add_edge(i, j, capacity=10000, cost=1.0)
         # + self.sensor_actuator_loop_count number of nodes for the location bounds.
         non_location_nodes = list(substrate.nodes)
         first_location_node_id = substrate.get_number_of_nodes()
@@ -379,7 +378,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
                                cost={self.universal_node_type: 0.0})
             connecting_node = self.random.choice(non_location_nodes)
             # add undirected connection to location
-            substrate.add_edge(connecting_node, n, capacity=self.unbounded_link_resource_capacity, cost=1.0)
+            substrate.add_edge(connecting_node, n, capacity=10000, cost=1.0)
             self.logger.debug("Connecting sensor - actuator substrate node {} to cactus node {}".format(n, connecting_node))
 
         # NOTE: this is ugly but we have no other choice to communicate between the request and the substrate the same number of sensor_actuator_loop_count
