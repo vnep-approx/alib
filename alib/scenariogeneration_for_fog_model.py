@@ -509,6 +509,7 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         """
         try:
             self.logger.debug("Reading configuration from raw parameters: {}".format(raw_parameters))
+            self.number_of_requests = int(raw_parameters['number_of_requests'])
             self.request_substrate_node_count_ratio = float(raw_parameters['request_substrate_node_count_ratio'])
             self.node_count = int(substrate.get_number_of_nodes() * self.request_substrate_node_count_ratio)
             node_demand_interval = list(raw_parameters['node_demand_interval'])
@@ -588,34 +589,61 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
                          "be feasible!".format(demand))
         return None
 
-    def generate_request(self, name, raw_parameters, substrate):
+    def convert_nx_to_alib_graph(self, name, G_nx, location_bound_node_ids, substrate):
         """
-        Realizes the generator function to fit to the framework.
+        Creates a datamodel.Request object based on a network X style graph
 
         :param name:
-        :param raw_parameters:
+        :param G_nx:
+        :param location_bound_node_ids:
         :param substrate:
         :return:
         """
-        self._read_raw_parameters(raw_parameters, substrate)
-        req = datamodel.Request("fog_app_" + name)
-
-        self.logger.debug("Generating series parallel decomposable request graph with {} nodes".format(self.node_count))
-        G_nx_spd = self.series_parallel_generator(self.node_count)
-
-        location_bound_node_ids = self.random.sample(list(G_nx_spd.nodes),
-                                                     int(self.node_count * self.location_bound_mapping_ratio))
-        self.logger.debug("Choosing location bound request nodes: {}".format(location_bound_node_ids))
-        for node_id in G_nx_spd.nodes:
+        req = datamodel.Request(name)
+        for node_id in G_nx.nodes:
             capacity_demand = self.random.uniform(self.min_node_demand, self.max_node_demand)
             allowed_node_list = None
             if node_id in location_bound_node_ids:
                 allowed_node_list = self._allowed_substrate_node(capacity_demand, substrate)
             req.add_node(node_id, demand=capacity_demand, ntype=self.universal_node_type,
                          allowed_nodes=allowed_node_list)
-        for tail, head in G_nx_spd.edges:
+        for tail, head in G_nx.edges:
             capacity_demand = self.random.uniform(self.min_link_demand, self.max_link_demand)
             # undirected by default as needed
             req.add_edge(tail, head, demand=capacity_demand)
-
         return req
+
+    def generate_request(self, name, raw_parameters, substrate):
+        # TODO: should it return just the list in order? (to comply with the framework)
+        raise NotImplementedError("This generator creates the request list at once!")
+
+    def generate_request_list(self, raw_parameters, substrate, base_name="vnet_{id}", normalize=False):
+        """
+        Realizes the generator function to fit to the framework.
+
+        :param raw_parameters:
+        :param substrate:
+        :return:
+        """
+        self._read_raw_parameters(raw_parameters, substrate)
+        self.logger.info("Generating series parallel decomposable request graph with {} nodes".format(self.node_count))
+        req_list = []
+
+        G_nx_spd = self.series_parallel_generator(self.node_count)
+
+        # must be common for all connected components
+        location_bound_node_ids = self.random.sample(list(G_nx_spd.nodes),
+                                                     int(self.node_count * self.location_bound_mapping_ratio))
+        self.logger.debug("Choosing location bound request nodes: {}".format(location_bound_node_ids))
+
+        for G_nx in nx.weakly_connected_component_subgraphs(G_nx_spd):
+            req = self.convert_nx_to_alib_graph("fog_app_" + base_name, G_nx, location_bound_node_ids, substrate)
+            self.logger.debug("Adding weakly connected SPD component on edges {} as a separate request".format(G_nx.edges()))
+            req_list.append(req)
+
+        if len(req_list) > self.number_of_requests:
+            self.logger.warn("More weakly connected SPD components are generated than the required number of requests, discarding the "
+                             "excess graphs...")
+
+        return req_list[:self.number_of_requests]
+
