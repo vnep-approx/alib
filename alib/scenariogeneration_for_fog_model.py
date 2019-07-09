@@ -55,7 +55,6 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         :return:
         """
         try:
-
             # The framework does not allow such communication between the request and the substrate by the config files
             self.sensor_actuator_loop_count = getattr(substrate, 'sensor_actuator_loop_count')
         except Exception as e:
@@ -287,6 +286,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         :return:
         """
         try:
+            self.logger.debug("Reading configuration from raw parameters: {}".format(raw_parameters))
             self.sensor_actuator_loop_count = int(raw_parameters['sensor_actuator_loop_count'])
             self.cycle_tree_ratio = float(raw_parameters['cycle_tree_ratio'])
             self.cycle_count_ratio = float(raw_parameters['cycle_count_ratio'])
@@ -417,6 +417,7 @@ class SyntheticCactusSubstrateGenerator(sg.ScenariogenerationTask):
         :return:
         """
         try:
+            self.logger.debug("Reading configuration from raw parameters: {}".format(raw_parameters))
             self.node_count = int(raw_parameters['node_count'])
             self.cycle_tree_ratio = float(raw_parameters['cycle_tree_ratio'])
             self.cycle_count_ratio = float(raw_parameters['cycle_count_ratio'])
@@ -507,6 +508,7 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         :return:
         """
         try:
+            self.logger.debug("Reading configuration from raw parameters: {}".format(raw_parameters))
             self.request_substrate_node_count_ratio = float(raw_parameters['request_substrate_node_count_ratio'])
             self.node_count = int(substrate.get_number_of_nodes() * self.request_substrate_node_count_ratio)
             node_demand_interval = list(raw_parameters['node_demand_interval'])
@@ -572,10 +574,14 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         :param substrate:
         :return: list of a single node id
         """
-        for substrate_node_id, d in substrate.node.iteritems():
+        substrate_node_tuples = [t for t in substrate.node.iteritems()]
+        self.random.shuffle(substrate_node_tuples)
+        for substrate_node_id, d in substrate_node_tuples:
             if d['capacity'][self.universal_node_type] > demand and \
                     substrate_node_id not in self.substrate_nodes_with_bounded_app_node:
                 self.substrate_nodes_with_bounded_app_node.add(substrate_node_id)
+                self.logger.debug("Choosing substrate node {} to host a location bound request node with demand {}".format(
+                                                                                                                    substrate_node_id, demand))
                 return [substrate_node_id]
         # this has a quite low probablility due to the high node capacity / demand ration
         self.logger.warn("Capacity demand {} cannot be found on any non-already app node location bound substrate nodes, scenario cannot "
@@ -594,10 +600,12 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         self._read_raw_parameters(raw_parameters, substrate)
         req = datamodel.Request("fog_app_" + name)
 
+        self.logger.debug("Generating series parallel decomposable request graph with {} nodes".format(self.node_count))
         G_nx_spd = self.series_parallel_generator(self.node_count)
 
         location_bound_node_ids = self.random.sample(list(G_nx_spd.nodes),
                                                      int(self.node_count * self.location_bound_mapping_ratio))
+        self.logger.debug("Choosing location bound request nodes: {}".format(location_bound_node_ids))
         for node_id in G_nx_spd.nodes:
             capacity_demand = self.random.uniform(self.min_node_demand, self.max_node_demand)
             allowed_node_list = None
