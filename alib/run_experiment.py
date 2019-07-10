@@ -377,6 +377,9 @@ class ExperimentExecution(object):
                 log.error("Exception {} at process {} of scenario {}, execution id {}. Skipping executing scenario!".
                           format(exception, process_index, scenario_id, execution_id))
                 # we should not expect solution from this process
+                self.finished_tasks.append((scenario_id, execution_id))
+                self.processes[process_index].join()
+                self.processes[process_index].terminate()
                 self.processes[process_index] = None
                 self.currently_active_processes -= 1
             except Queue.Empty as e:
@@ -387,14 +390,14 @@ class ExperimentExecution(object):
                 scenario_id, execution_id, alg_result, process_index = result
 
                 self._process_result(result)
-                self.finished_tasks.append((scenario_id, execution_id))
 
+                self.finished_tasks.append((scenario_id, execution_id))
                 self.processes[process_index].join()
                 self.processes[process_index].terminate()
                 self.processes[process_index] = None
                 self.currently_active_processes -= 1
                 self.current_scenario[process_index] = None
-                self._spawn_processes()
+            self._spawn_processes()
 
     def _process_result(self, res):
         try:
