@@ -100,7 +100,7 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
             self.logger.debug("Added F, G, H nodes")
         req.add_edge("F", "H", demand=192)
         req.add_edge("G", "H", demand=192)
-        # TODO: might be implemented nicer (but more difficultly with placement resctriction generation
+        # NOTE: might be implemented nicer (but more difficultly with placement resctriction generation
         # we assume all actuator - sensor pairs are on different infrastucture nodes
         # The location bound nodes are the highest sensor_actuator_loop_count number of nodes.
         nodes_for_actuators_sensors = [i for i in xrange(substrate.get_number_of_nodes() - self.sensor_actuator_loop_count,
@@ -399,7 +399,8 @@ class SyntheticCactusSubstrateGenerator(sg.ScenariogenerationTask):
         'cycle_tree_ratio',             # cactus generation param       = 0.6
         'cycle_count_ratio',            # cactus generation param       = 0.2
         'tree_count_ratio',             # cactus generation param       = 0.2
-        'capacity_interval',            # interval of uniform distribution of node capacity = [0, 1]
+        'node_capacity_interval',       # interval of uniform distribution of node capacity = [0, 1]
+        'link_capacity_interval'        # link capacity interval for uniform distribution = [0, 1]
         'pseudo_random_seed'
     ]
 
@@ -407,7 +408,6 @@ class SyntheticCactusSubstrateGenerator(sg.ScenariogenerationTask):
         super(SyntheticCactusSubstrateGenerator, self).__init__(logger)
         self.random = sg.random
         self.universal_node_type = 'universal'
-        self.unbounded_link_resource_capacity = 1e20
 
     def _read_raw_parameters(self, raw_parameters):
         """
@@ -422,9 +422,13 @@ class SyntheticCactusSubstrateGenerator(sg.ScenariogenerationTask):
             self.cycle_tree_ratio = float(raw_parameters['cycle_tree_ratio'])
             self.cycle_count_ratio = float(raw_parameters['cycle_count_ratio'])
             self.tree_count_ratio = float(raw_parameters['tree_count_ratio'])
-            capacity_interval = list(raw_parameters['capacity_interval'])
-            self.min_capacity = float(capacity_interval[0])
-            self.max_capacity = float(capacity_interval[1])
+            node_capacity_interval = list(raw_parameters['node_capacity_interval'])
+            self.node_min_capacity = float(node_capacity_interval[0])
+            self.node_max_capacity = float(node_capacity_interval[1])
+
+            link_capacity_interval = list(raw_parameters['link_capacity_interval'])
+            self.link_min_capacity = float(link_capacity_interval[0])
+            self.link_max_capacity = float(link_capacity_interval[1])
             if 'pseudo_random_seed' in raw_parameters:
                 self.random.seed(int(raw_parameters['pseudo_random_seed']))
         except KeyError as e:
@@ -456,15 +460,15 @@ class SyntheticCactusSubstrateGenerator(sg.ScenariogenerationTask):
         self.logger.info("Using generated cactus to construct fog network")
         # copy the cactus structure
         for n in cactus_graph.nodes:
-            fog_node_capacity = self.random.uniform(self.min_capacity, self.max_capacity)
+            fog_node_capacity = self.random.uniform(self.node_min_capacity, self.node_max_capacity)
             # 0 cost for node resources, as described in the fog allocation paper
             substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: fog_node_capacity},
                                cost={self.universal_node_type: 0.0})
         for i,j in cactus_graph.edges:
-            # TODO: get capacity values from Yvonne-Anne!
+            link_capacity = self.random.uniform(self.link_min_capacity, self.link_max_capacity)
             # links are bidirectional by default!!
             # unit cost gives the minimization for hopcount as in the fog allocation paper
-            substrate.add_edge(i, j, capacity=self.unbounded_link_resource_capacity, cost=1.0)
+            substrate.add_edge(i, j, capacity=link_capacity, cost=1.0)
 
         # bind the substrate to the scenario
         scenario.substrate = substrate
@@ -614,7 +618,8 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         return req
 
     def generate_request(self, name, raw_parameters, substrate):
-        # TODO: should it return just the list in order? (to comply with the framework)
+        # NOTE: maybe should it return just the list in order? (to comply with the framework), but this function is not called directly
+        # anywhere
         raise NotImplementedError("This generator creates the request list at once!")
 
     def generate_request_list(self, raw_parameters, substrate, base_name="vnet_{id}", normalize=False):
