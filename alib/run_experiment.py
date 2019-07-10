@@ -25,6 +25,7 @@ import cPickle as pickle
 from collections import deque
 import itertools
 import multiprocessing as mp
+import Queue
 import os
 import traceback
 import yaml
@@ -259,6 +260,7 @@ class ExperimentExecution(object):
         self.process_args = {i : None for i in self.process_indices}
         self.input_queues = {i : mp.Queue() for i in self.process_indices}
         self.result_queue = mp.Queue()
+        self.error_queue = mp.Queue()
         self.unprocessed_tasks = deque()
         self.finished_tasks = deque()
         self.currently_active_processes = 0
@@ -356,7 +358,7 @@ class ExperimentExecution(object):
 
         for process_id, process in self.processes.iteritems():
             if process is None:
-                extended_args = scenario_index, execution_id, parameters, scenario, process_id, self.result_queue
+                extended_args = scenario_index, execution_id, parameters, scenario, process_id, self.result_queue, self.error_queue
                 self.processes[process_id] = mp.Process(target=_execute, args=extended_args)
                 log.info("Spawning process with index {}".format(process_id))
                 self.processes[process_id].start()
@@ -368,19 +370,31 @@ class ExperimentExecution(object):
 
     def _retrieve_results_and_spawn_processes(self):
         while self.currently_active_processes > 0:
-            result = self.result_queue.get()
-            scenario_id, execution_id, alg_result, process_index = result
+            try:
+                excetion_info = self.error_queue.get_nowait()
+                scenario_id, execution_id, exception, process_index = excetion_info
+                # NOTE: assertion error happens often when memory allocation failed for the treewidth calculation
+                log.error("Exception {} at process {} of scenario {}, execution id {}. Skipping executing scenario!".
+                          format(exception, process_index, scenario_id, execution_id))
+                # we should not expect solution from this process
+                self.processes[process_index] = None
+                self.currently_active_processes -= 1
+            except Queue.Empty as e:
+                log.debug("No error found in error queue.")
 
-            self._process_result(result)
-            self.finished_tasks.append((scenario_id, execution_id))
+                result = self.result_queue.get()
 
-            self.processes[process_index].join()
-            self.processes[process_index].terminate()
-            self.processes[process_index] = None
-            self.currently_active_processes -= 1
-            self.current_scenario[process_index] = None
-            self._spawn_processes()
+                scenario_id, execution_id, alg_result, process_index = result
 
+                self._process_result(result)
+                self.finished_tasks.append((scenario_id, execution_id))
+
+                self.processes[process_index].join()
+                self.processes[process_index].terminate()
+                self.processes[process_index] = None
+                self.currently_active_processes -= 1
+                self.current_scenario[process_index] = None
+                self._spawn_processes()
 
     def _process_result(self, res):
         try:
@@ -495,7 +509,7 @@ def _initialize_algorithm(scenario, logger, parameters):
     return alg_instance
 
 
-def _execute(scenario_id, execution_id, parameters, scenario, process_index, result_queue):
+def _execute(scenario_id, execution_id, parameters, scenario, process_index, result_queue, error_queue):
     """
     This function is submitted to the processing pool
 
@@ -549,4 +563,6 @@ def _execute(scenario_id, execution_id, parameters, scenario, process_index, res
         # print stacktrace
         for line in stacktrace.split("\n"):
             logger.error(line)
-        raise e
+        exception_info = (scenario_id, execution_id, e, process_index)
+        # instead of raising the exception save it to the parent process
+        error_queue.put(exception_info)
