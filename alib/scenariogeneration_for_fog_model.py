@@ -636,8 +636,11 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
                                                      int(self.node_count * self.location_bound_mapping_ratio))
         self.logger.debug("Choosing location bound request nodes: {}".format(location_bound_node_ids))
 
+        connected_component_count = 1
         for G_nx in nx.weakly_connected_component_subgraphs(G_nx_spd):
-            req = self.convert_nx_to_alib_graph("fog_app_" + base_name, G_nx, location_bound_node_ids, substrate)
+            name = "fog_app_" + base_name.format(id = connected_component_count)
+            req = self.convert_nx_to_alib_graph(name, G_nx, location_bound_node_ids, substrate)
+            connected_component_count += 1
             self.logger.debug("Adding weakly connected SPD component on edges {} as a separate request".format(G_nx.edges()))
             req_list.append(req)
 
