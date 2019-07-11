@@ -405,6 +405,17 @@ class ExperimentExecution(object):
                 log.debug("No result found in result queue yet, retrying in 30s... "
                           "Current processes: {}".format(self.processes))
 
+            for process_index, process in self.processes.items():
+                if process is not None:
+                    if process.exitcode is not None:
+                        # processes with handled exception also has exit code 0
+                        if process.exitcode < 0:
+                            # only those have such which were terminated by some external source, without being able to finish.
+                            log.warn("Discarding terminated inactive process with process id {}: {}".format(process_index, process))
+                            self.processes[process_index] = None
+                            self.currently_active_processes -= 1
+                            self.current_scenario[process_index] = None
+
             self._spawn_processes()
 
     def _process_result(self, res):
