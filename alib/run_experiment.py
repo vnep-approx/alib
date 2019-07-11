@@ -377,6 +377,7 @@ class ExperimentExecution(object):
         # self.processes[process_index].terminate()
         self.processes[process_index] = None
         self.currently_active_processes -= 1
+        # set the current scenario to invalid, it is used when processing the result, which should be done before calling this function
         self.current_scenario[process_index] = None
 
     def _retrieve_results_and_spawn_processes(self):
@@ -397,9 +398,9 @@ class ExperimentExecution(object):
 
                 scenario_id, execution_id, alg_result, process_index = result
 
-                self._handle_finished_process(scenario_id, execution_id, process_index, failed=False)
-
                 self._process_result(result)
+
+                self._handle_finished_process(scenario_id, execution_id, process_index, failed=False)
             except Queue.Empty as e:
                 log.debug("No result found in result queue yet, retrying in 30s...")
 
