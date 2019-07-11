@@ -402,7 +402,8 @@ class ExperimentExecution(object):
 
                 self._handle_finished_process(scenario_id, execution_id, process_index, failed=False)
             except Queue.Empty as e:
-                log.debug("No result found in result queue yet, retrying in 30s...")
+                log.debug("No result found in result queue yet, retrying in 30s... "
+                          "Current processes: {}".format(self.processes))
 
             self._spawn_processes()
 
