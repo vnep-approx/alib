@@ -320,7 +320,7 @@ class ExperimentExecution(object):
                 else:
                     log.info("Will not execute the following, as an intermediate solution file already exists.\n"
                              "Scenario {}, Alg {}, Execution {}".format(scenario_index, parameters["ALG_ID"], execution_id))
-                    self.finished_tasks.append((scenario_index, execution_id))
+                    self.finished_tasks.append((scenario_index, execution_id, None))
 
                 for key, param_dict in parameters.iteritems():
                     if key == "ALG_ID":
@@ -368,6 +368,17 @@ class ExperimentExecution(object):
             # else:
             #     log.info("Process with index {} is currently still active".format(process_id))
 
+    def _handle_finished_process(self, scenario_id, execution_id, process_index, failed):
+        self.finished_tasks.append((scenario_id, execution_id, failed))
+        # joining without timeout might cause the whole execution to wait for the slowest process until the errors/results of other
+        # processes are handled or new ones created.
+        self.processes[process_index].join()
+        # terminate might corrupt the queues or interrupt exception handling...
+        # self.processes[process_index].terminate()
+        self.processes[process_index] = None
+        self.currently_active_processes -= 1
+        self.current_scenario[process_index] = None
+
     def _retrieve_results_and_spawn_processes(self):
         while self.currently_active_processes > 0:
             try:
@@ -377,32 +388,27 @@ class ExperimentExecution(object):
                 log.error("Exception {} at process {} of scenario {}, execution id {}. Skipping executing scenario!".
                           format(exception, process_index, scenario_id, execution_id))
                 # we should not expect solution from this process
-                self.finished_tasks.append((scenario_id, execution_id))
-                self.processes[process_index].join()
-                self.processes[process_index].terminate()
-                self.processes[process_index] = None
-                self.currently_active_processes -= 1
+                self._handle_finished_process(scenario_id, execution_id, process_index, failed=True)
             except Queue.Empty as e:
                 log.debug("No error found in error queue.")
 
-                result = self.result_queue.get()
+            try:
+                result = self.result_queue.get(timeout=30)
 
                 scenario_id, execution_id, alg_result, process_index = result
 
-                self._process_result(result)
+                self._handle_finished_process(scenario_id, execution_id, process_index, failed=False)
 
-                self.finished_tasks.append((scenario_id, execution_id))
-                self.processes[process_index].join()
-                self.processes[process_index].terminate()
-                self.processes[process_index] = None
-                self.currently_active_processes -= 1
-                self.current_scenario[process_index] = None
+                self._process_result(result)
+            except Queue.Empty as e:
+                log.debug("No result found in result queue yet, retrying in 30s...")
+
             self._spawn_processes()
 
     def _process_result(self, res):
         try:
             scenario_id, execution_id, alg_result, process_index = res
-            log.info("Processing solution for {}, {}: {}".format(scenario_id, execution_id, alg_result))
+            log.info("Processing solution for scenario {}, execution id {}, result: {}".format(scenario_id, execution_id, alg_result))
 
             self._dump_scenario_solution(scenario_id, execution_id, (scenario_id, execution_id, alg_result))
 
@@ -415,6 +421,7 @@ class ExperimentExecution(object):
                 self._dump_scenario_solution(scenario_id, execution_id, (scenario_id, execution_id, alg_result))
 
         except Exception as e:
+            # if error occurs in result processing, we want it to break the execution
             stacktrace = ("\nError in processing algorithm result {}:\n".format(res) +
                           traceback.format_exc(limit=100))
             for line in stacktrace.split("\n"):
@@ -425,26 +432,33 @@ class ExperimentExecution(object):
         scenario_container = self._load_scenario_container()
         self.sss = solutions.ScenarioSolutionStorage(scenario_container, self.execution_parameters)
 
-        for finished_scenario_id, finished_execution_id in self.finished_tasks:
-            alg_id = self.execution_parameters.algorithm_parameter_list[finished_execution_id]["ALG_ID"]
-            intermediate_solution_filename = self._get_scenario_solution_filename(finished_scenario_id, finished_execution_id)
+        for finished_scenario_id, finished_execution_id, is_failed in self.finished_tasks:
+            if is_failed is None or is_failed is False:
+                alg_id = self.execution_parameters.algorithm_parameter_list[finished_execution_id]["ALG_ID"]
+                intermediate_solution_filename = self._get_scenario_solution_filename(finished_scenario_id, finished_execution_id)
 
-            log.info("Collecting result stored in file {}".format(intermediate_solution_filename))
-            scenario_solution = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
-            sp, scenario = scenario_container.scenario_triple[finished_scenario_id]
-            self.sss.experiment_parameters = sp
+                log.info("Collecting result stored in file {}".format(intermediate_solution_filename))
+                scenario_solution = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
+                sp, scenario = scenario_container.scenario_triple[finished_scenario_id]
+                self.sss.experiment_parameters = sp
 
-            scenario_id, execution_id, alg_result = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
-            # FIXME: if a result was not found we have nothing to do here
-            if alg_result is not None:
-                # IMPORTANT:    this cleanup is necessary as after loading the pickle the original scenario does not match
-                #               the pickled one!
-                alg_result.cleanup_references(scenario)
+                scenario_id, execution_id, alg_result = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
+                # FIXME: if a result was not found we have nothing to do here
+                if alg_result is not None:
+                    # IMPORTANT:    this cleanup is necessary as after loading the pickle the original scenario does not match
+                    #               the pickled one!
+                    alg_result.cleanup_references(scenario)
 
 
-                self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
+                    self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
+                else:
+                    log.info("Skipping scenario {} with execution id {} reference cleanup and solution addition, because no solution was "
+                             "found.".format(finished_scenario_id, finished_execution_id))
+            elif is_failed is True:
+                log.info("Skipping reading non existing solution file of failed scenario {}, execution id {}".format(
+                    finished_scenario_id, finished_execution_id))
             else:
-                log.info("Skipping scenario reference cleanup and solution addition, because no solution was found.")
+                raise Exception("Dunno what is happening here!")
 
 
     def clean_up(self):
@@ -502,7 +516,6 @@ class ExperimentExecution(object):
             pickle.dump(scenario_solution, f)
 
 
-
 def _initialize_algorithm(scenario, logger, parameters):
     alg_class = ALGORITHMS[parameters["ALG_ID"]]
     gurobi_settings = None
@@ -551,13 +564,6 @@ def _execute(scenario_id, execution_id, parameters, scenario, process_index, res
 
         execution_result = (scenario_id, execution_id, alg_solution, process_index)
 
-        logger_filename_orig = util.get_logger_filename(logger_filename)
-        current_time = datetime.now()
-
-        logger_filename_finished = util.get_logger_filename("finished" + current_time.strftime("_%Y_%m_%d_%H_%M_%S_") + logger_filename)
-
-        os.rename(logger_filename_orig, logger_filename_finished)
-
         result_queue.put(execution_result)
 
     except Exception as e:
@@ -566,6 +572,14 @@ def _execute(scenario_id, execution_id, parameters, scenario, process_index, res
         # print stacktrace
         for line in stacktrace.split("\n"):
             logger.error(line)
-        exception_info = (scenario_id, execution_id, e, process_index)
+        exception_info = (scenario_id, execution_id, str(type(e)), process_index)
         # instead of raising the exception save it to the parent process
         error_queue.put(exception_info)
+    finally:
+        # in any case we need to move the logger file to finished
+        logger_filename_orig = util.get_logger_filename(logger_filename)
+        current_time = datetime.now()
+
+        logger_filename_finished = util.get_logger_filename("finished" + current_time.strftime("_%Y_%m_%d_%H_%M_%S_") + logger_filename)
+
+        os.rename(logger_filename_orig, logger_filename_finished)
