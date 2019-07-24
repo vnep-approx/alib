@@ -117,7 +117,7 @@ def test_spd_generation():
                 sspdrg = SyntheticSeriesParallelDecomposableRequestGenerator()
                 sspdrg.range_splitter = r
                 sspdrg.parallel_serial_ratio = sp
-                G = sspdrg.series_parallel_generator(n)
+                G = sspdrg.series_parallel_decomposable_generator(n)
                 print "OK: n: {}, r: {}, sp: {}, edge_count: {}, node_count: {}\n".\
                                 format(n, r, sp, G.number_of_edges(), G.number_of_nodes())
                 # NOTE: connected_components is not implemented for directed type

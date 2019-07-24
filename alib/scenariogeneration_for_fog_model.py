@@ -483,15 +483,17 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
 
     EXPECTED_PARAMETERS = [
         'request_substrate_node_count_ratio',               # factor of how much more app nodes than substrate nodes        = 2
-        'node_demand_interval'                              # interval of uniform distribution of node demand           = [0, 1/3]
-        'link_demand_interval'                              # interval of uniform distribution of link resource demand           = [0, 1/2]
-        'parallel_serial_ratio'                             # ratio of parallel and serial decompositions                                    = 0.5
-        'range_splitter'                                    # ratio of recursive split of node numbers for subgraphs to be composed         = 0.5
-        'location_bound_mapping_ratio'                      # ratio of location bound app nodes to total number of app nodes                = 0.1 
+        'node_demand_interval',                              # interval of uniform distribution of node demand           = [0, 1/3]
+        'link_demand_interval',                              # interval of uniform distribution of link resource demand           = [0, 1/2]
+        'parallel_serial_ratio',                             # ratio of parallel and serial decompositions                                    = 0.5
+        'range_splitter',                                    # ratio of recursive split of node numbers for subgraphs to be composed         = 0.5
+                                                             # OR the ratio of series and parallel decompositions if use_connected_sp_def is True
+        'location_bound_mapping_ratio',                      # ratio of location bound app nodes to total number of app nodes                = 0.1
         'normalize',                                        # used by the base class during apply. Should be set to False, because we have absolute values in
                                                             # the use case
-        'number_of_requests'                                # used by the base class during apply.
-        'pseudo_random_seed'
+        'number_of_requests',                                # used by the base class during apply.
+        'pseudo_random_seed',
+        'use_connected_sp_def'                               # True by default, use Series parallel graph instead of SPD
     ]
 
     def __init__(self, logger=None):
@@ -513,7 +515,13 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         """
         try:
             self.logger.debug("Reading configuration from raw parameters: {}".format(raw_parameters))
+            if 'use_connected_sp_def' in raw_parameters:
+                self.use_connected_sp_def = bool(raw_parameters['use_connected_sp_def'])
+            else:
+                self.use_connected_sp_def = True
             self.number_of_requests = int(raw_parameters['number_of_requests'])
+            if self.number_of_requests > 1 and self.use_connected_sp_def:
+                self.logger.warn("Only 1 request is generated when using connected series parallel graph definition")
             self.request_substrate_node_count_ratio = float(raw_parameters['request_substrate_node_count_ratio'])
             self.node_count = int(substrate.get_number_of_nodes() * self.request_substrate_node_count_ratio)
             node_demand_interval = list(raw_parameters['node_demand_interval'])
@@ -524,7 +532,7 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
             self.max_link_demand = float(link_demand_interval[1])
             self.parallel_serial_ratio = float(raw_parameters['parallel_serial_ratio'])
             self.range_splitter = float(raw_parameters['range_splitter'])
-            if self.range_splitter != 0.5:
+            if self.range_splitter != 0.5 and not self.use_connected_sp_def:
                 self.logger.warn("Series parallel decomposable graph generation is not guaranteed to terminate by the used definition "
                                  "with other 'range_splitter' value than 0.5!")
             self.location_bound_mapping_ratio = float(raw_parameters['location_bound_mapping_ratio'])
@@ -533,7 +541,7 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         except Exception as e:
             raise sg.ExperimentSpecificationError("Parameter not found in request specification: {keyerror}".format(keyerror=e))
 
-    def series_parallel_generator(self, n):
+    def series_parallel_decomposable_generator(self, n):
         """
         Generates a series parallel decomposable graph by the definition of
         Eidenbenz, Locher -- Task Allocation for Distributed Stream Processing (Extended Version)
@@ -552,8 +560,8 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         else:
             n1 = int(math.floor(n * self.range_splitter))
             n2 = n - n1
-            G1 = self.series_parallel_generator(n1)
-            G2 = self.series_parallel_generator(n2)
+            G1 = self.series_parallel_decomposable_generator(n1)
+            G2 = self.series_parallel_decomposable_generator(n2)
             if self.parallel_serial_ratio < self.random.random():
                 # parallel composition, creates a new graph without adding edges
                 return nx.compose(G1, G2)
@@ -570,6 +578,34 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
                         for source in sources_of_G2:
                             G.add_edge(n, source)
                 return nx.compose(nx.compose(G, G1), G2)
+
+    def series_parallel_generator(self, n):
+        """
+        Creates SP graphs with this definition: http://www.graphclasses.org/classes/gc_275.html
+
+        :param n:
+        :return:
+        """
+        G = nx.MultiDiGraph()
+        G.add_node(self.current_node_id)
+        G.add_edge(self.current_node_id, self.current_node_id)
+        self.current_node_id += 1
+        while G.number_of_nodes() < n:
+            p = self.random.random()
+            u, v = self.random.choice(list(G.edges()))
+            if p < self.range_splitter:
+                # subdivide an edge
+                # deterministically remove always the smallest ID edge
+                k = min(G[u][v].keys())
+                G.remove_edge(u, v, k)
+                G.add_node(self.current_node_id)
+                G.add_edge(u, self.current_node_id)
+                G.add_edge(self.current_node_id, v)
+                self.current_node_id += 1
+            else:
+                # add parallel edge
+                G.add_edge(u, v)
+        return G
 
     def _allowed_substrate_node(self, demand, substrate):
         """
@@ -611,10 +647,15 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
                 allowed_node_list = self._allowed_substrate_node(capacity_demand, substrate)
             req.add_node(node_id, demand=capacity_demand, ntype=self.universal_node_type,
                          allowed_nodes=allowed_node_list)
-        for tail, head in G_nx.edges:
-            capacity_demand = self.random.uniform(self.min_link_demand, self.max_link_demand)
-            # undirected by default as needed
-            req.add_edge(tail, head, demand=capacity_demand)
+        for edge in G_nx.edges:
+            tail = edge[0]
+            head = edge[1]
+            # if there are parallel edges or loops in the generated NX graph we discard
+            if (tail, head) not in req.edges and tail != head:
+                # NOTE: edge might contain 2 or 3 elements, 3rd being the edge key in multidigraph.
+                capacity_demand = self.random.uniform(self.min_link_demand, self.max_link_demand)
+                # directed request edge by default
+                req.add_edge(tail, head, demand=capacity_demand)
         return req
 
     def generate_request(self, name, raw_parameters, substrate):
@@ -634,19 +675,24 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         self.logger.info("Generating series parallel decomposable request graph with {} nodes".format(self.node_count))
         req_list = []
 
-        G_nx_spd = self.series_parallel_generator(self.node_count)
+        if self.use_connected_sp_def:
+            G_nx = self.series_parallel_generator(self.node_count)
+        else:
+            G_nx = self.series_parallel_decomposable_generator(self.node_count)
 
         # must be common for all connected components
-        location_bound_node_ids = self.random.sample(list(G_nx_spd.nodes),
+        location_bound_node_ids = self.random.sample(list(G_nx.nodes),
                                                      int(self.node_count * self.location_bound_mapping_ratio))
         self.logger.debug("Choosing location bound request nodes: {}".format(location_bound_node_ids))
 
         connected_component_count = 1
-        for G_nx in nx.weakly_connected_component_subgraphs(G_nx_spd):
+        for G_nx in nx.weakly_connected_component_subgraphs(G_nx):
+            if connected_component_count > 1 and self.use_connected_sp_def:
+                raise sg.RequestGenerationError("Series parallel graph is not connected!")
             name = "fog_app_" + base_name.format(id = connected_component_count)
             req = self.convert_nx_to_alib_graph(name, G_nx, location_bound_node_ids, substrate)
             connected_component_count += 1
-            self.logger.debug("Adding weakly connected SPD component on edges {} as a separate request".format(G_nx.edges()))
+            self.logger.debug("Adding weakly connected SPD component on edges {} as a separate request".format(set(G_nx.edges())))
             req_list.append(req)
 
         if len(req_list) > self.number_of_requests:
