@@ -394,7 +394,7 @@ class ExperimentExecution(object):
                 log.debug("No error found in error queue.")
 
             try:
-                result = self.result_queue.get(timeout=30)
+                result = self.result_queue.get(timeout=10)
 
                 scenario_id, execution_id, alg_result, process_index = result
 
@@ -402,7 +402,7 @@ class ExperimentExecution(object):
 
                 self._handle_finished_process(scenario_id, execution_id, process_index, failed=False)
             except Queue.Empty as e:
-                log.debug("No result found in result queue yet, retrying in 30s... "
+                log.debug("No result found in result queue yet, retrying in 10s... "
                           "Current processes: {}".format(self.processes))
 
             for process_index, process in self.processes.items():

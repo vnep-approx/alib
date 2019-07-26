@@ -698,6 +698,8 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         if len(req_list) > self.number_of_requests:
             self.logger.warn("More weakly connected SPD components are generated than the required number of requests, discarding the "
                              "excess graphs...")
+        if normalize:
+            self.normalize_resource_footprint(raw_parameters, req_list, substrate)
 
         return req_list[:self.number_of_requests]
 
