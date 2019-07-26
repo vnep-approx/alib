@@ -401,7 +401,8 @@ class SyntheticCactusSubstrateGenerator(sg.ScenariogenerationTask):
         'tree_count_ratio',             # cactus generation param       = 0.2
         'node_capacity_interval',       # interval of uniform distribution of node capacity = [0, 1]
         'link_capacity_interval'        # link capacity interval for uniform distribution = [0, 1]
-        'pseudo_random_seed'
+        'pseudo_random_seed',
+        'node_cost'                     # optional, 0.0 by default
     ]
 
     def __init__(self, logger=None):
@@ -429,6 +430,10 @@ class SyntheticCactusSubstrateGenerator(sg.ScenariogenerationTask):
             link_capacity_interval = list(raw_parameters['link_capacity_interval'])
             self.link_min_capacity = float(link_capacity_interval[0])
             self.link_max_capacity = float(link_capacity_interval[1])
+            if 'node_cost' in raw_parameters:
+                self.node_cost = float(raw_parameters['node_cost'])
+            else:
+                self.node_cost = 0.0
             if 'pseudo_random_seed' in raw_parameters:
                 self.random.seed(int(raw_parameters['pseudo_random_seed']))
         except KeyError as e:
@@ -463,7 +468,7 @@ class SyntheticCactusSubstrateGenerator(sg.ScenariogenerationTask):
             fog_node_capacity = self.random.uniform(self.node_min_capacity, self.node_max_capacity)
             # 0 cost for node resources, as described in the fog allocation paper
             substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: fog_node_capacity},
-                               cost={self.universal_node_type: 0.0})
+                               cost={self.universal_node_type: self.node_cost})
         for i,j in cactus_graph.edges:
             link_capacity = self.random.uniform(self.link_min_capacity, self.link_max_capacity)
             # links are bidirectional by default!!
