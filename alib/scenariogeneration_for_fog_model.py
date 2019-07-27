@@ -242,14 +242,13 @@ class CactusGraphGenerator(object):
                     remaining_nodes.remove(j)
             # only one remaining node cannot be handled by either function
             if len(remaining_nodes) == 1:
-                if not remaining_nodes.issubset(self.G.nodes):
-                    tail = self.random.choice(list(self.G.nodes))
-                    head = remaining_nodes.pop()
-                    current_edges.add((tail, head))
-                    # adding a single unconnected node cannot ruin the cactus property.
-                    self.G.add_edge(tail, head)
-                else:
-                    remaining_nodes.pop()
+                node_list = list(self.G.nodes)
+                head = remaining_nodes.pop()
+                node_list.remove(head)
+                tail = self.random.choice(node_list)
+                current_edges.add((tail, head))
+                # adding a single unconnected node cannot ruin the cactus property.
+                self.G.add_edge(tail, head)
         return self.G
 
 
