@@ -524,8 +524,6 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
             else:
                 self.use_connected_sp_def = True
             self.number_of_requests = int(raw_parameters['number_of_requests'])
-            if self.number_of_requests > 1 and self.use_connected_sp_def:
-                self.logger.warn("Only 1 request is generated when using connected series parallel graph definition")
             self.request_substrate_node_count_ratio = float(raw_parameters['request_substrate_node_count_ratio'])
             self.node_count = int(substrate.get_number_of_nodes() * self.request_substrate_node_count_ratio)
             node_demand_interval = list(raw_parameters['node_demand_interval'])
@@ -680,27 +678,37 @@ class SyntheticSeriesParallelDecomposableRequestGenerator(sg.AbstractRequestGene
         req_list = []
 
         if self.use_connected_sp_def:
-            G_nx = self.series_parallel_generator(self.node_count)
+            graph_components_iterable = []
+            total_node_count = 0
+            single_req_size = int(math.ceil(self.node_count / float(self.number_of_requests)))
+            self.logger.info("Generating requests of size {}".format(single_req_size))
+            while total_node_count < self.node_count:
+                single_component_node_cnt = min(single_req_size,
+                                                self.node_count - total_node_count)
+                total_node_count += single_component_node_cnt
+                G_nx = self.series_parallel_generator(single_component_node_cnt)
+                if len(list(nx.weakly_connected_component_subgraphs(G_nx))) > 1:
+                    raise sg.RequestGenerationError("Series parallel graph is not connected!")
+                graph_components_iterable.append(G_nx)
         else:
             G_nx = self.series_parallel_decomposable_generator(self.node_count)
+            graph_components_iterable = nx.weakly_connected_component_subgraphs(G_nx)
 
         # must be common for all connected components
-        location_bound_node_ids = self.random.sample(list(G_nx.nodes),
+        location_bound_node_ids = self.random.sample(list(range(0, self.current_node_id)),
                                                      int(self.node_count * self.location_bound_mapping_ratio))
         self.logger.debug("Choosing location bound request nodes: {}".format(location_bound_node_ids))
 
-        connected_component_count = 1
-        for G_nx in nx.weakly_connected_component_subgraphs(G_nx):
-            if connected_component_count > 1 and self.use_connected_sp_def:
-                raise sg.RequestGenerationError("Series parallel graph is not connected!")
-            name = "fog_app_" + base_name.format(id = connected_component_count)
+        req_graph_count = 1
+        for G_nx in graph_components_iterable:
+            name = "fog_app_" + base_name.format(id = req_graph_count)
             req = self.convert_nx_to_alib_graph(name, G_nx, location_bound_node_ids, substrate)
-            connected_component_count += 1
-            self.logger.debug("Adding weakly connected SPD component on edges {} as a separate request".format(set(G_nx.edges())))
+            req_graph_count += 1
+            self.logger.debug("Adding request graph on edges {} as a separate request".format(set(G_nx.edges())))
             req_list.append(req)
 
         if len(req_list) > self.number_of_requests:
-            self.logger.warn("More weakly connected SPD components are generated than the required number of requests, discarding the "
+            self.logger.warn("More requests are generated than the required number of requests, discarding the "
                              "excess graphs...")
         if normalize:
             self.normalize_resource_footprint(raw_parameters, req_list, substrate)
