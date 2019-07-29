@@ -245,6 +245,8 @@ class CactusGraphGenerator(object):
                 node_list = list(self.G.nodes)
                 head = remaining_nodes.pop()
                 node_list.remove(head)
+                if len(node_list) == 0:
+                    break
                 tail = self.random.choice(node_list)
                 current_edges.add((tail, head))
                 # adding a single unconnected node cannot ruin the cactus property.
@@ -267,7 +269,8 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
         'q_capacity_ratio',                 # fog network spare capacity factor after allocation = 2
         'fog_device_utilization_discount'   # background utilization        = 0.5 (50%)
         'pseudo_random_seed',               # used for all randomization actions
-        'have_at_least_one_large'           # add at least one computation node with 'Large' capacity
+        'have_at_least_one_large',           # add at least one computation node with 'Large' capacity
+        'node_cost'                             # optional, 0.0 by default
     ]
 
     def __init__(self, logger=None):
@@ -295,6 +298,10 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
             self.have_at_least_one_large = bool(raw_parameters['have_at_least_one_large'])
             if 'pseudo_random_seed' in raw_parameters:
                 self.random.seed(int(raw_parameters['pseudo_random_seed']))
+            if 'node_cost' in raw_parameters:
+                self.node_cost = float(raw_parameters['node_cost'])
+            else:
+                self.node_cost = 0.0
         except KeyError as e:
             raise sg.ExperimentSpecificationError("Parameter not found in request specification: {keyerror}".format(keyerror=e))
 
@@ -357,7 +364,7 @@ class ABBUseCaseFogNetworkGenerator(sg.ScenariogenerationTask):
             fog_node_capacity = self._get_fog_node_capacity()
             # 0 cost for node resources, as described in the fog allocation paper
             substrate.add_node(n, types=[self.universal_node_type], capacity={self.universal_node_type: fog_node_capacity},
-                               cost={self.universal_node_type: 0.0})
+                               cost={self.universal_node_type: self.node_cost})
         if self.have_at_least_one_large and not self.large_capacity_node_added:
             # 'n' will always have some value, the cactus graph cannot have 0 nodes
             self.logger.info("Setting the last substrate node's {} capacity to be large, because none was added!".format(n))
