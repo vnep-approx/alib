@@ -38,7 +38,8 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         # 'sensor_actuator_loop_count'  # referred to as 'N' in the article. Must be given for the substrate
         'normalize',                  # used by the base class during apply. Should be set to False, because we have absolute values in
                                       # the use case
-        'number_of_requests'          # used by the base class during apply.
+        'number_of_requests',             # used by the base class during apply.
+        'exclude_sensor_locations'      # sets the allowed nodes for non sensors so  they cannot be allocated where the sensors are (False by default)
     ]
 
     def __init__(self, logger=None):
@@ -57,6 +58,10 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         try:
             # The framework does not allow such communication between the request and the substrate by the config files
             self.sensor_actuator_loop_count = getattr(substrate, 'sensor_actuator_loop_count')
+            if 'exclude_sensor_locations' in raw_parameters:
+                self.exclude_sensor_locations = bool(raw_parameters['exclude_sensor_locations'])
+            else:
+                self.exclude_sensor_locations = False
         except Exception as e:
             raise sg.ExperimentSpecificationError("Parameter not found in request specification: {keyerror}".format(keyerror=e))
 
@@ -70,9 +75,12 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         :return:
         """
         index_str = str(index)
+        allowed_nodes = None
+        if self.exclude_sensor_locations:
+            allowed_nodes = list(self.non_sensor_locations)
         for preproc_node, demand in zip(["A", "B", "C", "D", "E"],
                                           [27.55, 26.65, 9.6, 3.6, 15.25]):
-            req.add_node(preproc_node + index_str, demand=demand, ntype=self.universal_node_type)
+            req.add_node(preproc_node + index_str, demand=demand, ntype=self.universal_node_type, allowed_nodes=allowed_nodes)
         for sensor_actuator_node, demand in zip(["S", "T"], [2.0, 0.25]):
             req.add_node(sensor_actuator_node + index_str, demand=demand, ntype=self.universal_node_type, allowed_nodes=[substrate_node])
         req.add_edge("S"+index_str, "A"+index_str, demand=3072)
@@ -95,16 +103,21 @@ class ABBUseCaseRequestGenerator(sg.AbstractRequestGenerator):
         """
         self._read_raw_parameters(raw_parameters, substrate)
         req = datamodel.Request("ABB_" + name)
+        nodes_for_actuators_sensors = [i for i in xrange(substrate.get_number_of_nodes() - self.sensor_actuator_loop_count,
+                                                         substrate.get_number_of_nodes())]
+        self.non_sensor_locations = [u for u in substrate.nodes if u not in nodes_for_actuators_sensors]
+        allowed_nodes = None
+        if self.exclude_sensor_locations:
+            allowed_nodes = list(self.non_sensor_locations)
         for base_node, demand in zip(["F", "G", "H"], [20.875, 20,875, 14.5]):
-            req.add_node(base_node, demand=demand, ntype=self.universal_node_type)
+            req.add_node(base_node, demand=demand, ntype=self.universal_node_type, allowed_nodes=allowed_nodes)
             self.logger.debug("Added F, G, H nodes")
         req.add_edge("F", "H", demand=192)
         req.add_edge("G", "H", demand=192)
         # NOTE: might be implemented nicer (but more difficultly with placement resctriction generation
         # we assume all actuator - sensor pairs are on different infrastucture nodes
         # The location bound nodes are the highest sensor_actuator_loop_count number of nodes.
-        nodes_for_actuators_sensors = [i for i in xrange(substrate.get_number_of_nodes() - self.sensor_actuator_loop_count,
-                                                         substrate.get_number_of_nodes())]
+
         # NOTE: checking if the substrate node is chosen from the right set, in our scenario, only these can have a capacity of 2.26.
         for node_id in nodes_for_actuators_sensors:
             if substrate.node[node_id]['capacity'][self.universal_node_type] != 2.26:
