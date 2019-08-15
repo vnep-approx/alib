@@ -1823,6 +1823,7 @@ class TopologyZooReader(ScenariogenerationTask):
 
 
     def _get_costs_and_latencies_from_distance(self, dist):
+        """ cost, latency """
         return dist, 20 * dist #int(dist * (10 ** 6)) + 40
 
 
