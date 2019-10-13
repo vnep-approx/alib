@@ -40,6 +40,8 @@ from collections import deque, namedtuple
 from random import Random
 from vnep_approx import treewidth_model
 
+import numpy as np
+from heapq import heappush, heappop
 import numpy.random
 
 from . import datamodel, mip, modelcreator, util
@@ -1811,14 +1813,21 @@ class TopologyZooReader(ScenariogenerationTask):
                 substrate.node[node]["Longitude"] = graph_dict["nodes"][node]["Longitude"]
                 substrate.node[node]["Latitude"] = graph_dict["nodes"][node]["Latitude"]
 
+        average_distance = 0
+
         for (tail, head), dist in dists.items():
             cost = dist
             capacity = raw_parameters["edge_capacity"]
             if raw_parameters.get("include_latencies", False):
                 cost, latency = self._get_costs_and_latencies_from_distance(dist)
+                average_distance += latency
                 substrate.add_edge(tail, head, capacity=capacity, cost=cost, latency=latency)
             else:
                 substrate.add_edge(tail, head, capacity=capacity, cost=cost)
+
+        average_distance /= len(substrate.edges)
+        substrate.set_average_node_distance(average_distance)
+
         return substrate
 
 
@@ -1854,8 +1863,8 @@ def haversine(lon1, lat1, lon2, lat2):
     c = 2 * math.asin(math.sqrt(a))
     # 6367 km is the radius of the Earth
     km = 6367 * c
-    latency = km / 200000
-    return latency
+    latency = km / 200 # 000
+    return latency # in milliseconds
 
 
 def convert_topology_zoo_gml_to_yml(gml_path, yml_path, consider_disconnected):

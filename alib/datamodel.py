@@ -623,6 +623,12 @@ class Substrate(Graph):
         else:
             raise SubstrateError("Nodes {} and/or {} are not in the substrate:\n{}".format(tail, head, self.nodes))
 
+    def set_average_node_distance(self, dist):
+        self._average_node_distance = dist
+
+    def get_average_node_distance(self):
+        return self._average_node_distance
+
     def get_types(self):
         return self.types
 
