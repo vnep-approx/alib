@@ -255,7 +255,7 @@ class Mapping(object):
         if ij not in self.request.edges:
             raise MappingError("Request edge {} does not exist!".format(ij))
         if not set(mapped_path) <= self.substrate.edges:
-            raise MappingError("Mapping for {} contains edges not in the substrate: \n {}".format(ij, set(mapped_path) - self.substrate.edges))
+            raise MappingError("Mapping for {} contains edges not in the substrate!".format(ij, set(mapped_path) - self.substrate.edges))
 
         # empty path direct mapping
         if not mapped_path:
