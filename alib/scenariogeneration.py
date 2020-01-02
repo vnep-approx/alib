@@ -1766,7 +1766,8 @@ class TopologyZooReader(ScenariogenerationTask):
 
     # node_cost: [1.0]    #this is a multiplicative factor :)
     EXPECTED_PARAMETERS = ["topology", "node_types", "edge_capacity",
-                           "node_cost_factor", "node_capacity", "node_type_distribution"]
+                           "node_cost_factor", "node_capacity", "node_type_distribution",
+                           "fog_model_costs"]
 
     def __init__(self, path=os.path.join(DATA_PATH, "topologyZoo"), logger=None):
         super(TopologyZooReader, self).__init__(logger)
@@ -1823,14 +1824,20 @@ class TopologyZooReader(ScenariogenerationTask):
         for node in nodes:
             types = assigned_types[node]
             capacity = {t: raw_parameters["node_capacity"] for t in types}
-            cost = {t: total_edge_costs / sum_of_capacities for t in types}
+            if "fog_model_costs" in raw_parameters and bool(raw_parameters["fog_model_costs"]):
+                cost = 0.0
+            else:
+                cost = {t: total_edge_costs / sum_of_capacities for t in types}
             substrate.add_node(node, types, capacity, cost)
             if include_location:
                 substrate.node[node]["Longitude"] = graph_dict["nodes"][node]["Longitude"]
                 substrate.node[node]["Latitude"] = graph_dict["nodes"][node]["Latitude"]
 
         for (tail, head), dist in dists.items():
-            cost = dist
+            if "fog_model_costs" in raw_parameters and bool(raw_parameters["fog_model_costs"]):
+                cost = 1.0
+            else:
+                cost = dist
             capacity = raw_parameters["edge_capacity"]
             substrate.add_edge(tail, head, capacity=capacity, cost=cost)
         return substrate
