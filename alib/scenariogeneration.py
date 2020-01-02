@@ -1825,7 +1825,7 @@ class TopologyZooReader(ScenariogenerationTask):
             types = assigned_types[node]
             capacity = {t: raw_parameters["node_capacity"] for t in types}
             if "fog_model_costs" in raw_parameters and bool(raw_parameters["fog_model_costs"]):
-                cost = 0.0
+                cost = {'universal': 0.0}
             else:
                 cost = {t: total_edge_costs / sum_of_capacities for t in types}
             substrate.add_node(node, types, capacity, cost)
