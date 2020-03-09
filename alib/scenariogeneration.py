@@ -38,7 +38,7 @@ import time
 import yaml
 from collections import deque, namedtuple
 from random import Random
-from vnep_approx import treewidth_model
+
 
 import numpy as np
 from heapq import heappush, heappop
@@ -605,8 +605,6 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         super(ServiceChainGenerator, self).__init__(logger)
         self.average_request_node_resources_per_type = None  # dictionary mapping node types to the average resource demand of a node of the given type
         self.average_request_edge_resources = None
-
-        print "test"
         self._raw_parameters = None
 
     def generate_request(self,
@@ -1284,7 +1282,7 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
         self._substrate = None
         self._node_demand_by_type = None
         self._edge_demand = None
-        self.DEBUG_MODE = True
+        self.DEBUG_MODE = False #set to True to enable checking tree decompositions during scenario generation
 
     def generate_request(self,
                          name,
@@ -1453,6 +1451,7 @@ class TreewidthRequestGenerator(AbstractRequestGenerator):
             req.add_edge(i, j, self._edge_demand)
 
         if self.DEBUG_MODE:
+            from vnep_approx import treewidth_model
             # check connectdness of request graph
             tmp_edges = list(req.edges)
             tmp_undir_req_graph = datamodel.get_undirected_graph_from_edge_representation(tmp_edges)
