@@ -486,6 +486,7 @@ class AbstractModelCreator(object):
             self.logger = logger
 
         self._disable_temporal_information_output = False
+        self._disable_temporal_log_output = False
 
 
     def init_model_creator(self):
@@ -537,7 +538,7 @@ class AbstractModelCreator(object):
         :return: Result of the optimization consisting of an instance of the GurobiStatus together with a result
                  detailing the solution computed by Gurobi.
         '''
-        self.logger.info("Computing integral solution.")
+        self.logger.debug("Computing integral solution.")
         # do the optimization
         time_optimization_start = time.clock()
         self.model.optimize(self.optimization_callback)
@@ -574,13 +575,14 @@ class AbstractModelCreator(object):
                                            self.model.getAttr("Runtime"),
                                            force_new_entry=True)
 
-        self.logger.debug("Temporal log entries:")
-        self.logger.debug("    Root Relaxation Entry: {}".format(self.temporal_log.root_relaxation_entry))
-        for entry in self.temporal_log.log_entries:
-            self.logger.debug("    {}".format(entry))
-        self.logger.debug("    Improvement Entries:")
-        for entry in self.temporal_log.improved_entries:
-            self.logger.debug("        {}".format(entry))
+        if not self._disable_temporal_log_output:
+            self.logger.debug("Temporal log entries:")
+            self.logger.debug("    Root Relaxation Entry: {}".format(self.temporal_log.root_relaxation_entry))
+            for entry in self.temporal_log.log_entries:
+                self.logger.debug("    {}".format(entry))
+            self.logger.debug("    Improvement Entries:")
+            for entry in self.temporal_log.improved_entries:
+                self.logger.debug("        {}".format(entry))
 
         self.status = GurobiStatus(status=gurobi_status,
                                    solCount=solutionCount,
@@ -1025,3 +1027,17 @@ class TemporalLog(object):
         last_entry = self.log_entries[-1]
         return ((t - last_entry.time_within_gurobi) < self.min_log_interval and
                 (t - self.last_new_entry_time) < self.min_log_interval)
+
+class TemporalLog_Disabled(TemporalLog):
+    def __init__(self):
+        super(TemporalLog_Disabled, self).__init__(0.0)
+
+
+    def set_global_start_time(self, t):
+        pass
+
+    def add_log_data(self, data, time_within_gurobi, force_new_entry=False):
+        pass
+
+    def set_root_relaxation_entry(self, data, time_within_gurobi):
+        pass

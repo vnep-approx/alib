@@ -600,6 +600,7 @@ class Substrate(Graph):
     def __init__(self, name):
         super(Substrate, self).__init__(name)
         self.types = set()
+        self._average_node_distance = None
 
     def add_node(self, u, types, capacity, cost):
         super(Substrate, self).add_node(u, supported_types=types,
