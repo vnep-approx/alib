@@ -40,8 +40,6 @@ from collections import deque, namedtuple
 from random import Random
 
 
-import numpy as np
-from heapq import heappush, heappop
 import numpy.random
 
 from . import datamodel, mip, modelcreator, util
@@ -1788,8 +1786,8 @@ class TopologyZooReader(ScenariogenerationTask):
             u_lat = graph_dict["nodes"][u]["Latitude"]
             v_lon = graph_dict["nodes"][v]["Longitude"]
             v_lat = graph_dict["nodes"][v]["Latitude"]
-            dists[u, v] = cost = haversine(u_lon, u_lat, v_lon, v_lat)
-            total_edge_costs += 2 * cost * raw_parameters["edge_capacity"]
+            dists[u, v] = haversine(u_lon, u_lat, v_lon, v_lat)
+            total_edge_costs += 2 * dists[u, v] * raw_parameters["edge_capacity"]
 
         # this edge cost shall then equal the sum of all node costs
         # hence we first compute for each type the total available capacity
@@ -1832,7 +1830,7 @@ class TopologyZooReader(ScenariogenerationTask):
 
     def _get_costs_and_latencies_from_distance(self, dist):
         """ cost, latency """
-        return dist, 20 * dist #int(dist * (10 ** 6)) + 40
+        return dist, dist    #latencies and costs are equal and are given in milliseconds TODO: Robin introdued an additional factor of 20, maybe we should check why this was done.
 
 
     def _assign_node_types(self, nodes, raw_parameters):
@@ -1862,7 +1860,7 @@ def haversine(lon1, lat1, lon2, lat2):
     c = 2 * math.asin(math.sqrt(a))
     # 6367 km is the radius of the Earth
     km = 6367 * c
-    latency = km / 200 # 000
+    latency = km / 200
     return latency # in milliseconds
 
 
@@ -1970,7 +1968,7 @@ def convert_topology_zoo_gml_to_yml(gml_path, yml_path, consider_disconnected):
 
 
 
-def summarize_topology_zoo_graphs(min_number_nodes=20, max_number_nodes=100):
+def summarize_topology_zoo_graphs(min_number_nodes=10, max_number_nodes=100):
     network_files = glob.glob(os.path.join(DATA_PATH, "topologyZoo/") + "*.yml")
     #network_files = glob.glob(os.path.join(DATA_PATH, "topologyZoo/") + "DeutscheTelekom.yml")
 
