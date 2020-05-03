@@ -153,7 +153,6 @@ class TestSubstrate:
         self.substrate.add_node('v', ["t1"], {"t1": 2}, {"t1": 2})
         self.substrate.add_node('w', ["t1"], {"t1": 1.5}, {"t1": 2})
 
-        result = self.substrate.get_node_capacity("v")
         assert self.substrate.get_node_capacity("v")  == pytest.approx(2.0)
         assert self.substrate.get_node_type_capacity("u", "t1") == 1
         assert self.substrate.average_node_capacity("t1") == pytest.approx(1.5)
