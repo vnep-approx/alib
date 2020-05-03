@@ -438,6 +438,7 @@ class GurobiSettings(object):
 class AbstractModelCreator(object):
 
     ''' Abstract basis for classes creating Mixed-Integer or Linear Programming models.
+    Subclass this for creating Gurobi models.
 
     Provides essential functionality as well as a structured way to create the model and measure the time
     needed to create, execute and post-process the model.
@@ -812,7 +813,7 @@ class AbstractModelCreator(object):
 
 class AbstractEmbeddingModelCreator(AbstractModelCreator):
     ''' Abstract model creator designed specifically to tackle the Virtual Network Embedding Problem.
-
+        Subclass this for more specific LPs dealing with VNEP.
         In particular, this class extends the AbstractModelCreator by instantiating some (generally needed) variables
         and generating appropriate constraints. Furthermore, it adds support for different objectives.
     '''

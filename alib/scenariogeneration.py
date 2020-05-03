@@ -391,6 +391,17 @@ class ScenarioGenerator(object):
         proc_pool.join()
 
 
+def instantiate_class_from_name_space_dicts(class_name, class_kwargs_dict, names_space_dicts):
+    class_instance = None
+    for ns in names_space_dicts:
+        if class_name in ns:
+            class_instance = ns[class_name](**class_kwargs_dict)
+    if class_instance is None:
+        raise ScenarioGeneratorError("Class {} cannot be instantiated from any of the given namespaces: {}".
+                                     format(class_name, names_space_dicts))
+    return class_instance
+
+
 def build_scenario(i_sp_tup):
     """
     Build a single scenario based on the scenario parameters.
@@ -430,27 +441,31 @@ def build_scenario(i_sp_tup):
                                       substrate=None,
                                       requests=None,
                                       objective=datamodel.Objective.MIN_COST)
-        top_zoo_reader = TopologyZooReader(logger=logger)
-        top_zoo_reader.apply(sp, scenario)
+        # NOTE: not a nice way due to many reasons, but follows previous design, and keeps separation of newly implemented generators
+        import scenariogeneration_for_fog_model as sg_fog_model
+        all_name_spaces = [globals(), vars(sg_fog_model)]
+        class_name_substrate_generator = sp[SUBSTRATE_GENERATION_TASK].values()[0].keys()[0]
+        task_class_kwargs = {'logger': logger}
+        subsr_gen = instantiate_class_from_name_space_dicts(class_name_substrate_generator, task_class_kwargs, all_name_spaces)
+        subsr_gen.apply(sp, scenario)
         class_name_request_generator = sp[REQUEST_GENERATION_TASK].values()[0].keys()[0]
-        global_name_space = globals()
-        rg = global_name_space[class_name_request_generator](logger=logger)
+        req_gen = instantiate_class_from_name_space_dicts(class_name_request_generator, task_class_kwargs, all_name_spaces)
         if datamanager_dict is not None:
-            rg.register_data_manager_dict(datamanager_dict)
-        rg.apply(sp, scenario)
+            req_gen.register_data_manager_dict(datamanager_dict)
+        req_gen.apply(sp, scenario)
         if NODE_PLACEMENT_TASK in sp:
             class_name_npr = sp[NODE_PLACEMENT_TASK].values()[0].keys()[0]
-            npr = global_name_space[class_name_npr](logger=logger)
+            npr = instantiate_class_from_name_space_dicts(class_name_npr, task_class_kwargs, all_name_spaces)
             npr.apply(sp, scenario)
         if PROFIT_CALCULATION_TASK in sp:
             class_name_profit_calc = sp[PROFIT_CALCULATION_TASK].values()[0].keys()[0]
-            pc = global_name_space[class_name_profit_calc](logger=logger)
+            pc = instantiate_class_from_name_space_dicts(class_name_profit_calc, task_class_kwargs, all_name_spaces)
             pc.apply(sp, scenario)
             scenario.objective = datamodel.Objective.MAX_PROFIT
     except Exception as e:
-        with open("log/{}_error.log".format(os.getpid()), "w") as f:
-            import traceback
-            traceback.print_exc(file=f)
+        import traceback
+        logger.error("Error during scenario generation at worker {pid}: \n {exp}".format(pid=os.getpid(), exp=traceback.format_exc()))
+
     return i, scenario, sp
 
 
@@ -519,7 +534,7 @@ class AbstractRequestGenerator(ScenariogenerationTask):
         for i in xrange(raw_parameters["number_of_requests"]):
             name = base_name.format(id=i + 1)
             req = self.generate_request(name, raw_parameters, substrate)
-            # log.debug("Generated {} with {} nodes and {} edges".format(req.name, len(req.nodes), len(req.edges)))
+            self.logger.debug("Generated {} with {} nodes and {} edges".format(req.name, len(req.nodes), len(req.edges)))
             requests.append(req)
             self._scenario_parameters_have_changed = False  # we will generate more requests with the same parameters
         self._scenario_parameters_have_changed = True
@@ -614,12 +629,14 @@ class ServiceChainGenerator(AbstractRequestGenerator):
         self._raw_parameters = raw_parameters
         self._calculate_average_resource_demands()
         req = self._generate_request_graph(name)
+        # only allow request which has a solution
         while not self.verify_substrate_has_sufficient_capacity(req, substrate):
             req = self._generate_request_graph(name)
 
         self._scenario_parameters_have_changed = True
         self._substrate = None
         self._raw_parameters = None
+        self.logger.debug("Generated request {} with sufficient capacities at the substrate".format(name))
         return req
 
     def _generate_request_graph(self, name):
@@ -962,6 +979,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             self._generation_attempts += 1
             if self._generation_attempts > 10**7:
                 self._abort()
+        self.logger.debug("Generated cactus request {} with sufficient capacities at the substrate".format(name))
         self._scenario_parameters_have_changed = True  # assume that scenario_parameters will change before next call to generate_request
         return req
 
@@ -1046,7 +1064,7 @@ class CactusRequestGenerator(AbstractRequestGenerator):
             req.node[i]["fixed_node"] = True  # in case the node placement restrictions are overwritten later
             node_type = self._substrate.get_nodes_by_type(req.node[i]["type"])
             allowed_nodes = random.sample(node_type, 1)
-            # log.debug("{}: Fixing node {} -> {}".format(req.name, i, allowed_nodes))
+            self.logger.debug("{}: Fixing node {} -> {}".format(req.name, i, allowed_nodes))
             req.node[i]["allowed_nodes"] = allowed_nodes
 
     def _add_node_to_request(self, req, node, demand, ntype, allowed, parent, layer):
@@ -1587,7 +1605,7 @@ class OptimalEmbeddingProfitCalculator(AbstractProfitCalculator):
         self.logger.info("Applying vnet profits to scenario {}".format(self._scenario))
         for req, cost in itertools.izip(self._scenario.requests, embedding_cost):
             req.profit = cost * scenario_parameters["profit_factor"]
-            self.logger.debug("\t{}\t{}".format(req.name, req.profit))
+            self.logger.debug("\tname: {}\tprofit: {}".format(req.name, req.profit))
 
     def _make_sub_scenario_containing_only(self, request):
         copied_request = copy.deepcopy(request)
@@ -1678,18 +1696,18 @@ class UniformEmbeddingRestrictionGenerator(AbstractNodeMappingRestrictionGenerat
         super(UniformEmbeddingRestrictionGenerator, self).__init__(logger)
 
     def generate_restrictions_single_request(self, req, substrate, raw_parameters):
-        self.logger.debug("\t{}".format(req.name))
+        self.logger.debug("\tGenerating restrictions for {}".format(req.name))
         for node in req.nodes:
             if "fixed_node" in req.node[node]:
                 if req.node[node]["fixed_node"]:
                     self.logger.debug("\t\t{} -> {}".format(node, req.get_allowed_nodes(node)))
                     continue
             allowed_nodes = substrate.get_nodes_by_type(req.node[node]["type"])
-            self.logger.debug("\t\t{} -> {}".format(node, allowed_nodes))
             number_of_possible_nodes = len(allowed_nodes)
             number_of_allowed_nodes = self._number_of_nodes(req, node, number_of_possible_nodes, raw_parameters)
             allowed_nodes = random.sample(allowed_nodes, number_of_allowed_nodes)
             allowed_nodes = set(allowed_nodes)
+            self.logger.debug("\t\tAllowed substrate nodes for {} -> {}".format(node, allowed_nodes))
             req.set_allowed_nodes(node, allowed_nodes)
 
 
@@ -1747,7 +1765,8 @@ class TopologyZooReader(ScenariogenerationTask):
 
     # node_cost: [1.0]    #this is a multiplicative factor :)
     EXPECTED_PARAMETERS = ["topology", "node_types", "edge_capacity",
-                           "node_cost_factor", "node_capacity", "node_type_distribution"]
+                           "node_cost_factor", "node_capacity", "node_type_distribution",
+                           "fog_model_costs"]
 
     def __init__(self, path=os.path.join(DATA_PATH, "topologyZoo"), logger=None):
         super(TopologyZooReader, self).__init__(logger)
@@ -1804,7 +1823,10 @@ class TopologyZooReader(ScenariogenerationTask):
         for node in nodes:
             types = assigned_types[node]
             capacity = {t: raw_parameters["node_capacity"] for t in types}
-            cost = {t: total_edge_costs / sum_of_capacities for t in types}
+            if "fog_model_costs" in raw_parameters and bool(raw_parameters["fog_model_costs"]):
+                cost = {'universal': 0.0}
+            else:
+                cost = {t: total_edge_costs / sum_of_capacities for t in types}
             substrate.add_node(node, types, capacity, cost)
             if include_location:
                 substrate.node[node]["Longitude"] = graph_dict["nodes"][node]["Longitude"]
@@ -1813,7 +1835,10 @@ class TopologyZooReader(ScenariogenerationTask):
         average_distance = 0
 
         for (tail, head), dist in dists.items():
-            cost = dist
+            if "fog_model_costs" in raw_parameters and bool(raw_parameters["fog_model_costs"]):
+                cost = 1.0
+            else:
+                cost = dist
             capacity = raw_parameters["edge_capacity"]
             if raw_parameters.get("include_latencies", False):
                 cost, latency = self._get_costs_and_latencies_from_distance(dist)

@@ -25,6 +25,7 @@ import cPickle as pickle
 from collections import deque
 import itertools
 import multiprocessing as mp
+import Queue
 import os
 import traceback
 import yaml
@@ -259,6 +260,7 @@ class ExperimentExecution(object):
         self.process_args = {i : None for i in self.process_indices}
         self.input_queues = {i : mp.Queue() for i in self.process_indices}
         self.result_queue = mp.Queue()
+        self.error_queue = mp.Queue()
         self.unprocessed_tasks = deque()
         self.finished_tasks = deque()
         self.currently_active_processes = 0
@@ -288,7 +290,10 @@ class ExperimentExecution(object):
 
             sp, scenario = scenario_container.scenario_triple[scenario_index]
 
-            scenario.objective = datamodel.Objective.MAX_PROFIT
+            # According to comments at scenariogeneration.build_scenario, if a profit calculation task is missing, the objective should
+            # be minimization. This might not be needed at all.
+            if scenariogeneration.PROFIT_CALCULATION_TASK in sp:
+                scenario.objective = datamodel.Objective.MAX_PROFIT
 
             log.info("Scenario index {}  (Server Execution Range: {} -> {})".format(scenario_index,
                                                                                     self.min_scenario_index,
@@ -315,7 +320,7 @@ class ExperimentExecution(object):
                 else:
                     log.info("Will not execute the following, as an intermediate solution file already exists.\n"
                              "Scenario {}, Alg {}, Execution {}".format(scenario_index, parameters["ALG_ID"], execution_id))
-                    self.finished_tasks.append((scenario_index, execution_id))
+                    self.finished_tasks.append((scenario_index, execution_id, None))
 
                 for key, param_dict in parameters.iteritems():
                     if key == "ALG_ID":
@@ -353,7 +358,7 @@ class ExperimentExecution(object):
 
         for process_id, process in self.processes.iteritems():
             if process is None:
-                extended_args = scenario_index, execution_id, parameters, scenario, process_id, self.result_queue
+                extended_args = scenario_index, execution_id, parameters, scenario, process_id, self.result_queue, self.error_queue
                 self.processes[process_id] = mp.Process(target=_execute, args=extended_args)
                 log.info("Spawning process with index {}".format(process_id))
                 self.processes[process_id].start()
@@ -363,26 +368,60 @@ class ExperimentExecution(object):
             # else:
             #     log.info("Process with index {} is currently still active".format(process_id))
 
+    def _handle_finished_process(self, scenario_id, execution_id, process_index, failed):
+        self.finished_tasks.append((scenario_id, execution_id, failed))
+        # joining without timeout might cause the whole execution to wait for the slowest process until the errors/results of other
+        # processes are handled or new ones created.
+        self.processes[process_index].join()
+        # terminate might corrupt the queues or interrupt exception handling...
+        # self.processes[process_index].terminate()
+        self.processes[process_index] = None
+        self.currently_active_processes -= 1
+        # set the current scenario to invalid, it is used when processing the result, which should be done before calling this function
+        self.current_scenario[process_index] = None
+
     def _retrieve_results_and_spawn_processes(self):
         while self.currently_active_processes > 0:
-            result = self.result_queue.get()
-            scenario_id, execution_id, alg_result, process_index = result
+            try:
+                excetion_info = self.error_queue.get_nowait()
+                scenario_id, execution_id, exception, process_index = excetion_info
+                # NOTE: assertion error happens often when memory allocation failed for the treewidth calculation
+                log.error("Exception {} at process {} of scenario {}, execution id {}. Skipping executing scenario!".
+                          format(exception, process_index, scenario_id, execution_id))
+                # we should not expect solution from this process
+                self._handle_finished_process(scenario_id, execution_id, process_index, failed=True)
+            except Queue.Empty as e:
+                log.debug("No error found in error queue.")
 
-            self._process_result(result)
-            self.finished_tasks.append((scenario_id, execution_id))
+            try:
+                result = self.result_queue.get(timeout=10)
 
-            self.processes[process_index].join()
-            self.processes[process_index].terminate()
-            self.processes[process_index] = None
-            self.currently_active_processes -= 1
-            self.current_scenario[process_index] = None
+                scenario_id, execution_id, alg_result, process_index = result
+
+                self._process_result(result)
+
+                self._handle_finished_process(scenario_id, execution_id, process_index, failed=False)
+            except Queue.Empty as e:
+                log.debug("No result found in result queue yet, retrying in 10s... "
+                          "Current processes: {}".format(self.processes))
+
+            for process_index, process in self.processes.items():
+                if process is not None:
+                    if process.exitcode is not None:
+                        # processes with handled exception also has exit code 0
+                        if process.exitcode < 0:
+                            # only those have such which were terminated by some external source, without being able to finish.
+                            log.warn("Discarding terminated inactive process with process id {}: {}".format(process_index, process))
+                            self.processes[process_index] = None
+                            self.currently_active_processes -= 1
+                            self.current_scenario[process_index] = None
+
             self._spawn_processes()
-
 
     def _process_result(self, res):
         try:
             scenario_id, execution_id, alg_result, process_index = res
-            log.info("Processing solution for {}, {}: {}".format(scenario_id, execution_id, alg_result))
+            log.info("Processing solution for scenario {}, execution id {}, result: {}".format(scenario_id, execution_id, alg_result))
 
             self._dump_scenario_solution(scenario_id, execution_id, (scenario_id, execution_id, alg_result))
 
@@ -395,6 +434,7 @@ class ExperimentExecution(object):
                 self._dump_scenario_solution(scenario_id, execution_id, (scenario_id, execution_id, alg_result))
 
         except Exception as e:
+            # if error occurs in result processing, we want it to break the execution
             stacktrace = ("\nError in processing algorithm result {}:\n".format(res) +
                           traceback.format_exc(limit=100))
             for line in stacktrace.split("\n"):
@@ -405,22 +445,33 @@ class ExperimentExecution(object):
         scenario_container = self._load_scenario_container()
         self.sss = solutions.ScenarioSolutionStorage(scenario_container, self.execution_parameters)
 
-        for finished_scenario_id, finished_execution_id in self.finished_tasks:
-            alg_id = self.execution_parameters.algorithm_parameter_list[finished_execution_id]["ALG_ID"]
-            intermediate_solution_filename = self._get_scenario_solution_filename(finished_scenario_id, finished_execution_id)
+        for finished_scenario_id, finished_execution_id, is_failed in self.finished_tasks:
+            if is_failed is None or is_failed is False:
+                alg_id = self.execution_parameters.algorithm_parameter_list[finished_execution_id]["ALG_ID"]
+                intermediate_solution_filename = self._get_scenario_solution_filename(finished_scenario_id, finished_execution_id)
 
-            log.info("Collecting result stored in file {}".format(intermediate_solution_filename))
-            scenario_solution = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
-            sp, scenario = scenario_container.scenario_triple[finished_scenario_id]
-            self.sss.experiment_parameters = sp
+                log.info("Collecting result stored in file {}".format(intermediate_solution_filename))
+                scenario_solution = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
+                sp, scenario = scenario_container.scenario_triple[finished_scenario_id]
+                self.sss.experiment_parameters = sp
 
-            scenario_id, execution_id, alg_result = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
-            # IMPORTANT:    this cleanup is necessary as after loading the pickle the original scenario does not match
-            #               the pickled one!
-            alg_result.cleanup_references(scenario)
+                scenario_id, execution_id, alg_result = self._load_scenario_solution(finished_scenario_id, finished_execution_id)
+                # FIXME: if a result was not found we have nothing to do here
+                if alg_result is not None:
+                    # IMPORTANT:    this cleanup is necessary as after loading the pickle the original scenario does not match
+                    #               the pickled one!
+                    alg_result.cleanup_references(scenario)
 
 
-            self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
+                    self.sss.add_solution(alg_id, scenario_id, execution_id, alg_result)
+                else:
+                    log.info("Skipping scenario {} with execution id {} reference cleanup and solution addition, because no solution was "
+                             "found.".format(finished_scenario_id, finished_execution_id))
+            elif is_failed is True:
+                log.info("Skipping reading non existing solution file of failed scenario {}, execution id {}".format(
+                    finished_scenario_id, finished_execution_id))
+            else:
+                raise Exception("Dunno what is happening here!")
 
 
     def clean_up(self):
@@ -478,7 +529,6 @@ class ExperimentExecution(object):
             pickle.dump(scenario_solution, f)
 
 
-
 def _initialize_algorithm(scenario, logger, parameters):
     alg_class = ALGORITHMS[parameters["ALG_ID"]]
     gurobi_settings = None
@@ -488,7 +538,7 @@ def _initialize_algorithm(scenario, logger, parameters):
     return alg_instance
 
 
-def _execute(scenario_id, execution_id, parameters, scenario, process_index, result_queue):
+def _execute(scenario_id, execution_id, parameters, scenario, process_index, result_queue, error_queue):
     """
     This function is submitted to the processing pool
 
@@ -527,13 +577,6 @@ def _execute(scenario_id, execution_id, parameters, scenario, process_index, res
 
         execution_result = (scenario_id, execution_id, alg_solution, process_index)
 
-        logger_filename_orig = util.get_logger_filename(logger_filename)
-        current_time = datetime.now()
-
-        logger_filename_finished = util.get_logger_filename("finished" + current_time.strftime("_%Y_%m_%d_%H_%M_%S_") + logger_filename)
-
-        os.rename(logger_filename_orig, logger_filename_finished)
-
         result_queue.put(execution_result)
 
     except Exception as e:
@@ -542,4 +585,14 @@ def _execute(scenario_id, execution_id, parameters, scenario, process_index, res
         # print stacktrace
         for line in stacktrace.split("\n"):
             logger.error(line)
-        raise e
+        exception_info = (scenario_id, execution_id, str(type(e)), process_index)
+        # instead of raising the exception save it to the parent process
+        error_queue.put(exception_info)
+    finally:
+        # in any case we need to move the logger file to finished
+        logger_filename_orig = util.get_logger_filename(logger_filename)
+        current_time = datetime.now()
+
+        logger_filename_finished = util.get_logger_filename("finished" + current_time.strftime("_%Y_%m_%d_%H_%M_%S_") + logger_filename)
+
+        os.rename(logger_filename_orig, logger_filename_finished)
