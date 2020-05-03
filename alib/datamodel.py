@@ -650,7 +650,13 @@ class Substrate(Graph):
         return self.node[node]['cost'][ntype]
 
     def get_node_capacity(self, node):
-        return self.node[node]['capacity']
+        if isinstance(self.node[node]["capacity"], float):
+            return self.node[node]["capacity"]
+        else:
+            if len(self.node[node]["capacity"]) > 1:
+                raise RuntimeError("Type has to be specified when a node hosts more than one type.")
+            else:
+                return next(iter(self.node[node]['capacity'].values()))
 
     def get_node_type_capacity(self, node, ntype):
         return self.node[node]['capacity'].get(ntype, 0.0)
